@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* main */
+
+
+//reset
+@import "global/reset";
+
+//compass imports
+@import "compass/support";
+@import "compass/css3";
+@import "compass/utilities/sprites";
+@import "../img/sprite/*.png";//this creates a sprite with the images in the folder img/sprite/*.png
+@include all-sprite-sprites;
+
+//global imports
+@import "global/variables";
+@import "global/mixins";
+@import "global/fonts";
+@import "global/styleguide";
+@import "global/states";
+@import "global/navigation";
+@import "global/modal";
+
+
+//components imports
+
+@import "global/header";
+@import "global/footer";
+@import "components/utility-nav";
+@import "components/isi";
+
+//section imports
+@import "sections/home";
+@import "sections/sample";
+@import "sections/internal";
+
+
+.container {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+
+
+
+

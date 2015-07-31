@@ -1,0 +1,23 @@
+/* default state */
+.state-indicator {
+    position: absolute;
+    top: -999em;
+    left: -999em;
+    z-index: 1;
+    @include breakpoint("phone") {
+         z-index: 1;
+     }
+    @include breakpoint("tablet") {
+        z-index: 2;
+    }
+    @include breakpoint("tablet-p") {
+        z-index: 3;
+    }
+    @include breakpoint("tablet-l") {
+        z-index: 4;
+    }
+    @include breakpoint("desktop") {
+        z-index: 5;
+    }
+}
+

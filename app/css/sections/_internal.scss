@@ -1,0 +1,105 @@
+.section-content {
+
+
+
+    sup {
+        font-size: 75%;
+
+        /* Zero out the line-height so that it doesn't
+           interfere with the positioning that follows */
+        line-height: 0;
+
+        /* Where the magic happens: makes all browsers position
+           the sup/sup properly, relative to the surrounding text */
+        position: relative;
+
+        /* Note that if you're using Eric Meyer's reset.css, this
+           is already set and you can remove this rule */
+        vertical-align: baseline;
+        /* Move the superscripted text up */
+        top: -0.4em;
+        cursor: pointer;
+    }
+
+
+
+    .references ul {
+        margin-bottom: 38px !important;
+    }
+
+    li  {
+        font-family: $font-main;
+        font-size: 13px;
+        color: #656565;
+        line-height: 20px;
+        background: url("../img/bullet.png") 0 7px no-repeat;
+        padding-left: 11px;
+        margin-left: 17px;
+        margin-bottom: 4px;
+        max-width: 746px;
+
+
+        a {
+            color: #00a6e5;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .sub-bullet {
+        background: url("../img/sub-bullet.png") 0 7px no-repeat;
+        padding-left: 10px;
+        margin-left: 40px;
+        margin-top: 4px;
+        margin-bottom: 0px;
+    }
+
+    .left-content {
+        float: left;
+        width: 526px;
+    }
+    .right-content {
+        float: left;
+        width: 300px;
+    }
+
+    .full-content {
+        width: 100%;
+        overflow: hidden;
+        padding-right: 100px;
+        clear: both;
+    }
+}
+
+
+// ------- SECTIONS --------------------------------------------------------------------------------------
+
+
+
+
+.nasacort-difference {
+
+
+}
+
+
+.dosing-and-efficacy {
+
+
+}
+
+
+.whats-a-clucker {
+
+
+}
+
+
+.science-of-allergic-rhinitis {
+
+
+}
+
+
+

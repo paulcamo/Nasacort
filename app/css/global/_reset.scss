@@ -1,0 +1,15 @@
+@import "compass/reset";
+
+html {
+    font-family: arial, sans-serif;
+    font-size: 13px;
+}
+
+div, p, span, article, a, ul, li {
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+

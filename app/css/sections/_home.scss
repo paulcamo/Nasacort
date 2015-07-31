@@ -1,0 +1,73 @@
+.home-section {
+    #bg-container {
+        background: url("../img/bg.png") no-repeat top center;
+    }
+
+    .content {
+        @include clearfix;
+        overflow: hidden;
+        padding: 0 0 0 100px;
+    }
+
+    .callouts {
+        @include clearfix;
+        overflow: hidden;
+        margin-bottom: 27px;
+    }
+
+    .home-callout {
+        float: left;
+
+        &.left-callout {
+            margin-right: 20px;
+        }
+
+    }
+
+    .order-cta {
+        margin-bottom: 49px;
+    }
+
+    .isi-container, .references {
+        padding-right: 10px;
+    }
+
+
+    .cta01{
+        width: 253px; /* fix */
+    }
+    
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+      .cta01{
+        width: 256px; /* fix */
+      }      
+    }
+
+    .cta02 {
+        width: 166px; /* fix */
+    }
+
+
+     .order-cta {
+        margin-top: 30px;
+    }
+
+
+.references ul {
+    padding-bottom: 33px;
+}
+
+
+}
+
+@media (max-width: 1199px) {
+
+.home-section {
+    #bg-container {
+        background: url("../img/bg2.png") no-repeat left top;
+    }
+}
+
+}
+

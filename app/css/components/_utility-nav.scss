@@ -1,0 +1,27 @@
+.utility-nav {
+    height: 10px;
+    line-height: 10px;
+    display: inline-block;
+    padding-top: 0px;
+    li {
+        height: 10px;
+        margin-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid grey;
+
+        &.last {
+            border: 0;
+        }
+    }
+
+
+}
+
+
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+/* IE10+ CSS styles go here */
+
+
+  
+}
