@@ -1,3 +1,41 @@
 .header {
-  background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;
+
+  .header-top{
+      
+      .nassacort-logo{
+          background:url("../img/desktop/header/sanofi-logo.png") no-repeat;
+          width:100px;
+          height:21px;
+          float:right;
+      }
+      
+      .top-bar{
+          background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;
+          height:43px;
+          
+          ul{
+              li{
+                  float:left;
+              }
+          }
+      }
+      
+      ul.main-nav{
+           background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+           height: 91px;
+           margin-top: -14px;
+           position: relative;
+           z-index: -1;
+           
+           li{
+               float:left;
+           }
+      }
+      
+      .shine{
+          background:url("../img/desktop/header/header-shine.png") no-repeat;
+      }
+      
+      
+  }
 }
