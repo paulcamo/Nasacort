@@ -2,40 +2,129 @@
 
   .header-top{
       
-      .nassacort-logo{
+      .sanofi-logo{
           background:url("../img/desktop/header/sanofi-logo.png") no-repeat;
           width:100px;
           height:21px;
           float:right;
+          margin-top:4px;
       }
       
       .top-bar{
           background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;
-          height:43px;
-          
-          ul{
-              li{
-                  float:left;
+          height:43px;  
+      }
+      
+      .nassacort-logo{
+          background:url("../img/desktop/header/nassacort-logo.png") no-repeat;
+          width:213px;
+          height:65px;
+          display:block;
+          position:relative;
+          float:left;
+          margin-top: 10px;         
+      }
+      
+      .blue-bar{          
+          background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+          height: 91px;
+          margin-top: -14px;
+      }
+      
+       ul.utility-nav{
+           float:right;
+           margin-top: 8px;
+           
+          li{
+              float:left;
+              margin-left:26px;
+              
+              a{
+                  color: $color-light-blue2;
+                  font-size:12px;
+                  font-family:Arial, Helvetica, sans-serif;
+                  text-transform:uppercase;
+                  
+                  &:hover {
+                     text-decoration:underline;
+                     color: $color-cyan;
+                   }
+                  &:visited {
+                     color: $color-light-blue2;
+                   }
               }
           }
       }
       
       ul.main-nav{
-           background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
-           height: 91px;
-           margin-top: -14px;
            position: relative;
-           z-index: -1;
+           float:right;
+           margin-top:32px;
            
            li{
                float:left;
+               
+               a{
+                  color: $color-white;
+                  font-size:18px;
+                  font-family:Arial, Helvetica, sans-serif;
+                  float: left;      
+                  
+                  &:hover {
+                     color: $color-cyan;
+                     
+                     .active{
+                         visibility: visible;
+                     }
+                     
+                     .label{
+                         background:url("../img/desktop/header/item-active-bg.png") repeat-x;
+                     }
+                   }
+                   
+                  &:visited {
+                     color: $color-light-blue2;
+                   }
+                   
+                 .item-left-bg{
+                     background:url("../img/desktop/header/item-active-left.png") no-repeat;
+                     width:10px;
+                     height:26px;
+                     float: left;
+                  }
+                   
+                  .item-right-bg{
+                     background:url("../img/desktop/header/item-active-right.png") no-repeat;
+                     width:10px;
+                     height:26px;
+                     float: right;
+                     position: relative;
+                  }
+                   
+                 .active{
+                     visibility: hidden;
+                 }
+                 
+                 .label{
+                    padding-bottom: 10px;
+                    padding-top: 4px;
+                    float:left;
+                    height:26px;
+                 }
+               
+               }
+               
+               span.pipe{
+                   background-color:#fcfcfc;
+                   width:1px;
+                   height:15px;
+                   float:right;
+                   margin-left:10px;
+                   margin-right:10px;
+                   margin-top:2px;
+               }
            }
       }
-      
-      .shine{
-          background:url("../img/desktop/header/header-shine.png") no-repeat;
-      }
-      
       
   }
 }
