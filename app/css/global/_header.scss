@@ -36,6 +36,8 @@
        ul.utility-nav{
            float:right;
            margin-top: 8px;
+           position: relative;
+           z-index: 1;
            
           li{
               float:left;
@@ -63,6 +65,7 @@
            margin-top: 50px;
            position: absolute;
            right: -10px;
+           z-index: 1;
            
            li{
                float:left;
@@ -136,7 +139,11 @@
        width:1232px;
        height:82px;
        position: absolute;
-       margin: 0 auto;
+       margin-left: auto;
+       margin-right: auto;
+       left:0;
+       right:0;
+       z-index: 0;
   }
   
 }
