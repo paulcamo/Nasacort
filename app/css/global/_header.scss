@@ -26,7 +26,23 @@
           position:relative;
           float:left;
           margin-top: 10px;
-          margin-left: 192px;       
+          margin-left: 192px;
+          
+          .little-house{
+              background:url("../img/desktop/header/little-white-house.png") no-repeat;
+              width:32px;
+              height:25px;
+              display: inline-block;
+              position:absolute;
+              bottom: 7px;
+              right: 0;
+          }
+          
+          &:hover{
+               .little-house{
+                    background:url("../img/desktop/header/little-cyan-house.png") no-repeat;
+                }
+          } 
       }
       
       .blue-bar{          
