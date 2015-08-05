@@ -67,6 +67,28 @@ sup {
     }
 }
 
+.about{
+    background-color:$color-blue-light-container;
+    height:405px;
+    
+    .description{
+        width:480px;
+        margin-left:190px; 
+        float: left;
+        margin-right:45px;
+        
+        h2{
+            margin-bottom:30px;
+        }
+    }
+    
+    img{
+        float:right;
+        margin-right:82px;
+        margin-top:50px;
+    }
+}
+
 }
 
 
