@@ -1,6 +1,6 @@
 //Fonts
-$font-proxima-nova: "Proxima Nova";
-@include fontFace($font-proxima-nova, "../fonts/proxima-nova");
+$font-proxima-nova-semibold: "Proxima Nova Semibold";
+@include fontFace($font-proxima-nova-semibold, "../fonts/ProximaNova-Semibold/ProximaNova-Semibold");
 
 $font-main: "arial";
 
