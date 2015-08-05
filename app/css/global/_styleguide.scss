@@ -1,3 +1,4 @@
+
 sup {
     font-size: 75%;
 
@@ -15,4 +16,9 @@ sup {
     /* Move the superscripted text up */
     top: -0.4em;
     cursor: pointer;
+}
+
+h1{
+    font-family:$font-proxima-nova-semibold;
+    color:$color-dark-blue;
 }
