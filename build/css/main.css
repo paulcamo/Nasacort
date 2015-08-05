@@ -242,13 +242,13 @@ a {
 }
 
 @font-face {
-  font-family: "Proxima Nova";
-  src: url("../fonts/proxima-nova.eot");
-  src: url("../fonts/proxima-nova.eot?#iefix") format("embedded-opentype"), url("../fonts/proxima-nova.woff") format("woff"), url("../fonts/proxima-nova.ttf") format("truetype"), url("../fonts/proxima-nova.svg#Proxima Nova") format("svg");
+  font-family: "Proxima Nova Semibold";
+  src: url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf") format("truetype"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.svg#Proxima Nova Semibold") format("svg");
   font-style: normal;
   font-weight: normal;
 }
-/* line 1, ../../app/css/global/_styleguide.scss */
+/* line 2, ../../app/css/global/_styleguide.scss */
 sup {
   font-size: 75%;
   /* Zero out the line-height so that it doesn't
@@ -263,6 +263,12 @@ sup {
   /* Move the superscripted text up */
   top: -0.4em;
   cursor: pointer;
+}
+
+/* line 21, ../../app/css/global/_styleguide.scss */
+h1 {
+  font-family: "Proxima Nova Semibold";
+  color: #022e80;
 }
 
 /* default state */
