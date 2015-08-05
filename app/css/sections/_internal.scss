@@ -1,6 +1,10 @@
 .section-content {
     
     margin-top:-9px;
+    position: relative;
+    width: 1400px;
+    margin-right:auto;
+    margin-left:auto;
 
 sup {
     font-size: 75%;
@@ -23,6 +27,7 @@ sup {
 
 
 .banner{    
+     height: 322px;
     img{
         position:absolute;
     }
@@ -30,11 +35,34 @@ sup {
     div{
         position:absolute;   
         margin-left:190px; 
-        h1{
-            margin-top:90px;
+    }
+}
+
+.statistics{    
+   height:670px;
+    
+    div{
+        position:absolute;   
+        margin-left:190px; 
+        h2{
         }      
-        .underlined{
-            margin-top:10px;
+        p{
+           
+        }
+        .graph{
+            margin-left:106px;
+            position:relative;
+            
+            img{
+                margin-right:64px;
+                
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        .right-aligned{
+            text-align: right;
         }
     }
 }

@@ -22,6 +22,7 @@ h1{
     font-family:$font-proxima-nova-semibold;
     color:$color-dark-blue;
     font-size:50px;
+    margin-top:90px;
 }
 
 .underlined{
@@ -29,4 +30,36 @@ h1{
     width:51px;
     height:6px;
     display: block;
+    margin-top:10px;
 }
+
+h2{
+    font-family:Arial, Helvetica, sans-serif;
+    color:$color-blue;
+    font-size:32px;
+    margin-top:50px;
+    font-weight:bold;
+}
+
+p{
+    font-family:Arial, Helvetica, sans-serif;
+    color:$color-dark-grey;
+    font-size:16px;
+    margin-top:25px;
+    margin-bottom:30px;
+    line-height: 24px;
+}
+
+.chart-head{
+    font-family:Arial, Helvetica, sans-serif;
+    color:$color-dark-grey;
+    font-size:20px;
+    margin-bottom:30px;
+    font-weight:bold;
+    display:block;
+}
+
+.blue-text{
+     color:$color-blue-text;
+}
+
