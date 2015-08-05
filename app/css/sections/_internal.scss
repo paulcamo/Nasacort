@@ -1,5 +1,6 @@
 .section-content {
-
+    
+    margin-top:-9px;
 
 sup {
     font-size: 75%;
@@ -20,6 +21,23 @@ sup {
     cursor: pointer;
 }
 
+
+.banner{    
+    img{
+        position:absolute;
+    }
+    
+    div{
+        position:absolute;   
+        margin-left:190px; 
+        h1{
+            margin-top:90px;
+        }      
+        .underlined{
+            margin-top:10px;
+        }
+    }
+}
 
 }
 
