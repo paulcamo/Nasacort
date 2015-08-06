@@ -1,15 +1,37 @@
 // -------------------------------------------------------------------------------------------------
 
-//breakpoins
-//Desktop - 984+ large
-//Tablet - 600 - 983
-//Mobile – 320 – 599, or less
+//breakpoins for Nasacort HCP
+//
+//   1          320                     1400                ?  
+//   |-----------|------------------------|-----------------|
+//       mobile  |          desktop       |   big-screen       
+//               |                        |                    
+//               |                        |
+//           pp-mobile                pp-desktop    
+// 
+//
+//    Note: pixelperfect should be only on breakpoints
 
 
 @mixin breakpoint($point) {
-    @if $point == desktop {
-        @media  screen and (min-width : 984px) { @content; }
+    @if $point == big-screen {
+        @media  screen and (min-width : 1401px) { @content; }
     }
+    @else if $point == mobile {
+        @media  screen and (min-width : 1px) and (max-width : 320px)  { @content; }
+    }
+    @else if $point == desktop {
+        @media  screen and (min-width : 321px) and (max-width : 1400px)  { @content; }
+    }
+    @else if $point == pp-mobile {
+        @media  screen and (width : 320px) { @content; }
+    }
+    @else if $point == pp-desktop {
+        @media  screen and (width : 1400px) { @content; }
+    }
+
+
+    /*
     @else if $point == tablet {
         @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
     }
@@ -19,11 +41,10 @@
     @else if $point == tablet-l {
         @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
     }
-    @else if $point == phone {
-        @media  screen and (min-width : 1px) and (max-width : 599px)  { @content; }
-    }
-}
+  */
 
+
+}
 
 // -------------------------------------------------------------------------------------------------
 
