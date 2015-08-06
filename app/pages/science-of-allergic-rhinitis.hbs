@@ -40,9 +40,53 @@ layout: layout.hbs
         <img src="img/desktop/science-of-allergic-rhinitis/inflamation-img.png"/>
         <p class="right-aligned">Use only as directed.</p>
     </div>
-  
-
-</div>
+    
+    <div class="carousel">
+        <h2>How a nasal allergy can develop</h2>
+        <div class="cycle-slideshow" 
+            data-cycle-fx="scrollHorz" 
+            data-cycle-timeout="100000" 
+            data-cycle-next="#next"
+            data-cycle-prev="#prev"
+            data-cycle-pager="#pager"
+            data-cycle-carousel-visible=1
+            data-cycle-slides="> div"
+            >
+            <div class="item">
+                <h3>1. EXPOSURE</h3>
+                <p>An allergen (like pollen or dust) enters the nose, sensitizing the mast cells</p>
+                <img src="img/desktop/science-of-allergic-rhinitis/carousel/allergen-img.jpg"/>
+            </div>
+            <div class="item">
+                <h3>2. early-phase response</h3>
+                <p>Sensitized mast cells release mediators like histamines, which cause itchy nose, runny nose, and sneezing</p>
+                <img src="img/desktop/science-of-allergic-rhinitis/carousel/histamins-img.jpg"/>
+            </div>
+            <div class="item">
+                <h3>3. INFLAMMATION</h3>
+                <p>Cytokines bring white blood cells to the affected area, causing irritation and inflammation that lead to congestion</p>
+                <img src="img/desktop/science-of-allergic-rhinitis/carousel/inflamation-img.jpg"/>
+            </div>
+            <div class="item">
+                <h3>4. LATE-PHASE RESPONSE</h3>
+                <p>The inflammation leads to the release of even more histamine and mediating chemicals, which worsen symptoms</p>
+                <img src="img/desktop/science-of-allergic-rhinitis/carousel/symtons-img.jpg"/>
+            </div>
+            <div class="item">
+                <h3>5. ESCALATION</h3>
+                <p>Without anti-inflammatory intervention with an INS like Nasacort® Allergy 24HR, the cycle repeats and builds</p>
+                <img src="img/desktop/science-of-allergic-rhinitis/carousel/escalation-img.jpg"/>
+            </div>
+        </div>
+    
+        <div class=center>
+            <a href=# id=prev>&lt;&lt; Prev </a>
+            <a href=# id=next> Next &gt;&gt; </a>
+        </div>
+    
+        <div class="cycle-pager" id=pager></div>
+    
+    </div>
 
 
 
