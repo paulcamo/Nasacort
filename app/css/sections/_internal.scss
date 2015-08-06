@@ -2,7 +2,7 @@
     
     margin-top:-9px;
     position: relative;
-    width: 1400px;
+    width: 100%;
     margin-right:auto;
     margin-left:auto;
 
@@ -96,6 +96,8 @@ sup {
     height:700px;
     position:relative;
     float:left;
+    overflow:hidden;
+    padding-left:190px;
     
     p{
         font-family:$font-proxima-nova-regular;
@@ -172,12 +174,47 @@ sup {
     background-color:$color-blue-light-container;
     width:100%;
     float:left;
+    padding-left:190px;
 }
 
 .video-callout{
      background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
      width:981px;
      height:200px;
+     margin-top:30px;
+     cursor:pointer;     
+     .content-callout{
+         float: right;
+         margin-right: 70px;
+         width: 300px;  
+         h4{
+             margin-top:28px;
+             margin-bottom:10px;
+         }
+         p{
+             font-family:$font-proxima-nova-regular;
+             font-size:20px;
+             color:$color-white;  
+             margin-top:0;
+             margin-bottom:0;
+         }   
+     }
+     .button{
+         background:url("../img/desktop/science-of-allergic-rhinitis/button.png") no-repeat;
+         width:197px;
+         height:61px;
+         display:block;
+         margin-left: 785px;
+         top: 138px;
+         position:relative;
+         
+     }
+     &:hover{
+         .button{
+             background:url("../img/desktop/science-of-allergic-rhinitis/button-hover.png") no-repeat;
+             
+         }
+     }
 }
 
 
