@@ -42,7 +42,8 @@ layout: layout.hbs
     </div>
     
     <div class="carousel">
-        <h2>How a nasal allergy can develop</h2>
+        <h2>How a nasal allergy can develop</h2>       
+        <a href="#" id="prev" class="arrow-left"></a>
         <div class="cycle-slideshow" 
             data-cycle-fx="scrollHorz" 
             data-cycle-timeout="100000" 
@@ -50,6 +51,8 @@ layout: layout.hbs
             data-cycle-prev="#prev"
             data-cycle-pager="#pager"
             data-cycle-carousel-visible=1
+            data-cycle-swipe=true 
+            data-cycle-pause-on-hover="true" 
             data-cycle-slides="> div"
             >
             <div class="item">
@@ -78,14 +81,9 @@ layout: layout.hbs
                 <img src="img/desktop/science-of-allergic-rhinitis/carousel/escalation-img.jpg"/>
             </div>
         </div>
-    
-        <div class=center>
-            <a href=# id=prev>&lt;&lt; Prev </a>
-            <a href=# id=next> Next &gt;&gt; </a>
-        </div>
-    
-        <div class="cycle-pager" id=pager></div>
-    
+        <a href="#" id="next" class="arrow-right"></a>
+        
+        <div class="cycle-pager" id="pager"></div>
     </div>
 
 
