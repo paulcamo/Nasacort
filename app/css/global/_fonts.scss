@@ -2,6 +2,9 @@
 $font-proxima-nova-semibold: "Proxima Nova Semibold";
 @include fontFace($font-proxima-nova-semibold, "../fonts/ProximaNova-Semibold/ProximaNova-Semibold");
 
+$font-proxima-nova-regular: "Proxima Nova Regular";
+@include fontFace($font-proxima-nova-regular, "../fonts/ProximaNova-Regular/ProximaNova-Regular");
+
 $font-main: "arial";
 
 

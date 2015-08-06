@@ -54,7 +54,7 @@ p{
     font-family:Arial, Helvetica, sans-serif;
     color:$color-dark-grey;
     font-size:20px;
-    margin-bottom:30px;
+    margin-bottom:22px;
     font-weight:bold;
     display:block;
 }
@@ -63,3 +63,18 @@ p{
      color:$color-blue-text;
 }
 
+.right-aligned{
+    text-align: right;
+    margin-bottom:15px;
+    margin-top: 0;
+    float: right;
+    margin-right: 40px;
+    position: relative;
+}
+
+h3{
+    font-family:$font-proxima-nova-semibold;
+    color:$color-dark-blue;
+    font-size:30px;
+    text-transform:uppercase;
+}

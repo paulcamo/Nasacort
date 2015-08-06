@@ -52,6 +52,7 @@ sup {
         .graph{
             margin-left:106px;
             position:relative;
+            margin-bottom:52px;
             
             img{
                 margin-right:64px;
@@ -61,15 +62,15 @@ sup {
                 }
             }
         }
-        .right-aligned{
-            text-align: right;
-        }
+        
     }
 }
 
 .about{
     background-color:$color-blue-light-container;
     height:405px;
+    width:100%;
+    float:left;
     
     .description{
         width:480px;
@@ -84,8 +85,19 @@ sup {
     
     img{
         float:right;
-        margin-right:82px;
+        margin-right:52px;
         margin-top:50px;
+        margin-bottom:35px;
+    }
+}
+
+.carousel{
+    height:700px;
+    position:relative;
+    float:left;
+    
+    p{
+        font-family:Arial, Helvetica, sans-serif;
     }
 }
 
