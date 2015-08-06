@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /* main */
-/* line 17, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,46 +22,46 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
@@ -80,164 +81,165 @@ a {
   text-decoration: none;
 }
 
-/* line 282, ../img/sprite/*.png */
+/* line 288, ../img/sprite/*.png */
 .sprite-sprite, .sprite-arrow-on, .sprite-arrow, .sprite-btn-blue-arrow, .sprite-btn-go-on, .sprite-btn-go, .sprite-btn-large-on, .sprite-btn-large, .sprite-btn-left-corners, .sprite-btn-right-corners, .sprite-bullet, .sprite-callout-cta-arrow, .sprite-callout-footer-bg, .sprite-callout-header-left, .sprite-callout-header-on, .sprite-callout-header, .sprite-header-top-bg, .sprite-logo, .sprite-main-nav-left-on, .sprite-main-nav-left, .sprite-main-nav-sep, .sprite-main-nav-solid-bg, .sprite-menactra-logo, .sprite-nav-left, .sprite-order-cta-bg, .sprite-sanofi-footer, .sprite-sanofi-logo, .sprite-sub-bullet, .sprite-sub-nav-bg, .sprite-subnav-bg-on, .sprite-subnav-bg, .sprite-title-about {
-  background: url('../img/sprite-s1af505b853.png') no-repeat;
+  background-image: url('../img/sprite-s34297d561c.png');
+  background-repeat: no-repeat;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-arrow-on {
-  background-position: 0 -440px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-arrow {
-  background-position: 0 -514px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-blue-arrow {
-  background-position: 0 -816px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-go-on {
-  background-position: 0 -642px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-go {
-  background-position: 0 -669px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-large-on {
-  background-position: 0 -588px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-large {
-  background-position: 0 -615px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-left-corners {
-  background-position: 0 -1149px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-btn-right-corners {
-  background-position: 0 -1075px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-bullet {
-  background-position: 0 -1176px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-callout-cta-arrow {
-  background-position: 0 -870px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-callout-footer-bg {
-  background-position: 0 -1038px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-callout-header-left {
-  background-position: 0 -1044px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-callout-header-on {
-  background-position: 0 -784px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-callout-header {
-  background-position: 0 -752px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-header-top-bg {
-  background-position: 0 -185px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-logo {
-  background-position: 0 -137px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-main-nav-left-on {
-  background-position: 0 -949px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-main-nav-left {
-  background-position: 0 -998px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-main-nav-sep {
-  background-position: 0 -1180px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-main-nav-solid-bg {
-  background-position: 0 -1109px;
-}
-
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-menactra-logo {
   background-position: 0 0;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-nav-left {
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrow {
+  background-position: 0 -74px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-blue-arrow {
+  background-position: 0 -148px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-go-on {
+  background-position: 0 -163px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-go {
+  background-position: 0 -190px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-large-on {
+  background-position: 0 -217px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-large {
+  background-position: 0 -244px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-left-corners {
+  background-position: 0 -271px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-right-corners {
+  background-position: 0 -298px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-bullet {
+  background-position: 0 -325px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-cta-arrow {
+  background-position: 0 -329px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-footer-bg {
+  background-position: 0 -344px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header-left {
+  background-position: 0 -350px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header-on {
+  background-position: 0 -381px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header {
+  background-position: 0 -413px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-header-top-bg {
+  background-position: 0 -445px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-logo {
+  background-position: 0 -623px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-left-on {
+  background-position: 0 -671px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-left {
+  background-position: 0 -711px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-sep {
+  background-position: 0 -751px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-solid-bg {
+  background-position: 0 -791px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-menactra-logo {
   background-position: 0 -831px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-nav-left {
+  background-position: 0 -968px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-order-cta-bg {
-  background-position: 0 -696px;
+  background-position: 0 -1007px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-sanofi-footer {
-  background-position: 0 -416px;
+  background-position: 0 -1063px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-sanofi-logo {
-  background-position: 0 -363px;
+  background-position: 0 -1087px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-sub-bullet {
-  background-position: 0 -1102px;
+  background-position: 0 -1118px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-sub-nav-bg {
-  background-position: 0 -989px;
+  background-position: 0 -1125px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-subnav-bg-on {
-  background-position: 0 -885px;
+  background-position: 0 -1134px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-subnav-bg {
-  background-position: 0 -917px;
+  background-position: 0 -1166px;
 }
 
-/* line 60, ../../../../../../boszdigital/.rvm/gems/ruby-2.1.2@global/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
 .sprite-title-about {
-  background-position: 0 -394px;
+  background-position: 0 -1198px;
 }
 
 @font-face {
@@ -247,7 +249,6 @@ a {
   font-style: normal;
   font-weight: normal;
 }
-
 @font-face {
   font-family: "Proxima Nova Regular";
   src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot");
@@ -255,15 +256,6 @@ a {
   font-style: normal;
   font-weight: normal;
 }
-
-@font-face {
-  font-family: "Proxima Nova Bold";
-  src: url("../fonts/ProximaNova-Bold/ProximaNova-Bold.eot");
-  src: url("../fonts/ProximaNova-Bold/ProximaNova-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold/ProximaNova-Bold.woff") format("woff"), url("../fonts/ProximaNova-Bold/ProximaNova-Bold.ttf") format("truetype"), url("../fonts/ProximaNova-Bold/ProximaNova-Bold.svg#Proxima Nova Bold") format("svg");
-  font-style: normal;
-  font-weight: normal;
-}
-
 /* line 2, ../../app/css/global/_styleguide.scss */
 sup {
   font-size: 75%;
@@ -348,13 +340,6 @@ h3 {
   color: #022e80;
   font-size: 30px;
   text-transform: uppercase;
-}
-
-/* line 82, ../../app/css/global/_styleguide.scss */
-h4 {
-  font-family: "Proxima Nova Bold";
-  color: #7fc3fd;
-  font-size: 29px;
 }
 
 /* default state */
@@ -490,7 +475,7 @@ h4 {
   bottom: 0;
   left: 0;
   z-index: 9998;
-  background-color: black;
+  background-color: #000000;
 }
 /* line 110, ../../app/css/global/_modal.scss */
 .modal-backdrop.fade {
@@ -508,7 +493,7 @@ h4 {
   padding: 30px;
   padding-bottom: 22px;
   padding-top: 0;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 /* line 123, ../../app/css/global/_modal.scss */
@@ -520,7 +505,7 @@ h4 {
 .modal-title {
   margin: 0;
   line-height: 12px;
-  background: white url("../img/header-interstitial.png") center right no-repeat;
+  background: #ffffff url("../img/header-interstitial.png") center right no-repeat;
   width: 351px;
   height: 37px;
 }
@@ -532,7 +517,7 @@ h4 {
   padding-top: 0;
   padding-bottom: 22px;
   padding-right: 25px;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 /* line 147, ../../app/css/global/_modal.scss */
@@ -561,7 +546,7 @@ h4 {
   padding-top: 0;
   padding-bottom: 0;
   text-align: right;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 /* line 74, ../../app/css/global/_mixins.scss */
 .modal-footer:after {
@@ -598,7 +583,7 @@ h4 {
   height: 27px;
   line-height: 27px;
   font-size: 13px;
-  color: white;
+  color: #ffffff;
   font-family: "arial";
   font-weight: bold;
   display: block;
@@ -712,14 +697,14 @@ h4 {
 }
 /* line 95, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a {
-  color: white !important;
+  color: #ffffff !important;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   float: left;
 }
 /* line 101, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:hover {
-  color: white !important;
+  color: #ffffff !important;
 }
 /* line 104, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:hover .active {
@@ -809,7 +794,7 @@ h4 {
 }
 /* line 24, ../../app/css/global/_footer.scss */
 .footer .footer-content .lists .footer-col li a {
-  color: white;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -860,7 +845,7 @@ h4 {
 }
 /* line 73, ../../app/css/global/_footer.scss */
 .footer .footer-content .alternative-content ul li a {
-  color: white;
+  color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -870,7 +855,7 @@ h4 {
 }
 /* line 83, ../../app/css/global/_footer.scss */
 .footer .footer-content .alternative-content ul li .pipe {
-  background-color: white;
+  background-color: #ffffff;
   width: 1px;
   height: 14px;
   position: relative;
@@ -1075,7 +1060,7 @@ h4 {
 .section-content {
   margin-top: -9px;
   position: relative;
-  width: 100%;
+  width: 1400px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1162,24 +1147,22 @@ h4 {
   height: 700px;
   position: relative;
   float: left;
-  overflow: hidden;
-  padding-left: 190px;
 }
-/* line 102, ../../app/css/sections/_internal.scss */
+/* line 100, ../../app/css/sections/_internal.scss */
 .section-content .carousel p {
   font-family: "Proxima Nova Regular";
 }
-/* line 107, ../../app/css/sections/_internal.scss */
+/* line 105, ../../app/css/sections/_internal.scss */
 .section-content .cycle-slideshow {
   margin-top: 30px;
   float: left;
 }
-/* line 111, ../../app/css/sections/_internal.scss */
+/* line 109, ../../app/css/sections/_internal.scss */
 .section-content .cycle-slideshow .item p {
   margin-top: 16px;
   margin-bottom: 18px;
 }
-/* line 119, ../../app/css/sections/_internal.scss */
+/* line 117, ../../app/css/sections/_internal.scss */
 .section-content .arrow-left {
   background: url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
   width: 84px;
@@ -1189,11 +1172,11 @@ h4 {
   margin-right: 10px;
   margin-top: 119px;
 }
-/* line 127, ../../app/css/sections/_internal.scss */
+/* line 125, ../../app/css/sections/_internal.scss */
 .section-content .arrow-left:hover {
   background: url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
 }
-/* line 132, ../../app/css/sections/_internal.scss */
+/* line 130, ../../app/css/sections/_internal.scss */
 .section-content .arrow-right {
   background: url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
   width: 84px;
@@ -1203,11 +1186,11 @@ h4 {
   margin-left: 10px;
   margin-top: 119px;
 }
-/* line 140, ../../app/css/sections/_internal.scss */
+/* line 138, ../../app/css/sections/_internal.scss */
 .section-content .arrow-right:hover {
   background: url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
 }
-/* line 145, ../../app/css/sections/_internal.scss */
+/* line 143, ../../app/css/sections/_internal.scss */
 .section-content .cycle-pager {
   float: left;
   margin-left: 383px;
@@ -1215,7 +1198,7 @@ h4 {
   position: relative;
   width: 100%;
 }
-/* line 152, ../../app/css/sections/_internal.scss */
+/* line 150, ../../app/css/sections/_internal.scss */
 .section-content .cycle-pager span {
   background: url("../img/desktop/science-of-allergic-rhinitis/paging.png") no-repeat;
   width: 16px;
@@ -1226,67 +1209,146 @@ h4 {
   margin-right: 20px;
   cursor: pointer;
 }
-/* line 161, ../../app/css/sections/_internal.scss */
+/* line 159, ../../app/css/sections/_internal.scss */
 .section-content .cycle-pager span.cycle-pager-active {
   background: url("../img/desktop/science-of-allergic-rhinitis/paging-active.png") no-repeat;
   position: relative;
   top: -1px;
 }
-/* line 166, ../../app/css/sections/_internal.scss */
+/* line 164, ../../app/css/sections/_internal.scss */
 .section-content .cycle-pager span:last-child {
   margin-right: 0;
 }
-/* line 172, ../../app/css/sections/_internal.scss */
+/* line 170, ../../app/css/sections/_internal.scss */
 .section-content .video-callout-container {
   height: 260px;
   background-color: #e5ebf0;
   width: 100%;
   float: left;
-  padding-left: 190px;
 }
-/* line 180, ../../app/css/sections/_internal.scss */
+/* line 177, ../../app/css/sections/_internal.scss */
 .section-content .video-callout {
   background: url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
   width: 981px;
   height: 200px;
-  margin-top: 30px;
-  cursor: pointer;
-}
-/* line 186, ../../app/css/sections/_internal.scss */
-.section-content .video-callout .content-callout {
-  float: right;
-  margin-right: 70px;
-  width: 300px;
-}
-/* line 190, ../../app/css/sections/_internal.scss */
-.section-content .video-callout .content-callout h4 {
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-/* line 194, ../../app/css/sections/_internal.scss */
-.section-content .video-callout .content-callout p {
-  font-family: "Proxima Nova Regular";
-  font-size: 20px;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-/* line 202, ../../app/css/sections/_internal.scss */
-.section-content .video-callout .button {
-  background: url("../img/desktop/science-of-allergic-rhinitis/button.png") no-repeat;
-  width: 197px;
-  height: 61px;
-  display: block;
-  margin-left: 785px;
-  top: 138px;
-  position: relative;
-}
-/* line 213, ../../app/css/sections/_internal.scss */
-.section-content .video-callout:hover .button {
-  background: url("../img/desktop/science-of-allergic-rhinitis/button-hover.png") no-repeat;
 }
 
-/* line 39, ../../app/css/main.scss */
+/* line 2, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label h2 {
+  line-height: 38px;
+}
+/* line 5, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label sup {
+  font-size: 56%;
+  position: relative;
+  top: -0.6em;
+  left: 0.2em;
+}
+/* line 11, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label i {
+  font-style: italic;
+}
+/* line 14, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label strong {
+  font-weight: bold;
+}
+/* line 17, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label p {
+  margin-top: 0;
+  margin-bottom: 27px;
+  line-height: 23px;
+  letter-spacing: 1.6px;
+}
+/* line 23, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label li {
+  font-size: 16px;
+  color: #555555;
+  letter-spacing: 1.3px;
+  line-height: 18px;
+}
+/* line 28, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label li:before {
+  content: "• ";
+}
+/* line 32, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label ul, .drug-fact-label p {
+  padding-left: 5px;
+}
+/* line 35, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label ul {
+  margin-bottom: 27px;
+}
+
+/* line 40, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label-header {
+  background-color: #d1e1f4;
+  position: relative;
+  overflow: hidden;
+  min-width: 1000px;
+  top: -9px;
+  height: 170px;
+}
+/* line 47, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label-header h1 {
+  margin-top: 68px;
+  padding-left: 51px;
+}
+
+/* line 53, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label {
+  padding-left: 54px;
+  padding-top: 3px;
+}
+/* line 57, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .title_internal {
+  color: #0d5ea4;
+  font-family: "Proxima Nova Semibold";
+  font-size: 28px;
+  margin-top: 13px;
+  font-style: italic;
+  letter-spacing: 0.8px;
+}
+/* line 65, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .subtitle_internal {
+  color: #0d5ea4;
+  margin-bottom: 1px;
+}
+/* line 69, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .list {
+  padding-left: 6px;
+  margin-bottom: 33px;
+}
+/* line 73, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li {
+  display: inline;
+  margin-right: 60px;
+}
+/* line 76, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li:before {
+  content: "• ";
+}
+/* line 79, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li:last-child {
+  margin-right: 0;
+}
+/* line 83, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .marg-fix {
+  margin-bottom: 5px;
+}
+
+/* line 89, ../../app/css/sections/_druglabel.scss */
+.box-drug-fact {
+  background-color: #ebeff4;
+  border: 1px solid #809aab;
+}
+
+@media (max-width: 1199px) {
+  /* line 97, ../../app/css/sections/_druglabel.scss */
+  .home-section #bg-container {
+    background: url("../img/bg2.png") no-repeat left top;
+  }
+}
+/* line 40, ../../app/css/main.scss */
 .container {
   margin: 0 auto;
 }
