@@ -1,1 +1,1354 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary{display:block}html{font-family:arial, sans-serif;font-size:13px}div,p,span,article,a,ul,li{box-sizing:border-box}a{text-decoration:none}.sprite-sprite,.sprite-arrow-on,.sprite-arrow,.sprite-btn-blue-arrow,.sprite-btn-go-on,.sprite-btn-go,.sprite-btn-large-on,.sprite-btn-large,.sprite-btn-left-corners,.sprite-btn-right-corners,.sprite-bullet,.sprite-callout-cta-arrow,.sprite-callout-footer-bg,.sprite-callout-header-left,.sprite-callout-header-on,.sprite-callout-header,.sprite-header-top-bg,.sprite-logo,.sprite-main-nav-left-on,.sprite-main-nav-left,.sprite-main-nav-sep,.sprite-main-nav-solid-bg,.sprite-menactra-logo,.sprite-nav-left,.sprite-order-cta-bg,.sprite-sanofi-footer,.sprite-sanofi-logo,.sprite-sub-bullet,.sprite-sub-nav-bg,.sprite-subnav-bg-on,.sprite-subnav-bg,.sprite-title-about{background:url('../img/sprite-s1af505b853.png') no-repeat}.sprite-arrow-on{background-position:0 -440px}.sprite-arrow{background-position:0 -514px}.sprite-btn-blue-arrow{background-position:0 -816px}.sprite-btn-go-on{background-position:0 -642px}.sprite-btn-go{background-position:0 -669px}.sprite-btn-large-on{background-position:0 -588px}.sprite-btn-large{background-position:0 -615px}.sprite-btn-left-corners{background-position:0 -1149px}.sprite-btn-right-corners{background-position:0 -1075px}.sprite-bullet{background-position:0 -1176px}.sprite-callout-cta-arrow{background-position:0 -870px}.sprite-callout-footer-bg{background-position:0 -1038px}.sprite-callout-header-left{background-position:0 -1044px}.sprite-callout-header-on{background-position:0 -784px}.sprite-callout-header{background-position:0 -752px}.sprite-header-top-bg{background-position:0 -185px}.sprite-logo{background-position:0 -137px}.sprite-main-nav-left-on{background-position:0 -949px}.sprite-main-nav-left{background-position:0 -998px}.sprite-main-nav-sep{background-position:0 -1180px}.sprite-main-nav-solid-bg{background-position:0 -1109px}.sprite-menactra-logo{background-position:0 0}.sprite-nav-left{background-position:0 -831px}.sprite-order-cta-bg{background-position:0 -696px}.sprite-sanofi-footer{background-position:0 -416px}.sprite-sanofi-logo{background-position:0 -363px}.sprite-sub-bullet{background-position:0 -1102px}.sprite-sub-nav-bg{background-position:0 -989px}.sprite-subnav-bg-on{background-position:0 -885px}.sprite-subnav-bg{background-position:0 -917px}.sprite-title-about{background-position:0 -394px}@font-face{font-family:"Proxima Nova Semibold";src:url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot");src:url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"),url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff") format("woff"),url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf") format("truetype"),url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.svg#Proxima Nova Semibold") format("svg");font-style:normal;font-weight:normal}@font-face{font-family:"Proxima Nova Regular";src:url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot");src:url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/ProximaNova-Regular/ProximaNova-Regular.woff") format("woff"),url("../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf") format("truetype"),url("../fonts/ProximaNova-Regular/ProximaNova-Regular.svg#Proxima Nova Regular") format("svg");font-style:normal;font-weight:normal}sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;top:-0.4em;cursor:pointer}h1{font-family:"Proxima Nova Semibold";color:#022e80;font-size:50px;margin-top:90px}.underlined{background-color:#cfd9e8;width:51px;height:6px;display:block;margin-top:10px}h2{font-family:Arial, Helvetica, sans-serif;color:#2974ab;font-size:32px;margin-top:50px;font-weight:bold}p{font-family:Arial, Helvetica, sans-serif;color:#555;font-size:16px;margin-top:25px;margin-bottom:30px;line-height:24px}.chart-head{font-family:Arial, Helvetica, sans-serif;color:#555;font-size:20px;margin-bottom:22px;font-weight:bold;display:block}.blue-text{color:#1c68a1}.right-aligned{text-align:right;margin-bottom:15px;margin-top:0;float:right;margin-right:40px;position:relative}h3{font-family:"Proxima Nova Semibold";color:#022e80;font-size:30px;text-transform:uppercase}.state-indicator{position:absolute;top:-999em;left:-999em;z-index:1}@media screen and (min-width: 321px) and (max-width: 1400px){.state-indicator{z-index:5}}.modal-open{overflow:hidden}.modal{display:none;overflow:hidden;position:fixed;top:0;right:0;bottom:0;left:0;z-index:9999;-webkit-overflow-scrolling:touch;outline:0}.modal-open .modal{overflow-x:hidden;overflow-y:auto}.modal-dialog{position:relative;width:624px;height:279px;margin:10% auto;z-index:9999}.top-corner{background:url("../img/bg-interstitial-top.png") no-repeat;width:624px;height:30px}.bottom-corner{background:url("../img/bg-interstitial-bottom.png") no-repeat;width:624px;height:30px}.modal-content{position:relative;background-clip:padding-box;outline:0}.modal-backdrop{position:fixed;top:0;right:0;bottom:0;left:0;z-index:9998;background-color:#000}.modal-backdrop.fade{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);opacity:0}.modal-backdrop.in{filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=80);opacity:0.8}.modal-header{padding:30px;padding-bottom:22px;padding-top:0;background-color:#fff}.modal-header .close{margin-top:-2px}.modal-title{margin:0;line-height:12px;background:#fff url("../img/header-interstitial.png") center right no-repeat;width:351px;height:37px}.modal-body{position:relative;padding:30px;padding-top:0;padding-bottom:22px;padding-right:25px;background-color:#fff}.modal-body p{font-family:"arial";font-size:13px;color:#515151}.modal-body p i{font-style:italic}.modal-body .third-party{display:none}.modal-body .third-party:first-child{margin-top:10px}.modal-footer{padding:30px;padding-top:0;padding-bottom:0;text-align:right;background-color:#fff}.modal-footer:after{content:"";display:table;clear:both}.modal-footer .btn+.btn{margin-left:5px;margin-bottom:0}.modal-footer .btn-group .btn+.btn{margin-left:-1px}.modal-footer .btn-block+.btn-block{margin-left:0}.modal-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.btn-default{width:463px;height:27px;line-height:27px;font-size:13px;color:#fff;font-family:"arial";font-weight:bold;display:block;padding-left:18px;margin-bottom:16px;background:url("../img/btn-interstitial.png") right center no-repeat;text-transform:uppercase;text-align:left}.btn-default:hover{background:url("../img/btn-interstitial-on.png") right center no-repeat}.btn-default:last-child{margin-bottom:0}.header{position:relative;z-index:9999;min-width:1000px}.header .header-top .sanofi-logo{background:url("../img/desktop/header/sanofi-logo.png") no-repeat;width:100px;height:21px;float:right;margin-top:4px;margin-right:190px}.header .header-top .top-bar{background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;height:43px}.header .header-top .nassacort-logo{background:url("../img/desktop/header/nassacort-logo.png") no-repeat;width:213px;height:65px;display:block;position:relative;float:left;margin-top:10px;margin-left:192px}.header .header-top .nassacort-logo .little-house{background:url("../img/desktop/header/little-white-house.png") no-repeat;width:32px;height:25px;display:inline-block;position:absolute;bottom:7px;right:0}.header .header-top .nassacort-logo:hover .little-house{background:url("../img/desktop/header/little-cyan-house.png") no-repeat}.header .header-top .blue-bar{background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;height:91px;margin-top:-14px}.header .header-top ul.utility-nav{float:right;margin-top:8px;position:relative;z-index:1;margin-right:190px}.header .header-top ul.utility-nav li{float:left;margin-left:25px}.header .header-top ul.utility-nav li a{color:#d2e1ed;text-decoration:none;font-size:12px;font-family:Arial, Helvetica, sans-serif;text-transform:uppercase}.header .header-top ul.utility-nav li a:hover{text-decoration:underline;color:#6adaff !important}.header .header-top ul.utility-nav li a:visited{color:#d2e1ed}.header .header-top ul.main-nav{margin-top:48px;position:absolute;right:-10px;z-index:1;margin-right:190px}.header .header-top ul.main-nav li{float:left}.header .header-top ul.main-nav li a{color:#fff !important;font-size:18px;font-family:Arial, Helvetica, sans-serif;float:left}.header .header-top ul.main-nav li a:hover{color:#fff !important}.header .header-top ul.main-nav li a:hover .active{visibility:visible}.header .header-top ul.main-nav li a:hover .label{background:url("../img/desktop/header/item-active-bg.png") repeat-x}.header .header-top ul.main-nav li a:visited{color:#d2e1ed}.header .header-top ul.main-nav li a .item-left-bg{background:url("../img/desktop/header/item-active-left.png") no-repeat;width:10px;height:26px;float:left}.header .header-top ul.main-nav li a .item-right-bg{background:url("../img/desktop/header/item-active-right.png") no-repeat;width:10px;height:26px;float:right;position:relative}.header .header-top ul.main-nav li a .active{visibility:hidden}.header .header-top ul.main-nav li a .label{padding-bottom:10px;padding-top:4px;float:left;height:26px}.header .header-top ul.main-nav li span.pipe{background-color:#fcfcfc;width:1px;height:15px;float:right;margin-left:10px;margin-right:10px;margin-top:6px}.header .shine{background:url("../img/desktop/header/header-shine.png") no-repeat;width:1232px;height:82px;position:absolute;margin-left:auto;margin-right:auto;left:0;right:0;z-index:0}.footer{background-color:#0c3e78;bottom:0;position:absolute;width:100%}.footer .footer-content .lists{height:263px;padding-left:190px;padding-right:190px;border-bottom:1px #d2e2f4 solid}.footer .footer-content .lists .footer-col{width:25%;float:left;position:relative}.footer .footer-content .lists .footer-col li{margin-bottom:16px}.footer .footer-content .lists .footer-col li a{color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:14px}.footer .footer-content .lists .footer-col li a:hover{text-decoration:underline}.footer .footer-content .lists .footer-col li a:hover sup{text-decoration:none}.footer .footer-content .lists .footer-col li a.active{color:#6adaff}.footer .footer-content .lists .first-col{margin-top:40px}.footer .footer-content .lists .second-col{margin-top:70px}.footer .footer-content .lists .third-col{margin-top:70px}.footer .footer-content .lists .fourth-col{margin-top:70px}.footer .footer-content .alternative-content{padding-left:190px;padding-right:190px;float:left;width:100%;height:45px;background-color:#0c3e78}.footer .footer-content .alternative-content ul{margin-top:16px}.footer .footer-content .alternative-content ul li{float:left}.footer .footer-content .alternative-content ul li a{color:#fff;font-family:Arial, Helvetica, sans-serif;font-size:14px}.footer .footer-content .alternative-content ul li a:hover{text-decoration:underline}.footer .footer-content .alternative-content ul li .pipe{background-color:#fff;width:1px;height:14px;position:relative;float:right;margin-left:14px;margin-right:14px;margin-top:0px}.footer .footer-content .bottom-content{background:url("../img/desktop/footer/bg-footer.jpg") repeat-x;padding-left:190px;padding-right:190px;height:108px;background-color:#dfeaf7;float:left;padding-top:21px;width:100%}.footer .footer-content .bottom-content ul li{float:left}.footer .footer-content .bottom-content ul li a{color:#022e80;font-family:Arial, Helvetica, sans-serif;font-size:12px}.footer .footer-content .bottom-content ul li a:hover{text-decoration:underline}.footer .footer-content .bottom-content ul li .pipe{background-color:#022e80;width:1px;height:11px;position:relative;float:right;margin-left:12px;margin-right:12px;margin-top:0px}.footer .footer-content .bottom-content .right-side{float:right}.footer .footer-content .bottom-content p{float:left;margin-top:61px;margin-right:12px}.footer .footer-content .bottom-content .logo-footer{background:url("../img/desktop/footer/logo-footer.png") no-repeat;width:123px;height:65px;float:right;margin-top:6px}.isi-container{padding-bottom:4px;border-bottom:1px solid #d9d9d9;margin-bottom:21px;width:100%;overflow:hidden;max-width:763px}.isi-header.upper{margin-bottom:17px}.isi-header{margin-bottom:5px}.isi-copy{margin-bottom:18px !important}.references{padding-bottom:2px}.references ul li{list-style-type:none;background-image:none;padding-left:0;margin-left:0;max-width:763px}.home-section .content{overflow:hidden;padding:0 0 0 100px}.home-section .content:after{content:"";display:table;clear:both}.home-section .callouts{overflow:hidden;margin-bottom:27px}.home-section .callouts:after{content:"";display:table;clear:both}.home-section .home-callout{float:left}.home-section .home-callout.left-callout{margin-right:20px}.home-section .order-cta{margin-bottom:49px}.home-section .isi-container,.home-section .references{padding-right:10px}.home-section .cta01{width:253px}@media all and (-ms-high-contrast: none), (-ms-high-contrast: active){.home-section .cta01{width:256px}}.home-section .cta02{width:166px}.home-section .order-cta{margin-top:30px}.home-section .references ul{padding-bottom:33px}@media (max-width: 1199px){.home-section #bg-container{background:url("../img/bg2.png") no-repeat left top}}.section-content{margin-top:-9px;position:relative;width:1400px;margin-right:auto;margin-left:auto}.section-content sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;top:-0.4em;cursor:pointer}.section-content .banner{height:322px}.section-content .banner img{position:absolute}.section-content .banner div{position:absolute;margin-left:190px}.section-content .statistics{height:670px}.section-content .statistics div{position:absolute;margin-left:190px}.section-content .statistics div .graph{margin-left:106px;position:relative;margin-bottom:52px}.section-content .statistics div .graph img{margin-right:64px}.section-content .statistics div .graph img:last-child{margin-right:0}.section-content .about{background-color:#e5ebf0;height:405px;width:100%;float:left}.section-content .about .description{width:480px;margin-left:190px;float:left;margin-right:45px}.section-content .about .description h2{margin-bottom:30px}.section-content .about img{float:right;margin-right:52px;margin-top:50px;margin-bottom:35px}.section-content .carousel{width:100%;height:700px;position:relative;float:left}.section-content .carousel p{font-family:"Proxima Nova Regular"}.section-content .cycle-slideshow{margin-top:30px;float:left}.section-content .cycle-slideshow .item p{margin-top:16px;margin-bottom:18px}.section-content .arrow-left{background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;width:84px;height:434px;display:block;float:left;margin-right:10px;margin-top:119px}.section-content .arrow-left:hover{background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat}.section-content .arrow-right{background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;width:84px;height:434px;display:block;float:left;margin-left:10px;margin-top:119px}.section-content .arrow-right:hover{background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat}.section-content .cycle-pager{float:left;margin-left:383px;margin-top:24px;position:relative;width:100%}.section-content .cycle-pager span{background:url("../img/desktop/science-of-allergic-rhinitis/paging.png") no-repeat;width:16px;height:16px;display:block;text-indent:-9999px;float:left;margin-right:20px;cursor:pointer}.section-content .cycle-pager span.cycle-pager-active{background:url("../img/desktop/science-of-allergic-rhinitis/paging-active.png") no-repeat;position:relative;top:-1px}.section-content .cycle-pager span:last-child{margin-right:0}.section-content .video-callout-container{height:260px;background-color:#e5ebf0;width:100%;float:left}.section-content .video-callout{background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;width:981px;height:200px}.container{margin:0 auto}
+@charset "UTF-8";
+/* main */
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 3, ../../app/css/global/_reset.scss */
+html {
+  font-family: arial, sans-serif;
+  font-size: 13px;
+}
+
+/* line 8, ../../app/css/global/_reset.scss */
+div, p, span, article, a, ul, li {
+  box-sizing: border-box;
+}
+
+/* line 12, ../../app/css/global/_reset.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 288, ../img/sprite/*.png */
+.sprite-sprite, .sprite-arrow-on, .sprite-arrow, .sprite-btn-blue-arrow, .sprite-btn-go-on, .sprite-btn-go, .sprite-btn-large-on, .sprite-btn-large, .sprite-btn-left-corners, .sprite-btn-right-corners, .sprite-bullet, .sprite-callout-cta-arrow, .sprite-callout-footer-bg, .sprite-callout-header-left, .sprite-callout-header-on, .sprite-callout-header, .sprite-header-top-bg, .sprite-logo, .sprite-main-nav-left-on, .sprite-main-nav-left, .sprite-main-nav-sep, .sprite-main-nav-solid-bg, .sprite-menactra-logo, .sprite-nav-left, .sprite-order-cta-bg, .sprite-sanofi-footer, .sprite-sanofi-logo, .sprite-sub-bullet, .sprite-sub-nav-bg, .sprite-subnav-bg-on, .sprite-subnav-bg, .sprite-title-about {
+  background-image: url('../img/sprite-s34297d561c.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrow-on {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrow {
+  background-position: 0 -74px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-blue-arrow {
+  background-position: 0 -148px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-go-on {
+  background-position: 0 -163px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-go {
+  background-position: 0 -190px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-large-on {
+  background-position: 0 -217px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-large {
+  background-position: 0 -244px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-left-corners {
+  background-position: 0 -271px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-btn-right-corners {
+  background-position: 0 -298px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-bullet {
+  background-position: 0 -325px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-cta-arrow {
+  background-position: 0 -329px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-footer-bg {
+  background-position: 0 -344px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header-left {
+  background-position: 0 -350px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header-on {
+  background-position: 0 -381px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-callout-header {
+  background-position: 0 -413px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-header-top-bg {
+  background-position: 0 -445px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-logo {
+  background-position: 0 -623px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-left-on {
+  background-position: 0 -671px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-left {
+  background-position: 0 -711px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-sep {
+  background-position: 0 -751px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-main-nav-solid-bg {
+  background-position: 0 -791px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-menactra-logo {
+  background-position: 0 -831px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-nav-left {
+  background-position: 0 -968px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-order-cta-bg {
+  background-position: 0 -1007px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-sanofi-footer {
+  background-position: 0 -1063px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-sanofi-logo {
+  background-position: 0 -1087px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-sub-bullet {
+  background-position: 0 -1118px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-sub-nav-bg {
+  background-position: 0 -1125px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-subnav-bg-on {
+  background-position: 0 -1134px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-subnav-bg {
+  background-position: 0 -1166px;
+}
+
+/* line 84, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-title-about {
+  background-position: 0 -1198px;
+}
+
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.woff") format("woff"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.ttf") format("truetype"), url("../fonts/ProximaNova-Semibold/ProximaNova-Semibold.svg#Proxima Nova Semibold") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Regular";
+  src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular/ProximaNova-Regular.svg#Proxima Nova Regular") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 2, ../../app/css/global/_styleguide.scss */
+sup {
+  font-size: 75%;
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+  /* Move the superscripted text up */
+  top: -0.4em;
+  cursor: pointer;
+}
+
+/* line 21, ../../app/css/global/_styleguide.scss */
+h1 {
+  font-family: "Proxima Nova Semibold";
+  color: #022e80;
+  font-size: 50px;
+  margin-top: 90px;
+}
+
+/* line 28, ../../app/css/global/_styleguide.scss */
+.underlined {
+  background-color: #cfd9e8;
+  width: 51px;
+  height: 6px;
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 36, ../../app/css/global/_styleguide.scss */
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2974ab;
+  font-size: 32px;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+/* line 44, ../../app/css/global/_styleguide.scss */
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555555;
+  font-size: 16px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  line-height: 24px;
+}
+
+/* line 53, ../../app/css/global/_styleguide.scss */
+.chart-head {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555555;
+  font-size: 20px;
+  margin-bottom: 22px;
+  font-weight: bold;
+  display: block;
+}
+
+/* line 62, ../../app/css/global/_styleguide.scss */
+.blue-text {
+  color: #1c68a1;
+}
+
+/* line 66, ../../app/css/global/_styleguide.scss */
+.right-aligned {
+  text-align: right;
+  margin-bottom: 15px;
+  margin-top: 0;
+  float: right;
+  margin-right: 40px;
+  position: relative;
+}
+
+/* line 75, ../../app/css/global/_styleguide.scss */
+h3 {
+  font-family: "Proxima Nova Semibold";
+  color: #022e80;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+/* default state */
+/* line 2, ../../app/css/global/_states.scss */
+.state-indicator {
+  position: absolute;
+  top: -999em;
+  left: -999em;
+  z-index: 1;
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+}
+@media screen and (min-width: 321px) and (max-width: 1400px) {
+  /* line 2, ../../app/css/global/_states.scss */
+  .state-indicator {
+    z-index: 5;
+  }
+}
+
+/* line 34, ../../app/css/global/_modal.scss */
+.modal-open {
+  overflow: hidden;
+}
+
+/* line 39, ../../app/css/global/_modal.scss */
+.modal {
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+/* line 61, ../../app/css/global/_modal.scss */
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* line 67, ../../app/css/global/_modal.scss */
+.modal-dialog {
+  position: relative;
+  width: 624px;
+  height: 279px;
+  margin: 10% auto;
+  z-index: 9999;
+}
+
+/* line 75, ../../app/css/global/_modal.scss */
+.top-corner {
+  background: url("../img/bg-interstitial-top.png") no-repeat;
+  width: 624px;
+  height: 30px;
+}
+
+/* line 81, ../../app/css/global/_modal.scss */
+.bottom-corner {
+  background: url("../img/bg-interstitial-bottom.png") no-repeat;
+  width: 624px;
+  height: 30px;
+}
+
+/* line 88, ../../app/css/global/_modal.scss */
+.modal-content {
+  position: relative;
+  background-clip: padding-box;
+  outline: 0;
+}
+
+/* line 101, ../../app/css/global/_modal.scss */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9998;
+  background-color: #000000;
+}
+/* line 110, ../../app/css/global/_modal.scss */
+.modal-backdrop.fade {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 111, ../../app/css/global/_modal.scss */
+.modal-backdrop.in {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+
+/* line 116, ../../app/css/global/_modal.scss */
+.modal-header {
+  padding: 30px;
+  padding-bottom: 22px;
+  padding-top: 0;
+  background-color: #FFFFFF;
+}
+
+/* line 123, ../../app/css/global/_modal.scss */
+.modal-header .close {
+  margin-top: -2px;
+}
+
+/* line 128, ../../app/css/global/_modal.scss */
+.modal-title {
+  margin: 0;
+  line-height: 12px;
+  background: #ffffff url("../img/header-interstitial.png") center right no-repeat;
+  width: 351px;
+  height: 37px;
+}
+
+/* line 138, ../../app/css/global/_modal.scss */
+.modal-body {
+  position: relative;
+  padding: 30px;
+  padding-top: 0;
+  padding-bottom: 22px;
+  padding-right: 25px;
+  background-color: #FFFFFF;
+}
+
+/* line 147, ../../app/css/global/_modal.scss */
+.modal-body p {
+  font-family: "arial";
+  font-size: 13px;
+  color: #515151;
+}
+/* line 151, ../../app/css/global/_modal.scss */
+.modal-body p i {
+  font-style: italic;
+}
+
+/* line 156, ../../app/css/global/_modal.scss */
+.modal-body .third-party {
+  display: none;
+}
+/* line 158, ../../app/css/global/_modal.scss */
+.modal-body .third-party:first-child {
+  margin-top: 10px;
+}
+
+/* line 168, ../../app/css/global/_modal.scss */
+.modal-footer {
+  padding: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: right;
+  background-color: #FFFFFF;
+}
+/* line 74, ../../app/css/global/_mixins.scss */
+.modal-footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 177, ../../app/css/global/_modal.scss */
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+/* line 182, ../../app/css/global/_modal.scss */
+.modal-footer .btn-group .btn + .btn {
+  margin-left: -1px;
+}
+/* line 186, ../../app/css/global/_modal.scss */
+.modal-footer .btn-block + .btn-block {
+  margin-left: 0;
+}
+
+/* line 192, ../../app/css/global/_modal.scss */
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+/* line 200, ../../app/css/global/_modal.scss */
+.btn-default {
+  width: 463px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 13px;
+  color: #ffffff;
+  font-family: "arial";
+  font-weight: bold;
+  display: block;
+  padding-left: 18px;
+  margin-bottom: 16px;
+  background: url("../img/btn-interstitial.png") right center no-repeat;
+  text-transform: uppercase;
+  text-align: left;
+}
+/* line 215, ../../app/css/global/_modal.scss */
+.btn-default:hover {
+  background: url("../img/btn-interstitial-on.png") right center no-repeat;
+}
+/* line 219, ../../app/css/global/_modal.scss */
+.btn-default:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1, ../../app/css/global/_header.scss */
+.header {
+  position: relative;
+  z-index: 9999;
+  min-width: 1000px;
+}
+/* line 9, ../../app/css/global/_header.scss */
+.header .header-top .sanofi-logo {
+  background: url("../img/desktop/header/sanofi-logo.png") no-repeat;
+  width: 100px;
+  height: 21px;
+  float: right;
+  margin-top: 4px;
+  margin-right: 190px;
+}
+/* line 18, ../../app/css/global/_header.scss */
+.header .header-top .top-bar {
+  background: url("../img/desktop/header/header-bg-shadow.png") repeat-x;
+  height: 43px;
+}
+/* line 23, ../../app/css/global/_header.scss */
+.header .header-top .nassacort-logo {
+  background: url("../img/desktop/header/nassacort-logo.png") no-repeat;
+  width: 213px;
+  height: 65px;
+  display: block;
+  position: relative;
+  float: left;
+  margin-top: 10px;
+  margin-left: 192px;
+}
+/* line 33, ../../app/css/global/_header.scss */
+.header .header-top .nassacort-logo .little-house {
+  background: url("../img/desktop/header/little-white-house.png") no-repeat;
+  width: 32px;
+  height: 25px;
+  display: inline-block;
+  position: absolute;
+  bottom: 7px;
+  right: 0;
+}
+/* line 44, ../../app/css/global/_header.scss */
+.header .header-top .nassacort-logo:hover .little-house {
+  background: url("../img/desktop/header/little-cyan-house.png") no-repeat;
+}
+/* line 50, ../../app/css/global/_header.scss */
+.header .header-top .blue-bar {
+  background: url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+  height: 91px;
+  margin-top: -14px;
+}
+/* line 56, ../../app/css/global/_header.scss */
+.header .header-top ul.utility-nav {
+  float: right;
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  margin-right: 190px;
+}
+/* line 63, ../../app/css/global/_header.scss */
+.header .header-top ul.utility-nav li {
+  float: left;
+  margin-left: 25px;
+}
+/* line 67, ../../app/css/global/_header.scss */
+.header .header-top ul.utility-nav li a {
+  color: #d2e1ed;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+/* line 74, ../../app/css/global/_header.scss */
+.header .header-top ul.utility-nav li a:hover {
+  text-decoration: underline;
+  color: #6adaff !important;
+}
+/* line 78, ../../app/css/global/_header.scss */
+.header .header-top ul.utility-nav li a:visited {
+  color: #d2e1ed;
+}
+/* line 85, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav {
+  margin-top: 48px;
+  position: absolute;
+  right: -10px;
+  z-index: 1;
+  margin-right: 190px;
+}
+/* line 92, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li {
+  float: left;
+}
+/* line 95, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a {
+  color: #ffffff !important;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  float: left;
+}
+/* line 101, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a:hover {
+  color: #ffffff !important;
+}
+/* line 104, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a:hover .active {
+  visibility: visible;
+}
+/* line 108, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a:hover .label {
+  background: url("../img/desktop/header/item-active-bg.png") repeat-x;
+}
+/* line 113, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a:visited {
+  color: #d2e1ed;
+}
+/* line 117, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a .item-left-bg {
+  background: url("../img/desktop/header/item-active-left.png") no-repeat;
+  width: 10px;
+  height: 26px;
+  float: left;
+}
+/* line 124, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a .item-right-bg {
+  background: url("../img/desktop/header/item-active-right.png") no-repeat;
+  width: 10px;
+  height: 26px;
+  float: right;
+  position: relative;
+}
+/* line 132, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a .active {
+  visibility: hidden;
+}
+/* line 136, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li a .label {
+  padding-bottom: 10px;
+  padding-top: 4px;
+  float: left;
+  height: 26px;
+}
+/* line 145, ../../app/css/global/_header.scss */
+.header .header-top ul.main-nav li span.pipe {
+  background-color: #fcfcfc;
+  width: 1px;
+  height: 15px;
+  float: right;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+/* line 159, ../../app/css/global/_header.scss */
+.header .shine {
+  background: url("../img/desktop/header/header-shine.png") no-repeat;
+  width: 1232px;
+  height: 82px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+/* line 1, ../../app/css/global/_footer.scss */
+.footer {
+  background-color: #0c3e78;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 9, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists {
+  height: 263px;
+  padding-left: 190px;
+  padding-right: 190px;
+  border-bottom: 1px #d2e2f4 solid;
+}
+/* line 15, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+/* line 20, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col li {
+  /*float:left;*/
+  margin-bottom: 16px;
+}
+/* line 24, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col li a {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* line 29, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col li a:hover {
+  text-decoration: underline;
+}
+/* line 32, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col li a:hover sup {
+  text-decoration: none;
+}
+/* line 37, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .footer-col li a.active {
+  color: #6adaff;
+}
+/* line 44, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .first-col {
+  margin-top: 40px;
+}
+/* line 48, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .second-col {
+  margin-top: 70px;
+}
+/* line 52, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .third-col {
+  margin-top: 70px;
+}
+/* line 56, ../../app/css/global/_footer.scss */
+.footer .footer-content .lists .fourth-col {
+  margin-top: 70px;
+}
+/* line 61, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content {
+  padding-left: 190px;
+  padding-right: 190px;
+  float: left;
+  width: 100%;
+  height: 45px;
+  background-color: #0c3e78;
+}
+/* line 69, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content ul {
+  margin-top: 16px;
+}
+/* line 71, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content ul li {
+  float: left;
+}
+/* line 73, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content ul li a {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+/* line 78, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content ul li a:hover {
+  text-decoration: underline;
+}
+/* line 83, ../../app/css/global/_footer.scss */
+.footer .footer-content .alternative-content ul li .pipe {
+  background-color: #ffffff;
+  width: 1px;
+  height: 14px;
+  position: relative;
+  float: right;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-top: 0px;
+}
+/* line 97, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content {
+  background: url("../img/desktop/footer/bg-footer.jpg") repeat-x;
+  padding-left: 190px;
+  padding-right: 190px;
+  height: 108px;
+  background-color: #dfeaf7;
+  float: left;
+  padding-top: 21px;
+  width: 100%;
+}
+/* line 108, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content ul li {
+  float: left;
+}
+/* line 110, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content ul li a {
+  color: #022e80;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+}
+/* line 115, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content ul li a:hover {
+  text-decoration: underline;
+}
+/* line 119, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content ul li .pipe {
+  background-color: #022e80;
+  width: 1px;
+  height: 11px;
+  position: relative;
+  float: right;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-top: 0px;
+}
+/* line 132, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content .right-side {
+  float: right;
+}
+/* line 136, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content p {
+  float: left;
+  margin-top: 61px;
+  margin-right: 12px;
+}
+/* line 142, ../../app/css/global/_footer.scss */
+.footer .footer-content .bottom-content .logo-footer {
+  background: url("../img/desktop/footer/logo-footer.png") no-repeat;
+  width: 123px;
+  height: 65px;
+  float: right;
+  margin-top: 6px;
+}
+
+/*.utility-nav {
+    height: 10px;
+    line-height: 10px;
+    display: inline-block;
+    padding-top: 0px;
+    li {
+        height: 10px;
+        margin-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid grey;
+
+        &.last {
+            border: 0;
+        }
+    }
+
+
+}*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* IE10+ CSS styles go here */
+}
+/* line 1, ../../app/css/components/_isi.scss */
+.isi-container {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 21px;
+  width: 100%;
+  overflow: hidden;
+  max-width: 763px;
+}
+
+/* line 10, ../../app/css/components/_isi.scss */
+.isi-header.upper {
+  margin-bottom: 17px;
+}
+
+/* line 14, ../../app/css/components/_isi.scss */
+.isi-header {
+  margin-bottom: 5px;
+}
+
+/* line 18, ../../app/css/components/_isi.scss */
+.isi-copy {
+  margin-bottom: 18px !important;
+}
+
+/* line 21, ../../app/css/components/_isi.scss */
+.references {
+  padding-bottom: 2px;
+}
+/* line 24, ../../app/css/components/_isi.scss */
+.references ul li {
+  list-style-type: none;
+  background-image: none;
+  padding-left: 0;
+  margin-left: 0;
+  max-width: 763px;
+}
+
+/* line 2, ../../app/css/sections/_home.scss */
+.home-section #bg-container {
+  /*background: url("../img/bg.png") no-repeat top center;*/
+}
+/* line 6, ../../app/css/sections/_home.scss */
+.home-section .content {
+  overflow: hidden;
+  padding: 0 0 0 100px;
+}
+/* line 74, ../../app/css/global/_mixins.scss */
+.home-section .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 12, ../../app/css/sections/_home.scss */
+.home-section .callouts {
+  overflow: hidden;
+  margin-bottom: 27px;
+}
+/* line 74, ../../app/css/global/_mixins.scss */
+.home-section .callouts:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 18, ../../app/css/sections/_home.scss */
+.home-section .home-callout {
+  float: left;
+}
+/* line 21, ../../app/css/sections/_home.scss */
+.home-section .home-callout.left-callout {
+  margin-right: 20px;
+}
+/* line 27, ../../app/css/sections/_home.scss */
+.home-section .order-cta {
+  margin-bottom: 49px;
+}
+/* line 31, ../../app/css/sections/_home.scss */
+.home-section .isi-container, .home-section .references {
+  padding-right: 10px;
+}
+/* line 36, ../../app/css/sections/_home.scss */
+.home-section .cta01 {
+  width: 253px;
+  /* fix */
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 1, ../../app/css/sections/_home.scss */
+  .home-section {
+    /* IE10+ CSS styles go here */
+  }
+  /* line 42, ../../app/css/sections/_home.scss */
+  .home-section .cta01 {
+    width: 256px;
+    /* fix */
+  }
+}
+/* line 47, ../../app/css/sections/_home.scss */
+.home-section .cta02 {
+  width: 166px;
+  /* fix */
+}
+/* line 52, ../../app/css/sections/_home.scss */
+.home-section .order-cta {
+  margin-top: 30px;
+}
+/* line 57, ../../app/css/sections/_home.scss */
+.home-section .references ul {
+  padding-bottom: 33px;
+}
+
+@media (max-width: 1199px) {
+  /* line 67, ../../app/css/sections/_home.scss */
+  .home-section #bg-container {
+    background: url("../img/bg2.png") no-repeat left top;
+  }
+}
+/* line 1, ../../app/css/sections/_internal.scss */
+.section-content {
+  margin-top: -9px;
+  position: relative;
+  width: 1400px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/* line 9, ../../app/css/sections/_internal.scss */
+.section-content sup {
+  font-size: 75%;
+  /* Zero out the line-height so that it doesn't
+     interfere with the positioning that follows */
+  line-height: 0;
+  /* Where the magic happens: makes all browsers position
+     the sup/sup properly, relative to the surrounding text */
+  position: relative;
+  /* Note that if you're using Eric Meyer's reset.css, this
+     is already set and you can remove this rule */
+  vertical-align: baseline;
+  /* Move the superscripted text up */
+  top: -0.4em;
+  cursor: pointer;
+}
+/* line 29, ../../app/css/sections/_internal.scss */
+.section-content .banner {
+  height: 322px;
+}
+/* line 31, ../../app/css/sections/_internal.scss */
+.section-content .banner img {
+  position: absolute;
+}
+/* line 35, ../../app/css/sections/_internal.scss */
+.section-content .banner div {
+  position: absolute;
+  margin-left: 190px;
+}
+/* line 41, ../../app/css/sections/_internal.scss */
+.section-content .statistics {
+  height: 670px;
+}
+/* line 44, ../../app/css/sections/_internal.scss */
+.section-content .statistics div {
+  position: absolute;
+  margin-left: 190px;
+}
+/* line 52, ../../app/css/sections/_internal.scss */
+.section-content .statistics div .graph {
+  margin-left: 106px;
+  position: relative;
+  margin-bottom: 52px;
+}
+/* line 57, ../../app/css/sections/_internal.scss */
+.section-content .statistics div .graph img {
+  margin-right: 64px;
+}
+/* line 60, ../../app/css/sections/_internal.scss */
+.section-content .statistics div .graph img:last-child {
+  margin-right: 0;
+}
+/* line 69, ../../app/css/sections/_internal.scss */
+.section-content .about {
+  background-color: #e5ebf0;
+  height: 405px;
+  width: 100%;
+  float: left;
+}
+/* line 75, ../../app/css/sections/_internal.scss */
+.section-content .about .description {
+  width: 480px;
+  margin-left: 190px;
+  float: left;
+  margin-right: 45px;
+}
+/* line 81, ../../app/css/sections/_internal.scss */
+.section-content .about .description h2 {
+  margin-bottom: 30px;
+}
+/* line 86, ../../app/css/sections/_internal.scss */
+.section-content .about img {
+  float: right;
+  margin-right: 52px;
+  margin-top: 50px;
+  margin-bottom: 35px;
+}
+/* line 94, ../../app/css/sections/_internal.scss */
+.section-content .carousel {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  float: left;
+}
+/* line 100, ../../app/css/sections/_internal.scss */
+.section-content .carousel p {
+  font-family: "Proxima Nova Regular";
+}
+/* line 105, ../../app/css/sections/_internal.scss */
+.section-content .cycle-slideshow {
+  margin-top: 30px;
+  float: left;
+}
+/* line 109, ../../app/css/sections/_internal.scss */
+.section-content .cycle-slideshow .item p {
+  margin-top: 16px;
+  margin-bottom: 18px;
+}
+/* line 117, ../../app/css/sections/_internal.scss */
+.section-content .arrow-left {
+  background: url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
+  width: 84px;
+  height: 434px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-top: 119px;
+}
+/* line 125, ../../app/css/sections/_internal.scss */
+.section-content .arrow-left:hover {
+  background: url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
+}
+/* line 130, ../../app/css/sections/_internal.scss */
+.section-content .arrow-right {
+  background: url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
+  width: 84px;
+  height: 434px;
+  display: block;
+  float: left;
+  margin-left: 10px;
+  margin-top: 119px;
+}
+/* line 138, ../../app/css/sections/_internal.scss */
+.section-content .arrow-right:hover {
+  background: url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
+}
+/* line 143, ../../app/css/sections/_internal.scss */
+.section-content .cycle-pager {
+  float: left;
+  margin-left: 383px;
+  margin-top: 24px;
+  position: relative;
+  width: 100%;
+}
+/* line 150, ../../app/css/sections/_internal.scss */
+.section-content .cycle-pager span {
+  background: url("../img/desktop/science-of-allergic-rhinitis/paging.png") no-repeat;
+  width: 16px;
+  height: 16px;
+  display: block;
+  text-indent: -9999px;
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+}
+/* line 159, ../../app/css/sections/_internal.scss */
+.section-content .cycle-pager span.cycle-pager-active {
+  background: url("../img/desktop/science-of-allergic-rhinitis/paging-active.png") no-repeat;
+  position: relative;
+  top: -1px;
+}
+/* line 164, ../../app/css/sections/_internal.scss */
+.section-content .cycle-pager span:last-child {
+  margin-right: 0;
+}
+/* line 170, ../../app/css/sections/_internal.scss */
+.section-content .video-callout-container {
+  height: 260px;
+  background-color: #e5ebf0;
+  width: 100%;
+  float: left;
+}
+/* line 177, ../../app/css/sections/_internal.scss */
+.section-content .video-callout {
+  background: url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
+  width: 981px;
+  height: 200px;
+}
+
+/* line 2, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label h2 {
+  line-height: 38px;
+}
+/* line 5, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label sup {
+  font-size: 56%;
+  position: relative;
+  top: -0.6em;
+  left: 0.2em;
+}
+/* line 11, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label i {
+  font-style: italic;
+}
+/* line 14, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label strong {
+  font-weight: bold;
+}
+/* line 17, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label p {
+  margin-top: 0;
+  margin-bottom: 27px;
+  line-height: 23px;
+  letter-spacing: 1.6px;
+}
+/* line 23, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label li {
+  font-size: 16px;
+  color: #555555;
+  letter-spacing: 1.3px;
+  line-height: 18px;
+}
+/* line 28, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label li:before {
+  content: "• ";
+}
+/* line 32, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label ul, .drug-fact-label p {
+  padding-left: 5px;
+}
+/* line 35, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label ul {
+  margin-bottom: 27px;
+}
+
+/* line 40, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label-header {
+  background-color: #d1e1f4;
+  position: relative;
+  overflow: hidden;
+  min-width: 1000px;
+  top: -9px;
+  height: 170px;
+}
+/* line 47, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label-header h1 {
+  margin-top: 68px;
+  padding-left: 51px;
+}
+
+/* line 53, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label {
+  padding-left: 54px;
+  padding-top: 3px;
+}
+/* line 57, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .title_internal {
+  color: #0d5ea4;
+  font-family: "Proxima Nova Semibold";
+  font-size: 28px;
+  margin-top: 13px;
+  font-style: italic;
+  letter-spacing: 0.8px;
+}
+/* line 65, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .subtitle_internal {
+  color: #0d5ea4;
+  margin-bottom: 1px;
+}
+/* line 69, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .list {
+  padding-left: 6px;
+  margin-bottom: 33px;
+}
+/* line 73, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li {
+  display: inline;
+  margin-right: 60px;
+}
+/* line 76, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li:before {
+  content: "• ";
+}
+/* line 79, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .inl-list > li:last-child {
+  margin-right: 0;
+}
+/* line 83, ../../app/css/sections/_druglabel.scss */
+.drug-fact-label .marg-fix {
+  margin-bottom: 5px;
+}
+
+/* line 89, ../../app/css/sections/_druglabel.scss */
+.box-drug-fact {
+  background-color: #ebeff4;
+  border: 1px solid #809aab;
+}
+
+@media (max-width: 1199px) {
+  /* line 97, ../../app/css/sections/_druglabel.scss */
+  .home-section #bg-container {
+    background: url("../img/bg2.png") no-repeat left top;
+  }
+}
+/* line 40, ../../app/css/main.scss */
+.container {
+  margin: 0 auto;
+}
