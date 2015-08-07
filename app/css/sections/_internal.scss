@@ -296,4 +296,19 @@ p{
 }
 
 
+// -------- Global ----------------------
+
+.callout{
+    display:block;
+    .cta-left-side{
+        background:url("../img/desktop/science-of-allergic-rhinitis/cta-download-left.png") no-repeat;
+        width:103px;
+        height:75px;
+    }
+    .cta-right-side{
+         background:url("../img/desktop/science-of-allergic-rhinitis/cta-download-right.png") no-repeat;
+         width:176px;
+         height:75px;
+    }
+}
 
