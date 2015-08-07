@@ -1,8 +1,7 @@
 .footer {
     background-color:$color-dark-blue2;
-    bottom: 0;
-    position: absolute;
     width:100%;
+    float:left;
     
     .footer-content{
         
@@ -135,8 +134,10 @@
             
             p{
                 float:left;
-                margin-top: 61px;
+                margin-top: 57px;
                 margin-right: 12px;
+                color:$color-dark-blue;
+                font-size:12px;
             }
             
             .logo-footer{
