@@ -3,20 +3,17 @@ title: NazacortHCP
 section: drug-fact-label
 layout: layout.hbs
 ---
-
 {{>header}}
-
 <div class="{{section}}-header">
     <div class="content section-content">
         <h1>Drug Facts Label</h1>
     </div>
 </div>
 <div class="content section-content {{section}}">
-    
     <h2>Nasacort<sup>&reg;</sup> Allergy 24HR <span>and<span> Children&rsquo;s Nasacort<sup>&reg;</sup> 24HR<br/> <i>Drug Facts</i></h2>
     <h4 class="title_internal">Active ingredient (in each spray)</h4>
     <p>Triamcinolone acetonide<br/>
-    (glucocorticoid) 55 mcg</p>
+        (glucocorticoid) 55 mcg</p>
     <h4 class="title_internal">Purpose</h4>
     <p>Nasal allergy symptom reliever</p>
     <h4 class="title_internal">Uses</h4>
@@ -65,7 +62,10 @@ layout: layout.hbs
         <li><strong>clean the spray nozzle</strong></li>
     </ul>
 </div>
-    <div class="content section-content box-drug-fact">
+
+
+<div class="content section-content {{section}}">
+    <div class="box-drug-fact">
         <p class="subtitle_internal">ADULTS AND CHILDREN 12 YEARS OF AGE AND OLDER</p>
         <ul>
             <li>once daily, spray 2 times into each nostril while sniffing gently</li>
@@ -87,10 +87,13 @@ layout: layout.hbs
             <li>once daily, spray 1 time into each nostril while sniffling gently</li>
         </ul>
         <p class="subtitle_internal">children under 2 years of age</p>
-        <ul>
+        <ul class="marg-list-fix">
             <li><strong>do not use</strong></li>
         </ul>
     </div>
+</div>
+
+
 <div class="content section-content {{section}}">
     <ul>
         <li><strong>do not use more than directed</strong></li>
@@ -111,7 +114,3 @@ layout: layout.hbs
     <p class="subtitle_internal">Questions or comments?</p>
     <p>call toll-free <strong>1-800-633-1610</strong></p>
 </div>
-
-
-
-

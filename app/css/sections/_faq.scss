@@ -1,5 +1,5 @@
 
-.drug-fact-label-header{
+.faq-header{
     background-color: $color-light-blue;
     position: relative;
     overflow: hidden;
@@ -13,7 +13,7 @@
     }
 }
 
-.drug-fact-label {
+.faq {
     padding: 0 200px;
     margin-top: 0;
     h2{
@@ -52,49 +52,30 @@
     ul{
         margin-bottom: 27px;
     }
+    .container-faq{
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-light-grey;
+        margin-bottom: 15px;
+    }
+    .question-faq{
+        font-family: $font-proxima-nova-semibold;
+        font-size: 26px;
+        color: $color-blue-titles;
+        cursor: pointer;
+        sup{
+            font-size: 84%;
+            top: -0.1em;
+            left: 0;
+        }
+    }
 
-    .title_internal{
-        color:$color-blue-titles;
-        font-family:$font-proxima-nova-semibold;
-        font-size: 28px;
-        margin-top:13px;
-        font-style: italic;
-        letter-spacing: 0.8px;
-    }
-    .subtitle_internal{
-        color:$color-blue-titles;
-        margin-bottom: 1px;
-        font-family:$font-proxima-nova-semibold;
-    }
-    .list{
-        padding-left: 6px;
-        margin-bottom: 33px;
-    }
-    .inl-list > li{
-        display: inline;
-        margin-right: 60px;
-        &:before{
-            content: "• ";
-        }
-        &:last-child{
-            margin-right: 0;
-        }
-    }
-    .marg-fix{
-        margin-bottom: 5px;
-    }
-    .marg-list-fix{
-        margin-bottom: 15px; 
+    .text-faq{
+        max-width: 874px;
+        display: none;
     }
 
 }
 
-.box-drug-fact{
-    background-color:#ebeff4;
-    border: 1px solid #809aab;
-    padding: 15px 15px 0 15px;
-    margin-bottom: 15px;
-}
 
 @media (max-width: 1199px) {
 
