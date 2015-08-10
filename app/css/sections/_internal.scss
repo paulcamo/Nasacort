@@ -106,6 +106,7 @@ p{
     position:relative;
     float:left;
     padding-left:190px;
+    overflow:hidden;
     
     p{
         font-family:$font-proxima-nova-regular;
@@ -117,6 +118,7 @@ p{
     float:left;
     overflow:hidden;
     .item{
+        float:left;
         p{
             margin-top:16px;
             margin-bottom:18px;
@@ -255,7 +257,7 @@ p{
 
 .graphic-container{
     background-color:$color-blue-light-container;
-    height:1012px;
+    height:992px;
     float:left;
     padding-left:190px;
     img{
@@ -298,17 +300,34 @@ p{
 
 // -------- Global ----------------------
 
-/*.callout{
+.callout{
     display:block;
+    margin:0 auto;
+    width:430px;
+    margin-top:36px;
+    margin-bottom:10px;
+    height: 75px;
     .cta-left-side{
         background:url("../img/desktop/ctas/cta-download-left.png") no-repeat;
         width:103px;
         height:75px;
         float:left;
         background-color:$color-bg-cta-download;
+        @include border-corner-radius(top, left, 5px);
+        @include border-corner-radius(bottom, left, 5px);
     }
     label{
         float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-white;
+        font-size:20px;
+        font-weight: bold;
+        height:73px;
+        background-color:$color-bg-cta-download;
+        line-height: 70px;
+        border-top: 1px solid #f26023;
+        border-bottom: 1px solid #f26023;
+        cursor: pointer;
     }
     .cta-right-side{
          background:url("../img/desktop/ctas/cta-download-right.png") no-repeat;
@@ -316,9 +335,45 @@ p{
          height:75px;
          float: left;
          background-color:$color-bg-cta-download;
+         @include border-corner-radius(top, right, 5px);
+         @include border-corner-radius(bottom, right, 5px);
     }
     .share{
         float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-cta-share;
+        font-size:18px;
+        font-weight: bold;
+        width: 52px;
+        margin-left: 42px;
+        margin-top: 27px;
     }
-}*/
+    .share-icon{
+        background:url("../img/desktop/ctas/cta-download-share-icon.png") no-repeat;
+        width:18px;
+        height:19px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 29px;
+    }
+    
+    &:hover{
+        .cta-left-side{
+            background-color:$color-white;
+        }
+        label{
+            color:$color-bg-cta-download;      
+            background-color:$color-white;
+        }
+        .cta-right-side{
+            background-color:$color-white;
+        }
+        .share{
+            color:$color-white;     
+        }
+        .share-icon{
+             background:url("../img/desktop/ctas/cta-download-share-icon-hover.png") no-repeat;
+        }
+    }
+}
 
