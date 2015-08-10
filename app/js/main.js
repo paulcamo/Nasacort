@@ -70,7 +70,12 @@ $(".head-faq").click(function () {
         //execute this after slideToggle is done
         //change text of header based on visibility of content div
     });
+});
 
+$(".head-faq").click(function(){
+    $(this).children("img").attr("src","http://prtlimages.cunamutual.com/ImageServer/Portal/B2B/ExpandSign.gif");
+}, function() {
+    $(this).children("img").attr("src","http://prtlimages.cunamutual.com/ImageServer/Portal/B2B/CollapseSign.gif");
 });
 
 
