@@ -38,6 +38,10 @@
         line-height: 23px;
         letter-spacing: 1.6px;
     }
+    a{
+        color:$color-dark-grey;
+        text-decoration: underline;
+    }
     li{
         font-size: 16px;
         color:$color-dark-grey;
@@ -53,15 +57,40 @@
     ul{
         margin-bottom: 27px;
     }
+    .inl-list > li{
+        display: inline;
+        margin-right: 60px;
+        &:before{
+            content: "• ";
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
     .container-faq{
         border-bottom: 1px solid $color-light-grey;
         margin-bottom: 15px;
+    }
+    .collp-icon{
+        background: url("../img/collapse-icon.png") no-repeat left top;
+        display: inline-block;
+        height: 29px;
+        position: absolute;
+        right: 0;
+        width: 29px;
     }
     .question-faq{
         font-family: $font-proxima-nova-semibold;
         font-size: 26px;
         color: $color-blue-titles;
-        cursor: pointer;
+        display: inline-block;
+        margin-left: -25px;
+        width: 90%;
+        &:before{
+            content:"Q: ";
+            margin-left: -35px;
+
+        }
         sup{
             font-size: 84%;
             top: -0.1em;
@@ -70,11 +99,15 @@
     }
     .head-faq{
         margin-bottom: 16px;
+        position:relative;
+        cursor: pointer;
+        padding-left: 70px;
     }
 
     .text-faq{
         max-width: 100%;
         display: none;
+        padding-left: 40px;
     }
 
 }
