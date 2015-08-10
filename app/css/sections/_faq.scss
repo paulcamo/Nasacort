@@ -18,6 +18,7 @@
     margin-top: 0;
     h2{
         line-height: 38px;
+        margin-bottom: 38px;
     }
     sup{
         font-size: 56%;
@@ -53,7 +54,6 @@
         margin-bottom: 27px;
     }
     .container-faq{
-        padding-bottom: 12px;
         border-bottom: 1px solid $color-light-grey;
         margin-bottom: 15px;
     }
@@ -68,9 +68,12 @@
             left: 0;
         }
     }
+    .head-faq{
+        margin-bottom: 16px;
+    }
 
     .text-faq{
-        max-width: 874px;
+        max-width: 100%;
         display: none;
     }
 
