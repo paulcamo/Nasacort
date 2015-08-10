@@ -567,7 +567,7 @@ h4 {
   text-align: right;
   background-color: white;
 }
-/* line 74, ../../app/css/global/_mixins.scss */
+/* line 76, ../../app/css/global/_mixins.scss */
 .modal-footer:after {
   content: "";
   display: table;
@@ -621,27 +621,37 @@ h4 {
   margin-bottom: 0;
 }
 
-/* line 1, ../../app/css/global/_header.scss */
+/* line 2, ../../app/css/global/_header.scss */
 .header {
   position: relative;
   z-index: 9999;
   min-width: 1000px;
 }
-/* line 9, ../../app/css/global/_header.scss */
+/* line 10, ../../app/css/global/_header.scss */
 .header .header-top .sanofi-logo {
   background: url("../img/desktop/header/sanofi-logo.png") no-repeat;
   width: 100px;
   height: 21px;
   float: right;
   margin-top: 4px;
-  margin-right: 190px;
+  margin-right: 14%;
 }
-/* line 18, ../../app/css/global/_header.scss */
+/* line 19, ../../app/css/global/_header.scss */
 .header .header-top .top-bar {
   background: url("../img/desktop/header/header-bg-shadow.png") repeat-x;
   height: 43px;
 }
-/* line 23, ../../app/css/global/_header.scss */
+/* line 22, ../../app/css/global/_header.scss */
+.header .header-top .top-bar .hcp {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #3e6faf;
+  width: 218px;
+  float: left;
+  line-height: 28px;
+  margin-left: 14%;
+}
+/* line 33, ../../app/css/global/_header.scss */
 .header .header-top .nassacort-logo {
   background: url("../img/desktop/header/nassacort-logo.png") no-repeat;
   width: 213px;
@@ -650,9 +660,9 @@ h4 {
   position: relative;
   float: left;
   margin-top: 10px;
-  margin-left: 192px;
+  margin-left: 14%;
 }
-/* line 33, ../../app/css/global/_header.scss */
+/* line 43, ../../app/css/global/_header.scss */
 .header .header-top .nassacort-logo .little-house {
   background: url("../img/desktop/header/little-white-house.png") no-repeat;
   width: 32px;
@@ -662,30 +672,30 @@ h4 {
   bottom: 7px;
   right: 0;
 }
-/* line 44, ../../app/css/global/_header.scss */
+/* line 54, ../../app/css/global/_header.scss */
 .header .header-top .nassacort-logo:hover .little-house {
   background: url("../img/desktop/header/little-cyan-house.png") no-repeat;
 }
-/* line 50, ../../app/css/global/_header.scss */
+/* line 60, ../../app/css/global/_header.scss */
 .header .header-top .blue-bar {
   background: url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
   height: 91px;
   margin-top: -14px;
 }
-/* line 56, ../../app/css/global/_header.scss */
+/* line 66, ../../app/css/global/_header.scss */
 .header .header-top ul.utility-nav {
   float: right;
   margin-top: 8px;
   position: relative;
   z-index: 1;
-  margin-right: 190px;
+  margin-right: 14%;
 }
-/* line 63, ../../app/css/global/_header.scss */
+/* line 73, ../../app/css/global/_header.scss */
 .header .header-top ul.utility-nav li {
   float: left;
   margin-left: 25px;
 }
-/* line 67, ../../app/css/global/_header.scss */
+/* line 77, ../../app/css/global/_header.scss */
 .header .header-top ul.utility-nav li a {
   color: #d2e1ed;
   text-decoration: none;
@@ -693,58 +703,58 @@ h4 {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
 }
-/* line 74, ../../app/css/global/_header.scss */
+/* line 84, ../../app/css/global/_header.scss */
 .header .header-top ul.utility-nav li a:hover {
   text-decoration: underline;
   color: #6adaff !important;
 }
-/* line 78, ../../app/css/global/_header.scss */
+/* line 88, ../../app/css/global/_header.scss */
 .header .header-top ul.utility-nav li a:visited {
   color: #d2e1ed;
 }
-/* line 85, ../../app/css/global/_header.scss */
+/* line 95, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav {
   margin-top: 48px;
   position: absolute;
   right: -10px;
   z-index: 1;
-  margin-right: 190px;
+  margin-right: 14%;
 }
-/* line 92, ../../app/css/global/_header.scss */
+/* line 102, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li {
   float: left;
 }
-/* line 95, ../../app/css/global/_header.scss */
+/* line 105, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a {
   color: white !important;
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   float: left;
 }
-/* line 101, ../../app/css/global/_header.scss */
+/* line 111, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:hover {
   color: white !important;
 }
-/* line 104, ../../app/css/global/_header.scss */
+/* line 114, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:hover .active {
   visibility: visible;
 }
-/* line 108, ../../app/css/global/_header.scss */
+/* line 118, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:hover .label {
   background: url("../img/desktop/header/item-active-bg.png") repeat-x;
 }
-/* line 113, ../../app/css/global/_header.scss */
+/* line 123, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a:visited {
   color: #d2e1ed;
 }
-/* line 117, ../../app/css/global/_header.scss */
+/* line 127, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a .item-left-bg {
   background: url("../img/desktop/header/item-active-left.png") no-repeat;
   width: 10px;
   height: 26px;
   float: left;
 }
-/* line 124, ../../app/css/global/_header.scss */
+/* line 134, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a .item-right-bg {
   background: url("../img/desktop/header/item-active-right.png") no-repeat;
   width: 10px;
@@ -752,18 +762,18 @@ h4 {
   float: right;
   position: relative;
 }
-/* line 132, ../../app/css/global/_header.scss */
+/* line 142, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a .active {
   visibility: hidden;
 }
-/* line 136, ../../app/css/global/_header.scss */
+/* line 146, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li a .label {
   padding-bottom: 10px;
   padding-top: 4px;
   float: left;
   height: 26px;
 }
-/* line 145, ../../app/css/global/_header.scss */
+/* line 155, ../../app/css/global/_header.scss */
 .header .header-top ul.main-nav li span.pipe {
   background-color: #fcfcfc;
   width: 1px;
@@ -773,7 +783,7 @@ h4 {
   margin-right: 10px;
   margin-top: 6px;
 }
-/* line 159, ../../app/css/global/_header.scss */
+/* line 169, ../../app/css/global/_header.scss */
 .header .shine {
   background: url("../img/desktop/header/header-shine.png") no-repeat;
   width: 1232px;
@@ -786,6 +796,162 @@ h4 {
   z-index: 0;
 }
 
+@media screen and (min-width: 321px) and (max-width: 1400px) {
+  /* line 189, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar {
+    background: url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
+    height: 150px;
+  }
+  /* line 193, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav {
+    margin-top: 80px;
+  }
+  /* line 197, ../../app/css/global/_header.scss */
+  .header .shine {
+    height: 112px;
+    background: url("../img/mobile/header/header-shine.png") no-repeat;
+  }
+}
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
+@media screen and (min-width: 1px) and (max-width: 320px) {
+  /* line 209, ../../app/css/global/_header.scss */
+  .header .header-top .top-bar {
+    height: 15px;
+    background-position: 0px -15px;
+  }
+  /* line 212, ../../app/css/global/_header.scss */
+  .header .header-top .top-bar .hcp {
+    margin-left: 15px;
+    font-size: 6px;
+    line-height: 13px;
+    width: 245px;
+  }
+  /* line 218, ../../app/css/global/_header.scss */
+  .header .header-top .top-bar .sanofi-logo {
+    background-size: 100%;
+    float: left;
+    height: 11px;
+    margin-right: 0;
+    margin-top: 1px;
+    width: 50px;
+  }
+  /* line 227, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar {
+    background: url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+    height: 65px;
+    margin-top: 0;
+    background-position: 0px -18px;
+    height: 90px;
+    background-size: 100%;
+  }
+  /* line 234, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar .shine {
+    height: 65px;
+    width: 100%;
+    background: url("../img/mobile/header/header-shine.png") no-repeat;
+    background-position: -250px 0px;
+    background-size: contain;
+    margin-top: 28px;
+  }
+  /* line 242, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar .nassacort-logo {
+    width: 89px;
+    height: 33px;
+    background-size: 100%;
+    margin-top: 42px;
+    margin-left: 100px;
+    position: absolute;
+  }
+  /* line 249, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar .nassacort-logo .little-house {
+    width: 16px;
+    height: 13px;
+    background-size: 100%;
+    bottom: 2px;
+    right: -17px;
+  }
+  /* line 257, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar ul.utility-nav {
+    float: left;
+    margin-right: 0;
+    margin-top: 0;
+    background-color: #125ca2;
+    height: 29px;
+    border-bottom: 1px solid #6495c7;
+  }
+  /* line 265, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar ul.utility-nav li {
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+  /* line 268, ../../app/css/global/_header.scss */
+  .header .header-top .blue-bar ul.utility-nav li a {
+    font-size: 10px;
+  }
+  /* line 274, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav {
+    background-color: #ffffff;
+    margin-right: 0;
+    margin-top: 90px;
+    right: 0;
+    width: 100%;
+  }
+  /* line 280, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li {
+    width: 80px;
+    height: 60px;
+    border-left: 1px solid #022e80;
+    border-bottom: 1px solid #022e80;
+  }
+  /* line 286, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li a {
+    color: #022e80 !important;
+    font-size: 14px;
+    margin-top: -20px;
+    text-align: center;
+  }
+  /* line 291, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li a:hover {
+    color: #022e80 !important;
+  }
+  /* line 294, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li a:hover .active {
+    visibility: hidden;
+  }
+  /* line 298, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li a:hover .label {
+    background: none;
+  }
+  /* line 303, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li .pipe {
+    display: none;
+  }
+  /* line 306, ../../app/css/global/_header.scss */
+  .header .header-top ul.main-nav li:last-child {
+    border-right: 1px solid #022e80;
+  }
+}
+  /*
+  @else if $point == tablet {
+      @media  screen and (min-width : 600px) and (max-width : 983px)  { @content; }
+  }
+  @else if $point == tablet-p {
+      @media  screen and (min-width : 600px) and (max-width : 768px)  { @content; }
+  }
+  @else if $point == tablet-l {
+      @media  screen and (min-width : 769px) and (max-width : 983px)  { @content; }
+  }
+*/
 /* line 1, ../../app/css/global/_footer.scss */
 .footer {
   background-color: #0c3e78;
@@ -1007,7 +1173,7 @@ h4 {
   overflow: hidden;
   padding: 0 0 0 100px;
 }
-/* line 74, ../../app/css/global/_mixins.scss */
+/* line 76, ../../app/css/global/_mixins.scss */
 .home-section .content:after {
   content: "";
   display: table;
@@ -1018,7 +1184,7 @@ h4 {
   overflow: hidden;
   margin-bottom: 27px;
 }
-/* line 74, ../../app/css/global/_mixins.scss */
+/* line 76, ../../app/css/global/_mixins.scss */
 .home-section .callouts:after {
   content: "";
   display: table;
@@ -1108,7 +1274,7 @@ h4 {
 /* line 34, ../../app/css/sections/_internal.scss */
 .section-content .banner {
   height: 326px;
-  margin-left: 190px;
+  margin-left: 14%;
 }
 /* line 37, ../../app/css/sections/_internal.scss */
 .section-content .banner img {
@@ -1126,7 +1292,7 @@ h4 {
 /* line 50, ../../app/css/sections/_internal.scss */
 .section-content .statistics div {
   position: absolute;
-  margin-left: 190px;
+  margin-left: 14%;
 }
 /* line 58, ../../app/css/sections/_internal.scss */
 .section-content .statistics div .graph {
@@ -1152,7 +1318,7 @@ h4 {
 /* line 81, ../../app/css/sections/_internal.scss */
 .section-content .about .description {
   width: 480px;
-  margin-left: 190px;
+  margin-left: 14%;
   float: left;
   margin-right: 45px;
 }
@@ -1177,7 +1343,7 @@ h4 {
   height: 700px;
   position: relative;
   float: left;
-  padding-left: 190px;
+  padding-left: 14%;
   overflow: hidden;
 }
 /* line 111, ../../app/css/sections/_internal.scss */
@@ -1310,7 +1476,7 @@ h4 {
 .section-content .aditional-information {
   height: 645px;
   float: left;
-  padding-left: 190px;
+  padding-left: 14%;
 }
 /* line 236, ../../app/css/sections/_internal.scss */
 .section-content .aditional-information .copy {
@@ -1341,7 +1507,7 @@ h4 {
   background-color: #e5ebf0;
   height: 992px;
   float: left;
-  padding-left: 190px;
+  padding-left: 14%;
 }
 /* line 263, ../../app/css/sections/_internal.scss */
 .section-content .graphic-container img {
