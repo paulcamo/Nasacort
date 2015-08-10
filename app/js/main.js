@@ -71,6 +71,9 @@ $(".head-faq").click(function () {
         //change text of header based on visibility of content div
     });
 
+    $header.find(".collp-icon").toggleClass("expanded-icon");
+
 });
+
 
 
