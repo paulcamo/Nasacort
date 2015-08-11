@@ -88,6 +88,8 @@ $modal-height:279px;
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
+  overflow: scroll;
+  height: 649px;
   //background:url("../img/bg-interstitial.png") right top no-repeat;
   //@include border-corner-radius(top, right, $border-radius-large);
   //@include border-corner-radius(bottom, left, $border-radius-large);
