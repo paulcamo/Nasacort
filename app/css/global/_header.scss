@@ -184,7 +184,9 @@
 
 @include breakpoint('desktop') {
     
-.header {        
+.header {  
+    position:relative;
+    min-width:1100px;
     .header-top{ 
       .blue-bar{          
           background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
@@ -195,10 +197,34 @@
        }
       }
       .shine{
-          height:112px;
+          height:111px;
           background:url("../img/mobile/header/header-shine.png") no-repeat;
+          background-size:100%;
       }
   } 
+}
+
+@include breakpoint('tablet') {
+    
+.header {  
+    position:relative;
+    min-width:1100px;
+    .header-top{ 
+      .blue-bar{          
+          background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
+          height: 150px;
+        }      
+       ul.main-nav{
+           margin-top: 80px;
+       }
+      }
+      .shine{
+          height:111px;
+          background:url("../img/mobile/header/header-shine.png") no-repeat;
+          background-size:100%;
+      }
+  } 
+  
 }
 
 
@@ -267,6 +293,9 @@
                     margin-top:8px;
                     a{
                         font-size:10px;
+                    }
+                    &:first-child{
+                        margin-left:10px;
                     }
                 }
           }
