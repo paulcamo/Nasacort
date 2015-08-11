@@ -1,3 +1,4 @@
+
 .header {
     
     position: relative;
@@ -12,12 +13,21 @@
           height:21px;
           float:right;
           margin-top:4px;
-          margin-right: 190px;
+          margin-right: 14%;
       }
       
       .top-bar{
           background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;
           height:43px;  
+          .hcp{
+              font-family:Arial, Helvetica, sans-serif;
+              font-size:12px;
+              color:#3e6faf;
+              width:218px;
+              float: left;
+              line-height: 28px;
+              margin-left:$global-margin-left; 
+          }
       }
       
       .nassacort-logo{
@@ -28,7 +38,7 @@
           position:relative;
           float:left;
           margin-top: 10px;
-          margin-left: 192px;
+          margin-left: 14%;
           
           .little-house{
               background:url("../img/desktop/header/little-white-house.png") no-repeat;
@@ -58,7 +68,7 @@
            margin-top: 8px;
            position: relative;
            z-index: 1;
-           margin-right: 190px;
+           margin-right: 14%;
            
           li{
               float:left;
@@ -87,7 +97,7 @@
            position: absolute;
            right: -10px;
            z-index: 1;
-           margin-right: 190px;
+           margin-right: 14%;
            
            li{
                float:left;
@@ -166,6 +176,144 @@
        left:0;
        right:0;
        z-index: 0;
+  }
+  
+}
+
+
+
+@include breakpoint('desktop') {
+    
+.header {        
+    .header-top{ 
+      .blue-bar{          
+          background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
+          height: 150px;
+        }      
+       ul.main-nav{
+           margin-top: 80px;
+       }
+      }
+      .shine{
+          height:112px;
+          background:url("../img/mobile/header/header-shine.png") no-repeat;
+      }
+  } 
+}
+
+
+@include breakpoint('mobile') {
+    
+.header {        
+    .header-top{ 
+        .top-bar{
+            height:15px;
+            background-position: 0px -15px;
+            .hcp{
+                margin-left:15px;
+                font-size:6px;
+                line-height:13px;
+                width:245px;
+            }
+            .sanofi-logo{
+                background-size:100%;
+                float: left;
+                height: 11px;
+                margin-right: 0;
+                margin-top: 1px;
+                width: 50px;
+            }
+        }
+      .blue-bar{          
+          background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+          height: 65px;
+          margin-top:0;
+          background-position:0px -18px;
+          height:90px;
+          background-size:100%;
+          .shine{
+              height:65px;
+              width:100%;
+              background:url("../img/mobile/header/header-shine.png") no-repeat;
+              background-position:-250px 0px;
+              background-size:contain; 
+              margin-top:28px;
+          }
+          .nassacort-logo{
+              width:89px;
+              height:33px;
+              background-size: 100%;
+              margin-top:42px;
+              margin-left: 100px;
+              position:absolute;
+              .little-house{
+                  width:16px;
+                  height:13px;
+                  background-size:100%;
+                  bottom: 2px;
+                  right: -17px;
+              }
+          }
+          ul.utility-nav{
+                float: left;
+                margin-right: 0;
+                margin-top:0;
+                background-color:#125ca2;
+                height:29px;
+                border-bottom: 1px solid #6495c7;
+                
+                li{
+                    margin-left:15px;
+                    margin-top:8px;
+                    a{
+                        font-size:10px;
+                    }
+                }
+          }
+        }      
+       ul.main-nav{
+            background-color: #ffffff;
+            margin-right: 0;
+            margin-top: 90px;
+            right: 0;
+            width: 100%;
+           li{
+               
+               width:80px;
+               height:60px;
+               border-left:1px solid $color-dark-blue;
+               border-bottom:1px solid $color-dark-blue;
+               a{
+                   color:$color-dark-blue !important;
+                   font-size:14px;  
+                   margin-top: -20px;
+                   text-align: center; 
+                   &:hover{
+                   color: $color-dark-blue !important;
+                 
+                     .active{
+                         visibility: hidden;
+                     }
+                     
+                     .label{
+                         background:none;
+                     }
+                    }     
+               }
+               .pipe{
+                   display:none;
+               }
+               &:last-child{
+                   border-right:1px solid $color-dark-blue;
+               }
+           }
+       }
+      }
+      
+  } 
+  
+  .section-content{
+      
   }
   
 }

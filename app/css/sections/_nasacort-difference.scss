@@ -1,0 +1,307 @@
+
+.nasacort-difference-section {
+
+
+  .content {
+    max-width: 1400px;
+    float: none;
+  }
+
+
+  .textbox, .textbox-allergy {
+    max-width: 960px;
+    margin: auto;
+
+
+  }
+
+
+  .textbox p {
+    width: 100%;
+  }
+
+
+
+  .textbox .grey {
+    color: #595a5a;
+  }
+
+
+  .textbox-allergy {
+    width: 80%
+  }
+
+
+
+
+
+  .treatments {
+    position: relative;
+  }
+
+  .treatments h2 {
+    margin-top: 39px;
+  }
+
+
+
+
+  .treatments .footnote {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+  }
+
+  .no-scent-bottle {
+    position: absolute;
+    right: 64px;
+    top: -16px;
+  }
+
+
+  p strong {
+    font-weight: 700;
+  }
+
+
+
+  .comparing {
+    background-color: $color-blue-light-container;
+    padding-top: 45px;
+
+    h2 {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-family: $font-proxima-nova-bold;
+      color: #022E80;
+      font-size: 25px;
+      text-transform: none;
+      padding-top: 15px;
+    }
+
+
+  }
+
+  .banner {
+    margin: 0;
+    background: url(../img/desktop/nasacort-difference/hero-difference.png) no-repeat top center;
+    background-size: cover;
+    height: 328px;
+
+    div {
+      margin-left: 15.5%;
+      margin-top: 60px;
+    }
+
+    h1 {
+      margin: 0;
+
+      sup {
+        position: relative;
+        top: -16px;
+        font-size: 31px;
+      }
+
+    }
+
+  }
+
+
+
+
+
+
+.compare-otc {
+  background: url("../img/desktop/nasacort-difference/compare-otc.png") no-repeat top center;
+  background-size: contain;
+  margin: auto;
+  width: 100%;
+  height: 278px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //  stats table -------------------------------------------------------------------------------------
+
+
+  .invisible {
+    display: none;
+  }
+
+  #brand-compare {
+    height: 66px;
+    width: 32%;
+    right: 0px;
+    position: absolute;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+    z-index: 10;
+    list-style: none;
+    overflow: hidden;
+
+
+    .brand,  .open {
+      width: 99%;
+      height: 60px;
+      text-align: center;
+      background-color: #497ebf;
+      margin-top: 1px;
+
+      cursor: hand;
+      display: block;
+    }
+
+    .sprite-bg-afrin{
+      background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
+      background-size: cover;
+    }
+
+    .sprite-bg-benadryl{
+      background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
+      background-size: cover;
+    }
+
+    .sprite-bg-flonase {
+      background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
+      background-size: cover;
+    }
+
+    .sprite-bg-sudafed {
+      background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
+      background-size: cover;
+    }
+
+    .sprite-bg-zyrtec {
+      background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
+      background-size: cover;
+    }
+
+    .sprite-bg-claritin {
+      background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
+      background-size: cover;
+    }
+
+  }
+
+  .brand-compare-open {
+    height: 400px !important;
+  }
+
+  .charts {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    font-family: arial, sans-serif;
+    border: 1px solid #c0d3df;
+
+    th, td {
+      border: 1px solid #c0d3df;
+    }
+
+    td {
+      height: 41px;
+      border-bottom: none;
+      border-top: none;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e7eff4;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+   .greybar td {
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #c0d3df;
+      border-top: 1px solid #c0d3df;
+    }
+
+    tr:nth-child(1) {
+      height: 67px;
+    }
+
+    td:nth-child(1) {
+      width: 47px;
+      vertical-align: middle;
+      text-align: center;
+      border-right: none;
+    }
+
+    td:nth-child(2) {
+      border-left: none;
+      vertical-align: middle;
+    }
+
+    td:nth-child(3), td:nth-child(4) {
+      width: 32%;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .greybar {
+      background-color: #f2f0ee !important;
+      height: 40px;
+    }
+
+  }
+
+
+
+
+
+
+  .chart-table-container {
+    position: relative;
+    width: 690px;
+    margin: auto;
+
+    .vrs {
+      position: absolute;
+      right: 27%;
+      top: 9px;
+      border: none;
+      z-index: 12;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      border: medium none;
+      z-index: 11;
+      top: 57px;
+      background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
+      height: 25px;
+      width: 32%;
+    }
+
+  }
+
+  // ----------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+}
+
