@@ -206,7 +206,7 @@
 @include breakpoint('tablet') {
     
 .header {  
-    min-width:1024px;
+    min-width:769px;
     .header-top{ 
        .top-bar{
            .hcp{
@@ -224,6 +224,11 @@
            }
             ul.utility-nav{
                 margin-right:12%;
+                li{
+                    a{
+                        font-size:10px;
+                    }
+                }
             }
         }      
        ul.main-nav{
@@ -234,7 +239,10 @@
            left:12%;
            li{
                a{
-                   font-size:17px;
+                   font-size:13px;
+               }
+               .pipe{
+                   margin-top:13px;
                }
            }
        }
@@ -242,7 +250,7 @@
       .shine{
           height:111px;
           background:url("../img/mobile/header/header-shine.png") no-repeat;
-          background-size:100%;
+          background-size:100% contain;
           width:100%;
       }
   } 
@@ -277,11 +285,11 @@
           background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
           height: 65px;
           margin-top:0;
-          background-position:0px -18px;
-          height:90px;
-          background-size:100%;
+          background-position:0px 0px;
+          height:91px;
+          
           .shine{
-              height:65px;
+              height:54px;
               width:100%;
               background:url("../img/mobile/header/header-shine.png") no-repeat;
               background-position:100%;
@@ -330,9 +338,10 @@
        ul.main-nav{
             background-color: #ffffff;
             margin-right: 0;
-            margin-top: 90px;
+            margin-top: 82px;
             right: 0;
             width: 100%;
+            z-index:-1;
            li{        
                width:25%; 
                border-left:1px solid $color-dark-blue;
