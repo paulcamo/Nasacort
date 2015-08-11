@@ -32,14 +32,14 @@ function setInterstitialPopup() {
 			$("#interstitial").find("#go").attr("href", $(this).attr("href"));
 		}	
 
-		if($(this).attr("data-type") === "reference")
+		if($(this).attr("data-type") === "terms-use")
             {
-                $(".js-third-party").show();
-                $(".js-sanofi-pasteur").hide();
+                $(".js-terms").show();
+                $(".js-policy").hide();
 
             } else {
-                $(".js-third-party").hide();
-                $(".js-sanofi-pasteur").show();
+                $(".js-terms").hide();
+                $(".js-policy").show();
     		}
 
 	});
