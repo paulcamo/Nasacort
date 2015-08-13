@@ -1,0 +1,452 @@
+.science-of-allergic-rhinitis-section {
+
+.banner{    
+     height: 326px;
+     margin-left:auto;
+     margin-right:auto;
+     background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat;
+     background-position:center;
+     width:100%;
+    
+    div{ 
+        margin-left:14%; 
+    }
+}
+
+.statistics{    
+   height:auto;
+    
+    .stats{
+        margin-left:14%;
+        margin-right:14%;
+        float:left;
+        h2{
+        }      
+        p{
+           
+        }
+        .graph{
+            margin-left:106px;
+            position:relative;
+            
+            img{
+                margin-right:64px;
+                margin-bottom:52px;
+                
+                &:last-child{
+                    margin-right:0;
+                }
+            }
+        }
+        
+    }
+}
+
+.about{
+    background-color:$color-blue-light-container;
+    height:auto;
+    width:100%;
+    float:left;
+    
+    .description{
+        margin-left:14%; 
+        margin-right:14%;
+        float: left;
+        
+        div{
+            width:480px;
+            float:left;
+            h2{
+            }
+            p{
+                width:auto;
+                float:left;
+                margin-right:45px;
+            }
+        }
+    }
+    
+    img{
+        float:right;
+        margin-right:0;
+        margin-top:50px;
+        margin-bottom:35px;
+    }
+}
+
+.carousel{
+    width:100%;
+    height:auto;
+    position:relative;
+    float:left;
+    overflow:hidden;
+    padding-left:14%;
+    padding-right:14%;
+    padding-bottom:24px;
+    
+    p{
+        font-family:$font-proxima-nova-regular;
+    }
+    
+    .container-carousel{
+        float:left;
+        margin-bottom:24px;
+    }
+}
+
+.cycle-slideshow{
+    margin-top: 30px;
+    float:left;
+    overflow:hidden;
+    width:796px;
+    .item{
+        float:left;
+        p{
+            margin-top:16px;
+            margin-bottom:18px;
+            width:auto;
+        }
+        img{
+           
+        }
+    }
+}
+
+
+.arrow-left{
+    background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
+    width:84px;
+    height:434px; 
+    display:block;
+    float:left;
+    margin-right:10px;
+    margin-top: 118px;
+    &:hover{
+        background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
+    }
+}
+
+.arrow-right{
+    background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
+    width:84px;
+    height:434px; 
+    display:block;
+    float:left;
+    margin-left:10px;
+    margin-top: 118px;
+    &:hover{
+        background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
+    }
+}
+
+.cycle-pager{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    position: relative;
+    width: 165px;
+ 
+    span{
+         background:url("../img/desktop/science-of-allergic-rhinitis/paging.png") no-repeat;
+         width:16px;
+         height:16px;
+         display:block;
+         text-indent:-9999px;
+         float:left;
+         margin-right:20px;
+         cursor: pointer;
+         &.cycle-pager-active{
+             background:url("../img/desktop/science-of-allergic-rhinitis/paging-active.png") no-repeat;
+             position: relative;
+             top: -1px;
+         }
+         &:last-child{
+             margin-right:0;
+         }
+    }   
+}
+
+.video-callout-container{
+    height:260px;
+    background-color:$color-blue-light-container;
+    width:100%;
+    float:left;
+    padding-left:14%;
+    padding-right:14%;
+}
+
+.video-callout{
+     background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
+     width:981px;
+     height:200px;
+     margin-top:30px;
+     margin-bottom:30px;
+     cursor:pointer;     
+     &:hover{
+         background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg-hover.png") no-repeat;
+     }
+}
+
+.aditional-information{
+    height:auto;
+    float: left;
+    padding-left:14%;
+    padding-right:14%;
+    padding-bottom:24px;
+    .copy{
+        width: 620px;
+        float:left;
+        margin-right:18px;
+        p{
+            width:auto;
+        }
+        
+    }
+    img{
+        margin-top:90px;
+    }
+    .footnote{
+        font-size:15px;
+        span{
+            float: left;
+            height: 45px;
+            margin-right: 1px;
+        }
+    }
+}
+
+.graphic-container{
+    background-color:$color-blue-light-container;
+    height:auto;
+    float:left;
+    padding-left:14%;
+    padding-right:14%;
+    img{
+        margin-top: 10px;
+    }
+}
+
+}
+
+
+// -------- Global ----------------------
+
+.callout{
+    display:block;
+    margin:0 auto;
+    width:430px;
+    margin-top:36px;
+    margin-bottom:10px;
+    height: 75px;
+    .cta-left-side{
+        background:url("../img/desktop/ctas/cta-download-left.png") no-repeat;
+        width:103px;
+        height:75px;
+        float:left;
+        background-color:$color-bg-cta-download;
+        @include border-corner-radius(top, left, 5px);
+        @include border-corner-radius(bottom, left, 5px);
+    }
+    label{
+        float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-white;
+        font-size:20px;
+        font-weight: bold;
+        height:73px;
+        background-color:$color-bg-cta-download;
+        line-height: 70px;
+        border-top: 1px solid #f26023;
+        border-bottom: 1px solid #f26023;
+        cursor: pointer;
+    }
+    .cta-right-side{
+         background:url("../img/desktop/ctas/cta-download-right.png") no-repeat;
+         width:136px;
+         height:75px;
+         float: left;
+         background-color:$color-bg-cta-download;
+         @include border-corner-radius(top, right, 5px);
+         @include border-corner-radius(bottom, right, 5px);
+    }
+    .share{
+        float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-cta-share;
+        font-size:18px;
+        font-weight: bold;
+        width: 52px;
+        margin-left: 42px;
+        margin-top: 27px;
+    }
+    .share-icon{
+        background:url("../img/desktop/ctas/cta-download-share-icon.png") no-repeat;
+        width:18px;
+        height:19px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 29px;
+    }
+    
+    &:hover{
+        .cta-left-side{
+            background-color:$color-white;
+        }
+        label{
+            color:$color-bg-cta-download;      
+            background-color:$color-white;
+        }
+        .cta-right-side{
+            background-color:$color-white;
+        }
+        .share{
+            color:$color-white;     
+        }
+        .share-icon{
+             background:url("../img/desktop/ctas/cta-download-share-icon-hover.png") no-repeat;
+        }
+    }
+}
+
+
+@include breakpoint('desktop') {
+    
+.science-of-allergic-rhinitis-section {  
+        
+    .banner{
+        
+    }
+    .statistics{   
+        height:auto;
+        .stats{
+            .graph{
+                margin-left:70px;
+                img{
+                    margin-right:30px;
+                    &:last-child{
+                        margin-right:0;
+                        
+                    }
+                }
+            }
+        }
+    }
+    .about{
+        height:auto;
+        .description{
+           div{
+               width:48%;
+               margin-right:2%;
+           }
+        }
+        img{
+            width: 50%;
+        }
+        
+    }
+    
+    .right-aligned{
+        margin-right:14%;
+        width:100%;
+    }
+    
+    .carousel{
+        .container-carousel{
+            .cycle-slideshow{
+                width:650px;
+                margin-top:0;
+                .item{
+                    width:100%;
+                    img{
+                        width:100%;
+                    }
+                    h3{
+                        font-size:2em;
+                    }
+                    p{
+                        font-size:1em;
+                    }
+                }
+            }
+            .arrow-left{
+                width:72px;
+                height:354px;
+                background-size:contain;
+                margin-right:4px;
+                margin-top:83px;
+            }
+            .arrow-right{
+                width:72px;
+                height:354px;
+                background-size:contain;
+                margin-left: 732px;
+                margin-top:83px;
+                position:absolute;
+            }
+        }
+    }
+    
+    .video-callout-container{
+        height:auto;
+        .video-callout{
+            width:100%;
+            height:auto;
+            min-height:150px;
+            background-size:contain;
+        }
+    }
+    
+    .aditional-information{
+        .copy{
+            margin-right:2%;
+            width:50%;
+            p{
+                
+            }
+            .footnote{
+                font-size:1em;
+                line-height:1.3em;
+                margin-bottom:1em;
+            }
+        }
+        img{
+                width:48%;
+            }
+    }
+    
+    .graphic-container{
+        img{
+            width:100%;
+        }
+    }
+    
+}
+}
+
+
+@include breakpoint('tablet') {
+    
+.science-of-allergic-rhinitis-section {  
+    
+    .aditional-information{
+        .copy{
+            h2{
+                margin-bottom:0.4em;
+            }
+            p{
+                margin-bottom:0;
+            }
+        }
+    }
+    .graphic-container{
+        h2{
+            margin-bottom:0.4em;
+        }
+        p{
+            margin-bottom:0;
+            
+        }
+    }
+    
+}
+}
