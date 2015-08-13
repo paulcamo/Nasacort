@@ -1,0 +1,69 @@
+
+
+.footnote {
+  display: inline-block;
+  width: 161px;
+  position: fixed;
+  left: -1px;
+  height: 74px;
+  border-radius: 0 40px 40px 0;
+  padding: 16px 0 16px 23px;
+  border: 1px solid #e0e7f3;
+  background-color: #ffffff;
+  z-index: 9999;
+  .rfrs p {
+    color: #000000;
+    font-size: 12px;
+    width: 100%;
+    display: none;
+  }
+  .close {
+    position: absolute;
+    top: 16px;
+    right: 38px;
+    .x-btn {
+      position: absolute;
+      background: url("../img/desktop/switch-close.png") no-repeat;
+      width: 11px;
+      height: 11px;
+      display: none;
+    }
+  }
+  .switch {
+    width: 100px;
+  }
+  p {
+    font-size: 16px;
+    color: #022e80;
+    font-weight: bold;
+    line-height: 19px;
+  }
+  .innImg {
+    position: absolute;
+    top: 25px;
+    left: 126px;
+    .arrow-open {
+      position: absolute;
+      background: url("../img/desktop/arrow-foot.png") no-repeat;
+      width: 13px !important;
+      height: 20px !important;
+    }
+  }
+}
+
+
+.animation {
+  width: 593px !important;
+  height: auto !important;
+  .switch, .innImg {
+    display: none !important;
+  }
+  .x-btn {
+    display: block !important;
+  }
+  .rfrs p {
+    display: block;
+    width: 90%;
+    margin-bottom: 0;
+  }
+}

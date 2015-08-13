@@ -71,9 +71,18 @@ $(".head-faq").click(function () {
         //execute this after slideToggle is done
         //change text of header based on visibility of content div
     });
+});
 
-    
+// --------------------------------------------------------------------------------------------------------------
 
+$('.open').on('click', function(e) {
+    $('.footnote').toggleClass("animation");
+    e.preventDefault();
+});
+
+$('.close').on('click', function(e) {
+    $('.footnote').removeClass("animation");
+    e.preventDefault();
 });
 
 
