@@ -32,6 +32,87 @@
 
 }
 
+// -------- Global ----------------------
+
+.callout{
+    display:block;
+    margin:0 auto;
+    width:430px;
+    margin-top:36px;
+    margin-bottom:10px;
+    height: 75px;
+    overflow:hidden;
+    .cta-left-side{
+        background:url("../img/desktop/ctas/cta-download-left.png") no-repeat;
+        width:103px;
+        height:75px;
+        float:left;
+        background-color:$color-bg-cta-download;
+        @include border-corner-radius(top, left, 5px);
+        @include border-corner-radius(bottom, left, 5px);
+    }
+    label{
+        float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-white;
+        font-size:20px;
+        font-weight: bold;
+        height:73px;
+        background-color:$color-bg-cta-download;
+        line-height: 70px;
+        border-top: 1px solid #f26023;
+        border-bottom: 1px solid #f26023;
+        cursor: pointer;
+    }
+    .cta-right-side{
+         background:url("../img/desktop/ctas/cta-download-right.png") no-repeat;
+         width:134px;
+         height:75px;
+         float: left;
+         background-color:$color-bg-cta-download;
+         @include border-corner-radius(top, right, 5px);
+         @include border-corner-radius(bottom, right, 5px);
+    }
+    .share{
+        float: left;
+        font-family:Arial, Helvetica, sans-serif;
+        color:$color-cta-share;
+        font-size:18px;
+        font-weight: bold;
+        width: 52px;
+        margin-left: 42px;
+        margin-top: 27px;
+    }
+    .share-icon{
+        background:url("../img/desktop/ctas/cta-download-share-icon.png") no-repeat;
+        width:18px;
+        height:19px;
+        float: left;
+        margin-left: 10px;
+        margin-top: 29px;
+    }
+    
+    &:hover{
+        .cta-left-side{
+            background-color:$color-white;
+        }
+        label{
+            color:$color-bg-cta-download;      
+            background-color:$color-white;
+        }
+        .cta-right-side{
+            background-color:$color-white;
+        }
+        .share{
+            color:$color-white;     
+        }
+        .share-icon{
+             background:url("../img/desktop/ctas/cta-download-share-icon-hover.png") no-repeat;
+        }
+    }
+}
+
+
 
 @include breakpoint('desktop') {
     
@@ -56,6 +137,34 @@
 }
 
 @include breakpoint('tablet') {
+    
+    .section-content{
+         margin-top: -39px;
+         h1{
+            font-size:3em;
+            padding-top: 1.7em;
+        }  
+        h2{
+            font-size: 2em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+        p{
+            font-size:1em;
+            line-height:1em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        } 
+        h3{
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+    }
+
+}
+
+@include breakpoint('mobile') {
     
     .section-content{
          margin-top: -39px;

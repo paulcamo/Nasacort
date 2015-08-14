@@ -47,6 +47,7 @@
     height:auto;
     width:100%;
     float:left;
+    min-width:1099px;
     
     .description{
         margin-left:14%; 
@@ -54,14 +55,14 @@
         float: left;
         
         div{
-            width:480px;
+            width:48%;
             float:left;
+            margin-right:2px;
             h2{
             }
             p{
                 width:auto;
                 float:left;
-                margin-right:45px;
             }
         }
     }
@@ -71,6 +72,8 @@
         margin-right:0;
         margin-top:50px;
         margin-bottom:35px;
+        max-width:574px;
+        width:50%;
     }
 }
 
@@ -194,9 +197,10 @@
     padding-right:14%;
     padding-bottom:24px;
     .copy{
-        width: 620px;
+        width:58%;
+        max-width: 620px;
         float:left;
-        margin-right:18px;
+        margin-right:2%;
         p{
             width:auto;
         }
@@ -204,6 +208,8 @@
     }
     img{
         margin-top:90px;
+        width:40%;
+        max-width:420px;
     }
     .footnote{
         font-size:15px;
@@ -221,91 +227,12 @@
     float:left;
     padding-left:14%;
     padding-right:14%;
+    padding-bottom:24px;
     img{
         margin-top: 10px;
     }
 }
 
-}
-
-
-// -------- Global ----------------------
-
-.callout{
-    display:block;
-    margin:0 auto;
-    width:430px;
-    margin-top:36px;
-    margin-bottom:10px;
-    height: 75px;
-    .cta-left-side{
-        background:url("../img/desktop/ctas/cta-download-left.png") no-repeat;
-        width:103px;
-        height:75px;
-        float:left;
-        background-color:$color-bg-cta-download;
-        @include border-corner-radius(top, left, 5px);
-        @include border-corner-radius(bottom, left, 5px);
-    }
-    label{
-        float: left;
-        font-family:Arial, Helvetica, sans-serif;
-        color:$color-white;
-        font-size:20px;
-        font-weight: bold;
-        height:73px;
-        background-color:$color-bg-cta-download;
-        line-height: 70px;
-        border-top: 1px solid #f26023;
-        border-bottom: 1px solid #f26023;
-        cursor: pointer;
-    }
-    .cta-right-side{
-         background:url("../img/desktop/ctas/cta-download-right.png") no-repeat;
-         width:136px;
-         height:75px;
-         float: left;
-         background-color:$color-bg-cta-download;
-         @include border-corner-radius(top, right, 5px);
-         @include border-corner-radius(bottom, right, 5px);
-    }
-    .share{
-        float: left;
-        font-family:Arial, Helvetica, sans-serif;
-        color:$color-cta-share;
-        font-size:18px;
-        font-weight: bold;
-        width: 52px;
-        margin-left: 42px;
-        margin-top: 27px;
-    }
-    .share-icon{
-        background:url("../img/desktop/ctas/cta-download-share-icon.png") no-repeat;
-        width:18px;
-        height:19px;
-        float: left;
-        margin-left: 10px;
-        margin-top: 29px;
-    }
-    
-    &:hover{
-        .cta-left-side{
-            background-color:$color-white;
-        }
-        label{
-            color:$color-bg-cta-download;      
-            background-color:$color-white;
-        }
-        .cta-right-side{
-            background-color:$color-white;
-        }
-        .share{
-            color:$color-white;     
-        }
-        .share-icon{
-             background:url("../img/desktop/ctas/cta-download-share-icon-hover.png") no-repeat;
-        }
-    }
 }
 
 
@@ -373,14 +300,14 @@
                 height:354px;
                 background-size:contain;
                 margin-right:4px;
-                margin-top:83px;
+                margin-top:77px;
             }
             .arrow-right{
                 width:72px;
                 height:354px;
                 background-size:contain;
                 margin-left: 732px;
-                margin-top:83px;
+                margin-top:77px;
                 position:absolute;
             }
         }
@@ -428,14 +355,106 @@
     
 .science-of-allergic-rhinitis-section {  
     
+    .about{
+        min-width: auto;
+        .description{
+            div{
+                width:100%;
+            }
+            img{
+                width:100%;
+            }
+        }
+    }
+    
+    .carousel{
+        padding-bottom:15px;
+        .container-carousel{
+            margin-bottom:15px;
+            .cycle-slideshow{
+                width:490px;
+                margin-top:0;
+                .item{
+                    width:100%;
+                    img{
+                        width:100%;
+                    }
+                    h3{
+                        font-size:1.9em;
+                        margin-top:0;
+                        margin-bottom:0.5em;
+                    }
+                    p{
+                        font-size:0.7em;
+                        margin-top:0;
+                    }
+                }
+            }
+            .arrow-left{
+                width:53px;
+                height:266px;
+                background-size:contain;
+                margin-right:4px;
+                margin-top:66px;
+            }
+            .arrow-right{
+                width:53px;
+                height:266px;
+                background-size:contain;
+                margin-left: 552px;
+                margin-top:66px;
+                position:absolute;
+            }
+        }
+        .cycle-pager{
+            position: relative;
+            width: 103px;
+         
+            span{
+                 width:12px;
+                 height:12px;
+                 margin-right:10px;
+                 cursor: pointer;
+                 background-size:100%;
+                 &.cycle-pager-active{
+                     position: relative;
+                     background-size:100%;
+                     top: 0px;
+                 }
+                 &:last-child{
+                     margin-right:0;
+                 }
+            }   
+        }
+    }
+    
+    .video-callout-container{
+        height:auto;
+        .video-callout{
+            width:100%;
+            height:auto;
+            min-height:132px;
+            background-size:contain;
+        }
+    }
+    
     .aditional-information{
         .copy{
+            margin-right:0;
+            width: 100%;
             h2{
                 margin-bottom:0.4em;
             }
             p{
                 margin-bottom:0;
             }
+        }
+        img{
+            margin-left: 25%;
+            margin-right: 25%;
+            margin-top: 40px;
+            position: relative;
+            width: 50%;
         }
     }
     .graphic-container{
@@ -446,7 +465,19 @@
             margin-bottom:0;
             
         }
-    }
-    
+        img{
+            width:100%;
+            margin-top:2em;
+        }
+    }   
 }
+}
+
+
+@include breakpoint('mobile') {
+    
+.science-of-allergic-rhinitis-section {  
+ 
+    
+}    
 }
