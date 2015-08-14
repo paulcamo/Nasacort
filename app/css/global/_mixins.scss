@@ -25,7 +25,7 @@
         @media  screen and (min-width : 1024px) and (max-width : 1400px)  { @content; }
     }
     @else if $point == tablet {
-        @media  screen and (min-width : 765px) and (max-width : 1024px)  { @content; }
+        @media  screen and (min-width : 768px) and (max-width : 1024px)  { @content; }
     }
     @else if $point == pp-mobile {
         @media  screen and (width : 320px) { @content; }
