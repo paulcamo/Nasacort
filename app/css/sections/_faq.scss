@@ -14,7 +14,6 @@ p{
         top: -40px;
     }
     h1{
-        margin-top: 68px;
         padding-left: 74px;
         @include breakpoint('tablet'){
             font-size: 19px;
@@ -142,6 +141,7 @@ p{
         max-width: 100%;
         display: none;
         padding-left: 40px;
+        overflow: hidden;
     }
     .mrg-par{
         margin-bottom:10px; 
