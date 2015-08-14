@@ -10,7 +10,7 @@ layout: layout.hbs
 <div class="content section-content">
     <!---------------------------------------- Banner ---------------------------------------->
     <div class="banner">
-        <img src="img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg"/>
+        <!--<img src="img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg"/>-->
         <div>
             <h1>Science of Allergic Rhinitis</h1>
             <span class="underlined"></span>
@@ -18,7 +18,7 @@ layout: layout.hbs
     </div>
     <!---------------------------------------- Statistics ---------------------------------------->
     <div class="statistics">
-        <div>
+        <div class="stats">
             <h2>Allergic Rhinitis Affects Patients&apos; Quality of Life</h2>
             <p>Allergic rhinitis (AR) is highly prevalent, and is becoming increasingly common in children and adults. Symptoms such as sneezing, rhinorrhea, itchy nose, and nasal congestion have a far-reaching effect on a patient's quality of life.</p>
             <span class="chart-head">In studies of adults with allergic rhinitis:</span>
@@ -34,66 +34,64 @@ layout: layout.hbs
     <!---------------------------------------- About ---------------------------------------->
     <div class="about">
         <div class="description">
-            <h2>About Allergic Rhinitis</h2>
-            <p>Many of your patients have been using oral antihistamines (OAHs) for years, but they continue to suffer with allergic rhinitis (AR), or are looking for something more. <span class="highlighted">These sufferers</span> of moderate to severe nasal allergies may find relief with Nasacort<sup>&reg;</sup> Allergy 24HR—the only unscented OTC INS. But your patients may not fully <span class="highlighted">understand the difference</span> between these 2 separate classes of drugs, OAHs and INSs, or that <span class="highlighted">OTC INSs can differ in their sensory attributes</span> To understand how OAHs work compared with INSs, it may help your patient to learn about the relationship between allergic rhinitis and inflammation.</p>
+            <div>
+                <h2>About Allergic Rhinitis</h2>
+                <p>Many of your patients have been using oral antihistamines (OAHs) for years, but they continue to suffer with allergic rhinitis (AR), or are looking for something more. <span class="highlighted">These sufferers</span> of moderate to severe nasal allergies may find relief with Nasacort<sup>&reg;</sup> Allergy 24HR—the only unscented OTC INS. But your patients may not fully <span class="highlighted">understand the difference</span> between these 2 separate classes of drugs, OAHs and INSs, or that <span class="highlighted">OTC INSs can differ in their sensory attributes</span> To understand how OAHs work compared with INSs, it may help your patient to learn about the relationship between allergic rhinitis and inflammation.</p>
+            </div>
+            <img src="img/desktop/science-of-allergic-rhinitis/inflamation-img.png"/>
+            <p class="right-aligned">Use only as directed.</p>
         </div>
-        <img src="img/desktop/science-of-allergic-rhinitis/inflamation-img.png"/>
-        <p class="right-aligned">Use only as directed.</p>
     </div>
     <!---------------------------------------- Carousel ---------------------------------------->
     <div class="carousel">
-        <h2>How a nasal allergy can develop</h2>       
-        <a href="#" id="prev" class="arrow-left"></a>
-        <div class="cycle-slideshow" 
-            data-cycle-fx="scrollHorz" 
-            data-cycle-timeout="100000" 
-            data-cycle-next="#next"
-            data-cycle-prev="#prev"
-            data-cycle-pager="#pager"
-            data-cycle-carousel-visible=1
-            data-cycle-swipe=true 
-            data-cycle-pause-on-hover="true" 
-            data-cycle-loader="wait" 
-            data-cycle-slides="> div"
-            >
-            <div class="item">
-                <h3>1. EXPOSURE</h3>
-                <p>An allergen (like pollen or dust) enters the nose, sensitizing the mast cells</p>
-                <img src="img/desktop/science-of-allergic-rhinitis/carousel/allergen-img.jpg"/>
+        <div class="container-carousel">
+            <h2>How a nasal allergy can develop</h2>       
+            <a href="#" id="prev" class="arrow-left"></a>
+            <div class="cycle-slideshow" 
+                data-cycle-fx="scrollHorz" 
+                data-cycle-timeout="100000" 
+                data-cycle-next="#next"
+                data-cycle-prev="#prev"
+                data-cycle-pager="#pager"
+                data-cycle-carousel-visible=1
+                data-cycle-swipe=true 
+                data-cycle-pause-on-hover="true" 
+                data-cycle-loader="wait" 
+                data-cycle-slides="> div"
+                >
+                <div class="item">
+                    <h3>1. EXPOSURE</h3>
+                    <p>An allergen (like pollen or dust) enters the nose, sensitizing the mast cells</p>
+                    <img src="img/desktop/science-of-allergic-rhinitis/carousel/allergen-img.jpg"/>
+                </div>
+                <div class="item">
+                    <h3>2. early-phase response</h3>
+                    <p>Sensitized mast cells release mediators like histamines, which cause itchy nose, runny nose, and sneezing</p>
+                    <img src="img/desktop/science-of-allergic-rhinitis/carousel/histamins-img.jpg"/>
+                </div>
+                <div class="item">
+                    <h3>3. INFLAMMATION</h3>
+                    <p>Cytokines bring white blood cells to the affected area, causing irritation and inflammation that lead to congestion</p>
+                    <img src="img/desktop/science-of-allergic-rhinitis/carousel/inflamation-img.jpg"/>
+                </div>
+                <div class="item">
+                    <h3>4. LATE-PHASE RESPONSE</h3>
+                    <p>The inflammation leads to the release of even more histamine and mediating chemicals, which worsen symptoms</p>
+                    <img src="img/desktop/science-of-allergic-rhinitis/carousel/symtons-img.jpg"/>
+                </div>
+                <div class="item">
+                    <h3>5. ESCALATION</h3>
+                    <p>Without anti-inflammatory intervention with an INS like Nasacort® Allergy 24HR, the cycle repeats and builds</p>
+                    <img src="img/desktop/science-of-allergic-rhinitis/carousel/escalation-img.jpg"/>
+                </div>
             </div>
-            <div class="item">
-                <h3>2. early-phase response</h3>
-                <p>Sensitized mast cells release mediators like histamines, which cause itchy nose, runny nose, and sneezing</p>
-                <img src="img/desktop/science-of-allergic-rhinitis/carousel/histamins-img.jpg"/>
-            </div>
-            <div class="item">
-                <h3>3. INFLAMMATION</h3>
-                <p>Cytokines bring white blood cells to the affected area, causing irritation and inflammation that lead to congestion</p>
-                <img src="img/desktop/science-of-allergic-rhinitis/carousel/inflamation-img.jpg"/>
-            </div>
-            <div class="item">
-                <h3>4. LATE-PHASE RESPONSE</h3>
-                <p>The inflammation leads to the release of even more histamine and mediating chemicals, which worsen symptoms</p>
-                <img src="img/desktop/science-of-allergic-rhinitis/carousel/symtons-img.jpg"/>
-            </div>
-            <div class="item">
-                <h3>5. ESCALATION</h3>
-                <p>Without anti-inflammatory intervention with an INS like Nasacort® Allergy 24HR, the cycle repeats and builds</p>
-                <img src="img/desktop/science-of-allergic-rhinitis/carousel/escalation-img.jpg"/>
-            </div>
+            <a href="#" id="next" class="arrow-right"></a>          
         </div>
-        <a href="#" id="next" class="arrow-right"></a>
         <div class="cycle-pager" id="pager"></div>
     </div>
     <!---------------------------------------- Video Callout ---------------------------------------->
     <div class="video-callout-container">
-        <div class="video-callout">
-            <div class="content-callout">
-                <h4>INS in Action</h4>
-                <p>Learn how an INS, like Nasacort® Allergy 24HR, can interrupt the allergic cascade.</p>
-            </div>
-            <a class="button" href="#"></a>
-        </div>
+        <div class="video-callout"></div>
     </div>
     <!---------------------------------------- Aditional Information ---------------------------------------->
     <div class="aditional-information">
