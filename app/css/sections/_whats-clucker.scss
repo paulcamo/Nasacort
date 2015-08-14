@@ -1,0 +1,161 @@
+$subheader-text: #1b4089;
+$bg-greyColor:#e5e6e8;
+$light-blue:#54acda;
+$black-letter:#5a5e5f;
+
+.hero{
+    background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
+    height: 470px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    background-size:100%;
+}
+
+.wac {
+    margin-top: 0;
+    .content{
+        padding: 0 15%;
+        overflow: hidden;
+    }
+    h2{
+        color:$color-blue;
+        font-size: 32px;
+        font-weight: bold;
+
+    }
+    h3{
+        font-size: 23px;
+        color:$light-blue;
+        text-transform: none;
+        margin-bottom: 15px; 
+    }
+    .wac-boxes{
+        h2{
+           font-family:$font-proxima-nova-regular;
+            color:$subheader-text;
+            font-size: 34px; 
+            margin-bottom:57px; 
+        }
+        
+    }
+    .bg-gray{
+        background-color: $bg-greyColor;
+    }
+    sup{
+        font-size: 56%;
+        position: relative;
+        top: -0.6em;
+        left: 0.2em;
+    }
+    i{
+        font-style: italic;
+    }
+    strong{
+        font-weight: bold;
+        font-family: $font-proxima-nova-bold;
+    }
+    p{
+        margin-bottom: 18px;
+        line-height: 24px;
+        letter-spacing: 0px;
+        font-size: 16px;
+        color:$black-letter;
+    }
+    a{
+        color:$color-dark-grey;
+        text-decoration: underline;
+    }
+    li{ 
+        font-size: 16px;
+        letter-spacing: 1.3px;
+        line-height: 24px;
+        padding-left: 26px;
+        position: relative;
+        display: inline-block;
+        float: left;
+        width: 200px;
+        margin-bottom: 7px; 
+    }
+    .unselected{
+        color:$color-dark-grey;
+        &:before{
+            content: " ";
+            background: url('../img/desktop/clucker/unchecked-list.png') no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;     
+            position: absolute;
+            left: 0px;
+        }
+    }
+    .selected{
+        color:$light-blue;
+        &:before{
+            content: " ";
+            background: url('../img/desktop/clucker/checked-list.png') no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;     
+            position: absolute;
+            left: 0px;
+        }
+    }
+    p{
+        padding-left: 5px;
+    }
+    ul{
+        margin-bottom: 18px;
+        padding-left: 0;
+        display: block;
+        overflow: hidden;
+    }
+
+    .wac-info{
+        width: 100%;
+        display: block;
+        height: 721px;
+        .wac-into-1{
+            width: 60%;
+            float: left;
+            img{
+                float: left;
+            }
+        }
+        .wac-into-2{
+            width: 40%;
+            float: left;
+        }
+    }
+    .wacSeak{
+        width: 300px;
+        float: left;
+        padding-left: 20px;
+    }
+    .wac-cta{
+        min-width: 413px;
+        height: 55px;
+        display: block;
+        background-color:$color-orange;
+        border-radius: 7px;
+        margin-top: 17px;
+        color:$color-white;
+        padding-top: 17px;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+        padding-left: 28px;
+        position: relative;
+        .wac-shareIcon{
+            background:url('../img/desktop/clucker/share-icon.png')no-repeat;
+            width: 26px;
+            height: 27px;
+            display: inline-block;
+            position: absolute;
+            top: 14px;
+            right: 28px;
+        }
+    }
+}
+
+
