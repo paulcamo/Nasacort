@@ -2,6 +2,8 @@ $subheader-text: #1b4089;
 $bg-greyColor:#e5e6e8;
 $light-blue:#54acda;
 $black-letter:#5a5e5f;
+$yellow-color:#f39d28;
+$grey-innerTxt:#575a5c;
 
 .hero{
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
@@ -10,14 +12,53 @@ $black-letter:#5a5e5f;
     position: relative;
     top: -10px;
     background-size:100%;
+    .blueLine{
+        height: 80px;
+        width: 100%;
+        background: url('../img/desktop/clucker/bg-lineTop.jpg') repeat-x;
+        position: absolute;
+        bottom: 12px;
+    }
+    .info-text{
+        position:relative;
+        ul > li{
+            display: inline-block;
+            font-size: 28px;
+            font-family: $font-proxima-nova-regular;
+            text-align: center;
+            position: relative;
+            a{
+               color:$color-white; 
+               padding: 10px 35px;
+               display: inline-block;
+            }
+            span{
+                font-family: $font-proxima-nova-bold;
+            }
+            &:after{
+                content:" ";
+                background: url('../img/desktop/clucker/line-topLine.jpg') repeat-x;
+                width: 1px;
+                height: 38px;
+                display: block;
+                position: absolute;
+                top: 21px;
+            }
+        }
+        .no-img{
+            &:after{
+                content:" ";
+                background-image: none;
+            }
+        }
+    }
 }
-
+.content{
+    padding: 0 15%;
+    overflow: hidden;
+}
 .wac {
     margin-top: 0;
-    .content{
-        padding: 0 15%;
-        overflow: hidden;
-    }
     h2{
         color:$color-blue;
         font-size: 32px;
@@ -74,7 +115,7 @@ $black-letter:#5a5e5f;
         position: relative;
         display: inline-block;
         float: left;
-        width: 200px;
+        width: 50%;
         margin-bottom: 7px; 
     }
     .unselected{
@@ -111,10 +152,16 @@ $black-letter:#5a5e5f;
         overflow: hidden;
     }
 
+    .wac-elements{
+        position:relative;
+    }
+
     .wac-info{
         width: 100%;
         display: block;
-        height: 721px;
+        height: auto;
+        padding-bottom: 25px;
+        overflow: hidden;
         .wac-into-1{
             width: 60%;
             float: left;
@@ -133,7 +180,7 @@ $black-letter:#5a5e5f;
         padding-left: 20px;
     }
     .wac-cta{
-        min-width: 413px;
+        min-width: 100%;
         height: 55px;
         display: block;
         background-color:$color-orange;
@@ -146,6 +193,7 @@ $black-letter:#5a5e5f;
         text-decoration: none;
         padding-left: 28px;
         position: relative;
+        border: 1px solid #eb5d2b;
         .wac-shareIcon{
             background:url('../img/desktop/clucker/share-icon.png')no-repeat;
             width: 26px;
@@ -153,8 +201,90 @@ $black-letter:#5a5e5f;
             display: inline-block;
             position: absolute;
             top: 14px;
-            right: 28px;
+            right: 17px;
         }
+        &:hover{
+            background:transparent;
+            color:$color-orange;
+        }
+    }
+    .wac-expand{
+        background:url('../img/desktop/clucker/enlarge-icon.png')no-repeat;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        position:absolute;
+        top: 109px;
+        right: 13px;
+        cursor: pointer;
+    }
+    .wac-indication{
+        text-align: right;
+        display: block;
+        margin-top: 9px;
+        color:$grey-innerTxt;
+    }
+    .wac-question{
+        text-decoration: none;
+        color:$yellow-color;
+    }
+    .download{
+        h1{
+            font-size: 34px;
+        }
+    }
+    .wac-cta-button{
+        min-width: 550px; 
+        display: inline-block;
+        margin: 39px 0; 
+        .wac-shareSympt{
+            background:url('../img/desktop/clucker/share-btn.png')no-repeat;
+            width: 114px;
+            height: 75px;
+            display: inline-block;
+        }     
+        .wac-sympt{
+            background-color:$color-orange;
+            height: 75px;
+            display: inline-block;
+            border-radius: 6px 6px;
+            text-decoration: none;
+            border:1px solid $color-orange;
+            img{
+                position: relative;
+                margin-top: 7px;
+                float: left;
+                margin-left: 13px;
+            }
+            span{
+                color:$color-white;
+                font-weight: bold;
+                font-size: 20px;
+                padding: 28px 22px;
+                float: left;
+                display: inline-block;
+                position:relative;
+                &:before{
+                    content:" ";
+                    background:url('../img/desktop/clucker/downl-cta-line.png')no-repeat;
+                    width: 2px;
+                    height: 66px;
+                    position: absolute;
+                    display: inline-block;
+                    left: 9px;
+                    top: 4px;
+                }
+            }
+            &:hover{
+                background-color:transparent;
+                span{
+                    color:$color-orange;
+                }
+            }
+        }
+    }
+    .text-center{
+        text-align:center;
     }
 }
 
