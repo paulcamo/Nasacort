@@ -211,7 +211,7 @@
         width:40%;
         max-width:420px;
     }
-    .footnote{
+    .footnote-info{
         font-size:15px;
         span{
             float: left;
@@ -330,7 +330,7 @@
             p{
                 
             }
-            .footnote{
+            .footnote-info{
                 font-size:1em;
                 line-height:1.3em;
                 margin-bottom:1em;
@@ -372,7 +372,7 @@
         .container-carousel{
             margin-bottom:15px;
             .cycle-slideshow{
-                width:490px;
+                width:488px;
                 margin-top:0;
                 .item{
                     width:100%;
@@ -501,6 +501,7 @@
             }
             .graph{
                 margin-left:0;
+                text-align:center;
                 img{
                     margin-right:0;
                     width:100%;
@@ -528,6 +529,7 @@
             width:84%;
             div{
                 width:100%;
+                margin-right:0;
                 p{
                     margin-bottom:0;
                 }
@@ -536,9 +538,11 @@
                 width:100%;
                 margin-top:22px;
                 margin-bottom:22px;
+                max-width:100%;
             }
             .right-aligned{
                 margin-bottom:24px;
+                text-align:left;
             }
         }
     }
@@ -546,44 +550,51 @@
     .carousel{
         padding-left:0;
         padding-right:0;
+        min-width:320px;
         .container-carousel{
+            width:100%;
             h2{
                  margin-left: 8%;
                  margin-right: 8%;
             }
-            .cycle-slideshow{
-                width:266px;
-                margin-top:0;
-                .item{
-                    width:100%;
-                    img{
+            .content-ui{
+                width:316px;
+                margin-left:auto;
+                margin-right:auto;
+                .cycle-slideshow{
+                    width:266px;
+                    margin-top:0;
+                    .item{
                         width:100%;
-                    }
-                    h3{
-                        margin-top:0;
-                    }
-                    p{
-                        margin-top:0;
-                        margin-bottom: 14px;
-                        height:50px;
+                        img{
+                            width:100%;
+                        }
+                        h3{
+                            margin-top:0;
+                        }
+                        p{
+                            margin-top:0;
+                            margin-bottom: 14px;
+                            height:50px;
+                        }
                     }
                 }
-            }
-            .arrow-left{
-                background:url("../img/mobile/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
-                width:24px;
-                height:145px;
-                margin-right:3px;
-                background-size:100%;
-                margin-top:89px;
-            }
-            .arrow-right{
-                background:url("../img/mobile/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
-                width:24px;
-                height:145px;
-                margin-left:3px;
-                background-size:100%;
-                margin-top:89px;
+                .arrow-left{
+                    background:url("../img/mobile/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
+                    width:22px;
+                    height:144px;
+                    margin-right:3px;
+                    background-size:100% 100%;
+                    margin-top:89px;
+                }
+                .arrow-right{
+                    background:url("../img/mobile/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
+                    width:22px;
+                    height:144px;
+                    margin-left:3px;
+                    background-size:100% 100%;
+                    margin-top:89px;
+                }
             }
         }
         .cycle-pager{
@@ -603,13 +614,57 @@
  .video-callout-container{
      padding-left: 8%;
      padding-right: 8%;
+     min-width:320px;
+     height:auto;
      .video-callout{
          background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
          background-size:contain;
          width:100%;
+         height:45vw;
+         min-height: 148px;
          &:hover{
              background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg-hover.png") no-repeat;
+             background-size:contain;
+             width:100%;
          }
+     }
+ }
+ 
+ .aditional-information{
+     padding-left:8%;
+     padding-right:8%;
+     min-width:320px;
+     .copy{
+         width:100%;
+         margin-right:0;
+         margin-top:20px;
+         h2{
+             margin-bottom:18px;
+         }
+         .footnote-info{
+            font-size:12px;
+            line-height:18px;
+         }
+     }
+     img{
+         width:100%;
+         margin-top:0;
+         margin-bottom:20px;
+     }
+ }
+ 
+ .graphic-container{
+     padding-left:8%;
+     padding-right:8%;
+     width:100%;
+     min-width:320px;
+     img{
+         width:100%;
+         max-width:604px;
+         margin-top:0;
+     }
+     .right-aligned{
+         text-align:left;
      }
  }
     
