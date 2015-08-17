@@ -211,7 +211,7 @@
         width:40%;
         max-width:420px;
     }
-    .footnote{
+    .footnote-info{
         font-size:15px;
         span{
             float: left;
@@ -330,7 +330,7 @@
             p{
                 
             }
-            .footnote{
+            .footnote-info{
                 font-size:1em;
                 line-height:1.3em;
                 margin-bottom:1em;
@@ -546,7 +546,9 @@
     .carousel{
         padding-left:0;
         padding-right:0;
+        min-width:320px;
         .container-carousel{
+            width:100%;
             h2{
                  margin-left: 8%;
                  margin-right: 8%;
@@ -603,13 +605,56 @@
  .video-callout-container{
      padding-left: 8%;
      padding-right: 8%;
+     min-width:320px;
+     height:auto;
      .video-callout{
          background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
          background-size:contain;
          width:100%;
+         height:45vw;
+         min-height: 148px;
          &:hover{
              background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg-hover.png") no-repeat;
+             background-size:contain;
+             width:100%;
          }
+     }
+ }
+ 
+ .aditional-information{
+     padding-left:8%;
+     padding-right:8%;
+     .copy{
+         width:100%;
+         margin-right:0;
+         margin-top:20px;
+         h2{
+             margin-bottom:18px;
+         }
+         .footnote-info{
+            font-size:12px;
+            line-height:18px;
+         }
+     }
+     img{
+         width:100%;
+         margin-top:0;
+         margin-bottom:20px;
+     }
+ }
+ 
+ .graphic-container{
+     padding-left:8%;
+     padding-right:8%;
+     width:100%;
+     min-width:320px;
+     img{
+         width:100%;
+         max-width:604px;
+         margin-top:0;
+     }
+     .right-aligned{
+         text-align:left;
      }
  }
     
