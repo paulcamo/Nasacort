@@ -71,3 +71,1025 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------------------------
+
+
+
+#mainContainer, html {
+  overflow: visible !important;
+}
+
+.parallax {
+
+
+
+
+
+  #dots-container {
+    height: 100%;
+    margin: auto;
+    /* max-width: 1800px; */
+    position: fixed;
+    text-align: center;
+    top: 0;
+    z-index: 9998;
+    right: 0;
+    width: 69px;
+
+
+  }
+
+  .dotbox {
+    background-color: #fff;
+    border-radius: 8px 0 0 8px;
+    display: block;
+    height: 197px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 38%; /* nota arreglar con js para que siempre este en el centro*/
+    width: 40px;
+  }
+
+  #dots-container .dotbox .dot {
+    background-color: grey;
+    border-radius: 10px;
+    display: block;
+    height: 13px;
+    margin: 22px 16px;
+    width: 13px;
+  }
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------   */
+
+
+  .separador-5000 {
+    display: block;
+    width: 100%;
+    height: 50em;
+  }
+
+  .separador-50000 {
+    display: block;
+    width: 100%;
+    height: 500em;
+  }
+
+  .separador-1000 {
+    display: block;
+    width: 100%;
+    height: 10em;
+  }
+
+  .separador-400 {
+    display: block;
+    width: 100%;
+    height: 4em;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .separador-200 {
+    display: block;
+    width: 100%;
+    height: 2em;
+  }
+
+  .separador-100 {
+    display: block;
+    width: 100%;
+    height: 1em;
+  }
+
+
+  .separador-01, .separador-02, .separador-03, .separador-04, .separador-05  {
+    display: block;
+    width: 100%;
+    height: 12em;
+    border-bottom: 1px solid #ffffff;
+  }
+
+
+  .separador-02 {
+    height: 3500em;
+    background-color: #EA5825;
+  }
+
+
+  .separador-03 {
+    height: 2300em;
+    background-color: #8d8b8b;
+  }
+
+  .separador-04 {
+    height: 2250em;
+    background-color: #8d8b8b;
+  }
+
+
+  .separador-04 {
+    height: 1600em;
+    background-color: green;
+  }
+
+
+
+  .separador-05 {
+    height: 2250em;
+    background-color: yellow;
+  }
+
+
+
+
+
+  #brandlogo-tr, #brandlogo2-tr, #brandlogo3-tr, #brandlogo4-tr, #brandlogo5-tr
+  , #brandlogo6-tr, #brandlogo7-tr, #brandlogo8-tr, #brandlogo9-tr {
+    background-color: #808080;
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: 100;
+    height: 1px;
+    text-align: right;
+    width: 100%;
+  }
+
+
+  /* ---------------------------------------------------------------------------------------------------------------------   */
+
+
+  .header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #243d84;
+    z-index: 9999;
+    font-size: 0;
+  }
+
+  .header #brandlogo {
+    height: 0px;
+    width: 100%;
+    background: #fff url(../img/desktop/homepage/sanofi.png) no-repeat top center;
+  }
+
+  .header #brandlogo  a {
+    height: 30px;
+    color: #f00;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+
+
+  #footer {
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    top: 111px;
+    height: 8000px;
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    margin-top: 13em;
+  }
+
+  #centro {
+    display: block;
+    width: 100%;
+    position: fixed;
+    height: 100%;
+    margin: 0;
+    border-bottom: 1px solid red;
+  }
+
+  #productbox-container {
+
+
+    display: none;
+    height: 0 !important;
+
+
+
+
+    width: 100%;
+    height: 8000px;
+    position: fixed;
+    top: 81px;
+    /* no toque esto*/
+    z-index: 101;
+    /* max-width: 1800px; */
+    background-size: contain;
+    margin: auto;
+    left: 0;
+    right: 0;
+    margin-top: -13em;
+  }
+
+  #productbox {
+    width: 100%;
+    height: 12.5em;
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+    background: url("../img/desktop/homepage/productbox.png") no-repeat center top;
+    z-index: 101;
+    /* max-width: 1800px; */
+    background-size: contain;
+  }
+
+  #background {
+    position: fixed;
+    top: 0;
+    background: url("../img/desktop/homepage/bg-02.png") no-repeat center top;
+    z-index: 98;
+    /* max-width: 1800px; */
+    background-size: contain;
+    width: 100%;
+    height: 95em;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+
+
+  #background .yellow-spike {
+
+    position: absolute;
+    top: -3.20em;
+    width: 300px;
+    background: url(../img/desktop/homepage/yellow-spike.png) no-repeat right center;
+    background-size: contain;
+    height: 6em;
+    left: 3%;
+    z-index: 999999999;
+  }
+
+
+
+
+  .bloque {
+    width: 100%;
+    border-top: 1px solid white;
+    text-align: right;
+    font-size: 23px;
+    color: #fff;
+    height: 0px;
+    border: none;
+
+
+  }
+
+  .last-bloque {
+    border: 1px solid white;
+  }
+
+  #equis {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: yellowgreen;
+    z-index: 99999;
+    top: 0;
+  }
+
+
+
+  #product-features-bg {
+    background: url("../img/desktop/homepage/productbox.png") no-repeat top center;
+    width: 100%;
+    height: 13.2em;
+    position: absolute;
+    top: 55px;
+    z-index: 99;
+    background-size: contain;
+    /* max-width: 1800px; */
+  }
+
+  #bottle {
+    background: url("../img/desktop/homepage/bottle-nocap.png") no-repeat center center;
+    background-size: contain;
+    z-index: 101;
+    position: absolute;
+    top: 8em;
+    left: 72.2%;
+    margin: 0.3em auto auto 0%;
+    width: 3em;
+    height: 4.4em;
+    transform: scale(1, 1);
+  }
+
+  #cap {
+    -webkit-transform: translate3d(0, 0, 0);
+    /* enable hw acceleration */
+    background: url("../img/desktop/homepage/cap.png") no-repeat center center;
+    background-size: contain;
+    bottom: 0px;
+    width: 1.2em;
+    height: 3em;
+    z-index: 101;
+    position: absolute;
+    top: 8.23em;
+    left: 74.6%;
+  }
+
+
+
+
+
+  #no-scent {
+    background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
+    width: 8em;
+    height: 0em;
+    bottom: -19.742em;
+    z-index: 98;
+    position: absolute;
+    left: 21.5%;
+  }
+
+
+
+
+
+  #slide03 {
+    position: fixed;
+    top: 81px;
+    height: 14.7em;
+    z-index: 112;
+    margin: auto;
+    left: 0;
+    right:0;
+    /* max-width: 1800px; */
+    width: 100%;
+  }
+
+
+  #slide03 .dashbox {
+    display: block;
+    background-color: #c0cdd2;
+    position: absolute;
+    top: 2.7em;
+    left: 3%;
+    width: 6%;
+    height: 0.1em;
+  }
+
+
+  #compare-bg {
+    background: transparent url("../img/desktop/homepage/mom-child.png") no-repeat center top;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-size: contain;
+    top: 1.45em;
+    z-index: 100;
+  }
+
+
+  #compare-bg .btn1 {
+    color: #00008B;
+    font-size: 0.51em;
+    margin: 0.3em 3em;
+
+    width: 400px;
+    min-height: 50px;
+    font-family: $font-proxima-nova-semibold;
+    text-align: left;
+  }
+
+
+
+
+  #compare-copy {
+    width: 40%;
+    height: 7em;
+    position: absolute;
+    top: 1.45em;
+    left: 23%;
+    color: #FFF;
+    font-family: $font-proxima-nova-semibold;
+    text-align: left;
+    z-index: 105;
+
+  }
+
+  #compare-copy h2 {
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0.403em 0 0 0.60em;
+    letter-spacing: 0.03em;
+    width: 95%;
+    line-height: 1.3em;
+    color: #fff;
+  }
+
+  #compare-copy sup {
+    position: relative;
+    top: -0.1em;
+    font-size: 0.9em;
+    font-weight: 100;
+  }
+
+
+
+
+  #compare-copy p {
+    margin-top: 3.2em;
+    margin-left: 1em;
+    width: 72%;
+    font-size: 0.37em;
+    font-weight: 100;
+    line-height: 1.4em;
+    color: #e9eaea;
+  }
+
+
+  #compare-copy .compare-link {
+    display: block;
+    background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+    height: 3.6em;
+    border-radius: 9px;
+    width: 60%;
+    margin: 1.3em 0px 0px 0.7em;
+    font-size: 0.45em;
+    text-decoration: none;
+    line-height: 1.2em;
+    color: #2e2662;
+    background-size: contain;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+  }
+
+  #compare-copy .compare-link:hover {
+    color: #2e5672;
+  }
+
+
+
+
+
+  #compare-copy .compare-link span {
+    display: block;
+    width: 75%;
+    padding: 0.6em 0px 0px 1em;
+    font-weight: 100;
+  }
+
+  #compare-copy .compare-link strong {
+    font-weight: 700;
+  }
+
+  .compare-link-bottom {
+    display: block;
+    width: 30%;
+    height: 1.3em;
+    position: absolute;
+    left: 23%;
+    bottom: 4.5em;
+  }
+
+  .compare-link-bottom + .btn01 {
+    bottom: 3.5em;
+  }
+
+  .compare-link-bottom + .btn02 {
+    bottom: 2.7em;
+  }
+
+  .compare-link-bottom + .btn03 {
+    bottom: 0.81em;
+  }
+
+
+
+  #stats {
+    background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
+    height: 37%;
+    position: absolute;
+    bottom: 7.45em;
+    width: 30%;
+    left: 56%;
+    z-index: 99;
+    background-size: cover;
+
+  }
+
+
+  #slide04 {
+    position: fixed;
+    top: 81px;
+    height: 91%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    /* max-width: 1800px; */
+    width: 100%;
+    font-family: $font-proxima-nova-semibold;
+    font-weight: 100;
+    margin-top: 17em;
+  }
+
+
+
+  #slide04 .title {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    color: #133C7C;
+    top: 2.45em;
+    font-size: 0.8em;
+    width: 40%;
+    letter-spacing: 0.01em;
+    line-height: 1.1em;
+  }
+
+  #slide04 .title sup {
+    position: relative;
+    top: -10px;
+    font-size: 0.7em;
+  }
+
+
+  .orange-color {
+    color: #EA5825;
+  }
+
+
+
+
+  #slide04 .dashbox {
+    display: block;
+    background-color: #b1c9e0;
+    position: absolute;
+    top: 4.4em;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 2.8%;
+    height: 0.1em;
+
+
+  }
+
+
+
+
+  #patient-box {
+    width: 70%;
+    margin: auto;
+    height: 9em;
+    top: 4.8em;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+
+
+
+
+  .patient {
+
+    display: inline-block;
+    width: 24%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+
+
+
+
+  .patient .namebox {
+    border-bottom: 1px solid #aaa;
+    width: 95%;
+    height: 1.64em;
+    overflow: hidden;
+    margin: auto;
+  }
+
+
+  .patient .textbox {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.3em;
+    height: 4.23em;
+    width: 100%;
+    background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
+    color: #133c7c;
+    font-family: $font-proxima-nova-semibold;
+    text-align: left;
+    background-size: contain;
+  }
+
+
+  .patient .textbox p {
+    padding: 1em 0 0 1em;
+    width: 80%;
+    line-height: 1.2em;
+  }
+
+  .patient .name {
+    font-family: $font-proxima-nova-semibold;
+    font-size: 0.51em;
+    display: block;
+    padding-top: 0.5em;
+    color: #133c7c;
+  }
+
+
+
+
+  .patient .subname {
+    font-family: $font-proxima-nova-semibold;
+    font-size: 0.51em;
+    display: block;
+    padding-top: 0.2em;
+    color: #ea5825;
+    letter-spacing: 0.06em;
+  }
+
+
+
+
+
+
+  .patient-maria img {
+    margin-top: -0.32em;
+    background-size: contain;
+    width: 107%;
+  }
+
+
+
+  .patient-mark img {
+    margin: -0.54em 0px 0px -8%;
+    background-size: contain;
+    width: 113%;
+  }
+
+  .patient-kara img {
+    margin: -0.2em 0px 0px -2%;
+    background-size: contain;
+    width: 110%;
+  }
+
+  .patient-liam img {
+    margin: 1em 0 0 0;
+    background-size: contain;
+    width: 100%;
+  }
+
+
+  #slide05 {
+    position: fixed;
+    top: 81px;
+    height: 91%;
+    z-index: 100;
+    /* max-width: 1800px; */
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    margin-top: 15em;
+
+  }
+
+
+
+
+
+  #slide05 #understand-box {
+    position: absolute;
+    top: 1.78em;
+    width: 40%;
+    text-align: left;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+
+  }
+
+  #slide05 #understand-box h2 {
+    color: #FFF;
+    font-family: $font-proxima-nova-semibold;
+    font-size: 0.8em;
+    padding-bottom: 0.65em;
+    font-weight: 100;
+    line-height: 1.15em;
+    letter-spacing: 0.03em;
+  }
+
+
+
+  #slide05 .understand-link {
+
+    display: block;
+    background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
+    background-size: contain;
+    border-radius: 9px;
+    width: 79%;
+    height: 3.8em;
+    margin: 0px 0px 0.57em 0em;
+    font-size: 0.45em;
+    text-decoration: none;
+    line-height: 1.2em;
+    color: #0d5ea4;
+    font-family: $font-proxima-nova-semibold;
+
+
+  }
+
+  #slide05 .understand-link span {
+    padding: 1.4em 0px 0px 5%;
+    display: inline-block;
+  }
+
+
+
+
+
+
+
+
+  #slide01 {
+    background-color: rgba(0,255,0,0.2);
+    position: fixed;
+    top: 81px;
+    height: 14.7em;
+    z-index: 112;
+    margin: auto;
+    left: 0;
+    right: 0;
+    /* max-width: 1800px; */
+    width: 100%;
+    background-size: contain !important;
+
+  }
+
+
+
+  #slide1-textbox {
+    position: absolute;
+    top: 1.55em;
+    left: 140.5%;
+    font-family: $font-proxima-nova-semibold;
+    font-weight: 100;
+    color: #1B468E;
+    font-size: 0.8em;
+    z-index: 121;
+    text-align: left;
+    letter-spacing: 0.04em;
+    width: 39%;
+    line-height: 1.2em;
+
+
+  }
+
+
+  #slide1-textbox .features {
+    color:#0099cc;
+    text-transform: uppercase;
+  }
+
+
+  #slide1-textbox p {
+    font-size: 0.5em;
+    padding-top: 1.1em;
+    letter-spacing: 0.004em;
+    line-height: 1.54em;
+    width: 82%;
+
+  }
+
+
+  #slide1-textbox sup {
+    position: relative;
+    top: -0.1em;
+  }
+
+
+  #slide01 .lady00,
+  #slide01 .lady01,
+  #slide01 .lady02,
+  #slide01 .lady03 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: contain !important;
+    width: 100%;
+    height: 12.3em;
+  }
+
+
+
+
+  #slide01 .lady00 {
+    background: url(../img/desktop/homepage/lady00.png) no-repeat top center;
+    z-index: 125;
+  }
+
+
+  #slide01 .lady01 {
+    background: url(../img/desktop/homepage/lady01.png) no-repeat top center;
+    z-index: 120;
+  }
+
+
+  #slide01 .lady02 {
+    background: url(../img/desktop/homepage/lady02.png) no-repeat top center;
+    z-index: 118;
+
+  }
+
+  #slide01 .lady03 {
+    background: url(../img/desktop/homepage/lady03.png) no-repeat top center;
+    z-index: 116;
+  }
+
+  #lady00 {
+    z-index: 114 !important;
+  }
+
+  #lady04 {
+    z-index: 125 !important;
+    background: url(../img/desktop/homepage/lady00.png) no-repeat top center !important;
+  }
+
+
+  #carousel1, #carousel2, #carousel3 {
+    height: 14.7em;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    background-size: contain !important;
+  }
+
+
+  #carousel1, #slide01 {
+    background: url(../img/desktop/homepage/carousel-01.png) no-repeat top center;
+  }
+
+  #carousel1 {
+    z-index: 119;
+  }
+
+  #carousel2 {
+    background: url(../img/desktop/homepage/carousel-02.png) no-repeat top center;
+    z-index: 117;
+  }
+
+  #carousel3 {
+    background: url(../img/desktop/homepage/carousel-03.png) no-repeat top center;
+    z-index: 115;
+  }
+
+
+
+
+
+
+
+  #slide02 {
+    /* max-width: 1800px; */
+    position: fixed;
+    top: 81px;
+    z-index: 120;
+    width: 100%;
+    margin: 0em auto auto;
+    left: 0px;
+    right: 0px;
+    height: 1.3em;
+  }
+
+
+
+
+
+
+
+
+
+  #nasacort-compare {
+    width: 12em;
+    height: 10.5em;
+    bottom: 8.8em;
+    position: absolute;
+    right: 20.4%;
+    z-index: 101;
+    font-family: $font-proxima-nova-semibold;
+    top: 16.3em;
+    text-align: left;
+
+  }
+
+
+
+
+
+  #nasacort-compare h2 {
+    font-size: 0.7em;
+    padding: 0;
+    margin: 0.403em 0 0 0.60em;
+    letter-spacing: 0.03em;
+    width: 95%;
+    line-height: 1.3em;
+    color: #133C7C;
+  }
+
+  #nasacort-compare sup {
+    position: relative;
+    top: -0.1em;
+    font-size: 0.9em;
+    font-weight: 100;
+  }
+
+
+
+
+  #nasacort-compare p {
+    margin-top: 3.2em;
+    width: 93%;
+    font-size: 0.3em;
+    font-weight: 100;
+    line-height: 1.55em;
+    margin-left: 1em;
+    letter-spacing: 0.04em;
+    color: #4d4b4b;
+    margin-bottom: 2.8em;
+  }
+
+
+  #nasacort-compare .superscript {
+    top: -0.54em;
+    font-size: 0.7em;
+  }
+
+
+
+  #nasacort-compare .compare-link {
+    display: block;
+    background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+    height: 3.7em;
+    border-radius: 9px;
+    width: 92%;
+    margin: 1em 0px 0px 0.7em;
+    font-size: 0.45em;
+    text-decoration: none;
+    line-height: 1.2em;
+    color: #2E2662;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+  }
+
+  #nasacort-compare .compare-link:hover {
+    color: #2e5672;
+  }
+
+
+
+  #nasacort-compare .compare-link span {
+    display: block;
+    width: 92%;
+    padding: 1.2em 0px 0px 1em;
+    font-weight: 100;
+  }
+
+  #nasacort-compare .span2 {
+    padding: 0.7em 0px 0px 1em !important;
+    width: 75% !important;
+  }
+
+
+
+  #nasacort-compare .compare-link strong {
+    font-weight: 700;
+  }
+
+
+
+
+
+
+}
