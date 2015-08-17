@@ -7,8 +7,10 @@
     top: -9px;
     height: 170px;
     padding:0 150px;
+    @include breakpoint('desktop'){
+        top: -41px;
+    }
     h1{
-        margin-top: 68px;
         padding-left: 51px;
     }
 }
@@ -36,6 +38,7 @@
         margin-bottom: 27px;
         line-height: 23px;
         letter-spacing: 1.6px;
+        float: none;
     }
     li{
         font-size: 16px;

@@ -7,14 +7,14 @@ layout: layout.hbs
 {{>header}}
 
 
-<div class="hero">
+<div class="hero-{{section}}">
   	<div class="blueLine">
-  		<div class="info-text content">
+  		<div class="info-text content-whats-a-clucker">
   			<ul>
-  				<li class="no-img"><a href="#">Maria <br/><span>The Clucker</span></a></li>
-  				<li><a href="#">Mark <br/><span>The Dripper</span></a></li>
-  				<li><a href="#">Kara <br/><span>The Mouthbreather</span></a></li>
-  				<li><a href="#">Liam <br/><span>The Sniffler</span></a></li>
+  				<li class="no-img"><a href="#">Maria <br/><span>The Clucker</span><span class="arrow-upMenu"></span></a></li>
+  				<li><a href="#">Mark <br/><span>The Dripper</span><span class="arrow-upMenu"></span></a></li>
+  				<li><a href="#">Kara <br/><span>The Mouthbreather</span><span class="arrow-upMenu"></span></a></li>
+  				<li><a href="#">Liam <br/><span>The Sniffler</span><span class="arrow-upMenu"></span></a></li>
   			</ul>
   		</div>
   	</div>
@@ -23,14 +23,14 @@ layout: layout.hbs
 <!---------------------------------------- Hero Banner ---------------------------------------->
 <!---------------------------------------- Content Info ---------------------------------------->
 <div class="wac-content">
-	<div class="wac-topHead content">
+	<div class="wac-topHead content-whats-a-clucker">
 		<h2>What’s a Clucker?</h2>
 		<p>Everyone responds to nasal allergy symptoms differently. Here are a few of the allergic rhinitis (AR) patients you may have seen over the years at your pharmacy counter. Click through to match them with the most appropriate medication based on their symptoms, and find out when Nasacort<sup>&reg;</sup> Allergy 24HR is recommended.</p>
 	</div>
 
 <!---------------------------------------- Boxes with Each Patient (Maria) ---------------------------------------->	
 	<div class="wac-boxes">
-		<div class="content">
+		<div class="content-whats-a-clucker">
 			<h2>Meet Maria <strong>The Clucker</strong></h2>
 			<div class="wac-info">
 			<!-------------------- Info Personal -------------------->
@@ -80,7 +80,7 @@ layout: layout.hbs
 
 <!---------------------------------------- Boxes with Each Patient (Mark) ---------------------------------------->	
 	<div class="wac-boxes bg-gray">
-		<div class="content">
+		<div class="content-whats-a-clucker">
 			<h2>Meet Mark <strong>The Dripper</strong></h2>
 			<div class="wac-info">
 			<!-------------------- Info Personal -------------------->
@@ -130,7 +130,7 @@ layout: layout.hbs
 
 <!---------------------------------------- Boxes with Each Patient (Kara) ---------------------------------------->	
 	<div class="wac-boxes">
-		<div class="content">
+		<div class="content-whats-a-clucker">
 			<h2>Meet Kara <strong>The Mouthbreather</strong></h2>
 			<div class="wac-info">
 			<!-------------------- Info Personal -------------------->
@@ -180,7 +180,7 @@ layout: layout.hbs
 
 <!---------------------------------------- Boxes with Each Patient (Liam) ---------------------------------------->	
 	<div class="wac-boxes bg-gray">
-		<div class="content">
+		<div class="content-whats-a-clucker">
 			<h2>Meet Liam <strong>The Sniffler</strong></h2>
 			<div class="wac-info">
 			<!-------------------- Info Personal -------------------->
@@ -228,7 +228,7 @@ layout: layout.hbs
 		</div>
 	</div>	
 
-	<div class="download content text-center">
+	<div class="download content-whats-a-clucker text-center">
 		<h1>Assess Your Patients’ Symptoms and Determine Treatment</h1>
 		<div class="wac-cta-button">
 			<a href="#" class="wac-sympt">
@@ -236,7 +236,8 @@ layout: layout.hbs
 				<span class="down-txt">Download the Symptom Questionnaire</span>
 			</a>
 			<a href="#" class="wac-shareSympt">
-				
+				Share
+				<span class="shareSympt-icon"></span>
 			</a>
 		</div>
 	</div>		

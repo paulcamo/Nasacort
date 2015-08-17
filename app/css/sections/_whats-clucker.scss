@@ -4,33 +4,79 @@ $light-blue:#54acda;
 $black-letter:#5a5e5f;
 $yellow-color:#f39d28;
 $grey-innerTxt:#575a5c;
+$beige-color:#ffca82;
 
-.hero{
+.content-whats-a-clucker{
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    @include breakpoint('tablet'){
+        padding: 0 15px;
+        max-width: 100%;
+    }
+}
+
+.hero-whats-a-clucker{
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
-    height: 470px;
+    min-height: 470px;
     width: 100%;
     position: relative;
     top: -10px;
-    background-size:100%;
+    background-size:100% 100%;
+    @include breakpoint('desktop'){
+        margin-top: -152px;
+    }
+    @include breakpoint('tablet'){
+        margin-top: -32px;
+    }
     .blueLine{
-        height: 80px;
+        height: 105px;
         width: 100%;
-        background: url('../img/desktop/clucker/bg-lineTop.jpg') repeat-x;
+        background: url('../img/desktop/clucker/bg-lineTop.jpg') repeat-x bottom;
         position: absolute;
         bottom: 12px;
+        @include breakpoint('mobile'){
+            display: none;
+        }
     }
     .info-text{
         position:relative;
+        padding-top: 25px;
+        height: 105px;
+        display: table;
+        margin: 0 auto;
         ul > li{
-            display: inline-block;
+            display: inline;
             font-size: 28px;
             font-family: $font-proxima-nova-regular;
             text-align: center;
             position: relative;
+            float: left;
+            @include breakpoint('tablet'){
+                font-size: 20px;
+            }
             a{
                color:$color-white; 
-               padding: 10px 35px;
+               padding: 6px 30px;
                display: inline-block;
+               @include breakpoint('tablet'){
+                    padding: 14px 30px;
+                }
+               &:hover > .arrow-upMenu{
+                    background: url('../img/desktop/clucker/arrowUp-firstmenu.png') no-repeat;
+                    position:absolute;
+                    width: 51px;
+                    height: 25px;
+                    display: inline-block;
+                    top: -25px;
+                    right: 38%;
+               }
+            }
+            &:hover{
+                background-image: linear-gradient(to bottom, #0f58a5 0%,#54acda 100%);
+                -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f58a5', endColorstr='#54acda',GradientType=0 )";
+                // background: url('../img/desktop/clucker/arrowUp-firstmenu.png') no-repeat;
+                // position:absolute;
             }
             span{
                 font-family: $font-proxima-nova-bold;
@@ -53,10 +99,7 @@ $grey-innerTxt:#575a5c;
         }
     }
 }
-/*.content{
-    padding: 0 15%;
-    overflow: hidden;
-}*/
+
 .wac {
     margin-top: 0;
     h2{
@@ -191,7 +234,7 @@ $grey-innerTxt:#575a5c;
         font-size: 20px;
         font-weight: bold;
         text-decoration: none;
-        padding-left: 28px;
+        padding-left: 11px;
         position: relative;
         border: 1px solid #eb5d2b;
         .wac-shareIcon{
@@ -201,7 +244,7 @@ $grey-innerTxt:#575a5c;
             display: inline-block;
             position: absolute;
             top: 14px;
-            right: 17px;
+            right: 12px;
         }
         &:hover{
             background:transparent;
@@ -239,9 +282,31 @@ $grey-innerTxt:#575a5c;
         margin: 39px 0; 
         .wac-shareSympt{
             background:url('../img/desktop/clucker/share-btn.png')no-repeat;
-            width: 114px;
+            float: left;
             height: 75px;
+            position: relative;
+            right: 4px;
+            width: 114px;
             display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color:$beige-color;
+            text-decoration: none;
+            padding-top: 28px;
+            .shareSympt-icon{
+                background:url('../img/desktop/clucker/shareSympt-icon.png')no-repeat;
+                width: 17px;
+                height: 18px;
+                display: inline-block;
+                position: relative;
+                top: 3px;
+            }
+            &:hover{
+                color:$color-white;
+                .shareSympt-icon{
+                  background:url('../img/desktop/clucker/shareSympt-icon-hover.png')no-repeat;  
+                }
+            } 
         }     
         .wac-sympt{
             background-color:$color-orange;
@@ -250,6 +315,9 @@ $grey-innerTxt:#575a5c;
             border-radius: 6px 6px;
             text-decoration: none;
             border:1px solid $color-orange;
+            float: left;
+            position:relative;
+            z-index: 1;
             img{
                 position: relative;
                 margin-top: 7px;
@@ -276,7 +344,7 @@ $grey-innerTxt:#575a5c;
                 }
             }
             &:hover{
-                background-color:transparent;
+                background-color:$color-white;
                 span{
                     color:$color-orange;
                 }
