@@ -95,7 +95,6 @@ $('.close').on('click', function(e) {
 
 function activateFooterAndNavBarValidation()
 {
-    //alert(currentPage);
     switch(currentPage)
     {
         case "home-section":
