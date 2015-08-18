@@ -94,6 +94,9 @@
 .parallax {
 
 
+  @include breakpoint("mobile") {
+    display: none;
+  }
 
 
 
@@ -1088,6 +1091,25 @@
   }
 
 
+
+
+
+
+}
+
+
+
+
+
+.home-mobile {
+
+   .product-cover {
+     background: url("../img/mobile/homepage/product.png") no-repeat top center;
+     background-size: contain;
+     width: 100%;
+     height: 40em;
+
+       }
 
 
 
