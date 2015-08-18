@@ -102,19 +102,19 @@ function activateFooterAndNavBarValidation()
         break;
         
         case "nasacort-difference-section":
-            $("ul.main-nav li").eq(0).find("a.item .label").addClass("active-item");
+            $("ul.main-nav li").eq(0).find("a.item").addClass("active-item");
         break;
         
         case "dosing-and-efficacy-section":
-            $("ul.main-nav li").eq(1).find("a.item .label").addClass("active-item");
+            $("ul.main-nav li").eq(1).find("a.item").addClass("active-item");
         break;
         
         case "whats-a-clucker-section":
-            $("ul.main-nav li").eq(2).find("a.item .label").addClass("active-item");
+            $("ul.main-nav li").eq(2).find("a.item").addClass("active-item");
         break;
             
         case "science-of-allergic-rhinitis-section":
-            $("ul.main-nav li").eq(3).find("a.item .label").addClass("active-item");
+            $("ul.main-nav li").eq(3).find("a.item").addClass("active-item");
         break;
         
         case "resources-section":

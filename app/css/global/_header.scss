@@ -155,10 +155,11 @@
                     padding-top: 4px;
                     float:left;
                     height:26px;
-                    &.active-item{
-                        color:$color-cyan;
-                    }
                  }
+                 
+                 &.active-item{
+                    color:$color-cyan !important;
+                }
                
                }
                
@@ -363,10 +364,17 @@
                    width:100%;
                    text-align: center; 
                    height:60px;
-                   padding-top:15%;
+                   padding-top:11%;
+                   padding-left:2%;
+                   padding-right:2%;
                    .label{
                      width:100%;
-                 }
+                    }
+                    &.active-item{
+                      color:$color-dark-blue !important;
+                      font-weight:bold;
+                      background-color:#cbe5ff;
+                     }
                    &:hover{
                    color: $color-dark-blue !important;
                  
