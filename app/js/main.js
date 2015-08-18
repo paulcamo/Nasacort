@@ -4,7 +4,7 @@ var currentPage = "";
 $(document).ready(function() {
 	setInterstitialPopup();
     
-    currentPage = document.body.className
+    currentPage = document.body.className;
     
     activateFooterAndNavBarValidation();
 });
