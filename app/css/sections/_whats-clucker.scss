@@ -11,8 +11,12 @@ $beige-color:#ffca82;
     overflow: hidden;
     margin: 0 auto;
     @include breakpoint('tablet'){
-        padding: 0 15px;
+        padding: 0 2%;
         max-width: 100%;
+    }
+    @include breakpoint('mobile'){
+        padding: 0 2%;
+        max-width: 320px;
     }
 }
 
@@ -28,6 +32,10 @@ $beige-color:#ffca82;
     }
     @include breakpoint('tablet'){
         margin-top: -32px;
+    }
+    @include breakpoint('mobile'){
+        top: 0;
+        min-height: 169px;
     }
     .blueLine{
         height: 105px;
@@ -100,12 +108,23 @@ $beige-color:#ffca82;
     }
 }
 
+.wac-topHead{
+    h2{
+      @include breakpoint('mobile'){
+            margin-top: 32px;
+        }  
+    }
+}
+
 .wac {
     margin-top: 0;
     h2{
         color:$color-blue;
         font-size: 32px;
         font-weight: bold;
+        @include breakpoint('mobile'){
+            font-size: 17px;
+        }
 
     }
     h3{
@@ -120,6 +139,9 @@ $beige-color:#ffca82;
             color:$subheader-text;
             font-size: 34px; 
             margin-bottom:57px; 
+            @include breakpoint('mobile'){
+                display: none;
+            } 
         }
         
     }
@@ -145,6 +167,10 @@ $beige-color:#ffca82;
         letter-spacing: 0px;
         font-size: 16px;
         color:$black-letter;
+        @include breakpoint('mobile'){
+            line-height: 17px;
+            font-size: 12px;
+        }
     }
     a{
         color:$color-dark-grey;
@@ -195,8 +221,32 @@ $beige-color:#ffca82;
         overflow: hidden;
     }
 
+    .wac-boxmobile{
+        @include breakpoint('mobile'){
+            border:1px solid $color-black;
+        }
+    }
+
     .wac-elements{
         position:relative;
+        @include breakpoint('tablet'){
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    .align-img{
+        @include breakpoint('tablet'){
+            margin: 0 auto;
+            max-width: 400px;
+        }
+    }
+
+    .align-cta{
+       @include breakpoint('tablet'){
+            margin: 0 auto;
+            max-width: 400px;
+        } 
     }
 
     .wac-info{
@@ -208,6 +258,19 @@ $beige-color:#ffca82;
         .wac-into-1{
             width: 60%;
             float: left;
+            @include breakpoint('tablet'){
+                display: block;
+                float: none;
+                overflow: hidden;
+                width: 80%;
+                margin: 0 auto;
+            }
+            @include breakpoint('mobile'){
+                width: 100%;
+                img{
+                    max-width: 114px;
+                }
+            }
             img{
                 float: left;
             }
@@ -215,12 +278,30 @@ $beige-color:#ffca82;
         .wac-into-2{
             width: 40%;
             float: left;
+            @include breakpoint('tablet'){
+                display: block;
+                float: none;
+                overflow: hidden;
+                width: 100%;
+            }
+            @include breakpoint('mobile'){
+                width: 100%;
+            }
         }
     }
     .wacSeak{
-        width: 300px;
+        max-width: 300px;
         float: left;
         padding-left: 20px;
+        @include breakpoint('tablet'){
+            width: 60%;
+        }
+        @include breakpoint('mobile'){
+            width: 100%;
+            float: none;
+            padding-left: 0;
+            clear: both;
+        }
     }
     .wac-cta{
         min-width: 100%;
