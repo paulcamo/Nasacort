@@ -125,7 +125,7 @@
 /*Fix for Firefox content box border issue*/
 @-moz-document url-prefix() { 
   label {
-     height:73.5px !important;
+     height:73.5 !important;
   }
 }
 
