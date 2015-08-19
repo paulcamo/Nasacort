@@ -94,23 +94,29 @@
     .container-carousel{
         float:left;
         margin-bottom:24px;
+        width:100%;
+    }
+    .content-ui{
+        width:100%;
+        float:left;
+        margin-top: 13px;
     }
 }
 
 .cycle-slideshow{
-    margin-top: 30px;
     float:left;
     overflow:hidden;
-    width:796px;
+    width:79%;
     .item{
         float:left;
         p{
             margin-top:16px;
             margin-bottom:18px;
             width:auto;
+            height:18px;
         }
         img{
-           
+           width:100%;
         }
     }
 }
@@ -118,27 +124,29 @@
 
 .arrow-left{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
-    width:84px;
+    width:9%;
     height:434px; 
     display:block;
     float:left;
-    margin-right:10px;
-    margin-top: 118px;
+    margin-right:0.8%;
+    background-size:100% 100%;
     &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
+        background-size:100% 100%;
     }
 }
 
 .arrow-right{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
-    width:84px;
+    width:9%;
     height:434px; 
     display:block;
     float:left;
-    margin-left:10px;
-    margin-top: 118px;
+    margin-left:0.8%;
+    background-size:100% 100%;
     &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
+        background-size:100% 100%;
     }
 }
 
@@ -281,23 +289,21 @@
     
     .carousel{
         .container-carousel{
-            .cycle-slideshow{
-                width:650px;
-                margin-top:0;
+            .cycle-slideshow{              
                 .item{
                     width:100%;
                     img{
                         width:100%;
                     }
                     h3{
-                        font-size:2em;
+                        /*font-size:2em;*/
                     }
                     p{
-                        font-size:1em;
+                        /*font-size:1em;*/
                     }
                 }
             }
-            .arrow-left{
+            /*.arrow-left{
                 width:72px;
                 height:354px;
                 background-size:contain;
@@ -311,7 +317,7 @@
                 margin-left: 732px;
                 margin-top:77px;
                 position:absolute;
-            }
+            }*/
         }
     }
     
@@ -396,7 +402,6 @@
         .container-carousel{
             margin-bottom:15px;
             .cycle-slideshow{
-                width:488px;
                 margin-top:0;
                 .item{
                     width:100%;
@@ -404,17 +409,17 @@
                         width:100%;
                     }
                     h3{
-                        font-size:1.9em;
+                        /*font-size:1.9em;*/
                         margin-top:0;
                         margin-bottom:0.5em;
                     }
                     p{
-                        font-size:0.7em;
+                        /*font-size:0.7em;*/
                         margin-top:0;
                     }
                 }
             }
-            .arrow-left{
+            /*.arrow-left{
                 width:53px;
                 height:266px;
                 background-size:contain;
@@ -428,7 +433,7 @@
                 margin-left: 552px;
                 margin-top:66px;
                 position:absolute;
-            }
+            }*/
         }
         .cycle-pager{
             position: relative;
@@ -582,11 +587,10 @@
                  margin-right: 8%;
             }
             .content-ui{
-                width:316px;
+                min-width:316px;
                 margin-left:auto;
                 margin-right:auto;
                 .cycle-slideshow{
-                    width:266px;
                     margin-top:0;
                     .item{
                         width:100%;
@@ -603,7 +607,7 @@
                         }
                     }
                 }
-                .arrow-left{
+                /*.arrow-left{
                     background:url("../img/mobile/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
                     width:22px;
                     height:144px;
@@ -618,7 +622,7 @@
                     margin-left:3px;
                     background-size:100% 100%;
                     margin-top:89px;
-                }
+                }*/
             }
         }
         .cycle-pager{
