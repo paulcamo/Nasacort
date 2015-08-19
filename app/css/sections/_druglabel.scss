@@ -1,3 +1,6 @@
+$text-grey:#535353;
+$blue-color-headline:#022e80;
+$subtitle-color:#0d5ea4;
 
 .drug-fact-label-header{
     background-color: $color-light-blue;
@@ -6,20 +9,58 @@
     min-width: 1000px;
     top: -9px;
     height: 170px;
-    padding:0 150px;
+    padding:0 11%;
     @include breakpoint('desktop'){
         top: -41px;
+        min-width: 100%;
+    }
+    @include breakpoint('tablet'){
+        padding:0 8%;
+        top: -40px;
+        .section-content{
+            margin-top: 0;
+        }
+    }
+    @include breakpoint('mobile'){
+        padding:0;
+        min-width: 100%;
+        margin-top: 61px;
+        height: 57px;
+        .section-content{
+            margin-top: 0;
+        }
+
     }
     h1{
         padding-left: 51px;
     }
 }
 
+.show-mbl{
+    display: none;
+    @include breakpoint('mobile'){
+        display:block;
+    }
+}
+
 .drug-fact-label {
-    padding: 0 200px;
+    padding: 0 14%;
     margin-top: 0;
+    @include breakpoint('tablet'){
+        padding: 0 12%;
+    }
+    @include breakpoint('mobile'){
+        padding: 0 6%;
+    }
     h2{
         line-height: 38px;
+        color:$blue-color-headline;
+        span{
+            color:$text-grey;
+        }
+        @include breakpoint('mobile'){
+            line-height: 22px;
+        }
     }
     sup{
         font-size: 56%;
@@ -39,33 +80,49 @@
         line-height: 23px;
         letter-spacing: 1.6px;
         float: none;
+        @include breakpoint('mobile'){
+            margin-bottom: 2px;
+        }
     }
     li{
-        font-size: 16px;
+        font-size: 19px;
         color:$color-dark-grey;
         letter-spacing: 1.3px;
         line-height: 18px;
+        @include breakpoint('mobile'){
+            font-size: 12px;
+        }
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
     }
     ul, p{
         padding-left: 5px;
+        font-size: 19px;
     }
     ul{
         margin-bottom: 27px;
+        @include breakpoint('mobile'){
+            margin-bottom: 21px;
+        }
     }
 
     .title_internal{
-        color:$color-blue-titles;
+        color:$subtitle-color;
         font-family:$font-proxima-nova-semibold;
         font-size: 28px;
         margin-top:13px;
         font-style: italic;
         letter-spacing: 0.8px;
+        @include breakpoint('mobile'){
+            font-size: 14px;
+        }
+    }
+    .mrg-none{
+        margin-bottom: 4px; 
     }
     .subtitle_internal{
-        color:$color-blue-titles;
+        color:$subtitle-color;
         margin-bottom: 1px;
         font-family:$font-proxima-nova-semibold;
     }
@@ -76,8 +133,14 @@
     .inl-list > li{
         display: inline;
         margin-right: 60px;
+        @include breakpoint('tablet'){
+            display: block;
+        }
+        @include breakpoint('mobile'){
+            display: block;
+        }
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
         &:last-child{
             margin-right: 0;
