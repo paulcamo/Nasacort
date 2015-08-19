@@ -33,7 +33,7 @@ $(document).ready(function() {
 function setInterstitialPopup() {
 	$("body a").on("click",function(e) {
 
-        e.preventDefault();
+       // e.preventDefault();
 
 		if($(this).attr("data-target") === "#interstitial")
 		{
