@@ -31,7 +31,10 @@ $(document).ready(function() {
 // --------------------------------------------------------------------------------------------------------------
 
 function setInterstitialPopup() {
-	$("body a").on("click",function() {
+	$("body a").on("click",function(e) {
+
+        e.preventDefault();
+
 		if($(this).attr("data-target") === "#interstitial")
 		{
 			$("#interstitial").find("#go").attr("href", $(this).attr("href"));
