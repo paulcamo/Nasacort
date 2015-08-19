@@ -1,3 +1,4 @@
+$text-grey:#535353;
 
 .drug-fact-label-header{
     background-color: $color-light-blue;
@@ -10,7 +11,13 @@
     @include breakpoint('desktop'){
         top: -41px;
         min-width: 100%;
-        top: -9px;
+    }
+    @include breakpoint('tablet'){
+        padding:0 8%;
+        top: -40px;
+        .section-content{
+            margin-top: 0;
+        }
     }
     @include breakpoint('mobile'){
         padding:0;
@@ -37,11 +44,17 @@
 .drug-fact-label {
     padding: 0 14%;
     margin-top: 0;
+    @include breakpoint('tablet'){
+        padding: 0 12%;
+    }
     @include breakpoint('mobile'){
-        padding: 0 10%;
+        padding: 0 6%;
     }
     h2{
         line-height: 38px;
+        span{
+            color:$text-grey;
+        }
         @include breakpoint('mobile'){
             line-height: 22px;
         }
@@ -64,12 +77,18 @@
         line-height: 23px;
         letter-spacing: 1.6px;
         float: none;
+        @include breakpoint('mobile'){
+            margin-bottom: 2px;
+        }
     }
     li{
         font-size: 16px;
         color:$color-dark-grey;
         letter-spacing: 1.3px;
         line-height: 18px;
+        @include breakpoint('mobile'){
+            font-size: 12px;
+        }
         &:before{
             content: "\2022 ";
         }
@@ -79,6 +98,9 @@
     }
     ul{
         margin-bottom: 27px;
+        @include breakpoint('mobile'){
+            margin-bottom: 21px;
+        }
     }
 
     .title_internal{
@@ -88,6 +110,9 @@
         margin-top:13px;
         font-style: italic;
         letter-spacing: 0.8px;
+        @include breakpoint('mobile'){
+            font-size: 14px;
+        }
     }
     .subtitle_internal{
         color:$color-blue-titles;
@@ -101,6 +126,12 @@
     .inl-list > li{
         display: inline;
         margin-right: 60px;
+        @include breakpoint('tablet'){
+            display: block;
+        }
+        @include breakpoint('mobile'){
+            display: block;
+        }
         &:before{
             content: "\2022 ";
         }
