@@ -6,7 +6,7 @@
     min-width: 1000px;
     top: -9px;
     height: 170px;
-    padding:0 15%;
+    padding:0 11%;
     @include breakpoint('desktop'){
         top: -41px;
         min-width: 100%;
@@ -35,7 +35,7 @@
 }
 
 .drug-fact-label {
-    padding: 0 5%;
+    padding: 0 14%;
     margin-top: 0;
     @include breakpoint('mobile'){
         padding: 0 10%;
