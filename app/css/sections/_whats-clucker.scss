@@ -5,6 +5,7 @@ $black-letter:#5a5e5f;
 $yellow-color:#f39d28;
 $grey-innerTxt:#575a5c;
 $beige-color:#ffca82;
+$grey-bg:#e7eef2;
 
 .content-whats-a-clucker{
     max-width: 1000px;
@@ -15,8 +16,21 @@ $beige-color:#ffca82;
         max-width: 100%;
     }
     @include breakpoint('mobile'){
-        padding: 0 2%;
-        max-width: 320px;
+        padding: 0 5%;
+        max-width: 100%;
+    }
+}
+
+.show-dsk{
+    @include breakpoint('mobile'){
+        display: none;
+    }
+}
+
+.show-mbl{
+    display: none;
+    @include breakpoint('mobile'){
+        display: block;
     }
 }
 
@@ -111,7 +125,7 @@ $beige-color:#ffca82;
 .wac-topHead{
     h2{
       @include breakpoint('mobile'){
-            margin-top: 32px;
+            margin-top: 33px;
         }  
     }
 }
@@ -131,14 +145,23 @@ $beige-color:#ffca82;
         font-size: 23px;
         color:$light-blue;
         text-transform: none;
-        margin-bottom: 15px; 
+        margin-bottom: 15px;  
     }
     .wac-boxes{
+        @include breakpoint('tablet'){
+            padding: 28px 0;
+        } 
+        @include breakpoint('mobile'){
+            padding: 28px 0;
+        } 
         h2{
            font-family:$font-proxima-nova-regular;
             color:$subheader-text;
             font-size: 34px; 
             margin-bottom:57px; 
+            @include breakpoint('tablet'){
+                display: none;
+            } 
             @include breakpoint('mobile'){
                 display: none;
             } 
@@ -186,6 +209,11 @@ $beige-color:#ffca82;
         float: left;
         width: 50%;
         margin-bottom: 7px; 
+        @include breakpoint('mobile'){
+            line-height: 17px;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
     }
     .unselected{
         color:$color-dark-grey;
@@ -224,6 +252,8 @@ $beige-color:#ffca82;
     .wac-boxmobile{
         @include breakpoint('mobile'){
             border:1px solid $color-black;
+            padding:13px;
+            background-color:$color-white;
         }
     }
 
@@ -233,12 +263,27 @@ $beige-color:#ffca82;
             max-width: 400px;
             margin: 0 auto;
         }
+        h3{
+            @include breakpoint('mobile'){
+                font-size: 14px;
+                background-color:$grey-bg;
+                border-radius:3px;
+                padding:11px;
+            }
+        }
     }
 
     .align-img{
         @include breakpoint('tablet'){
             margin: 0 auto;
             max-width: 400px;
+        }
+        @include breakpoint('mobile'){
+            width: 100%;
+            img{
+                width: 100%;
+                cursor: pointer;
+            }
         }
     }
 
@@ -258,6 +303,7 @@ $beige-color:#ffca82;
         .wac-into-1{
             width: 60%;
             float: left;
+            position:relative;
             @include breakpoint('tablet'){
                 display: block;
                 float: none;
@@ -273,6 +319,34 @@ $beige-color:#ffca82;
             }
             img{
                 float: left;
+            }
+            .wac-hiddenTxt{
+                display: none;
+                @include breakpoint('tablet'){
+                   color:$subheader-text;
+                    display: inline;
+                    font-size: 32px;
+                    left: 14px;
+                    line-height: 37px;
+                    position: relative;
+                    top: 39px;
+                    strong{
+                        font-size: 42px;
+                    } 
+                }
+                @include breakpoint('mobile'){
+                    color:$subheader-text;
+                    display: inline;
+                    font-size: 17px;
+                    left: 14px;
+                    line-height: 27px;
+                    position: relative;
+                    top: 39px;
+                    strong{
+                        font-size: 22px;
+                    }
+                }
+
             }
         }
         .wac-into-2{
@@ -290,14 +364,19 @@ $beige-color:#ffca82;
         }
     }
     .wacSeak{
-        max-width: 300px;
+        max-width: 50%;
+        min-width: 300px;
         float: left;
         padding-left: 20px;
+        @include breakpoint('desktop'){
+            max-width: 50%;
+        }
         @include breakpoint('tablet'){
-            width: 60%;
+            max-width: 100%;
+            clear: both;
         }
         @include breakpoint('mobile'){
-            width: 100%;
+            max-width: 100%;
             float: none;
             padding-left: 0;
             clear: both;
@@ -318,6 +397,10 @@ $beige-color:#ffca82;
         padding-left: 11px;
         position: relative;
         border: 1px solid #eb5d2b;
+        @include breakpoint('mobile'){
+            font-size: 14px;
+            padding-top: 20px;
+        }
         .wac-shareIcon{
             background:url('../img/desktop/clucker/share-icon.png')no-repeat;
             width: 26px;
@@ -341,12 +424,18 @@ $beige-color:#ffca82;
         top: 109px;
         right: 13px;
         cursor: pointer;
+        @include breakpoint('mobile'){
+            top: 57px;
+        }
     }
     .wac-indication{
         text-align: right;
         display: block;
         margin-top: 9px;
         color:$grey-innerTxt;
+        @include breakpoint('mobile'){
+            text-align: left;
+        }
     }
     .wac-question{
         text-decoration: none;
@@ -355,12 +444,19 @@ $beige-color:#ffca82;
     .download{
         h1{
             font-size: 34px;
+            @include breakpoint('mobile'){
+                font-size: 17px; 
+                padding-top: 31px;
+            } 
         }
     }
     .wac-cta-button{
         min-width: 550px; 
         display: inline-block;
-        margin: 39px 0; 
+        margin: 39px 0;
+        @include breakpoint('mobile'){
+            min-width: 100%; 
+        } 
         .wac-shareSympt{
             background:url('../img/desktop/clucker/share-btn.png')no-repeat;
             float: left;
@@ -381,6 +477,9 @@ $beige-color:#ffca82;
                 display: inline-block;
                 position: relative;
                 top: 3px;
+                @include breakpoint('mobile'){
+                    background-size:100%;
+                }
             }
             &:hover{
                 color:$color-white;
@@ -399,6 +498,9 @@ $beige-color:#ffca82;
             float: left;
             position:relative;
             z-index: 1;
+            @include breakpoint('mobile'){
+                height: 50px;
+            }
             img{
                 position: relative;
                 margin-top: 7px;
@@ -413,6 +515,12 @@ $beige-color:#ffca82;
                 float: left;
                 display: inline-block;
                 position:relative;
+                @include breakpoint('mobile'){
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 7px 22px;
+                    text-align: left;
+                }
                 &:before{
                     content:" ";
                     background:url('../img/desktop/clucker/downl-cta-line.png')no-repeat;
@@ -422,6 +530,9 @@ $beige-color:#ffca82;
                     display: inline-block;
                     left: 9px;
                     top: 4px;
+                    @include breakpoint('mobile'){
+                        height: 39px;
+                    }
                 }
             }
             &:hover{
