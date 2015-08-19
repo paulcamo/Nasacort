@@ -6,9 +6,11 @@
     min-width: 1000px;
     top: -9px;
     height: 170px;
-    padding:0 150px;
+    padding:0 15%;
     @include breakpoint('desktop'){
         top: -41px;
+        min-width: 100%;
+        top: -9px;
     }
     @include breakpoint('mobile'){
         padding:0;
@@ -33,7 +35,7 @@
 }
 
 .drug-fact-label {
-    padding: 0 200px;
+    padding: 0 5%;
     margin-top: 0;
     @include breakpoint('mobile'){
         padding: 0 10%;
@@ -69,7 +71,7 @@
         letter-spacing: 1.3px;
         line-height: 18px;
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
     }
     ul, p{
@@ -100,7 +102,7 @@
         display: inline;
         margin-right: 60px;
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
         &:last-child{
             margin-right: 0;
