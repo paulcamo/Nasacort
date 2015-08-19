@@ -10,16 +10,39 @@
     @include breakpoint('desktop'){
         top: -41px;
     }
+    @include breakpoint('mobile'){
+        padding:0;
+        min-width: 100%;
+        margin-top: 61px;
+        height: 57px;
+        .section-content{
+            margin-top: 0;
+        }
+
+    }
     h1{
         padding-left: 51px;
+    }
+}
+
+.show-mbl{
+    display: none;
+    @include breakpoint('mobile'){
+        display:block;
     }
 }
 
 .drug-fact-label {
     padding: 0 200px;
     margin-top: 0;
+    @include breakpoint('mobile'){
+        padding: 0 10%;
+    }
     h2{
         line-height: 38px;
+        @include breakpoint('mobile'){
+            line-height: 22px;
+        }
     }
     sup{
         font-size: 56%;
@@ -46,7 +69,7 @@
         letter-spacing: 1.3px;
         line-height: 18px;
         &:before{
-            content: "• ";
+            content: "&bull; ";
         }
     }
     ul, p{
