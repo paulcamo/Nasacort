@@ -5,6 +5,7 @@ var mobileBreakPoint = 768;
 $(document).ready(function(){
     changeImageSrc();
     changeDivsOrder();
+    validateCarouselArrows();
 });
 
 function changeImageSrc()
@@ -45,8 +46,22 @@ function changeDivsOrder()
      }
 }
 
+function validateCarouselArrows()
+{
+    //console.log("height " + $('.carousel .cycle-slideshow .item img').height());
+    //console.log("top " + $('.carousel .cycle-slideshow .item').position().top);
+    //console.log("top img" + $('.carousel .cycle-slideshow .item img').position().top);
+    var imageHeight = $('.carousel .cycle-slideshow .item img').height();
+    var topPosition = $('.carousel .cycle-slideshow .item img').position().top - $('.carousel .cycle-slideshow .item').position().top;
+    $('.carousel .arrow-left').css('height', imageHeight);
+    $('.carousel .arrow-left').css('margin-top', topPosition);
+    $('.carousel .arrow-right').css('height', imageHeight);
+    $('.carousel .arrow-right').css('margin-top', topPosition);
+}
+
 $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
     changeDivsOrder();
+    validateCarouselArrows();
 });
