@@ -47,6 +47,9 @@
               position:absolute;
               bottom: 7px;
               right: 0;
+              &.active-house{
+                  background:url("../img/desktop/header/little-cyan-house.png") no-repeat;
+              }
           }
           
           &:hover{
@@ -87,6 +90,11 @@
                   &:visited {
                      color: $color-light-blue2;
                    }
+                   
+                  &.active-item{
+                      text-decoration:underline;
+                      color:$color-white;
+                  }
               }
           }
       }
@@ -148,6 +156,10 @@
                     float:left;
                     height:26px;
                  }
+                 
+                 &.active-item{
+                    color:$color-cyan !important;
+                }
                
                }
                
@@ -328,6 +340,9 @@
                     margin-top:8px;
                     a{
                         font-size:10px;
+                        &.active-item{
+                            color:$color-cyan;
+                        }
                     }
                     &:first-child{
                         margin-left:4%;
@@ -352,10 +367,17 @@
                    width:100%;
                    text-align: center; 
                    height:60px;
-                   padding-top:15%;
+                   padding-top:11%;
+                   padding-left:2%;
+                   padding-right:2%;
                    .label{
                      width:100%;
-                 }
+                    }
+                    &.active-item{
+                      color:$color-dark-blue !important;
+                      font-weight:bold;
+                      background-color:#cbe5ff;
+                     }
                    &:hover{
                    color: $color-dark-blue !important;
                  

@@ -1,7 +1,12 @@
+
+var currentPage = "";
+
 $(document).ready(function() {
 	setInterstitialPopup();
-
-
+    
+    currentPage = document.body.className;
+    
+    activateFooterAndNavBarValidation();
 });
 
 // ***********************************************************************************************************
@@ -85,6 +90,50 @@ $('.close').on('click', function(e) {
     $('.footnote').removeClass("animation");
     e.preventDefault();
 });
+
+// --------------------------------------------------------------------------------------------------------------
+
+function activateFooterAndNavBarValidation()
+{
+    switch(currentPage)
+    {
+        case "home-section":
+            $(".nassacort-logo .little-house").addClass("active-house");
+        break;
+        
+        case "nasacort-difference-section":
+            $("ul.main-nav li").eq(0).find("a.item").addClass("active-item");
+        break;
+        
+        case "dosing-and-efficacy-section":
+            $("ul.main-nav li").eq(1).find("a.item").addClass("active-item");
+        break;
+        
+        case "whats-a-clucker-section":
+            $("ul.main-nav li").eq(2).find("a.item").addClass("active-item");
+        break;
+            
+        case "science-of-allergic-rhinitis-section":
+            $("ul.main-nav li").eq(3).find("a.item").addClass("active-item");
+        break;
+        
+        case "resources-section":
+            $("ul.utility-nav li").eq(0).find("a").addClass("active-item");
+        break;
+        
+        case "faq-section":
+            $("ul.utility-nav li").eq(1).find("a").addClass("active-item");
+        break;
+        
+        case "drug-fact-label-section":
+            $("ul.utility-nav li").eq(2).find("a").addClass("active-item");
+        break;
+        
+        default:
+        break;
+        
+    }
+}
 
 
 
