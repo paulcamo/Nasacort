@@ -534,6 +534,7 @@
             .graph{
                 margin-left:0;
                 text-align:center;
+                float:left;
                 img{
                     margin-right:0;
                     width:100%;
@@ -675,6 +676,9 @@
          .footnote-info{
             font-size:12px;
             line-height:18px;
+         }
+         .footnote{
+             margin-top:0px;
          }
      }
      img{

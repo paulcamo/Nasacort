@@ -92,15 +92,15 @@ $(this).parent().toggleClass("border-sect-faq");
 
 // --------------------------------------------------------------------------------------------------------------
 
-$('.open').on('click', function(e) {
-    $('.footnote').toggleClass("animation");
-    $('.footnote .rfrs').css("display","block");
+$('.footnote').on('click', function(e) {
+    $(this).toggleClass("animation");
+    $(this).find('.rfrs').css("display","block");
     e.preventDefault();
 });
 
-$('.close').on('click', function(e) {
-    $('.footnote').removeClass("animation");
-    $('.footnote .rfrs').css("display","none");
+$('.close-btn').on('click', function(e) {
+    //$(this).parent().toggleClass("animation");
+    $(this).find('.rfrs').css("display","none");
     e.preventDefault();
 });
 

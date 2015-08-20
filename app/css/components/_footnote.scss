@@ -3,23 +3,30 @@
 .footnote {
   display: inline-block;
   width: 161px;
+  background: url("../img/desktop/ctas/footnote-btn.png") no-repeat;
   position: absolute;
   left: -1px;
   height: 74px;
-  border-radius: 0 40px 40px 0;
-  padding: 16px 0 16px 23px;
-  border: 1px solid #e0e7f3;
-  background-color: #ffffff;
   z-index: 9999;
   cursor:pointer;
   margin-top:230px;
-  .rfrs p {
-    color: #000000;
-    font-size: 12px;
-    width: 100%;
-    display: none;
+  .rfrs{
+      .references{
+          float:left;
+      }
+        p {
+        color: #000000;
+        font-size: 12px;
+        width: 100%;
+        display: none;
+        font-weight:normal;
+            &:last-child{
+                margin-bottom:0;
+            }
+      }
   }
-  .close {
+  
+  .close-btn {
     position: absolute;
     top: 22px;
     right: 30px;
@@ -40,48 +47,10 @@
   .switch {
     width: 100px;
   }
-  .rfrs{
-    display:none;  
-    padding:0;
-    padding-top: 26px;
-    padding-right:22px;
-    margin-left:-6px;
-    p{
-        font-weight:normal;
-        &:last-child{
-            margin-bottom:0;
-        }
-    }
-  }
-  p {
-    font-size: 16px;
-    color: $color-dark-blue;
-    font-weight: bold;
-    line-height: 19px;
-  }
-  .innImg {
-    position: absolute;
-    top: 25px;
-    left: 126px;
-    .arrow-open {
-      position: absolute;
-      background: url("../img/desktop/ctas/arrow-foot.png") no-repeat;
-      width: 13px !important;
-      height: 20px !important;
-    }
-  }
+
   &:hover{
-      p{
-          color:$color-orange;
-      }
-      .innImg {
-        .arrow-open {
-          background: url("../img/desktop/ctas/arrow-foot-hover.png") no-repeat;
-        }
-      }
-      .rfrs p {
-        color: #000000;
-    }
+      background: url("../img/desktop/ctas/footnote-btn-hover.png") no-repeat;
+      background-color: $color-white;
   }
 }
 
@@ -89,11 +58,20 @@
 .animation {
   width: 593px !important;
   height: auto !important;
-  border-radius: 0 20px 20px 0;
   cursor:auto;
-  .switch, .innImg {
-    display: none !important;
-  }
+  border-radius: 0 20px 20px 0;
+    border: 1px solid #e0e7f3;
+    padding-top: 26px;
+    padding-right:22px;
+    padding-left:17px;
+    padding-bottom:24px;
+    margin-left:-6px;
+    background: none;
+    background-color: $color-white;
+    &:hover{
+        background: none;
+        background-color: $color-white;
+    }
   .x-btn {
     display: block !important;
   }
@@ -105,7 +83,10 @@
 
 
 @include breakpoint('desktop') {
-.footnote{
+.footnote{   
+    width:#{fluid-percentage($site-max-width, 161)};
+    height:70px; /*verify if exists mixing to calculate height*/
+    background-size: contain;
     .rfrs{ 
         p{
             font-size:1em;
@@ -113,11 +94,18 @@
             margin-bottom:1em;
         } 
     }
+    &:hover{
+        width:#{fluid-percentage($site-max-width, 161)};
+        background-size: contain;
+    }
 }
 }
 
 @include breakpoint('tablet') {
 .footnote{
+    width:#{fluid-percentage($site-max-width, 161)};
+    height:56px; /*verify if exists mixing to calculate height*/
+    background-size: contain;
     .rfrs{
         p{
             font-size:1em;
@@ -126,19 +114,40 @@
             margin-top: 1em;
         }
     } 
+    &:hover{
+        width:#{fluid-percentage($site-max-width, 161)};
+        background-size: contain;
+    }
 }
 }
 
 @include breakpoint('mobile') {     
-.footnote{   
+.footnote{  
+    width:#{fluid-percentage($site-max-width-mobile, 88)};
+    height:37px;
+    background-size: contain;
+    min-width:88px;
+    margin-top: 0;
+    position:relative;
+    margin-bottom:4px;
+    left:-#{fluid-percentage($site-max-width-mobile, 50)};
     .rfrs{ 
         p{
             font-size:12px;
             line-height:18px;
             margin-bottom: 26px;
             margin-top: 0;
-    } 
+        } 
+    }
+    &:hover{
+        width:88px;
+        height:37px;
+        background-size: contain;
+    }
 }
+
+.animation{
+    width:100% !important;
 }
 }
     
