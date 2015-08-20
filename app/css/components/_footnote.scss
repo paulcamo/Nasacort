@@ -20,8 +20,9 @@
   }
   .close {
     position: absolute;
-    top: 16px;
-    right: 38px;
+    top: 22px;
+    right: 30px;
+    cursor:pointer;
     .x-btn {
       position: absolute;
       background: url("../img/desktop/ctas/switch-close.png") no-repeat;
@@ -29,13 +30,31 @@
       height: 11px;
       display: none;
     }
+    &:hover{
+        .x-btn {
+            background: url("../img/desktop/ctas/switch-close-hover.png") no-repeat;
+        }
+    }
   }
   .switch {
     width: 100px;
   }
+  .rfrs{
+    display:none;  
+    padding:0;
+    padding-top: 26px;
+    padding-right:22px;
+    margin-left:-6px;
+    p{
+        font-weight:normal;
+        &:last-child{
+            margin-bottom:0;
+        }
+    }
+  }
   p {
     font-size: 16px;
-    color: #022e80;
+    color: $color-dark-blue;
     font-weight: bold;
     line-height: 19px;
   }
@@ -45,9 +64,22 @@
     left: 126px;
     .arrow-open {
       position: absolute;
-      background: url("../img/ctas/desktop/arrow-foot.png") no-repeat;
+      background: url("../img/desktop/ctas/arrow-foot.png") no-repeat;
       width: 13px !important;
       height: 20px !important;
+    }
+  }
+  &:hover{
+      p{
+          color:$color-orange;
+      }
+      .innImg {
+        .arrow-open {
+          background: url("../img/desktop/ctas/arrow-foot-hover.png") no-repeat;
+        }
+      }
+      .rfrs p {
+        color: #000000;
     }
   }
 }
@@ -56,6 +88,8 @@
 .animation {
   width: 593px !important;
   height: auto !important;
+  border-radius: 0 20px 20px 0;
+  cursor:auto;
   .switch, .innImg {
     display: none !important;
   }
@@ -64,7 +98,6 @@
   }
   .rfrs p {
     display: block;
-    width: 90%;
-    margin-bottom: 0;
+    margin-bottom: 14px;
   }
 }

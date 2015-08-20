@@ -86,11 +86,13 @@ $(".head-faq").click(function () {
 
 $('.open').on('click', function(e) {
     $('.footnote').toggleClass("animation");
+    $('.footnote .rfrs').css("display","block")
     e.preventDefault();
 });
 
 $('.close').on('click', function(e) {
     $('.footnote').removeClass("animation");
+    $('.footnote .rfrs').css("display","none")
     e.preventDefault();
 });
 
