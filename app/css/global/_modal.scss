@@ -176,8 +176,10 @@ $modal-link-color:#0099cc;
       color: #5a5e5f;
       margin-left: 13px;
       &:before {
-        content: "• ";
+        content: "\2022 ";
+        left: -3px;
         margin-left: -13px;
+        position: relative;
       }
     }
   }

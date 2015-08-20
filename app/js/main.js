@@ -68,7 +68,7 @@ $("sup").on("click",function(){
 
 // --------------------------------------------------------------------------------------------------------------
 
-$(".head-faq").click(function () {
+/*$(".head-faq").click(function () {
 
     $header = $(this);
     //getting the next element
@@ -79,6 +79,14 @@ $(".head-faq").click(function () {
     $content.slideToggle(500, function () {
         //execute this after slideToggle is done
         //change text of header based on visibility of content div
+    });
+});*/
+
+$(".head-faq").click(function(){
+    $(this).toggleClass("collp-icon expanded-icon").next("div.text-faq").slideToggle(300, function(){
+
+$(this).parent().toggleClass("border-sect-faq");
+
     });
 });
 
