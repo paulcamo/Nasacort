@@ -3,7 +3,7 @@
 .footnote {
   display: inline-block;
   width: 161px;
-  position: fixed;
+  position: absolute;
   left: -1px;
   height: 74px;
   border-radius: 0 40px 40px 0;
@@ -12,6 +12,7 @@
   background-color: #ffffff;
   z-index: 9999;
   cursor:pointer;
+  margin-top:230px;
   .rfrs p {
     color: #000000;
     font-size: 12px;
@@ -101,3 +102,44 @@
     margin-bottom: 14px;
   }
 }
+
+
+@include breakpoint('desktop') {
+.footnote{
+    .rfrs{ 
+        p{
+            font-size:1em;
+            line-height:1.3em;
+            margin-bottom:1em;
+        } 
+    }
+}
+}
+
+@include breakpoint('tablet') {
+.footnote{
+    .rfrs{
+        p{
+            font-size:1em;
+            line-height:1em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+        }
+    } 
+}
+}
+
+@include breakpoint('mobile') {     
+.footnote{   
+    .rfrs{ 
+        p{
+            font-size:12px;
+            line-height:18px;
+            margin-bottom: 26px;
+            margin-top: 0;
+    } 
+}
+}
+}
+    
+   
