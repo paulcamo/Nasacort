@@ -1,3 +1,5 @@
+
+
 p{
     margin-top: 0; 
 }
@@ -8,13 +10,13 @@ p{
     min-width: 1000px;
     top: -9px;
     height: 170px;
-    padding:0 150px;
+    padding:0 10%;
     @include breakpoint('mobile'){
         height: auto;
         min-width: 100%;
     }
     h1{
-        padding-left: 74px;
+        padding-left: 103px;
         @include breakpoint('mobile'){
             font-size: 19px;
             padding-left: 0;
@@ -54,6 +56,7 @@ p{
         margin-bottom: 9px;
         margin-top: 63px;
         padding-left: 5px;
+        color:$blue-color-headline;
         @include breakpoint('mobile'){
             font-size: 17px;
         }
@@ -75,6 +78,7 @@ p{
         line-height: 20px;
         letter-spacing: 0px;
         width: 90%;
+        font-size: 18px;
         @include breakpoint('mobile'){
             width: 100%;
         }
@@ -84,7 +88,7 @@ p{
         text-decoration: underline;
     }
     li{
-        font-size: 16px;
+        font-size: 18px;
         color:$color-dark-grey;
         letter-spacing: 1.3px;
         line-height: 18px;
@@ -100,6 +104,7 @@ p{
     }
     ul{
         margin-bottom: 18px;
+        clear: both;
     }
     .inl-list > li{
         display: inline;
@@ -119,7 +124,6 @@ p{
         // background: url("../img/desktop/collapse/collapse-icon.png") no-repeat left top;
         display: inline-block;
         height: 29px;
-        position: absolute;
         right: 0;
         width: 29px;
     }
@@ -185,7 +189,7 @@ p{
     display: block;
     background: url("../img/desktop/collapse/collapse-icon.png") no-repeat;
     background-size: contain;
-    margin-top: -22px;
+    float: right;
   }
 
 

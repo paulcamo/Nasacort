@@ -2,6 +2,10 @@
 title: NazacortHCP
 section: home
 layout: homepage.hbs
+text: "<p><strong>References: 1</strong>. Wallace DV, Dykewicz MS, Bernstein DI, et al; Joint Task Force on Practice Parameters; American Academy of Allergy, Asthma & Immunology; American College of Allergy, Asthma and Immunology; Joint Council of Allergy, Asthma and Immunology. The diagnosis and management of rhinitis: an updated practice parameter. <i>J Allergy Clin Immunol</i>. 2008;122(suppl 2):S1-S84. <strong>2</strong>. Luskin AT, Scherger JE, Pollart SM. Beyond the nose: the systemic inflammatory effects of allergic rhinitis. <i>Hosp Physician</i>. 2004;40(2):13-22.</p>"
+
+product-title: "Nasacort<sup>&reg;</sup> is the <span class='orange-color'>only unscented</span> OTC INS"
+
 patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;it's <span class='features'>scent-free, alcohol-free, </span> and has <span class='features'>no harsh taste.</span>"
 
 ---
@@ -34,7 +38,7 @@ patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;i
 
     <div id="dots-container">
         <div class="dotbox">
-            <div data-section="body" class="dot"></div>
+            <div data-section="header" class="dot"></div>
             <div data-section="section2" class="dot"></div>
             <div data-section="section3" class="dot"></div>
             <div data-section="section4" class="dot"></div>
@@ -98,7 +102,11 @@ patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;i
     <div id="slide02">
 
 
-        <div id="product-features-bg"></div>
+        <div id="product-features-bg">
+            <p class="product-title">{{{product-title}}}</p>
+            <p class="clinical-study">*In a clinical study, based on sensory attributes, patients preferred Nasacort over Flonase<sup>&reg;</sup><br>Data on file </p>
+            <p class="use-only">Use only as directed.</p>
+        </div>
 
         <div id="bottle"></div>
         <div id="cap"></div>
@@ -117,7 +125,7 @@ patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;i
             </p>
 
             <a href="" class="compare-link"><span>See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  vs <strong>Flonase<sup>&reg</sup></strong></span></a>
-            <a href="" class="compare-link"><span class="span2">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  vs <strong>Other Nasal Allergy Medications</strong></span></a>
+            <a href="" class="compare-link"><span class="span2">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  <nobr>vs <strong>Other Nasal Allergy Medications</nobr></strong></span></a>
 
         </div>
 
@@ -134,7 +142,7 @@ patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;i
             <div class="dashbox"></div>
             <h2>Review Nasacort<sup>&reg</sup> dosing and efficacy facts for adults and children</h2>
             <p>Nasacort<sup>&reg</sup> is indicated to treat allergic rhinitis in adults and children 2 years of age and older.</p>
-            <a href="" class="compare-link"><span>See <strong>Dosing Information&ndash;</strong> <strong>Adults</strong> and <strong>Children</strong></span></a>
+            <a href="" class="compare-link"><span>See <strong>Dosing Information&mdash;</strong> <strong>Adults</strong> and <strong>Children</strong></span></a>
         </div>
         <div id="compare-bg">
             <a href="#" class="compare-link-bottom btn01"></a>
@@ -306,7 +314,7 @@ patients-prefer: "Patients prefer* Nasacort<sup>&reg;</sup> Allergy 24HR&mdash;i
 
 
 
-        <p class="product-title">Nasacort<sup>&reg;</sup> is the <span class="orange-color">only unscented</span> OTC INS</p>
+        <p class="product-title">{{{$product-title}}}</p>
 
 
         <p class="product-subtitle">{{{patients-prefer}}}</p>
