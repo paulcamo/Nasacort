@@ -94,13 +94,13 @@ $(this).parent().toggleClass("border-sect-faq");
 
 $('.open').on('click', function(e) {
     $('.footnote').toggleClass("animation");
-    $('.footnote .rfrs').css("display","block")
+    $('.footnote .rfrs').css("display","block");
     e.preventDefault();
 });
 
 $('.close').on('click', function(e) {
     $('.footnote').removeClass("animation");
-    $('.footnote .rfrs').css("display","none")
+    $('.footnote .rfrs').css("display","none");
     e.preventDefault();
 });
 
