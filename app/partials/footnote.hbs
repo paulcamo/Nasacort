@@ -7,6 +7,28 @@
 		<span class="x-btn"></span>
 	</div>
 	<div class="rfrs">
-		{{{text}}}
+		{{#contains section "home"}}
+            {{>references-index}}
+        {{/contains}}
+        
+        {{#contains section "nasacort-difference"}}
+            {{>references-the-nasacort-difference}}
+        {{/contains}}
+        
+        {{#contains section "dosing-and-efficacy"}}
+            {{>references-dosing-and-efficacy}}
+        {{/contains}}
+        
+        {{#contains section "whats-a-clucker"}}
+            {{>references-whats-a-clucker}}
+        {{/contains}}
+        
+        {{#contains section "science-of-allergic-rhinitis"}}
+            {{>references-science-of-allergic-rhinitis}}
+        {{/contains}}
+        
+        {{#contains section "sitemap"}}
+            {{>references-sitemap}}
+        {{/contains}}
 	</div>
 </div>

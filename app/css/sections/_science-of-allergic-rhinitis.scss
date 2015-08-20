@@ -9,7 +9,7 @@
      width:100%;
     
     div{ 
-        margin-left:14%; 
+        margin-left: #{fluid-percentage($site-max-width, 213)}; 
     }
 }
 
