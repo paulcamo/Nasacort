@@ -95,10 +95,14 @@ $(document).ready(function() {
 
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.3em', scale:'1', left:'72%'  },   {marginTop:'16.4em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'0em', scale:'1', left:'74.6%'  },   {marginTop:'15em', scale:'2.5', left:'30.7%' , ease:  Power1.easeOut}  ),     35000, 5000);
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 35000);
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'16.7em', left:'95%' , rotation: 35, ease:Cubic.easeInOut }  ),     35000, 65000);
+
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.8em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'0em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+
+
+    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
+    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'16.7em', left:'92%' , rotation: 35, ease:Cubic.easeInOut }  ),     35000, 65000);
+
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'6em'}),     35000, 80000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
@@ -155,7 +159,7 @@ $(document).ready(function() {
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'15em'},    {top:'1.45em'}),    35000, 65000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-copy'),          1, {left:'-42%'},   {left:'23%'}),      35000, 31000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'37%'}),    15000, 90000);
+    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'33%'}),    15000, 90000);
 
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
@@ -167,7 +171,7 @@ $(document).ready(function() {
     // ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
 
     controller.addTween('#brandlogo10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   40000);
-    controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-14em'}),     25000);
+    controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
 
