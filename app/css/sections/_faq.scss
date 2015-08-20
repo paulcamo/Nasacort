@@ -97,7 +97,7 @@ p{
             line-height: 14px;
         }
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
     }
     ul, p{
@@ -114,7 +114,7 @@ p{
         display: inline;
         margin-right: 60px;
         &:before{
-            content: "• ";
+            content: "\2022 ";
         }
         &:last-child{
             margin-right: 0;
@@ -198,34 +198,6 @@ p{
         padding: 13px 19px;
     }
 }
-
-
-/* .head-faq {
-
-  .collp-icon {
-    width: 30px;
-    height: 30px;
-    display: block;
-    background: url("../img/desktop/collapse/collapse-icon.png") no-repeat;
-    background-size: contain;
-    float: right;
-    @include breakpoint('mobile'){
-        width: 15px;
-        height: 15px;
-        background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat;
-    }
-  }
-
-
-  .expanded-icon {
-    background: url("../img/desktop/collapse/expand-icon.png") no-repeat !important;
-    @include breakpoint('mobile'){
-        background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat;
-    }
-
-  }
-
-} */
 
 
 @media (max-width: 1199px) {
