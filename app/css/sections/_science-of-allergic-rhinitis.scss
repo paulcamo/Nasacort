@@ -9,7 +9,7 @@
      width:100%;
     
     div{ 
-        margin-left: #{fluid-percentage($site-max-width, 213)}; 
+        margin-left: #{fluid-percentage($site-max-width, 213)};
     }
 }
 
@@ -17,8 +17,8 @@
    height:auto;
     
     .stats{
-        margin-left:14%;
-        margin-right:14%;
+        margin-left:#{fluid-percentage($site-max-width, 213)};
+        margin-right:#{fluid-percentage($site-max-width, 213)};
         float:left;
         h2{
         }      
@@ -50,8 +50,8 @@
     min-width:1099px;
     
     .description{
-        margin-left:14%; 
-        margin-right:14%;
+        margin-left:#{fluid-percentage($site-max-width, 213)};
+        margin-right:#{fluid-percentage($site-max-width, 213)};
         float: left;
         
         div{
@@ -83,8 +83,8 @@
     position:relative;
     float:left;
     overflow:hidden;
-    padding-left:14%;
-    padding-right:14%;
+    padding-left:#{fluid-percentage($site-max-width, 213)};
+    padding-right:#{fluid-percentage($site-max-width, 213)};
     padding-bottom:24px;
     
     p{
@@ -182,8 +182,8 @@
     background-color:$color-blue-light-container;
     width:100%;
     float:left;
-    padding-left:14%;
-    padding-right:14%;
+    padding-left:#{fluid-percentage($site-max-width, 213)};
+    padding-right:#{fluid-percentage($site-max-width, 213)};
 }
 
 .video-callout{
@@ -201,8 +201,8 @@
 .aditional-information{
     height:auto;
     float: left;
-    padding-left:14%;
-    padding-right:14%;
+    padding-left:#{fluid-percentage($site-max-width, 213)};
+    padding-right:#{fluid-percentage($site-max-width, 213)};
     padding-bottom:24px;
     .copy{
         width:58%;
@@ -233,8 +233,8 @@
     background-color:$color-blue-light-container;
     height:auto;
     float:left;
-    padding-left:14%;
-    padding-right:14%;
+    padding-left:#{fluid-percentage($site-max-width, 213)};
+    padding-right:#{fluid-percentage($site-max-width, 213)};
     padding-bottom:24px;
     img{
         margin-top: 10px;
@@ -283,7 +283,7 @@
     }
     
     .right-aligned{
-        margin-right:14%;
+        margin-right:#{fluid-percentage($site-max-width, 213)};
         width:100%;
     }
     
@@ -522,8 +522,8 @@
     .statistics{
         .stats{
             width:84%;
-            margin-left:8%;
-            margin-right:8%;
+            margin-left:#{fluid-percentage($site-max-width-mobile, 50)};
+            margin-right:#{fluid-percentage($site-max-width-mobile, 50)};
             .chart-head{
                 font-size:12px;
                 margin-bottom:30px;
@@ -553,8 +553,8 @@
     .about{
         min-width:320px;
         .description{
-            margin-left:8%;
-            margin-right:8%;
+            margin-left:#{fluid-percentage($site-max-width-mobile, 50)};
+            margin-right:#{fluid-percentage($site-max-width-mobile, 50)};
             width:84%;
             div{
                 width:100%;
@@ -583,8 +583,8 @@
         .container-carousel{
             width:100%;
             h2{
-                 margin-left: 8%;
-                 margin-right: 8%;
+                 margin-left: #{fluid-percentage($site-max-width-mobile, 50)};
+                 margin-right: #{fluid-percentage($site-max-width-mobile, 50)};
             }
             .content-ui{
                 min-width:316px;
@@ -640,8 +640,8 @@
     }
  
  .video-callout-container{
-     padding-left: 8%;
-     padding-right: 8%;
+     padding-left: #{fluid-percentage($site-max-width-mobile, 50)};
+     padding-right: #{fluid-percentage($site-max-width-mobile, 50)};
      min-width:320px;
      height:auto;
      .video-callout{
@@ -659,8 +659,8 @@
  }
  
  .aditional-information{
-     padding-left:8%;
-     padding-right:8%;
+     padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
+     padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
      min-width:320px;
      .copy{
          width:100%;
@@ -682,8 +682,8 @@
  }
  
  .graphic-container{
-     padding-left:8%;
-     padding-right:8%;
+     padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
+     padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
      width:100%;
      min-width:320px;
      img{

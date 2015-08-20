@@ -12,7 +12,7 @@
           height:21px;
           float:right;
           margin-top:4px;
-          margin-right: 14%;
+          margin-right: #{fluid-percentage($site-max-width, 213)};
       }
       
       .top-bar{
@@ -25,7 +25,7 @@
               width:218px;
               float: left;
               line-height: 28px;
-              margin-left:$global-margin-left; 
+              margin-left:#{fluid-percentage($site-max-width, 213)};
           }
       }
       
@@ -37,7 +37,7 @@
           position:relative;
           float:left;
           margin-top: 10px;
-          margin-left: 14%;
+          margin-left: #{fluid-percentage($site-max-width, 213)};
           
           .little-house{
               background:url("../img/desktop/header/little-white-house.png") no-repeat;
@@ -70,7 +70,7 @@
            margin-top: 8px;
            position: relative;
            z-index: 1;
-           margin-right: 14%;
+           margin-right: #{fluid-percentage($site-max-width, 213)};
            
           li{
               float:left;
@@ -104,7 +104,7 @@
            position: absolute;
            right: -10px;
            z-index: 1;
-           margin-right: 14%;
+           margin-right: #{fluid-percentage($site-max-width, 213)};
            
            li{
                float:left;
