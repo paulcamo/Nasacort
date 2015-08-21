@@ -1,6 +1,11 @@
 var desktop_mininum_width = 1024;
 var headerCollapsed=0;
 var currentPage = "";
+var breakpoint_mobile = '320px';
+var breakpoint_mobile_max = '768px';
+var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
+
+var isMobile = window.matchMedia && window.matchMedia(media_query).matches;
 
 $(document).ready(function() {
 	setInterstitialPopup();
@@ -8,7 +13,15 @@ $(document).ready(function() {
     currentPage = document.body.className;
     
     activateFooterAndNavBarValidation();
+    
+    validateFootnote();
 });
+
+$(window).bind("resize", function(){
+    validateFootnote();
+
+});
+
 
 // ***********************************************************************************************************
 // ***********************************************************************************************************
@@ -116,23 +129,40 @@ $(this).parent().toggleClass("border-sect-faq");
 });
 
 // --------------------------------------------------------------------------------------------------------------
+var topCta = 0;
 
 $('.footnote').on('click', function(e) {
-   // var topCta = $(this).position().top;
-    $(this).toggleClass("animation");
-    //$(".animation").css("top", topCta);    
-    //$(".animation").css("left", 0);    
+    topCta = $(this).position().top;
+    $(this).toggleClass("animation");  
     $(this).find('.rfrs').css("display","block");
+    if(isMobile)
+    {
+        $(".animation").css("top", topCta);       
+    }
     e.preventDefault();
 });
 
 $('.close-btn').on('click', function(e) {
-    //$(this).parent().css("top", 0);    
-    //$(this).parent().css("left", auto);   
-    //$(this).parent().toggleClass("animation");
     $(this).find('.rfrs').css("display","none");
+    if(isMobile)
+    {
+        $('.animation').css("top", "");     
+    }
     e.preventDefault();
 });
+
+function validateFootnote()
+{
+    $(".animation").removeClass("animation");
+    if(isMobile)
+    {
+        $('.footnote').css("top", "");
+        $('.animation').css("top", "");    
+        $(this).find('.rfrs').css("display","none"); 
+    }else{
+        $(".animation").css("position", "relative");    
+    }
+}
 
 // --------------------------------------------------------------------------------------------------------------
 
