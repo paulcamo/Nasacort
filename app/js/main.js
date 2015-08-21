@@ -93,12 +93,17 @@ $(this).parent().toggleClass("border-sect-faq");
 // --------------------------------------------------------------------------------------------------------------
 
 $('.footnote').on('click', function(e) {
+   // var topCta = $(this).position().top;
     $(this).toggleClass("animation");
+    //$(".animation").css("top", topCta);    
+    //$(".animation").css("left", 0);    
     $(this).find('.rfrs').css("display","block");
     e.preventDefault();
 });
 
 $('.close-btn').on('click', function(e) {
+    //$(this).parent().css("top", 0);    
+    //$(this).parent().css("left", auto);   
     //$(this).parent().toggleClass("animation");
     $(this).find('.rfrs').css("display","none");
     e.preventDefault();

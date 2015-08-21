@@ -100,23 +100,24 @@
         width:100%;
         float:left;
         margin-top: 13px;
+        max-width:980px;
     }
 }
 
 .cycle-slideshow{
     float:left;
     overflow:hidden;
-    width:79%;
+    width:81.2%;
     .item{
         float:left;
         p{
             margin-top:16px;
             margin-bottom:18px;
-            width:auto;
-            height:18px;
+            width:100%;
+            max-height: 18px;
         }
         img{
-           width:100%;
+           width:796px;
         }
     }
 }
@@ -124,7 +125,7 @@
 
 .arrow-left{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
-    width:9%;
+    width:8%;
     height:434px; 
     display:block;
     float:left;
@@ -138,7 +139,7 @@
 
 .arrow-right{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
-    width:9%;
+    width:8%;
     height:434px; 
     display:block;
     float:left;
@@ -298,29 +299,8 @@
                     img{
                         width:100%;
                     }
-                    h3{
-                        /*font-size:2em;*/
-                    }
-                    p{
-                        /*font-size:1em;*/
-                    }
                 }
             }
-            /*.arrow-left{
-                width:72px;
-                height:354px;
-                background-size:contain;
-                margin-right:4px;
-                margin-top:77px;
-            }
-            .arrow-right{
-                width:72px;
-                height:354px;
-                background-size:contain;
-                margin-left: 732px;
-                margin-top:77px;
-                position:absolute;
-            }*/
         }
     }
     
@@ -412,31 +392,15 @@
                         width:100%;
                     }
                     h3{
-                        /*font-size:1.9em;*/
                         margin-top:0;
                         margin-bottom:0.5em;
                     }
                     p{
-                        /*font-size:0.7em;*/
                         margin-top:0;
+                        max-height:14px;
                     }
                 }
             }
-            /*.arrow-left{
-                width:53px;
-                height:266px;
-                background-size:contain;
-                margin-right:4px;
-                margin-top:66px;
-            }
-            .arrow-right{
-                width:53px;
-                height:266px;
-                background-size:contain;
-                margin-left: 552px;
-                margin-top:66px;
-                position:absolute;
-            }*/
         }
         .cycle-pager{
             position: relative;
@@ -608,25 +572,10 @@
                             margin-top:0;
                             margin-bottom: 14px;
                             height:50px;
+                            max-height:33px;
                         }
                     }
                 }
-                /*.arrow-left{
-                    background:url("../img/mobile/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
-                    width:22px;
-                    height:144px;
-                    margin-right:3px;
-                    background-size:100% 100%;
-                    margin-top:89px;
-                }
-                .arrow-right{
-                    background:url("../img/mobile/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
-                    width:22px;
-                    height:144px;
-                    margin-left:3px;
-                    background-size:100% 100%;
-                    margin-top:89px;
-                }*/
             }
         }
         .cycle-pager{

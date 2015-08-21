@@ -56,7 +56,7 @@
 
 
 .animation {
-  width: 593px !important;
+  width: 42% !important;
   height: auto !important;
   cursor:auto;
   border-radius: 0 20px 20px 0;
@@ -124,13 +124,18 @@
 @include breakpoint('mobile') {     
 .footnote{  
     width:#{fluid-percentage($site-max-width-mobile, 88)};
-    height:37px;
+    height:42px;
     background-size: contain;
     min-width:88px;
     margin-top: 0;
     position:relative;
     margin-bottom:4px;
-    left:-#{fluid-percentage($site-max-width-mobile, 50)};
+    float:left;
+    left:-#{fluid-percentage($site-max-width-mobile, 60)};
+    .close-btn{
+        right:24px;
+        top:10px;
+    }
     .rfrs{ 
         p{
             font-size:12px;
@@ -140,14 +145,15 @@
         } 
     }
     &:hover{
-        width:88px;
-        height:37px;
+        width:#{fluid-percentage($site-max-width-mobile, 88)};
+        height:42px;
         background-size: contain;
     }
 }
 
 .animation{
-    width:100% !important;
+    width: 100% !important;
+    
 }
 }
     
