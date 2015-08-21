@@ -1,3 +1,14 @@
+
+@function homepage-max-width () {
+
+ // @return ( $site-max-width );
+  @return ( '100%' );
+ //  @return ( '1800px' );
+
+}
+
+
+
 .home-section {
     #bg-container {
         /*background: url("../img/bg.png") no-repeat top center;*/
@@ -103,7 +114,7 @@
   #dots-container {
     height: 100%;
     margin: auto;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     position: fixed;
     text-align: center;
     top: 0;
@@ -295,7 +306,7 @@
     top: 81px;
     /* no toque esto*/
     z-index: 101;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     background-size: contain;
     margin: auto;
     left: 0;
@@ -311,7 +322,7 @@
     margin-top: 0;
     background: url("../img/desktop/homepage/productbox.png") no-repeat center top;
     z-index: 101;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     background-size: contain;
   }
 
@@ -320,7 +331,7 @@
     top: 0;
     background: url("../img/desktop/homepage/bg-02.png") no-repeat center top;
     z-index: 98;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     background-size: contain;
     width: 100%;
     height: 95em;
@@ -334,8 +345,8 @@
   #background .yellow-spike {
 
     position: absolute;
-    top: -3.20em;
-    width: 300px;
+    bottom: 20em;
+    width: 19%;
     background: url(../img/desktop/homepage/yellow-spike.png) no-repeat right center;
     background-size: contain;
     height: 6em;
@@ -372,6 +383,15 @@
   }
 
 
+  #product-features-text {
+    width: 100%;
+    height: 2.8em;
+    position: absolute;
+    //background-color: rgba(0, 255, 0, 0.5);
+    bottom: 0px;
+  }
+
+
 
   #product-features-bg {
     background: url("../img/desktop/homepage/productbox.png") no-repeat top center;
@@ -381,13 +401,13 @@
     top: 1.60em;
     z-index: 99;
     background-size: contain;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
 
 
 
     .product-title {
       position: absolute;
-      top: 23.5em;
+      top: 0.9em;
       left: 37.5%;
       font-size: 0.46em;
       letter-spacing: 0.02em;
@@ -408,7 +428,7 @@
 
 .clinical-study {
   position: absolute;
-  top: 38.75em;
+  top: 4.1em;
   left: 12%;
   font-size: 0.30em;
   line-height: 1.3em;
@@ -417,7 +437,7 @@
 
 .use-only {
   position: absolute;
-  top: 40em;
+  top: 4.1em;
   left: 79.4%;
   font-size: 0.29em;
 
@@ -482,7 +502,7 @@
     margin: auto;
     left: 0;
     right:0;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     width: 100%;
   }
 
@@ -530,7 +550,7 @@
     position: absolute;
     top: 1.45em;
     left: 23%;
-    color: #FFF;
+    color: $color-white;
     font-family: $font-proxima-nova-semibold;
     text-align: left;
     z-index: 105;
@@ -545,7 +565,7 @@
     letter-spacing: 0.03em;
     width: 95%;
     line-height: 1.4em;
-    color: #fff;
+    color: $color-white;
 
      sup {
        position: relative;
@@ -658,7 +678,7 @@
     right: 0;
     margin: auto;
     z-index: 100;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     width: 100%;
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
@@ -746,30 +766,7 @@
     height: 1.64em;
     overflow: hidden;
     margin: auto;
-  }
 
-
-  .textbox {
-    position: absolute;
-    bottom: 0;
-    font-size: 0.3em;
-    height: 4.23em;
-    width: 100%;
-    background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
-    color: #133c7c;
-    font-family: $font-proxima-nova-semibold;
-    text-align: left;
-    background-size: contain;
-  }
-
-
-
-    .textbox p {
-      padding: 0.8em 0px 0px 8%;
-      width: 84%;
-      line-height: 1.2em;
-      color: #133c7c;
-    }
 
     .name {
       font-family: $font-proxima-nova-semibold;
@@ -787,6 +784,37 @@
       color: #ea5825;
       letter-spacing: 0.06em;
     }
+
+
+  }
+
+
+  .textbox {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.3em;
+    height: 4.23em;
+    width: 100%;
+    background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
+    color: #133c7c;
+    font-family: $font-proxima-nova-semibold;
+    text-align: left;
+    background-size: contain;
+
+
+    p {
+      padding: 0.8em 0px 0px 8%;
+      width: 84%;
+      line-height: 1.2em;
+      color: #133c7c;
+    }
+
+
+
+
+
+  }
+
 
   }
 
@@ -825,22 +853,26 @@
     top: 81px;
     height: 91%;
     z-index: 100;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     width: 100%;
     margin: auto;
     left: 0px;
     right: 0px;
     margin-top: 15em;
 
-  }
 
+    .use-only {
+      position: absolute;
+      bottom: 1.1em;
+      left: 79.4%;
+      font-size: 0.29em;
+      color: $color-white;
 
+    }
 
-
-
-  #slide05 #understand-box {
+   #understand-box {
     position: absolute;
-    top: 1.78em;
+    top: 0.12em;
     width: 40%;
     text-align: left;
     left: 0;
@@ -850,19 +882,19 @@
 
   }
 
-  #slide05 #understand-box h2 {
+  #understand-box h2 {
     color: #FFF;
     font-family: $font-proxima-nova-semibold;
     font-size: 0.8em;
-    padding-bottom: 0.65em;
+    padding-bottom: 0;
     font-weight: 100;
-    line-height: 1.15em;
+    line-height: 1.18em;
     letter-spacing: 0.03em;
   }
 
 
 
-  #slide05 .understand-link {
+   .understand-link {
 
     display: block;
     background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
@@ -874,18 +906,18 @@
     font-size: 0.45em;
     text-decoration: none;
     line-height: 1.2em;
-    color: #0d5ea4;
+    color: $color-blue-titles;
     font-family: $font-proxima-nova-semibold;
-
+    letter-spacing: 0.08em;
 
   }
 
-  #slide05 .understand-link span {
+  .understand-link span {
     padding: 1.4em 0px 0px 5%;
     display: inline-block;
   }
 
-
+}
 
 
 
@@ -901,7 +933,7 @@
     margin: auto;
     left: 0;
     right: 0;
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     width: 100%;
     background-size: contain !important;
 
@@ -937,7 +969,7 @@
 
 
   #slide1-textbox .features {
-    color:#0099cc;
+    color: $color-cyan-text;
     text-transform: uppercase;
   }
 
@@ -1042,7 +1074,7 @@
 
 
   #slide02 {
-    /*  max-width: $site-max-width;; */
+    max-width: #{homepage-max-width()};
     position: fixed;
     top: 81px;
     z-index: 120;
@@ -1193,10 +1225,9 @@
 
 
 .ui-draggable {
-  top: 297917px !important; //slide3
-
-
+  // top: 297917px !important; //slide3
   //top: 379952px !important; //slide4
+  top: 495765px !important; //slide5
 
 
 
