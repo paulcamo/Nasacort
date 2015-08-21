@@ -196,9 +196,12 @@ $(document).ready(function() {
 
 // ---------------------------------------------------------------------------------------
 
-var hh = window.innerHeight || document.documentElement.clientHeight  || document.body.clientHeight;
+$( window ).resize(function() {
+    $(".dotbox").css("top",  ($(window).height() -  $(".dotbox").height())/2 + "px");
+});
 
-//document.getElementById("centro").style.height = hh /2 + "px";
+
+
 
 // ---------------------------------------------------------------------------------------
 
