@@ -28,6 +28,74 @@
         .graph{
             margin-left:106px;
             position:relative;
+
+            .panel{
+                float: left;
+                display: inline-block;
+                width: 240px;
+                height: 280px;
+                margin-right:65px;
+                margin-bottom:52px;
+                &:last-child{
+                    margin-right:0;
+                }
+                .head {
+                    text-align: center;
+                    font-family: $paytone-one;
+                    // font-weight: bold;
+                    color: #FF882D;
+                    span{
+                        font-size: 120px;
+                    }
+                    sup{
+                        top: -45px;
+                        font-size: 50px;
+                    }
+                    .in{
+                        font-size: 45px;
+                        top: -25px;
+                        position: relative;
+                    }
+                } .quote{
+                    height: 80px;
+                    p{
+                        float: none;
+                        color: #7E7E7E;
+                        font-size: 15px;
+                    }
+                } .chart{
+                    background-color: #7E7E7E;
+                    overflow: hidden;
+                    .line{
+                        position: relative;
+                        background-color: #FF882D;
+                        left: -240px;
+                        // width: 240px;
+                        height: 40px;
+                    }
+                }
+            }
+            #panel_1 {
+                .line1{
+                    left: -0px;
+                }
+                .line2{
+                    left: -160px;
+                }
+            }
+            #panel_2{
+                .line1{
+                    left:-80px
+                }
+            }
+            #panel_3{
+                .line1{
+                    left:0px
+                }
+                .line2{
+                    left:-220px
+                }
+            }
             
             img{
                 margin-right:64px;
