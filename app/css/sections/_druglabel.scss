@@ -32,7 +32,8 @@ $subtitle-color:#0d5ea4;
 
     }
     h1{
-        padding-left: 51px;
+        padding-left: 84px;
+        padding-top:72px;
         @include breakpoint('mobile'){
             padding-left: 6%;
         }
@@ -47,7 +48,7 @@ $subtitle-color:#0d5ea4;
 }
 
 .drug-fact-label {
-    padding: 0 14%;
+    padding: 0 17%;
     margin-top: 0;
     @include breakpoint('tablet'){
         padding: 0 12%;
@@ -57,12 +58,17 @@ $subtitle-color:#0d5ea4;
     }
     h2{
         line-height: 38px;
+        font-size: 32px;
+        margin-top: 43px;
+        font-weight: bold;
+        margin-bottom: 14px;
         color:$blue-color-headline;
         span{
             color:$text-grey;
         }
         @include breakpoint('mobile'){
             line-height: 22px;
+            margin-top: 10px;
         }
     }
     sup{
@@ -81,7 +87,6 @@ $subtitle-color:#0d5ea4;
         margin-top: 0;
         margin-bottom: 27px;
         line-height: 23px;
-        letter-spacing: 1.6px;
         float: none;
         @include breakpoint('mobile'){
             margin-bottom: 2px;
@@ -90,7 +95,6 @@ $subtitle-color:#0d5ea4;
     li{
         font-size: 19px;
         color:$color-dark-grey;
-        letter-spacing: 1.3px;
         line-height: 18px;
         @include breakpoint('mobile'){
             font-size: 12px;
@@ -119,7 +123,7 @@ $subtitle-color:#0d5ea4;
         color:$subtitle-color;
         font-family:$font-proxima-nova-semibold;
         font-size: 28px;
-        margin-top:13px;
+        margin-top:7px;
         font-style: italic;
         letter-spacing: 0.8px;
         @include breakpoint('mobile'){
