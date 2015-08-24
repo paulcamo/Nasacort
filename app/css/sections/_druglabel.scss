@@ -2,6 +2,13 @@ $text-grey:#535353;
 $blue-color-headline:#022e80;
 $subtitle-color:#0d5ea4;
 
+.content-spe{
+    padding: 0 16%!important;
+    @include breakpoint('mobile'){
+       padding: 0 5%!important; 
+    }
+}
+
 .drug-fact-label-header{
     background-color: $color-light-blue;
     position: relative;
@@ -51,6 +58,10 @@ $subtitle-color:#0d5ea4;
     }
 }
 
+.small-marg{
+    margin-bottom: 3px!important;
+}
+
 .drug-fact-label {
     padding: 0 17%;
     margin-top: 0;
@@ -95,6 +106,7 @@ $subtitle-color:#0d5ea4;
         float: none;
         @include breakpoint('mobile'){
             margin-bottom: 2px;
+            line-height: 17px;
         }
     }
     li{
@@ -103,6 +115,7 @@ $subtitle-color:#0d5ea4;
         line-height: 23px;
         @include breakpoint('mobile'){
             font-size: 12px;
+            line-height: 17px;
         }
         &:before{
             content: "\2022 ";
@@ -118,7 +131,7 @@ $subtitle-color:#0d5ea4;
     ul{
         text-indent: -1.0em;
         padding-left: 17px;
-        margin-bottom: 27px;
+        margin-bottom: 22px;
         @include breakpoint('mobile'){
             margin-bottom: 21px;
         }
@@ -130,9 +143,9 @@ $subtitle-color:#0d5ea4;
         font-size: 28px;
         margin-top:7px;
         font-style: italic;
-        letter-spacing: 0.8px;
         @include breakpoint('mobile'){
             font-size: 14px;
+            margin-top: 22px;
         }
     }
     .mrg-none{
@@ -145,7 +158,6 @@ $subtitle-color:#0d5ea4;
     }
     .list{
         padding-left: 17px;
-        margin-bottom: 33px;
     }
     .inl-list > li{
         display: inline;
@@ -167,7 +179,7 @@ $subtitle-color:#0d5ea4;
         margin-bottom: 5px;
     }
     .marg-list-fix{
-        margin-bottom: 15px; 
+        margin-bottom: 5px; 
     }
 
 }
