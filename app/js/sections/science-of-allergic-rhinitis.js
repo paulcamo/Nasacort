@@ -6,7 +6,67 @@ $(document).ready(function(){
     changeImageSrc();
     changeDivsOrder();
     validateCarouselArrows();
+    animateGraph();
 });
+
+function animateGraph(){
+    var contentwidth = $(window).width();
+    var isInview = true;
+    if ((contentwidth) > mobileBreakPoint){
+        $('#affects-patients-quality-of-life').waypoint(function(){
+            if (isInview) {
+                $('#panel_1 .num').animateNumber({ number: 66 }, 1500);
+                $('#panel_3 .num').animateNumber({ number: 35 }, 1500);
+                resetPanelchart();
+                animetePanelOne();
+                animetePanelTwo();
+                animetePanelTree();
+                isInview = false;
+            }else{
+                setTimeout(function(){
+                    isInview = true;
+                },1000);
+            }
+        });
+        
+    }
+}
+
+function resetPanelchart(){
+    $('.panel .line').css({
+        left: "-240px",
+    });
+}
+
+function animetePanelOne(){
+    $('#panel_1 .line1').animate({
+        left: "0px",
+    },750);
+    setTimeout(
+        function(){ 
+            $('#panel_1 .line2').animate({
+                left: "-160",
+            },750);
+    }, 750);
+}
+
+function animetePanelTwo(){
+    $('#panel_2 .line1').animate({
+        left: "-80px",
+    },1500);
+}
+
+function animetePanelTree(){
+    $('#panel_3 .line1').animate({
+        left: "0px",
+    },750);
+    setTimeout(
+        function(){ 
+            $('#panel_3 .line2').animate({
+                left: "-220",
+            },750);
+    }, 750);
+}
 
 function changeImageSrc()
 {
@@ -64,4 +124,5 @@ $(window).bind("resize", function(){
     changeImageSrc();
     changeDivsOrder();
     validateCarouselArrows();
+    animateGraph();
 });
