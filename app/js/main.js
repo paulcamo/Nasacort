@@ -122,26 +122,31 @@ $(this).parent().toggleClass("border-sect-faq");
 });
 
 // --------------------------------------------------------------------------------------------------------------
-var topCta = 0;
 
 $('.footnote').on('click', function(e) {
-    topCta = $(this).position().top;
-    $(this).toggleClass("animation");  
-    $(this).find('.rfrs').css("display","block");
-    if(isMobile)
-    {
-        $(".animation").css("top", topCta);       
+    if($(this).attr("state") != "open"){
+        var topCta = $(this).position().top;
+        $(this).attr("state", "open");
+        $(this).toggleClass("animation");  
+        $(this).find('.rfrs').css("display","block");
+        if(isMobile)
+        {
+            $(".animation").css("top", topCta);       
+        }
+        e.preventDefault();
     }
-    e.preventDefault();
 });
 
-$('.close-btn').on('click', function(e) {
+$('.footnote .close-btn').on('click', function(e) {
+    e.stopPropagation();
+    $(".animation").removeClass("animation");
     $(this).find('.rfrs').css("display","none");
+    $(this).parent().attr("state", "closed");
     if(isMobile)
     {
         $('.animation').css("top", "");     
-    }
-    e.preventDefault();
+    }   
+     e.preventDefault(); 
 });
 
 function validateFootnote()
