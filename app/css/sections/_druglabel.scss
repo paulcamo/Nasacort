@@ -41,6 +41,7 @@ $subtitle-color:#0d5ea4;
     h1{
         padding-left: 84px;
         padding-top:72px;
+        color: #033d69;
         @include breakpoint('desktop'){
             padding-top:107px;
         }
@@ -91,7 +92,6 @@ $subtitle-color:#0d5ea4;
         font-size: 56%;
         position: relative;
         top: -0.6em;
-        left: 0.2em;
     }
     i{
         font-style: italic;
@@ -113,6 +113,7 @@ $subtitle-color:#0d5ea4;
         font-size: 19px;
         color:$color-dark-grey;
         line-height: 23px;
+        padding-left: 8px;
         @include breakpoint('mobile'){
             font-size: 12px;
             line-height: 17px;

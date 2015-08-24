@@ -49,7 +49,7 @@
               height:25px;
               display: inline-block;
               position:absolute;
-              bottom: 7px;
+              bottom: 5px;
               right: 0;
               &.active-house{
                   background:url("../img/desktop/header/little-cyan-house.png") no-repeat;
@@ -71,7 +71,7 @@
       
        ul.utility-nav{
            float:right;
-           margin-top: 8px;
+           margin-top: 13px;
            position: relative;
            z-index: 1;
            margin-right: #{fluid-percentage($site-max-width, 180)};
