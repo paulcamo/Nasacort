@@ -35,11 +35,11 @@ function desktopStickyHeader(y){
 
     if ($(window).width() >= desktop_mininum_width ) { // shows or hides the sticky top nav on desktop mode
 
-        if (y > 50 && headerCollapsed===0) {
+        if (y > 300) {
             $('#header').animate({top: "-29px"}, 500);
             headerCollapsed = 1;
         } else {
-            $('#header').animate({top: "0"}, 500);
+            $('#header').animate({top: "0"}, 200);
         }
 
     }
@@ -49,8 +49,10 @@ function desktopStickyHeader(y){
 }
 
 $(window).scroll(function() {
-    // desktopStickyHeader($(this).scrollTop());
-
+    //$.doTimeout( 'scroll', 50, function(){
+    //    // do something computationally expensive
+    //    desktopStickyHeader($(this).scrollTop());
+    //});
 });
 
 
@@ -207,6 +209,7 @@ function activateFooterAndNavBarValidation()
         
     }
 }
+
 
 
 

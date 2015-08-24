@@ -7,10 +7,27 @@
 
 }
 
+//-----------------------------------------------------------------------------------------------------------------
+
+#header {
+  position: fixed;
+  width: 100%;
+}
+
 
 
 .home-section {
-    #bg-container {
+
+
+  .header .header-top ul.utility-nav {
+    margin-top: -25px; // fix for the homepage
+  }
+
+
+
+
+
+  #bg-container {
         /*background: url("../img/bg.png") no-repeat top center;*/
     }
 
@@ -198,31 +215,31 @@
 
   .separador-02 {
     height: 3500em;
-    background-color: #EA5825;
+   // background-color: #EA5825;
   }
 
 
   .separador-03 {
     height: 2300em;
-    background-color: #8d8b8b;
+  //  background-color: #8d8b8b;
   }
 
   .separador-04 {
     height: 2250em;
-    background-color: #8d8b8b;
+  //  background-color: #8d8b8b;
   }
 
 
   .separador-04 {
     height: 1600em;
-    background-color: green;
+  //  background-color: green;
   }
 
 
 
   .separador-05 {
     height: 2250em;
-    background-color: yellow;
+   // background-color: yellow;
   }
 
 
@@ -342,16 +359,15 @@
 
 
 
-  #background .yellow-spike {
-
-    position: absolute;
-    bottom: 20em;
-    width: 19%;
+  #yellow-spike {
     background: url(../img/desktop/homepage/yellow-spike.png) no-repeat right center;
     background-size: contain;
+    position: fixed;
+    width: 19.3%;
     height: 6em;
-    left: 3%;
-    z-index: 999999999;
+    left: 0;
+    z-index: 10001;
+    bottom: -43%;
   }
 
 
@@ -1043,7 +1059,7 @@
   #carousel1, #carousel2, #carousel3 {
     height: 14.7em;
     position: absolute;
-    width: 100%;
+    width: 104%;
     top: 0px;
     background-size: contain !important;
   }
@@ -1227,7 +1243,7 @@
 .ui-draggable {
   // top: 297917px !important; //slide3
   //top: 379952px !important; //slide4
-  top: 495765px !important; //slide5
+  //top: 495765px !important; //slide5
 
 
 

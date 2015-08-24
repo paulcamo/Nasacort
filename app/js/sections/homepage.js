@@ -76,9 +76,9 @@ $(document).ready(function() {
 
     // -----to hide the white header bar ---------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo-tr', TweenMax.from( $('#brandlogo'), 0.5, {css:{height: 30}}), 100);
-    controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
-    controller.addTween('#brandlogo-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
+    controller.addTween('#brandlogo-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
+    //controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
+    //controller.addTween('#brandlogo-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
 
 
 
@@ -174,6 +174,7 @@ $(document).ready(function() {
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
+    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {bottom:'72%'}),     40000);
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
