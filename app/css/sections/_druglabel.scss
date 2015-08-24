@@ -100,7 +100,7 @@ $subtitle-color:#0d5ea4;
     li{
         font-size: 19px;
         color:$color-dark-grey;
-        line-height: 18px;
+        line-height: 23px;
         @include breakpoint('mobile'){
             font-size: 12px;
         }
