@@ -6,7 +6,7 @@ $(document).ready(function(){
     changeImageSrc();
     changeDivsOrder();
     validateCarouselArrows();
-    animateGraph();
+    //animateGraph();
 });
 
 function animateGraph(){
@@ -124,5 +124,5 @@ $(window).bind("resize", function(){
     changeImageSrc();
     changeDivsOrder();
     validateCarouselArrows();
-    animateGraph();
+    //animateGraph();
 });
