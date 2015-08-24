@@ -34,8 +34,12 @@ $subtitle-color:#0d5ea4;
     h1{
         padding-left: 84px;
         padding-top:72px;
+        @include breakpoint('desktop'){
+            padding-top:107px;
+        }
         @include breakpoint('mobile'){
             padding-left: 6%;
+            padding-top:21px;
         }
     }
 }
@@ -69,6 +73,7 @@ $subtitle-color:#0d5ea4;
         @include breakpoint('mobile'){
             line-height: 22px;
             margin-top: 10px;
+            font-size: 17px;
         }
     }
     sup{
