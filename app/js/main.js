@@ -5,9 +5,11 @@ var breakpoint_mobile = '320px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
 
-var isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+var isMobile;
 
 $(document).ready(function() {
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+    
 	setInterstitialPopup();
     
     currentPage = document.body.className;
@@ -18,6 +20,9 @@ $(document).ready(function() {
 });
 
 $(window).bind("resize", function(){
+    
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+    
     validateFootnote();
 
 });
