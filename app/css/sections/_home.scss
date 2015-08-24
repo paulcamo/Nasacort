@@ -9,7 +9,7 @@
 
 //-----------------------------------------------------------------------------------------------------------------
 
-#header {
+.home-section #header {
   position: fixed;
   width: 100%;
 }
@@ -161,6 +161,7 @@
     height: 13px;
     margin: 22px 16px;
     width: 13px;
+    cursor: pointer;
   }
 
 
@@ -405,6 +406,13 @@
     position: absolute;
     //background-color: rgba(0, 255, 0, 0.5);
     bottom: 0px;
+
+    @include breakpoint("limit") {
+      bottom: -0.35em;
+    }
+
+
+
   }
 
 
