@@ -2,6 +2,10 @@ $text-grey:#535353;
 $blue-color-headline:#022e80;
 $subtitle-color:#0d5ea4;
 
+.content-spe{
+    padding: 0 16%!important;
+}
+
 .drug-fact-label-header{
     background-color: $color-light-blue;
     position: relative;
@@ -49,6 +53,10 @@ $subtitle-color:#0d5ea4;
     @include breakpoint('mobile'){
         display:block;
     }
+}
+
+.small-marg{
+    margin-bottom: 3px!important;
 }
 
 .drug-fact-label {
@@ -118,7 +126,7 @@ $subtitle-color:#0d5ea4;
     ul{
         text-indent: -1.0em;
         padding-left: 17px;
-        margin-bottom: 27px;
+        margin-bottom: 22px;
         @include breakpoint('mobile'){
             margin-bottom: 21px;
         }
@@ -145,7 +153,6 @@ $subtitle-color:#0d5ea4;
     }
     .list{
         padding-left: 17px;
-        margin-bottom: 33px;
     }
     .inl-list > li{
         display: inline;
@@ -167,7 +174,7 @@ $subtitle-color:#0d5ea4;
         margin-bottom: 5px;
     }
     .marg-list-fix{
-        margin-bottom: 15px; 
+        margin-bottom: 5px; 
     }
 
 }
