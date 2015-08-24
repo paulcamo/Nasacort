@@ -152,6 +152,7 @@ $('.footnote .close-btn').on('click', function(e) {
 function validateFootnote()
 {
     $(".animation").removeClass("animation");
+    $('.footnote').attr("state", "closed");
     if(isMobile)
     {
         $('.footnote').css("top", "");
