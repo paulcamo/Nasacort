@@ -11,6 +11,8 @@ $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     
 	setInterstitialPopup();
+	
+	setSharePopup();
     
     currentPage = document.body.className;
     
@@ -205,6 +207,13 @@ function activateFooterAndNavBarValidation()
         break;
         
     }
+}
+
+/**/
+function setSharePopup() {
+    $("#share #close").on("click",function(){
+        $('#share').modal('hide');
+    });
 }
 
 
