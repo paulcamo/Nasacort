@@ -91,8 +91,8 @@ function changeImageSrc()
              $(this).attr("src", newPath);
          });  
          
-         newPath = $(".graphic-container img").attr("src").replace("mobile", "desktop");
-         $(".graphic-container img").attr("src", newPath);
+         //newPath = $(".graphic-container img").attr("src").replace("mobile", "desktop");
+         //$(".graphic-container img").attr("src", newPath);
      }
 }
 
