@@ -1,4 +1,5 @@
-
+$text-faq-color:#a3a5a6;
+$text-faq-paragraph:#535353;
 
 p{
     margin-top: 0; 
@@ -51,7 +52,7 @@ p{
         line-height: 38px;
         margin-bottom: 38px;
         line-height: 38px;
-        margin-bottom: 9px;
+        margin-bottom: 20px;
         margin-top: 63px;
         padding-left: 5px;
         color:$blue-color-headline;
@@ -63,7 +64,6 @@ p{
         font-size: 56%;
         position: relative;
         top: -0.6em;
-        left: 0.2em;
     }
     i{
         font-style: italic;
@@ -72,11 +72,12 @@ p{
         font-weight: bold;
     }
     p{
-        margin-bottom: 18px;
-        line-height: 20px;
+        margin-bottom: 16px;
+        line-height: 24px;
         letter-spacing: 0px;
-        width: 90%;
+        width: 96%;
         font-size: 18px;
+        color:$text-faq-color;
         @include breakpoint('mobile'){
             width: 100%;
             font-size: 12px;
@@ -148,6 +149,7 @@ p{
         display: inline-block;
         margin-left: -25px;
         width: 90%;
+        line-height: 30px;
         @include breakpoint('mobile'){
             font-size: 14px;
         }
@@ -180,15 +182,15 @@ p{
       }
 
 
-        background: url("../img/desktop/collapse/collapse-icon.png") no-repeat right center;
+        background: url("../img/desktop/collapse/collapse-icon.png") no-repeat 98% center;
         @include breakpoint('mobile'){
-            background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat right center;
+            background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% center;
         }
     }
     .expanded-icon {
-        background: url("../img/desktop/collapse/expand-icon.png") no-repeat right center;
+        background: url("../img/desktop/collapse/expand-icon.png") no-repeat 98% center;
         @include breakpoint('mobile'){
-            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat right center;
+            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
         }
 
     }
@@ -198,6 +200,9 @@ p{
         display: none;
         padding-left: 40px;
         overflow: hidden;
+        p{
+            color: $text-faq-paragraph;
+        }
         @include breakpoint('mobile'){
             padding-left: 0;
         }

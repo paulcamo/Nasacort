@@ -141,10 +141,9 @@ $subtitle-color:#0d5ea4;
 
     .title_internal{
         color:$subtitle-color;
-        font-family:$font-proxima-nova-semibold;
+        font-family:$font-proxima-nova-semibold-italic;
         font-size: 28px;
         margin-top:7px;
-        font-style: italic;
         @include breakpoint('mobile'){
             font-size: 14px;
             margin-top: 22px;
