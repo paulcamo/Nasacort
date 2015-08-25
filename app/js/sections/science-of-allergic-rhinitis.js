@@ -5,6 +5,7 @@ var mobileBreakPoint = 768;
 $(document).ready(function(){
     changeImageSrc();
     changeDivsOrder();
+    validateCarouselNumberOfLines();
     validateCarouselArrows();
     //animateGraph();
 });
@@ -123,6 +124,21 @@ $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
     changeDivsOrder();
+    validateCarouselNumberOfLines();
     validateCarouselArrows();
     //animateGraph();
 });
+
+function validateCarouselNumberOfLines()
+{
+     var biggestLine = 0;
+     $(".cycle-slideshow .item p").each(function(){
+        if($(this).height() > biggestLine)
+        {
+            biggestLine = $(this).height(); 
+        }
+     });
+     $(".cycle-slideshow .item p").each(function(){
+        $(this).css("height", biggestLine);
+     });
+}
