@@ -4,6 +4,9 @@ meta-description: "Should you prescribe an intranasal steroid for your patient? 
 meta-keywords: "Nasacort Allergy 24 HR, Nasacort Allergy 24HR, Nasacort AQ, NasacortAQ, Nasacort Allergy, triamcinolone acetonide, Nasacort FDA approved, OTC INS, OTC nasal spray, severe allergies, allergic rhinitis INS, allergic rhinitis treatment, allergy relief, allergic rhinitis, most powerful allergy medicine, INS patient type, Nasacort patient type, clucker, dripper, mouthbreather, terrible 2"
 section: whats-a-clucker
 layout: layout.hbs
+
+button-details: {"text":"Download the<br class='show-mbl' /> Symptom Questionnaire", "main-link":"#aa", "share-link":"#bb"}
+
 ---
 
 {{>header}}
@@ -251,18 +254,8 @@ layout: layout.hbs
 </div>
 <div class="download content-whats-a-clucker text-center">
 		<h1>Assess Your Patients’ Symptoms and Determine Treatment</h1>
-		<div class="wac-cta-button">
-			<a href="#" class="wac-sympt">
-				<img class="show-dsk" src="img/desktop/clucker/downl-cta.png" alt="">
-				<img class="show-mbl" src="img/mobile/clucker/downl-cta-small.png" alt="">
-				<span class="down-txt">Download the<br class="show-mbl" /> Symptom Questionnaire</span>
-			</a>
-			<a href="#" class="wac-shareSympt">
-				Share
-				<span class="shareSympt-icon"></span>
-			</a>
-		</div>
-	</div>	
+	{{> cta-download  button-details }}
+	</div>
 </div>
 
 {{>footer}}

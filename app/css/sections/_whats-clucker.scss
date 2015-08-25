@@ -4,7 +4,6 @@ $light-blue:#54acda;
 $black-letter:#5a5e5f;
 $yellow-color:#f39d28;
 $grey-innerTxt:#575a5c;
-$beige-color:#ffca82;
 $grey-bg:#e7eef2;
 $grey-button:#f8f8f8;
 
@@ -18,107 +17,7 @@ $grey-button:#f8f8f8;
     margin: 0 auto;
     text-align: center;
 }
-.wac-cta-button{
-    min-width: 550px; 
-    display: inline-block;
-    margin: 39px 0;
-    @include breakpoint('mobile'){
-        min-width: 278px;
-    } 
-    .wac-shareSympt{
-        background:url('../img/desktop/clucker/share-btn.png')no-repeat;
-        float: left;
-        height: 75px;
-        position: relative;
-        right: 4px;
-        width: 114px;
-        display: inline-block;
-        font-size: 20px;
-        font-weight: bold;
-        color:$beige-color;
-        text-decoration: none;
-        padding-left: 5px;
-        padding-top: 28px;
-        @include breakpoint('mobile'){
-            background:url('../img/mobile/clucker/share-btn-small.png')no-repeat;
-            width: 55px;
-            font-size: 14px;
-            height: 51px;
-        }
-        .shareSympt-icon{
-            background:url('../img/desktop/clucker/shareSympt-icon.png')no-repeat;
-            width: 17px;
-            height: 18px;
-            display: inline-block;
-            position: relative;
-            top: 3px;
-            @include breakpoint('mobile'){
-                background-size:100%;
-                top: -34px;
-            }
-        }
-        &:hover{
-            color:$color-white;
-            .shareSympt-icon{
-                background:url('../img/desktop/clucker/shareSympt-icon-hover.png')no-repeat;  
-            }
-        } 
-    }     
-    .wac-sympt{
-        background-color:$color-orange;
-        height: 75px;
-        display: inline-block;
-        border-radius: 6px 6px;
-        text-decoration: none;
-        border:1px solid $color-orange;
-        float: left;
-        position:relative;
-        z-index: 1;
-        @include breakpoint('mobile'){
-            height: 50px;
-        }
-        img{
-            position: relative;
-            margin-top: 7px;
-            float: left;
-            margin-left: 13px;
-        }
-        span{
-            color:$color-white;
-            font-weight: bold;
-            font-size: 20px;
-            padding: 28px 22px;
-            float: left;
-            display: inline-block;
-            position:relative;
-            @include breakpoint('mobile'){
-                font-size: 14px;
-                line-height: 18px;
-                padding: 7px 22px;
-                text-align: left;
-            }
-            &:before{
-                content:" ";
-                background:url('../img/desktop/clucker/downl-cta-line.png')no-repeat;
-                width: 2px;
-                height: 66px;
-                position: absolute;
-                display: inline-block;
-                left: 9px;
-                top: 4px;
-                @include breakpoint('mobile'){
-                    height: 39px;
-                }
-            }
-        }
-        &:hover{
-            background-color:$color-white;
-                span{
-                color:$color-orange;
-            }
-        }
-    }
-}
+
 
 
 .content-whats-a-clucker{

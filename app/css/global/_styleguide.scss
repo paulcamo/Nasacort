@@ -91,3 +91,108 @@ h4{
 }
 
 
+
+
+// -----------------------------------------------------------
+
+.download-cta-button{
+    min-width: 550px;
+    display: inline-block;
+    margin: 39px 0;
+    @include breakpoint('mobile'){
+        min-width: 278px;
+    }
+    .shareSympt{
+        background:url('../img/global/desktop/share-btn.png')no-repeat;
+        float: left;
+        height: 75px;
+        position: relative;
+        right: 4px;
+        width: 114px;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        color: $download-cta-color-beige;
+        text-decoration: none;
+        padding-left: 5px;
+        padding-top: 28px;
+        @include breakpoint('mobile'){
+            background:url('../img/global/mobile/share-btn-small.png')no-repeat;
+            width: 55px;
+            font-size: 14px;
+            height: 51px;
+        }
+        .shareSympt-icon{
+            background:url('../img/global/desktop/shareSympt-icon.png')no-repeat;
+            width: 17px;
+            height: 18px;
+            display: inline-block;
+            position: relative;
+            top: 3px;
+            @include breakpoint('mobile'){
+                background-size:100%;
+                top: -34px;
+            }
+        }
+        &:hover{
+            color:$color-white;
+            .shareSympt-icon{
+                background:url('../img/global/desktop/shareSympt-icon-hover.png')no-repeat;
+            }
+        }
+    }
+    .sympt{
+        background-color:$download-cta-color-orange;
+        height: 75px;
+        display: inline-block;
+        border-radius: 6px 6px;
+        text-decoration: none;
+        border:1px solid $download-cta-color-orange;
+        float: left;
+        position:relative;
+        z-index: 1;
+        @include breakpoint('mobile'){
+            height: 50px;
+        }
+        img{
+            position: relative;
+            margin-top: 7px;
+            float: left;
+            margin-left: 13px;
+        }
+        span{
+            color:$color-white;
+            font-weight: bold;
+            font-size: 20px;
+            padding: 28px 22px;
+            float: left;
+            display: inline-block;
+            position:relative;
+            @include breakpoint('mobile'){
+                font-size: 14px;
+                line-height: 18px;
+                padding: 7px 22px;
+                text-align: left;
+            }
+            &:before{
+                content:" ";
+                background:url('../img/global/desktop/downl-cta-line.png')no-repeat;
+                width: 2px;
+                height: 66px;
+                position: absolute;
+                display: inline-block;
+                left: 9px;
+                top: 4px;
+                @include breakpoint('mobile'){
+                    height: 39px;
+                }
+            }
+        }
+        &:hover{
+            background-color:$color-white;
+            span{
+                color: $download-cta-color-orange;
+            }
+        }
+    }
+}
