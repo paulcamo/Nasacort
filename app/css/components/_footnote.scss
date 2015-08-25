@@ -36,6 +36,10 @@
       width: 11px;
       height: 11px;
       display: none;
+      @include breakpoint('mobile'){
+        right: -7px;
+        top: 9px;
+      }
     }
     &:hover{
         .x-btn {
