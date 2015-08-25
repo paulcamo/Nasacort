@@ -96,10 +96,14 @@ h4{
 // -----------------------------------------------------------
 
 .download-cta-button{
-    min-width: 550px;
+    max-width: 100%;
     display: inline-block;
     margin: 39px 0;
     text-align: center;
+    .show-dsk{
+        width: 61px!important;
+        height: 61px;
+    }
 
 
     @include breakpoint('mobile'){
