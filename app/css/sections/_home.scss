@@ -140,30 +140,36 @@
     width: 69px;
 
 
-  }
 
-  .dotbox {
-    background-color: #fff;
-    border-radius: 8px 0 0 8px;
-    display: block;
-    height: 197px;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 38%; /* nota arreglar con js para que siempre este en el centro*/
-    width: 40px;
-  }
+    .dotbox {
+      background-color: #fff;
+      border-radius: 8px 0 0 8px;
+      display: block;
+      height: 197px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 38%;
+      width: 40px;
+      padding-top: 7px;
 
-  #dots-container .dotbox .dot {
-    background-color: grey;
-    border-radius: 10px;
-    display: block;
-    height: 13px;
-    margin: 22px 16px;
-    width: 13px;
-    cursor: pointer;
-  }
 
+       .dot {
+        background: #fff url(../img/desktop/homepage/bullet-off.jpg) no-repeat;
+        width: 29px;
+        height: 29px;
+        display: block;
+        margin: 6px auto;
+        cursor: pointer;
+      }
+
+      .dot-on {
+        background: #fff url(../img/desktop/homepage/bullet-on.jpg) no-repeat;
+      }
+
+    }
+
+  }
 
   /* ---------------------------------------------------------------------------------------------------------------------   */
 
@@ -403,12 +409,13 @@
   #product-features-text {
     width: 100%;
     height: 2.8em;
-    position: absolute;
+    position: relative;
+    bottom: -3.6em;
     //background-color: rgba(0, 255, 0, 0.5);
-    bottom: 0px;
+
 
     @include breakpoint("limit") {
-      bottom: -0.35em;
+      bottom: -3.75em;
     }
 
 
@@ -422,7 +429,8 @@
     width: 100%;
     height: 13.2em;
     position: absolute;
-    top: 1.60em;
+    //top: 1.60em;
+    top: 8.4em;
     z-index: 99;
     background-size: contain;
     max-width: #{homepage-max-width()};
@@ -520,7 +528,7 @@
 
   #slide03 {
     position: fixed;
-    top: 81px;
+    top: 20em; //81px
     height: 14.7em;
     z-index: 112;
     margin: auto;
@@ -973,7 +981,7 @@
     font-weight: 100;
     color: #1B468E;
     font-size: 0.8em;
-    z-index: 121;
+    z-index: 135;
     text-align: left;
     letter-spacing: 0.04em;
     width: 39%;
@@ -995,6 +1003,7 @@
   #slide1-textbox .features {
     color: $color-cyan-text;
     text-transform: uppercase;
+    text-decoration: underline;
   }
 
 

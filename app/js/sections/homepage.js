@@ -57,7 +57,7 @@ $(document).ready(function() {
 
     $( 'html, body' ).scrollTop(0); //reset scroll to top ....
     $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
-    $("#dots-container .dotbox .dot:eq(0)").css("background-color","blue");  // set first dot in blue ....
+    $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
 
 
     var tempo_cap=99000;
@@ -155,6 +155,7 @@ $(document).ready(function() {
 
     // ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
 
+  //  controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#background'),            1,   {top:'-33em'}),     30000);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'15em'},    {top:'1.45em'}),    35000, 65000);
@@ -164,7 +165,7 @@ $(document).ready(function() {
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
     controller.addTween('#brandlogo9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1.6em'},       {top:'-16em'}),     30000);
+    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'20em'},       {top:'-16em'}),     30000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
 
@@ -214,8 +215,8 @@ $("#equis").on("click",function(e) {
 
 $("#dots-container .dotbox .dot").on("click",function(e){
     e.preventDefault();
-    $("#dots-container .dotbox .dot").css("background-color","grey");
-    $(this).css("background-color","blue");
+    $("#dots-container .dotbox .dot").removeClass("dot-on");
+    $(this).addClass("dot-on");
 
 
     var lugar =  "#" + $(this).data("section");

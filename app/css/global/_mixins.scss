@@ -33,7 +33,9 @@
     @else if $point == pp-desktop {
         @media  screen and (width : 1400px) { @content; }
     }
-
+    @else if $point == limit {
+      @media  screen and (min-width : 1801px) { @content;}
+    }
 
     /*
     @else if $point == tablet {
