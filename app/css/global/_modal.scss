@@ -150,11 +150,11 @@ $modal-link-color:#0099cc;
       line-height: 24px;
       color: #5a5e5f;
       margin-left: 13px;
+      position:relative;
       &:before {
         content: "\2022 ";
-        left: -3px;
-        margin-left: -13px;
-        position: relative;
+        left: -13px;
+        position: absolute;
       }
     }
   }
