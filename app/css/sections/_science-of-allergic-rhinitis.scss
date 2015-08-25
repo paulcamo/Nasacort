@@ -313,7 +313,7 @@
     padding-left:#{fluid-percentage($site-max-width, 213)};
     padding-right:#{fluid-percentage($site-max-width, 213)};
     padding-bottom:24px;
-    img{
+    .graphic{
         margin-top: 10px;
     }
 }
@@ -408,7 +408,7 @@
     }
     
     .graphic-container{
-        img{
+        .graphic{
             width:100%;
         }
     }
@@ -535,7 +535,7 @@
             margin-bottom:0;
             
         }
-        img{
+        .graphic{
             width:100%;
             margin-top:2em;
         }
@@ -714,7 +714,7 @@
      padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
      width:100%;
      min-width:320px;
-     img{
+     .graphic{
          width:100%;
          max-width:604px;
          margin-top:0;

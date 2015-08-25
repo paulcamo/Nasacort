@@ -82,8 +82,8 @@ function changeImageSrc()
              $(this).attr("src", newPath);
          });
          
-         newPath = $(".graphic-container img").attr("src").replace("desktop", "mobile");
-         $(".graphic-container img").attr("src", newPath);
+         newPath = $(".graphic-container .graphic").attr("src").replace("desktop", "mobile");
+         $(".graphic-container .graphic").attr("src", newPath);
      }else
      {
         $(".graph img").each(function(){
@@ -91,8 +91,8 @@ function changeImageSrc()
              $(this).attr("src", newPath);
          });  
          
-         //newPath = $(".graphic-container img").attr("src").replace("mobile", "desktop");
-         //$(".graphic-container img").attr("src", newPath);
+         newPath = $(".graphic-container .graphic").attr("src").replace("mobile", "desktop");
+         $(".graphic-container .graphic").attr("src", newPath);
      }
 }
 
