@@ -8,6 +8,9 @@ $font-proxima-nova-regular: "Proxima Nova Regular";
 $font-proxima-nova-bold: "Proxima Nova Bold";
 @include fontFace($font-proxima-nova-bold, "../fonts/ProximaNova-Bold/ProximaNova-Bold");
 
+$font-proxima-nova-semibold-italic: "Proxima Nova Semibold Italic";
+@include fontFace($font-proxima-nova-semibold-italic, "../fonts/ProximaNova-Semibolditalic/proximaNova-Semibolditalic");
+
 @import url(http://fonts.googleapis.com/css?family=Paytone+One);
 $paytone-one: 'Paytone One', sans-serif;
 
