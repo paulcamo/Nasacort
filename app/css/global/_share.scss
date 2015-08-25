@@ -1,8 +1,11 @@
 #share{
     .modal-content{
         .modal-dialog{
-            height:464px;
+            height:462px;
             padding-top:26px;
+            padding-left:58px;
+            padding-right:58px;
+            padding-bottom:40px;
             .close-modal{
                 top:18px;
                 right:17px;
@@ -15,15 +18,104 @@
             .form-content{
                 #share-form{
                     fieldset{
+                        .left-column{
+                            width:45%;
+                            float:left;
+                            margin-right:10%;
+                        }
+                        .right-column{
+                            width:45%;
+                            float:right;
+                        }
+                        .your-name{
+                            float:left;
+                            margin-bottom:37px;
+                            width:100%;
+                        }
+                        .your-email{
+                            float:left;
+                            width:100%;
+                        }
+                        .recipient-name{
+                            float:left;
+                            margin-bottom:37px;
+                            width:100%;
+                        }
+                        .recipient-email{
+                            float:left;
+                            width:100%;
+                        }
                         label{
                             font-family:Arial, Helvetica, sans-serif;
                             color:#5a5e5f;
                             font-size:16px;
+                            float:left;
+                            margin-bottom:10px;
                         }
                         input[type='text']{
                             font-family:Arial, Helvetica, sans-serif;
                             color:#989c9f;
                             font-size:16px;
+                            @include border-radius(5px);
+                            outline: 0;
+                            border: 2px solid #8096bf;
+                            width:95%;
+                            max-width:382px;
+                            height:60px;
+                            background-color:#f6f4f4;
+                            float:left;
+                            padding-left:5%;
+                        }
+                        .bottom-content{
+                            float:left;
+                            margin-top:35px;
+                            .left-column{
+                                width:60%;
+                                margin-right:0;
+                            }
+                            .right-column{
+                                width:40%;
+                                float:right;
+                                text-align:right;
+                                margin-top:64px;
+                            }
+                            .all-fields{
+                                font-family:Arial, Helvetica, sans-serif;
+                                color:#e15d10;
+                                font-size:16px;
+                                float:left;
+                                margin-bottom:14px;
+                            }
+                            p{
+                                font-family:Arial, Helvetica, sans-serif;
+                                color:#5a5e5f;
+                                font-size:16px;
+                                line-height:22px;
+                                float:left;
+                            }
+                            .button{
+                                width:90px;
+                                height:42px;
+                                font-family:Arial, Helvetica, sans-serif;
+                                font-weight:bold;
+                                color:$color-white;
+                                font-size:20px;
+                                @include border-radius(5px);
+                                border:0;
+                                cursor:pointer;
+                            }
+                            .button-cancel{
+                                background-color:#8b8b8b;
+                                margin-right:20px;
+                            }
+                            .button-send{
+                                background:url("../img/desktop/ctas/send-button-bg.png") repeat-x;
+                            }
+                            .check-mark{
+                                background:url("../img/desktop/ctas/send-button-bg-check-mark.png") no-repeat;
+                                padding-right:40px;
+                                display:none;
+                            }
                         }
                     }
                 }
