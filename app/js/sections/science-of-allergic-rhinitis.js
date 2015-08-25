@@ -5,8 +5,10 @@ var mobileBreakPoint = 768;
 $(document).ready(function(){
     changeImageSrc();
     changeDivsOrder();
-    validateCarouselNumberOfLines();
-    validateCarouselArrows();
+    $( '.cycle-slideshow' ).on( 'cycle-initialized', function( event, opts ) {
+        validateCarouselNumberOfLines();
+        validateCarouselArrows();
+    });
     //animateGraph();
 });
 

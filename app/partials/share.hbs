@@ -4,16 +4,43 @@
     <div class="modal-dialog">
       <span class="close-modal" id="close"></span>
       <div class="modal-header">
-      <h1>Share</h1>
-    </div>
-    <div class="modal-intro">
-      <p></p>
-    </div>
-    <div class="modal-text">
-        
-    </div>
-    <div class="modal-text js-policy">
-    </div>
+            <h1>Share</h1>
+        </div>
+        <div class="form-content">
+            <form id="share-form">
+                <fieldset>
+                    <div class="left-colum">
+                        <div class='your-name'>
+                            <label>Your name: </label>
+                            <input type='text' name='yourName' value='' autocapitalize='off'/>
+                        </div>
+                        <div class='your-email'>
+                            <label>Your e-mail address </label>
+                            <input type='text' name='yourEmail' value='' value='' autocapitalize='off'/>
+                        </div>
+                    </div>
+                    <div class="right-colum">
+                        <div class='your-name'>
+                            <label>Recipient's name: </label>
+                            <input type='text' name='yourName' value='' autocapitalize='off'/>
+                        </div>
+                        <div class='your-email'>
+                            <label>Recipient's e-mail address </label>
+                            <input type='text' name='yourEmail' value='' value='' autocapitalize='off'/>
+                        </div>
+                    </div>
+                    <div class="bottom-content">
+                        <div class="right-colum">
+                            <span class="all-fields">All fields are required.</span>
+                            <p>Name and e-mail address will be used only for the purpose of sharing this page and will not be used for any other purpose.</p>
+                        <div class="left-colum">
+                            <input type='reset' value='Cancel' class='button'/>
+                            <input type='submit' value='Send' class='button'/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </div>
   </div>
 </div>
