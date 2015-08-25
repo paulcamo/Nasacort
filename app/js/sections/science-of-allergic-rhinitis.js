@@ -131,14 +131,19 @@ $(window).bind("resize", function(){
 
 function validateCarouselNumberOfLines()
 {
-     var biggestLine = 0;
+    var biggestLine = 0;
      $(".cycle-slideshow .item p").each(function(){
+        $(this).css("height", "");
+        $(this).css("height", null);
         if($(this).height() > biggestLine)
         {
             biggestLine = $(this).height(); 
         }
      });
+     //console.log("Biggest >>>>> " + biggestLine);
      $(".cycle-slideshow .item p").each(function(){
+        $(this).css("height", "");
+        $(this).css("height", null);
         $(this).css("height", biggestLine);
      });
 }
