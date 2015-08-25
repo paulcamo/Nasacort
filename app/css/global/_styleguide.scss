@@ -99,6 +99,9 @@ h4{
     min-width: 550px;
     display: inline-block;
     margin: 39px 0;
+    text-align: center;
+
+
     @include breakpoint('mobile'){
         min-width: 278px;
     }
