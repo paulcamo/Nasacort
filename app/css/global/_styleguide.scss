@@ -71,6 +71,7 @@ p{
     position: relative;
     float:left;
     width:100%;
+    right:-#{fluid-percentage($site-max-width, 270)};
 }
 
 h3{
