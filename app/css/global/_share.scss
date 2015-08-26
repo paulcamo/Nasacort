@@ -16,6 +16,7 @@
                 }
             }
             .form-content{
+                margin-top: 48px;
                 #share-form{
                     fieldset{
                         .left-column{
@@ -29,7 +30,7 @@
                         }
                         .your-name{
                             float:left;
-                            margin-bottom:37px;
+                            margin-bottom:32px;
                             width:100%;
                         }
                         .your-email{
@@ -38,7 +39,7 @@
                         }
                         .recipient-name{
                             float:left;
-                            margin-bottom:37px;
+                            margin-bottom:32px;
                             width:100%;
                         }
                         .recipient-email{
@@ -61,19 +62,50 @@
                             border: 2px solid #8096bf;
                             width:95%;
                             max-width:382px;
-                            height:60px;
+                            height:58px;
                             background-color:#f6f4f4;
                             float:left;
                             padding-left:5%;
                         }
                         .error-globe{
                             background:url("../img/desktop/ctas/error-globe-dialog.png") no-repeat;
-                            width:417px;
                             height:75px;
+                            margin-left: -1px;
+                            margin-top: 78px;
+                            position: relative;
+                            width: 100%;
+                            padding-left:5%;
+                            padding-top:22px;
+                            z-index: -1;
+                            display:none;
+                            .triangle{
+                                 background:url("../img/desktop/ctas/error-globe-triangle.png") no-repeat;
+                                 width:43px;
+                                 height:37px;
+                            }
+                            p{
+                                color:#2e2e2e;
+                                line-height:18px;
+                                width:70%;
+                                float:left;
+                            }
+                            .close-globe{
+                                 background:url("../img/desktop/ctas/error-globe-close.png") no-repeat;
+                                 width:15px;
+                                 height:16px;
+                                 float:right;
+                                 position:relative;
+                                 right: 15px;
+                                 top: 12px;
+                            }
+                            
                         }
                         .bottom-content{
                             float:left;
-                            margin-top:35px;
+                            margin-top:250px;
+                            position:absolute;
+                            z-index: -2;
+                            padding-right:58px;
                             .left-column{
                                 width:60%;
                                 margin-right:0;
@@ -82,7 +114,7 @@
                                 width:40%;
                                 float:right;
                                 text-align:right;
-                                margin-top:64px;
+                                margin-top:26px;
                             }
                             .all-fields{
                                 font-family:Arial, Helvetica, sans-serif;
