@@ -11,7 +11,8 @@ p{
     min-width: 1000px;
     top: -9px;
     height: 170px;
-    padding:0 10%;
+    padding-left: #{fluid-percentage($site-max-width, 213)};
+    padding-right: #{fluid-percentage($site-max-width, 213)};
     @include breakpoint('desktop'){
         top: -40px;
         .section-content{
@@ -29,6 +30,8 @@ p{
     @include breakpoint('mobile'){
         height: auto;
         min-width: 100%;
+        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
+        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
     }
     h1{
         padding-left: 68px;
@@ -47,8 +50,8 @@ p{
     padding-right: #{fluid-percentage($site-max-width, 213)};
     margin-top: 0;
     @include breakpoint('mobile'){
-        padding-left: #{fluid-percentage($site-max-width, 213)};
-        padding-right: #{fluid-percentage($site-max-width, 213)};
+        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
+        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
     }
     h2{
         line-height: 38px;
@@ -85,7 +88,6 @@ p{
         @include breakpoint('mobile'){
             width: 100%;
             font-size: 12px;
-            width: 80%;
         }
     }
     a{
