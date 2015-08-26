@@ -133,7 +133,7 @@ $('.footnote').on('click', function(e) {
         $(this).find('.rfrs').css("display","block");
         if(isMobile)
         {
-            $(".animation").css("top", topCta);       
+            $(this).css("top", topCta);       
         }
         e.preventDefault();
     }
@@ -142,15 +142,15 @@ $('.footnote').on('click', function(e) {
 
 $('.footnote .close-btn').on('click', function(e) {
     e.stopPropagation();
-    //$(".animation").removeClass("animation");
-    $(this).parent().removeClass("animation");
+    //$(".animation").removeClass("animation");   
+    $(this).parent().removeClass("animation"); 
     $(this).find('.rfrs').css("display","none");
     $(this).parent().attr("state", "closed");
     if(isMobile)
     {
-        $('.animation').css("top", "");     
+        $(this).parent().css("top", "");     
     }   
-     e.preventDefault(); 
+    e.preventDefault(); 
 });
 
 function validateFootnote()
