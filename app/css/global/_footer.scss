@@ -35,6 +35,16 @@
                         &.active{
                             color:$color-cyan;
                         }
+
+
+                        sup {
+                            @include breakpoint("mobile") {
+                                top: -0.65em;
+
+                            }
+                        }
+
+
                     }
                 }
             }

@@ -407,6 +407,14 @@
                    border-right:1px solid $color-dark-blue;
                }
            }
+
+         sup {
+           @include breakpoint("mobile") {
+             top: -0.65em;
+
+           }
+         }
+
        }
       }
       
