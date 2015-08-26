@@ -133,10 +133,14 @@
     background-size: contain;
     min-width:88px;
     margin-top: 0;
-    position:relative;
+    position:absolute;
     margin-bottom:4px;
     float:left;
+<<<<<<< HEAD
     left:-#{fluid-percentage($site-max-width-mobile, 60)};
+=======
+    left:-#{fluid-percentage($site-max-width-mobile, 10)};
+>>>>>>> a64e8a9a4cd76f778e7653ca573e4175c20a5e63
     .close-btn{
         right:24px;
         top:10px;
