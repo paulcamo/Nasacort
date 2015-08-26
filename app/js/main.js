@@ -283,7 +283,7 @@ function addTextFieldEvents()
     });
     $("input.email").blur(function(){
         var currentValue = $(this).val();
-        if(currentValue == "")
+        if(currentValue === "")
         {
             if($(this).attr("name") == "yourEmail")
             {
