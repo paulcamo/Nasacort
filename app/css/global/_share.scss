@@ -67,23 +67,31 @@
                             background-color:#f6f4f4;
                             float:left;
                             padding-left:5%;
+                            position: relative;
+                            z-index:1;
+                        }
+                        .triangle{
+                             background:url("../img/desktop/ctas/error-globe-triangle.png") no-repeat;
+                             width:19px;
+                             height:16px;
+                             position: relative;
+                             margin-top:74px;
+                             margin-left: auto;
+                             margin-right: auto;
+                             z-index:2;
                         }
                         .error-globe{
                             background:url("../img/desktop/ctas/error-globe-dialog.png") no-repeat;
                             height:75px;
                             margin-left: -1px;
-                            margin-top: 78px;
+                            margin-top:-13px;
                             position: relative;
                             width: 100%;
                             padding-left:5%;
                             padding-top:22px;
-                            z-index: -1;
-                            display:none;
-                            .triangle{
-                                 background:url("../img/desktop/ctas/error-globe-triangle.png") no-repeat;
-                                 width:43px;
-                                 height:37px;
-                            }
+                            z-index: 0;
+                            cursor:pointer;
+                            /*display:none;*/
                             p{
                                 color:#2e2e2e;
                                 line-height:18px;

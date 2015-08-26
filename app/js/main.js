@@ -211,12 +211,106 @@ function activateFooterAndNavBarValidation()
     }
 }
 
-/**/
+// --------------------------------------------------------------------------------------------------------------
+/*Share form*/
+
 function setSharePopup() {
+    resetForm();
     $("#share #close").on("click",function(){
+        resetForm();
         $('#share').modal('hide');
     });
+    $("input[type='reset']").on("click", function(e) {
+        $('#share').modal('hide');
+    });
+    
+    $("#share .error-globe").on("click",function(){
+        $(this).hide();
+        $(this).parent().find(".triangle").hide();
+    });
+    
+    addSubmitHandler();
+    addTextFieldEvents();
 }
+
+var yourDefaultEmail = "me@email.com";
+var recipientDefaultEmail = "colleague@email.com";
+
+function resetForm()
+{
+    $("#share :text").val("");
+    setFormDefaultValues();
+}
+
+/* Miscelaneous functions*/
+
+function validateEmail(email) 
+{
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  
+  if(regex.test( email)) 
+  {
+    return true;
+  }else 
+  {
+    return false;
+  }
+}
+
+function setFormDefaultValues()
+{
+   $("#share input[name='yourEmail']").val(yourDefaultEmail);
+   $("#share input[name='recipientEmail']").val(recipientDefaultEmail);
+}
+
+function addTextFieldEvents()
+{
+    $("input.email").focus(function(){
+        var currentValue = $(this).val(); 
+        if($(this).attr("name") == "yourEmail")
+        {
+            if(currentValue === yourDefaultEmail)
+            {
+                 $(this).val("");
+            }
+        }else
+        {
+            if(currentValue == recipientDefaultEmail)
+            {
+                 $(this).val("");
+            }
+        }
+    });
+    $("input.email").blur(function(){
+        var currentValue = $(this).val();
+        if(currentValue == "")
+        {
+            if($(this).attr("name") == "yourEmail")
+            {
+                 $(this).val(yourDefaultEmail);
+            }else
+            {
+                 $(this).val(recipientDefaultEmail);
+            }
+        }
+    });
+}
+
+function addSubmitHandler()
+{
+    $("#share").submit(function( event ) {
+        // Stop form from submitting normally
+        event.preventDefault();
+        // Get some values from elements on the page:
+        var $form = $(this);
+        var yourName = $form.find("input[name='yourName']").val();
+        var yourEmail = $form.find("input[name='yourEmail']").val();
+        var recipientName = $form.find("input[name='recipientName']").val();
+        var recipientEmail = $form.find("input[name='recipientEmail']").val();
+        alert("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
+    });
+}
+
 
 
 
