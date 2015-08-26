@@ -64,6 +64,10 @@ $modal-link-color:#0099cc;
   border-radius: 14px;
   overflow: scroll;
   padding: 31px 40px 31px 38px;
+  @include breakpoint('mobile'){
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .modal-content {
@@ -108,6 +112,13 @@ $modal-link-color:#0099cc;
   top: 32px;
   width: 29px;
   cursor: pointer;
+  @include breakpoint('mobile'){
+    background-size:100%;
+    height: 16px;
+    width: 16px;
+    right: 22px;
+    top: 28px;
+  }
 }
 
 .modal-header h1 {
@@ -116,6 +127,9 @@ $modal-link-color:#0099cc;
   letter-spacing: 1px;
   padding-top:0;
   margin-bottom: 22px;
+  @include breakpoint('mobile'){
+    font-size: 17px;
+  }
 }
 
 
@@ -124,6 +138,10 @@ $modal-link-color:#0099cc;
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 25px;
+    @include breakpoint('mobile'){
+      font-size: 12px;
+      line-height: 17px;
+    }
   }
   a {
     color: #0099cc;
@@ -138,10 +156,17 @@ $modal-link-color:#0099cc;
     font-weight: bold;
     margin-bottom: 0;
     text-transform: none; 
+    @include breakpoint('mobile'){
+      font-size: 14px;
+    }
   }
   p {
     font-size: 18px;
     margin-top: 0;
+    @include breakpoint('mobile'){
+      font-size: 12px;
+      line-height: 17px;
+    }
   }
   ul {
     margin-bottom: 31px;
@@ -151,6 +176,10 @@ $modal-link-color:#0099cc;
       color: #5a5e5f;
       margin-left: 13px;
       position:relative;
+      @include breakpoint('mobile'){
+        font-size: 12px;
+        line-height: 17px;
+      }
       &:before {
         content: "\2022 ";
         left: -13px;

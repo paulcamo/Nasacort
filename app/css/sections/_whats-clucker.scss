@@ -426,6 +426,12 @@ $grey-button:#f8f8f8;
             position: absolute;
             top: 14px;
             right: 12px;
+            @include breakpoint('mobile'){
+                width: 16px;
+                height: 17px;
+                background-size:100%;
+                top:20px;
+            }
         }
         &:hover{
             background:transparent;

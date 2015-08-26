@@ -149,7 +149,12 @@ $subtitle-color:#0d5ea4;
             margin-bottom: 21px;
         }
     }
+    .appleLinks{
+        color: $color-dark-grey;
+        text-decoration: none;
+        pointer-events: none !important;
 
+    }
     .title_internal{
         color:$subtitle-color;
         font-family:$font-proxima-nova-semibold-italic;
