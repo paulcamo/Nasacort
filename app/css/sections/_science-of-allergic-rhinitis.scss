@@ -121,7 +121,6 @@
     height:auto;
     width:100%;
     float:left;
-    min-width:1099px;
     
     .description{
         margin-left:#{fluid-percentage($site-max-width, 213)};
@@ -363,10 +362,7 @@
         
     }
     
-    .right-aligned{
-        margin-right:#{fluid-percentage($site-max-width, 213)};
-        width:100%;
-    }
+    
     
     .carousel{
         .container-carousel{
@@ -719,6 +715,7 @@
      padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
      width:100%;
      min-width:320px;
+     padding-bottom:15px;
      .graphic{
          width:100%;
          max-width:604px;

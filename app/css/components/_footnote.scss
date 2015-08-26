@@ -66,7 +66,7 @@
   border-radius: 0 20px 20px 0;
     border: 1px solid #e0e7f3;
     padding-top: 26px;
-    padding-right:32px;
+    padding-right:42px;
     padding-left:17px;
     padding-bottom:24px;
     margin-left:-6px;
@@ -136,7 +136,7 @@
     position:relative;
     margin-bottom:4px;
     float:left;
-    left:-#{fluid-percentage($site-max-width-mobile, 20)};
+    left:-#{fluid-percentage($site-max-width-mobile, 60)};
     .close-btn{
         right:24px;
         top:10px;
