@@ -71,7 +71,6 @@ p{
     position: relative;
     float:left;
     width:100%;
-    right:-35px;
 }
 
 h3{
@@ -108,7 +107,7 @@ h4{
 
 
     @include breakpoint('mobile'){
-        min-width: 278px;
+        min-width: 275px;
     }
     .shareSympt{
         background:url('../img/global/desktop/share-btn.png')no-repeat;
@@ -168,7 +167,7 @@ h4{
             float: left;
             margin-left: 13px;
         }
-        span{
+        .down-txt{
             color:$color-white;
             font-weight: bold;
             font-size: 20px;
@@ -177,10 +176,11 @@ h4{
             display: inline-block;
             position:relative;
             @include breakpoint('mobile'){
-                font-size: 14px;
+                font-size: 12px;
                 line-height: 18px;
-                padding: 7px 22px;
+                padding: 7px 4px 0 20px;
                 text-align: left;
+                max-width: 162px;
             }
             &:before{
                 content:" ";
