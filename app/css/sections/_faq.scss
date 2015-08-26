@@ -43,10 +43,12 @@ p{
 
 
 .faq {
-    padding: 0 15%;
+    padding-left: #{fluid-percentage($site-max-width, 213)};
+    padding-right: #{fluid-percentage($site-max-width, 213)};
     margin-top: 0;
     @include breakpoint('mobile'){
-        padding: 0 47px;
+        padding-left: #{fluid-percentage($site-max-width, 213)};
+        padding-right: #{fluid-percentage($site-max-width, 213)};
     }
     h2{
         line-height: 38px;
@@ -58,6 +60,8 @@ p{
         color:$blue-color-headline;
         @include breakpoint('mobile'){
             font-size: 17px;
+            line-height: 24px;
+            margin-bottom: 8px;
         }
     }
     sup{
@@ -152,6 +156,7 @@ p{
         line-height: 30px;
         @include breakpoint('mobile'){
             font-size: 14px;
+            line-height: 19px;
         }
         &:before{
             content:"Q: ";

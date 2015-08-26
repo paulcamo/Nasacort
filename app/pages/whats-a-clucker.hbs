@@ -5,7 +5,7 @@ meta-keywords: "Nasacort Allergy 24 HR, Nasacort Allergy 24HR, Nasacort AQ, Nasa
 section: whats-a-clucker
 layout: layout.hbs
 
-button-details: {"text":"Download the<br class='show-mbl' /> Symptom Questionnaire", "main-link":"#aa", "share-link":"#"}
+button-details: {"text":"Download the Symptom Questionnaire", "main-link":"#aa", "share-link":"#"}
 
 ---
 
@@ -252,11 +252,14 @@ button-details: {"text":"Download the<br class='show-mbl' /> Symptom Questionnai
 		</div>
 	</div>		
 </div>
-<div class="download content-whats-a-clucker text-center">
-		<h1>Assess Your Patients’ Symptoms and Determine Treatment</h1>
-	{{> cta-download  button-details }}
-	</div>
 </div>
+<div class="download text-center">
+	<h2 class="content-whats-a-clucker sub-down">Assess Your Patients’ Symptoms and Determine Treatment</h2>
+        <div class="cta-center content-whats-a-clucker">
+            {{> cta-download button-details}}
+            <p class="right-aligned">Use only as directed.</p>
+        </div>
+    </div>
 
 {{>footer}}
 
