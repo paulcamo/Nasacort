@@ -166,6 +166,9 @@ h4{
             margin-top: 7px;
             float: left;
             margin-left: 13px;
+            @include breakpoint('mobile'){
+                margin-top: 4px;
+            }
         }
         .down-txt{
             color:$color-white;
