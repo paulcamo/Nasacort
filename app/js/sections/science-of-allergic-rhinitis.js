@@ -9,7 +9,7 @@ $(document).ready(function(){
         validateCarouselNumberOfLines();
         validateCarouselArrows();
     });
-    //animateGraph();
+    animateGraph();
 });
 
 function animateGraph(){
@@ -37,36 +37,36 @@ function animateGraph(){
 
 function resetPanelchart(){
     $('.panel .line').css({
-        left: "-240px",
+        left: "-100%",
     });
 }
 
 function animetePanelOne(){
     $('#panel_1 .line1').animate({
-        left: "0px",
+        left: "0%",
     },750);
     setTimeout(
         function(){ 
             $('#panel_1 .line2').animate({
-                left: "-160",
+                left: "-65%",
             },750);
     }, 750);
 }
 
 function animetePanelTwo(){
     $('#panel_2 .line1').animate({
-        left: "-80px",
+        left: "-35%",
     },1500);
 }
 
 function animetePanelTree(){
     $('#panel_3 .line1').animate({
-        left: "0px",
+        left: "0%",
     },750);
     setTimeout(
         function(){ 
             $('#panel_3 .line2').animate({
-                left: "-220",
+                left: "-92%",
             },750);
     }, 750);
 }
@@ -77,19 +77,19 @@ function changeImageSrc()
      
      if ((contentwidth) < mobileBreakPoint)
      {
-         $(".graph img").each(function(){
-             var newPath = $(this).attr("src").replace("desktop", "mobile");
-             $(this).attr("src", newPath);
-         });
+         // $(".graph img").each(function(){
+         //     var newPath = $(this).attr("src").replace("desktop", "mobile");
+         //     $(this).attr("src", newPath);
+         // });
          
          newPath = $(".graphic-container .graphic").attr("src").replace("desktop", "mobile");
          $(".graphic-container .graphic").attr("src", newPath);
      }else
      {
-        $(".graph img").each(function(){
-             var newPath = $(this).attr("src").replace("mobile", "desktop");
-             $(this).attr("src", newPath);
-         });  
+        // $(".graph img").each(function(){
+        //      var newPath = $(this).attr("src").replace("mobile", "desktop");
+        //      $(this).attr("src", newPath);
+        //  });  
          
          newPath = $(".graphic-container .graphic").attr("src").replace("mobile", "desktop");
          $(".graphic-container .graphic").attr("src", newPath);
