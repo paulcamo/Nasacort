@@ -137,11 +137,13 @@ $('.footnote').on('click', function(e) {
         }
         e.preventDefault();
     }
+    
 });
 
 $('.footnote .close-btn').on('click', function(e) {
     e.stopPropagation();
-    $(".animation").removeClass("animation");
+    //$(".animation").removeClass("animation");
+    $(this).parent().removeClass("animation");
     $(this).find('.rfrs').css("display","none");
     $(this).parent().attr("state", "closed");
     if(isMobile)
@@ -159,7 +161,7 @@ function validateFootnote()
     {
         $('.footnote').css("top", "");
         $('.animation').css("top", "");    
-        $(this).find('.rfrs').css("display","none"); 
+        $('.footnote').find('.rfrs').css("display","none"); 
     }else{
         $(".animation").css("position", "relative");    
     }
