@@ -172,7 +172,7 @@
     }
     .content-ui{
         width:100%;
-        float:left;
+        margin:0 auto;
         margin-top: 13px;
         max-width:980px;
     }
@@ -723,6 +723,16 @@
      }
      .right-aligned{
          text-align:left;
+     }
+ }
+ 
+ .download{
+     .download-cta-button{
+         .sympt{
+             .down-txt{
+                 line-height: 34px;
+             }
+         }
      }
  }
     
