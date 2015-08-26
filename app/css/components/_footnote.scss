@@ -54,7 +54,11 @@
 
   &:hover{
       background: url("../img/desktop/ctas/footnote-btn-hover.png") no-repeat;
-      //background-color: $color-white;
+
+    @include breakpoint("mobile") {
+      background: url("../img/desktop/ctas/footnote-btn.png") no-repeat;
+    }
+    
   }
 }
 
