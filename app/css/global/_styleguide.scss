@@ -105,6 +105,9 @@ h4{
         width: 61px!important;
         height: 61px;
     }
+    @include breakpoint('mobile'){
+        margin: 15px 0;
+    }
 
 
     @include breakpoint('mobile'){
