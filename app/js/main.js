@@ -229,6 +229,11 @@ function setSharePopup() {
         $(this).parent().find(".triangle").hide();
     });
     
+    $("#share").on('hidden.bs.modal', function (e) {
+      //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
+      resetForm();
+    });
+    
     addSubmitHandler();
     addTextFieldEvents();
 }
@@ -240,6 +245,7 @@ function resetForm()
 {
     $("#share :text").val("");
     setFormDefaultValues();
+    hideSuccessfulMessage();
 }
 
 /* Miscelaneous functions*/
@@ -248,7 +254,7 @@ function validateEmail(email)
 {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   
-  if(regex.test( email)) 
+  if(regex.test( email) && email != yourDefaultEmail && email != recipientDefaultEmail) 
   {
     return true;
   }else 
@@ -307,8 +313,68 @@ function addSubmitHandler()
         var yourEmail = $form.find("input[name='yourEmail']").val();
         var recipientName = $form.find("input[name='recipientName']").val();
         var recipientEmail = $form.find("input[name='recipientEmail']").val();
-        alert("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
+        console.log("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
+        if(yourName.length >= 2 && validateEmail(yourEmail) && recipientName.length >= 2 && validateEmail(recipientEmail))
+        {
+            //Post these
+            alert("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
+            showSuccessfulMessage();
+        }else
+        {
+            if(yourName.length < 2)
+            {
+               $("#share .your-name .triangle, #share .your-name .error-globe").show(); 
+            }else
+            {
+                $("#share .your-name .triangle, #share .your-name .error-globe").hide(); 
+            }
+            //-------------------------------------------------------------
+            if(!validateEmail(yourEmail))
+            {
+                $("#share .your-email .triangle, #share .your-email .error-globe").show();
+            }else
+            {
+                $("#share .your-email .triangle, #share .your-email .error-globe").hide();
+            }
+            //-------------------------------------------------------------
+            if(recipientName.length < 2)
+            {
+                $("#share .recipient-name .triangle, #share .recipient-name .error-globe").show();
+            }else
+            {
+                $("#share .recipient-name .triangle, #share .recipient-name .error-globe").hide();
+            }
+            //-------------------------------------------------------------
+            if(!validateEmail(recipientEmail))
+            {
+               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show(); 
+            }else
+            {
+               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").hide();  
+            }
+            //-------------------------------------------------------------
+            if(yourName.length < 2 && !validateEmail(yourEmail) && recipientName.length < 2 &&  !validateEmail(recipientEmail))
+            {
+                $("#share .your-name .triangle, #share .your-name .error-globe").show();
+                $("#share .your-email .triangle, #share .your-email .error-globe").show();
+                $("#share .recipient-name .triangle, #share .recipient-name .error-globe").show();
+                $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show();
+            }
+            return;
+        }     
     });
+}
+
+function showSuccessfulMessage()
+{
+    $("#share #share-form .button-send").addClass("check-mark");
+    $("#share :text").prop("disabled", true);   
+}
+
+function hideSuccessfulMessage()
+{
+    $("#share #share-form .button-send").removeClass("check-mark");
+    $("#share :text").removeProp("disabled");
 }
 
 
