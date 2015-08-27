@@ -282,7 +282,7 @@ module.exports = function(grunt) {
         'copy',
         'uglify',
         'cssmin',
-        'prettify'
+        
     ]);
 
 
