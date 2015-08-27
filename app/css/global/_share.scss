@@ -66,7 +66,7 @@
                             @include border-radius(5px);
                             outline: 0;
                             border: 2px solid #8096bf;
-                            width:95%;
+                            width:93%;
                             max-width:382px;
                             height:58px;
                             background-color:#f6f4f4;
@@ -89,7 +89,7 @@
                         .error-globe{
                             background:url("../img/desktop/ctas/error-globe-dialog.png") no-repeat;
                             height:75px;
-                            margin-left: -1px;
+                            margin-left: -3px;
                             margin-top:-13px;
                             position: relative;
                             width: 100%;
@@ -175,4 +175,131 @@
             }
         }
     }
+}
+
+
+@include breakpoint('desktop') {
+    
+}
+
+@include breakpoint('tablet') {
+    
+}
+
+@include breakpoint('mobile') {
+
+#share{
+  .modal-content{
+        .modal-dialog{
+            min-width:296px;
+            padding-left:#{fluid-percentage($site-max-width-mobile, 24)};
+            padding-right:#{fluid-percentage($site-max-width-mobile, 24)};
+            .modal-header{
+                h1{
+                    margin-bottom:0;
+                }
+            }
+            .form-content{
+                margin-top:16px;
+                #share-form{
+                    fieldset{
+                        .left-column{
+                            margin-top:0;
+                            width:100%;
+                            margin-right:0;
+                        }
+                        .right-column{
+                            width:100%;
+                        }
+                        .your-name{
+                            margin-bottom:0;
+                            height:66px;
+                        }
+                        .your-email{
+                            height:66px;
+                        }
+                        .recipient-name{
+                            margin-bottom:0;
+                            height:66px;
+                        }
+                        .recipient-email{
+                            height:66px;
+                        }
+                        label{
+                            font-size:12px;
+                            height:auto !important;
+                            margin-bottom:6px;
+                            padding-left:0px;
+                            width:100%;
+                        }
+                        input[type='text']{
+                            font-size:12px;
+                            color:#363737;
+                            height:30px;
+                            padding-left:13px;
+                            width:97%;
+                            max-width:auto;
+                        }
+                        .triangle{
+                            width:7px;
+                            height:9px;
+                            background-size:contain;
+                            margin-top:45px;
+                        }
+                        .error-globe{
+                            margin-top:-32px;
+                            padding-bottom:0;
+                            padding-top:37px;
+                            p{
+                                font-size:12px;
+                                line-height:12px;
+                            }
+                            .close-globe{
+                                width:7px;
+                                height:8px;
+                                background-size:contain;
+                                top:9px;
+                            }
+                        }
+                        .bottom-content{
+                            margin-top:262px;
+                            .left-column{
+                                width:100%;
+                                .all-fields{
+                                    font-size:10px;
+                                    margin-bottom:6px;
+                                }
+                                p{
+                                    font-size:10px;
+                                    line-height:11px;
+                                }
+                            }
+                            .right-column{
+                                width:100%;
+                                float:left;
+                                margin-top:12px;
+                                text-align:center;
+                                .button{
+                                    width:80px;
+                                    height:38px;
+                                    font-size:14px;
+                                }
+                                .button-cancel{
+                                    margin-right:10px;
+                                }
+                                .button-send{
+                                    background:url("../img/desktop/ctas/send-button-bg.png") repeat-x;
+                                }
+                                .check-mark{
+                                    background:url("../img/desktop/ctas/send-button-bg-check-mark.png") no-repeat;
+                                    padding-right:28px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 }
