@@ -194,6 +194,8 @@
             min-width:296px;
             padding-left:#{fluid-percentage($site-max-width-mobile, 24)};
             padding-right:#{fluid-percentage($site-max-width-mobile, 24)};
+            height:auto;
+            padding-bottom: 14px;
             .modal-header{
                 h1{
                     margin-bottom:0;
@@ -214,16 +216,24 @@
                         .your-name{
                             margin-bottom:0;
                             height:66px;
+                            position:relative;
+                            z-index:4;
                         }
                         .your-email{
                             height:66px;
+                            position:relative;
+                            z-index:3;
                         }
                         .recipient-name{
                             margin-bottom:0;
                             height:66px;
+                            position:relative;
+                            z-index:2;
                         }
                         .recipient-email{
                             height:66px;
+                            position:relative;
+                            z-index:1;
                         }
                         label{
                             font-size:12px;
@@ -237,8 +247,8 @@
                             color:#363737;
                             height:30px;
                             padding-left:13px;
-                            width:97%;
-                            max-width:auto;
+                            width:94%;
+                            max-width:100%;
                         }
                         .triangle{
                             width:7px;
@@ -247,9 +257,10 @@
                             margin-top:45px;
                         }
                         .error-globe{
-                            margin-top:-32px;
+                            background:url("../img/mobile/ctas/error-globe-dialog.png") no-repeat;
+                            margin-top:-35px;
                             padding-bottom:0;
-                            padding-top:37px;
+                            padding-top:40px;
                             p{
                                 font-size:12px;
                                 line-height:12px;
@@ -262,7 +273,11 @@
                             }
                         }
                         .bottom-content{
-                            margin-top:262px;
+                             position:relative;
+                             margin-bottom: 0;
+                             margin-top: 0;
+                             z-index: auto;
+                             padding-right:0;
                             .left-column{
                                 width:100%;
                                 .all-fields{
