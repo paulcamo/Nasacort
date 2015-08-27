@@ -113,15 +113,18 @@
                         }
                     }
                 } .quote{
+                    padding: 0 12px;
                     width: 240px;
-                    min-height: 80px;
+                    min-height: 60px;
                     margin: 0 auto;
                     text-align: left;
                     @media screen and (max-width: 1190px) {
+                            padding: 0 17px;
                             width: 200px;
-                            min-height: 40px;
+                            min-height: 55px;
                     }
                     @media screen and (max-width: 900px) {
+                            padding: 0 12px;
                             width: 240px;
                             min-height: 40px;
                     }
