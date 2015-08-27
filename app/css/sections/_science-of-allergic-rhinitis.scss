@@ -116,6 +116,7 @@
                     width: 240px;
                     min-height: 80px;
                     margin: 0 auto;
+                    text-align: left;
                     @media screen and (max-width: 1190px) {
                             width: 200px;
                             min-height: 40px;
@@ -134,7 +135,7 @@
                     }
                 } .chart{
                     position: relative;
-                    background-color: #7E7E7E;
+                    background-color: #d6d6d6;
                     overflow: hidden;
                     width: 240px;
                     margin: 0 auto;
@@ -146,9 +147,16 @@
                             width: 240px;
                     }
                     img{
+                        height: 120px;
                         width: 100%;
                         position: absolute;
                         z-index: 2;
+                        @media screen and (max-width: 1190px) {
+                            height: 90px;
+                        }
+                        @media screen and (max-width: 900px) {
+                            height: 120px;                    
+                        }
                     }
                     .line{
                         position: relative;
