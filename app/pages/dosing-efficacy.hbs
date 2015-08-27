@@ -9,18 +9,21 @@ layout: layout.hbs
 {{>header}}
 
 
-<div class="hero-{{section}}">
-	<div>
+<div class="content">
+	<div class="content-{{section}} hero-{{section}}">
 		<h1>Dosing & Efficacy</h1>
 		<span class="underlined"></span>
+		<img class="img-womn" src="img/desktop/dosingEfficacy/womanChild-dosingEfficacy.png" alt="Dosing & Efficacy for Adults and Children">
 	</div>
 </div>
 
-<div>
-	<h1>Nasacort<sup>&reg;</sup> Allergy 24HR</h1>
-	<h1>Dosing Information&mdash;Adults and Children</h1>
+<div class="content-{{section}} dosing-information">
+	<h2>Nasacort<sup>&reg;</sup> Allergy 24HR</h2>
+	<h2>Dosing Information&mdash;Adults and Children</h2>
 	<p>Nasacort<sup>&reg;</sup> is indicated to treat allergic rhinitis in adults and children 2 years of age and older. It is the only OTC INS to be proven safe for children as young as 2. </p>
-	<img src="" alt="Nasacort® Allergy 24HR Dosing Chart for Adults and Children">
+	<div class="img-chart">
+		<img src="img/desktop/dosingEfficacy/dosingChart-dosingEfficacy.png" alt="Nasacort® Allergy 24HR Dosing Chart for Adults and Children">
+	</div>
 	<p>For complete directions, warnings, and other information, please see the <a href="" target="_blank">Drug Facts Label.</a></p>
 	<p>Use only as directed.</p>
 </div>

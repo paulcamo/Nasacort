@@ -1,0 +1,36 @@
+.content-dosing-and-efficacy{
+  position: relative;
+  overflow: hidden;
+  min-width: 1000px;
+  padding-left: #{fluid-percentage($site-max-width, 213)};
+  padding-right: #{fluid-percentage($site-max-width, 213)};
+}
+
+.hero-dosing-and-efficacy{
+  background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+  display: block;
+  position:relative;
+  height: 442px;
+  .img-womn{
+    position:absolute;
+    right: 398px;
+    top: 12px;
+  }
+}
+
+.dosing-information{
+  top:-45px;
+  h2{
+    font-size: 34px;
+    line-height: 39px;
+    margin: 0;
+  }
+  p{
+    margin-top:26px; 
+  }
+  .img-chart{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
