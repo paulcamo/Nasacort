@@ -77,7 +77,7 @@ $(document).ready(function() {
     // -----to hide the white header bar ---------------------------------------------------------------------------------------------------------------------
 
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
-    //controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
+    controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
     //controller.addTween('#brandlogo-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
 
 
@@ -165,7 +165,7 @@ $(document).ready(function() {
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
     controller.addTween('#brandlogo9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'20em'},       {top:'-16em'}),     30000);
+    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1em'},       {top:'-16em'}),     30000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
 
