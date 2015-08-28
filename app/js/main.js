@@ -248,6 +248,7 @@ function resetForm()
     setFormDefaultValues();
     hideSuccessfulMessage();
     removeRedHighlightedClassForMobile();
+    $(".triangle, .error-globe").hide();
 }
 
 /* Miscelaneous functions*/
