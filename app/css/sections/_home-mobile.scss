@@ -4,6 +4,11 @@
 
   .home-mobile {
 
+    @include breakpoint("desktop") {
+      display: none;
+    }
+
+
     .product-cover {
       background: url("../img/mobile/homepage/product.png") no-repeat top center;
       background-size: contain;
