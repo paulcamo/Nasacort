@@ -191,6 +191,8 @@
     
 }
 
+$color-red:#fe0000;
+
 @include breakpoint('mobile') {
 
 #share{
@@ -246,6 +248,16 @@
                             margin-bottom:6px;
                             padding-left:0px;
                             width:100%;
+                        }
+                        
+                        .red-highlighted{
+                            label{
+                                color:$color-red;
+                            }
+                            input[type='text']{
+                                @include border-radius(5px);
+                                border: 1px solid $color-red;
+                            }   
                         }
                         input[type='text']{
                             font-size:12px;
@@ -313,11 +325,11 @@
                                     margin-right:10px;
                                 }
                                 .button-send{
-                                    background:url("../img/desktop/ctas/send-button-bg.png") repeat-x;
                                 }
                                 .check-mark{
-                                    background:url("../img/desktop/ctas/send-button-bg-check-mark.png") no-repeat;
-                                    padding-right:28px;
+                                    background:url("../img/mobile/ctas/send-button-bg-check-mark.png") no-repeat;
+                                    background-size:contain;
+                                    padding-right:32px;
                                 }
                             }
                         }

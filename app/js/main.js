@@ -246,6 +246,7 @@ function resetForm()
     $("#share :text").val("");
     setFormDefaultValues();
     hideSuccessfulMessage();
+    removeRedHighlightedClassForMobile();
 }
 
 /* Miscelaneous functions*/
@@ -313,52 +314,63 @@ function addSubmitHandler()
         var yourEmail = $form.find("input[name='yourEmail']").val();
         var recipientName = $form.find("input[name='recipientName']").val();
         var recipientEmail = $form.find("input[name='recipientEmail']").val();
-        console.log("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
+        
         if(yourName.length >= 2 && validateEmail(yourEmail) && recipientName.length >= 2 && validateEmail(recipientEmail))
         {
             //Post these
             alert("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
             showSuccessfulMessage();
+            removeRedHighlightedClassForMobile();
         }else
         {
             if(yourName.length < 2)
             {
-               $("#share .your-name .triangle, #share .your-name .error-globe").show(); 
+               $("#share .your-name .triangle, #share .your-name .error-globe").show();
+               $("#share .your-name").addClass("red-highlighted"); 
             }else
             {
                 $("#share .your-name .triangle, #share .your-name .error-globe").hide(); 
+                $("#share .your-name").removeClass("red-highlighted");
             }
             //-------------------------------------------------------------
             if(!validateEmail(yourEmail))
             {
                 $("#share .your-email .triangle, #share .your-email .error-globe").show();
+                $("#share .your-email").addClass("red-highlighted");
             }else
             {
                 $("#share .your-email .triangle, #share .your-email .error-globe").hide();
+                $("#share .your-email").removeClass("red-highlighted");
             }
             //-------------------------------------------------------------
             if(recipientName.length < 2)
             {
                 $("#share .recipient-name .triangle, #share .recipient-name .error-globe").show();
+                $("#share .recipient-name").addClass("red-highlighted");
             }else
             {
                 $("#share .recipient-name .triangle, #share .recipient-name .error-globe").hide();
+                $("#share .recipient-name").removeClass("red-highlighted");
             }
             //-------------------------------------------------------------
             if(!validateEmail(recipientEmail))
             {
                $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show(); 
+               $("#share .recipient-email").addClass("red-highlighted");
             }else
             {
-               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").hide();  
+               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").hide(); 
+               $("#share .recipient-email").removeClass("red-highlighted"); 
             }
             //-------------------------------------------------------------
             if(yourName.length < 2 && !validateEmail(yourEmail) && recipientName.length < 2 &&  !validateEmail(recipientEmail))
             {
                 $("#share .your-name .triangle, #share .your-name .error-globe").show();
+                $("#share .your-name").addClass("red-highlighted");
                 $("#share .your-email .triangle, #share .your-email .error-globe").show();
                 $("#share .recipient-name .triangle, #share .recipient-name .error-globe").show();
                 $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show();
+                addRedHighlightedClassForMobile();
             }
             return;
         }     
@@ -369,12 +381,32 @@ function showSuccessfulMessage()
 {
     $("#share #share-form .button-send").addClass("check-mark");
     $("#share :text").prop("disabled", true);   
+    $("#share #share-form .button-send").val("Sent");
 }
 
 function hideSuccessfulMessage()
 {
     $("#share #share-form .button-send").removeClass("check-mark");
     $("#share :text").removeProp("disabled");
+    $("#share #share-form .button-send").val("Send");
+}
+
+function addRedHighlightedClassForMobile()
+{
+    //Adding red highlighted class for label and border in input just for mobile
+    $("#share .your-name").addClass("red-highlighted");
+    $("#share .your-email").addClass("red-highlighted");
+    $("#share .recipient-name").addClass("red-highlighted");
+    $("#share .recipient-email").addClass("red-highlighted");
+}
+
+function removeRedHighlightedClassForMobile()
+{
+    //Removing red highlighted class for label and border in input just for mobile
+    $("#share .your-name").removeClass("red-highlighted");
+    $("#share .your-email").removeClass("red-highlighted");
+    $("#share .recipient-name").removeClass("red-highlighted");
+    $("#share .recipient-email").removeClass("red-highlighted");
 }
 
 
