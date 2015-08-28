@@ -1,4 +1,6 @@
 $grey-background: #f4f4f4;
+$light-blue: #dcecf5;
+$middle-blue: #0d4a84;
 
 .content-dosing-and-efficacy{
   position: relative;
@@ -10,6 +12,9 @@ $grey-background: #f4f4f4;
     margin-bottom: 5px;
     margin-top: 5px;
     text-align: right;
+  }
+  a{
+    color:$color-cyan-text;
   }
 }
 
@@ -78,14 +83,66 @@ $grey-background: #f4f4f4;
 }
 
 .charts-dosingInner{
-  .first-Title-dosing{
-    background-color: $color-dark-blue;
-    color:$color-white;
+  h3{
     line-height: 51px;
     padding-left: 33px;
     border-radius: 3px;
     font-size: 34px;
     text-transform: none;
+  }
+  .parr-inner-dosing{
+    margin-bottom: 0;
+  }
+  .parrMarg-inner-dosing{
+    margin-bottom: 22px;
+  }
+  .first-Title-dosing{
+    background-color: $color-dark-blue;
+    color:$color-white;
+  }
+  .second-Title-dosing{
+    background-color: $light-blue;
+    color:$color-blue;
+    margin-bottom: 30px;
+  }
+  .second-content-dosing{
+    padding-left:33px;
+    margin-bottom: 30px;
+    h4{
+      font-size: 26px;
+      line-height: 39px;
+      color:$middle-blue;
+    }
+  }
+  .marg-bott-dosing{
+    margin-bottom: 70px;
+  }
+  img{
+    margin-bottom: 27px;
+  }
+  .chart-text-inner{
+    padding: 0 33px;
+    margin-top:22px;
+    margin-bottom: 48px;
+  }
+  .inner-charts{
+    .notes{
+      font-size: 12px;
+      line-height: 18px;
+    }
+    .chart-text{
+      width:100%;
+      display:block;
+      overflow:hidden;
+      p{
+        display:inline-block;
+        float:left;
+        margin-right: 23px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
   }
 }
 
