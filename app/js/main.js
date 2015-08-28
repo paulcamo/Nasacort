@@ -227,6 +227,7 @@ function setSharePopup() {
     $("#share .error-globe").on("click",function(){
         $(this).hide();
         $(this).parent().find(".triangle").hide();
+        $(this).parent().removeClass("red-highlighted");
     });
     
     $("#share").on('hidden.bs.modal', function (e) {
