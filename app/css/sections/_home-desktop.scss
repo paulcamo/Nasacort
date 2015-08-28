@@ -43,6 +43,39 @@
   }
 
 
+
+
+  .footer .footer-content .lists .footer-col {
+    line-height: 1px;
+  }
+
+
+  .footer .footer-content .bottom-content ul li {
+    line-height: 1px;
+  }
+
+  .footer .footer-content .bottom-content ul li .pipe {
+    margin-top: 9px;
+  }
+
+  .footer .footer-content .bottom-content {
+    padding-top: 13px;
+  }
+
+  .footer .footer-content .alternative-content ul {
+    margin-top: -18px;
+  }
+
+
+  .footer .footer-content .alternative-content ul li .pipe {
+    margin-top: 32px;
+  }
+
+  // ---------------------------------------------------------
+
+
+
+
   #bg-container {
         /*background: url("../img/bg.png") no-repeat top center;*/
     }
@@ -453,10 +486,6 @@
 
 
 
-    .footnote[data-section="home-2"] {
-      z-index: 999;
-      margin-top: -5.1em;
-    }
 
 
 
@@ -539,7 +568,7 @@
     background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
     width: 8em;
     height: 0em;
-    bottom: -19.742em;
+    bottom: -20.3em;
     z-index: 98;
     position: absolute;
     left: 21.5%;
@@ -738,6 +767,17 @@
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
     margin-top: 17em;
+
+    .use-only {
+      position: absolute;
+      bottom: -6.6em;
+      left: 79.4%;
+      font-size: 0.29em;
+
+    }
+
+
+
   }
 
 
@@ -918,7 +958,7 @@
 
     .use-only {
       position: absolute;
-      bottom: 1.1em;
+      bottom: -2em;
       left: 79.4%;
       font-size: 0.29em;
       color: $color-white;
@@ -1143,9 +1183,17 @@
 
     .footnote[data-section="home-1"]  {
       z-index: 999;
-      bottom: -23em;
+      bottom: -11.45em;
       margin-top: 0px;
     }
+
+    .footnote[data-section="home-2"] {
+      z-index: 999;
+      margin-top: -5.1em;
+      bottom: -25.4em;
+    }
+
+
 
 
   }
@@ -1272,8 +1320,10 @@
 
 
 .ui-draggable {
-  // top: 297917px !important; //slide3
-  //top: 379952px !important; //slide4
+
+  //top: 179804px !important; //slide2
+  //top: 297797px !important; //slide3
+  //top: 379833px !important; //slide4
   //top: 495765px !important; //slide5
 
 
@@ -1281,7 +1331,15 @@
 }
 
 
-//
-//#slide01, #slide02, #slide03, #slide04, #slide05,   {
+
+//#slide01, #slide02, #slide03, #slide04, #slide05,    {
 //  display: none;
 //}
+
+
+//.container {
+//
+//   display: none;
+// }
+
+

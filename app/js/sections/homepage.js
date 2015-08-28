@@ -96,8 +96,8 @@ $(document).ready(function() {
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
 
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.8em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'0em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'1em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
 
 
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
@@ -165,7 +165,7 @@ $(document).ready(function() {
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
     controller.addTween('#brandlogo9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1em'},       {top:'-16em'}),     30000);
+    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1.5em'},       {top:'-16em'}),     30000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
     controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
 
