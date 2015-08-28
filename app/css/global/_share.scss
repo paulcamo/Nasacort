@@ -35,6 +35,8 @@
                             width:100%;
                             height:80px;
                             overflow: visible;
+                            z-index: 2;
+                            position:relative;
                         }
                         .your-email{
                             float:left;
@@ -46,6 +48,8 @@
                             width:100%;
                             height:80px;
                             overflow: visible;
+                            z-index: 2;
+                            position:relative;
                         }
                         .recipient-email{
                             float:left;
@@ -91,7 +95,7 @@
                             background:url("../img/desktop/ctas/error-globe-dialog.png") no-repeat;
                             height:75px;
                             margin-left: -4px;
-                            margin-top:-13px;
+                            margin-top:-18px;
                             position: relative;
                             width: 101%;
                             padding-left:25px;
