@@ -66,14 +66,15 @@
                             @include border-radius(5px);
                             outline: 0;
                             border: 2px solid #8096bf;
-                            width:93%;
-                            max-width:382px;
+                            width:100%;
+                            max-width:410px;
                             height:58px;
                             background-color:#f6f4f4;
                             float:left;
-                            padding-left:5%;
+                            padding-left:22px;
                             position: relative;
                             z-index:1;
+                            @include box-sizing(border-box);
                         }
                         .triangle{
                              background:url("../img/desktop/ctas/error-globe-triangle.png") no-repeat;
@@ -89,11 +90,11 @@
                         .error-globe{
                             background:url("../img/desktop/ctas/error-globe-dialog.png") no-repeat;
                             height:75px;
-                            margin-left: -3px;
+                            margin-left: -4px;
                             margin-top:-13px;
                             position: relative;
-                            width: 100%;
-                            padding-left:5%;
+                            width: 101%;
+                            padding-left:25px;
                             padding-top:22px;
                             z-index: 0;
                             cursor:pointer;
@@ -247,22 +248,24 @@
                             color:#363737;
                             height:30px;
                             padding-left:13px;
-                            width:97%;
                             max-width:100%;
                         }
                         .triangle{
                             width:7px;
                             height:9px;
                             background-size:contain;
-                            margin-top:45px;
+                            margin-top:42px;
                         }
                         .error-globe{
                             background:url("../img/mobile/ctas/error-globe-dialog.png") no-repeat;   
-                            height: 40px;
-                            margin-top: 0;
+                            height: 45px;
+                            margin-top: -6px;
+                            margin-left:-2px;
                             padding-bottom: 0;
-                            padding-top: 7px;
+                            padding-top: 10px;
+                            width:100.2%;
                             background-size:cover;
+                            padding-left:15px;
                             p{
                                 font-size:12px;
                                 line-height:12px;
@@ -285,6 +288,7 @@
                                 .all-fields{
                                     font-size:10px;
                                     margin-bottom:6px;
+                                    width:100%;
                                 }
                                 p{
                                     font-size:10px;
