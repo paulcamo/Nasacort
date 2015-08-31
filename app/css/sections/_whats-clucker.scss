@@ -500,9 +500,160 @@ $grey-button:#f8f8f8;
 
 /*------------------- Popup Glass Heads -------------------*/
 
+#glass-head{
+    .modal-content{
+       .modal-dialog{
+           max-width:1024px;
+           max-height:650px;
+           padding:0;
+           .close-modal{
+                background:url("../img/desktop/clucker/glass-heads/close-btn.png") no-repeat;
+                width:48px;
+                height:48px;
+                top:15px;
+                right:15px;
+                z-index: 3;
+                &:hover{
+                     background:url("../img/desktop/clucker/glass-heads/close-btn-hover.png") no-repeat;
+                }
+           }
+            .modal-header{
+                background:url("../img/desktop/clucker/glass-heads/header-bg.png") repeat-x;
+                width:100%;
+                height:84px;
+                position:relative;
+                z-index:2;
+                h1{
+                    color:$color-white;
+                    font-family: Helvetica, Arial, sans-serif;
+                    margin-bottom:0;
+                    padding-left:40px;
+                    padding-top:28px;
+                }
+            }
+            .glass-content{
+                position:relative;
+                z-index:1;
+                margin-top:-4px;
+                .anatomy{
+                   background-size:cover;
+                   width:100%;
+                   height:auto;
+                   float:left;
+                   padding-bottom:35.8%;
+               }
+               
+               .audio-container{
+                   float:left;
+                   padding-top:34px;
+                   padding-left:#{fluid-percentage(1024, 40)};
+                   padding-right:#{fluid-percentage(1024, 40)};
+                  p{
+                   font-size:22px;
+                   margin-bottom:22px;
+                } 
+                .audio-feature{
+                    .listen{
+                        color:#2e2662;
+                        font-size:25px;
+                        font-family:Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                    }
+                    .pipe{
+                        
+                    }
+                }
+               }
+               
+               #maria{
+                    .default{
+                         background:url("../img/desktop/clucker/glass-heads/maria-default.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .itchy{
+                         background:url("../img/desktop/clucker/glass-heads/maria-itchy.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .congestion{
+                         background:url("../img/desktop/clucker/glass-heads/maria-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .nasal{
+                         background:url("../img/desktop/clucker/glass-heads/maria-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                }
+                .hotspots-container{
+                    width:100%;
+                    height:auto;
+                    position:absolute;
+                    padding-bottom:35.8%;
+                }
+                .hotspot{
+                     background:url("../img/desktop/clucker/glass-heads/hot-spot.png") no-repeat;
+                     background-size:contain;
+                     width:7.25%;
+                     height:auto;
+                     padding-bottom:7.25%;
+                     position:absolute;
+                     &:hover{
+                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                     }
+                     &.active{
+                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                     }
+                }
+            }
+        }
+    }
+}
+
 .wac{
     .maria-graph{
         background-image:url("../img/desktop/clucker/maria-graph.png");
+        width:400px;
+        height:160px;
+        display:block;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+              }
+        }
+    }
+    
+    .mark-graph{
+        background-image:url("../img/desktop/clucker/mark-graph.png");
+        width:400px;
+        height:160px;
+        display:block;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+              }
+        }
+    }
+    
+    .kara-graph{
+        background-image:url("../img/desktop/clucker/kara-graph.png");
+        width:400px;
+        height:160px;
+        display:block;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+              }
+        }
+    }
+    
+    .liam-graph{
+        background-image:url("../img/desktop/clucker/kara-graph.png");
         width:400px;
         height:160px;
         display:block;
