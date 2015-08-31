@@ -455,8 +455,8 @@ $grey-button:#f8f8f8;
         height: 40px;
         display: inline-block;
         position:absolute;
-        top: 109px;
-        right: 13px;
+        top: 114px;
+        right: 8px;
         cursor: pointer;
         @include breakpoint('mobile'){
             top: 57px;
@@ -495,6 +495,23 @@ $grey-button:#f8f8f8;
     @include breakpoint('mobile'){
         font-size: 17px; 
         line-height: 22px;
+    }
+}
+
+/*------------------- Popup Glass Heads -------------------*/
+
+.wac{
+    .maria-graph{
+        background-image:url("../img/desktop/clucker/maria-graph.png");
+        width:400px;
+        height:160px;
+        display:block;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+              }
+        }
     }
 }
 
