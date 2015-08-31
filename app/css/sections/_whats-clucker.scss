@@ -504,7 +504,9 @@ $grey-button:#f8f8f8;
     .modal-content{
        .modal-dialog{
            max-width:1024px;
-           max-height:650px;
+           height:auto;
+           max-height:100%;
+           overflow:hidden;
            padding:0;
            .close-modal{
                 background:url("../img/desktop/clucker/glass-heads/close-btn.png") no-repeat;
@@ -593,7 +595,7 @@ $grey-button:#f8f8f8;
                
                #maria{
                     .default{
-                         background:url("../img/desktop/clucker/glass-heads/maria-default.jpg") no-repeat;
+                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
                          background-size:cover;
                          display:block;
                     }
@@ -613,6 +615,80 @@ $grey-button:#f8f8f8;
                          display:none;
                     }
                 }
+                #mark{
+                    .default{
+                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .nasal{
+                         background:url("../img/desktop/clucker/glass-heads/mark-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .histamine{
+                         background:url("../img/desktop/clucker/glass-heads/mark-histamine.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                }
+                 #mark{
+                    .default{
+                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .nasal{
+                         background:url("../img/desktop/clucker/glass-heads/mark-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .histamine{
+                         background:url("../img/desktop/clucker/glass-heads/mark-histamine.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                }
+                 #kara{
+                    .default{
+                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .congestion{
+                         background:url("../img/desktop/clucker/glass-heads/kara-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .inflamation{
+                         background:url("../img/desktop/clucker/glass-heads/kara-inflamation.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                }
+                 #liam{
+                    .default{
+                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .itchy{
+                         background:url("../img/desktop/clucker/glass-heads/liam-itchy.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .congestion{
+                         background:url("../img/desktop/clucker/glass-heads/liam-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                    .nasal{
+                         background:url("../img/desktop/clucker/glass-heads/liam-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:none;
+                    }
+                }
+                
                 .hotspots-container{
                     width:100%;
                     height:auto;
@@ -628,9 +704,11 @@ $grey-button:#f8f8f8;
                      position:absolute;
                      &:hover{
                         background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                        background-size:contain;
                      }
                      &.active{
                         background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                        background-size:contain;
                      }
                 }
             }
