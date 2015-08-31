@@ -545,7 +545,7 @@ $grey-button:#f8f8f8;
                
                .audio-container{
                    float:left;
-                   padding-top:34px;
+                   padding-top:22px;
                    padding-left:#{fluid-percentage(1024, 40)};
                    padding-right:#{fluid-percentage(1024, 40)};
                   p{
@@ -553,14 +553,40 @@ $grey-button:#f8f8f8;
                    margin-bottom:22px;
                 } 
                 .audio-feature{
+                    float: right;
+                    margin-bottom: 10px;
+                    margin-top: 14px;
+                    position: relative;
+                    right: -10px;
                     .listen{
                         color:#2e2662;
                         font-size:25px;
                         font-family:Arial, Helvetica, sans-serif;
                         font-weight: bold;
+                        float:left;
+                        &:hover{
+                            color:#eb5d2b;
+                        }
                     }
                     .pipe{
-                        
+                        background-color:#c3c4c4;
+                        height:58px;
+                        width:2px;
+                        float:left;
+                        margin-left:17px;
+                        margin-right:20px;
+                        margin-top:-15px;
+                    }
+                    .volume{
+                        background:url("../img/desktop/clucker/glass-heads/volume-btn.png") no-repeat;
+                        width:46px;
+                        height:38px;
+                        float:left;
+                        display:block;
+                        margin-top:-6px;
+                        &:hover{
+                             background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
+                        }
                     }
                 }
                }
