@@ -66,7 +66,7 @@ function animetePanelTree(){
     setTimeout(
         function(){ 
             $('#panel_3 .line2').animate({
-                left: "-92%",
+                left: "-90%",
             },750);
     }, 750);
 }
