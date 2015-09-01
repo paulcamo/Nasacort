@@ -330,6 +330,10 @@
         background-size:100% 100%;
     }
 }
+.arrow-left.disabled{
+    background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-disable.png") no-repeat;
+    background-size:100% 100%;
+}
 
 .arrow-right{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
@@ -343,6 +347,10 @@
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
         background-size:100% 100%;
     }
+}
+.arrow-right.disabled{
+    background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-disable.png") no-repeat;
+    background-size:100% 100%;
 }
 
 .cycle-pager{
