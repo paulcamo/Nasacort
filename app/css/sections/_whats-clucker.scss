@@ -716,6 +716,134 @@ $grey-button:#f8f8f8;
     }
 }
 
+/******** Mobile Glass Heads ***********/
+@include breakpoint('mobile') {
+    
+#glass-head{
+    .modal-content{
+       .modal-dialog{      
+           max-height:none;  
+           .close-modal{
+                background:url("../img/mobile/clucker/glass-heads/close-btn.png") no-repeat;
+                background-size:contain;
+                width:24px;
+                height:24px;
+                right: 10px;
+                top: 8px;
+                &:hover{
+                     background:url("../img/mobile/clucker/glass-heads/close-btn.png") no-repeat;
+                     background-size:contain;
+                }
+           }
+           .modal-header{
+                background:url("../img/mobile/clucker/glass-heads/header-bg.png") repeat-x;
+                background-size:contain;
+                width:100%;
+                height:40px;
+                h1{
+                 font-size:16px;
+                 padding-left: 20px;
+                 padding-top: 15px;
+                }
+            }
+           .glass-content{
+               .anatomy{
+                   background-size:contain;
+                   padding-bottom: 64.14%;
+                   margin-bottom: 10px;
+               }
+               .audio-container{
+                   padding-top:2px;
+                   padding-left:#{fluid-percentage(640, 28)};
+                   padding-right:#{fluid-percentage(640, 28)};
+                   p{
+                       font-size:12px;
+                       line-height:18px;
+                       margin-bottom:16px;
+                   }
+                   .audio-feature{
+                       display:none;
+                   }
+               }
+               #maria{
+                    .default{
+                         display:none;
+                    }
+                    .itchy{
+                         background:url("../img/mobile/clucker/glass-heads/maria-itchy.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .congestion{
+                         background:url("../img/mobile/clucker/glass-heads/maria-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .nasal{
+                         background:url("../img/mobile/clucker/glass-heads/maria-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                }
+                #mark{
+                    .default{
+                         display:none;
+                    }
+                    .nasal{
+                         background:url("../img/mobile/clucker/glass-heads/mark-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .histamine{
+                         background:url("../img/mobile/clucker/glass-heads/mark-histamine.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                }
+                #kara{
+                    .default{
+                         display:none;
+                    }
+                    .congestion{
+                         background:url("../img/mobile/clucker/glass-heads/kara-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .inflamation{
+                         background:url("../img/mobile/clucker/glass-heads/kara-inflamation.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                }
+                #liam{
+                    .default{
+                         display:none;
+                    }
+                    .itchy{
+                         background:url("../img/mobile/clucker/glass-heads/liam-itchy.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .congestion{
+                         background:url("../img/mobile/clucker/glass-heads/liam-congestion.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                    .nasal{
+                         background:url("../img/mobile/clucker/glass-heads/liam-nasal.jpg") no-repeat;
+                         background-size:cover;
+                         display:block;
+                    }
+                }
+                
+           }
+       }
+    }
+}
+}
+
+
+
 .wac{
     .maria-graph{
         background-image:url("../img/desktop/clucker/maria-graph.png");
@@ -771,3 +899,82 @@ $grey-button:#f8f8f8;
 }
 
 
+@include breakpoint('mobile') {
+.wac{
+    .wac-expand{
+        background-size: contain;
+        width:32px;
+        height:32px;
+        top:100%;
+        right:6px;
+        margin-top: -36px;
+    }
+    .maria-graph{
+        background-image:url("../img/desktop/clucker/maria-graph.png");
+        width:100%;
+        height:auto;
+        padding-bottom:40%;
+        background-repeat:no-repeat;
+        background-size: contain;
+        .wac-expand{
+            background-size: contain;
+            width:32px;
+            height:32px;
+        }
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+                background-size: contain;
+              }
+        }
+    }
+    
+    .mark-graph{
+        background-image:url("../img/desktop/clucker/mark-graph.png");
+        width:100%;
+        height:auto;
+        padding-bottom:40%;
+        background-repeat:no-repeat;
+        background-size: contain;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+                background-size: contain;
+              }
+        }
+    }
+    
+    .kara-graph{
+        background-image:url("../img/desktop/clucker/kara-graph.png");
+        width:100%;
+        height:auto;
+        padding-bottom:40%;
+        background-repeat:no-repeat;
+        background-size: contain;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+                background-size: contain;
+              }
+        }
+    }
+    
+    .liam-graph{
+        background-image:url("../img/desktop/clucker/kara-graph.png");
+        width:100%;
+        height:auto;
+        padding-bottom:40%;
+        background-repeat:no-repeat;
+        background-size: contain;
+        
+        &:hover{
+            .wac-expand{
+                background:url("../img/desktop/clucker/enlarge-icon-hover.png");
+                background-size: contain;
+              }
+        }
+    }
+}
+}
