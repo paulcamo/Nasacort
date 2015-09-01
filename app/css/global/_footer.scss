@@ -6,15 +6,24 @@
     .footer-content{
         
         .lists{
-            height:263px;
+            height:100%;
             padding-left: #{fluid-percentage($site-max-width, 213)};
             padding-right: #{fluid-percentage($site-max-width, 213)};
             border-bottom: 1px #d2e2f4 solid;
+            overflow: hidden;
             
             .footer-col{
                 float:left;
                 position:relative;
                 margin-right: 6%;
+                @include breakpoint('tablet') {
+                    margin-right: 3%;
+                    width:20%;
+                }
+                @include breakpoint('desktop') {
+                    margin-right: 3%;
+                    width:20%;
+                }
                 .subitem{
                     a{
                         font-size: 16px;
@@ -163,7 +172,13 @@
                 height:65px;
                 float: right;
                 margin-top: 6px;
-                margin-right: 278px; 
+                margin-right: 278px;
+                @include breakpoint('desktop') {
+                    margin-right: 0;
+                }
+                @include breakpoint('tablet') {
+                    margin-right: 0;
+                }
                 a {
                     display: block;
                     height: 100%;
@@ -183,7 +198,6 @@
         .lists{
             
             ul.footer-col{
-                width:20%;
                 margin-right:5%;
                 li{
                     width:90%;       
@@ -193,7 +207,6 @@
                 }
                 &:last-child{
                     margin-right:0;
-                    width:25%;
                     li{
                         width:100%;
                     }
