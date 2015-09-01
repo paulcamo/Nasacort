@@ -300,8 +300,12 @@
                    width: 1px;
                    height: 22px;
                    float: right;
-                   //margin-left: 10px;
-                   //margin-right: 10px;
+
+                   @include breakpoint('tablet') {
+                     margin-right: 5px;
+                     margin-left: 5px;
+                   }
+
                    margin-top: 2px;
                }
            }
@@ -364,7 +368,7 @@
           background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
           height: 150px;
            .nassacort-logo{
-               margin-left:13%;
+               margin-left:12%; //13%
            }
             ul.utility-nav{
                 margin-right:12%;
@@ -380,7 +384,7 @@
            margin-right:0;
            right:0;
            margin-left: 0;
-           left:12%;
+           left:11%;
            li{
                a{
                    font-size:13px;
