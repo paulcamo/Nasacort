@@ -282,8 +282,6 @@ function addAudioPlayer()
         
         $(this).addClass("active");
         
-        console.log(isPlaying);
-        
         if(!isPlaying)
         {
             if(isReady)
