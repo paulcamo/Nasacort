@@ -17,12 +17,12 @@ function setGlassHeadsPopup()
 {
     hideAllAnatomies();
     
-    $("body a").on("click",function() { 
+    $("body a").not($(".listen")).on("click",function() { 
         $("#glass-head .modal-header h1").text($(this).attr("title"));
         
         if(!isMobile)
         {
-            //hideAllAnatomies();
+            hideAllAnatomies();
         }
         
         currentCharacter = $(this).attr("data-type");
@@ -272,25 +272,51 @@ $(window).bind("resize", function(){
 });
 
 function addAudioPlayer()
-{
-    //var mediaPlayer = jQuery('#glass-head #media-container');
-
-    $('#glass-head #media-container').jPlayer({
-        swfPath: 'swf/Jplayer.swf',
-        solution: "flash, html",
-        supplied : 'mp3, oga, wav',
-        ready: function() {
-            jQuery(this).jPlayer("setMedia", {
-                mp3: 'audio/sound.mp3'
-            }).jPlayer("play",10);
+{   
+    var isPlaying = false;
+    var isReady = false;
+    
+    $('#glass-head .listen').click(function() {
+        
+        var audioPath = $(this).attr("path");
+        
+        $(this).addClass("active");
+        
+        console.log(isPlaying);
+        
+        if(!isPlaying)
+        {
+            if(isReady)
+            {
+                 $('#glass-head #media-container').jPlayer("play");
+            }else
+            {
+                $('#glass-head #media-container').jPlayer({
+                    supplied : 'mp3, oga, wav',
+                    ready: function() {
+                        jQuery(this).jPlayer("setMedia", {
+                            mp3: audioPath
+                        }).jPlayer("play");
+                        console.log("audio ready");
+                        isReady = true;
+                    },
+                    ended:function() {
+                        console.log("audio ended");
+                        $('#glass-head .listen').removeClass("active");
+                        isPlaying = false;
+                    },
+                    play:function() {
+                        isPlaying = true;
+                        console.log("audio playing");
+                    }
+                });
+            }
+        }else
+        {
+            $('#glass-head #media-container').jPlayer("stop");
+            $('#glass-head .listen').removeClass("active");
+            isPlaying = false;
         }
-    });
-    
-    
-    
-    $('#glass-head #play-sound-maria').click(function() {
-        $('#glass-head #media-container').jPlayer('play');
-        //console.log($('#glass-head #media-container'));
     });
 }
 

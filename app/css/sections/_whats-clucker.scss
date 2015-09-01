@@ -556,8 +556,7 @@ $grey-button:#f8f8f8;
                 } 
                 .audio-feature{
                     float: right;
-                    margin-bottom: 10px;
-                    margin-top: 14px;
+                    margin-bottom: 15px;
                     position: relative;
                     right: -10px;
                     .listen{
@@ -566,30 +565,38 @@ $grey-button:#f8f8f8;
                         font-family:Arial, Helvetica, sans-serif;
                         font-weight: bold;
                         float:left;
+                        display:block;
+                        line-height:45px;
+                        .pipe{
+                            background-color:#c3c4c4;
+                            height:58px;
+                            width:2px;
+                            margin-left:17px;
+                            position:absolute;
+                            display:inline-block;
+                        }
+                        .volume{
+                            background:url("../img/desktop/clucker/glass-heads/volume-btn.png") no-repeat;
+                            width:46px;
+                            height:38px;
+                            display:inline-block;
+                            top:10px;
+                            margin-left:40px;
+                            position:relative;
+                        }
                         &:hover{
                             color:#eb5d2b;
-                        }
-                    }
-                    .pipe{
-                        background-color:#c3c4c4;
-                        height:58px;
-                        width:2px;
-                        float:left;
-                        margin-left:17px;
-                        margin-right:20px;
-                        margin-top:-15px;
-                    }
-                    .volume{
-                        background:url("../img/desktop/clucker/glass-heads/volume-btn.png") no-repeat;
-                        width:46px;
-                        height:38px;
-                        float:left;
-                        display:block;
-                        margin-top:-6px;
-                        &:hover{
-                             background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
-                        }
-                    }
+                            .volume{
+                                background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
+                            }
+                        }    
+                        &.active{
+                            color:#eb5d2b;
+                            .volume{
+                                background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
+                            }
+                        }    
+                    }  
                 }
                }
                
