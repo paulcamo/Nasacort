@@ -22,7 +22,7 @@ function setGlassHeadsPopup()
         
         if(!isMobile)
         {
-            hideAllAnatomies();
+            //hideAllAnatomies();
         }
         
         currentCharacter = $(this).attr("data-type");
@@ -273,21 +273,24 @@ $(window).bind("resize", function(){
 
 function addAudioPlayer()
 {
-    var mediaPlayer = jQuery('#glass-head #media-container');
+    //var mediaPlayer = jQuery('#glass-head #media-container');
 
-    mediaPlayer.jPlayer({
+    $('#glass-head #media-container').jPlayer({
         swfPath: 'swf/Jplayer.swf',
         solution: "flash, html",
         supplied : 'mp3, oga, wav',
         ready: function() {
-            alert(456);
             jQuery(this).jPlayer("setMedia", {
                 mp3: 'audio/sound.mp3'
-            });
+            }).jPlayer("play",10);
         }
     });
     
-    $('#glass-head .listen').click(function() {
+    
+    
+    $('#glass-head #play-sound-maria').click(function() {
         $('#glass-head #media-container').jPlayer('play');
+        //console.log($('#glass-head #media-container'));
     });
 }
+
