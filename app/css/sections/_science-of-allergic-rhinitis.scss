@@ -65,7 +65,7 @@
                 .head {
                     overflow: hidden;
                     text-align: center;
-                    font-family: $paytone-one;
+                    font-family: $font-proxima-nova-extrabold;
                     font-size: 120px;
                     // font-weight: bold;
                     color: #FF882D;
@@ -74,7 +74,7 @@
                         margin: 0;
                         line-height: normal;
                         float: none;
-                        font-family: $paytone-one;
+                        font-family: $font-proxima-nova-extrabold;
                         font-size: 120px;
                         color: #FF882D;
                         @media screen and (max-width: 1190px) {
@@ -143,6 +143,7 @@
                         font-size: 15px;
                     }
                 } .chart{
+                    height: 120px;
                     position: relative;
                     background-color: #d6d6d6;
                     overflow: hidden;
@@ -150,9 +151,11 @@
                     margin: 0 auto;
                     text-align: left;
                     @media screen and (max-width: 1190px) {
-                            width: 180px;
+                        height: 90px;
+                        width: 180px;
                     }
                     @media screen and (max-width: 900px) {
+                            height: 120px;
                             width: 240px;
                     }
                     img{
@@ -204,12 +207,12 @@
             }
             #panel_3{
                 .line{
-                    height: 40px;
+                    height: 45px;
                     @media screen and (max-width: 1190px) {
-                        height: 30px;
+                        height: 35px;
                     }
                     @media screen and (max-width: 900px) {
-                        height: 40px;                    
+                        height: 45px;                    
                     }
                 }
                 
@@ -217,7 +220,14 @@
                     left:0%
                 }
                 .line2{
-                    left:-92%
+                    height: 30px;
+                    left:-90%;
+                    @media screen and (max-width: 1190px) {
+                        height: 20px;
+                    }
+                    @media screen and (max-width: 900px) {
+                        height: 30px;                    
+                    }
                 }
                 .line3{
                     left:-100%
