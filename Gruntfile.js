@@ -168,6 +168,22 @@ module.exports = function(grunt) {
                     dest: 'build/fonts/'
                 }, ],
             },
+            swf: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/swf/',
+                    src: '**/*',
+                    dest: 'build/swf/'
+                }]
+            },
+            audio: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/audio/',
+                    src: '**/*',
+                    dest: 'build/audio/'
+                }]
+            },
             etc: {
                 files: [{
                     expand: true,

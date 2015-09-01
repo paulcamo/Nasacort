@@ -2,6 +2,7 @@
 
 $(document).ready(function() {   
     setGlassHeadsPopup();
+    addAudioPlayer();
 });
 
 var mariasHotSpots = [{x:"17.1%",y:"28.30%",id:"itchy"},{x:"40.78%",y:"10.98%",id:"nasal"},{x:"37.74%",y:"32.84%",id:"congestion"}];
@@ -42,11 +43,11 @@ function setGlassHeadsPopup()
         {
             $("#glass-head #liam").show();
         }
-        if(currentGlassHead == "" && !isMobile)
+        if(currentGlassHead === "" && !isMobile)
         { 
              $("#glass-head #" + currentCharacter + " .default").show();   
         }
-        if(currentGlassHead == "" && isMobile)
+        if(currentGlassHead === "" && isMobile)
         { 
              showAllAnatomies();
              $("#glass-head .default").hide();
@@ -184,7 +185,7 @@ function hideLiamsAnatomy()
 
 function showAllAnatomies()
 {
-    if(currentCharacter != "")
+    if(currentCharacter !== "")
     {
         $("#glass-head #" + currentCharacter + " .anatomy").show();
     }
@@ -192,7 +193,7 @@ function showAllAnatomies()
 
 function showCurrentAnatomy()
 {
-    if(currentCharacter !=  "")
+    if(currentCharacter !==  "")
     {
         $("#glass-head #" + currentCharacter + " ." + currentGlassHead).show();   
     }
@@ -242,21 +243,21 @@ $(window).bind("resize", function(){
             addLiamsHotSpots();
             resetAnatomies();
         }
-        if(currentGlassHead != "" && currentCharacter != "")
+        if(currentGlassHead !== "" && currentCharacter !== "")
         { 
-            if(currentCharacter != "")
+            if(currentCharacter !== "")
             {
                 $("#glass-head #" + currentCharacter + " .anatomy").hide();  
             }
              showCurrentAnatomy();   
         }
-        if(currentGlassHead == "")
+        if(currentGlassHead === "")
         {
             resetAnatomies();
         }
         
         $("#glass-head .hotspot").show();
-        if(currentGlassHead != "")
+        if(currentGlassHead !== "")
         {
             $("#glass-head .hotspots-container #" + currentGlassHead).addClass("active");
         }
@@ -269,3 +270,24 @@ $(window).bind("resize", function(){
         $("#glass-head .default").hide();   
     }
 });
+
+function addAudioPlayer()
+{
+    var mediaPlayer = jQuery('#glass-head #media-container');
+
+    mediaPlayer.jPlayer({
+        swfPath: 'swf/Jplayer.swf',
+        solution: "flash, html",
+        supplied : 'mp3, oga, wav',
+        ready: function() {
+            alert(456);
+            jQuery(this).jPlayer("setMedia", {
+                mp3: 'audio/sound.mp3'
+            });
+        }
+    });
+    
+    $('#glass-head .listen').click(function() {
+        $('#glass-head #media-container').jPlayer('play');
+    });
+}
