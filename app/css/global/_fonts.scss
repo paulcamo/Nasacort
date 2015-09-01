@@ -8,6 +8,9 @@ $font-proxima-nova-regular: "Proxima Nova Regular";
 $font-proxima-nova-bold: "Proxima Nova Bold";
 @include fontFace($font-proxima-nova-bold, "../fonts/ProximaNova-Bold/ProximaNova-Bold");
 
+$font-proxima-nova-extrabold: "Proxima Nova Extra Bold";
+@include fontFace($font-proxima-nova-extrabold, "../fonts/ProximaNova-Extrabold/proximanova-extrabld");
+
 $font-proxima-nova-semibold-italic: "Proxima Nova Semibold Italic";
 @include fontFace($font-proxima-nova-semibold-italic, "../fonts/ProximaNova-Semibolditalic/proximaNova-Semibolditalic");
 
