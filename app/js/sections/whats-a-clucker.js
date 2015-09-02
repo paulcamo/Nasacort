@@ -175,7 +175,10 @@ $(window).bind("resize", function(){
         { 
             if(currentCharacter !== "")
             {
-                $("#glass-head #" + currentCharacter + " .anatomy").hide();  
+                if(currentCharacter !== "")
+                {
+                    $("#glass-head #" + currentCharacter + " .anatomy").hide();  
+                }    
             }
              showCurrentAnatomy();   
         }
