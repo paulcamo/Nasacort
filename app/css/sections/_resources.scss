@@ -1,9 +1,326 @@
 .resources-section {
     
     .banner{
-        background-color:$color-blue-light-container;
-        height:170px;
+        background-color:$color-light-blue;
+        min-height:170px;
         width:100%;
+        padding-left:#{fluid-percentage($site-max-width, 220)};
+        padding-right:#{fluid-percentage($site-max-width, 220)};
+        h1{
+            padding-top:63px;
+        }
     }
     
+    h2{
+        font-family:Arial, Helvetica, sans-serif;  
+        font-size:32px;
+        color:#6d6e6e;
+        margin-top:0;
+        margin-bottom:0;
+        .icon{
+            display: inline-block;
+            position: relative;
+            margin-right: 10px;
+            top: 4px;
+        }   
+    }
+    
+    .videos{
+        padding-top:36px;
+        padding-left:#{fluid-percentage($site-max-width, 220)};
+        padding-right:#{fluid-percentage($site-max-width, 220)};
+        h2{
+            margin-bottom:30px;
+            .icon{
+                background:url("../img/desktop/resources/icon-videos.png") no-repeat;
+                width:53px;
+                height:38px;
+            }
+        }
+        
+        .thumbnails{
+            .video-thumbnail{
+                width:33%;
+                float:left;
+                margin-right:2.87%;
+                max-width:302px;
+                .thumb{
+                    width:100%;
+                    height:172px;
+                    
+                    &.thumb-1{
+                        background:url("../img/desktop/resources/video-thumb-1.jpg") no-repeat;
+                    }
+                    &.thumb-2{
+                        background:url("../img/desktop/resources/video-thumb-2.jpg") no-repeat;
+                    }
+                }
+                h3{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:22px;
+                    color:$color-blue;
+                    width:302px;
+                    margin-top:10px;
+                    margin-bottom:4px;
+                    font-weight:bold;
+                }
+                p{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:16px;
+                    color:#5a5e5f;
+                    width:302px;
+                    line-height:22px;
+                    margin-bottom:24px;
+                }
+            }
+        }
+    }
+        
+    .for-your-patients{
+        width:100%;
+        background-color:#ebeff4;
+        float:left;
+        padding-top:32px;
+        padding-left:#{fluid-percentage($site-max-width, 220)};
+        padding-bottom:52px;
+        padding-right:#{fluid-percentage($site-max-width, 220)};
+        h2{
+            margin-bottom:30px;
+            .icon{
+                background:url("../img/desktop/resources/icon-for-your-patients.png") no-repeat;
+                width:47px;
+                height:47px;
+                top:12px;
+            }
+        }
+        .resource-container{
+            background-color:$color-white;
+            width:50%;
+            max-width:472px;
+            max-height:198px;
+            padding-left:1.5%;
+            padding-right:1%;
+            margin-right:#{fluid-percentage($site-max-width, 18)};
+            margin-bottom:#{fluid-percentage($site-max-width, 18)};
+            padding-top:20px;
+            padding-bottom:20px;
+            @include border-radius(5px);
+            border: 1px solid #c5c7c9;
+            float:left;
+            .preview{
+                width:26.38%;
+                height:160px;
+                float:left;
+                min-width:114px;
+                max-width:114px;
+                &.preview-1{
+                    background:url("../img/desktop/resources/resource-thumb-1.png") no-repeat;
+                    background-size:contain;
+                }
+                &.preview-2{
+                    background:url("../img/desktop/resources/resource-thumb-2.png") no-repeat;
+                    background-size:contain;
+                }
+                &.preview-3{
+                    background:url("../img/desktop/resources/resource-thumb-3.png") no-repeat;
+                    background-size:contain;
+                }
+                &.preview-4{
+                    background:url("../img/desktop/resources/resource-thumb-4.png") no-repeat;
+                    background-size:contain;
+                }
+            }
+            .content{
+                width: 70.9%;
+                margin-left: 3.2%;
+                float:left;
+                h3{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:22px;
+                    color:$color-blue;
+                    width:auto;
+                    margin-top:0;
+                    margin-bottom:4px;
+                    font-weight:bold;
+                    text-transform:none;
+                }
+                p{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:16px;
+                    color:#5a5e5f;
+                    line-height:22px;
+                    margin-bottom:16px;
+                }
+                .download-cta-button{
+                    margin: 0;
+                    width:280px;
+                    .sympt{
+                        height:50px;
+                        width:180px;
+                        img{
+                            margin-top: 4px;
+                        }
+                        .show-dsk{
+                            display: none;
+                        }
+                        .show-mbl{
+                            display: block;
+                        }
+                        .down-txt{
+                            font-size: 18px;
+                            line-height: 18px;
+                            padding: 15px 4px 0 20px;
+                            text-align: left;
+                            max-width: 162px;
+                             &:before{
+                                  height: 39px;
+                             }
+                        }
+                    }
+                    .shareSympt{
+                        background:url('../img/global/mobile/share-btn-medium.png')no-repeat;
+                        width: 100px;
+                        font-size: 16px;
+                        height: 51px;
+                        padding-top:14px;
+                        .shareSympt-icon{
+                            background-size:100%;
+                            top: 4px;
+                        }
+                    }
+                }
+            }
+            &.last{
+                margin-right:0;
+            }
+        }
+    }
+    
+    .for-your-practice{
+        width:100%;
+        background-color:$color-white;
+        float:left;
+        padding-top:32px;
+        padding-left:#{fluid-percentage($site-max-width, 220)};
+        padding-bottom:214px;
+        padding-right:#{fluid-percentage($site-max-width, 220)};
+        h2{
+            margin-bottom:30px;
+            .icon{
+                background:url("../img/desktop/resources/icon-for-your-patients.png") no-repeat;
+                width:47px;
+                height:47px;
+                top:12px;
+            }
+        }
+         .resource-container{
+            background-color:$color-white;
+            width:50%;
+            max-width:472px;
+            max-height:295px;
+            height:295px;
+            padding-left:1.5%;
+            padding-right:1%;
+            margin-right:#{fluid-percentage($site-max-width, 18)};
+            margin-bottom:#{fluid-percentage($site-max-width, 18)};
+            padding-top:20px;
+            padding-bottom:20px;
+            @include border-radius(5px);
+            border: 1px solid #c5c7c9;
+            float:left;
+            .preview{
+                width:26.38%;
+                height:160px;
+                float:left;
+                min-width:114px;
+                max-width:114px;
+                &.preview-1{
+                    background:url("../img/desktop/resources/resource-thumb-5.png") no-repeat;
+                    background-size:contain;
+                }
+                &.preview-2{
+                    background:url("../img/desktop/resources/resource-thumb-6.png") no-repeat;
+                    background-size:contain;
+                }
+            }
+            .content{
+                width: 70.9%;
+                margin-left: 3.2%;
+                float:left;
+                h3{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:22px;
+                    color:$color-blue;
+                    width:auto;
+                    margin-top:0;
+                    margin-bottom:4px;
+                    font-weight:bold;
+                    text-transform:none;
+                }
+                p{
+                    font-family:Arial, Helvetica, sans-serif;  
+                    font-size:16px;
+                    color:#5a5e5f;
+                    line-height:22px;
+                    margin-bottom:16px;
+                }
+                .download-cta-button{
+                    margin: 0;
+                    width:280px;
+                    .sympt{
+                        height:50px;
+                        width:180px;
+                        img{
+                            margin-top: 4px;
+                        }
+                        .show-dsk{
+                            display: none;
+                        }
+                        .show-mbl{
+                            display: block;
+                        }
+                        .down-txt{
+                            font-size: 18px;
+                            line-height: 18px;
+                            padding: 15px 4px 0 20px;
+                            text-align: left;
+                            max-width: 162px;
+                             &:before{
+                                  height: 39px;
+                             }
+                        }
+                    }
+                    .shareSympt{
+                        background:url('../img/global/mobile/share-btn-medium.png')no-repeat;
+                        width: 100px;
+                        font-size: 16px;
+                        height: 51px;
+                        padding-top:14px;
+                        .shareSympt-icon{
+                            background-size:100%;
+                            top: 4px;
+                        }
+                    }
+                }
+            }
+            &.last{
+                margin-right:0;
+            }
+            &.elastic{
+                position:relative;
+                .content{
+                    height:100%;
+                }
+                .download-cta-button{
+                    margin-top:111px;
+                }
+            }
+        }
+    }    
+}
+
+@include breakpoint('desktop') {
+.resources-section {
+    
+} 
 }
