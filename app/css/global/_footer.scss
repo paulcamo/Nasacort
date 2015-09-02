@@ -76,6 +76,7 @@
 
 
                         sup {
+                            top:-5px;
                             @include breakpoint("mobile") {
                                 top: -0.65em;
 
@@ -353,7 +354,7 @@
                     &.subitem{
                         display:block;
                         a{
-                            font-size: 12px;
+                            font-size: 11px;
                         }
                     } 
                      
