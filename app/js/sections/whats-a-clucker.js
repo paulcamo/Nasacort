@@ -71,85 +71,28 @@ function setGlassHeadsPopup()
     
     if(!isMobile)
     {
-        addMariasHotSpots();
-        addMarksHotSpots();
-        addKarasHotSpots();
-        addLiamsHotSpots();
+        addHotSpots("maria", mariasHotSpots);
+        addHotSpots("mark", marksHotSpots);
+        addHotSpots("kara", karasHotSpots);
+        addHotSpots("liam", liamsHotSpots);
     }
 }
 
-function addMariasHotSpots()
+function addHotSpots(character, positions)
 {
-    for(var i = 0; i < mariasHotSpots.length; i++)
+    for(var i = 0; i < positions.length; i++)
     {
-         $("#glass-head #maria .hotspots-container").append("<div class='hotspot' id='"+ mariasHotSpots[i].id +"'></div>");
-         $("#glass-head #maria .hotspots-container").find("#"+ mariasHotSpots[i].id).css("left", mariasHotSpots[i].x).css("top", mariasHotSpots[i].y);
+         $("#glass-head #" + character + " .hotspots-container").append("<div class='hotspot' id='"+ positions[i].id +"'></div>");
+         $("#glass-head #" + character + " .hotspots-container").find("#"+ positions[i].id).css("left", positions[i].x).css("top", positions[i].y);
     }
-    $("#glass-head #maria .hotspots-container .hotspot").each(function(index) {
+    $("#glass-head #" + character + " .hotspots-container .hotspot").each(function(index) {
         $(this).on("click", function(){
             resetHotSpots();
             $(this).addClass("active");
-            hideMariasAnatomy();
+            hideAnatomy(character);
             var id = $(this).attr("id");
             currentGlassHead = id;
-            $("#glass-head #maria").find("." + id).show();
-        });
-    });
-}
-
-function addMarksHotSpots()
-{ 
-    for(var i = 0; i < marksHotSpots.length; i++)
-    {
-         $("#glass-head #mark .hotspots-container").append("<div class='hotspot' id='"+ marksHotSpots[i].id +"'></div>");
-         $("#glass-head #mark .hotspots-container").find("#"+ marksHotSpots[i].id).css("left", marksHotSpots[i].x).css("top", marksHotSpots[i].y);
-    }
-    $("#glass-head #mark .hotspots-container .hotspot").each(function(index) {
-        $(this).on("click", function(){
-            resetHotSpots();
-            $(this).addClass("active");
-            hideMarksAnatomy();
-            var id = $(this).attr("id");
-            currentGlassHead = id;
-            $("#glass-head #mark").find("." + id).show();
-        });
-    });
-}
-
-function addKarasHotSpots()
-{
-    for(var i = 0; i < karasHotSpots.length; i++)
-    {
-         $("#glass-head #kara .hotspots-container").append("<div class='hotspot' id='"+ karasHotSpots[i].id +"'></div>");
-         $("#glass-head #kara .hotspots-container").find("#"+ karasHotSpots[i].id).css("left", karasHotSpots[i].x).css("top", karasHotSpots[i].y);
-    }
-    $("#glass-head #kara .hotspots-container .hotspot").each(function(index) {
-        $(this).on("click", function(){
-            resetHotSpots();
-            $(this).addClass("active");
-            hideKarasAnatomy();
-            var id = $(this).attr("id");
-            currentGlassHead = id;
-            $("#glass-head #kara").find("." + id).show();
-        });
-    });
-}
-
-function addLiamsHotSpots()
-{ 
-    for(var i = 0; i < liamsHotSpots.length; i++)
-    {
-         $("#glass-head #liam .hotspots-container").append("<div class='hotspot' id='"+ liamsHotSpots[i].id +"'></div>");
-         $("#glass-head #liam .hotspots-container").find("#"+ liamsHotSpots[i].id).css("left", liamsHotSpots[i].x).css("top", liamsHotSpots[i].y);
-    }
-    $("#glass-head #liam .hotspots-container .hotspot").each(function(index) {
-        $(this).on("click", function(){
-            resetHotSpots();
-            $(this).addClass("active");
-            hideLiamsAnatomy();
-            var id = $(this).attr("id");
-            currentGlassHead = id;
-            $("#glass-head #liam").find("." + id).show();
+            $("#glass-head #" + character).find("." + id).show();
         });
     });
 }
@@ -163,24 +106,9 @@ function hideAllAnatomies()
        
 }
 
-function hideMariasAnatomy()
+function hideAnatomy(id)
 {
-    $("#glass-head #maria .anatomy").hide();
-}
-
-function hideMarksAnatomy()
-{
-    $("#glass-head #mark .anatomy").hide();
-}
-
-function hideKarasAnatomy()
-{
-    $("#glass-head #kara .anatomy").hide();
-}
-
-function hideLiamsAnatomy()
-{
-    $("#glass-head #liam .anatomy").hide();
+    $("#glass-head #" + id + " .anatomy").hide();
 }
 
 function showAllAnatomies()
@@ -211,10 +139,10 @@ function hideHotSpots()
 
 function resetAnatomies()
 {
-    hideMariasAnatomy();
-    hideMarksAnatomy();
-    hideKarasAnatomy();
-    hideLiamsAnatomy();
+    hideAnatomy("maria");
+    hideAnatomy("mark");
+    hideAnatomy("kara");
+    hideAnatomy("liam");
     $("#glass-head .default").show();
 }
 
@@ -224,23 +152,23 @@ $(window).bind("resize", function(){
     {
         if($('#glass-head #maria .hotspots-container').is(':empty')) 
         {
-            addMariasHotSpots();
+            addHotSpots("maria", mariasHotSpots);
             resetAnatomies();
         }
         
         if($('#glass-head #mark .hotspots-container').is(':empty')) 
         {  
-            addMarksHotSpots();
+            addHotSpots("mark", marksHotSpots);
             resetAnatomies();
         }
         if($('#glass-head #kara .hotspots-container').is(':empty')) 
         {
-            addKarasHotSpots();
+            addHotSpots("kara", karasHotSpots);
             resetAnatomies();
         }
         if($('#glass-head #liam .hotspots-container').is(':empty')) 
         {
-            addLiamsHotSpots();
+            addHotSpots("liam", liamsHotSpots);
             resetAnatomies();
         }
         if(currentGlassHead !== "" && currentCharacter !== "")
