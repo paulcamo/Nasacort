@@ -10,12 +10,30 @@
             border-bottom: 1px #d2e2f4 solid;
             overflow: hidden;
             padding-bottom: 22px;
+            @include breakpoint("mobile") {
+                padding-bottom: 0;
+            }
             .inner-lists{
                 max-width: 1400px;
                 margin: auto;
                 display: block;
                 overflow: hidden;
                 padding-left: 188px;
+                @include breakpoint("desktop") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("tablet") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("mobile") {
+                    max-width: 100%;
+                    padding-left: 0;
+                    padding-right:0;
+                }
             }
             .footer-col{
                 float:left;
@@ -43,7 +61,7 @@
                         font-family:Arial, Helvetica, sans-serif;
                         font-size:14px;
                         line-height: 18px;
-                        
+                        letter-spacing: 0.28px;
                         &:hover{
                             /*text-decoration:underline;*/
                             
@@ -97,12 +115,30 @@
             overflow: hidden;
             display: block;
             padding-top:13px;
+            @include breakpoint("mobile") {
+                padding-top:0;
+            }
             .inner-alternative-content{
                 max-width: 1400px;
                 margin: auto;
                 display: block;
                 overflow: hidden;
                 padding-left: 188px;
+                @include breakpoint("desktop") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("tablet") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("mobile") {
+                    max-width: 100%;
+                    padding-left: 0;
+                    padding-right:0;
+                }
             }
             ul{
                 margin-top:16px;
@@ -146,6 +182,21 @@
                 margin: auto;     
                 overflow: hidden;
                 padding: 0 189px;
+                @include breakpoint("desktop") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("tablet") {
+                    max-width: 100%;
+                    padding-left: 12%;
+                    padding-right:12%;
+                }
+                @include breakpoint("mobile") {
+                    max-width: 100%;
+                    padding-left: 0;
+                    padding-right:0;
+                }
             }
             ul{
                 li{
@@ -316,8 +367,8 @@
             }
         }
         .alternative-content{
-            padding-left:4%;
-            padding-right:4%;
+            padding-left:3%;
+            padding-right:3%;
             height:38px;
             border-top:1px solid #4ca3e3;
             ul{
@@ -326,7 +377,7 @@
                 
                 li{
                     a{
-                        font-size:11px;
+                        font-size:12px;
                         line-height:38px;
                     }
                     .pipe{
