@@ -7,15 +7,20 @@
         
         .lists{
             height:100%;
-            padding-left: #{fluid-percentage($site-max-width, 213)};
-            padding-right: #{fluid-percentage($site-max-width, 213)};
             border-bottom: 1px #d2e2f4 solid;
             overflow: hidden;
             padding-bottom: 22px;
+            .inner-lists{
+                max-width: 1400px;
+                margin: auto;
+                display: block;
+                overflow: hidden;
+                padding-left: 188px;
+            }
             .footer-col{
                 float:left;
                 position:relative;
-                margin-right: 6%;
+                margin-right: 76px;
                 @include breakpoint('tablet') {
                     margin-right: 3%;
                     width:20%;
@@ -69,28 +74,36 @@
             }
             
             .second-col{
-                margin-top:68px;
+                margin-top: 68px;
+                margin-right: 79px;
             }
             
             .third-col{
-                margin-top:68px;
+                margin-top: 68px;
+                margin-right: 84px;
             }
             
             .fourth-col{
-                margin-top:68px;
-                width: 19%;
+                margin-top: 68px;
+                width: 20%;
                 margin-right: 0px;
             }
         }
         
         .alternative-content{
-            padding-left: #{fluid-percentage($site-max-width, 213)};
-            padding-right: #{fluid-percentage($site-max-width, 213)};
-            float: left;
             width: 100%;
             height:45px;
             background-color:$color-dark-blue2;
-            
+            overflow: hidden;
+            display: block;
+            padding-top:13px;
+            .inner-alternative-content{
+                max-width: 1400px;
+                margin: auto;
+                display: block;
+                overflow: hidden;
+                padding-left: 188px;
+            }
             ul{
                 margin-top:16px;
                 li{
@@ -121,14 +134,19 @@
         
         .bottom-content{
             background:url("../img/desktop/footer/bg-footer.jpg") repeat-x;
-            padding-left: #{fluid-percentage($site-max-width, 213)};
-            padding-right: #{fluid-percentage($site-max-width, 213)};
             height:108px;
             background-color:#dfeaf7;
-            float: left;
             padding-top: 21px;
             width: 100%;
-            
+            width: 100%;
+            overflow: hidden;
+            display: block;
+            .inner-bottom-content{
+                max-width: 1400px;
+                margin: auto;     
+                overflow: hidden;
+                padding: 0 189px;
+            }
             ul{
                 li{
                     float:left;
@@ -175,7 +193,6 @@
                 height:65px;
                 float: right;
                 margin-top: 6px;
-                margin-right: 278px;
                 @include breakpoint('desktop') {
                     margin-right: 0;
                 }
