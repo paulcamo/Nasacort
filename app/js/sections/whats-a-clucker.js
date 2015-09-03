@@ -352,7 +352,7 @@ function clickInNav() {
         // $(document).removeClass('click_state');
         $('.click_state').find('.arrow-upMenu').removeClass('hover');
         $('.click_state').removeClass('click_state');
-    })
+    });
 
 }
 
