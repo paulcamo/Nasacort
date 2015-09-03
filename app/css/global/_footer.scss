@@ -1,8 +1,16 @@
+.ie9 .footer{
+    .fixIe{
+        line-height: 24px!important;
+        top: -7px!important;
+        @include breakpoint("mobile") {
+            top: -2px!important;
+        }
+    }
+}
 .footer {
     background-color:$color-dark-blue2;
     width:100%;
     float:left;
-    
     .footer-content{
         
         .lists{
