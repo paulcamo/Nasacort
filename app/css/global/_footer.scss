@@ -3,7 +3,7 @@
         line-height: 24px!important;
         top: -7px!important;
         @include breakpoint("mobile") {
-            top: -2px!important;
+            top: -7px!important;
         }
     }
 }
@@ -56,6 +56,11 @@
                     width:20%;
                 }
                 .subitem{
+                    @include breakpoint('mobile') {
+                        strong{
+                            font-weight: normal;
+                        }
+                    }
                     a{
                         font-size: 16px;
                         color:$color-cyan;
