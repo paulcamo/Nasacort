@@ -346,6 +346,9 @@
                         font-size:12px;
                         line-height: 36px;
                         padding-left: 4%;
+                        sup{
+                            line-height: 45px!important;
+                        }
                     } 
                     &:first-child{
                         display:block;
