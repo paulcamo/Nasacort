@@ -10,10 +10,25 @@
 
 
   .header-box {
-    background-color: yellowgreen;
-    max-width: 1024px;
+    max-width: 1400px;
     margin: auto;
     position: relative;
+    overflow: hidden;
+    padding-bottom: 7px;
+    padding-right: 98px;
+    padding-left: 260px;
+    @include breakpoint("desktop") {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+    @include breakpoint("tablet") {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    @include breakpoint("mobile") {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
 
@@ -26,6 +41,7 @@
           height:21px;
           float:right;
           margin-top:4px;
+          margin-right: 116px;
           //margin-right: #{fluid-percentage($site-max-width, 180)};
 
 
@@ -43,8 +59,21 @@
           height:43px;
 
         @include breakpoint("tablet-n-up") {
-          max-width: 1024px;
+          max-width: 1400px;
           margin: auto;
+        }
+
+        @include breakpoint("desktop") {
+          padding-right: 10%;
+          padding-left: 10%;
+        }
+        @include breakpoint("tablet") {
+          padding-right: 0;
+          padding-left: 0;
+        }
+        @include breakpoint("mobile") {
+          padding-right: 0;
+          padding-left: 0;
         }
 
 
@@ -57,6 +86,7 @@
               width:218px;
               float: left;
               line-height: 28px;
+              margin-left: 268px;
               //margin-left:#{fluid-percentage($site-max-width, 192)};
 
             @include breakpoint("desktop") {
@@ -114,10 +144,11 @@
       }
       
        ul.utility-nav{
-           float:right;
-           margin-top: 13px;
-           position: relative;
-           z-index: 1;
+        float: right;
+        margin-top: 7px;
+        position: relative;
+        z-index: 1;
+        margin-right: 16px;
            //margin-right: #{fluid-percentage($site-max-width, 180)};
 
 
@@ -130,7 +161,7 @@
 
           li{
               float:left;
-              margin-left:25px;
+              margin-left:29px;
               
               a{
                   color: $color-light-blue2;
@@ -156,17 +187,22 @@
       }
       
       ul.main-nav{
-           margin-top: 48px;
-           position: absolute;
-           right: -30px;
+        margin-top: 27px;
+        position: relative;
+        z-index: 1;
+        float: right;
 
-        @media screen and (min-width: 769px) and (max-width: 1068px)   {
-          left: 9px;
-          right: 0;
+        @include breakpoint("desktop") {
+          margin-top: 0;
+          clear: both;
+          float: left;
+          margin-left: 10px;
         }
-
-        @media screen and (min-width: 1069px) and (max-width: 1399px)   {
-          right: 0;
+        @include breakpoint("tablet") {
+          margin-top: 6px;
+          clear: both;
+          float: left;
+          margin-left: 10px;
         }
 
 
@@ -177,7 +213,7 @@
 
         .item1 {
           @include breakpoint("desktop-n-up") {
-            width: 197px;
+            width: 196px;
           }
           //@include breakpoint("tablet") {
           //  width: 151px;
@@ -191,7 +227,7 @@
         .item2 {
           @include breakpoint("desktop-n-up") {
             width: 171px;
-            margin-left: 11px;
+            margin-left: 10px;
           }
 
           //@include breakpoint("tablet") {
@@ -204,8 +240,8 @@
 
         .item3 {
           @include breakpoint("desktop-n-up") {
-            width: 177px;
-            margin-left: 12px;
+            width: 176px;
+            margin-left: 9px;
           }
 
 
@@ -214,7 +250,7 @@
         .item4 {
           @include breakpoint("desktop-n-up") {
             width: 237px;
-            margin-left: 11px;
+            margin-left: 10px;
           }
 
          }
@@ -315,7 +351,7 @@
   
   .shine{
        background:url("../img/desktop/header/header-shine.png") no-repeat;
-       width:1232px;
+       width:1400px;
        height:82px;
        position: absolute;
        margin-left: auto;
@@ -323,6 +359,7 @@
        left:0;
        right:0;
        z-index: 0;
+       background-position: 27px 0;
   }
   
 }
@@ -339,9 +376,6 @@
           background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
           height: 150px;
         }      
-       ul.main-nav{
-           margin-top: 80px;
-       }
       }
       .shine{
           height:111px;
@@ -368,7 +402,7 @@
           background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
           height: 150px;
            .nassacort-logo{
-               margin-left:12%; //13%
+               margin-left:10%; //13%
            }
             ul.utility-nav{
                 margin-right:12%;
@@ -380,11 +414,10 @@
             }
         }      
        ul.main-nav{
-           margin-top: 80px;
            margin-right:0;
            right:0;
            margin-left: 0;
-           left:11%;
+           left:9%;
            li{
                a{
                    font-size:13px;
@@ -489,7 +522,7 @@
        ul.main-nav{
             background-color: #ffffff;
             margin-right: 0;
-            margin-top: 82px;
+            margin-top: 52px;
             right: 0;
             width: 100%;
             z-index:-1;
