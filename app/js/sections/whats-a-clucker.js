@@ -1,8 +1,15 @@
 //JavaScript Document
+var mobileBreakPoint = 768;
 
 $(document).ready(function() {   
     setGlassHeadsPopup();
     addAudioPlayer();
+
+    var contentwidth = $(window).width();
+    if ((contentwidth) >= mobileBreakPoint){
+        hoverInNav();
+        clickInNav();
+    }
 });
 
 var mariasHotSpots = [{x:"17.1%",y:"28.30%",id:"itchy"},{x:"40.78%",y:"10.98%",id:"nasal"},{x:"37.74%",y:"32.84%",id:"congestion"}];
@@ -247,5 +254,105 @@ function addAudioPlayer()
             isPlaying = false;
         }
     });
+}
+
+function hoverInNav(){
+    var currentPerson, name, name_nav;
+    $('.info-text>ul>li').hover(function(){
+        $(this).addClass('hover');
+        $(this).find('.arrow-upMenu').addClass('hover');
+        currentPerson = $(this).find('a').attr('href');
+        name = ".li_" + currentPerson.slice(5);
+        $(name + " .normal_img").hide();
+        $(name + " .hover_img").show();
+    },function(){
+        if ( $(this).hasClass('click_state') === false ) {
+            $(this).removeClass('hover');
+            $(this).find('.arrow-upMenu').removeClass('hover');
+            $('.img-container>ul>li .normal_img').show();
+            $('.img-container>ul>li .hover_img').hide();
+        }
+    });
+
+    $('.img-container>ul>li').hover(function(){
+        currentPerson = $(this).find('a').attr('href');
+        // console.log(currentPerson);
+        name = ".li_" + currentPerson.slice(5);
+        name_nav = ".li_nav_" + currentPerson.slice(5);
+        $(name_nav).addClass('hover');
+        $(name_nav).find('.arrow-upMenu').addClass('hover');
+        $(name + " .normal_img").hide();
+        $(name + " .hover_img").show();
+    },function(){
+        if ( $(this).hasClass('click_state') === false ) {
+            $(name + " .normal_img").show();
+            $(name + " .hover_img").hide();
+            $(".info-text>ul>li" + name_nav).removeClass('hover');
+            $(".info-text>ul>li" + name_nav).find('.arrow-upMenu').removeClass('hover');
+        }
+    });
+
+}
+
+function clickInNav() {
+    var currentPerson, name;
+    $('.img-container>ul>li').click(function(e){
+        e.preventDefault();
+
+        $(this).addClass('click_state');
+        // $(this).addClass('.active');
+        $('.img-container>ul>li').css('opacity','0.2');
+        $(this).css({'z-index':'2','opacity':'1'});
+        // hover state
+        $(this).find('img.normal_img').hide();
+        $(this).find('img.hover_img').show();
+        //Box
+        currentPerson = $(this).find('a').attr('href');
+        name = ".li_nav_" + currentPerson.slice(5);
+        $(name).addClass('click_state');
+        $(currentPerson).show('fast');
+    });
+    $('.info-text>ul>li').click(function(e){
+        e.preventDefault();
+        $(this).addClass('click_state');
+        $('.img-container>ul>li').css('opacity','0.2');
+        currentPerson = $(this).find('a').attr('href');
+        name = ".li_" + currentPerson.slice(5);
+        $(name).css({'z-index':'2','opacity':'1'});
+        $(name).addClass('click_state');
+        $(name + " .normal_img").hide();
+        $(name + " .hover_img").show();
+        $(currentPerson).show('fast');
+    });
+
+    // on click out of modal
+    var container = $(".box");
+    $(document).mouseup(function (e){
+        if (!container.is(e.target)&& container.has(e.target).length === 0){
+            $('.img-container>ul>li .normal_img').show();
+            $('.img-container>ul>li .hover_img').hide();
+            container.hide('fast');
+            $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
+            $('.click_state').removeClass('hover');
+            // $(document).removeClass('active');
+            // $(document).removeClass('click_state');
+            $('.click_state').find('.arrow-upMenu').removeClass('hover');
+            $('.click_state').removeClass('click_state');
+        }
+    });
+
+    // on click close box
+    $('.close').click(function(e){
+        $('.img-container>ul>li .normal_img').show();
+        $('.img-container>ul>li .hover_img').hide();
+        container.hide('fast');
+        $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
+        $('.click_state').removeClass('hover');
+        // $(document).removeClass('active');
+        // $(document).removeClass('click_state');
+        $('.click_state').find('.arrow-upMenu').removeClass('hover');
+        $('.click_state').removeClass('click_state');
+    })
+
 }
 
