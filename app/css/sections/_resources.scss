@@ -306,15 +306,6 @@
          left:0;
          right:0;
     }
-    .for-your-practice{
-        .resource-container{
-            &.last{
-                .content{
-                    margin-bottom: 0;
-                }
-            }
-        }
-    }
 } 
 }
 
@@ -350,6 +341,7 @@
             font-size:15px;
         }
     }
+    
     .preview{
         margin-bottom:0;
         min-height: 190px;
@@ -515,6 +507,11 @@
             padding-top: 12px;
             padding-bottom:9px;
             margin-bottom:21px;
+            &.last{
+                .content{
+                    margin-bottom: 0;
+                }
+            }
             &.huge{
                  .preview{
                     min-height: 170px;
