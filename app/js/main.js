@@ -419,6 +419,15 @@ function removeRedHighlightedClassForMobile()
 }
 
 
+// --script for targeting device-specific styles --------------------------------
+
+var md = new MobileDetect(window.navigator.userAgent);
+
+if (md.os()=='AndroidOS') {
+    $(".footer sup").addClass("android-footer");
+}
+
+// --------------------------------------------------------------------------------
 
 
 
