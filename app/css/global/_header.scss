@@ -476,7 +476,12 @@
               background-position:100%;
               background-size:100% contain; 
               margin-top:28px;
+              @media screen and (max-width: 640px) {
+                background:url("../img/mobile/header/header-shine-small.png") no-repeat;
+                background-size:cover;
+            }
           }
+          
           .nassacort-logo{
               width:89px;
               height:33px;
