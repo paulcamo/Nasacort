@@ -5,9 +5,9 @@ $middle-blue: #0d4a84;
 .content-dosing-and-efficacy{
   position: relative;
   overflow: hidden;
-  min-width: 1000px;
   padding-left: #{fluid-percentage($site-max-width, 213)};
   padding-right: #{fluid-percentage($site-max-width, 213)};
+  margin-bottom: -45px;
   .use-directed{
     margin-bottom: 5px;
     margin-top: 5px;
@@ -16,6 +16,9 @@ $middle-blue: #0d4a84;
   a{
     color:$color-cyan-text;
   }
+  h1{
+      width:55%;
+  }
 }
 
 .hero-dosing-and-efficacy{
@@ -23,6 +26,7 @@ $middle-blue: #0d4a84;
   display: block;
   position:relative;
   height: 442px;
+  background-size:100% contain;
   .img-womn{
     position:absolute;
     right: 15%;
@@ -31,7 +35,6 @@ $middle-blue: #0d4a84;
 }
 
 .dosing-information{
-  top:-45px;
   h2{
     font-size: 34px;
     line-height: 39px;
@@ -44,6 +47,9 @@ $middle-blue: #0d4a84;
     display: block;
     width: 100%;
     text-align: center;
+  }
+  .footnote{
+      margin-top: -156px;
   }
 }
 
@@ -62,22 +68,34 @@ $middle-blue: #0d4a84;
     margin-bottom: 20px;
   }
   .video-control{
-    max-width: 1000px;
     .video-intial{
       background:url("../img/desktop/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat top center;
-      width:688px;
-      height:218px;
+      width: 68.4427%;
+      max-width:688px;
+      height:auto;
+      padding-bottom:22.686%;
       display:inline-block;
       float:left;
-      background-size: 100% auto;
+      padding-bottom: 21.6915%;
+      max-height: 218px;
+      background-size: contain;    
     }
     .label-information{
-      background:url("../img/desktop/dosingEfficacy/drugFact-dosingEfficacy.png")no-repeat top center;
+      background:url("../img/desktop/dosingEfficacy/label-btn.png")no-repeat top center;
       display: inline-block;
       float: left;
-      height: 220px;
-      width: 298px;
-      background-size: 100% auto;
+      height: auto;
+      width: 31.4427%;
+      max-height: 219px;
+      max-width: 316px;
+      padding-bottom:21.791%;;
+      background-size: contain;
+      &:hover{
+          background:url("../img/desktop/dosingEfficacy/label-btn-hover.png")no-repeat top center;
+          background-size: contain;
+          width: 31.4427%;
+          height: auto;
+      }
     }
   }
 }
@@ -144,6 +162,14 @@ $middle-blue: #0d4a84;
       }
     }
   }
+}
+
+@include breakpoint('tablet') {
+    .dosing-and-efficacy-section{
+        .dosing-information{
+            top:0;
+        }
+    }
 }
 
 
