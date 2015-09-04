@@ -39,7 +39,7 @@
       display: none;
       @include breakpoint('mobile'){
         right: -7px;
-        top: 9px;
+        top: 0;
       }
     }
     &:hover{
@@ -77,6 +77,13 @@
     background: none;
     background-color: $color-white;
     z-index: 100;
+
+  @include breakpoint("mobile") {
+      padding: 10px 30px 12px 17px;
+
+  }
+
+
     &:hover{
         background: none;
         background-color: $color-white;

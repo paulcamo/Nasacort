@@ -6,8 +6,8 @@ section: science-of-allergic-rhinitis
 layout: layout.hbs
 button-details: {"text":"Download the Chart", "main-link":"#aa", "share-link":"#bb"}
 
-footnote1: {"section":"references-science-of-allergic-rhinitis-1"}
-footnote2: {"section":"references-science-of-allergic-rhinitis-2"}
+footnote1: {"section":"references-science-of-allergic-rhinitis-1", "parent":"#parent-footnote1"}
+footnote2: {"section":"references-science-of-allergic-rhinitis-2", "parent":"#intranasal-steroids-antihistamines"}
 
 ---
 
@@ -25,7 +25,7 @@ footnote2: {"section":"references-science-of-allergic-rhinitis-2"}
     </div>
     <!---------------------------------------- Statistics ---------------------------------------->
     <div class="statistics" id="affects-patients-quality-of-life">
-        <div class="stats">
+        <div class="stats" id="parent-footnote1">
             <h2>Allergic Rhinitis Affects Patients&apos; Quality of Life</h2>
             <p>Allergic rhinitis (AR) is highly prevalent, and is becoming increasingly common in children and adults. Symptoms such as sneezing, rhinorrhea, itchy nose, and nasal congestion have a far-reaching effect on a patient's quality of life.</p>
             <span class="chart-head">In studies of adults with allergic rhinitis:</span>
@@ -73,7 +73,7 @@ footnote2: {"section":"references-science-of-allergic-rhinitis-2"}
                 <img src="img/desktop/science-of-allergic-rhinitis/35pcnt-img.png"/> --}}
             </div>
             <p>For patients with allergic rhinitis, whose symptoms affect their lives, efficacy matters. Nothing is more effective in interrupting the <span class="blue-text">allergic cascade</span> than an OTC INS like Nasacort<sup>&reg;</sup> Allergy 24HR.</p>
-            {{>footnote footnote1}}
+            {{>footnote footnote1 }}
             <p class="right-aligned">Use only as directed.</p>
         </div>
     </div>
