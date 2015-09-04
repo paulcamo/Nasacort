@@ -13,6 +13,8 @@
      background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat;
      background-position:center;
      width:100%;
+     max-width: 1400px;
+     margin: auto;
     
     div{ 
         margin-left: #{fluid-percentage($site-max-width, 213)};
@@ -21,6 +23,9 @@
 
 .statistics{    
    height:auto;
+    max-width: 1400px;
+    margin: auto;
+
    .footnote{
             margin-top: -22px;
         }
