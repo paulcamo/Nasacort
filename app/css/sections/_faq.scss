@@ -53,6 +53,24 @@ p{
         padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
         padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
     }
+
+    .footnote {
+        @include breakpoint('mobile'){
+            left: -#{fluid-percentage($site-max-width-mobile, 20)};
+        }
+
+    }
+
+    .animation {
+        @include breakpoint('mobile'){
+            left: 0;
+        }
+
+    }
+
+
+
+
     h2{
         line-height: 38px;
         margin-bottom: 38px;

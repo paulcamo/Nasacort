@@ -127,13 +127,16 @@ $(this).parent().toggleClass("border-sect-faq");
 
 $('.footnote').on('click', function(e) {
     if($(this).attr("state") != "open"){
+        var parentHeight=$(this).data("parent");
+        var hh = $(parentHeight).outerHeight();
         var topCta = $(this).position().top;
         $(this).attr("state", "open");
         $(this).toggleClass("animation");  
         $(this).find('.rfrs').css("display","block");
         if(isMobile)
         {
-            $(this).css("top", topCta);       
+            $(this).css("top", topCta);
+            $(parentHeight).css("height",hh);
         }
         e.preventDefault();
     }
@@ -142,13 +145,17 @@ $('.footnote').on('click', function(e) {
 
 $('.footnote .close-btn').on('click', function(e) {
     e.stopPropagation();
-    //$(".animation").removeClass("animation");   
+    //$(".animation").removeClass("animation");
+    var parentHeight=$(this).parent().data("parent");
+
     $(this).parent().removeClass("animation"); 
     $(this).find('.rfrs').css("display","none");
     $(this).parent().attr("state", "closed");
     if(isMobile)
     {
-        $(this).parent().css("top", "");     
+        $(this).parent().css("top", "");
+        $(parentHeight).css("height","");
+
     }   
     e.preventDefault(); 
 });
@@ -161,9 +168,9 @@ function validateFootnote()
     {
         $('.footnote').css("top", "");
         $('.animation').css("top", "");    
-        $('.footnote').find('.rfrs').css("display","none"); 
+        $('.footnote').find('.rfrs').css("display","none");
     }else{
-        $(".animation").css("position", "relative");    
+        $(".animation").css("position", "relative");
     }
 }
 
