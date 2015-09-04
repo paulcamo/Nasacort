@@ -322,6 +322,14 @@
     .for-your-patients{
         .resource-container{
             min-width:300px;
+            max-width:100%;
+            width:100%;
+            .preview{
+                padding-bottom:29.35%;
+            }
+            .content{
+                margin-bottom:0;
+            }
         }
          h3{
             font-size:21px;
@@ -333,6 +341,20 @@
     .for-your-practice{
         .resource-container{
             min-width:300px;
+            max-width:100%;
+            width:100%;
+            .preview{
+                
+                padding-bottom:29.35%;
+            }
+            .content{
+                margin-bottom:0;
+            }
+            &.last{
+                .content{
+                   margin-bottom:0; 
+                }
+            }
         }
          h3{
             font-size:21px;
@@ -355,7 +377,7 @@
          margin-right: auto;
          position:absolute;
          bottom:0;
-         left:0;
+         left:3.2%;
          right:0;
          min-width:280px;
     }
