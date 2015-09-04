@@ -445,32 +445,32 @@
     min-width:320px;     
     .header-top{ 
         .top-bar{
-            height:15px;
-            background-position: 0px -15px;
+            height:20px;
+            background-position: 0px -10px;
             .hcp{
-                margin-left:4%;
+                margin-left:3.125%;
                 font-size:6px;
-                line-height:13px;
+                line-height:17px;
                 width:auto;
             }
             .sanofi-logo{
                 background-size:100%;
                 float: right;
                 height: 11px;
-                margin-right: 1%;
-                margin-top: 1px;
+                margin-right: 3.125%;
+                margin-top: 4px;
                 width: 50px;
             }
         }
       .blue-bar{          
           background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
-          height: 65px;
+          height: 99px;
           margin-top:0;
           background-position:0px 0px;
           height:91px;
           
           .shine{
-              height:54px;
+              height:61px;
               width:100%;
               background:url("../img/mobile/header/header-shine.png") no-repeat;
               background-position:100%;
@@ -522,7 +522,7 @@
        ul.main-nav{
             background-color: #ffffff;
             margin-right: 0;
-            margin-top: 52px;
+            margin-top: 60px;
             right: 0;
             width: 100%;
             z-index:-1;
