@@ -39,7 +39,7 @@
       display: none;
       @include breakpoint('mobile'){
         right: -7px;
-        top: 9px;
+        top: 0;
       }
     }
     &:hover{
