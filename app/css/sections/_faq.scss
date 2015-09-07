@@ -11,6 +11,22 @@ p{
         padding-left: 216px;
         padding-top:60px;
         padding-bottom: 60px;
+        @include breakpoint('desktop'){
+            max-width: 920px!important;
+        }
+        @include breakpoint('tablet'){
+            padding-left:0;
+        }
+    }
+    .faq-head{
+        @include breakpoint('desktop'){
+            max-width: 920px!important;
+        }
+        @include breakpoint('tablet'){
+            max-width: 769px!important;
+            padding-left:0;
+            padding-right:0;
+        }
     }
 }
 
@@ -20,7 +36,12 @@ p{
     padding-left:219px;
     padding-right:219px;
     @include breakpoint('desktop'){
-        max-width: 100%;
+        max-width: 920px!important;
+    }
+    @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
     }
     h2{
         line-height: 38px;
@@ -122,6 +143,10 @@ p{
         margin-left: -25px;
         width: 90%;
         line-height: 30px;
+        @include breakpoint('tablet'){
+            font-size: 14px;
+            line-height: 19px;
+        }
         @include breakpoint('mobile'){
             font-size: 14px;
             line-height: 19px;
@@ -156,12 +181,18 @@ p{
 
 
         background: url("../img/desktop/collapse/collapse-icon.png") no-repeat 98% center;
+        @include breakpoint('tablet'){
+            background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% center;
+        }
         @include breakpoint('mobile'){
             background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% center;
         }
     }
     .expanded-icon {
         background: url("../img/desktop/collapse/expand-icon.png") no-repeat 98% center;
+        @include breakpoint('tablet'){
+            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
+        }
         @include breakpoint('mobile'){
             background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
         }
