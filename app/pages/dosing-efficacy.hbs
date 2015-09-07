@@ -4,10 +4,10 @@ meta-description: "Get dosing and efficacy information about Nasacort Allergy 24
 meta-keywords: "Nasacort Allergy 24 HR, Nasacort Allergy 24HR, Nasacort AQ, Nasacort Allergy, triamcinolone acetonide, Nasacort FDA approved, OTC INS, OTC nasal spray, severe allergies, allergic rhinitis INS, allergic rhinitis treatment, allergy relief, allergic rhinitis, most powerful allergy medicine, Nasacort clinical information, Nasacort allergy 24HR clinical information, Nasacort info for physicians, approved for children"
 section: dosing-and-efficacy
 layout: layout.hbs
-footnote1: {"section":"references-dosing-efficacy-1"}
-footnote2: {"section":"references-dosing-efficacy-2"}
-footnote3: {"section":"references-dosing-efficacy-3"}
-footnote4: {"section":"references-dosing-efficacy-4"}
+footnote1: {"section":"references-dosing-efficacy-1", "parent":"#dosing-information"}
+footnote2: {"section":"references-dosing-efficacy-2", "parent":"#chart-1"}
+footnote3: {"section":"references-dosing-efficacy-3", "parent":"#chart-2"}
+footnote4: {"section":"references-dosing-efficacy-4", "parent":"#chart-3"}
 ---
 
 {{>header}}
@@ -21,7 +21,7 @@ footnote4: {"section":"references-dosing-efficacy-4"}
 	</div>
 </div>
 
-<div class="content-{{section}} dosing-information">
+<div class="content-{{section}} dosing-information" id="dosing-information">
 	<h2>Nasacort<sup>&reg;</sup> Allergy 24HR</h2>
 	<h2>Dosing Information&mdash;Adults and Children</h2>
 	<p>Nasacort<sup>&reg;</sup> is indicated to treat allergic rhinitis in adults and children 2 years of age and older. It is the only OTC INS to be proven safe for children as young as 2. </p>
@@ -45,7 +45,7 @@ footnote4: {"section":"references-dosing-efficacy-4"}
 </div>
 
 <div class="content-dosing-and-efficacy charts-dosingInner">
-	<div class="inner-charts chart-1">
+	<div class="inner-charts chart-1" id="chart-1">
 		<h3 class="first-Title-dosing">Proven Efficacy at Dose 1</h3>
 		<p class="chart-text-inner">In a clinical study of 429 patients with seasonal rhinitis, patients taking Nasacort® Allergy 24HR saw <strong>25% relief of nasal symptoms starting at Day 1.</strong><sup>1,2,*</sup></p>
 		<img src="img/desktop/dosingEfficacy/firstDose-dosingEfficacy.png" alt="Nasacort® Allergy 24HR Proven Efficacy at Dose 1 chart">
@@ -54,7 +54,7 @@ footnote4: {"section":"references-dosing-efficacy-4"}
 		<p class="use-directed">Use only as directed.</p>	
 	</div>
 
-	<div class="inner-charts chart-2">
+	<div class="inner-charts chart-2" id="chart-2">
 		<h3 class="first-Title-dosing marg-bott-dosing">Powerful, Clinically Proven Nasal Allergy Symptom Relief<sup>1</sup></h3>
 		<img src="img/desktop/dosingEfficacy/openLabel-dosingEfficacy.png" alt="Powerful, Clinically Proven Nasal Allergy Symptom Relief chart">
 		<p class="parr-inner-dosing"><strong>Nasacort<sup>&reg;</sup> dosage during double-blind period:</strong> 2 sprays (220 mcg) per day</p>
@@ -64,7 +64,7 @@ footnote4: {"section":"references-dosing-efficacy-4"}
 		<p class="use-directed">Use only as directed.</p>
 	</div>
 
-	<div class="inner-charts chart-3">
+	<div class="inner-charts chart-3" id="chart-3">
 		<h3 class="second-Title-dosing">Effective Symptom Relief in Children</h3>
 		<div class="second-content-dosing">
 			<h4>Nasal allergy relief in children 2 to 5 years of age<sup>1</sup></h4>

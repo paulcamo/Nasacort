@@ -135,60 +135,9 @@ strong{
 
 
 
-@include breakpoint('desktop') {
-    
-    .section-content{
-         margin-top: -39px;
- 
-        /*h1{
-            font-size:3em;
-        }  
-        h2{
-            font-size: 2em;
-            margin-bottom: 1em;
-            margin-top: 1em;
-        }
-        p{
-            font-size:1em;
-            line-height:1.3em;
-            margin-bottom:1em;
-        } */
-    }
-
-}
-
-@include breakpoint('tablet') {
-    
-    .section-content{
-         margin-top: -39px;
-         /*h1{
-            font-size:3em;
-            padding-top: 1.7em;
-        }  
-        h2{
-            font-size: 2em;
-            margin-bottom: 1em;
-            margin-top: 1em;
-        }
-        p{
-            font-size:1em;
-            line-height:1em;
-            margin-bottom: 1em;
-            margin-top: 1em;
-        } 
-        h3{
-            font-size: 1.5em;
-            margin-bottom: 1em;
-            margin-top: 1em;
-        }
-        */
-    }
-
-}
-
 @include breakpoint('mobile') {
     
-    .section-content{
+    .container{
          margin-top: 51px;
          h1{
             font-size:17px;

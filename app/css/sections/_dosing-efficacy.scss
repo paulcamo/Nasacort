@@ -71,13 +71,7 @@ $middle-blue: #0d4a84;
   height:374px;
   position: relative;
   
-  h2{
-    margin-bottom: 0;
-    margin-top:41px;
-  }
-  p{
-    margin-bottom: 16px;
-  }
+  
   .video-control{
     .video-intial{
       background:url("../img/desktop/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat top center;
@@ -227,6 +221,219 @@ $middle-blue: #0d4a84;
 }
 
 
+@include breakpoint('mobile') {
+.dosing-and-efficacy-section{
+    
+    .content-dosing-and-efficacy{
+        padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
+        padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
+        .use-directed{
+            right:0;
+            text-align:left;
+            width:100%;
+            float:left;
+        }
+    }
+    
+    ncontainer {
+        
+    }
+    .first-container{
+        margin-top: 50px;
+        margin-bottom:0;
+    }
+    .hero-dosing-and-efficacy{
+        background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat;
+        width:100%;
+        background-size:100%;
+        height: auto;
+        max-height: 350px;
+        min-height: 175px;
+        min-width: 320px;
+        padding-bottom: 54.531%;
+        .img-womn{
+            min-width:155px;
+            min-height:185px;
+            max-width:311px;
+            right: 2.5%;
+            top: 7.59%;
+            width:48.5937%;
+        }
+    }
+    
+    .dosing-information{
+         padding-top: 32px;
+         overflow:visible;
+         float:left;
+         height:auto;
+         
+        .img-chart{
+            img{
+                width:100%;
+            }
+        }
+         h2{
+            font-size: 17px;
+            line-height: 24px;
+            margin: 0;
+          }
+          p{
+            margin-top:8px; 
+          }
+          .footnote {
+            margin-top: 0;
+          }
+          .use-directed{
+              margin-bottom:0;
+          }
+    }
+    
+    .video-sect-dosing{
+        height: auto;
+        .content-dosing-and-efficacy{
+            padding-bottom:27px;
+            h2{
+                margin-top: 18px;
+                margin-bottom: 2px;
+            }
+            p{
+                margin-bottom:10px;
+            }
+            .video-control{
+                .video-intial{
+                    background:url("../img/mobile/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat;
+                    background-size:100%;
+                    max-height: 296px;
+                    max-width: 543px;
+                    padding-bottom: 54.5119%;
+                    width: 100%;
+                    display:block;
+                    margin-bottom:16px;
+                }
+                .label-information{
+                    background:url("../img/mobile/dosingEfficacy/label-btn.png") no-repeat;
+                    background-size:100%;
+                    max-height: 296px;
+                    max-width: 547px;
+                    padding-bottom: 54.1133%;
+                    width: 100%;
+                    display:block;
+                }
+            }
+        }
+    }
+    
+    .charts-dosingInner{
+        margin-left: 3.125%;
+        margin-right: 3.125%;
+        padding-left:0;
+        padding-right:0;
+        padding-top: 26px;
+        h3{
+            line-height:32px;
+            font-size:17px;
+            padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
+            padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
+        }
+        .chart-text-inner{
+            padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
+            padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
+            margin-top:12px;
+            margin-bottom: 15px;
+        }
+        .chart-1{
+            background-color:$color-white;
+            float:left;
+            height:auto;
+            padding-bottom: 3px;
+            img{
+                width:100%;
+                max-width:601px;
+                max-height:615px;
+                min-width:300px;
+                margin-left: 0;
+                margin-bottom: 11px;
+            }
+            .footnote{
+                margin-top:12px;
+            }
+        }
+        .chart-2{
+            float:left;
+            height:auto;
+            padding-bottom: 7px;
+            h3{
+                padding-bottom: 6px;
+                padding-top: 6px;
+                line-height: 22px;
+                margin-bottom: 15px;
+            }
+            img{
+                width:100%;
+                max-width:594px;
+                max-height:420px;
+                min-width:297px;
+                margin-left: 0;
+                margin-bottom: 14px;
+            }
+            .parr-inner-dosing{
+                margin-bottom: 12px;
+             }
+             .parrMarg-inner-dosing{
+                 margin-bottom: 12px;
+             }
+             .footnote{
+                margin-top:12px;
+            }
+        }
+         .chart-3{
+            float:left;
+            height:auto;
+            h3{
+                padding-bottom: 6px;
+                padding-top: 6px;
+                line-height: 22px;
+                margin-bottom: 15px;
+                padding-right: 25%;
+            }
+            img{
+                width:100%;
+                max-width:618px;
+                max-height:450px;
+                min-width:309px;
+                margin-left: 0;
+            }
+            .footnote{
+                margin-top:12px;
+            }
+            .second-content-dosing{
+                margin-bottom: 19px;
+                h4{
+                    font-size: 17px;
+                    line-height: 19px;
+                    margin-bottom: 8px;
+                }
+                p{
+                    margin-bottom: 15px;
+                }
+                img{
+                    margin-bottom: 21px;
+                }               
+            }
+            .chart-text{
+                  margin-bottom: 8px;
+                p{
+                   margin-bottom: 2px;
+                }
+            }
+            .use-directed{
+                margin-top: 6px;
+            }
+        }
+    }
+    
+}
+}
 
 
 
