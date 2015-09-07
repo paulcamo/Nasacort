@@ -5,21 +5,24 @@
 
 .header {
 
-    position: relative;
+    position: fixed;
+    margin-top: 9px;
     z-index: 9999;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.4);
 
 
   .header-box {
-    max-width: 1400px;
+    max-width: 1026px;
     margin: auto;
     position: relative;
     overflow: hidden;
     padding-bottom: 10px;
-    padding-right: 98px;
-    padding-left: 260px;
+//    padding-right: 98px;
+//    padding-left: 260px;
     @include breakpoint("desktop") {
-      padding-right: 10%;
-      padding-left: 10%;
+//      padding-right: 10%;
+//      padding-left: 10%;
     }
     @include breakpoint("tablet") {
       padding-right: 0;
@@ -41,7 +44,7 @@
           height:21px;
           float:right;
           margin-top:4px;
-          margin-right: 116px;
+          //margin-right: 116px;
           //margin-right: #{fluid-percentage($site-max-width, 180)};
 
 
@@ -53,19 +56,27 @@
 
 
       }
-      
+
+
+    .top-bar-container{
+      width: 100%;
+      background-color: #fff;
+    }
+
+
       .top-bar{
-          background:url("../img/desktop/header/header-bg-shadow.png") repeat-x;
+          background: url("../img/desktop/header/header-bg-shadow.png") repeat-x;
           height:43px;
 
         @include breakpoint("tablet-n-up") {
-          max-width: 1400px;
+          max-width: 1024px;
+
           margin: auto;
         }
 
         @include breakpoint("desktop") {
-          padding-right: 10%;
-          padding-left: 10%;
+//          padding-right: 10%;
+//          padding-left: 10%;
         }
         @include breakpoint("tablet") {
           padding-right: 0;
@@ -86,7 +97,7 @@
               width:218px;
               float: left;
               line-height: 28px;
-              margin-left: 268px;
+              //margin-left: 268px;
               //margin-left:#{fluid-percentage($site-max-width, 192)};
 
             @include breakpoint("desktop") {
@@ -106,7 +117,7 @@
           position:relative;
           float:left;
           margin-top: 10px;
-          margin-left: 7px;
+          margin-left: 4px;
           //margin-left: #{fluid-percentage($site-max-width, 192)};
 
 
@@ -138,9 +149,9 @@
       }
       
       .blue-bar{          
-          background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
-          height: 91px;
-          margin-top: -14px;
+         background: $color-header-background url("../img/desktop/header/header-shine.png") no-repeat top center;
+         height: 82px;
+         margin-top: -14px;
       }
       
        ul.utility-nav{
@@ -369,12 +380,13 @@
 @include breakpoint('desktop') {
     
 .header {  
-    position:relative;
+    //position:relative;
     //min-width:1100px;
+
     .header-top{ 
       .blue-bar{          
-          background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
-          height: 150px;
+          //background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
+          height: 110px;
         }      
       }
       .shine{
@@ -399,8 +411,8 @@
            }
        }
       .blue-bar{          
-          background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
-          height: 150px;
+          //background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
+          height: 110px;
            .nassacort-logo{
                margin-left:10%; //13%
            }
@@ -428,12 +440,12 @@
            }
        }
       }
-      .shine{
-          height:111px;
-          background:url("../img/mobile/header/header-shine.png") no-repeat;
-          background-size:100% contain;
-          width:100%;
-      }
+//      .shine{
+//          height:111px;
+//          background:url("../img/mobile/header/header-shine.png") no-repeat;
+//          background-size:100% contain;
+//          width:100%;
+//      }
   } 
   
 }
@@ -463,10 +475,11 @@
             }
         }
       .blue-bar{          
-          background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
-          height: 99px;
+          //background:url("../img/desktop/header/nav-bg-shadow.png") repeat-x;
+          //height: 99px;
+          background-size: cover;
           margin-top:0;
-          background-position:0px 0px;
+          //background-position:0px 0px;
           height:91px;
           
           .shine{
