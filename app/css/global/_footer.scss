@@ -19,7 +19,7 @@
                     max-width: 920px;
                 }
                 @include breakpoint("tablet") {
-                    max-width: 920px;
+                    max-width: 769px;
                 }
             }
             .footer-col{
@@ -30,7 +30,7 @@
                     margin-right: 3%;
                 }
                 @include breakpoint("tablet") {
-                    margin-right: 3%;
+                    margin-right: 4%;
                 }
                 @include breakpoint("mobile") {
                     width:100%;
@@ -111,7 +111,7 @@
                 margin-right: 0px;
                 width:248px;
                 @include breakpoint("tablet") {
-                    width:24%;
+                    width:19%;
                 }
                 @include breakpoint("mobile") {
                     margin-top:0;
@@ -132,7 +132,7 @@
                     max-width: 920px;
                 }
                 @include breakpoint("tablet") {
-                    max-width: 920px;
+                    max-width: 769px;
                 }
                 @include breakpoint("mobile") {
                     padding-left: 20px!important;
@@ -187,11 +187,12 @@
             }
             .inner-bottom-content{
                 padding-left: 189px;
+                padding-right: 188px;
                 @include breakpoint("desktop") {
                     max-width: 920px;
                 }
                 @include breakpoint("tablet") {
-                    max-width: 920px;
+                    max-width: 769px;
                 }
                 @include breakpoint("mobile") {
                     width:100%;

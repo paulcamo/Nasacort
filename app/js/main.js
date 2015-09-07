@@ -1,14 +1,16 @@
-var desktop_mininum_width = 1024;
+var desktop_mininum_width = 769;
 var headerCollapsed=0;
 var currentPage = "";
 var breakpoint_mobile = '320px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
-
+var sticky_height=0;
 var isMobile;
 
 $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+
+    desktopStickyHeader($(this).scrollTop());
     
 	setInterstitialPopup();
 	
@@ -36,30 +38,30 @@ $(window).bind("resize", function(){
 
 function desktopStickyHeader(y){
 
-    console.log(y);
-    console.log(headerCollapsed);
-
-
-    if ($(window).width() >= desktop_mininum_width ) { // shows or hides the sticky top nav on desktop mode
-
-        if (y > 300) {
-            $('#header').animate({top: "-29px"}, 500);
-            headerCollapsed = 1;
-        } else {
-            $('#header').animate({top: "0"}, 200);
-        }
-
+    if ($(window).width() >= desktop_mininum_width ) {
+        sticky_height =200;
+    } else {
+        sticky_height =10;
     }
 
-
+        if (y > sticky_height) {
+            $('#header').animate({top: "-38px"}, 300);
+            $('.first-container').animate({paddingTop: "0"}, 300);
+            $('.clucker-container').animate({marginTop: "0"}, 300);
+            headerCollapsed = 1;
+        } else {
+            $('#header').animate({top: "-9px"}, 300);
+            $('.first-container').animate({paddingTop: "120px"}, 300);
+            $('.clucker-container').animate({marginTop: "120px"}, 300);
+        }
 
 }
 
 $(window).scroll(function() {
-    //$.doTimeout( 'scroll', 50, function(){
-    //    // do something computationally expensive
-    //    desktopStickyHeader($(this).scrollTop());
-    //});
+    $.doTimeout( 'scroll', 50, function(){
+        // do something computationally expensive
+        desktopStickyHeader($(this).scrollTop());
+    });
 });
 
 
