@@ -38,16 +38,11 @@ $(window).bind("resize", function(){
 
 function desktopStickyHeader(y){
 
-    console.log(y);
-    //console.log(headerCollapsed);
-
-
     if ($(window).width() >= desktop_mininum_width ) {
         sticky_height =200;
     } else {
         sticky_height =10;
     }
-
 
         if (y > sticky_height) {
             $('#header').animate({top: "-38px"}, 300);
@@ -57,10 +52,6 @@ function desktopStickyHeader(y){
             $('#header').animate({top: "-9px"}, 300);
             $('.first-container').animate({paddingTop: "120px"}, 300);
         }
-
-    //}
-
-
 
 }
 
