@@ -1,4 +1,5 @@
 var desktop_mininum_width = 769;
+var desktop_maximum_width = 1400;
 var headerCollapsed=0;
 var currentPage = "";
 var breakpoint_mobile = '320px';
@@ -29,6 +30,7 @@ $(window).bind("resize", function(){
     
     validateFootnote();
 
+    resetHeaderPadding();
 });
 
 
@@ -40,6 +42,16 @@ function desktopStickyHeader(y){
 
     if ($(window).width() >= desktop_mininum_width ) {
         sticky_height =200;
+
+
+        if ($(window).width() >= desktop_maximum_width){
+            vtop="120px";
+        }else {
+            vtop="148px";
+        }
+
+
+
     } else {
         sticky_height =10;
     }
@@ -51,11 +63,28 @@ function desktopStickyHeader(y){
             headerCollapsed = 1;
         } else {
             $('#header').animate({top: "-9px"}, 300);
-            $('.first-container').animate({paddingTop: "120px"}, 300);
-            $('.clucker-container').animate({marginTop: "120px"}, 300);
+            $('.first-container').animate({paddingTop: vtop}, 300);
+            $('.clucker-container').animate({marginTop: vtop}, 300);
         }
 
 }
+
+
+function resetHeaderPadding() {
+
+
+
+    $('.first-container').attr("style","");
+
+    if ($(window).width() >= desktop_maximum_width){
+        vtop="120px";
+    }else {
+        vtop="148px";
+    }
+
+
+}
+
 
 $(window).scroll(function() {
     $.doTimeout( 'scroll', 50, function(){
