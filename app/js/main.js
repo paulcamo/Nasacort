@@ -6,6 +6,7 @@ var breakpoint_mobile = '320px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
 var sticky_height=0;
+var vtop=0;
 var isMobile;
 
 $(document).ready(function() {
@@ -54,6 +55,7 @@ function desktopStickyHeader(y){
 
     } else {
         sticky_height =10;
+        vtop="180px";
     }
 
         if (y > sticky_height) {
@@ -143,6 +145,18 @@ $("sup").on("click",function(){
     scrollTop: $("#references").offset().top
   }, 1000);
 });
+
+// --------------------------------------------------------------------------------------------------------------
+
+$(".js-reference").on("click",function(e){
+    e.preventDefault();
+    var target=  $(this).attr("href");
+
+    $('html, body').animate({
+        scrollTop: ($(target).offset().top - $("#header").outerHeight() + 28 )
+    }, 1000);
+});
+
 
 // --------------------------------------------------------------------------------------------------------------
 
