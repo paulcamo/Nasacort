@@ -10,6 +10,7 @@
             padding-bottom: 22px;
             @include breakpoint("mobile") {
                 padding-bottom: 0;
+                border-bottom: 1px solid #4ca3e3;
             }
             .padding-footer{
                 padding-left: 188px;
@@ -179,6 +180,11 @@
             width: 100%;
             overflow: hidden;
             display: block;
+            @include breakpoint("mobile") {
+                background-color:$color-white;
+                height:133px;
+                padding-top: 18px;
+            }
             .inner-bottom-content{
                 padding-left: 189px;
                 @include breakpoint("desktop") {
@@ -188,16 +194,25 @@
                     max-width: 920px;
                 }
                 @include breakpoint("mobile") {
-                    padding-left: 20px!important;
+                    width:100%;
                 }
             }
             ul{
+                @include breakpoint("mobile"){
+                    margin-bottom:29px;
+                    width:250px;
+                    margin-left:auto;
+                    margin-right:auto;
+                }
                 li{
                     float:left;
                     a{
                         color:$color-dark-blue;
                         font-family:Arial, Helvetica, sans-serif;
                         font-size:12px;
+                        @include breakpoint("mobile") {
+                            font-size: 11px;
+                        }
                         
                         &:hover{
                             text-decoration:underline;
@@ -218,8 +233,22 @@
             
             .right-side{
                 float:right;
+                @include breakpoint('mobile') {
+                    width:100%;
+                    float:none;
+                    position:relative;
+                }
                 p{
                     margin-bottom:0; 
+                    @include breakpoint('mobile'){
+                        font-size:10px;
+                        margin-top:53px;
+                        margin-right:0;
+                        position: relative;
+                        width:100%;
+                        text-align:center;
+                        margin-bottom:0; 
+                    }
                 }
             }
             
@@ -242,6 +271,15 @@
                 }
                 @include breakpoint('tablet') {
                     margin-right: 0;
+                }
+                @include breakpoint('mobile') {
+                    position:absolute;
+                    width:85px;
+                    height:46px;
+                    background-size:contain;
+                    left:0;
+                    right:0;
+                    margin:0 auto;
                 }
                 a {
                     display: block;
