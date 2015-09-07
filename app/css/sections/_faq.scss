@@ -6,78 +6,26 @@ p{
 }
 .faq-header{
     background-color: $color-light-blue;
-    position: relative;
     overflow: hidden;
-    min-width: 1000px;
-    top: -9px;
-    height: 170px;
-    padding-left: #{fluid-percentage($site-max-width, 213)};
-    padding-right: #{fluid-percentage($site-max-width, 213)};
-    @include breakpoint('desktop'){
-        top: -40px;
-        .section-content{
-            margin-top: -22px;
-        }
-    }
-    @include breakpoint('tablet'){
-        min-width: 100%;
-        padding: 0 6%;
-        top: -40px;
-        .section-content{
-            margin-top: 0;
-        }
-    }
-    @include breakpoint('mobile'){
-        height: auto;
-        min-width: 100%;
-        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
-    }
     h1{
-        padding-left: 68px;
-        @include breakpoint('mobile'){
-            font-size: 19px;
-            padding-left: 0;
-            margin: 6% 0px;
-        }
+        padding-left: 216px;
+        padding-top:60px;
+        padding-bottom: 60px;
     }
 }
 
 
 
 .faq {
-    padding-left: #{fluid-percentage($site-max-width, 213)};
-    padding-right: #{fluid-percentage($site-max-width, 213)};
-    margin-top: 0;
-    @include breakpoint('mobile'){
-        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
+    padding-left:219px;
+    padding-right:219px;
+    @include breakpoint('desktop'){
+        max-width: 100%;
     }
-
-    .footnote {
-        @include breakpoint('mobile'){
-            left: -#{fluid-percentage($site-max-width-mobile, 20)};
-        }
-
-    }
-
-    .animation {
-        @include breakpoint('mobile'){
-            left: 0;
-        }
-
-    }
-
-
-
-
     h2{
-        line-height: 38px;
-        margin-bottom: 38px;
         line-height: 38px;
         margin-bottom: 20px;
         margin-top: 63px;
-        padding-left: 5px;
         color:$blue-color-headline;
         @include breakpoint('mobile'){
             font-size: 17px;
@@ -100,8 +48,9 @@ p{
         margin-bottom: 16px;
         line-height: 24px;
         letter-spacing: 0px;
-        width: 96%;
-        font-size: 16px;
+        width: 100%;
+        font-size: 18px;
+        margin-top:36px; 
         color:$text-faq-color;
         @include breakpoint('mobile'){
             width: 100%;
@@ -116,24 +65,23 @@ p{
         font-size: 18px;
         color:$color-dark-grey;
         letter-spacing: 1.3px;
-        line-height: 18px;
+        line-height: 24px;
         position:relative;
+        &:before{
+            content: "\2022 ";
+            position: absolute;
+            left: -10px;
+        }
         @include breakpoint('mobile'){
             font-size: 12px;
             line-height: 14px;
-        }
-    }
-    ul, p{
-        padding-left: 5px;
-        @include breakpoint('mobile'){
-            padding-left: 0;
         }
     }
     ul{
         margin-bottom: 18px;
         clear: both;
         list-style: outside none disc;
-        padding-left: 21px;
+        padding-left: 9px;
 
       @include  breakpoint("mobile") {
         padding-left: 11px;
@@ -195,7 +143,7 @@ p{
         }
     }
     .head-faq{
-        margin-bottom: 16px;
+        margin-bottom: 20px;
         position:relative;
         cursor: pointer;
         padding-left: 35px;
@@ -223,9 +171,11 @@ p{
     .text-faq{
         max-width: 100%;
         display: none;
-        padding-left: 30px;
+        padding-left: 37px;
         overflow: hidden;
+        padding-right: 48px;
         p{
+            margin-top: 0;
             color: $text-faq-paragraph;
         }
         @include breakpoint('mobile'){
@@ -240,7 +190,7 @@ p{
         text-decoration: none;
     }  
     .text-faq{
-        margin-top: 17px;
+        margin-top: 20px;
     }
 }
 
