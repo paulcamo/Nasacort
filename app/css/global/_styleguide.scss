@@ -220,22 +220,85 @@ h4{
 
 
 .center-page {
+  max-width: 1400px;
+  margin: auto;
+  position:relative;
+  overflow: hidden;
+  @include breakpoint("desktop") {
+    padding-left: 0!important;
+    padding-right:0!important;
+  }
+  @include breakpoint("tablet") {
+    max-width: 100%;
+    padding-left: 40px!important;
+    padding-right:40px!important;
+  }
+  @include breakpoint("mobile") {
+    max-width: 100%;
+    padding-left: 0!important;
+    padding-right:0!important;
+  }
+}
+
+
+
+.ncontainer {
+  min-height: 50px; //borrar
+  width: 100%;
+
+  .content {
     max-width: 1400px;
     margin: auto;
-    position:relative;
-    overflow: hidden;
-    @include breakpoint("desktop") {
-        padding-left: 0!important;
-        padding-right:0!important;
+    min-height: 50px;  //borrar
+
+  }
+
+
+
+  .hero-banner {
+    height: 326px;
+    margin: auto;
+
+    h1  {
+      margin-left: #{fluid-percentage($site-max-width, 213)};
+      font-family: $font-proxima-nova-semibold;
+      color: $color-dark-blue;
+      font-size: 50px;
+      padding-top: 65px;
     }
-    @include breakpoint("tablet") {
-        max-width: 100%;
-        padding-left: 20px!important;
-        padding-right:20px!important;
+
+    .underlined {
+      margin-left: #{fluid-percentage($site-max-width, 213)};
+      margin-top: 19px;
     }
-    @include breakpoint("mobile") {
-        max-width: 100%;
-        padding-left:0!important;
-        padding-right:0!important;
-    }
+
+
+  }
+
+
+  h2 {
+    font-family:Arial, Helvetica, sans-serif;
+    color:$color-blue;
+    font-size:32px;
+    margin-top:47px;
+    font-weight:bold;
+    margin-bottom:19px;
+  }
+
+
+
 }
+
+
+
+.bg-cyan {
+  background-color: $color-blue-light-container;
+}
+
+.first-container {
+  margin-top: -9px;
+  padding-top: 120px;
+
+}
+
+
