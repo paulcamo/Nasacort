@@ -4,6 +4,18 @@ $middle-blue: #0d4a84;
 
 $space: 3.125%;
 $space-mobile-copy: 4.6875%;
+$footnote-mobile-left:-3.7%;
+
+.dosing-and-efficacy-section{
+    .footnote{
+        @include breakpoint('tablet') {
+            left:0;
+        }
+        @include breakpoint('mobile') {
+            left:$footnote-mobile-left;
+        }
+    }
+}
 
 .content-dosing-and-efficacy{
   position: relative;
@@ -394,6 +406,7 @@ $space-mobile-copy: 4.6875%;
         padding-left:0;
         padding-right:0;
         padding-top: 26px;
+        float:left;
         .use-directed{
             margin-left:$space-mobile-copy;
         }
@@ -414,7 +427,6 @@ $space-mobile-copy: 4.6875%;
             float:left;
             height:auto;
             padding-bottom: 3px;
-            margin-left:$space;
             img{
                 width:100%;
                 max-width:601px;
@@ -506,6 +518,7 @@ $space-mobile-copy: 4.6875%;
                   padding-left:$space-mobile-copy;
                 p{
                    margin-bottom: 2px;
+                   width:100%;
                 }
             }
             .notes{

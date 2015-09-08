@@ -149,7 +149,7 @@
     position:relative;
     margin-bottom:4px;
     float:left;
-    left:-#{fluid-percentage($site-max-width-mobile, 60)};
+    //left:-#{fluid-percentage($site-max-width-mobile, 60)};//change this on each individual page
     .close-btn{
         right:24px;
         top:10px;
