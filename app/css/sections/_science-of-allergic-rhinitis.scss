@@ -5,6 +5,9 @@
 
 .hero-banner {
   background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.png") no-repeat top center;
+  @include breakpoint('mobile') {
+      background:url("../img/mobile/science-of-allergic-rhinitis/hero-rhinitis-big.jpg") no-repeat top center;
+  }
 
 }
 
