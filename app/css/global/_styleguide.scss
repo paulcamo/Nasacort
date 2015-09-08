@@ -302,6 +302,9 @@ h4{
   @include breakpoint(desktop) {
     padding-top: 148px;
   }
+  @include breakpoint(mobile) {
+    padding-top: 180px;
+  }
 
 }
 
