@@ -250,6 +250,9 @@ h4{
     max-width: 1400px;
     margin: auto;
     min-height: 50px;  //borrar
+     @media screen and (max-width: 1063px) {
+         float:left;
+     }
 
   }
 
@@ -258,6 +261,24 @@ h4{
   .hero-banner {
     height: 329px;
     margin: auto;
+    
+   @media screen and (max-width: 1063px) {
+       background-size:contain !important;
+       height:auto;
+       padding-bottom: 23.5%;
+   }
+   
+    @include breakpoint('mobile'){
+       height:auto;
+       padding-bottom: 23.5%;
+       background-size:cover !important;
+       height: 172px;
+       max-height: 344px;
+       min-height: 172px;
+       min-width: 320px;
+       padding-bottom: 0;
+       background-position: 80% 0 !important;
+    }
 
     h1  {
       margin-left: #{fluid-percentage($site-max-width, 213)};
@@ -265,11 +286,23 @@ h4{
       color: $color-dark-blue;
       font-size: 50px;
       padding-top: 65px;
+      @media screen and (max-width: 1063px) {
+        padding-top: 4.64%;
+      }
+      @include breakpoint('mobile'){
+          font-size:17px;
+          padding-top: 21px;
+      }
     }
 
     .underlined {
       margin-left: #{fluid-percentage($site-max-width, 213)};
       margin-top: 19px;
+      @include breakpoint('mobile'){
+            width:25px;
+            height:3px;
+            margin-top:19px;
+        }
     }
 
 
@@ -289,8 +322,6 @@ h4{
 
 }
 
-
-
 .bg-cyan {
   background-color: $color-blue-light-container;
 }
@@ -299,11 +330,14 @@ h4{
   margin-top: -9px;
   padding-top: 120px;
 
-  @include breakpoint(desktop) {
+  @include breakpoint('desktop') {
     padding-top: 148px;
   }
-  @include breakpoint(mobile) {
-    padding-top: 180px;
+  @media screen and (max-width: 1063px) {
+    padding-top: 148px;
+  }
+  @include breakpoint('mobile'){
+    padding-top: 128px !important;
   }
 
 }
