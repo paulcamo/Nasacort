@@ -31,8 +31,8 @@ function changeImageSrc()
          newPath = $(".chart-3 img").attr("src").replace("desktop", "mobile");
          $(".chart-3 img").attr("src", newPath);
          
-         newPath = $(".img-womn").attr("src").replace("desktop", "mobile");
-         $(".img-womn").attr("src", newPath);
+         //newPath = $(".img-womn").attr("src").replace("desktop", "mobile");
+         //$(".img-womn").attr("src", newPath);
          
      }else
      {
@@ -50,7 +50,7 @@ function changeImageSrc()
          newPath = $(".chart-3 img").attr("src").replace("mobile", "desktop");
          $(".chart-3 img").attr("src", newPath);
          
-         newPath = $(".img-womn").attr("src").replace("mobile", "desktop");
-         $(".img-womn").attr("src", newPath);
+         //newPath = $(".img-womn").attr("src").replace("mobile", "desktop");
+         //$(".img-womn").attr("src", newPath);
      }
 }

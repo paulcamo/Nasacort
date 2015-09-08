@@ -2,12 +2,6 @@ $grey-background: #f4f4f4;
 $light-blue: #dcecf5;
 $middle-blue: #0d4a84;
 
-.dosing-and-efficacy-section{
-    .first-container{
-          margin-bottom: -55px;
-      }
-}
-
 .content-dosing-and-efficacy{
   position: relative;
   overflow: hidden;
@@ -31,8 +25,52 @@ $middle-blue: #0d4a84;
   }
 }
 
+.hero-banner{
+    background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+    @include breakpoint('mobile') {
+         background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+     }
+}
+
+.dosing-and-efficacy-section{
+    .ncontainer{
+        .hero-banner{
+            height:443px;
+             @media screen and (max-width: 1063px) {
+                 height:auto;
+                 padding-bottom: 33.3333% !important;
+             }
+             @include breakpoint('mobile') {
+                 height:233px;
+                 padding-bottom: 0 !important;
+                 max-height: 233px;
+                 background-position: 70% -14px !important;
+             }
+             .content{
+                 h1{
+                      @include breakpoint('mobile') {
+                         width:100%;
+                     }
+                 }
+             }
+        }
+    }
+    .first-container{
+          margin-bottom: -24px;
+          @media screen and (max-width: 1063px) {
+              margin-bottom: 0;
+          }
+          @include breakpoint('mobile') {
+            margin-bottom: -62px;
+          }
+      }
+}
+
+    
+
+
 .hero-dosing-and-efficacy{
-  background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+  /*background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;*/
   display: block;
   position:relative;
   height: 442px;
@@ -235,13 +273,7 @@ $middle-blue: #0d4a84;
         }
     }
     
-    ncontainer {
-        
-    }
-    .first-container{
-        margin-top: 50px;
-        margin-bottom:0;
-    }
+    
     .hero-dosing-and-efficacy{
         background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat;
         width:100%;

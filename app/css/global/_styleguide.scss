@@ -287,21 +287,28 @@ h4{
       font-size: 50px;
       padding-top: 65px;
       @media screen and (max-width: 1063px) {
-        padding-top: 4.64%;
+        padding-top: 35px;
+        margin-left: 80px;
+        width:70%;
       }
       @include breakpoint('mobile'){
           font-size:17px;
           padding-top: 21px;
+          margin-left:25px;
       }
     }
 
     .underlined {
       margin-left: #{fluid-percentage($site-max-width, 213)};
       margin-top: 19px;
+      @media screen and (max-width: 1063px) {
+        margin-left: 80px;
+      }
       @include breakpoint('mobile'){
             width:25px;
             height:3px;
             margin-top:19px;
+            margin-left: 25px;
         }
     }
 
