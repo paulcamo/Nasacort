@@ -1,5 +1,6 @@
 var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
+var hashCalled ="";
 var headerCollapsed=0;
 var currentPage = "";
 var breakpoint_mobile = '320px';
@@ -13,6 +14,8 @@ $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
 
     desktopStickyHeader($(this).scrollTop());
+
+    hashCalling();
     
 	setInterstitialPopup();
 	
@@ -71,6 +74,11 @@ function desktopStickyHeader(y){
 
 }
 
+
+function hashCalling(){
+    hashCalled = window.location.hash.substring(1);
+    //console.log("hashCalled ---->" + hash);
+}
 
 function resetHeaderPadding() {
 
