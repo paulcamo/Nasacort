@@ -30,6 +30,9 @@
     @else if $point == tablet {
         @media  screen and (min-width : 769px) and (max-width : 1024px)  { @content; }
     }
+    @else if $point == tablet-n-desktop {
+      @media  screen and (min-width : 769px) and (max-width : 1399px)  { @content; }
+    }
     @else if $point == tablet-n-up {
       @media  screen and (min-width : 768px)  { @content; }
     }
