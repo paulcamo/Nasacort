@@ -526,8 +526,8 @@
           }
           
           .nassacort-logo{
-              width:89px;
-              height:33px;
+              width: 115px;
+              height: 42px;
               background-size: 100%;
               margin-top:44px;
               margin-left: auto;
@@ -587,7 +587,7 @@
                    padding-top:11%;
                    padding-left:2%;
                    padding-right:2%;
-
+                   line-height: 18px;
                  @include breakpoint("mobile") {
                    display: table;
                    padding-top: 0;
