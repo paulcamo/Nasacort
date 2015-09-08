@@ -55,7 +55,7 @@ function desktopStickyHeader(y){
 
     } else {
         sticky_height =10;
-        vtop="180px";
+        vtop="127px";
     }
 
         if (y > sticky_height) {

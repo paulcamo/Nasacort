@@ -108,7 +108,18 @@
 
           }
       }
-      
+
+
+    .menu-helper {
+      @include breakpoint("tablet-n-desktop") {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      }
+    }
+
+
       .nassacort-logo{
           background:url("../img/desktop/header/nassacort-logo.png") no-repeat;
           width:213px;
@@ -172,7 +183,7 @@
 
           li{
               float:left;
-              margin-left:29px;
+              margin-left:25px;
               
               a{
                   color: $color-light-blue2;
@@ -204,16 +215,30 @@
         float: right;
 
         @include breakpoint("desktop") {
-          margin-top: 0;
-          clear: both;
-          float: left;
-          margin-left: 10px;
+          //margin-top: 0;
+          //clear: both;
+          //float: left;
+          //margin-left: 10px;
+
+          float: none;
+          display: table;
+          margin: auto;
+
+
+
         }
         @include breakpoint("tablet") {
-          margin-top: 6px;
-          clear: both;
-          float: left;
-          margin-left: 10px;
+          //margin-top: 6px;
+          //clear: both;
+          //float: left;
+          //margin-left: 10px;
+
+          float: none;
+          display: table;
+          margin: auto;
+
+
+
         }
 
 
@@ -426,10 +451,12 @@
             }
         }      
        ul.main-nav{
-           margin-right:0;
-           right:0;
-           margin-left: 0;
-           left:9%;
+           //margin-right:0;
+           //right:0;
+           //margin-left: 0;
+           //left:9%;
+
+
            li{
                a{
                    font-size:13px;
