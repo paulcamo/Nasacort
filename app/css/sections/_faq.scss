@@ -114,6 +114,8 @@ p{
         @include breakpoint('mobile'){
             width: 100%;
             font-size: 12px;
+            line-height: 17px;
+            margin-top: 20px;
         }
     }
     a{
@@ -169,6 +171,9 @@ p{
     .container-faq{
         border-bottom: 1px solid $color-light-grey;
         margin-bottom: 17px;
+        @include  breakpoint("mobile") {
+            margin-bottom: 15px; 
+        }
     }
 
    .last-faq {
@@ -245,11 +250,18 @@ p{
         padding-left: 37px;
         overflow: hidden;
         padding-right: 48px;
+        @include breakpoint('mobile'){
+            padding-right:0;
+        }
         p{
             margin-top: 0;
             color: $text-faq-paragraph;
             font-size: 18px;
             @include breakpoint('tablet'){
+                font-size: 12px;
+                line-height: 17px;
+            }
+            @include breakpoint('mobile'){
                 font-size: 12px;
                 line-height: 17px;
             }
@@ -275,7 +287,7 @@ p{
     border: 0;
     @include breakpoint('mobile'){
         border: none;
-        padding: 13px 19px 0;
+        padding: 9px 19px 0;
     }
 }
 
