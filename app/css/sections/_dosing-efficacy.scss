@@ -553,7 +553,13 @@ $space-mobile-copy: 4.6875%;
 }
 
 
-
+.dosing-and-efficacy-section{
+    .animation{
+        @include breakpoint('mobile') {
+            margin-left:-10px !important;
+        }
+    }
+}
 
 
 
