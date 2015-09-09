@@ -27,8 +27,8 @@ p{
         @include breakpoint('mobile'){
             padding-left:0;
             font-size: 19px;
-            padding-top:20px;
-            padding-bottom:20px;
+            padding-top:18px;
+            padding-bottom:18px;
         }
     }
     .faq-head{
@@ -42,8 +42,8 @@ p{
         }
         @include breakpoint('mobile'){
             max-width: 100%!important;
-            padding-left:40px;
-            padding-right:40px;
+            padding-left:20px;
+            padding-right:20px;
         }
     }
 }
@@ -65,8 +65,8 @@ p{
     }
     @include breakpoint('mobile'){
         max-width: 100%!important;
-        padding-left:40px;
-        padding-right:40px;
+        padding-left:20px;
+        padding-right:20px;
     }
     h2{
         line-height: 38px;
@@ -82,8 +82,8 @@ p{
         @include breakpoint('mobile'){
             font-size: 17px;
             line-height: 24px;
-            margin-bottom: 8px;
-            margin-top:20px; 
+            margin-bottom: 5px;
+            margin-top: 10px;
         }
     }
     sup{
@@ -115,7 +115,8 @@ p{
             width: 100%;
             font-size: 12px;
             line-height: 17px;
-            margin-top: 20px;
+            margin-top: 17px;
+            margin-bottom: 13px;
         }
     }
     a{
@@ -172,7 +173,7 @@ p{
         border-bottom: 1px solid $color-light-grey;
         margin-bottom: 17px;
         @include  breakpoint("mobile") {
-            margin-bottom: 15px; 
+            margin-bottom: 10px; 
         }
     }
 
@@ -222,6 +223,7 @@ p{
       @include breakpoint('mobile'){
         padding-left: 28px;
         margin-left: 0;
+        margin-bottom: 17px;
       }
 
 
@@ -230,7 +232,7 @@ p{
             background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% center;
         }
         @include breakpoint('mobile'){
-            background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% center;
+            background: url("../img/desktop/collapse/collapse-icon-min.png") no-repeat 98% top;
         }
     }
     .expanded-icon {
@@ -239,7 +241,7 @@ p{
             background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
         }
         @include breakpoint('mobile'){
-            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
+            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% top;
         }
 
     }
