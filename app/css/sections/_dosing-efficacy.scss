@@ -187,6 +187,16 @@ $footnote-mobile-left:-3.7%;
     border-radius: 3px;
     font-size: 34px;
     text-transform: none;
+     @include breakpoint('desktop') {
+        line-height: 32px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+    @include breakpoint('tablet') {
+        line-height: 32px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
   }
   .parr-inner-dosing{
     margin-bottom: 0;
