@@ -31,10 +31,15 @@ $(document).ready(function() {
 $(window).bind("resize", function(){
     
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
-    
-    validateFootnote();
 
     resetHeaderPadding();
+    
+    clearTimeout($.data(this, 'resizeTimer'));
+    $.data(this, 'resizeTimer', setTimeout(function() {
+        //do something
+        //alert("Haven't resized in 200ms!");
+        validateFootnote();
+    }, 500));
 });
 
 
