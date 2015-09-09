@@ -2,31 +2,46 @@ $text-grey:#535353;
 $blue-color-headline:#022e80;
 $subtitle-color:#0d5ea4;
 
-.content-spe{
-    padding-left: 200px!important;
-    padding-right:216px!important;
-}
-
-.spc-hed1{
-    margin-bottom:0!important; 
-}
-.spc-head{
-    margin-top: 0!important;
-    margin-bottom: 10px; 
-}
-.spc-par{
-    margin-bottom: 0!important;
-}
-
 .drug-fact-label-header{
     background-color: $color-light-blue;
     position: relative;
     overflow: hidden;
+    .drug-fact-label-head{
+        @include breakpoint('desktop'){
+            max-width: 920px!important;
+            padding-left:0;
+            padding-right:0;
+        }
+        @include breakpoint('tablet'){
+            max-width: 769px!important;
+            padding-left:0;
+            padding-right:0;
+        }
+        @include breakpoint('mobile'){
+            max-width: 100%!important;
+            padding-left:20px;
+            padding-right:20px;
+        }
+    }
     h1{
         padding-top:70px;
         padding-bottom:70px;
         padding-left:219px;
         color: #033d69;
+        @include breakpoint('desktop'){
+            padding-left:0;
+            padding-right:0;
+        }
+        @include breakpoint('tablet'){
+            font-size: 17px;
+            padding:20px 0;
+        }
+        @include breakpoint('mobile'){
+            font-size: 17px;
+            padding-top:20px;
+            padding-bottom:20px;
+            padding-left:0;
+        }
     }
 }
 
@@ -41,31 +56,89 @@ $subtitle-color:#0d5ea4;
     margin-bottom: 3px!important;
 }
 
-.drug-fact-label {
+.inner-drug-fact-label{
     padding-left:219px;
     padding-right: 217px;
     margin-top: 0;
+    @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+    }
     @include breakpoint('tablet'){
-        padding: 0 12%;
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
     }
     @include breakpoint('mobile'){
-        padding: 0 7.8%;
+        max-width: 100%!important;
+        padding-left:28px;
+        padding-right:28px;
     }
+}
+
+.content-spe{
+    padding-left:201px;
+    padding-right: 216px;
+    margin-top: 0;
+    @include breakpoint('desktop'){
+        max-width: 955px!important;
+        padding-left:0;
+        padding-right:0;
+    }
+    @include breakpoint('tablet'){
+        max-width: 805px!important;
+        padding-left:0;
+        padding-right:0;
+    }
+    @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+
+.drug-fact-label {
     h2{
         line-height: 38px;
         font-size: 32px;
         margin-top: 43px;
         font-weight: bold;
-        margin-bottom: 14px;
         color:$blue-color-headline;
-        span{
-            color:$text-grey;
+        @include breakpoint('tablet'){
+            line-height: 22px;
+            font-size: 17px;
+            margin-top: 16px;
         }
         @include breakpoint('mobile'){
             line-height: 22px;
-            margin-top: 10px;
             font-size: 17px;
+            margin-top: 16px;
         }
+        span{
+            color:$text-grey;
+        }
+    }
+    .content-spe{
+        padding-left: 200px;
+        padding-right:216px;
+    }
+
+    .spc-hed1{
+        margin-bottom:0 
+    }
+    .spc-head{
+        margin-top: 0;
+        margin-bottom: 27px; 
+        @include breakpoint('tablet'){
+            margin-bottom: 15px;
+        }
+        @include breakpoint('mobile'){
+            margin-bottom: 15px;
+        }
+    }
+    .spc-par{
+        margin-bottom: 0;
     }
     sup{
         font-size: 56%;
@@ -83,17 +156,19 @@ $subtitle-color:#0d5ea4;
         margin-bottom: 27px;
         line-height: 23px;
         float: none;
-        @include breakpoint('mobile'){
-            margin-bottom: 2px;
-            line-height: 17px;
-        }
     }
     li{
         font-size: 19px;
         color:$color-dark-grey;
         line-height: 23px;
         position:relative;
+        @include breakpoint('tablet'){
+            padding-left: 0;
+            font-size: 12px;
+            line-height: 17px;
+        }
         @include breakpoint('mobile'){
+            padding-left: 0;
             font-size: 12px;
             line-height: 17px;
         }
@@ -106,14 +181,25 @@ $subtitle-color:#0d5ea4;
     ul, p{
         padding-left: 5px;
         font-size: 19px;
-        @include breakpoint('mobile'){
+        @include breakpoint('tablet'){
+            padding-left: 0;
             font-size: 12px;
+            line-height: 17px;
+        }
+        @include breakpoint('mobile'){
+            padding-left: 0;
+            font-size: 12px;
+            line-height: 17px;
         }
     }
     ul{
         padding-left: 17px;
         margin-bottom: 22px;
+        @include breakpoint('tablet'){
+            padding-left: 10px;
+        }
         @include breakpoint('mobile'){
+            padding-left: 10px;
             margin-bottom: 21px;
         }
     }
@@ -128,9 +214,13 @@ $subtitle-color:#0d5ea4;
         font-family:$font-proxima-nova-semibold-italic;
         font-size: 28px;
         margin-top:7px;
-        @include breakpoint('mobile'){
+        @include breakpoint('tablet'){
+            line-height: 17px;
             font-size: 14px;
-            margin-top: 22px;
+        }
+        @include breakpoint('mobile'){
+            line-height: 17px;
+            font-size: 14px;
         }
     }
     .mrg-none{
@@ -143,15 +233,18 @@ $subtitle-color:#0d5ea4;
     }
     .list{
         padding-left: 17px;
+        @include breakpoint('tablet'){
+            padding-left: 10px;
+        }
+        @include breakpoint('mobile'){
+            padding-left: 10px;
+        }
     }
     .inl-list > li{
         display: inline;
         margin-right: 60px;
-        @include breakpoint('tablet'){
-            display: block;
-        }
         @include breakpoint('mobile'){
-            display: block;
+            margin-right: 27px;
         }
         &:before{
             content: "\2022 ";
@@ -160,11 +253,25 @@ $subtitle-color:#0d5ea4;
             margin-right: 0;
         }
     }
+    .inl-list > .mb-styl{
+        @include breakpoint('mobile'){
+            margin-right: 69px;
+        }
+    }
     .marg-fix{
         margin-bottom: 5px;
     }
     .marg-list-fix{
         margin-bottom: 5px; 
+    }
+    .end-text-drug{
+        margin-bottom: 37px;
+        @include breakpoint('tablet'){
+            margin-bottom: 17px;
+        }
+        @include breakpoint('mobile'){
+            margin-bottom: 17px;
+        }
     }
 
 }
@@ -172,17 +279,7 @@ $subtitle-color:#0d5ea4;
 .box-drug-fact{
     background-color:#ebeff4;
     border: 1px solid #809aab;
-    padding: 15px 15px 0 15px;
+    padding: 15px 15px 0 17px;
     margin-bottom: 15px;
-}
-
-@media (max-width: 1199px) {
-
-.home-section {
-    #bg-container {
-        background: url("../img/bg2.png") no-repeat left top;
-    }
-}
-
 }
 
