@@ -4,18 +4,6 @@ $middle-blue: #0d4a84;
 
 $space: 3.125%;
 $space-mobile-copy: 4.6875%;
-$footnote-mobile-left:-3.7%;
-
-.dosing-and-efficacy-section{
-    .footnote{
-        @include breakpoint('tablet') {
-            left:0;
-        }
-        @include breakpoint('mobile') {
-            left:$footnote-mobile-left;
-        }
-    }
-}
 
 .content-dosing-and-efficacy{
   position: relative;

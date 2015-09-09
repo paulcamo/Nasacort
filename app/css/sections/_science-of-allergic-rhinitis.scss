@@ -1,4 +1,3 @@
-$footnote-mobile-left:-9.3%;
 
 .science-of-allergic-rhinitis-section {
 
@@ -6,9 +5,7 @@ $footnote-mobile-left:-9.3%;
         @include breakpoint('tablet') {
             left:0;
         }
-        @include breakpoint('mobile') {
-            left:$footnote-mobile-left;
-        }
+        
     }
 
 

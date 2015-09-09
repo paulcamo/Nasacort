@@ -222,9 +222,18 @@ function validateFootnote()
         $('.footnote').css("top", "");
         $('.animation').css("top", "");    
         $('.footnote').find('.rfrs').css("display","none");
+        $(".footnote").each(function(index){
+            //var parentHeight=$(this).data("parent");
+            //$("" + parentHeight).css("margin-left");
+            //var negativeMargin = $("" + parentHeight).offset().left;
+            var negativeMargin = $(this).offset().left;
+            $(this).css("margin-left", "-" + negativeMargin + "px");
+            console.log("Footnote " + index + " position " + negativeMargin);
+        });
     }else{
         $(".animation").css("position", "relative");
     }
+    
 }
 
 // --------------------------------------------------------------------------------------------------------------
