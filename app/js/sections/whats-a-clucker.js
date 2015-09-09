@@ -4,6 +4,7 @@ var mobileBreakPoint = 768;
 $(document).ready(function() {   
     setGlassHeadsPopup();
     addAudioPlayer();
+    toggleTooltip();
 
     var contentwidth = $(window).width();
     if ((contentwidth) >= mobileBreakPoint){
@@ -379,3 +380,16 @@ function clickInNav() {
 
 }
 
+function toggleTooltip(){
+    $('.wac-question').click(function(event) {
+        event.preventDefault();
+        var currentTootip = $(this).attr('href');
+        $(".tooltip." + currentTootip).toggle('fast');
+    });
+
+    $('.x-btn').click(function(event) {
+        event.preventDefault();
+        var currentTootip = $(this).attr('href');
+        $(".tooltip." + currentTootip).hide('fast');
+    });
+}

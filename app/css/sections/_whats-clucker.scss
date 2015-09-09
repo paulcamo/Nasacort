@@ -564,6 +564,76 @@ $grey-button:#f8f8f8;
 
 
 .wac {
+    .tooltip{
+        width: 300px;
+        @include breakpoint('mobile'){
+            width: 240px;
+        } 
+        display: none;
+        position: absolute;
+        cursor: auto;
+        border-radius: 20px;
+        border: 2px solid $light-blue;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 0px;
+        margin-left: -6px;
+        background: none;
+        background-color: #ffffff;
+        z-index: 100;
+        top: -75%;
+        left: 26%;
+        li{
+            font-size: 14px;
+            color:$color-dark-grey;
+            line-height: 23px;
+            position:relative;
+            padding-left: 0px;
+            float: none;
+            width: 100%;
+            font-size: 14px;
+            margin-bottom: 4px;
+            @include breakpoint('mobile'){
+                font-size: 12px;
+                line-height: 17px;
+            }
+            &:before{
+                content: "\2022 ";
+                left: -11px;
+                position:absolute;
+            }
+        }
+        ul{
+            padding-left: 17px;
+            margin-bottom: 22px;
+            @include breakpoint('mobile'){
+                margin-bottom: 21px;
+            }
+        }
+        p{
+            font-size: 14px;
+            @include breakpoint('mobile'){
+                font-size: 12px;
+            }
+            line-height: 20px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            cursor: pointer;
+            .x-btn{
+                position: absolute;
+                background: url("../img/desktop/ctas/switch-close.png") no-repeat;
+                width: 11px;
+                height: 11px;
+                &:hover{
+                    background: url("../img/desktop/ctas/switch-close-hover.png") no-repeat;
+                }
+            }
+        }
+    }
     margin-top: 0;
     h2{
         color:$color-blue;
