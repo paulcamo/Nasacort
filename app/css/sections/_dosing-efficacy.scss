@@ -106,6 +106,16 @@ $space-mobile-copy: 4.6875%;
     img{
         @include breakpoint('desktop') {
             width:100%;
+            max-width:814px;
+        }
+        @include breakpoint('tablet') {
+            width:100%;
+            max-width:814px;
+        }
+        @include breakpoint('mobile') {
+            width:100%;
+            max-width: 604px;
+            min-width: 302px;
         }
     }
   }
@@ -341,6 +351,16 @@ $space-mobile-copy: 4.6875%;
         .img-chart{
             img{
                 width:100%;
+            }
+            @include breakpoint('tablet') {
+                img{
+                    width:100%;
+                }
+            }
+            @include breakpoint('desktop') {
+                img{
+                    max-width: 814px;
+                }
             }
         }
          h2{

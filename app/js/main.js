@@ -232,6 +232,9 @@ function validateFootnote()
         });
     }else{
         $(".animation").css("position", "relative");
+        $(".footnote").each(function(index){
+            $(this).css("margin-left", "0");
+        });
     }
     
 }
