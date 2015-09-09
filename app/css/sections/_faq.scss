@@ -1,5 +1,6 @@
 $text-faq-color:#a3a5a6;
 $text-faq-paragraph:#535353;
+$footnote-mobile-left:-7%;
 
 p{
     margin-top: 0; 
@@ -314,3 +315,23 @@ p{
 
 }
 
+
+#parent-footnote1{
+    .footnote{
+        margin-top:-86px;
+        @include breakpoint('mobile'){
+            left:$footnote-mobile-left;
+            margin-top:0;
+        }
+    }
+}
+
+#parent-footnote2{
+    .footnote{
+        margin-top:-71px;
+        @include breakpoint('mobile'){
+            left:$footnote-mobile-left;
+            margin-top:0;
+        }
+    }
+}

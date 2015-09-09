@@ -110,8 +110,6 @@ footnote2: {"section":"faq2", "parent":"#parent-footnote2"}
             </div>
         </div>
 
-        {{>footnote footnote1}} 
-
         <div class="container-{{section}}">
             <div class="no-border-sect-{{section}}">
                 <div class="head-{{section}}">
@@ -166,13 +164,13 @@ footnote2: {"section":"faq2", "parent":"#parent-footnote2"}
                 </div>
             </div>
         </div> 
-          
+          {{>footnote footnote1}} 
     </div>
 <!---------------------------------------- End FAQ Section - 1st ---------------------------------------->  
 
 
 <!---------------------------------------- FAQ Section - 2nd ---------------------------------------->
-    <div id="parent-footnote2" class="ncontainer">
+    <div id="parent-footnote2" class="ncontainer copy">
         <div class="content {{section}}">
             <h2>How to use Nasacort<sup>&reg;</sup> Allergy 24HR</h2>
 
@@ -309,11 +307,9 @@ footnote2: {"section":"faq2", "parent":"#parent-footnote2"}
     </div>
 <!---------------------------------------- End FAQ Section - 2nd ----------------------------------------> 
 
-    <div id="parent-footnote2" class="ncontainer">
+    <div id="parent-footnote2" class="ncontainer copy">
         <div class="content {{section}}">
             <h2>Allergic rhinitis treatment</h2>
-
-            {{>footnote footnote2}}
 
             <div class="container-{{section}}">
                 <div class="no-border-sect-{{section}}">
@@ -364,7 +360,8 @@ footnote2: {"section":"faq2", "parent":"#parent-footnote2"}
                     </div>
                 </div>
             </div>
-
+            {{>footnote footnote2}}
+            
         </div>
     </div>        
 </div>
