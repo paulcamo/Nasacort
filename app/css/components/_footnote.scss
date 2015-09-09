@@ -78,6 +78,7 @@
     background: none;
     background-color: $color-white;
     z-index: 100;
+    left:0 !important;
 
   @include breakpoint("mobile") {
       padding: 10px 30px 12px 17px;

@@ -297,7 +297,7 @@ $footnote-mobile-left:-9.3%;
     margin: auto;
 
    .footnote{
-            margin-top: -22px;
+            margin-top: -178px;
         }
     
     .stats{
@@ -491,7 +491,7 @@ $footnote-mobile-left:-9.3%;
             width:auto;
         }
         .footnote{
-            margin-top:318px;
+            margin-top:-24px;
         }
         
     }
@@ -793,6 +793,9 @@ $footnote-mobile-left:-9.3%;
             .right-aligned{
                 text-align:left;
             }
+            .footnote{
+                margin-top: 0;
+            }
         }
     }
     
@@ -931,9 +934,10 @@ $footnote-mobile-left:-9.3%;
         display:block;
         .right-aligned{
             margin: 0 auto;
-            width: 250px;
+            width: 100%;
             display: block;
             float: none;
+            
         }
      }
  }
