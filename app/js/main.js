@@ -232,7 +232,7 @@ function validateFootnote()
             //$("" + parentHeight).css("margin-left");
             var negativeMargin = $("" + parentHeight).offset().left;
             $(this).css("margin-left", "-" + negativeMargin + "px");
-            if(parseInt(negativeMargin) == 0)
+            if(parseInt(negativeMargin) === 0)
             {
                negativeMargin = $(this).offset().left; 
             }
