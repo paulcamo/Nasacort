@@ -54,6 +54,17 @@ $modal-link-color:#0099cc;
   overflow-y: auto;
 }
 
+.modal-box {
+  overflow-y: scroll;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 20px 20px 40px;
+}
+
+
 .modal-dialog {
   position: relative;
   max-width: 1021px;
@@ -62,8 +73,9 @@ $modal-link-color:#0099cc;
   z-index: 9999;
   background-color: #FFFFFF;
   border-radius: 14px;
-  overflow: scroll;
-  padding: 31px 40px 31px 38px;
+  overflow: hidden;
+  //overflow-y: scroll;
+  padding: 31px 20px 31px 38px;
   @include breakpoint('mobile'){
     max-width: 100%;
     height: 95%;
@@ -76,6 +88,7 @@ $modal-link-color:#0099cc;
   outline: 0;
   z-index: 9999;
   height: 95%;
+  overflow: hidden;
 }
 
 .modal-backdrop {
@@ -110,7 +123,7 @@ $modal-link-color:#0099cc;
   display: inline-block;
   height: 29px;
   position: absolute;
-  right: 34px;
+  right: 20px;
   top: 20px;
   width: 29px;
   cursor: pointer;
@@ -123,8 +136,8 @@ $modal-link-color:#0099cc;
   }
 }
 
-.modal-header h1 {
-  margin-top: 0;
+.modal-header h1, .modal-header h2 {
+  margin-top: 6px;
   font-size: 32px;
   letter-spacing: 1px;
   padding-top:0;
@@ -141,7 +154,7 @@ $modal-link-color:#0099cc;
   p {
     font-size: 18px;
     line-height: 24px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
     @include breakpoint('mobile'){
       font-size: 12px;
       line-height: 17px;
