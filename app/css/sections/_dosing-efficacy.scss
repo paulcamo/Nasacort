@@ -32,22 +32,17 @@ $space-mobile-copy: 4.6875%;
   }
 }
 
-.hero-banner{
-    background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
-    @include breakpoint('mobile') {
-         background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
-     }
-}
-
 .dosing-and-efficacy-section{
     .ncontainer{
         .hero-banner{
             height:443px;
+            background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
              @media screen and (max-width: 1063px) {
                  height:auto;
                  padding-bottom: 33.3333% !important;
              }
              @include breakpoint('mobile') {
+                  background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
                  height:233px;
                  padding-bottom: 0 !important;
                  max-height: 233px;
