@@ -318,11 +318,21 @@ p{
 #parent-footnote1{
    @include breakpoint('mobile'){
         float:left;
+        width:100%;
     }
     .footnote{
         margin-top:-86px;
         @include breakpoint('mobile'){
             margin-top:0;
+        }
+        @include breakpoint('tablet'){
+            position: relative;
+            margin-top:0;
+        }
+        @media screen and (max-width: 1210px) {
+            position: relative;
+            margin-top:0;
+            width:161px;
         }
     }
 }
@@ -330,12 +340,22 @@ p{
 #parent-footnote2{
     @include breakpoint('mobile'){
         float:left;
+        width:100%;
     }
     .footnote{
         margin-top:-71px;
         @include breakpoint('mobile'){
             margin-top:0;
             float:left;
+        }
+        @include breakpoint('tablet'){
+            position: relative;
+            margin-top:0;
+        }
+        @media screen and (max-width: 1210px) {
+            position: relative;
+            margin-top:0;
+            width:161px;
         }
     }
 }
