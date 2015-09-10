@@ -370,7 +370,7 @@
       }
     }
     .right-align{
-      min-height: 32px;
+      min-height: 36px;
     }
   }
 
@@ -392,6 +392,9 @@
         margin-bottom:0; 
       }
     }
+    .right-align{
+      margin-bottom: 11px;
+    }
   }
 
   //Graphic Container Section
@@ -412,6 +415,10 @@
       }
       .download-cta-button{
         margin-bottom: 13px;
+      }
+      .right-align{
+        padding-left: 213px;
+        padding-right:50px;
       }
     }
   }
