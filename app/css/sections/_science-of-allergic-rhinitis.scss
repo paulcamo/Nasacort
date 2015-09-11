@@ -14,6 +14,21 @@
     width: 100%;
     padding-right:50px;
     min-height: 35px;
+    @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:20px;
+        padding-right:20px;
+      }
   }
   
 
@@ -22,6 +37,21 @@
     padding-left: 216px;
     padding-right:213px;
     overflow: hidden;
+    @include breakpoint('desktop'){
+      max-width: 920px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('tablet'){
+      max-width: 769px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('mobile'){
+      max-width: 100%!important;
+      padding-left:20px;
+      padding-right:20px;
+    }
     h2.first-title {
       margin-bottom: 22px;
     }
@@ -228,8 +258,38 @@
     background-color:$color-blue-light-container;
     height:auto;
     width:100%;
+    @include breakpoint('desktop'){
+      max-width: 100%!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('tablet'){
+      max-width: 100%!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('mobile'){
+      max-width: 100%!important;
+      padding-left:20px;
+      padding-right:20px;
+    }
     .right-align{
       min-height: 36px;
+      @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:20px;
+        padding-right:20px;
+      }
     }
   }
 
@@ -237,6 +297,21 @@
     padding-left:213px;
     overflow: hidden;
     padding-top: 50px;
+    @include breakpoint('desktop'){
+      max-width: 920px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('tablet'){
+      max-width: 769px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('mobile'){
+      max-width: 100%!important;
+      padding-left:0;
+      padding-right:0;
+    }
     h2{
       margin-bottom: 27px;
       margin-top: 0;
@@ -245,8 +320,39 @@
       width: 488px;
       float: left;
       margin-right: 42px; 
+      @include breakpoint('desktop'){
+        width: 45%;
+        float: left;
+        margin-right: 0;
+        padding-right: 23px;
+      }
+      @include breakpoint('tablet'){
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 25px;
+      }
+      @include breakpoint('mobile'){
+        width: 100%;
+        padding-left:0;
+        padding-right:0;
+      }
       p{
         margin-bottom: 0;
+      }
+    }
+    img{
+      @include breakpoint('tablet'){
+        display: block;
+        margin: 0 auto;
+      }
+      @include breakpoint('desktop'){
+        width: 54%;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:0;
+        padding-right:0;
       }
     }
   }
@@ -258,10 +364,28 @@
     position:relative;
     overflow:hidden;
     padding-bottom: 48px;
+    @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:20px;
+        padding-right:20px;
+    }
     .container-carousel{
         margin-bottom:17px;
         width:100%;
         padding-left:206px;
+        @include breakpoint('desktop'){
+          max-width: 920px!important;
+          padding-left:0;
+          padding-right:0;
+        }
+        @include breakpoint('tablet'){
+          max-width: 769px!important;
+          padding-left:0;
+          padding-right:0;
+        }
+        @include breakpoint('mobile'){
+          padding-left: 0;
+        }
         h2{
           margin-bottom: 30px;
         }
@@ -271,6 +395,12 @@
         margin-top: 13px;
         max-width:980px;
         overflow: hidden;
+        @include breakpoint('mobile'){
+          min-width:316px;
+          max-width: 100%;
+          margin-left:auto;
+          margin-right:auto;
+        }
     }
   }
   .cycle-slideshow{
@@ -287,6 +417,9 @@
         }
         img{
            width:796px;
+           @include breakpoint('mobile'){
+            width:100%;
+          }
         }
     }
   }
@@ -358,15 +491,65 @@
     width:100%;
     .content{
       overflow: hidden;
+      @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:0;
+        padding-right:0;
+      }
     }
     .video-callout{
       background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
       width:981px;
       margin:30px auto 0;
       cursor:pointer;  
-      padding-bottom: 14%;   
+      padding-bottom: 14%;
+      @include breakpoint('desktop'){
+        padding-bottom: 22%;
+        background-size: 100%;
+        width:100%;
+      }
+      @include breakpoint('tablet'){
+        width: 100%;
+        margin: 30px auto 0;
+        padding-bottom: 21%;
+        background-size: 100%;
+      }
+      @include breakpoint('mobile'){
+        background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
+         background-size:contain;
+         width:100%;
+         min-height: 148px;
+         padding-bottom:0;
+         background-position: center;
+      }   
       &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg-hover.png") no-repeat;
+        @include breakpoint('desktop'){
+          padding-bottom: 22%;
+          background-size: 100%;
+          width:100%;
+        }
+        @include breakpoint('tablet'){
+          width: 100%;
+          padding-bottom: 21%;
+          background-size: 100%;
+        }
+        @include breakpoint('mobile'){
+          background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
+          background-size:contain;
+          width:100%;
+          background-position: center;
+        }
       }
     }
     .right-align{
@@ -380,17 +563,58 @@
       padding-left:213px;
       overflow: hidden;
       padding-top: 47px;
+      @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:20px;
+        padding-right:20px;
+      }
     }
     .copy{
       width: 591px;
       float: left;
       margin-right: 31px;
+      @include breakpoint('desktop'){
+        width: 45%;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        width: 100%;
+        margin-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        margin-right:0;
+      }
+      img{
+        
+        @include breakpoint('mobile'){
+          display: block;
+          margin: 0 auto;
+        }
+      }
       h2{
         margin-top: 0;
       }
       .footnote-info{
         margin-bottom:0; 
       }
+    }
+    img{
+      @include breakpoint('tablet'){
+          display: block;
+          margin: 0 auto;
+        }
     }
     .right-align{
       margin-bottom: 11px;
@@ -404,11 +628,34 @@
       padding-left:213px;
       padding-right:209px;
       overflow: hidden;
+      @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100%!important;
+        padding-left:20px;
+        padding-right:20px;
+      }
       h2{
         margin-bottom: 29px;
       }
       p{
         margin-bottom: 24px;
+      }
+      .graphic{
+        @include breakpoint('tablet'){
+          width: 100%;
+        }
+        @include breakpoint('mobile'){
+          width: 100%;
+        }
       }
       .marg-bttn{
         margin-bottom:37px; 
@@ -420,6 +667,19 @@
     .right-align{
       padding-left: 213px;
       padding-right:50px;
+      @include breakpoint('desktop'){
+        padding-left:0;
+        padding-right:0;
+      }
+      @include breakpoint('tablet'){
+        padding-left:0;
+        padding-right:0;
+      }
     }
   }
 }
+
+
+
+
+
