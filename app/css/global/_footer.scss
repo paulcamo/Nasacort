@@ -132,8 +132,12 @@
             background-color:$color-dark-blue2;
             overflow: hidden;
             display: block;
+
+
             .inner-alternative-content{
                 padding-left: 188px;
+              overflow: initial;
+
                  @include breakpoint("desktop") {
                     max-width: 920px;
                 }
