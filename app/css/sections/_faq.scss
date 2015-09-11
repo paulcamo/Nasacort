@@ -62,6 +62,8 @@ p{
     }
     @include breakpoint('tablet'){
         max-width: 769px!important;
+        padding-right: 0;
+        padding-left: 0;
     }
     @include breakpoint('mobile'){
         max-width: 100%!important;
