@@ -1,6 +1,39 @@
 $text-faq-color:#a3a5a6;
 $text-faq-paragraph:#535353;
 
+
+
+.faq-section {
+  .use-as-directed {
+    text-align: right;
+    width: 95%;
+    margin-top: 54px;
+
+    @include breakpoint("tablet-n-desktop") {
+      font-size: 14px;
+    }
+
+    @include breakpoint("mobile") {
+      text-align: left;
+      padding-left: 15px;
+    }
+
+  }
+
+  .use-last {
+    padding-bottom: 30px;
+  }
+
+  .use-second {
+    @include breakpoint("mobile") {
+      margin-top: 0;
+    }
+  }
+
+
+}
+
+
 p{
     margin-top: 0; 
 }
@@ -285,6 +318,11 @@ p{
     .text-faq{
         margin-top: 20px;
     }
+
+
+
+
+
 }
 
 .no-border-sect-faq{
