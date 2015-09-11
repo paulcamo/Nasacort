@@ -188,8 +188,21 @@ $('.footnote').on('click', function(e) {
         var parentHeight=$(this).data("parent");
         var hh = $(parentHeight).outerHeight();
         var topCta = $(this).position().top;
+        var buttonHeight = $(this).height();
         $(this).attr("state", "open");
-        $(this).toggleClass("animation");  
+        var animation = $(this).toggleClass("animation"); 
+        var currentMarginTop = $(this).css("margin-top");
+        $(this).attr("currentMarginTop", currentMarginTop);
+        console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        var expandTop = Math.abs(parseInt(currentMarginTop)) + (animation.outerHeight() - buttonHeight); 
+        if(parseInt(currentMarginTop) < 0)
+        {
+            $(this).css("margin-top", -expandTop); 
+        }else{
+            $(this).attr("currentMarginTop", "currentMarginTop");
+            expandTop = animation.outerHeight() + animation.innerHeight();
+            //$(this).css("margin-top", -expandTop); 
+        }
         $(this).find('.rfrs').css("display","block");
         if(isMobile)
         {
@@ -209,6 +222,7 @@ $('.footnote .close-btn').on('click', function(e) {
     $(this).parent().removeClass("animation"); 
     $(this).find('.rfrs').css("display","none");
     $(this).parent().attr("state", "closed");
+    $(this).parent().css("margin-top", $(this).parent().attr("currentMarginTop")); 
     if(isMobile)
     {
         $(this).parent().css("top", "");

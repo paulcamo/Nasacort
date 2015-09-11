@@ -148,7 +148,7 @@
     min-width:88px;
     margin-top: 0;
     position:relative;
-    margin-bottom:4px;
+    //margin-bottom:4px;
     float:left;
     //left:-#{fluid-percentage($site-max-width-mobile, 60)};//change this on each individual page
     .close-btn{
@@ -161,6 +161,7 @@
             line-height:18px;
             margin-bottom: 26px;
             margin-top: 0;
+            width:97%;
         } 
     }
     &:hover{

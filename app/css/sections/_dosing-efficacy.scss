@@ -172,7 +172,7 @@ $space-mobile-copy: 4.6875%;
   .video-control{
     .video-intial{
       background:url("../img/desktop/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat top center;
-      width: 70%;
+      width: 68.45%;
       max-width:688px;
       height:auto;
       padding-bottom:22%;
@@ -186,7 +186,7 @@ $space-mobile-copy: 4.6875%;
       display: inline-block;
       float: left;
       height: auto;
-      width: 32%;
+      width: 31.44%;
       max-height: 219px;
       max-width: 316px;
       padding-bottom:22%;;
@@ -292,6 +292,9 @@ $space-mobile-copy: 4.6875%;
             @include breakpoint('desktop') {
                 line-height:36px;
             }
+            @include breakpoint('tablet') {
+                line-height:36px;
+            }
         }
         .footnote{
             margin-top:-77px;
@@ -316,9 +319,9 @@ $space-mobile-copy: 4.6875%;
         .footnote{
              margin-top: -58px;
         }
-        .animation{
+        /*.animation{
             margin-top:-154px;
-        }
+        }*/
         .use-directed{
             margin-top:60px;
             margin-bottom:8px;
