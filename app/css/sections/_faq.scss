@@ -34,6 +34,8 @@ p{
     .faq-head{
         @include breakpoint('desktop'){
             max-width: 920px!important;
+            padding-left:0;
+            padding-right:0;
         }
         @include breakpoint('tablet'){
             max-width: 769px!important;
