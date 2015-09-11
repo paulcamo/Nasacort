@@ -190,7 +190,8 @@ $('.footnote').on('click', function(e) {
         var topCta = $(this).position().top;
         var buttonHeight = $(this).height();
         $(this).attr("state", "open");
-        var animation = $(this).toggleClass("animation"); 
+        $(this).toggleClass("animation");
+        var animation = $(this).find('.animation'); 
         var currentMarginTop = $(this).css("margin-top");
         $(this).attr("currentMarginTop", currentMarginTop);
         console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
@@ -201,12 +202,13 @@ $('.footnote').on('click', function(e) {
         }else{
             $(this).attr("currentMarginTop", "currentMarginTop");
             expandTop = animation.outerHeight() + animation.innerHeight();
-            //$(this).css("margin-top", -expandTop); 
+            $(this).css("margin-top", -expandTop); 
         }
         $(this).find('.rfrs').css("display","block");
         if(isMobile)
         {
-            $(this).css("top", topCta);
+            //topCta -= (animation.outerHeight() + animation.innerHeight());
+            //$(this).css("top", topCta);
             $(parentHeight).css("height",hh);
         }
         e.preventDefault();
