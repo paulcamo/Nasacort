@@ -57,6 +57,8 @@ p{
     padding-right: 213px;
     @include breakpoint('desktop'){
         max-width: 920px!important;
+        padding-right: 0;
+        padding-left: 0;
     }
     @include breakpoint('tablet'){
         max-width: 769px!important;
