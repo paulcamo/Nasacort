@@ -34,6 +34,8 @@ p{
     .faq-head{
         @include breakpoint('desktop'){
             max-width: 920px!important;
+            padding-left:0;
+            padding-right:0;
         }
         @include breakpoint('tablet'){
             max-width: 769px!important;
@@ -51,24 +53,22 @@ p{
 
 
 .faq {
-    padding-left:#{fluid-percentage($site-max-width, 210)};
-    padding-right:#{fluid-percentage($site-max-width, 210)};
+    padding-left: 219px;
+    padding-right: 213px;
     @include breakpoint('desktop'){
         max-width: 920px!important;
-        padding-left:#{fluid-percentage($site-max-width, 210)};
-        padding-right:#{fluid-percentage($site-max-width, 210)};
+        padding-right: 0;
+        padding-left: 0;
     }
     @include breakpoint('tablet'){
         max-width: 769px!important;
-        padding-left:#{fluid-percentage($site-max-width, 210)};
-        padding-right:#{fluid-percentage($site-max-width, 210)};
+        padding-right: 0;
+        padding-left: 0;
     }
     @include breakpoint('mobile'){
         max-width: 100%!important;
-        //padding-left:20px;
-        //padding-right:20px;
-        padding-left:#{fluid-percentage($site-max-width-mobile, 20)};
-        padding-right:#{fluid-percentage($site-max-width-mobile, 20)};
+        padding-left:20px;
+        padding-right:20px;
     }
     h2{
         line-height: 38px;
