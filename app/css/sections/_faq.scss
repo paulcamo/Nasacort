@@ -154,6 +154,14 @@ p{
             margin-bottom: 13px;
         }
     }
+
+  .first-p {
+    @include breakpoint("mobile") {
+      margin-top: -35px;
+    }
+
+  }
+
     a{
         color:$color-dark-grey;
         text-decoration: underline;
