@@ -269,7 +269,7 @@
     .content-ui{
         width:100%;
         margin-top: 13px;
-        max-width:980px;
+        max-width:990px;
         overflow: hidden;
     }
   }
@@ -292,11 +292,12 @@
   }
   .arrow-left{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left.png") no-repeat;
-    width:8%;
+    width:9%;
+    max-width: 87px;
     height:434px; 
     display:block;
     float:left;
-    margin-right:0.9%;
+    margin-right:10px; //0.9%;
     background-size:100% 100%;
     &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
@@ -310,11 +311,12 @@
 
   .arrow-right{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right.png") no-repeat;
-    width:8%;
+    width:9%;
+    max-width: 87px;
     height:434px; 
     display:block;
-    float:left;
-    margin-left:0.8%;
+    float:right;
+    //margin-left:10px; //0.8%;
     background-size:100% 100%;
     &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
