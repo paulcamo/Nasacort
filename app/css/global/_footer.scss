@@ -2,6 +2,12 @@
     background-color:$color-dark-blue2;
     width:100%;
     float:left;
+
+  @include breakpoint("tablet-n-up") {
+    padding-top: 2px;
+  }
+
+
     .footer-content{
         .lists{
             height:100%;
