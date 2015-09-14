@@ -25,9 +25,12 @@
         padding-right:0;
       }
       @include breakpoint('mobile'){
-        max-width: 100%!important;
-        padding-left:20px;
-        padding-right:20px;
+        clear: both;
+        display: block;
+        max-width: 100% !important;
+        min-height: 27px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
   }
   
@@ -270,8 +273,8 @@
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
-      padding-left:20px;
-      padding-right:20px;
+      padding-left:0;
+      padding-right:0;
     }
     .right-align{
       min-height: 36px;
@@ -309,8 +312,8 @@
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
-      padding-left:0;
-      padding-right:0;
+      padding-left:20px;
+      padding-right:20px;
     }
     h2{
       margin-bottom: 27px;
@@ -396,7 +399,7 @@
         max-width:980px;
         overflow: hidden;
         @include breakpoint('mobile'){
-          min-width:316px;
+          min-width:300px;
           max-width: 100%;
           margin-left:auto;
           margin-right:auto;
@@ -554,6 +557,11 @@
     }
     .right-align{
       min-height: 36px;
+      @include breakpoint('mobile'){
+        width: 100%;
+        padding-right:20px;
+        padding-left:20px;
+      }
     }
   }
 
@@ -601,6 +609,7 @@
         @include breakpoint('mobile'){
           display: block;
           margin: 0 auto;
+          width: 100%;
         }
       }
       h2{
@@ -674,6 +683,11 @@
       @include breakpoint('tablet'){
         padding-left:0;
         padding-right:0;
+      }
+      @include breakpoint('mobile'){
+        padding-left:20px;
+        padding-right:20px;
+        width: 100%;
       }
     }
   }
