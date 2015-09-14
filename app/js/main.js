@@ -185,32 +185,27 @@ $(this).parent().toggleClass("border-sect-faq");
 
 $('.footnote').on('click', function(e) {
     if($(this).attr("state") != "open"){
-        var parentHeight=$(this).data("parent");
+        var parentHeight = $(this).data("parent");
         var hh = $(parentHeight).outerHeight();
-        var topCta = $(this).position().top;
         var buttonHeight = $(this).height();
-        $(this).attr("state", "open");
-        $(this).toggleClass("animation");
-        var animation = $(this).find('.animation'); 
         var currentMarginTop = $(this).css("margin-top");
-        $(this).attr("currentMarginTop", currentMarginTop);
-        console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
-        var expandTop = Math.abs(parseInt(currentMarginTop)) + (animation.outerHeight() - buttonHeight); 
-        if(parseInt(currentMarginTop) < 0)
-        {
-            $(this).css("margin-top", -expandTop); 
-        }else{
-            $(this).attr("currentMarginTop", "currentMarginTop");
-            expandTop = animation.outerHeight() + animation.innerHeight();
-            $(this).css("margin-top", -expandTop); 
-        }
-        $(this).find('.rfrs').css("display","block");
+        $(this).attr("state", "open");
+        var animation = $(this).find(".animation");
         if(isMobile)
         {
-            //topCta -= (animation.outerHeight() + animation.innerHeight());
-            //$(this).css("top", topCta);
             $(parentHeight).css("height",hh);
+            $(this).css("width","100%");
+            animation.css("width","100%");
+        }else
+        {
+            animation.css("width","492px");
+            $(this).attr("currentMarginTop", currentMarginTop);
         }
+        animation.show();
+        console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        expandTop = animation.outerHeight() - buttonHeight;
+        animation.css("margin-top", -expandTop); 
+       
         e.preventDefault();
     }
     
@@ -218,34 +213,34 @@ $('.footnote').on('click', function(e) {
 
 $('.footnote .close-btn').on('click', function(e) {
     e.stopPropagation();
-    //$(".animation").removeClass("animation");
-    var parentHeight=$(this).parent().data("parent");
-
-    $(this).parent().removeClass("animation"); 
-    $(this).find('.rfrs').css("display","none");
-    $(this).parent().attr("state", "closed");
-    $(this).parent().css("margin-top", $(this).parent().attr("currentMarginTop")); 
+    var parentHeight = $(this).parent().parent().data("parent");
+    $(this).parent().hide(); 
+    $(this).parent().parent().attr("state", "closed");
+    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop")); 
     if(isMobile)
     {
-        $(this).parent().css("top", "");
-        $(parentHeight).css("height","");
-
-    }   
+        $(this).parent().parent().css("width","13.75%");
+        $(parentHeight).css("height","auto");
+        $(this).parent().parent().css("margin-top", ""); 
+    }else
+    {
+       $(this).parent().parent().css("width","width: 11.5%"); 
+    }
     e.preventDefault(); 
 });
 
 function validateFootnote()
 {
-    $(".animation").removeClass("animation");
+    $(".animation").hide();
     $('.footnote').attr("state", "closed");
+    var parentHeight = $('.footnote').data("parent");
+    $(parentHeight).css("height","auto");
+    $('.footnote').css("margin-top", $('.footnote').attr("currentMarginTop"));
     if(isMobile)
     {
-        $('.footnote').css("top", "");
-        $('.animation').css("top", "");    
-        $('.footnote').find('.rfrs').css("display","none");
+        $('.footnote').css("margin-top", "");
         $(".footnote").each(function(index){
-            var parentHeight=$(this).data("parent");
-            //$("" + parentHeight).css("margin-left");
+            var parentHeight = $(this).data("parent");
             var negativeMargin = $("" + parentHeight).offset().left;
             $(this).css("margin-left", "-" + negativeMargin + "px");
             if(parseInt(negativeMargin) === 0)
