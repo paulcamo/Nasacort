@@ -691,27 +691,14 @@
       }
     }
   }
-}
-
-
-.science-of-allergic-rhinitis-section{
-    #parent-footnote1{
-        .footnote{
-            margin-top:-86px;
-             @include breakpoint("mobile") {
-               margin-top:0px;
-           }
-        }
-    }
-    
-    #copy{
-        .footnote{
-          margin-top:-60px;
-           @include breakpoint("mobile") {
-               margin-top:20px;
-           }
-        }
-    }
+  .down-txt{
+      @include breakpoint('tablet'){
+        line-height: 38px!important;
+      }
+      @include breakpoint('mobile'){
+        line-height: 38px!important;
+      }
+  }
 }
 
 

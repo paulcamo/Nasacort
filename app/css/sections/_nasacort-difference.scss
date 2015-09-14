@@ -7,151 +7,67 @@
     }
   }
 
-  .textbox p {
-    // width: 100%;
+  .textbox {
+    padding-left:215px;
+    padding-right:213px;
+    position:relative;
   }
 
-
-
-  .textbox .grey {
-    color: #595a5a;
+  .textbox-allergy-inner{
+    width: 714px;
+    float: left;
   }
 
-
-  .textbox-allergy {
-    // width: 80%
+  h3 {
+    font-family: $font-proxima-nova-bold;
+    color: #022E80;
+    font-size: 25px;
+    text-transform: none;
+    padding-top: 15px;
   }
 
+  p.use-only{
+    width: 100%;
+    padding-right:48px;
+    padding-left:48px;
+    text-align: right;
+    line-height: 28px;
+    font-size: 15px;
+    clear: both;
+  }
 
-
-
-
-  .treatments {
-    height: auto;
-    // max-width: 1400px;
-    margin: auto;
-    // position: relative;
-    .textbox-allergy{
-      margin-left:#{fluid-percentage($site-max-width, 213)};
-      margin-right:#{fluid-percentage($site-max-width, 213)};
+  .img-spray{
+    float: left;
+    width: 486px;
+    position: absolute;
+    right: 77px;
+    top: -462px;
+    img{
+      width: 100%;
     }
-    
   }
 
-  
-  .comparing{
-    height: auto;
-    // max-width: 1400px;
-    margin: auto;
-  }
-  .treatments h2 {
-    // margin-top: 39px;
-  }
-
-
-
-
-  .treatments .use-only {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    margin: 0;
-  }
-
-  .no-scent-bottle {
-    position: absolute;
-    right: 64px;
-    top: -16px;
-  }
-
-
-  p strong {
-    font-weight: 700;
-  }
-
-
+  //  Comparing OTC INS -------------------------------------------------------------------------------
 
   .comparing {
     background-color: $color-blue-light-container;
     padding-top: 45px;
+    overflow: hidden;
     .textbox{
-      margin-left:#{fluid-percentage($site-max-width, 213)};
-      margin-right:#{fluid-percentage($site-max-width, 213)};
       h2 {
         margin-top: 0;
       }
-
-      h3 {
-        font-family: $font-proxima-nova-bold;
-        color: #022E80;
-        font-size: 25px;
-        text-transform: none;
-        padding-top: 15px;
-      }
     }
   }
 
-  .options{
-    .textbox{
-      margin-left:#{fluid-percentage($site-max-width, 213)};
-      margin-right:#{fluid-percentage($site-max-width, 213)};
-    }
+  .compare-otc {
+    background: url("../img/desktop/nasacort-difference/compare-otc.png") no-repeat top center;
+    background-size: contain;
+    margin: auto;
+    width: 100%;
+    height: 278px;
+    margin-bottom:20px; 
   }
-  
-
-
-
-
-  // .banner {
-  //   margin: 0;
-  //   background: url(../img/desktop/nasacort-difference/hero-difference.png) no-repeat top center;
-  //   background-size: cover;
-  //   height: 328px;
-
-  //   div {
-  //     margin-left: 15.5%;
-  //     // margin-top: 60px;
-  //   }
-
-  //   h1 {
-  //     margin: 0;
-
-  //     sup {
-  //       position: relative;
-  //       top: -16px;
-  //       font-size: 31px;
-  //     }
-
-  //   }
-
-  // }
-
-
-
-
-
-
-.compare-otc {
-  background: url("../img/desktop/nasacort-difference/compare-otc.png") no-repeat top center;
-  background-size: contain;
-  margin: auto;
-  width: 100%;
-  height: 278px;
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   //  stats table -------------------------------------------------------------------------------------
@@ -163,10 +79,10 @@
 
   #brand-compare {
     height: 66px;
-    width: 32%;
-    right: 0px;
+    width: 36.7%;
+    right: -98px;
     position: absolute;
-    top: 0px;
+    top: 1px;
     padding: 0px;
     margin: 0px;
     z-index: 10;
@@ -176,13 +92,19 @@
 
     .brand,  .open {
       width: 99%;
-      height: 60px;
       text-align: center;
       background-color: #497ebf;
-      margin-top: 1px;
-
       cursor: hand;
       display: block;
+    }
+    .open{
+      height: 60px;
+      margin-bottom: 1px; 
+    }
+    .brand{
+      img{
+        padding:12px 0;
+      }
     }
 
     .sprite-bg-afrin{
@@ -218,15 +140,25 @@
   }
 
   .brand-compare-open {
-    height: 400px !important;
+    height: auto !important;
+  }
+
+  .info-chart{
+    margin-top:17px; 
+    p{
+      font-size: 13px;
+      line-height: 14px;
+    }
   }
 
   .charts {
-    width: 100%;
+    width: 786px;
     border-collapse: collapse;
     font-size: 12px;
     font-family: arial, sans-serif;
     border: 1px solid #c0d3df;
+    margin: auto;
+    position:relative;
 
     th, td {
       border: 1px solid #c0d3df;
@@ -275,17 +207,19 @@
       vertical-align: middle;
     }
 
+    td:nth-child(3){
+      border-left: none;
+    }
+    .non-brd{
+      border-right:none;
+    }
+
     .greybar {
       background-color: #f2f0ee !important;
       height: 40px;
     }
 
   }
-
-
-
-
-
 
   .chart-table-container {
     position: relative;
@@ -294,31 +228,24 @@
 
     .vrs {
       position: absolute;
-      right: 27%;
-      top: 9px;
+      right: 17.4%;
+      top: 6px;
       border: none;
       z-index: 12;
     }
 
     .arrow {
       position: absolute;
-      right: 0;
+      right: -96px;
       border: medium none;
       z-index: 11;
       top: 57px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
-      width: 32%;
+      width: 36.5%;
     }
 
   }
-
-  // ----------------------------------------------------------------------------------------------------
-
-
-
-
-
 
 
 }
