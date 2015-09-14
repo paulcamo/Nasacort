@@ -10,6 +10,26 @@ $(document).ready(function(){
         validateCarouselArrows();
     });
     animateGraph();
+
+    $('.fancybox').fancybox();
+
+    $('.fancybox')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+            openEffect : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+
+            arrows : false,
+            helpers : {
+                media : {},
+                buttons : {}
+            }
+        });
+
+
+
 });
 
 function animateGraph(){
