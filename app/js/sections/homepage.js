@@ -26,27 +26,25 @@ $(document).ready(function() {
 
     // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
-    var tl0 = new TimelineMax({repeat:0});
-    var tl1 = new TimelineMax({repeat:-1});
-    var tl2 = new TimelineMax({repeat:-1});
-    var tl3 = new TimelineMax({repeat:-1});
+     var tl1 = new TimelineMax({repeat:-1});
+
+    tl1
+        .to("#carousel1", 8,    {scale:1.10, ease: Power0.easeNone} , '+=1')
+        .to("#carousel2", 1.5,  {opacity:1, ease: Power2.easeOut}   , '-=2')
+        .to("#lady01", 1.5,     {opacity:0, ease: Power2.easeOut}   , '-=2')
+        .to("#lady02", 1.5,     {opacity:1, ease: Power4.easeOut}   , '-=2')
+        .to("#carousel3", 1.5,  {opacity:1, ease: Power2.easeOut}   , '+=3')
+        .to("#carousel2", 0,    {opacity:0, ease: Power0.easeNone}  , '+=0')
+        .to("#carousel1", 0,    {scale:1 , ease: Power0.easeNone}   , '+=0')
+        .to("#lady03", 1.5,     {opacity:1, ease: Power4.easeOut}   , '-=1.5')
+        .to("#lady02", 0,       {opacity:0 , ease: Power0.easeNone} , 'cta+=0')
+        .to("#carousel3", 1.5,  {opacity:0, ease: Power2.easeOut}   , '+=8')
+        .to("#lady01", 1.5,       {opacity:1 , ease: Power2.easeOut} , '-=1.5')
+        .to("#lady03", 1.5,       {opacity:0 , ease: Power0.easeNone} , '-=1.5')
+    ;
 
 
-
-    tl0.staggerTo("#slide1-textbox", 4, {left: "40.5%", delay: 3, yoyo:false}, 3);
-    tl1.staggerTo(".js-box", 1.5, {opacity:0, delay: 6.5, yoyo:true}, 3);
-    tl2.staggerTo(".js-lady", 1.5, {opacity:0, delay: 6.5, yoyo:true}, 3 );
-    tl3.staggerTo(".js-zoom", 6, {top: "-3%", left: "-3%", width: "107%" , delay:0, yoyo:false}, 3 );
-
-
-
-
-
-
-
-    function resetOpacity () {
-      //  $("lady01").css("opacity",1);
-    }
+    //tl1.seek('cta');
 
 
 

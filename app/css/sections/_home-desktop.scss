@@ -1088,7 +1088,7 @@
   }
 
 
-  #slide01 .lady00,
+
   #slide01 .lady01,
   #slide01 .lady02,
   #slide01 .lady03 {
@@ -1103,37 +1103,27 @@
 
 
 
-  #slide01 .lady00 {
-    background: url(../img/desktop/homepage/lady00.png) no-repeat top center;
-    z-index: 125;
-  }
 
 
   #slide01 .lady01 {
     background: url(../img/desktop/homepage/lady01.png) no-repeat top center;
-    z-index: 120;
+    z-index: 122;
   }
 
 
   #slide01 .lady02 {
     background: url(../img/desktop/homepage/lady02.png) no-repeat top center;
     z-index: 118;
+    opacity: 0;
 
   }
 
   #slide01 .lady03 {
     background: url(../img/desktop/homepage/lady03.png) no-repeat top center;
-    z-index: 116;
+    z-index: 120;
+    opacity: 0;
   }
 
-  #lady00 {
-    z-index: 114 !important;
-  }
-
-  #lady04 {
-    z-index: 125 !important;
-    background: url(../img/desktop/homepage/lady00.png) no-repeat top center !important;
-  }
 
 
   #carousel1, #carousel2, #carousel3 {
@@ -1150,17 +1140,20 @@
   }
 
   #carousel1 {
-    z-index: 119;
+    z-index: 115;
+    opacity: 1;
   }
 
   #carousel2 {
     background: url(../img/desktop/homepage/carousel-02.png) no-repeat top center;
     z-index: 117;
+    opacity: 0;
   }
 
   #carousel3 {
     background: url(../img/desktop/homepage/carousel-03.png) no-repeat top center;
-    z-index: 115;
+    z-index: 119;
+    opacity: 0;
   }
 
 
