@@ -345,5 +345,9 @@ h4{
 
 
 .fancybox-overlay-fixed {
-  z-index: 999999 !important;
+  z-index: 10000 !important;
+}
+
+.fancybox-skin {
+  z-index: 10000 !important;
 }
