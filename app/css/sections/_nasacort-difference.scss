@@ -57,13 +57,14 @@
   }
 
   p.use-only{
-    width: 100%;
-    padding-right:48px;
-    padding-left:48px;
+    max-width: 1400px;
+    padding-right:0;
+    padding-left:0;
     text-align: right;
     line-height: 28px;
     font-size: 15px;
     clear: both;
+    margin: 0 auto 12px;
     @include breakpoint('mobile'){
       text-align: left;
       line-height: 17px;
@@ -90,9 +91,9 @@
       top: -263px;
     }
     @include breakpoint('mobile'){
-      width: 24%;
+      width: 200px;
       right: 0;
-      top: -195px;
+      top: -240px;
     }
     img{
       width: 100%;
@@ -284,6 +285,12 @@
     position: relative;
     width: 690px;
     margin: auto;
+    @include breakpoint('tablet'){
+      width: 100%;
+    }
+    @include breakpoint('mobile'){
+      width: 100%;
+    }
 
     .vrs {
       position: absolute;
