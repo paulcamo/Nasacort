@@ -133,7 +133,7 @@ p{
         font-weight: bold;
     }
     p{
-        margin-bottom: 16px;
+        margin-bottom: 12px;
         line-height: 24px;
         letter-spacing: 0px;
         width: 100%;
@@ -185,7 +185,7 @@ p{
         }
     }
     ul{
-        margin-bottom: 18px;
+        margin-bottom: 13px;
         clear: both;
         list-style: outside none disc;
         padding-left: 9px;
@@ -215,6 +215,7 @@ p{
     .container-faq{
         border-bottom: 1px solid $color-light-grey;
         margin-bottom: 17px;
+        padding-bottom: 6px;
         @include  breakpoint("mobile") {
             margin-bottom: 10px; 
         }
@@ -257,7 +258,7 @@ p{
         }
     }
     .head-faq{
-        margin-bottom: 20px;
+        margin-bottom: 8px;
         position:relative;
         cursor: pointer;
         padding-left: 35px;
@@ -324,7 +325,7 @@ p{
         text-decoration: none;
     }  
     .text-faq{
-        margin-top: 20px;
+        margin-top: 1px;
     }
 
 
