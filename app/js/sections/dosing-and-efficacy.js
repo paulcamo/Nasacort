@@ -4,6 +4,7 @@ var mobileBreakPoint = 768;
 
 $(document).ready(function(){
     changeImageSrc();
+    addFancyVideo();
 });
 
 $(window).bind("resize", function(){
@@ -53,4 +54,24 @@ function changeImageSrc()
          //newPath = $(".img-womn").attr("src").replace("mobile", "desktop");
          //$(".img-womn").attr("src", newPath);
      }
+}
+
+function addFancyVideo()
+{
+    $('.fancybox').fancybox();
+
+    $('.fancybox')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+            openEffect : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+
+            arrows : false,
+            helpers : {
+                media : {},
+                buttons : {}
+            }
+        });
 }

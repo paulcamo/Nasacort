@@ -230,47 +230,44 @@ $(window).bind("resize", function(){
 
 function addAudioPlayer()
 {   
-    var isPlaying = false;
     var isReady = false;
     
     $('#glass-head .listen').click(function() {
         
         var audioPath = $(this).attr("path");
+        console.log("Audio Playing: " + audioPath + " is playing : " + $('#glass-head #media-container').attr("playing"));
         
         $(this).addClass("active");
         
-        if(!isPlaying)
+        $("#glass-head #media-container").jPlayer( "destroy" );
+        
+        if($('#glass-head #media-container').attr("playing") === "false")
         {
-            if(isReady)
-            {
-                 $('#glass-head #media-container').jPlayer("play");
-            }else
-            {
-                $('#glass-head #media-container').jPlayer({
-                    supplied : 'mp3, oga, wav',
-                    ready: function() {
-                        jQuery(this).jPlayer("setMedia", {
-                            mp3: audioPath
-                        }).jPlayer("play");
-                        console.log("audio ready");
-                        isReady = true;
-                    },
-                    ended:function() {
-                        console.log("audio ended");
-                        $('#glass-head .listen').removeClass("active");
-                        isPlaying = false;
-                    },
-                    play:function() {
-                        isPlaying = true;
-                        console.log("audio playing");
-                    }
-                });
-            }
+            $('#glass-head #media-container').jPlayer({
+                supplied : 'mp3, oga, wav',
+                ready: function() {
+                    jQuery(this).jPlayer("setMedia", {
+                        mp3: audioPath
+                    }).jPlayer("play");
+                    console.log("audio ready");
+                },
+                ended:function() {
+                    console.log("audio ended");
+                    $('#glass-head .listen').removeClass("active");
+                    $('#glass-head #media-container').attr("playing", "false");
+                },
+                play:function() {
+                    $('#glass-head #media-container').attr("playing", "true");
+                    console.log("audio playing");
+                }
+            });
         }else
         {
             $('#glass-head #media-container').jPlayer("stop");
             $('#glass-head .listen').removeClass("active");
             isPlaying = false;
+            $('#glass-head #media-container').attr("playing", "false");
+            console.log("audio stopped");
         }
     });
 }

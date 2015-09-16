@@ -184,6 +184,14 @@ module.exports = function(grunt) {
                     dest: 'build/audio/'
                 }]
             },
+            downloads: {
+                files: [{
+                    expand: true,
+                    cwd: 'app/downloads/',
+                    src: '**/*',
+                    dest: 'build/downloads/'
+                }]
+            },
             etc: {
                 files: [{
                     expand: true,
