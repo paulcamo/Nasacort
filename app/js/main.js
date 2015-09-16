@@ -26,6 +26,8 @@ $(document).ready(function() {
     activateFooterAndNavBarValidation();
     
     validateFootnote();
+    
+    addFancyVideo();
 });
 
 $(window).bind("resize", function(){
@@ -514,6 +516,25 @@ if (md.os()=='AndroidOS') {
 }
 
 // --------------------------------------------------------------------------------
+function addFancyVideo()
+{
+    $('.fancybox').fancybox();
+
+    $('.fancybox')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+            openEffect : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+
+            arrows : false,
+            helpers : {
+                media : {},
+                buttons : {}
+            }
+        });
+}
 
 
 

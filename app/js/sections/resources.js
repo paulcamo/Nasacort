@@ -5,7 +5,6 @@ var minTabletScreen = 1024;
 
 $(document).ready(function(){   
     keepAllContainersSameHeight();
-    addFancyVideo();
 });
 
 $(window).bind("resize", function(){
@@ -62,25 +61,5 @@ function keepAllContainersSameHeight()
     $(".for-your-practice .resource-container").each(function(index){
         $(this).css("min-height", biggerHeightPractice);
     });
-}
-
-function addFancyVideo()
-{
-    $('.fancybox').fancybox();
-
-    $('.fancybox')
-        .attr('rel', 'media-gallery')
-        .fancybox({
-            openEffect : 'none',
-            closeEffect : 'none',
-            prevEffect : 'none',
-            nextEffect : 'none',
-
-            arrows : false,
-            helpers : {
-                media : {},
-                buttons : {}
-            }
-        });
 }
 
