@@ -424,6 +424,9 @@
             width:100%;
           }
         }
+        @include breakpoint('mobile'){
+            width:100%;
+        }
     }
   }
   .arrow-left{
