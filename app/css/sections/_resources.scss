@@ -89,7 +89,7 @@
         padding-top:28px;
         padding-left:#{fluid-percentage($site-max-width, 220)};
         padding-right:#{fluid-percentage($site-max-width, 220)};
-        padding-bottom:32px;
+        padding-bottom:44px;
         h2{
             margin-bottom:32px;
             .icon{
@@ -117,7 +117,7 @@
             .preview{
                 width:26.38%;
                 height:auto;
-                padding-bottom:37.35%;
+                padding-bottom:39.35%;
                 max-height:160px;
                 float:left;
                 max-width:114px;
@@ -139,8 +139,8 @@
                 }
             }
             .content{
-                width: 68%;
-                margin-left: 5%;
+                width: 70%;
+                margin-left: 3%;
                 float:left;
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
@@ -302,7 +302,7 @@
     }
     .content{
         /*margin-bottom: 22%;*/
-
+      
     }
     .for-your-patients{
         .resource-container{   
