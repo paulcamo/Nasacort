@@ -45,6 +45,11 @@
     }
   }
 
+  h2{
+    margin-top:47px;
+    margin-bottom: 22px; 
+  }
+
   h3 {
     font-family: $font-proxima-nova-bold;
     color: #022E80;
@@ -74,12 +79,16 @@
     }
   }
 
+  p.last-text{
+    margin-bottom:6px; 
+  }
+
   .img-spray{
     float: left;
     width: 486px;
     position: absolute;
-    right: 77px;
-    top: -462px;
+    right: 93px;
+    top: -490px;
     @include breakpoint('desktop'){
       width: 55%;
       right: -45px;
