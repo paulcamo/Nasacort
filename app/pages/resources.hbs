@@ -12,13 +12,20 @@ button-details-5: {"text":"Download", "main-link":"downloads/NAS_DrugFacts_FNL-4
 button-details-6: {"text":"Download", "main-link":"downloads/printable_instructions.pdf", "share-link":"#share"}
 ---
 {{>header}}
-<div class="content section-content">
-    <!--------------------- Banner --------------------->
+<!--------------------- Banner --------------------->
+<!--<div class="banner ncontainer first-container">
+    <h1>Resources</h1>
+</div>-->
+<div class="ncontainer first-container">
     <div class="banner">
-        <h1>Resources</h1>
+        <div class="content copy">
+            <h1>Resources</h1>
+        </div>
     </div>
-    <!--------------------- Videos --------------------->
-    <div class="videos">
+</div>
+<!--------------------- Videos --------------------->
+<div class="videos ncontainer">
+    <div class="content">
         <h2><span class="icon"></span>Videos</h2>
         <div class="thumbnails">
             <a class="video-thumbnail fancybox" href="http://vimeo.com/84997710">
@@ -33,8 +40,10 @@ button-details-6: {"text":"Download", "main-link":"downloads/printable_instructi
             </a>
         </div>
     </div>
-    <!--------------------- For Your Patients --------------------->
-    <div class="for-your-patients">
+</div>
+<!--------------------- For Your Patients --------------------->
+<div class="for-your-patients ncontainer">
+    <div class="content">
         <h2><span class="icon"></span>For Your Patients</h2>
         <!------- Resource ------->
         <div class="resource-container">
@@ -73,8 +82,10 @@ button-details-6: {"text":"Download", "main-link":"downloads/printable_instructi
             {{> cta-download button-details-4}}
         </div>
     </div>
-    <!--------------------- For Your Practice --------------------->
-    <div class="for-your-practice">
+</div>
+<!--------------------- For Your Practice --------------------->
+<div class="for-your-practice ncontainer">
+    <div class="content">
         <h2><span class="icon"></span>For Your Practice</h2>
         <!------- Resource ------->
         <div class="resource-container huge">
@@ -95,7 +106,6 @@ button-details-6: {"text":"Download", "main-link":"downloads/printable_instructi
             {{> cta-download button-details-6}} 
         </div>
     </div>
-    
 </div>
 
 {{>footer}}

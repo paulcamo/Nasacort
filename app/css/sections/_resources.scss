@@ -1,5 +1,5 @@
 .resources-section {
-    
+     background:url("../img/desktop/resources/guide.jpg") no-repeat;
     .banner{
         background-color:$color-light-blue;
         min-height:170px;
@@ -30,7 +30,7 @@
         padding-left:#{fluid-percentage($site-max-width, 220)};
         padding-right:#{fluid-percentage($site-max-width, 220)};
         h2{
-            margin-bottom:30px;
+            margin-bottom:29px;
             .icon{
                 background:url("../img/desktop/resources/icon-videos.png") no-repeat;
                 width:53px;
@@ -42,8 +42,11 @@
             .video-thumbnail{
                 width:33%;
                 float:left;
-                margin-right:2.87%;
-                max-width:302px;
+                margin-right:2%;
+                max-width:300px;
+                &:last-child{
+                    margin-right:0;
+                }
                 .thumb{
                     width:100%;
                     height:auto;
@@ -63,8 +66,8 @@
                     font-size:22px;
                     color:$color-blue;
                     width:100%;
-                    margin-top:10px;
-                    margin-bottom:4px;
+                    margin-top:12px;
+                    margin-bottom:7px;
                     font-weight:bold;
                 }
                 p{
@@ -83,12 +86,12 @@
         width:100%;
         background-color:#ebeff4;
         float:left;
-        padding-top:32px;
+        padding-top:28px;
         padding-left:#{fluid-percentage($site-max-width, 220)};
         padding-right:#{fluid-percentage($site-max-width, 220)};
-        padding-bottom:52px;
+        padding-bottom:32px;
         h2{
-            margin-bottom:30px;
+            margin-bottom:32px;
             .icon{
                 background:url("../img/desktop/resources/icon-for-your-patients.png") no-repeat;
                 width:47px;
@@ -102,10 +105,11 @@
             max-width:472px;
             padding-left:1.5%;
             padding-right:1%;
-            margin-right:#{fluid-percentage($site-max-width, 18)};
-            margin-bottom:#{fluid-percentage($site-max-width, 18)};
+            margin-right:#{fluid-percentage($site-max-width, 28)};
+            margin-bottom:#{fluid-percentage($site-max-width, 33)};
             padding-top:20px;
             padding-bottom:20px;
+            max-height:200px;
             @include border-radius(5px);
             border: 1px solid #c5c7c9;
             float:left;
@@ -135,8 +139,8 @@
                 }
             }
             .content{
-                width: 70.4%;
-                margin-left: 3.2%;
+                width: 69%;
+                margin-left: 5%;
                 float:left;
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
@@ -144,7 +148,7 @@
                     color:$color-blue;
                     width:auto;
                     margin-top:0;
-                    margin-bottom:4px;
+                    margin-bottom:7px;
                     font-weight:bold;
                     text-transform:none;
                 }
@@ -153,7 +157,7 @@
                     font-size:16px;
                     color:#5a5e5f;
                     line-height:22px;
-                    margin-bottom:16px;
+                    margin-bottom:11px;
                 }
             }
             &.last{
@@ -167,12 +171,12 @@
         width:100%;
         background-color:$color-white;
         float:left;
-        padding-top:32px;
+        padding-top:26px;
         padding-left:#{fluid-percentage($site-max-width, 220)};
         padding-bottom:214px;
         padding-right:#{fluid-percentage($site-max-width, 220)};
         h2{
-            margin-bottom:30px;
+            margin-bottom:26px;
             .icon{
                 background:url("../img/desktop/resources/icon-for-your-patients.png") no-repeat;
                 width:47px;
@@ -187,8 +191,8 @@
             min-height:294px;
             padding-left:1.5%;
             padding-right:1%;
-            margin-right:#{fluid-percentage($site-max-width, 18)};
-            margin-bottom:#{fluid-percentage($site-max-width, 18)};
+            margin-right:#{fluid-percentage($site-max-width, 28)};
+            margin-bottom:#{fluid-percentage($site-max-width, 33)};
             padding-top:20px;
             padding-bottom:20px;
             @include border-radius(5px);
@@ -249,7 +253,7 @@
 .download-cta-button{
     margin: 0;
     width:280px;
-    margin-left: 3.2%;
+    margin-left: 4.3%;
     .sympt{
         height:50px;
         width:180px;
@@ -284,10 +288,12 @@
             top: 4px;
         }
     }
+    
 }
 }
-                
-/*Media Qeueries*/
+
+
+/******************************************************** Media Qeueries **********************************************************/
 
 @include breakpoint('desktop') {
 .resources-section {
@@ -295,7 +301,12 @@
         margin-bottom: 5%;
     }
     .content{
-        margin-bottom: 27%;
+        margin-bottom: 22%;
+    }
+    .for-your-patients{
+        .resource-container{   
+            max-height:100%;  
+        }
     }
     .download-cta-button{
          margin-bottom:20px;
@@ -324,6 +335,7 @@
             min-width:300px;
             max-width:100%;
             width:100%;
+            max-height:100%;
             .preview{
                 padding-bottom:29.35%;
             }
@@ -389,11 +401,11 @@
     .banner{
         padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
         padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
-        height:56px;
+        height:66px;
         min-height:56px;
         h1{
             font-size: 19px;
-            padding-top:20px;
+            padding-top:24px;
         }
     }
     .videos{
@@ -409,6 +421,7 @@
                 width:30px;
                 height:21px;
                 background-size:contain;
+                margin-right:6px;
             }
         }
         .thumbnails{
@@ -456,20 +469,23 @@
                 height:28px;
                 background-size:contain;
                 top:7px;
+                margin-right:6px;
             }
         }
         .resource-container{
             width:100%;
             max-width:100%;
+            min-width:100%;
             padding-left: 3.93%;
             padding-right: 3.93%;
             padding-top: 12px;
             padding-bottom:9px;
             margin-bottom:21px;
+            margin-right:0;
             .preview{
-                padding-bottom: 28%;
+                padding-bottom: 39%;
                 min-width:68px;
-                min-height: 130px;
+                min-height: 95px;
                 &.preview-1{
                     background:url("../img/mobile/resources/resource-thumb-1.png") no-repeat;
                     background-size:contain;
@@ -489,7 +505,7 @@
             }
             .content{
                 margin-left: 5.11%;
-                width: 68.5%;
+                width: 67%;
                 h3{
                     font-size:13px;
                 }
@@ -529,6 +545,7 @@
             padding-top: 12px;
             padding-bottom:9px;
             margin-bottom:21px;
+            min-height:100%;
             &.last{
                 .content{
                     margin-bottom: 0;
@@ -536,13 +553,18 @@
             }
             &.huge{
                  .preview{
-                    min-height: 170px;
+                    min-height: 130px;
+                }
+                .download-cta-button{
+                    @include breakpoint('mobile') {
+                        //margin-left:31.49%;
+                    }
                 }
             }
             .preview{
-                padding-bottom: 28%;
+                padding-bottom: 39%;
                 min-width:68px;
-                min-height: 130px;
+                min-height: 95px;
                 &.preview-1{
                     background:url("../img/mobile/resources/resource-thumb-5.png") no-repeat;
                     background-size:contain;
@@ -554,7 +576,7 @@
             }
             .content{
                 margin-left: 5.11%;
-                width: 68.5%;
+                width: 67%;
                 h3{
                     font-size:13px;
                 }
@@ -573,6 +595,9 @@
         margin: 0;
         width:177px;
         margin-left: 5.11%;
+         @media screen and (max-width: 320px) {
+            margin-left: 31.49%;
+         }
         .sympt{
             height:35px;
             width:100px;
@@ -627,3 +652,4 @@
     }
 }
 }
+                
