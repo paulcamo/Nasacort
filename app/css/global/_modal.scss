@@ -175,7 +175,7 @@ $modal-link-color:#0099cc;
   p {
     font-size: 18px;
     margin-top: 0;
-    margin-bottom:25px;
+    margin-bottom:22px;
     @include breakpoint('mobile'){
       font-size: 12px;
       line-height: 17px;
@@ -183,7 +183,7 @@ $modal-link-color:#0099cc;
     }
   }
   ul {
-    margin-bottom: 31px;
+    margin-bottom: 22px;
     li {
       font-size: 18px;
       line-height: 24px;
