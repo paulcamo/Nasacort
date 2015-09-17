@@ -146,7 +146,7 @@
     overflow: hidden;
 
 
-    .brand,  .open {
+    .brand,  .open,.instruccion {
       width: 99%;
       text-align: center;
       background-color: #497ebf;
@@ -155,7 +155,28 @@
     }
     .open{
       height: 60px;
+      &.start{
+        background-color: #d9d9d9;
+        border-left: solid #497ebf 3px;
+        border-right: solid #497ebf 3px;
+        border-top: solid #497ebf 3px;
+      }
+    }
+    .instruccion{
+      height: 100px;
       margin-bottom: 1px; 
+      padding-top: 20px;
+      text-align: left;
+      p{
+        padding: 0 15px;
+        color: #dfefff;
+        font-size: 19px;
+        margin-bottom: 15px;
+        &.head{
+          font-size: 22px;
+          margin-bottom: 3px;
+        }
+      }
     }
     .brand{
       img{
@@ -301,6 +322,7 @@
     }
 
     .arrow {
+      display: none;
       position: absolute;
       right: -96px;
       border: medium none;
@@ -309,6 +331,16 @@
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
       width: 36.5%;
+    }
+    .gray-arrow {
+      position: absolute;
+      right: 50%;
+      border: medium none;
+      z-index: 11;
+      top: 62px;
+      background: url("../img/desktop/nasacort-difference/gray-arrow.png") no-repeat center bottom;
+      height: 15px;
+      width: 20px;
     }
 
   }

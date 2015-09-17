@@ -47,8 +47,13 @@ $(document).ready(function(){
 
     set_checks("clear");
 
+    $('.instruccion').click(function(event) {
+        event.preventDefault();
+    });
+
     $(".open").on("click", function(e){
         e.preventDefault();
+        $('.arrow').show();
         $("#brand-compare").addClass("brand-compare-open");
         $(".chart-table-container .arrow").css("display","none");
 
@@ -57,6 +62,7 @@ $(document).ready(function(){
 
     $(".brand").on("click", function(e){
         e.preventDefault();
+        $("#brand-compare .open").removeClass("start");
         $("#brand-compare").removeClass("brand-compare-open");
         $(".chart-table-container .arrow").css("display","initial");
 
