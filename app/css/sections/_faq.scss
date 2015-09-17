@@ -72,8 +72,8 @@ p{
         }
         @include breakpoint('tablet'){
             max-width: 769px!important;
-            padding-left:0;
-            padding-right:0;
+            padding-left:40px;
+            padding-right:40px;
         }
         @include breakpoint('mobile'){
             max-width: 100%!important;
@@ -95,8 +95,8 @@ p{
     }
     @include breakpoint('tablet'){
         max-width: 769px!important;
-        padding-right: 0;
-        padding-left: 0;
+        padding-right: 40px;
+        padding-left: 40px;
     }
     @include breakpoint('mobile'){
         max-width: 100%!important;
