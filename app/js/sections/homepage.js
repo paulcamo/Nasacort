@@ -200,8 +200,14 @@ $( window ).resize(function() {
     $(".dotbox").css("top",  ($(window).height() -  $(".dotbox").height())/2 + "px");
 });
 
+// ---------------------------------------------------------------------------------------
 
-
+$(window).scroll(function() {
+    $.doTimeout( 'scroll', 50, function(){
+        // do something computationally expensive
+        desktopStickyHeader($(this).scrollTop());
+    });
+});
 
 // ---------------------------------------------------------------------------------------
 
