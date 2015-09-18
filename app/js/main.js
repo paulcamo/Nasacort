@@ -28,6 +28,23 @@ $(document).ready(function() {
     validateFootnote();
     
     addFancyVideo();
+
+
+
+   // ojo: los botones del slider reaccioan a esto.....
+    //$('a[href^="#"]').on('click',function (e) {
+    //    e.preventDefault();
+    //
+    //    var target = this.hash;
+    //    var $target = $(target);
+    //    console.log ("jghjghjghjghj");
+    //
+    //    $(window).scrollTop( $("div[id='" + target + "']").offset().top  - 80 );
+    //    window.location.hash = target;
+    //});
+
+
+
 });
 
 $(window).bind("resize", function(){
@@ -83,8 +100,12 @@ function desktopStickyHeader(y){
 
 
 function hashCalling(){
-    hashCalled = window.location.hash.substring(1);
-    //console.log("hashCalled ---->" + hash);
+    hashCalled = window.location.hash.substring(1) || "";
+
+    if (hashCalled !=="") {
+        console.log("hashCalled ---->" + hashCalled);
+        $(window).scrollTop( $("div[id='" + hashCalled + "']").offset().top  - 80 );
+    }
 }
 
 function resetHeaderPadding() {
