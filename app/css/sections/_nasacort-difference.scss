@@ -18,8 +18,8 @@
     }
     @include breakpoint('tablet'){
       max-width: 769px!important;
-      padding-left:0;
-      padding-right:0;
+      padding-left:40px;
+      padding-right:40px;
     }
     @include breakpoint('mobile'){
       clear: both;
@@ -70,6 +70,16 @@
     font-size: 15px;
     clear: both;
     margin: 0 auto 12px;
+    @include breakpoint('desktop'){
+      max-width: 920px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('tablet'){
+      max-width: 769px!important;
+      padding-left:40px;
+      padding-right:40px;
+    }
     @include breakpoint('mobile'){
       text-align: left;
       line-height: 17px;
@@ -166,6 +176,16 @@
     z-index: 10;
     list-style: none;
     overflow: hidden;
+    @include breakpoint('tablet'){
+      right: 110px;
+      top: 1px;
+      width: 25.1%;
+    }
+    @include breakpoint('mobile'){
+      right: 18px;
+      top: 1px;
+      width: 30.7%;
+    }
 
 
     .brand,  .open,.instruccion {
@@ -177,6 +197,12 @@
     }
     .open{
       height: 60px;
+      @include breakpoint('tablet'){
+        height: 68px;
+      }
+      @include breakpoint('mobile'){
+        height: 67px;
+      }
       &.start{
         background-color: #d9d9d9;
         border-left: solid #497ebf 3px;
@@ -189,20 +215,32 @@
       margin-bottom: 1px; 
       padding-top: 20px;
       text-align: left;
+      @include breakpoint('mobile'){
+        height: 73px;
+      }
       p{
         padding: 0 15px;
         color: #dfefff;
         font-size: 19px;
         margin-bottom: 15px;
+        @include breakpoint('mobile'){
+          font-size: 12px;
+        }
         &.head{
           font-size: 22px;
           margin-bottom: 3px;
+          @include breakpoint('mobile'){
+            font-size: 14px;
+          }
         }
       }
     }
     .brand{
       img{
         padding:12px 0;
+        @include breakpoint('mobile'){
+          width: 80%;
+        }
       }
     }
 
@@ -262,6 +300,9 @@
     border: 1px solid #c0d3df;
     margin: auto;
     position:relative;
+    @include breakpoint('mobile'){
+      width: 100%;
+    }
 
     th, td {
       border: 1px solid #c0d3df;
@@ -330,9 +371,13 @@
     margin: auto;
     @include breakpoint('tablet'){
       width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
     }
     @include breakpoint('mobile'){
       width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     .vrs {
@@ -341,6 +386,16 @@
       top: 6px;
       border: none;
       z-index: 12;
+      @include breakpoint('tablet'){
+        right: 32.4%;
+      }
+      @include breakpoint('mobile'){
+        top: 16px;
+        right: 26.3%;
+        img{
+          width:70%;
+        }
+      }
     }
 
     .arrow {
@@ -363,6 +418,10 @@
       background: url("../img/desktop/nasacort-difference/gray-arrow.png") no-repeat center bottom;
       height: 15px;
       width: 20px;
+      @include breakpoint('mobile'){
+        right: 43%;
+        top: 60px;
+      }
     }
 
   }
