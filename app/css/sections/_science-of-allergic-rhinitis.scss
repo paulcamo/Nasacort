@@ -419,7 +419,9 @@
       width: 72%;
     }
 
-
+    @include breakpoint('pp-mobile'){
+      width: 73%;
+    }
 
 
 
@@ -440,9 +442,9 @@
            width:100%; // 796px;
 
 
-           @include breakpoint('mobile'){
-            width:80%;
-          }
+//           @include breakpoint('pp-mobile'){
+//            width: 95%;
+//          }
 
 
 
@@ -486,7 +488,7 @@
     height:434px; 
     display:block;
     float:left;
-    margin-right:0.9%;
+    margin-right: 9px;
     background-size:100% 100%;
     &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
@@ -496,7 +498,7 @@
 
     @include breakpoint("mobile") {
       width: 8%;
-
+      margin-right: 5px;
     }
 
 
@@ -522,7 +524,7 @@
 
     @include breakpoint("mobile") {
       width: 8%;
-
+      margin-left: 5px;
     }
 
 
