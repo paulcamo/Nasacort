@@ -426,7 +426,7 @@
     .item{
         float:left;
       width: 100%;
-      background-color: yellowgreen;
+     // background-color: yellowgreen;
 
 
 
@@ -492,6 +492,15 @@
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-hover.png") no-repeat;
         background-size:100% 100%;
     }
+
+
+    @include breakpoint("mobile") {
+      width: 8%;
+
+    }
+
+
+
   }
   .arrow-left.disabled{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-left-disable.png") no-repeat;
@@ -510,6 +519,13 @@
         background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-hover.png") no-repeat;
         background-size:100% 100%;
     }
+
+    @include breakpoint("mobile") {
+      width: 8%;
+
+    }
+
+
   }
   .arrow-right.disabled{
     background:url("../img/desktop/science-of-allergic-rhinitis/arrow-right-disable.png") no-repeat;
