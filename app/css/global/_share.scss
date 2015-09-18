@@ -1,3 +1,4 @@
+
 #share{
     .modal-content{
         .modal-dialog{
@@ -7,9 +8,11 @@
             padding-right:58px;
             padding-bottom:40px;
             overflow: hidden;
+            //background:url("../img/desktop/ctas/guide-share.png") no-repeat;
+            //opacity:0.5;
             .close-modal{
-                top:18px;
-                right:17px;
+                right: 19px;
+                top: 16px;
             }
             .modal-header{
                 h1{
@@ -21,17 +24,24 @@
                 #share-form{
                     fieldset{
                         .left-column{
-                            width:45%;
+                            width:46%;
                             float:left;
-                            margin-right:10%;
+                            margin-right:6%;
+                            margin-top: 2px;
                         }
                         .right-column{
-                            width:45%;
+                            width:48%;
                             float:right;
+                            margin-top: 2px;
+                            .error-globe{
+                                .close-globe{
+                                     right: 42px;
+                                }
+                            }
                         }
                         .your-name{
                             float:left;
-                            margin-bottom:32px;
+                            margin-bottom:41px;
                             width:100%;
                             height:80px;
                             overflow: visible;
@@ -44,7 +54,7 @@
                         }
                         .recipient-name{
                             float:left;
-                            margin-bottom:32px;
+                            margin-bottom:41px;
                             width:100%;
                             height:80px;
                             overflow: visible;
@@ -62,6 +72,13 @@
                             float:left;
                             margin-bottom:10px;
                             height:auto;
+                            margin-left: 4px;
+                        }
+                        .red-highlighted{
+                            label{
+                                color:#e15d10;
+                            }
+                            
                         }
                         input[type='text']{
                             font-family:Arial, Helvetica, sans-serif;
@@ -72,7 +89,7 @@
                             border: 2px solid #8096bf;
                             width:100%;
                             max-width:410px;
-                            height:58px;
+                            height:64px;
                             background-color:#f6f4f4;
                             float:left;
                             padding-left:22px;
@@ -116,26 +133,29 @@
                                  height:16px;
                                  float:right;
                                  position:relative;
-                                 right: 15px;
-                                 top: 12px;
+                                 right: 29px;
+                                 top: 15px;
                             }
                             
                         }
                         .bottom-content{
                             float:left;
-                            margin-top:250px;
+                            margin-top:246px;
                             position:absolute;
                             z-index: -2;
                             padding-right:58px;
+                            margin-left: 5px;
                             .left-column{
-                                width:60%;
+                                width:57%;
                                 margin-right:0;
                             }
                             .right-column{
                                 width:40%;
                                 float:right;
                                 text-align:right;
-                                margin-top:26px;
+                                margin-top:30px;
+                                margin-right: 20px;
+                                width: 35%;
                             }
                             .all-fields{
                                 font-family:Arial, Helvetica, sans-serif;
@@ -166,7 +186,7 @@
                             }
                             .button-cancel{
                                 background-color:#8b8b8b;
-                                margin-right:20px;
+                                margin-right:17px;
                             }
                             .button-send{
                                 background:url("../img/desktop/ctas/send-button-bg.png") repeat-x;
@@ -253,11 +273,11 @@ $color-red:#fe0000;
                         
                         .red-highlighted{
                             label{
-                                color:$color-red;
+                                color:#fe0000;
                             }
                             input[type='text']{
                                 @include border-radius(5px);
-                                border: 1px solid $color-red;
+                                border: 1px solid #fe0000;
                             }   
                         }
                         input[type='text']{

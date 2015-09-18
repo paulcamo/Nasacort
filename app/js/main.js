@@ -363,7 +363,7 @@ function resetForm()
     $("#share :text").val("");
     setFormDefaultValues();
     hideSuccessfulMessage();
-    removeRedHighlightedClassForMobile();
+    removeRedHighlightedClass();
     $(".triangle, .error-globe").hide();
 }
 
@@ -438,7 +438,7 @@ function addSubmitHandler()
             //Post these
             alert("your name " + yourName + " your email " + yourEmail + " recipient name " + recipientName + " recipient email " + recipientEmail);
             showSuccessfulMessage();
-            removeRedHighlightedClassForMobile();
+            removeRedHighlightedClass();
         }else
         {
             if(yourName.length < 2)
@@ -488,7 +488,7 @@ function addSubmitHandler()
                 $("#share .your-email .triangle, #share .your-email .error-globe").show();
                 $("#share .recipient-name .triangle, #share .recipient-name .error-globe").show();
                 $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show();
-                addRedHighlightedClassForMobile();
+                addRedHighlightedClass();
             }
             return;
         }     
@@ -509,7 +509,7 @@ function hideSuccessfulMessage()
     $("#share #share-form .button-send").val("Send");
 }
 
-function addRedHighlightedClassForMobile()
+function addRedHighlightedClass()
 {
     //Adding red highlighted class for label and border in input just for mobile
     $("#share .your-name").addClass("red-highlighted");
@@ -518,7 +518,7 @@ function addRedHighlightedClassForMobile()
     $("#share .recipient-email").addClass("red-highlighted");
 }
 
-function removeRedHighlightedClassForMobile()
+function removeRedHighlightedClass()
 {
     //Removing red highlighted class for label and border in input just for mobile
     $("#share .your-name").removeClass("red-highlighted");
