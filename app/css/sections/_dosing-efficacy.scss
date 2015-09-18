@@ -5,10 +5,6 @@ $middle-blue: #0d4a84;
 $space: 3.125%;
 $space-mobile-copy: 4.6875%;
 
-/*body{
-    background:url("../img/desktop/dosingEfficacy/guide-dosing-desktop.jpg") no-repeat top center;
-    opacity:0.8;
-}*/
 
 .content-dosing-and-efficacy{
   position: relative;
@@ -130,11 +126,11 @@ $space-mobile-copy: 4.6875%;
             max-width:814px;
         }
         @include breakpoint('mobile') {
-            width:97% !important;
+            
             max-width: 604px;
             min-width: 292px;
-            margin-left:9px;
-            margin-right:9px;
+            margin-left:0;
+            margin-right:0;
         }
     }
   }
@@ -388,6 +384,7 @@ $space-mobile-copy: 4.6875%;
             text-align:left;
             width:100%;
             float:left;
+            font-size:10px;
         }
     }
     
@@ -412,15 +409,16 @@ $space-mobile-copy: 4.6875%;
     }
     
     .dosing-information{
-         padding-top: 32px;
+         padding-top: 26px;
          overflow:visible;
          float:left;
          height:auto;
-         padding-bottom:14px;
+         padding-bottom:6px;
          
         .img-chart{
             img{
                 width:100%;
+                margin-bottom:-3px;
             }
             @include breakpoint('tablet') {
                 img{
@@ -438,10 +436,19 @@ $space-mobile-copy: 4.6875%;
             line-height: 24px;
             margin: 0;
             margin-left:$space-mobile-copy;
+            &.last-h2{
+                margin-top:0px;
+                width:70%;
+            }
           }
           p{
-            margin-top:8px; 
+            margin-top:2px; 
             margin-left:$space-mobile-copy;
+            margin-bottom:20px;
+            &.last-p{
+                margin-top:6px;
+                margin-bottom:3px;
+            }
           }
           .footnote {
             margin-top: 0;
@@ -453,16 +460,19 @@ $space-mobile-copy: 4.6875%;
     
     .video-sect-dosing{
         height: auto; 
+        padding-bottom:0;
         .content-dosing-and-efficacy{
-            padding-bottom:27px;
-            margin-left:$space-mobile-copy;
-            margin-right:$space-mobile-copy;
+            padding-bottom:30px;
+            margin-left:0;
+            margin-right:0;
+            padding-left:8%;
+            padding-right:8%;
             h2{
                 margin-top: 18px;
                 margin-bottom: 2px;
             }
             p{
-                margin-bottom:10px;
+                margin-bottom:9px;
             }
             .video-control{
                 .video-intial{
@@ -499,16 +509,18 @@ $space-mobile-copy: 4.6875%;
             margin-left:$space-mobile-copy;
         }
         h3{
-            line-height:32px;
+            line-height:30px;
             font-size:17px;
             padding-left:$space-mobile-copy;
             padding-right:$space-mobile-copy;
+            margin-left:9px;
         }
         .chart-text-inner{
             padding-left:$space-mobile-copy;
             padding-right:$space-mobile-copy;
             margin-top:12px;
-            margin-bottom: 15px;
+            margin-bottom: 9px;
+            width:90%;
         }
         .chart-1{
             background-color:$color-white;
@@ -525,16 +537,20 @@ $space-mobile-copy: 4.6875%;
                 
             }
             .footnote{
-                margin-top:12px;
+                margin-top:7px;
+                margin-bottom: 2px;
             }
             .notes{
-                 margin-left:$space-mobile-copy;
+                 margin-left:8% !important;
+                 line-height: 12px;
+                 width: 85%;
+                 font-size: 10px;
             }
         }
         .chart-2{
             float:left;
             height:auto;
-            padding-bottom: 7px;
+            padding-bottom: 0px;
             h3{
                 padding-bottom: 6px;
                 padding-top: 6px;
@@ -547,23 +563,34 @@ $space-mobile-copy: 4.6875%;
                 max-height:420px;
                 min-width:297px;
                 margin-left: 9px;
-                margin-bottom: 14px;
+                margin-bottom: 10px;
             }
             .parr-inner-dosing{
                 margin-bottom: 12px;
                 padding-left:0;
-                margin-left:$space-mobile-copy;
+                margin-left:7%;
+                font-size:10px;
+                line-height: 13px;
              }
              .parrMarg-inner-dosing{
                  margin-bottom: 12px;
                  padding-left:0;
-                 margin-left:$space-mobile-copy;
+                 margin-left:7%;
+                 font-size:10px;
+                 line-height: 14px;
+                 width:80%;
              }
              .notes{
-                 margin-left:$space-mobile-copy;
+                 line-height: 12px;
+                margin-left: 7% !important;
+                width: 92%;
              }
              .footnote{
-                margin-top:12px;
+                margin-top:7px;
+            }
+            .use-directed{
+                margin-top:2px;
+                margin-left: 7%;
             }
         }
          .chart-3{
@@ -573,48 +600,67 @@ $space-mobile-copy: 4.6875%;
                 padding-bottom: 6px;
                 padding-top: 6px;
                 line-height: 22px;
-                margin-bottom: 15px;
-                padding-right: 25%;
+                margin-bottom: 10px;
+                height:46px;
+                width: 81% !important;
+                padding-right: 35px !important;
             }
             img{
-                width:100%;
+                width:93.75%;
                 max-width:618px;
                 max-height:900px;
                 min-width:309px;
-                margin-left: 0;
+                margin-left: 3%;
+                margin-bottom:18px;
             }
             .footnote{
                 margin-top:12px;
             }
             .second-content-dosing{
-                margin-bottom: 19px;
-                padding-left:$space-mobile-copy;
+                margin-bottom: 14px;
+                padding-left:7%;
                 h4{
-                    font-size: 17px;
+                    font-size: 14px;
                     line-height: 19px;
-                    margin-bottom: 8px;
+                    margin-bottom: 5px;
+                    width:67%;
+                    &.last-h4{
+                        width:90%;
+                        margin-bottom:0;
+                    }
                 }
                 p{
                     margin-bottom: 15px;
+                    line-height:17px;
                 }
                 img{
                     margin-bottom: 21px;
                 }               
             }
             .chart-text{
-                  margin-bottom: 8px;
-                  padding-left:$space-mobile-copy;
+                  margin-bottom: 6px;
+                  padding-left:8%;
                 p{
-                   margin-bottom: 2px;
+                   line-height: 16px;
+                    margin-bottom: 0;
                    width:100%;
+                   font-size:10px;
                 }
             }
             .notes{
-                padding-left:$space-mobile-copy;
                 margin-left:0;
+                font-size:10px;
+                margin-left: 0;
+                padding-left: 8%;
+                line-height: 15px;
+            }
+            .footnote{
+                margin-top:6px;
             }
             .use-directed{
-                margin-top: 6px;
+                margin-top: 2px;
+                margin-left:8%;
+                margin-bottom:6px;
             }
         }
     }
