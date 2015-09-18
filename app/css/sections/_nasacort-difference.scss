@@ -199,9 +199,9 @@
       }
     }
     @include breakpoint('tablet'){
-      right: 110px;
+      right: 38px;
       top: 1px;
-      width: 25.1%;
+      width: 29.5%;
     }
     @include breakpoint('mobile'){
       right: 18px;
@@ -272,31 +272,49 @@
     .sprite-bg-afrin{
       background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-benadryl{
       background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-flonase {
       background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-sudafed {
       background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-zyrtec {
       background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-claritin {
       background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
   }
@@ -327,10 +345,16 @@
     position:relative;
     .chart-logo{
       img{
+        @include breakpoint('tablet'){
+          width:40%;
+        }
         @include breakpoint('mobile'){
-          width:80%;
+          width:40%;
         }
       }
+    }
+    @include breakpoint('tablet'){
+      width: 100%;
     }
     @include breakpoint('mobile'){
       width: 100%;
@@ -419,7 +443,12 @@
       border: none;
       z-index: 12;
       @include breakpoint('tablet'){
-        right: 32.4%;
+        right: 30.3%;
+        top: 14px;
+        width: 55px;
+        img{
+          width:55px;
+        }
       }
       @include breakpoint('mobile'){
         right: 31.3%;
@@ -441,6 +470,17 @@
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
       width: 36.5%;
+      @include breakpoint('tablet'){
+        right: 40px;
+        top: 57px;
+        width: 29%;
+      }
+      @include breakpoint('mobile'){
+        right: 20px;
+        top: 57px;
+        width: 30.6%;
+      }
+
     }
     .gray-arrow {
       position: absolute;
