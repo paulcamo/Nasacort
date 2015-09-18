@@ -176,10 +176,32 @@
     z-index: 10;
     list-style: none;
     overflow: hidden;
+    @include breakpoint('mobile'){
+      overflow:visible;
+    }
+    .inner-logos{
+      @include breakpoint('mobile'){
+        width:184%;
+        float:right;
+      }
+      .two-logos{
+        @include breakpoint('mobile'){
+          width:100%;
+          float:right;
+        }
+      }
+      a{
+        @include breakpoint('mobile'){
+          float: left;
+          position: relative;
+          width: 50%;
+        }
+      }
+    }
     @include breakpoint('tablet'){
-      right: 110px;
+      right: 38px;
       top: 1px;
-      width: 25.1%;
+      width: 29.5%;
     }
     @include breakpoint('mobile'){
       right: 18px;
@@ -216,7 +238,10 @@
       padding-top: 20px;
       text-align: left;
       @include breakpoint('mobile'){
-        height: 73px;
+        float: right;
+        height: auto;
+        padding: 10px 0 1px;
+        width: 184%;
       }
       p{
         padding: 0 15px;
@@ -247,31 +272,49 @@
     .sprite-bg-afrin{
       background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-benadryl{
       background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-flonase {
       background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-sudafed {
       background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-zyrtec {
       background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
     .sprite-bg-claritin {
       background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
       background-size: cover;
+      @include breakpoint('tablet'){
+          background-size: 75%;
+      }
     }
 
   }
@@ -300,6 +343,19 @@
     border: 1px solid #c0d3df;
     margin: auto;
     position:relative;
+    .chart-logo{
+      img{
+        @include breakpoint('tablet'){
+          width:40%;
+        }
+        @include breakpoint('mobile'){
+          width:40%;
+        }
+      }
+    }
+    @include breakpoint('tablet'){
+      width: 100%;
+    }
     @include breakpoint('mobile'){
       width: 100%;
     }
@@ -387,13 +443,19 @@
       border: none;
       z-index: 12;
       @include breakpoint('tablet'){
-        right: 32.4%;
+        right: 30.3%;
+        top: 14px;
+        width: 55px;
+        img{
+          width:55px;
+        }
       }
       @include breakpoint('mobile'){
-        top: 16px;
-        right: 26.3%;
+        right: 31.3%;
+        top: 23px;
+        width: 29px;
         img{
-          width:70%;
+          width: 29px;
         }
       }
     }
@@ -408,6 +470,17 @@
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
       width: 36.5%;
+      @include breakpoint('tablet'){
+        right: 40px;
+        top: 57px;
+        width: 29%;
+      }
+      @include breakpoint('mobile'){
+        right: 20px;
+        top: 57px;
+        width: 30.6%;
+      }
+
     }
     .gray-arrow {
       position: absolute;

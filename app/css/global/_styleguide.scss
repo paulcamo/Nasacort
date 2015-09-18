@@ -343,7 +343,12 @@ h4{
 
 }
 
-/*Fancy Box Mobile*/
+/* Fancy Box styles */
 .fancybox-overlay {
     position:fixed !important;
+}
+
+
+#fancybox-buttons {
+  display: none;
 }
