@@ -176,6 +176,28 @@
     z-index: 10;
     list-style: none;
     overflow: hidden;
+    @include breakpoint('mobile'){
+      overflow:visible;
+    }
+    .inner-logos{
+      @include breakpoint('mobile'){
+        width:184%;
+        float:right;
+      }
+      .two-logos{
+        @include breakpoint('mobile'){
+          width:100%;
+          float:right;
+        }
+      }
+      a{
+        @include breakpoint('mobile'){
+          float: left;
+          position: relative;
+          width: 50%;
+        }
+      }
+    }
     @include breakpoint('tablet'){
       right: 110px;
       top: 1px;
@@ -216,7 +238,10 @@
       padding-top: 20px;
       text-align: left;
       @include breakpoint('mobile'){
-        height: 73px;
+        float: right;
+        height: auto;
+        padding: 10px 0 1px;
+        width: 184%;
       }
       p{
         padding: 0 15px;
@@ -300,6 +325,13 @@
     border: 1px solid #c0d3df;
     margin: auto;
     position:relative;
+    .chart-logo{
+      img{
+        @include breakpoint('mobile'){
+          width:80%;
+        }
+      }
+    }
     @include breakpoint('mobile'){
       width: 100%;
     }
@@ -390,10 +422,11 @@
         right: 32.4%;
       }
       @include breakpoint('mobile'){
-        top: 16px;
-        right: 26.3%;
+        right: 31.3%;
+        top: 23px;
+        width: 29px;
         img{
-          width:70%;
+          width: 29px;
         }
       }
     }
