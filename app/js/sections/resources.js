@@ -8,7 +8,12 @@ $(document).ready(function(){
 });
 
 $(window).bind("resize", function(){
-    keepAllContainersSameHeight();
+    clearTimeout($.data(this, 'resizeTimer'));
+    $.data(this, 'resizeTimer', setTimeout(function() {
+        //do something
+        //alert("Haven't resized in 200ms!");
+        keepAllContainersSameHeight();
+    }, 500));
 });
 
 function keepAllContainersSameHeight()
@@ -16,6 +21,13 @@ function keepAllContainersSameHeight()
     var biggerHeightPatients = 0;
     var biggerHeightPractice = 0;
     var contentwidth = $(window).width();
+    
+    $(".for-your-patients .resource-container").each(function(index){
+        $(this).css("height", "auto");
+    });
+    $(".for-your-practice .resource-container").each(function(index){
+        $(this).css("height", "auto");
+    });
 
     if(isMobile)
     {
@@ -61,7 +73,6 @@ function keepAllContainersSameHeight()
     });
     $(".for-your-practice .resource-container").each(function(index){
         $(this).css("min-height", biggerHeightPractice);
-        $(this).css("height", biggerHeightPractice);
     });
 }
 
