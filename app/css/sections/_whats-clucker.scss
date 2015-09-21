@@ -1234,6 +1234,11 @@ $grey-button:#f8f8f8;
 
 /******** Mobile Glass Heads ***********/
 @include breakpoint('mobile') {
+
+.modal-open .modal {
+    padding-left: 16px;
+    padding-right: 16px !important;
+}
     
 #glass-head{
     .modal-content{
@@ -1255,11 +1260,13 @@ $grey-button:#f8f8f8;
                 background:url("../img/mobile/clucker/glass-heads/header-bg.png") repeat-x;
                 background-size:contain;
                 width:100%;
-                height:40px;
+                height:auto;
                 h1{
                  font-size:16px;
                  padding-left: 20px;
-                 padding-top: 15px;
+                 padding-top: 7px;
+                 padding-bottom: 7px;
+                 width:70%;
                 }
             }
            .glass-content{
@@ -1270,12 +1277,15 @@ $grey-button:#f8f8f8;
                }
                .audio-container{
                    padding-top:2px;
-                   padding-left:#{fluid-percentage(640, 28)};
-                   padding-right:#{fluid-percentage(640, 28)};
+                   padding-left:#{fluid-percentage(640, 30)};
+                   padding-right:#{fluid-percentage(640, 30)};
                    p{
                        font-size:12px;
                        line-height:18px;
                        margin-bottom:16px;
+                   }
+                   p:last-of-type{
+                       margin-bottom:11px;
                    }
                    .audio-feature{
                        display:none;
