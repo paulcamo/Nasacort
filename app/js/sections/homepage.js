@@ -2,6 +2,8 @@
 
 // --------------------------------------------------------------------
 
+var desktop_mininum_width = 769;
+var desktop_maximum_width = 1400;
 var xx = (window.innerWidth / 35);
 var css = document.createElement("style");
 css.type = "text/css";
@@ -26,7 +28,9 @@ $(document).ready(function() {
 
     // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
-     var tl1 = new TimelineMax({repeat:-1});
+    var tl1 = new TimelineMax({repeat:-1});
+    var tl2 = new TimelineLite();
+
 
     tl1
         .to("#carousel1", 8,    {scale:1.10, ease: Power0.easeNone} , '+=1')
@@ -39,13 +43,17 @@ $(document).ready(function() {
         .to("#lady03", 1.5,     {opacity:1, ease: Power4.easeOut}   , '-=1.5')
         .to("#lady02", 0,       {opacity:0 , ease: Power0.easeNone} , 'cta+=0')
         .to("#carousel3", 1.5,  {opacity:0, ease: Power2.easeOut}   , '+=8')
-        .to("#lady01", 1.5,       {opacity:1 , ease: Power2.easeOut} , '-=1.5')
-        .to("#lady03", 1.5,       {opacity:0 , ease: Power0.easeNone} , '-=1.5')
+        .to("#lady01", 1.5,     {opacity:1 , ease: Power2.easeOut}  , '-=1.5')
+        .to("#lady03", 1.5,     {opacity:0 , ease: Power0.easeNone} , '-=1.5')
     ;
 
 
     //tl1.seek('cta');
 
+    tl2
+        .to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5')
+        
+    ;
 
 
     // ------------------------------------------------------------------------------------------------------------------------------------
@@ -74,8 +82,8 @@ $(document).ready(function() {
 
     // -----to hide the white header bar ---------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
-    controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
+   // controller.addTween('#brandlogo-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
+   // controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
     //controller.addTween('#brandlogo-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
 
 
@@ -196,23 +204,11 @@ $(document).ready(function() {
 
 // ---------------------------------------------------------------------------------------
 
-$( window ).resize(function() {
-    $(".dotbox").css("top",  ($(window).height() -  $(".dotbox").height())/2 + "px");
-});
-
-// ---------------------------------------------------------------------------------------
-
 $(window).scroll(function() {
     $.doTimeout( 'scroll', 50, function(){
         // do something computationally expensive
         desktopStickyHeader($(this).scrollTop());
     });
-});
-
-// ---------------------------------------------------------------------------------------
-
-$("#equis").on("click",function(e) {
-    $('html, body').scrollTop(0); //reset scroll to top ....
 });
 
 // ---------------------------------------------------------------------------------------
@@ -234,4 +230,38 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 });
 
 // ---------------------------------------------------------------------------------------
+
+
+
+function desktopStickyHeader(y){
+
+    if ($(window).width() >= desktop_mininum_width ) {
+        sticky_height =200;
+
+
+        if ($(window).width() >= desktop_maximum_width){
+            vtop="120px";
+        }else {
+            vtop="148px";
+        }
+
+
+
+    } else {
+        sticky_height =10;
+        vtop="127px";
+    }
+
+    if (y > sticky_height) {
+        $('#header').animate({top: "-38px"}, 300);
+        $('.first-container').animate({paddingTop: "0"}, 300);
+        $('.clucker-container').animate({marginTop: "0"}, 300);
+        headerCollapsed = 1;
+    } else {
+        $('#header').animate({top: "-9px"}, 300);
+        $('.first-container').animate({paddingTop: vtop}, 300);
+        $('.clucker-container').animate({marginTop: vtop}, 300);
+    }
+
+}
 
