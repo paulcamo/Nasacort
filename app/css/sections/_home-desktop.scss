@@ -14,16 +14,17 @@
 .home-section {
 
 
-  #header {
-    position: fixed;
-    width: 100%;
+  .header {
+  //  position: fixed;
+  //  width: 100%;
+    margin-top: 0 ;
   }
 
 
 
 
   .header .header-top ul.utility-nav {
-    position: fixed;
+  //  position: fixed;
     right: 0;
     margin-top: 0;
 
@@ -198,7 +199,9 @@
       position: absolute;
       right: 0;
       text-align: center;
-      top: 38%;
+      top: 0;
+      bottom: 0;
+      margin: auto;
       width: 40px;
       padding-top: 7px;
 
@@ -469,8 +472,8 @@
     height: 13.2em;
     position: absolute;
     //top: 1.60em;
-    top: 8.4em;
-    z-index: 99;
+    top: 8em;
+    z-index: 130;
     background-size: contain;
     max-width: #{homepage-max-width()};
 
@@ -508,6 +511,11 @@
   line-height: 1.3em;
 }
 
+.dataonfile {
+  display: block;
+  margin-left: 1%;
+}    
+    
 
 .use-only {
   position: absolute;
@@ -575,22 +583,39 @@
     z-index: 112;
     margin: auto;
     left: 0;
-    right:0;
+    right: 0;
     max-width: #{homepage-max-width()};
     width: 100%;
+
+
+
+    @include breakpoint("desktop") {
+      top: 139px;
+    }
+
+
+
+
+    .dashbox {
+      display: block;
+      background-color: #c0cdd2;
+      position: absolute;
+      top: 2.7em;
+      left: 3%;
+      width: 7%;
+      height: 0.1em;
+    }
+
+    .herolink {
+      width: 100%;
+      height: 89%;
+      display: block;
+     // background-color: rgba(255,255,255,0.5);
+    }
+
+
+
   }
-
-
-  #slide03 .dashbox {
-    display: block;
-    background-color: #c0cdd2;
-    position: absolute;
-    top: 2.7em;
-    left: 3%;
-    width: 7%;
-    height: 0.1em;
-  }
-
 
   #compare-bg {
     background: transparent url("../img/desktop/homepage/mom-child.png") no-repeat center top;
@@ -1022,6 +1047,12 @@
     width: 100%;
     background-size: contain !important;
 
+    
+    @include breakpoint("desktop") {
+      top: 139px;
+    }
+    
+    
   }
 
 
@@ -1039,45 +1070,40 @@
     letter-spacing: 0.04em;
     width: 39%;
     line-height: 1.2em;
+
+    h2 {
+      font-family: $font-proxima-nova-semibold;
+      color: #2974AB;
+      font-size: 1em;
+      margin-top: 0.51em;
+      margin-bottom: 25px;
+      font-weight: 100;
+      letter-spacing: 0.0434em;
+    }
+
+    .features {
+      color: $color-cyan-text;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+
+    p {
+      font-family: $font-proxima-nova-semibold;
+      font-size: 0.5em;
+      padding-top: 0.1em;
+      letter-spacing: 0.004em;
+      line-height: 1.54em;
+      width: 82%;
+
+    }
+
+    sup {
+      position: relative;
+      top: -0.65em;
+      font-size: 0.5em;
+    }
+
   }
-
-
-  #slide1-textbox h2 {
-    font-family: $font-proxima-nova-semibold;
-    color: #2974AB;
-    font-size: 1em;
-    margin-top: 0.51em;
-    margin-bottom: 25px;
-    font-weight: 100;
-    letter-spacing: 0.0434em;
-  }
-
-
-  #slide1-textbox .features {
-    color: $color-cyan-text;
-    text-transform: uppercase;
-    text-decoration: underline;
-  }
-
-
-  #slide1-textbox p {
-    font-family: $font-proxima-nova-semibold;
-    font-size: 0.5em;
-    padding-top: 0.1em;
-    letter-spacing: 0.004em;
-    line-height: 1.54em;
-    width: 82%;
-
-  }
-
-
-  #slide1-textbox sup {
-    position: relative;
-    top: -0.65em;
-    font-size: 0.5em;
-  }
-
-
 
   #slide01 .lady01,
   #slide01 .lady02,
@@ -1315,9 +1341,18 @@
 
 
 
-//#slide01, #slide02, #slide03, #slide04, #slide05,    {
-//  display: none;
-//}
+#slide01, #slide02, #slide03, #slide04, #slide05,    {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+
+
+}
 
 
 //.container {
