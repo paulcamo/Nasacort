@@ -77,7 +77,7 @@
     left:0 !important;
 
   @include breakpoint("mobile") {
-      padding: 10px 10px 12px 17px;
+      padding: 10px 10px 10px 17px;
 
   }
 
@@ -139,7 +139,7 @@
 @include breakpoint('mobile') {     
 .footnote{  
     width:#{fluid-percentage($site-max-width-mobile, 88)};
-    height:42px;
+    height:37px;
     background-size: contain;
     min-width:88px;
     margin-top: 0;
@@ -163,7 +163,7 @@
     }
     &:hover{
         width:#{fluid-percentage($site-max-width-mobile, 88)};
-        height:42px;
+        height:37px;
         background-size: contain;
     }
 }
