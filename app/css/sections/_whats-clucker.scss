@@ -127,10 +127,14 @@ $grey-button:#f8f8f8;
         position: relative;
         bottom: 0;
         margin: 0 auto;
-        @include breakpoint('desktop'){
-            max-width: 920px!important;
+        @media screen and (max-width: 1399px) {
+            max-width: 100%;
             padding-left:0;
             padding-right:0;
+            bottom:-38px;
+        }
+        @media screen and (max-width: 1210px) {
+            bottom:-11px;
         }
         @include breakpoint('mobile'){
             position: absolute;
@@ -145,8 +149,8 @@ $grey-button:#f8f8f8;
                 display: inline-block;
                 position: relative;
                 width: 300px;
-                @media screen and (max-width: 1210px) {
-                    width: 250px;
+                @media screen and (max-width: 1399px) {
+                    width: 268px;
                 }
                 @media screen and (max-width: 1025px) {
                     width: 180px;
@@ -210,8 +214,11 @@ $grey-button:#f8f8f8;
 
                     img{
                         margin-left: -123px;
-                        @media screen and (max-width: 1210px) {
+                        @media screen and (max-width: 1399px) {
                             margin-left: 0px;
+                        }
+                        @media screen and (max-width: 1210px) {
+                            margin-left: -68px;
                         }
                         @media screen and (max-width: 1025px) {
                             width: 100%;
@@ -1252,11 +1259,6 @@ $grey-button:#f8f8f8;
 
 /******** Mobile Glass Heads ***********/
 @include breakpoint('mobile') {
-
-.modal-open .modal {
-    padding-left: 16px;
-    padding-right: 16px !important;
-}
     
 #glass-head{
     .modal-content{
@@ -1278,13 +1280,11 @@ $grey-button:#f8f8f8;
                 background:url("../img/mobile/clucker/glass-heads/header-bg.png") repeat-x;
                 background-size:contain;
                 width:100%;
-                height:auto;
+                height:40px;
                 h1{
                  font-size:16px;
                  padding-left: 20px;
-                 padding-top: 7px;
-                 padding-bottom: 7px;
-                 width:70%;
+                 padding-top: 15px;
                 }
             }
            .glass-content{
@@ -1295,15 +1295,12 @@ $grey-button:#f8f8f8;
                }
                .audio-container{
                    padding-top:2px;
-                   padding-left:#{fluid-percentage(640, 30)};
-                   padding-right:#{fluid-percentage(640, 30)};
+                   padding-left:#{fluid-percentage(640, 28)};
+                   padding-right:#{fluid-percentage(640, 28)};
                    p{
                        font-size:12px;
                        line-height:18px;
                        margin-bottom:16px;
-                   }
-                   p:last-of-type{
-                       margin-bottom:11px;
                    }
                    .audio-feature{
                        display:none;
