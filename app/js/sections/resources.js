@@ -57,9 +57,11 @@ function keepAllContainersSameHeight()
     }
     $(".for-your-patients .resource-container").each(function(index){
         $(this).css("min-height", biggerHeightPatients);
+        $(this).css("height", biggerHeightPatients);
     });
     $(".for-your-practice .resource-container").each(function(index){
         $(this).css("min-height", biggerHeightPractice);
+        $(this).css("height", biggerHeightPractice);
     });
 }
 
