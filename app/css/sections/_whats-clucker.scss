@@ -48,7 +48,9 @@ $grey-button:#f8f8f8;
     // .first-container {
     //     margin-top: 120px;
     // }
-
+    .download-cta-button{
+        margin-bottom: 68px;
+    }
 }
 
 .show-dsk{
@@ -93,7 +95,14 @@ $grey-button:#f8f8f8;
         clear: both;
     }
     div.tittle{ 
-        margin-left: #{fluid-percentage($site-max-width, 213)};
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: 213px;
+        @include breakpoint('desktop'){
+            max-width: 920px!important;
+            padding-left:0;
+            padding-right:0;
+        }
         @include breakpoint('mobile'){
             margin-left: 7%;
         }
@@ -114,9 +123,15 @@ $grey-button:#f8f8f8;
     }
     
     .people{
-        width: 100%;
-        position: absolute;
-        bottom: 75px;
+        max-width: 1400px;
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+        @include breakpoint('desktop'){
+            max-width: 920px!important;
+            padding-left:0;
+            padding-right:0;
+        }
         @include breakpoint('mobile'){
             position: absolute;
             bottom: -30px;
@@ -661,27 +676,27 @@ $grey-button:#f8f8f8;
         }
         &#the-dripper{
             h2{
-                margin-top: 46px;
+                margin-top: 47px;
             }
         }
         &#the-mouthbreather{
             h2{
-                margin-top: 73px;
+                margin-top: 48px;
             }
         }
         &#the-sniffler{
             h2{
-                margin-top: 60px;
-                margin-bottom: 50px;
+                margin-top: 48px;
+                margin-bottom: 52px;
             }
         }
         h2{
             margin-left: 10px;
-            margin-top: 50px; 
+            margin-top: 55px; 
             font-family:$font-proxima-nova-regular;
             color:$subheader-text;
             font-size: 34px; 
-            margin-bottom:50px; 
+            margin-bottom:52px; 
             @include breakpoint('tablet'){
                 display: none;
             } 
@@ -782,18 +797,26 @@ $grey-button:#f8f8f8;
 
     .wac-elements{
         position:relative;
+        margin-bottom: 21px;
         @include breakpoint('tablet'){
             max-width: 400px;
             margin: 0 auto;
         }
         h3{
-            margin-bottom: 13px;
+            margin-bottom: 20px;
             @include breakpoint('mobile'){
                 font-size: 14px;
                 background-color:$grey-bg;
                 border-radius:3px;
                 padding:11px;
             }
+        }
+    }
+
+    .element-2{
+        margin-bottom: 7px;
+        ul{
+            margin-bottom: 8px;
         }
     }
 
@@ -822,7 +845,7 @@ $grey-button:#f8f8f8;
         width: 100%;
         display: block;
         height: auto;
-        padding-bottom:30px;
+        padding-bottom:11px;
         overflow: hidden;
         .wac-into-1{
             width: 59%;
@@ -968,7 +991,7 @@ $grey-button:#f8f8f8;
     .wac-indication{
         text-align: right;
         display: block;
-        margin-top: 18px;
+        margin-top: 20px;
         color:$grey-innerTxt;
         @include breakpoint('mobile'){
             text-align: left;
@@ -993,8 +1016,8 @@ $grey-button:#f8f8f8;
 }
 
 .sub-down{
-    margin-top: 70px;
-    // margin-bottom: 30px;
+    margin-top: 67px;
+    margin-bottom: 8px;
     text-align: center;
     @include breakpoint('mobile'){
         font-size: 17px; 
@@ -1007,18 +1030,16 @@ $grey-button:#f8f8f8;
 #glass-head{
     .modal-content{
        .modal-dialog{
-           max-width:1021px;
+           max-width:1024px;
            height:auto;
            max-height:100%;
            overflow:hidden;
            padding:0;
-           margin-top: 8%;
-           
            .close-modal{
                 background:url("../img/desktop/clucker/glass-heads/close-btn.png") no-repeat;
                 width:48px;
                 height:48px;
-                top:20px;
+                top:15px;
                 right:15px;
                 z-index: 3;
                 &:hover{
@@ -1035,9 +1056,8 @@ $grey-button:#f8f8f8;
                     color:$color-white;
                     font-family: Helvetica, Arial, sans-serif;
                     margin-bottom:0;
-                    padding-left:#{fluid-percentage(1021, 30)};
+                    padding-left:40px;
                     padding-top:28px;
-                    font-size:34px;
                 }
             }
             .glass-content{
@@ -1055,17 +1075,15 @@ $grey-button:#f8f8f8;
                .audio-container{
                    float:left;
                    padding-top:22px;
-                   padding-left:#{fluid-percentage(1021, 30)};
-                   padding-right:#{fluid-percentage(1021, 30)};
+                   padding-left:#{fluid-percentage(1024, 40)};
+                   padding-right:#{fluid-percentage(1024, 40)};
                   p{
                    font-size:22px;
                    margin-bottom:22px;
-                   color:#5a5e5f;
-                   line-height:23px;
                 } 
                 .audio-feature{
                     float: right;
-                    margin-bottom: 17px;
+                    margin-bottom: 15px;
                     position: relative;
                     right: -10px;
                     .listen{
