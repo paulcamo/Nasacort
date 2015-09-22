@@ -23,6 +23,8 @@ $(window).bind("resize", function(){
         $('.img-container>ul>li .hover_img').hide();
         $('.img-container>ul>li .normal_img').show();
         $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
+        $('.img-container>ul>li.li_maria').css({'z-index':'1'});
+        
         $('.click_state').removeClass('click_state');
         $(".box").hide();
     }else{
