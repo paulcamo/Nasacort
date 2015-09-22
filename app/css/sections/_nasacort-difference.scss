@@ -234,7 +234,7 @@
       display: block;
     }
     .open{
-      height: 60px;
+      height: 78px;
       @include breakpoint('tablet'){
         height: 68px;
       }
@@ -426,7 +426,7 @@
     }
 
     tr:nth-child(1) {
-      height: 67px;
+      height: 78px;
     }
 
     td:nth-child(1) {
@@ -445,10 +445,12 @@
       width: 32%;
       text-align: center;
       vertical-align: middle;
+      border-left: none;
     }
 
     td:nth-child(3){
       border-left: none;
+      border-right: none;
     }
     .non-brd{
       border-right:none;
@@ -479,7 +481,7 @@
     .vrs {
       position: absolute;
       right: 17.4%;
-      top: 6px;
+      top: 13px;
       border: none;
       z-index: 12;
       @include breakpoint('tablet'){
@@ -506,7 +508,7 @@
       right: -96px;
       border: medium none;
       z-index: 11;
-      top: 57px;
+      top: 68px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
       width: 36.5%;
@@ -527,7 +529,7 @@
       right: 50%;
       border: medium none;
       z-index: 11;
-      top: 62px;
+      top: 78px;
       background: url("../img/desktop/nasacort-difference/gray-arrow.png") no-repeat center bottom;
       height: 15px;
       width: 20px;
