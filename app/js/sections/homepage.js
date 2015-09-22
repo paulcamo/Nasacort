@@ -1,7 +1,3 @@
-
-
-// --------------------------------------------------------------------
-
 var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
 var xx = (window.innerWidth / 35);
@@ -21,12 +17,11 @@ document.body.appendChild(css);
 
 $(document).ready(function() {
 
+    $( 'html, body' ).scrollTop(0); //reset scroll to top ....
+    $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
+    $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
 
-
-
-
-
-    // ---loop animation for carousel------------------------------------------------------------------------------------------------------
+// ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
     var tl1 = new TimelineMax({repeat:-1});
     var tl2 = new TimelineLite();
@@ -47,23 +42,15 @@ $(document).ready(function() {
         .to("#lady03", 1.5,     {opacity:0 , ease: Power0.easeNone} , '-=1.5')
     ;
 
-
     //tl1.seek('cta');
 
-    tl2
-        .to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5')
-        
-    ;
+    tl2.to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5');
 
-
-    // ------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------
 
 
 
 
-    $( 'html, body' ).scrollTop(0); //reset scroll to top ....
-    $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
-    $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
 
 
     var tempo_cap=99000;
@@ -99,11 +86,13 @@ $(document).ready(function() {
 
     // ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
 
+
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
 
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'1em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.6em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'-0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
 
 
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
@@ -112,6 +101,12 @@ $(document).ready(function() {
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'6em'}),     35000, 80000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
+
+
+
+
+
+
 
 
 
@@ -164,7 +159,7 @@ $(document).ready(function() {
   //  controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#background'),            1,   {top:'-33em'}),     30000);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'15em'},    {top:'1.45em'}),    35000, 65000);
+    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'17em'},    {top:'1.45em'}),    35000, 65000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-copy'),          1, {left:'-42%'},   {left:'23%'}),      35000, 31000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'33%'}),    15000, 90000);
 
@@ -253,12 +248,12 @@ function desktopStickyHeader(y){
     }
 
     if (y > sticky_height) {
-        $('#header').animate({top: "-38px"}, 300);
+        $('#header').animate({top: "-29px"}, 300);
         $('.first-container').animate({paddingTop: "0"}, 300);
         $('.clucker-container').animate({marginTop: "0"}, 300);
         headerCollapsed = 1;
     } else {
-        $('#header').animate({top: "-9px"}, 300);
+        $('#header').animate({top: "0px"}, 300);
         $('.first-container').animate({paddingTop: vtop}, 300);
         $('.clucker-container').animate({marginTop: vtop}, 300);
     }
