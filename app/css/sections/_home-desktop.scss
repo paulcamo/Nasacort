@@ -716,6 +716,7 @@
    .compare-link:hover {
     color: $color-orange;
      background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
+     background-size: contain;
   }
 
 
@@ -981,7 +982,7 @@
 
     .use-only {
       position: absolute;
-      bottom: -2em;
+      top: 45em;
       left: 79.4%;
       font-size: 0.29em;
       color: $color-white;
@@ -989,51 +990,54 @@
     }
 
    #understand-box {
-    position: absolute;
-    top: 0.12em;
-    width: 40%;
-    text-align: left;
-    left: 0;
-    right: 0;
-    margin: auto;
+     position: absolute;
+     top: 0.1em;
+     width: 40%;
+     text-align: left;
+     left: 0;
+     right: 0;
+     margin: auto;
 
 
-  }
 
-  #understand-box h2 {
-    color: #FFF;
-    font-family: $font-proxima-nova-semibold;
-    font-size: 0.8em;
-    padding-bottom: 0;
-    font-weight: 100;
-    line-height: 1.18em;
-    letter-spacing: 0.03em;
-  }
+     h2 {
+       color: #FFF;
+       font-family: $font-proxima-nova-semibold;
+       font-size: 0.8em;
+       padding-bottom: 0;
+       font-weight: 100;
+       line-height: 1.18em;
+       letter-spacing: 0.03em;
+     }
 
-
+   }
 
    .understand-link {
-
     display: block;
     background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
     background-size: contain;
     border-radius: 9px;
     width: 79%;
     height: 3.8em;
-    margin: 0px 0px 0.57em 0em;
+    margin: 0px 0px 0.9em 0em;
     font-size: 0.45em;
     text-decoration: none;
-    line-height: 1.2em;
+    line-height: 3.8em;
     color: $color-blue-titles;
     font-family: $font-proxima-nova-semibold;
     letter-spacing: 0.08em;
+     padding-left: 4%;
 
-  }
 
-  .understand-link span {
-    padding: 1.4em 0px 0px 5%;
-    display: inline-block;
-  }
+   }
+
+
+    .understand-link:hover {
+      color: $color-orange;
+      background: #fff url(../img/desktop/homepage/understand-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+
+    }
 
 }
 
