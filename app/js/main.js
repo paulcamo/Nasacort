@@ -225,7 +225,7 @@ $('.footnote').on('click', function(e) {
             $(this).attr("currentMarginTop", currentMarginTop);
         }
         animation.show();
-        console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
         expandTop = animation.outerHeight() - buttonHeight;
         animation.css("margin-top", -expandTop); 
        
@@ -540,8 +540,32 @@ if (md.os()=='AndroidOS') {
 function addFancyVideo()
 {
     $('.fancybox').fancybox();
+    
+    if(isMobile)
+    {
+        $('.fancybox')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+            openEffect : 'none',
+            closeEffect : 'none',
+            prevEffect : 'none',
+            nextEffect : 'none',
+            autoSize: 'false',
+            
+            autoHeight : 'true',
+            maxWidth:640,
+            maxHeight: 360,
+            minHeight:180,
 
-    $('.fancybox')
+            arrows : false,
+            helpers : {
+                media : {},
+                buttons : {}
+            }
+        });
+    }else
+    {
+        $('.fancybox')
         .attr('rel', 'media-gallery')
         .fancybox({
             openEffect : 'none',
@@ -555,6 +579,7 @@ function addFancyVideo()
                 buttons : {}
             }
         });
+    }
 }
 
 
