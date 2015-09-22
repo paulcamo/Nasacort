@@ -566,12 +566,12 @@
 
   #no-scent {
     background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
-    width: 8em;
+    width: 10em;
     height: 0em;
-    bottom: -20.3em;
+    bottom: -20.6em;
     z-index: 98;
     position: absolute;
-    left: 21%;
+    left: 18.1%;
   }
 
 
@@ -608,11 +608,11 @@
       height: 0.1em;
     }
 
-    .herolink {
+    #herolink {
       width: 100%;
-      height: 89%;
+      height: 14em;
       display: block;
-     // background-color: rgba(255,255,255,0.5);
+      position: absolute;
     }
 
 
