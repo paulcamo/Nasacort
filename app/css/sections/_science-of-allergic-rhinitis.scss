@@ -810,9 +810,10 @@
           margin-top: 24px;
         }
         .down-txt{
-          padding: 18px 22px!important;
+          padding: 28px 22px!important;
             @include breakpoint('tablet'){
-              line-height: 38px!important;
+              line-height: 38px !important;
+              padding-top: 18px !important;
             }
             @include breakpoint('mobile'){
               line-height: 38px!important;
