@@ -116,8 +116,9 @@ $grey-button:#f8f8f8;
             padding-right:0;
         }
         @include breakpoint('tablet'){
-            max-width: 100%!important;
-            padding-left:0;
+            max-width: 769px!important;
+            padding-left:40px;
+            padding-right:40px;
         }
         @include breakpoint('mobile'){
             margin-left: 7%;
@@ -149,10 +150,13 @@ $grey-button:#f8f8f8;
             max-width: 100%;
             padding-left:0;
             padding-right:0;
-            bottom:-38px;
+            bottom:-59px;
         }
         @media screen and (max-width: 1210px) {
-            bottom:-11px;
+            bottom:-30px;
+        }
+        @include breakpoint('tablet'){
+            bottom: -66px;
         }
         @include breakpoint('mobile'){
             position: absolute;
@@ -168,7 +172,7 @@ $grey-button:#f8f8f8;
                 position: relative;
                 width: 300px;
                 @media screen and (max-width: 1399px) {
-                    width: 268px;
+                    width: 250px;
                 }
                 @media screen and (max-width: 1025px) {
                     width: 180px;
