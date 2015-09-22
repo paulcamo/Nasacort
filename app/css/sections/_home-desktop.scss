@@ -17,10 +17,12 @@
   .header {
   //  position: fixed;
   //  width: 100%;
-    margin-top: 0 ;
+    margin-top: 0;
   }
 
-
+  .nopadding {
+    padding: 0 !important;
+  }
 
 
   .header .header-top ul.utility-nav {
@@ -712,7 +714,8 @@
   }
 
    .compare-link:hover {
-    color: #2e5672;
+    color: $color-orange;
+     background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
   }
 
 
@@ -911,6 +914,11 @@
     text-align: left;
     background-size: contain;
 
+
+    :hover {
+      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+      color: $color-orange;
+    }
 
     p {
       padding: 0.8em 0px 0px 6.5%;
@@ -1298,7 +1306,8 @@
     }
 
     .compare-link:hover {
-      color: #2e5672;
+      color: $color-orange;
+      background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
     }
 
     .compare-link span {
