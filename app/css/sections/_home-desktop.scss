@@ -571,7 +571,7 @@
     bottom: -20.3em;
     z-index: 98;
     position: absolute;
-    left: 21.5%;
+    left: 21%;
   }
 
 
@@ -1211,10 +1211,18 @@
     .footnote[data-section="home-2"] {
       z-index: 999;
       margin-top: -5.1em;
-      bottom: -25.4em;
+      bottom: -25.3em;
     }
 
-
+    .dashbox {
+      display: block;
+      background-color: #c0cdd2;
+      position: absolute;
+      top: 2.7em;
+      left: 4%;
+      width: 7%;
+      height: 0.1em;
+    }
 
 
   }
@@ -1250,7 +1258,7 @@
 
     sup {
       position: relative;
-      top: -1.4em;
+      top: -1.1em;
       font-size: 0.4em;
       font-weight: 100;
     }
@@ -1264,7 +1272,7 @@
       margin-left: 4%;
       letter-spacing: 0.04em;
       color: #4d4b4b;
-      margin-bottom: 2.6em;
+      margin-bottom: 2.7em;
 
       strong {
         font-weight: 700;
@@ -1292,7 +1300,7 @@
       height: 3.7em;
       border-radius: 9px;
       width: 92%;
-      margin: 1em 0px 0px 0.7em;
+      margin: 0.9em 0px 0px 0.7em;
       font-size: 0.45em;
       text-decoration: none;
       line-height: 1.2em;
@@ -1362,15 +1370,15 @@
   transform: translateZ(0);
 
   -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
 
 }
 
-
-//.container {
-//
-//   display: none;
-// }
 
 
