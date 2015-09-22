@@ -58,6 +58,7 @@
     padding-top: 9px;
     @include breakpoint('mobile'){
       font-size: 14px;
+      padding-top: 12px;
     }
   }
 
@@ -125,6 +126,9 @@
     background-color: $color-blue-light-container;
     padding-top: 45px;
     overflow: hidden;
+    @include breakpoint('mobile'){
+      padding-top: 17.5px;
+    }
     .textbox{
       h2 {
         margin-top: 2px;
@@ -136,6 +140,9 @@
     .comparin-inner{
       p{
         margin-bottom:26px; 
+        @include breakpoint('mobile'){
+          margin-bottom: 11px;
+        }
       }
     }
   }
@@ -147,9 +154,18 @@
     width: 100%;
     height: 278px;
     margin-bottom:12px; 
+    @include breakpoint('mobile'){
+      min-height: 100px;
+      height: auto;
+    }
   }
 
   .options{
+    h2{
+      @include breakpoint('mobile'){
+        margin-top: 19px; 
+      }
+    }
     p{
       margin-bottom:25px; 
     }
@@ -275,6 +291,10 @@
       @include breakpoint('tablet'){
           background-size: 75%;
       }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
+      }
     }
 
     .sprite-bg-benadryl{
@@ -282,6 +302,10 @@
       background-size: cover;
       @include breakpoint('tablet'){
           background-size: 75%;
+      }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
       }
     }
 
@@ -291,6 +315,10 @@
       @include breakpoint('tablet'){
           background-size: 75%;
       }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
+      }
     }
 
     .sprite-bg-sudafed {
@@ -298,6 +326,10 @@
       background-size: cover;
       @include breakpoint('tablet'){
           background-size: 75%;
+      }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
       }
     }
 
@@ -307,6 +339,10 @@
       @include breakpoint('tablet'){
           background-size: 75%;
       }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
+      }
     }
 
     .sprite-bg-claritin {
@@ -314,6 +350,10 @@
       background-size: cover;
       @include breakpoint('tablet'){
           background-size: 75%;
+      }
+      @include breakpoint('mobile'){
+          background-size: 90%;
+          background-position: 30%;
       }
     }
 
@@ -478,7 +518,7 @@
       @include breakpoint('mobile'){
         right: 20px;
         top: 57px;
-        width: 30.6%;
+        width: 27.7%;
       }
 
     }
