@@ -611,7 +611,7 @@ $grey-button:#f8f8f8;
     .tooltip{
         width: 300px;
         @include breakpoint('mobile'){
-            width: 240px;
+            width: 75%;
         } 
         display: none;
         position: absolute;
