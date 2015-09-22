@@ -57,6 +57,8 @@ $(document).ready(function(){
         $("#brand-compare").addClass("brand-compare-open");
         $(".chart-table-container .arrow").css("display","none");
 
+        $("#brand-compare .inner-logos").show();
+        $("#brand-compare .instruccion").show();
 
     });
 
@@ -65,6 +67,9 @@ $(document).ready(function(){
         $("#brand-compare .open").removeClass("start");
         $("#brand-compare").removeClass("brand-compare-open");
         $(".chart-table-container .arrow").css("display","initial");
+
+        $("#brand-compare .inner-logos").hide();
+        $("#brand-compare .instruccion").hide();
 
 
         switch($(this).data("brand")) {
