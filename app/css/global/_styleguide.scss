@@ -352,3 +352,9 @@ h4{
 #fancybox-buttons {
   display: none;
 }
+
+/*********** IE9 Adjustments *********/
+
+.ie9 sup {
+    top: -0.6em;
+}
