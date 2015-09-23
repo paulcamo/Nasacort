@@ -197,8 +197,12 @@
     }
     .inner-logos{
       @include breakpoint('mobile'){
-        width:184%;
+        width:212%;
+        max-width:208px;
         float:right;
+        background-color: #497ebf;
+        padding-bottom:1px;
+        padding-left:12px;
       }
       .two-logos{
         @include breakpoint('mobile'){
@@ -210,8 +214,34 @@
         @include breakpoint('mobile'){
           float: left;
           position: relative;
-          width: 50%;
+          width: auto;
+          padding-right:12px;
         }
+        img{
+            @include breakpoint('mobile'){
+                width:86px;
+                max-height:48px;
+                padding-top:6px;
+                padding-bottom:0;
+            }
+        }
+      }
+      .logos-1{
+          a{
+              img{
+                   @include breakpoint('mobile'){
+                       margin-top:4px;
+                   }
+                }
+           }
+      }
+      .logos-2{
+          
+      }
+      .logos-3{
+          .brand{
+            padding-bottom:10px;
+          }
       }
     }
     @include breakpoint('tablet'){
@@ -236,16 +266,21 @@
     .open{
       height: 78px;
       @include breakpoint('tablet'){
-        height: 68px;
+        height: 5px;
       }
       @include breakpoint('mobile'){
-        height: 67px;
+        height: 75px;
       }
       &.start{
         background-color: #d9d9d9;
         border-left: solid #497ebf 3px;
         border-right: solid #497ebf 3px;
         border-top: solid #497ebf 3px;
+        @include breakpoint('mobile'){
+            border-left: solid #497ebf 2px;
+            border-right: solid #497ebf 2px;
+            border-top: solid #497ebf 2px;
+        }
       }
     }
     .instruccion{
@@ -256,20 +291,23 @@
       @include breakpoint('mobile'){
         float: right;
         height: auto;
-        padding: 10px 0 1px;
-        width: 184%;
+        padding: 8px 0 1px;
+        width: 212%;
+        max-width:208px;
+        margin-bottom:0;
+        border: 1px solid #94bed3;
       }
       p{
         padding: 0 15px;
         color: #dfefff;
         font-size: 19px;
-        margin-bottom: 15px;
+        margin-bottom: 1px;
         @include breakpoint('mobile'){
           font-size: 12px;
         }
         &.head{
           font-size: 22px;
-          margin-bottom: 3px;
+          margin-bottom: 0;
           @include breakpoint('mobile'){
             font-size: 14px;
           }
@@ -389,9 +427,14 @@
           width:40%;
         }
         @include breakpoint('mobile'){
-          width:40%;
+          width:81px;
+          left:-26px;
+          position:relative;
         }
       }
+      @include breakpoint('mobile'){
+          
+        }
     }
     @include breakpoint('tablet'){
       width: 100%;
@@ -535,7 +578,7 @@
       width: 20px;
       @include breakpoint('mobile'){
         right: 43%;
-        top: 60px;
+        top: 70px;
       }
     }
 

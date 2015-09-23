@@ -9,7 +9,7 @@ var brand_checks_flonase =  [0,0,1,1,1,1,1,1,1,1,1,1,1,1];
 var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,0];
 var brand_checks_zyrtec =   [1,1,1,1,1,0,0,1,0,1,0,1,1,1];
 
-
+var mobileBreakPoint = 768;
 
 
 function set_checks(nn){
@@ -46,6 +46,8 @@ function remove_brand_bg(nn) {
 $(document).ready(function(){
 
     set_checks("clear");
+    
+    changeImageSrc();
 
     $('.instruccion').click(function(event) {
         event.preventDefault();
@@ -107,3 +109,27 @@ $(document).ready(function(){
     });
 
 });
+
+$(window).bind("resize", function(){
+    //Adjusts image when browser resized
+    changeImageSrc();
+});
+
+function changeImageSrc()
+{
+     var contentwidth = $(window).width();
+     
+     if ((contentwidth) < mobileBreakPoint)
+     {
+         $(".inner-logos .brand img").each(function(){
+             var newPath = $(this).attr("src").replace("desktop", "mobile");
+             $(this).attr("src", newPath);
+         });
+     }else
+     {
+        $(".inner-logos .brand img").each(function(){
+             var newPath = $(this).attr("src").replace("mobile", "desktop");
+             $(this).attr("src", newPath);
+         });
+     }
+}
