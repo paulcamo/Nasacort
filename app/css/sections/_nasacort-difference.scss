@@ -196,6 +196,13 @@
       overflow:visible;
     }
     .inner-logos{
+        padding-bottom:14px;
+        background-color: #497ebf;
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.6);
+        -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.6);
+        box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.6);
+        margin-right:3px;
+        margin-bottom:10px;
       @include breakpoint('mobile'){
         width:212%;
         max-width:208px;
@@ -240,7 +247,9 @@
       }
       .logos-3{
           .brand{
-            padding-bottom:10px;
+               @include breakpoint('mobile'){
+                    padding-bottom:10px;
+                }
           }
       }
     }
@@ -302,6 +311,7 @@
         color: #dfefff;
         font-size: 19px;
         margin-bottom: 1px;
+        font-weight:lighter;
         @include breakpoint('mobile'){
           font-size: 12px;
         }
@@ -317,6 +327,7 @@
     .brand{
       img{
         padding:12px 0;
+        padding-bottom:2px;
         @include breakpoint('mobile'){
           width: 80%;
         }
@@ -330,8 +341,9 @@
           background-size: 75%;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-size: 165%;
+          background-position: center;
+          width:97%
       }
     }
 
@@ -493,7 +505,7 @@
 
     td:nth-child(3){
       border-left: none;
-      border-right: none;
+      //border-right: none;
     }
     .non-brd{
       border-right:none;
@@ -562,7 +574,7 @@
       }
       @include breakpoint('mobile'){
         right: 20px;
-        top: 57px;
+        top: 68px;
         width: 27.7%;
       }
 
