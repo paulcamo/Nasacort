@@ -1,31 +1,187 @@
+
+
 .home-section {
-
-
-
+// start of class home-mobile 
+  .container{
+    @include breakpoint('mobile'){
+      margin-top: 0;
+    }
+  }
   .home-mobile {
+    .clr-org{
+      color: $color-orange;
+    }// End General class
+    .clr-blu{
+      color:$color-bright-blue;
+      font-family: $font-proxima-nova-bold;
+    }// End General class
+    .data-inner{
+      text-align: left;
+      display: block;
+      width: 100%;
+      clear: both;
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 10px;
+      line-height: 15px;
+    }// End General class
+    .inner-ctas{
+      width: 70%;
+      .cta{
+        background-color:$color-white;
+        border-radius: 6px;
+        margin-bottom: 15px;
+        p{
+          font-size: 12px;
+          line-height: 18px;
+          font-family: $font-proxima-nova-bold;
+          color: $color-dark-blue;
+          width: 80%;
+          border-right: 1px solid gray;
+          padding: 3px 2px 3px 11px;
+          margin: 0;
+        }
+      }
+    }// End General class
 
+    padding-top: 169px;
     @include breakpoint("desktop") {
       display: none;
     }
 
+    .slider{
+      height: 246px;
+      background-color: red;
+      position: relative;
+      img.product{
+        position: absolute;
+        top: -78px;
+        right: 0;
+      }
+      .borderbottom{
+        background-color: $color-white;
+        height: 26px;
+        position: relative;
+        width: 100%;
+        bottom: 0px;
+        top: 220px;
+        z-index: 1;
+        p{
+          line-height: 15px;
+          width: 124px;
+          color: $color-dark-blue;
+          display: inline-block;
+          position: absolute;
+          right: 110px;
+          margin: 0;
+          bottom: 12px;
+          z-index: 1;
+          font-size: 10px;
+          font-weight: bold;
+        }
+      }
+    }// end of class Slider
 
-    .product-cover {
-      background: url("../img/mobile/homepage/product.png") no-repeat top center;
-      background-size: contain;
+    .preference-section{
+      position: relative;
       width: 100%;
-      height: 40em;
+      .back-preference{
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 85px;
+        background: #f8f9fb url("../img/mobile/homepage/bg-preference.png") no-repeat right top;
+        border-top: 1px solid #cdcecf;
+        border-bottom: 1px solid #cdcecf;
+        .preference-parr{
+          width: 70%;
+          padding-top: 15px;
+          float: left;
+          p{
+            font-size: 12px;
+            line-height: 19px;
+            color: $color-dark-blue;
+            font-family: $font-proxima-nova-semibold;
+          }
+        }
+        .preference-img{
+          display: inline-block;
+          margin-top: 10px;
+          float: right;
+        }
+      }
+    }// end of class Preference-Section
 
-    }
+    .comparation-section{
+      width: 100%;
+      height: 259px;
+      background: url("../img/mobile/homepage/bg-comparation.png") no-repeat right top;
+      background-size: 100% auto;
+      margin-bottom:10px; 
+      .inner-comparation{
+        padding-left: 20px;
+        padding-right: 20px;
+        background: url("../img/mobile/homepage/bottle-comparation.png") no-repeat -7px;
+        background-size:126px auto;
+        display: block;
+        height: 259px;
+        .head-inner{
+          padding-top: 38px;
+          width: 70%;
+          float: right;
+          p{
+            font-size: 17px;
+            line-height: 20px;
+            font-family: $font-proxima-nova-bold;
+            color: $color-dark-blue;
+          }
+        }
+        .inner-ctas{
+          float: right;
+        }
+      }
+    }// end of class Comparation-Section 
 
-  }
+    .review-section{
+      width: 100%;
+      height: 260px;
+      background: url("../img/mobile/homepage/bg-review.png") repeat-x right top;
+      margin-bottom:10px;
+      .inner-review{
+        background: url("../img/mobile/homepage/family-review.png") no-repeat right 33px;
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:34px;
+        background-size:177px auto;
+        display: block;
+        height: 260px;
+        .head-inner{
+          width: 192px;
+          p{
+            font-family: $font-proxima-nova-semibold;
+            font-size: 17px;
+            line-height: 20px;
+            color:$color-white;
+          }
+        }
+        .inner-ctas{
+          width: 64%;
+        }
+      }
+    }// end of class Review-Section
 
+    .discover-section{
+      width: 100%;
+      height: 260px;
+      background: url("../img/mobile/homepage/bg-discover.png") repeat-x right top;
+      margin-bottom:10px; 
+    }// end of class Discover-Section
 
+    .help-section{
+      width: 100%;
+      height: 246px;
+      background: #34a7e0 url("../img/mobile/homepage/bg-help.png") no-repeat left top;
+      margin-bottom:10px; 
+    }// end of class Help-Section
 
-
-
-
-
-
-
-
+  }// end of class home-mobile
 }

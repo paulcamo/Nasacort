@@ -160,7 +160,7 @@ $(document).ready(function() {
   //  controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#background'),            1,   {top:'-33em'}),     30000);
     controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'17em'},    {top:'1.45em'}),    35000, 65000);
+    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'17em'},    {top:'1.4em'}),    35000, 65000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-copy'),          1, {left:'-42%'},   {left:'23%'}),      35000, 31000);
     controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'33%'}),    15000, 90000);
 
