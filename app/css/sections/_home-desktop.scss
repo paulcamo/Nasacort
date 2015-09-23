@@ -334,18 +334,19 @@
     font-size: 0;
   }
 
-  .header #brandlogo {
-    height: 0px;
-    width: 100%;
-    background: #fff url(../img/desktop/homepage/sanofi.png) no-repeat top center;
-  }
-
-  .header #brandlogo  a {
-    height: 30px;
-    color: #f00;
-    padding: 20px;
-    font-size: 20px;
-  }
+  //.header #brandlogo {
+  //  height: 0px;
+  //  width: 100%;
+  // // background: #fff url(../img/desktop/homepage/sanofi.png) no-repeat top center;
+  //  background-color: red;
+  //}
+  //
+  //.header #brandlogo  a {
+  //  height: 30px;
+  //  color: #f00;
+  //  padding: 20px;
+  //  font-size: 20px;
+  //}
 
 
 
@@ -602,7 +603,7 @@
       display: block;
       background-color: #c0cdd2;
       position: absolute;
-      top: 2.7em;
+      top: 2.55em;
       left: 3%;
       width: 7%;
       height: 0.1em;
@@ -615,6 +616,14 @@
       position: absolute;
     }
 
+
+    .use-only {
+      position: absolute;
+      bottom: 0.6em;
+      left: 79.4%;
+      font-size: 0.29em;
+
+    }
 
 
   }
@@ -662,7 +671,7 @@
      font-family: $font-proxima-nova-semibold;
     font-size: 0.7em;
     padding: 0;
-    margin: 0.403em 0 0 0.60em;
+    margin: 0.3em 0 0 0.60em;
     letter-spacing: 0.03em;
     width: 95%;
     line-height: 1.4em;
@@ -688,7 +697,7 @@
 
 
    p {
-    margin: 2.3em 0 0 1em;
+    margin: 2.7em 0 0 1em;
     width: 72%;
     font-size: 0.37em;
     font-weight: 100;
@@ -703,7 +712,7 @@
     height: 3.6em;
     border-radius: 9px;
     width: 59%;
-    margin: 1.3em 0px 0px 0.7em;
+    margin: 1.2em 0px 0px 0.7em;
     font-size: 0.45em;
     text-decoration: none;
     line-height: 1.3em;
@@ -740,23 +749,38 @@
 
   .compare-link-bottom {
     display: block;
+    background: url(../img/desktop/homepage/compare-arrow.png) no-repeat right center;
+    background-size: contain;
     width: 30%;
-    height: 1.3em;
     position: absolute;
     left: 23%;
-    bottom: 4.5em;
+    bottom: 9.8em;
+    font-size: 0.46em;
+    padding: 0.8em 0px 0.8em 4.4%;
+    line-height: 1.3em;
+    color: $color-dark-blue;
+
+   &:hover {
+      color: $color-orange;
+     background: url(../img/desktop/homepage/compare-arrow-hover.png) no-repeat right center;
+     background-size: contain;
+   }
+
   }
 
+
   .compare-link-bottom + .btn01 {
-    bottom: 3.5em;
+    bottom: 9.8em;
   }
 
   .compare-link-bottom + .btn02 {
-    bottom: 2.7em;
+    bottom: 5.4em;
+    padding: 0.1em 0px 0.1em 4.4%;
+    line-height: 1.4em;
   }
 
   .compare-link-bottom + .btn03 {
-    bottom: 0.81em;
+    bottom: 1.7em;
   }
 
 
@@ -891,7 +915,7 @@
     }
 
     .subname {
-      font-family: $font-proxima-nova-semibold;
+      font-family: $font-proxima-nova-extrabold;
       font-size: 0.51em;
       display: block;
       padding-top: 0.1em;
@@ -916,8 +940,9 @@
     background-size: contain;
 
 
-    :hover {
+    &:hover {
       background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+      background-size: contain;
       color: $color-orange;
     }
 
@@ -926,6 +951,8 @@
       width: 86%;
       line-height: 1.2em;
       color: #133c7c;
+      font-size: 1em;
+
     }
 
 
@@ -982,7 +1009,7 @@
 
     .use-only {
       position: absolute;
-      top: 45em;
+      top: 44em;
       left: 79.4%;
       font-size: 0.29em;
       color: $color-white;
@@ -1155,11 +1182,12 @@
 
 
   #carousel1, #carousel2, #carousel3 {
-    height: 14.7em;
+    height: 13.7em;
     position: absolute;
     width: 104%;
     top: 0px;
     background-size: contain !important;
+    overflow: hidden;
   }
 
 
