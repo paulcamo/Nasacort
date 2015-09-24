@@ -112,18 +112,34 @@ $(document).ready(function(){
 
 });
 
+function resetInteractiveForm()
+{
+    $('.arrow').show();
+    $("#brand-compare").addClass("brand-compare-open");
+    $(".chart-table-container .arrow").css("display","none");
+    $("#brand-compare .open").addClass("start");
+    $("#brand-compare .inner-logos").show();
+    $("#brand-compare .instruccion").show();
+    set_checks("clear");
+
+}
+
 $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
     keepTDsameWidthArrow();
     addMouseOverStates();
+    addMouseOverStates();
+    resetInteractiveForm();
 });
 
 function changeImageSrc()
 {
      var contentwidth = $(window).width();
      
-     if ((contentwidth) < mobileBreakPoint)
+     console.log(contentwidth)
+     
+     if (isMobile)
      {
          $(".inner-logos .brand img").each(function(){
              var newPath = $(this).attr("src").replace("desktop", "mobile");
@@ -146,14 +162,13 @@ function keepTDsameWidthArrow()
         $("#brand-compare").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 3);
     }else
     {
-        $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 2);
+        $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 3);
         $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
     }
     var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
     var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
      $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
-     console.log("~~~ " + rightArrow)
-    //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
+    
 }
 
 function addMouseOverStates()
@@ -161,14 +176,26 @@ function addMouseOverStates()
     if(!isMobile)
     {
         $(".inner-logos .brand").mouseover(function() {
-             var newPath = $(this).find("img").attr("src").replace(".png", "-hover.png");
-             $(this).find("img").attr("src", newPath);
-             $(this).find("img").addClass("shadow-logo");
+            if($(this).attr("hover") != "true")
+            {
+                var newPath = $(this).find("img").attr("src").replace(".png", "-hover.png");
+                 $(this).attr("hover","true");
+                 $(this).find("img").attr("src", newPath);
+                 $(this).find("img").addClass("shadow-logo");      
+            }
         });
         $(".inner-logos .brand").mouseout(function() {
-             var newPath = $(this).find("img").attr("src").replace("-hover.png", ".png");
-             $(this).find("img").attr("src", newPath);
-             $(this).find("img").removeClass("shadow-logo");
+            if($(this).attr("hover") === "true")
+            {
+                 var newPath = $(this).find("img").attr("src").replace("-hover.png", ".png");
+                 $(this).attr("hover","false");
+                 $(this).find("img").attr("src", newPath);
+                 $(this).find("img").removeClass("shadow-logo");
+             }
         });
+    }else
+    {
+         $(".inner-logos .brand").unbind('mouseover');
+         $(".inner-logos .brand").unbind('mouseout');
     }
 }
