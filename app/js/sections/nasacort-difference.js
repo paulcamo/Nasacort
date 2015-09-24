@@ -49,7 +49,8 @@ $(document).ready(function(){
     
     changeImageSrc();
     keepTDsameWidthArrow();
-
+    addMouseOverStates();
+    
     $('.instruccion').click(function(event) {
         event.preventDefault();
     });
@@ -115,6 +116,7 @@ $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
     keepTDsameWidthArrow();
+    addMouseOverStates();
 });
 
 function changeImageSrc()
@@ -138,7 +140,6 @@ function changeImageSrc()
 
 function keepTDsameWidthArrow()
 {
-    console.log( $(".arrow").width());  
     if(isMobile)
     {
         $(".nasacort-difference-section .chart-table-container .arrow").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 1);
@@ -147,6 +148,27 @@ function keepTDsameWidthArrow()
     {
         $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 2);
         $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
-    } 
+    }
+    var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
+    var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
+     $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
+     console.log("~~~ " + rightArrow)
     //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
+}
+
+function addMouseOverStates()
+{
+    if(!isMobile)
+    {
+        $(".inner-logos .brand").mouseover(function() {
+             var newPath = $(this).find("img").attr("src").replace(".png", "-hover.png");
+             $(this).find("img").attr("src", newPath);
+             $(this).find("img").addClass("shadow-logo");
+        });
+        $(".inner-logos .brand").mouseout(function() {
+             var newPath = $(this).find("img").attr("src").replace("-hover.png", ".png");
+             $(this).find("img").attr("src", newPath);
+             $(this).find("img").removeClass("shadow-logo");
+        });
+    }
 }
