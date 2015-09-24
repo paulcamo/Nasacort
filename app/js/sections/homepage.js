@@ -63,6 +63,19 @@ $(document).ready(function() {
 
 
 
+    $(".patient").on("mouseenter",function() {
+
+        $(this).find(".textbox").addClass("textboxhover");
+    });
+
+    $(".patient").on("mouseleave",function() {
+
+        $(this).find(".textbox").removeClass("textboxhover");
+    });
+
+
+
+
 
 
 
@@ -118,56 +131,6 @@ $(document).ready(function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-//
-//$("#section2").on("click", function(){
-//
-//
-//    TweenMax.fromTo( $('#slide01'),               1, {top:'81px'},        {top:'-900px'});
-//    TweenMax.fromTo( $('#slide02'),               1, {marginTop:'0em'},    {marginTop:'-15em'});
-//
-//
-//    TweenMax.fromTo( $('#bottle'),               1, {marginTop:'0.3em', scale:'1', left:'72%'  },   {marginTop:'16.4em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  );
-//    TweenMax.fromTo( $('#cap'),               1, {marginTop:'0em', scale:'1', left:'74.6%'  },   {marginTop:'15em', scale:'2.5', left:'30.7%' , ease:  Power1.easeOut}  );
-//    TweenMax.to( $('#cap'),               1,   {marginTop:'7.5em' , delay: 3, ease:  Power1.easeOut}  );
-//
-//    TweenMax.to( $('#cap'),               1,   {marginTop:'16.7em', left:'95%' , delay: 6, rotation: 35, ease:Cubic.easeInOut }  );
-//    TweenMax.to( $('#background'),            1, {top:'-10.7em'});
-//
-//
-//
-//});
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
 
   //  controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
@@ -190,7 +153,7 @@ $(document).ready(function() {
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
-    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {bottom:'72%'}),     40000);
+    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     40000);
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -209,13 +172,18 @@ set_dotbox();
 
 
 function set_dotbox(){
-    var x;
+    var x, y;
+
     if ($(window).width() > assets_maximum_width){
         x= ($(window).width() - assets_maximum_width) / 2 + "px";
     }else {
         x="0px";
     }
+
+    y = $(window).height() - $("#header").innerHeight();
+
     $("#dots-container .dotbox").css("right", x);
+    $("#dots-container").css("height", y);
 
 }
 
@@ -250,6 +218,13 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 
 // ---------------------------------------------------------------------------------------
 
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------
 
 
 function desktopStickyHeader(y){
