@@ -345,7 +345,9 @@
           height: 44px;
         }
         .cta-last{
-          line-height: 38px;
+          span{
+            line-height: 38px!important;
+          }
         }
       }
     }// end of class Help-Section
