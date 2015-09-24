@@ -190,7 +190,7 @@ $(document).ready(function() {
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
-    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {bottom:'72%'}),     40000);
+    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     40000);
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -209,13 +209,18 @@ set_dotbox();
 
 
 function set_dotbox(){
-    var x;
+    var x, y;
+
     if ($(window).width() > assets_maximum_width){
         x= ($(window).width() - assets_maximum_width) / 2 + "px";
     }else {
         x="0px";
     }
+
+    y = $(window).height() - $("#header").innerHeight();
+
     $("#dots-container .dotbox").css("right", x);
+    $("#dots-container").css("height", y);
 
 }
 
