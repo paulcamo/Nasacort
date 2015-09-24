@@ -192,9 +192,11 @@
     z-index: 10;
     list-style: none;
     overflow: hidden;
+    min-width:209px;
     @include breakpoint('mobile'){
       overflow:visible;
       //max-width:209px;
+      min-width:auto;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -204,6 +206,7 @@
         box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.6);
         margin-right:3px;
         margin-bottom:10px;
+        padding-top:12px;
       @include breakpoint('mobile'){
         //width:237%;
         //max-width:208px;
@@ -212,6 +215,7 @@
         padding-bottom:1px;
         padding-left:12px;
         margin-right:2px;
+        min-width:209px;
       }
       .two-logos{
         @include breakpoint('mobile'){
@@ -305,6 +309,7 @@
         padding: 8px 0 1px;
        // width: 237%;
        // max-width:208px;
+       min-width:209px;
         margin-bottom:0;
         //border: 1px solid #94bed3;
         margin-right:2px;
@@ -328,12 +333,18 @@
       }
     }
     .brand{
+        margin-top:12px;
+        margin-bottom:2px;
       img{
-        padding:12px 0;
-        padding-bottom:2px;
         @include breakpoint('mobile'){
           width: 80%;
         }
+      }
+      
+      .shadow-logo{
+        -webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow:    0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+        box-shadow:         0px 5px 4px 0px rgba(50, 50, 50, 0.5);
       }
     }
 

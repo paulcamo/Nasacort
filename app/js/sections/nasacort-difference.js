@@ -49,7 +49,8 @@ $(document).ready(function(){
     
     changeImageSrc();
     keepTDsameWidthArrow();
-
+    addMouseOverStates();
+    
     $('.instruccion').click(function(event) {
         event.preventDefault();
     });
@@ -149,4 +150,21 @@ function keepTDsameWidthArrow()
         $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
     } 
     //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
+}
+
+function addMouseOverStates()
+{
+    if(!isMobile)
+    {
+        $(".inner-logos .brand").mouseover(function() {
+             var newPath = $(this).find("img").attr("src").replace(".png", "-hover.png");
+             $(this).find("img").attr("src", newPath);
+             $(this).find("img").addClass("shadow-logo");
+        });
+        $(".inner-logos .brand").mouseout(function() {
+             var newPath = $(this).find("img").attr("src").replace("-hover.png", ".png");
+             $(this).find("img").attr("src", newPath);
+             $(this).find("img").removeClass("shadow-logo");
+        });
+    }
 }
