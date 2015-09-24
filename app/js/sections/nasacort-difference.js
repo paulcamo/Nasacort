@@ -152,7 +152,7 @@ function keepTDsameWidthArrow()
     var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
     var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
      $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
-     console.log("~~~ " + rightArrow)
+     console.log("~~~ " + rightArrow);
     //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
 }
 
