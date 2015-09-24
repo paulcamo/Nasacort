@@ -951,12 +951,6 @@
     background-size: contain;
 
 
-    &:hover {
-      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
-      background-size: contain;
-      color: $color-orange;
-    }
-
     p {
       padding: 0.8em 0px 0px 6.5%;
       width: 86%;
@@ -966,11 +960,14 @@
 
     }
 
-
-
-
-
   }
+
+    .textboxhover{
+      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+      color: $color-orange;
+    }
+
 
 
   }

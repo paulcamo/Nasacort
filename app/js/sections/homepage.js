@@ -63,6 +63,19 @@ $(document).ready(function() {
 
 
 
+    $(".patient").on("mouseenter",function() {
+
+        $(this).find(".textbox").addClass("textboxhover");
+    });
+
+    $(".patient").on("mouseleave",function() {
+
+        $(this).find(".textbox").removeClass("textboxhover");
+    });
+
+
+
+
 
 
 
@@ -115,56 +128,6 @@ $(document).ready(function() {
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
     controller.addTween('#brandlogo-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'8em'}),     35000, 80000);
     controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//$("#section2").on("click", function(){
-//
-//
-//    TweenMax.fromTo( $('#slide01'),               1, {top:'81px'},        {top:'-900px'});
-//    TweenMax.fromTo( $('#slide02'),               1, {marginTop:'0em'},    {marginTop:'-15em'});
-//
-//
-//    TweenMax.fromTo( $('#bottle'),               1, {marginTop:'0.3em', scale:'1', left:'72%'  },   {marginTop:'16.4em', scale:'2.5', left:'28.2%' , ease:  Power1.easeOut}  );
-//    TweenMax.fromTo( $('#cap'),               1, {marginTop:'0em', scale:'1', left:'74.6%'  },   {marginTop:'15em', scale:'2.5', left:'30.7%' , ease:  Power1.easeOut}  );
-//    TweenMax.to( $('#cap'),               1,   {marginTop:'7.5em' , delay: 3, ease:  Power1.easeOut}  );
-//
-//    TweenMax.to( $('#cap'),               1,   {marginTop:'16.7em', left:'95%' , delay: 6, rotation: 35, ease:Cubic.easeInOut }  );
-//    TweenMax.to( $('#background'),            1, {top:'-10.7em'});
-//
-//
-//
-//});
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -255,6 +218,13 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 
 // ---------------------------------------------------------------------------------------
 
+
+
+
+
+
+
+// ---------------------------------------------------------------------------------------
 
 
 function desktopStickyHeader(y){
