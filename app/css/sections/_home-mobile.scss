@@ -24,6 +24,7 @@
       padding-right: 20px;
       font-size: 10px;
       line-height: 15px;
+      margin-top: 18px;
     }// End General class
     .inner-ctas{
       width: 70%;
@@ -33,21 +34,36 @@
         margin-bottom: 10px;
         display: inline-block;
         width: 100%;
+        position:relative;
         span{
           font-size: 12px;
           line-height: 18px;
           font-family: $font-proxima-nova-bold;
           color: $color-dark-blue;
           width: 80%;
-          border-right: 1px solid gray;
           padding: 3px 2px 3px 11px;
           margin: 0;
           display: block;
+        }
+        &:after{
+          content:"";
+          background: url("../img/mobile/homepage/arrow-cta.png") no-repeat;
+          width: 9px;
+          height: 15px;
+          display: block;
+          position: absolute;
+          top: 35%;
+          right: 6%;
         }
       }
     }// End General class
 
     .head-inner{
+      &:after{
+        content:"";
+        background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
+        
+      }
       p{
         font-family: $font-proxima-nova-semibold;
         font-size: 17px;
@@ -103,6 +119,7 @@
         background: #f8f9fb url("../img/mobile/homepage/bg-preference.png") no-repeat right top;
         border-top: 1px solid #cdcecf;
         border-bottom: 1px solid #cdcecf;
+        overflow: hidden;
         .preference-parr{
           width: 70%;
           padding-top: 15px;
@@ -241,6 +258,9 @@
                 display: inline-block;
                 width: 100%;
               }
+            }
+            &:after{
+              background-image:none;
             }
           }
           .in-cta{
