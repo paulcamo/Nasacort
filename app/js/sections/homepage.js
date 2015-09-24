@@ -27,7 +27,7 @@ $(document).ready(function() {
 
     var tl1 = new TimelineMax({repeat:-1});
     var tl2 = new TimelineLite();
-    var tl_mobile = new TimelineLite({repeat:-1});
+    var tl_mobile = new TimelineMax({repeat:-1});
 
 
     tl1
@@ -50,9 +50,11 @@ $(document).ready(function() {
     tl2.to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5');
 
     tl_mobile
-        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=8')
-        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=6.5')
-        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=6.5')
+        .to("#carousel-mobile-2", 1,    {opacity: 1, ease: Power0.easeNone} , '+=3')
+        .to("#carousel-mobile-3", 1,    {opacity: 1, ease: Power0.easeNone} , '+=3')
+        .to("#carousel-mobile-1", 0,    {opacity: 1, ease: Power0.easeNone} , '-=0')
+        .to("#carousel-mobile-2", 0,    {opacity: 0, ease: Power0.easeNone} , '-=0')
+        .to("#carousel-mobile-3", 1,    {opacity: 0, ease: Power0.easeNone} , '+=3')
     ;
 
 
