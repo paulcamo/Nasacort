@@ -137,8 +137,6 @@ function changeImageSrc()
 {
      var contentwidth = $(window).width();
      
-     console.log(contentwidth)
-     
      if (isMobile)
      {
          $(".inner-logos .brand img").each(function(){
