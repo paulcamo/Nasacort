@@ -8,6 +8,9 @@
     }
   }
   .home-mobile {
+    .spc-marg-1{
+      margin-top: 2px!important;
+    }
     .spc-marg{
       margin-bottom:8px; 
     }
@@ -34,6 +37,11 @@
     }// End General class
     .inner-ctas{
       width: 70%;
+      .cta-restr{
+        max-width: 196px;
+        float: left;
+        clear: both;
+      }
       .cta{
         background-color:$color-white;
         border-radius: 6px;
@@ -65,15 +73,21 @@
     }// End General class
 
     .head-inner{
-      &:after{
-        content:"";
-        background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
-      }
       p{
         font-family: $font-proxima-nova-semibold;
         font-size: 17px;
         line-height: 20px;
-      }
+        position:relative;
+        &:after{
+          content:"";
+          width: 26px;
+          height: 3px;
+          display: inline-block;
+          position: absolute;
+          bottom: -8px;
+          left: 44%;
+        }
+      }  
     }
 
     padding-top: 169px;
@@ -84,6 +98,24 @@
     .slider{
       height: 246px;
       position: relative;
+      width: 100%;
+      h1{
+        font-size: 17px;
+        line-height: 20px;
+        width: 77%;
+        text-align: left;
+        margin: auto;
+        padding-top: 15px;
+        max-width: 252px;
+      }
+      #carousel-mobile-1{
+        h1{
+          color:$color-white;
+          @media screen and(min-width:400px) and (max-width: 768px) {
+            color:$color-dark-blue;
+          }
+        }
+      }
       img.product{
         position: absolute;
         top: -78px;
@@ -162,6 +194,10 @@
           float: right;
           p{
             color: $color-dark-blue;
+            margin-bottom: 18px;
+            &:after{
+              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
+            } 
           }
         }
         .inner-ctas{
@@ -187,6 +223,9 @@
           width: 70%;
           p{
             color:$color-white;
+            &:after{
+              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
+            } 
           }
         }
         .inner-ctas{
@@ -208,9 +247,13 @@
           width: 80%;
           margin: auto;
           text-align: center;
+          margin-bottom: 17px;
           p{
             color: $color-dark-blue;
             margin-bottom: 10px;
+            &:after{
+              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
+            } 
           }
         }
         .inner-ctas{
@@ -293,7 +336,16 @@
             font-size: 17px;
             line-height: 20px;
             color:$color-white;
+            margin-bottom: 14px;
           }
+        }
+      }
+      .inner-ctas{
+        .cta{
+          height: 44px;
+        }
+        .cta-last{
+          line-height: 38px;
         }
       }
     }// end of class Help-Section
@@ -304,21 +356,30 @@
     }// end of class Slider
 
     #carousel-mobile-1 {
-      background-color: red;
+      background: url("../img/mobile/homepage/bg-slide001.jpg") no-repeat center 0;
       z-index: 8;
       opacity: 1;
+      @media screen and(min-width:400px) and (max-width: 768px) {
+        background: url("../img/mobile/homepage/bg-slide001-sml.jpg") no-repeat center 0;
+      }
     }// end of class Slider
 
     #carousel-mobile-2 {
-      background-color: yellowgreen;
+      background: url("../img/mobile/homepage/bg-slide002.jpg") no-repeat center 0;
       z-index: 9;
       opacity: 0;
+      @media screen and(min-width:400px) and (max-width: 768px) {
+        background: url("../img/mobile/homepage/bg-slide002-sml.jpg") no-repeat center 0;
+      }
     }// end of class Slider
 
     #carousel-mobile-3 {
-      background-color: cornflowerblue;
+      background: url("../img/mobile/homepage/bg-slide003.jpg") no-repeat center 0;
       z-index: 10;
       opacity: 0;
+      @media screen and(min-width:400px) and (max-width: 768px) {
+        background: url("../img/mobile/homepage/bg-slide003-sml.jpg") no-repeat center 0;
+      }
     }// end of class Slider
 
 
