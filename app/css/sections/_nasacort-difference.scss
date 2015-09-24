@@ -197,6 +197,8 @@
       overflow:visible;
       //max-width:209px;
       min-width:auto;
+      height:53px;
+      right:19px !important;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -288,7 +290,7 @@
         //height: 5px;
       }
       @include breakpoint('mobile'){
-        height: 75px;
+        height: 53px;
       }
       &.start{
         background-color: #d9d9d9;
@@ -349,80 +351,106 @@
         -webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         -moz-box-shadow:    0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         box-shadow:         0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,323232+100&amp;0+0,0.4+100 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(50,50,50,0.4) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(50,50,50,0.4))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66323232',GradientType=0 ); /* IE6-9 */
+
+
       }
     }
 
     .sprite-bg-afrin{
       background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          //background-size: 75%;
+          //background-size: contain;
       }
       @include breakpoint('mobile'){
-          width:97%;
-          background-size: contain;
-          background-position: center;
-          //width:97%
+        background-position: center;
+        background-size: 110% auto;
+        overflow: hidden;
+        width: 80%;
+        margin-left:10%;
       }
     }
 
     .sprite-bg-benadryl{
       background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-position: center;
+            background-size: 100% auto;
+            overflow: hidden;
+            width: 80%;
+            margin-left:10%;
       }
     }
 
     .sprite-bg-flonase {
       background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-position: center;
+            background-size: 80% auto;
+            overflow: hidden;
+            width: 80%;
+            margin-left:10%;
       }
     }
 
     .sprite-bg-sudafed {
       background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-position: center;
+            background-size: 100% auto;
+            overflow: hidden;
+            width: 80%;
+            margin-left:10%;
       }
     }
 
     .sprite-bg-zyrtec {
       background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-position: center;
+            background-size: 85% auto;
+            overflow: hidden;
+            width: 80%;
+            margin-left:10%;
       }
     }
 
     .sprite-bg-claritin {
       background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-size: 90%;
-          background-position: 30%;
+          background-position: center;
+            background-size: 100% auto;
+            overflow: hidden;
+            width: 80%;
+            margin-left:10%;
       }
     }
 
@@ -453,18 +481,21 @@
     margin: auto;
     position:relative;
     .chart-logo{
+        border-right:none;
       img{
         @include breakpoint('tablet'){
           width:40%;
         }
         @include breakpoint('mobile'){
-          width:80%;
-          right:11%;
+          width:70%;
+          right:5%;
           position:relative;
+          height:auto;
+          max-height:44px;
         }
       }
       @include breakpoint('mobile'){
-          
+          //padding-top:6px;
         }
     }
     @include breakpoint('tablet'){
@@ -479,9 +510,10 @@
     }
 
     td {
-      height: 41px;
+      height: 48px;
       border-bottom: none;
       border-top: none;
+      font-size:11px;
     }
 
     tr:nth-child(even) {
@@ -501,6 +533,9 @@
 
     tr:nth-child(1) {
       height: 78px;
+      @include breakpoint('mobile'){
+          height:53px;
+      }
     }
 
     td:nth-child(1) {
@@ -508,6 +543,14 @@
       vertical-align: middle;
       text-align: center;
       border-right: none;
+      img{
+          @include breakpoint('mobile'){
+            display:none;
+        }
+      }
+       @include breakpoint('mobile'){
+            width:8px;
+        }
     }
 
     td:nth-child(2) {
@@ -571,7 +614,7 @@
       }
       @include breakpoint('mobile'){
         //right: 31.3%;
-        top: 23px;
+        top: 13px;
         width: 29px;
         img{
           width: 29px;
@@ -596,7 +639,7 @@
       }
       @include breakpoint('mobile'){
         right: 21px;
-        top: 68px;
+        top: 43px;
         width: 27.7%;
       }
 
@@ -612,7 +655,7 @@
       width: 20px;
       @include breakpoint('mobile'){
         right: 43%;
-        top: 70px;
+        top: 53px;
       }
     }
 

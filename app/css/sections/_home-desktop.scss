@@ -14,6 +14,12 @@
 .home-section {
 
 
+    .home-mobile {
+      @include breakpoint("tablet-n-up") {
+      display: none;
+    }
+  }
+
   .header {
   //  position: fixed;
   //  width: 100%;
@@ -189,7 +195,7 @@
     max-width: #{homepage-max-width()};
     position: fixed;
     text-align: center;
-    top: 0;
+    bottom: 0;
     z-index: 9998;
     right: 0;
     width: 69px;
@@ -432,7 +438,7 @@
     height: 6em;
     left: 0;
     z-index: 10001;
-    bottom: -43%;
+    top: 21em;
   }
 
 
@@ -572,7 +578,7 @@
     background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
     width: 10em;
     height: 0em;
-    bottom: -20.6em;
+    bottom: 12.12em;
     z-index: 98;
     position: absolute;
     left: 18.1%;
@@ -585,13 +591,14 @@
   #slide03 {
     position: fixed;
     top: 20em; //81px
-    height: 14.7em;
+    height: 15.7em;
     z-index: 112;
     margin: auto;
     left: 0;
     right: 0;
     max-width: #{homepage-max-width()};
     width: 100%;
+    overflow: hidden;
 
 
 
@@ -757,7 +764,7 @@
     width: 30%;
     position: absolute;
     left: 23%;
-    bottom: 9.8em;
+    bottom: 12.4em;
     font-size: 0.46em;
     padding: 0.8em 0px 0.8em 4.4%;
     line-height: 1.3em;
@@ -773,17 +780,17 @@
 
 
   .compare-link-bottom + .btn01 {
-    bottom: 9.8em;
+    bottom: 12.4em;
   }
 
   .compare-link-bottom + .btn02 {
-    bottom: 5.9em;
+    bottom: 8.1em;
     padding: 0.1em 0px 0.1em 4.4%;
     line-height: 1.4em;
   }
 
   .compare-link-bottom + .btn03 {
-    bottom: 1.65em;
+    bottom: 3.9em;
   }
 
 
@@ -813,6 +820,7 @@
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
     margin-top: 17em;
+    overflow: hidden;
 
     .use-only {
       position: absolute;
@@ -943,12 +951,6 @@
     background-size: contain;
 
 
-    &:hover {
-      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
-      background-size: contain;
-      color: $color-orange;
-    }
-
     p {
       padding: 0.8em 0px 0px 6.5%;
       width: 86%;
@@ -958,11 +960,14 @@
 
     }
 
-
-
-
-
   }
+
+    .textboxhover{
+      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+      color: $color-orange;
+    }
+
 
 
   }
@@ -1231,18 +1236,19 @@
     margin: 0em auto auto;
     left: 0px;
     right: 0px;
-    height: 1.3em;
+    height: 34em;
+    overflow: hidden;
 
 
     .footnote[data-section="home-1"]  {
       z-index: 999;
-      bottom: -11.45em;
+      bottom: -10.8em;
       margin-top: 0px;
     }
 
     .footnote[data-section="home-2"] {
       z-index: 999;
-      margin-top: -5.1em;
+      margin-top: -9.7em; // -5.1em;
       bottom: -25.3em;
     }
 
@@ -1296,7 +1302,7 @@
     }
 
     p {
-      margin-top: 3.5em;
+      margin-top: 3.65em;
       width: 93%;
       font-size: 0.3em;
       font-weight: 100;
