@@ -351,14 +351,24 @@
         -webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         -moz-box-shadow:    0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         box-shadow:         0px 5px 4px 0px rgba(50, 50, 50, 0.5);
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,323232+100&amp;0+0,0.4+100 */
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(50,50,50,0.4) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(50,50,50,0.4))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(50,50,50,0.4) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#66323232',GradientType=0 ); /* IE6-9 */
+
+
       }
     }
 
     .sprite-bg-afrin{
       background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          //background-size: 75%;
+          //background-size: contain;
       }
       @include breakpoint('mobile'){
         background-position: center;
@@ -371,9 +381,9 @@
 
     .sprite-bg-benadryl{
       background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
           background-position: center;
@@ -386,9 +396,9 @@
 
     .sprite-bg-flonase {
       background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
           background-position: center;
@@ -401,9 +411,9 @@
 
     .sprite-bg-sudafed {
       background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
           background-position: center;
@@ -416,9 +426,9 @@
 
     .sprite-bg-zyrtec {
       background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
           background-position: center;
@@ -431,9 +441,9 @@
 
     .sprite-bg-claritin {
       background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
-      background-size: cover;
+      background-size: contain;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          background-size: contain;
       }
       @include breakpoint('mobile'){
           background-position: center;
