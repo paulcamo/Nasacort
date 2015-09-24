@@ -8,6 +8,12 @@
     }
   }
   .home-mobile {
+    .spc-marg{
+      margin-bottom:8px; 
+    }
+    .spc-pdd{
+      padding-top: 5px;
+    }
     .clr-org{
       color: $color-orange;
     }// End General class
@@ -47,12 +53,12 @@
         }
         &:after{
           content:"";
-          background: url("../img/mobile/homepage/arrow-cta.png") no-repeat;
-          width: 9px;
-          height: 15px;
+          background: url("../img/mobile/homepage/arrow-cta.png") no-repeat 50%;
+          width: 16px;
+          height: 100%;
           display: block;
           position: absolute;
-          top: 35%;
+          top: 0;
           right: 6%;
         }
       }
@@ -62,7 +68,6 @@
       &:after{
         content:"";
         background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
-        
       }
       p{
         font-family: $font-proxima-nova-semibold;
