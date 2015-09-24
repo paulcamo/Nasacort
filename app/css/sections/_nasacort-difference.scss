@@ -194,6 +194,7 @@
     overflow: hidden;
     @include breakpoint('mobile'){
       overflow:visible;
+      //max-width:209px;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -204,12 +205,13 @@
         margin-right:3px;
         margin-bottom:10px;
       @include breakpoint('mobile'){
-        width:212%;
-        max-width:208px;
+        //width:237%;
+        //max-width:208px;
         float:right;
         background-color: #497ebf;
         padding-bottom:1px;
         padding-left:12px;
+        margin-right:2px;
       }
       .two-logos{
         @include breakpoint('mobile'){
@@ -275,7 +277,7 @@
     .open{
       height: 78px;
       @include breakpoint('tablet'){
-        height: 5px;
+        //height: 5px;
       }
       @include breakpoint('mobile'){
         height: 75px;
@@ -301,10 +303,11 @@
         float: right;
         height: auto;
         padding: 8px 0 1px;
-        width: 212%;
-        max-width:208px;
+       // width: 237%;
+       // max-width:208px;
         margin-bottom:0;
-        border: 1px solid #94bed3;
+        //border: 1px solid #94bed3;
+        margin-right:2px;
       }
       p{
         padding: 0 15px;
@@ -338,12 +341,13 @@
       background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
       background-size: cover;
       @include breakpoint('tablet'){
-          background-size: 75%;
+          //background-size: 75%;
       }
       @include breakpoint('mobile'){
-          background-size: 165%;
+          width:97%;
+          background-size: contain;
           background-position: center;
-          width:97%
+          //width:97%
       }
     }
 
@@ -439,8 +443,8 @@
           width:40%;
         }
         @include breakpoint('mobile'){
-          width:81px;
-          left:-26px;
+          width:80%;
+          right:11%;
           position:relative;
         }
       }
@@ -502,6 +506,9 @@
       vertical-align: middle;
       border-left: none;
     }
+    td:nth-child(4) {
+        
+    }
 
     td:nth-child(3){
       border-left: none;
@@ -560,20 +567,20 @@
     .arrow {
       display: none;
       position: absolute;
-      right: -96px;
+      right: -95px;
       border: medium none;
       z-index: 11;
       top: 68px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
-      width: 36.5%;
+      width: 36.7%;
       @include breakpoint('tablet'){
-        right: 40px;
-        top: 57px;
-        width: 29%;
+        right: 41px;
+        top: 68px;
+        width: 29.5%;
       }
       @include breakpoint('mobile'){
-        right: 20px;
+        right: 21px;
         top: 68px;
         width: 27.7%;
       }

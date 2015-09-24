@@ -48,6 +48,7 @@ $(document).ready(function(){
     set_checks("clear");
     
     changeImageSrc();
+    keepTDsameWidthArrow();
 
     $('.instruccion').click(function(event) {
         event.preventDefault();
@@ -113,6 +114,7 @@ $(document).ready(function(){
 $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
+    keepTDsameWidthArrow();
 });
 
 function changeImageSrc()
@@ -132,4 +134,19 @@ function changeImageSrc()
              $(this).attr("src", newPath);
          });
      }
+}
+
+function keepTDsameWidthArrow()
+{
+    console.log( $(".arrow").width());  
+    if(isMobile)
+    {
+        $(".nasacort-difference-section .chart-table-container .arrow").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 1);
+        $("#brand-compare").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 3);
+    }else
+    {
+        $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 2);
+        $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
+    } 
+    //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
 }
