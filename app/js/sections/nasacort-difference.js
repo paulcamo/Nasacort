@@ -116,6 +116,7 @@ $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
     keepTDsameWidthArrow();
+    addMouseOverStates();
 });
 
 function changeImageSrc()
@@ -139,7 +140,6 @@ function changeImageSrc()
 
 function keepTDsameWidthArrow()
 {
-    console.log( $(".arrow").width());  
     if(isMobile)
     {
         $(".nasacort-difference-section .chart-table-container .arrow").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 1);
@@ -148,7 +148,11 @@ function keepTDsameWidthArrow()
     {
         $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 2);
         $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
-    } 
+    }
+    var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
+    var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
+     $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
+     console.log("~~~ " + rightArrow)
     //$(".nasacort-difference-section .chart-table-container .vrs").css("right", $("#brand-compare").width() + 4);
 }
 

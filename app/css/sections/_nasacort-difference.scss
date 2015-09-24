@@ -216,6 +216,7 @@
         padding-left:12px;
         margin-right:2px;
         min-width:209px;
+        border-top: 1px solid #94bed3;
       }
       .two-logos{
         @include breakpoint('mobile'){
@@ -229,32 +230,35 @@
           position: relative;
           width: auto;
           padding-right:12px;
+          margin-top:6px;
         }
         img{
             @include breakpoint('mobile'){
                 width:86px;
                 max-height:48px;
-                padding-top:6px;
-                padding-bottom:0;
             }
         }
       }
       .logos-1{
           a{
-              img{
-                   @include breakpoint('mobile'){
-                       margin-top:4px;
-                   }
+               @include breakpoint('mobile'){
+                 margin-top:0px;
+                 margin-bottom:0;
                 }
            }
       }
       .logos-2{
-          
+          a{
+              @include breakpoint('mobile'){
+                 margin-bottom:0;
+                }
+          }
       }
       .logos-3{
           .brand{
                @include breakpoint('mobile'){
                     padding-bottom:10px;
+                    margin-bottom:0;
                 }
           }
       }
@@ -553,12 +557,12 @@
 
     .vrs {
       position: absolute;
-      right: 17.4%;
+      //right: 17.4%;
       top: 13px;
       border: none;
       z-index: 12;
       @include breakpoint('tablet'){
-        right: 30.3%;
+        //right: 30.3%;
         top: 14px;
         width: 55px;
         img{
@@ -566,7 +570,7 @@
         }
       }
       @include breakpoint('mobile'){
-        right: 31.3%;
+        //right: 31.3%;
         top: 23px;
         width: 29px;
         img{
