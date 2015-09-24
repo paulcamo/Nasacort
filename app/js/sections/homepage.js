@@ -1,5 +1,6 @@
 var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
+var assets_maximum_width = 1800;
 var xx = (window.innerWidth / 35);
 var css = document.createElement("style");
 css.type = "text/css";
@@ -20,11 +21,13 @@ $(document).ready(function() {
     $( 'html, body' ).scrollTop(0); //reset scroll to top ....
     $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
     $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
+    set_dotbox(); // set the dotbox to the right side of the screen ....
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
     var tl1 = new TimelineMax({repeat:-1});
     var tl2 = new TimelineLite();
+    var tl_mobile = new TimelineLite({repeat:-1});
 
 
     tl1
@@ -45,6 +48,14 @@ $(document).ready(function() {
     //tl1.seek('cta');
 
     tl2.to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5');
+
+    tl_mobile
+        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=8')
+        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=6.5')
+        .to("#carousel-mobile-1", 1.5,    {opacity: 0, ease: Power0.easeNone} , '+=6.5')
+    ;
+
+
 
 // ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -188,13 +199,23 @@ $(document).ready(function() {
 });
 
 
+$(window).bind("resize", function(){
+set_dotbox();
+});
 
 
 
 
+function set_dotbox(){
+    var x;
+    if ($(window).width() > assets_maximum_width){
+        x= ($(window).width() - assets_maximum_width) / 2 + "px";
+    }else {
+        x="0px";
+    }
+    $("#dots-container .dotbox").css("right", x);
 
-
-
+}
 
 
 
