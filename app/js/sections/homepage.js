@@ -104,9 +104,9 @@ $(document).ready(function() {
 
     // -----to hide the white header bar ---------------------------------------------------------------------------------------------------------------------
 
-   // controller.addTween('#brandlogo-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
-   // controller.addTween('#brandlogo-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
-    //controller.addTween('#brandlogo-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
+   // controller.addTween('#marker-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
+   // controller.addTween('#marker-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
+    //controller.addTween('#marker-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
 
 
 
@@ -122,52 +122,53 @@ $(document).ready(function() {
     // ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
 
 
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#herolink'), 0.5, {top:'0px'},        {top:'-900px'}),     30000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#herolink'), 0.5, {top:'0px'},        {top:'-900px'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
 
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.6em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.1%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'-0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.6em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.1%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'-0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
 
 
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'16.7em', left:'92%' , rotation: 35, ease:Cubic.easeInOut }  ),     35000, 65000);
+    controller.addTween('#marker-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
+    controller.addTween('#marker-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'16.7em', left:'92%' , rotation: 35, ease:Cubic.easeInOut }  ),     35000, 65000);
 
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
-    controller.addTween('#brandlogo-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'8em'}),     35000, 80000);
-    controller.addTween('#brandlogo-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
+    controller.addTween('#marker-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
+    controller.addTween('#marker-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'8em'}),     35000, 80000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
 
 
 
     // ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
 
-  //  controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
-    controller.addTween('#brandlogo8-tr', TweenMax.to( $('#background'),            1,   {top:'-33em'}),     30000);
-    controller.addTween('#brandlogo8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'17em'},    {top:'1.4em'}),    35000, 65000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#compare-copy'),          1, {left:'-42%'},   {left:'23%'}),      35000, 31000);
-    controller.addTween('#brandlogo8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'30.5%'}),    15000, 90000);
+  //  controller.addTween('#marker8-tr', TweenMax.to( $('#slide03'),            1,   {top:'1.6em'}),     0);
+    controller.addTween('#marker8-tr', TweenMax.to( $('#background'),            1,   {top:'-33em'}),     30000);
+    controller.addTween('#marker8-tr', TweenMax.to( $('#slide02'),            1,   {marginTop:'-34em'}),     30000);
+    controller.addTween('#marker8-tr', TweenMax.fromTo( $('#compare-bg'),            1, {top:'17em'},    {top:'1.4em'}),    35000, 65000);
+    controller.addTween('#marker8-tr', TweenMax.fromTo( $('#compare-copy'),          1, {left:'-42%'},   {left:'23%'}),      35000, 31000);
+    controller.addTween('#marker8-tr', TweenMax.fromTo( $('#stats'),                 1, {height:'0%'},   {height:'30.5%'}),    15000, 90000);
 
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1.5em'},       {top:'-16em'}),     30000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
-    controller.addTween('#brandlogo9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
+    controller.addTween('#marker9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
+    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1.5em'},       {top:'-16em'}),     30000);
+    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
+    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
 
     // ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   35000);
-    controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
-    controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
-    controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
-    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     35000);
+    controller.addTween('#marker10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   35000);
+    controller.addTween('#marker10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
+    controller.addTween('#marker10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
+    controller.addTween('#marker10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
+    controller.addTween('#marker10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     35000);
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo11', TweenMax.to( $('#background'),              1,   {top:'-78.6em'}),   70);
-    controller.addTween('#brandlogo11', TweenMax.to( $('#slide05'),                 1, {top:'-350px'}), 70);
+    controller.addTween('#marker11', TweenMax.to( $('#background'),              1,   {top:'-78.6em'}),   70);
+    controller.addTween('#marker11', TweenMax.to( $('#slide05'),                 1, {top:'-350px'}), 70);
+    controller.addTween('#marker11', TweenMax.to( $('#dots-container'),                 1, {height:'2000px'}), 70);
 
 
 
