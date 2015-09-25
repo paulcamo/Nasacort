@@ -1,6 +1,12 @@
 var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
 var assets_maximum_width = 1800;
+
+var breakpoint_mobile = '320px';
+var breakpoint_mobile_max = '768px';
+var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
+
+
 var xx = (window.innerWidth / 35);
 var css = document.createElement("style");
 css.type = "text/css";
@@ -22,6 +28,7 @@ $(document).ready(function() {
     $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
     $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
     set_dotbox(); // set the dotbox to the right side of the screen ....
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
@@ -217,6 +224,56 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 });
 
 // ---------------------------------------------------------------------------------------
+
+
+
+
+$('.footnote').on('click', function(e) {
+    if($(this).attr("state") != "open"){
+        var parentHeight = $(this).data("parent");
+        var hh = $(parentHeight).outerHeight();
+        var buttonHeight = $(this).height();
+        var currentMarginTop = $(this).css("margin-top");
+        $(this).attr("state", "open");
+        var animation = $(this).find(".animation");
+        if(isMobile)
+        {
+            $(parentHeight).css("height",hh);
+            $(this).css("width","100%");
+            animation.css("width","100%");
+        }else
+        {
+            animation.css("width","492px");
+            $(this).attr("currentMarginTop", currentMarginTop);
+        }
+        animation.show();
+        //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        expandTop = animation.outerHeight() - buttonHeight;
+        animation.css("margin-top", -expandTop);
+
+        e.preventDefault();
+    }
+
+});
+
+$('.footnote .close-btn').on('click', function(e) {
+    e.stopPropagation();
+    var parentHeight = $(this).parent().parent().data("parent");
+    $(this).parent().hide();
+    $(this).parent().parent().attr("state", "closed");
+    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop"));
+    if(isMobile)
+    {
+        $(this).parent().parent().css("width","13.75%");
+        $(parentHeight).css("height","auto");
+        $(this).parent().parent().css("margin-top", "");
+    }else
+    {
+        $(this).parent().parent().css("width","width: 11.5%");
+    }
+    e.preventDefault();
+});
+
 
 
 
