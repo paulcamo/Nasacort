@@ -27,7 +27,7 @@ $(document).ready(function() {
     $( 'html, body' ).scrollTop(0); //reset scroll to top ....
     $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
     $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....
-    set_dotbox(); // set the dotbox to the right side of the screen ....
+    set_dotbox(); set_footer_width(); // set the dotbox to the right side of the screen ....
     $(".nassacort-logo .little-house").addClass("active-house"); // set the homepage at the main menu
     $(".footer").addClass("footer-for-homepage"); // set the homepage at the main menu
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
@@ -158,14 +158,16 @@ $(document).ready(function() {
 
     // ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#brandlogo10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   40000);
+    controller.addTween('#brandlogo10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   35000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
     controller.addTween('#brandlogo10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
-    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     40000);
+    controller.addTween('#brandlogo10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     35000);
 
     // -----------------------------------------------------------------------------------------------------------------------------------------------
 
+    controller.addTween('#brandlogo11', TweenMax.to( $('#background'),              1,   {top:'-78.6em'}),   70);
+    controller.addTween('#brandlogo11', TweenMax.to( $('#slide05'),                 1, {top:'-350px'}), 70);
 
 
 
@@ -175,9 +177,23 @@ $(document).ready(function() {
 
 $(window).bind("resize", function(){
 set_dotbox();
+set_footer_width();
 });
 
 
+
+function set_footer_width(){
+
+
+    $('#background .footer').css("width",$(window).width());
+
+    console.log( $(window).width());
+    console.log( $('#background').innerWidth());
+
+
+    $('#background .footer').css("left", -(($(window).width() - $('#background').innerWidth())/2) + "px");
+
+}
 
 
 function set_dotbox(){
@@ -205,6 +221,21 @@ $(window).scroll(function() {
         // do something computationally expensive
         desktopStickyHeader($(this).scrollTop());
     });
+
+
+    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+        console.log("bottom!");
+
+
+      // $("body").css("padding-bottom","1000px");
+
+      //  $("#background").css("top","-100px");
+
+
+        }
+
+
+
 });
 
 // ---------------------------------------------------------------------------------------
