@@ -1430,3 +1430,10 @@
 
 
 
+.footer-for-homepage {
+
+  @include breakpoint("tablet-n-up") {
+    position: absolute;
+    z-index: 1000;
+  }
+}
