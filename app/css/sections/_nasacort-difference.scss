@@ -1,5 +1,16 @@
 .nasacort-difference-section {
 
+  @include breakpoint('mobile') {   
+    .footnote{
+      &:hover{
+        width: 90%!important;
+      }
+      .animation {
+          padding: 10px 10px 10px 20px;
+      }
+    }
+  }
+
   .hero-banner {
     background:url(../img/desktop/nasacort-difference/hero-difference.png) no-repeat top center;
     .underlined{
