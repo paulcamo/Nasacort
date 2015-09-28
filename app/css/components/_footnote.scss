@@ -21,6 +21,7 @@
         display: none;
         font-weight:normal;
         line-height:18px;
+        word-break: break-word;
             &:last-child{
                 margin-bottom:0;
             }
@@ -107,6 +108,7 @@
             font-size:1em;
             line-height:1.3em;
             margin-bottom:1em;
+            word-break: break-word;
         } 
     }
     &:hover{
@@ -127,6 +129,7 @@
             line-height:1em;
             margin-bottom: 1em;
             margin-top: 1em;
+            word-break: break-word;
         }
     } 
     &:hover{
