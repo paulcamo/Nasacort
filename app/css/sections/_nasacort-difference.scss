@@ -169,7 +169,7 @@
     height: 278px;
     margin-bottom:12px; 
     @include breakpoint('mobile'){
-      min-height: 100px;
+      min-height: 75px;
       height: auto;
     }
   }
