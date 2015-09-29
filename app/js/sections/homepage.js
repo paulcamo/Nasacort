@@ -5,6 +5,7 @@ var assets_maximum_width = 1800;
 var breakpoint_mobile = '320px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
+var media_query_tablet = "screen and (min-width: " + desktop_mininum_width + "px) and (max-width: " + desktop_maximum_width + "px)";
 
 
 var xx = (window.innerWidth / 35);
@@ -12,6 +13,19 @@ var css = document.createElement("style");
 css.type = "text/css";
 css.innerHTML = "body { font-size: " + xx + "px }";
 document.body.appendChild(css);
+
+
+var controller = $.superscrollorama();
+
+
+
+
+var pixel01=0;
+
+
+
+
+
 
 // --------------------------------------------------------------------
 
@@ -31,6 +45,12 @@ $(document).ready(function() {
     $(".nassacort-logo .little-house").addClass("active-house"); // set the homepage at the main menu
     $(".footer").addClass("footer-for-homepage"); // set the homepage at the main menu
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+    isTablet =  window.matchMedia(media_query_tablet).matches;
+    set_variables();
+
+
+
+
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
@@ -91,43 +111,18 @@ $(document).ready(function() {
     var tempo_cap=99000;
 
 
-    var controller = $.superscrollorama();
-
-
-
-
-
-
-
-
-
-
-    // -----to hide the white header bar ---------------------------------------------------------------------------------------------------------------------
-
-   // controller.addTween('#marker-tr', TweenMax.to( $('#header'), 0.5, {css:{top: "-29px"}}), 100);
-   // controller.addTween('#marker-tr', TweenMax.from( $('#slide01'), 0.5, {css:{top: 111}}), 100);
-    //controller.addTween('#marker-tr', TweenMax.from( $('#productbox-container'), 0.5, {css:{top: 111}}), 100);
-
-
-
-
-
-    // -------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 
     // ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
 
 
-    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
-    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top:'81px'},        {top:'-900px'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top: pixel01 },        {top:'-900px'}),     30000);
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top: pixel01 },        {top:'-900px'}),     30000);
     controller.addTween('#marker-tr', TweenMax.fromTo( $('#herolink'), 0.5, {top:'0px'},        {top:'-900px'}),     30000);
     controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
 
-    controller.addTween('#marker-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop:'0.6em', scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.1%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
+    controller.addTween('#marker-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop: pixel02 , scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.1%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
     controller.addTween('#marker-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'-0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
 
 
@@ -179,7 +174,38 @@ $(document).ready(function() {
 $(window).bind("resize", function(){
 set_dotbox();
 set_footer_width();
+set_variables();
+
+
+    controller.triggerCheckAnim(false);
+
+
 });
+
+
+
+
+function set_variables(){
+
+
+    console.log ("  isTablet es " + media_query_tablet + " ---> "  + isTablet);
+
+    if ( isTablet) {
+        console.log ("  isTablet  !!! ");
+        pixel01= "139px";
+        pixel02='2.8em';
+
+
+    } else {
+        pixel01= "81px";
+        pixel02='.06em';
+
+    }
+
+
+}
+
+
 
 
 
