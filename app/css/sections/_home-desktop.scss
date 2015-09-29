@@ -573,8 +573,8 @@
     background-size: contain;
     z-index: 101;
     position: absolute;
-    top: 8em;
-    left: 72.2%;
+    top: 8.8em;
+    left: 72%;
     margin: 0.3em auto auto 0%;
     width: 3em;
     height: 4.4em;
@@ -591,7 +591,7 @@
     height: 3em;
     z-index: 101;
     position: absolute;
-    top: 8.78em;
+    top: 9em;
     left: 74.6%;
   }
 
@@ -670,7 +670,7 @@
     position: absolute;
     overflow: hidden;
     background-size: contain;
-    top: 1.45em;
+    top: 17em;
     z-index: 100;
   }
 
@@ -694,7 +694,7 @@
     height: 7em;
     position: absolute;
     top: 1.45em;
-    left: 23%;
+    left: -42%;
     color: $color-white;
     font-family: $font-proxima-nova-semibold;
     text-align: left;
@@ -823,7 +823,7 @@
 
   #stats {
     background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
-    height: 37%;
+    height: 0;
     z-index: 99;
     background-size: cover;
     position: absolute;
