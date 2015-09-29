@@ -2,10 +2,8 @@
 
   @include breakpoint('mobile') {   
     .footnote{
-      &:hover{
-        width: 90%!important;
-      }
       .animation {
+          width: 90%!important;
           padding: 10px 10px 10px 20px;
       }
     }
@@ -319,7 +317,7 @@
       }
     }
     .instruccion{
-      height: 100px;
+      height: auto;
       margin-bottom: 1px; 
       padding-top: 20px;
       text-align: left;
@@ -722,9 +720,9 @@
         padding-right:0;
       }
       @include breakpoint('tablet'){
-        max-width: 769px!important;
-        padding-left:40px;
-        padding-right:40px;
+        max-width: 100%!important;
+        padding-left:0;
+        padding-right:0;
       }
       @include breakpoint('mobile'){
         max-width: 290px !important;
@@ -740,6 +738,9 @@
     .components-faq-banner{
       display: inline-block;
       margin-top: 35px;
+      @include breakpoint('tablet'){
+        width: 75%;
+      }
       img{
         float: left;
         @include breakpoint('mobile'){
@@ -752,6 +753,9 @@
         width: 492px;
         text-align: left;
         margin-left:20px;
+        @include breakpoint('tablet'){
+          width: 58%;
+        }
         @include breakpoint('mobile'){
           width: 160px;
         }
@@ -760,6 +764,10 @@
           font-size: 31px;
           line-height: 35px;
           margin: 0;
+          @include breakpoint('tablet'){
+            font-size: 16px;
+            line-height: 18px;
+          }
           @include breakpoint('mobile'){
             font-size: 18px;
             line-height: 21px;
