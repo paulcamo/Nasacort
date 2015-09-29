@@ -274,7 +274,7 @@ $space-mobile-copy: 4.6875%;
   }
   .chart-text-inner{
     padding: 0 33px;
-    margin-top:20px;
+    margin-top:25px;
     margin-bottom: 54px;
   }
   
@@ -297,7 +297,7 @@ $space-mobile-copy: 4.6875%;
     .chart-2{
         padding-bottom:37px;
         h3{
-            margin-bottom:74px;
+            margin-bottom:0;
             line-height: 58px;
             padding-top: 5px;
             @include breakpoint('desktop') {
@@ -307,11 +307,24 @@ $space-mobile-copy: 4.6875%;
                 line-height:36px;
             }
         }
+        .chart-text-inner{
+            margin-bottom:28px;
+        }
         .footnote{
-            margin-top:-77px;
+            margin-top:314px;
         }
         img{
-            margin-left:32px;
+            margin-left:152px;
+            margin-right:116px;
+            margin-bottom:0;
+            max-width: 736px;
+            @include breakpoint('desktop') {
+                margin-left:80px;
+            }
+            @include breakpoint('tablet') {
+                margin-left:0;
+            }
+            
         }
         .notes{
             margin-left:36px !important;
@@ -564,6 +577,12 @@ $space-mobile-copy: 4.6875%;
                 min-width:297px;
                 margin-left: 9px;
                 margin-bottom: 10px;
+                @include breakpoint('mobile') {
+                    min-width:236px;
+                    max-height:333px;
+                    margin-left:$space-mobile-copy;
+                    margin-right:$space-mobile-copy;
+                }
             }
             .parr-inner-dosing{
                 margin-bottom: 12px;
