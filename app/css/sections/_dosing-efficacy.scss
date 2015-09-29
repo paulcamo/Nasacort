@@ -584,8 +584,9 @@ $space-mobile-copy: 4.6875%;
                 @include breakpoint('mobile') {
                     min-width:236px;
                     max-height:333px;
-                    margin-left:$space-mobile-copy;
-                    margin-right:$space-mobile-copy;
+                    margin-left:13.125%;
+                    margin-right:13.125%;
+                    max-width: 73.75%;
                 }
             }
             .parr-inner-dosing{
