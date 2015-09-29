@@ -34,7 +34,12 @@
   .header .header-top ul.utility-nav {
   //  position: fixed;
     right: 0;
-    margin-top: 0;
+    margin-top: -4px;
+
+    @include breakpoint("tablet") {
+      margin-top: -3px;
+    }
+
 
     li {
       line-height: 11px;
@@ -79,6 +84,17 @@
   .footer .footer-content .alternative-content ul li .pipe {
     margin-top: 32px;
   }
+
+
+
+  .footnote .rfrs p {
+    @include breakpoint("tablet-n-up") {
+      font-size: 12px;
+    }
+  }
+
+
+
 
   // ---------------------------------------------------------
 
