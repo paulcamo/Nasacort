@@ -147,6 +147,10 @@ $space-mobile-copy: 4.6875%;
   position: relative;
   padding-bottom:44px;
   
+  h2{
+      margin-bottom:14px;
+  }
+  
   .content-dosing-and-efficacy{
       padding-left: #{fluid-percentage($site-max-width, 210)};
       padding-right: #{fluid-percentage($site-max-width, 186)};
