@@ -165,6 +165,12 @@
                 margin-right:0;
                 padding-right:0.5%;
             }
+            &.highlighted{
+                //outline: 10px solid #eb5d2b;
+                //box-shadow: 0 0 3pt 2pt red;
+                box-shadow:0px 0px 0px 12px #eb5d2b;
+                @include border-radius(12px);
+            }
         }
     }
     
