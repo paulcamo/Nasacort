@@ -288,6 +288,26 @@ function hoverInNav(){
             name = ".li_" + currentPerson.slice(5);
             $(name + " .normal_img").hide();
             $(name + " .hover_img").show();
+
+
+
+            switch(name) {
+                case ".li_maria":
+                    $('#patient_title').text ("What’s a Clucker?");
+                    break;
+                case ".li_mark":
+                    $('#patient_title').text ("What’s a Dripper");
+                    break;
+
+                case ".li_kara":
+                    $('#patient_title').text ("What’s Mouthbreather");
+                    break;
+                case ".li_liam":
+                    $('#patient_title').text ("What’s Sniffler");
+                    break;
+            }
+
+
         },function(){
             if ( $(this).hasClass('click_state') === false ) {
                 $(this).removeClass('hover');
@@ -305,6 +325,29 @@ function hoverInNav(){
             $(name_nav).find('.arrow-upMenu').addClass('hover');
             $(name + " .normal_img").hide();
             $(name + " .hover_img").show();
+
+
+
+
+            switch(name) {
+                case ".li_maria":
+                    $('#patient_title').text ("What’s a Clucker?");
+                    break;
+                case ".li_mark":
+                    $('#patient_title').text ("What’s a Dripper");
+                    break;
+
+                case ".li_kara":
+                    $('#patient_title').text ("What’s Mouthbreather");
+                    break;
+                case ".li_liam":
+                    $('#patient_title').text ("What’s Sniffler");
+                    break;
+            }
+
+
+
+
         },function(){
             if ( $(this).hasClass('click_state') === false ) {
                 $(name + " .normal_img").show();
