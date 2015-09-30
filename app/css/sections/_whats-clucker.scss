@@ -291,7 +291,7 @@ $grey-button:#f8f8f8;
                     position: relative;
                     height: 100%;
                     border-radius: 10px;
-                    background: rgba(2, 46, 128, 0.8);                     
+                    background: rgba(20, 81, 134, 0.8);                     
                     div{
                         &:nth-child(1){
                             margin-top: 29px;
@@ -361,6 +361,8 @@ $grey-button:#f8f8f8;
                             }
                             &:nth-child(2){
                                 font-size: 23px;
+                                font-family: $font-proxima-nova-bold;
+                                text-transform: uppercase;
                                 @media screen and (max-width: 1025px) {
                                     font-size: 18px;
                                 }

@@ -793,8 +793,9 @@
       }
       .graphic{
           width:100%;
-          max-width:604px;
+          max-width:974px;
           display:block;
+          margin: auto;
         @include breakpoint('tablet'){
           width: 100%;
         }
