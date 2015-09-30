@@ -15,12 +15,92 @@ css.innerHTML = "body { font-size: " + xx + "px }";
 document.body.appendChild(css);
 
 
-var controller = $.superscrollorama();
-var currentslide=1;
+var finalSlide=1;
+var currentSlide=0;
 var playedSlides = [1,0,0,0,0];
 
 
 var pixel01=0;
+
+var tl = new TimelineMax({paused:true});
+
+
+function callback_function (){
+
+
+    currentSlide++;
+
+    if (finalSlide==currentSlide) {
+        tl.pause();
+    }else {
+        //console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
+        $("#dots-container .dotbox .dot").removeClass("dot-on");
+        $("#dots-container .dotbox .dot").eq(currentSlide).addClass("dot-on");
+    }
+    
+}
+
+
+
+tl  // ----------------------------------------------------------------------------
+
+
+    .add(callback_function)
+
+    // --- slide 02 ---------------------------------------------------------------
+
+    .to('#header', 1,                    {marginTop: '-29px',  ease: Sine. easeIn} , '+=0')
+    .to('#slide1-textbox', 3,            {top: '-900px',  ease: Sine. easeIn} , '-=1')
+    .to('#slide01', 3,                   {top: '-900px',  ease: Sine. easeIn} , '-=3')
+    .to('#background', 3,                {top: '-10.7em',  ease: Sine. easeIn} , '-=3')
+    .fromTo($('#herolink'), 3,           {top: '0px'}, {top: '-900px'} , '-=3')
+    .to('#slide02', 4,                   {marginTop: '-15em',  ease: Sine. easeInOut} , '-=6')
+    .to($('#bottle'), 6,                 {marginTop: '16.2em',scale: '2.5',left: '28.1%',ease: Power1.easeOut } , '-=6')
+    .to($('#cap'), 6,                    {marginTop: '14.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Power1.easeOut} , '-=6')
+    .to($('#cap'), 0.7,                  {marginTop: '7.5em', ease: Power1.easeOut} , '+=0')
+    .to($('#cap'), 1,                    {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
+    .to($('#no-scent'), 0.8,             {height: '8em'} , '+=0')
+    .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
+    .add(callback_function)
+
+    // --- slide 03 ---------------------------------------------------------------
+
+    .to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
+    .to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
+    .to('#slide03', 3,       {top: '1.6em'}, '-=3')
+    .to('#compare-copy', 1,  {left: '23%'}, '+=0')
+    .to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
+    .to('#stats', 1,         {height: '30.5%'}, '+=0')
+    .add(callback_function)
+
+    // --- slide 04 ---------------------------------------------------------------
+
+    .to('#background', 4,    {top: '-53em', ease: Expo.easeOut}, '+=0')
+    .to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
+    .to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
+    .to('#patient-box', 3,   {left: '0px', ease: Power0.easeIn}, '-=1')
+    .add(callback_function)
+
+    // --- slide 05 ---------------------------------------------------------------
+
+    .to('#background', 3,        {top: '-70.5em', ease: Power1.easeOut}, '+=0')
+    .to('#slide04', 3,           {top: '-16em', ease: Power1.easeOut}, '-=3')
+    .to('#slide05', 3,           {top: '-13em', ease: Power1.easeOut}, '-=3')
+    .to('#yellow-spike', 3,      {top: '-2em', ease: Power1.easeOut}, '-=3')
+    .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
+    .add(callback_function)
+
+    // --- footer ---------------------------------------------------------------
+
+    .to('#background', 1,       {top:'-78.6em'})
+    .to('#slide05', 1,          {top:'-350px'})
+    .to('#dots-container', 1,   {height:'2000px'})
+
+;  // --- end ---------------------------------------------------------------
+
+
+
+
 
 
 
@@ -28,12 +108,6 @@ var pixel01=0;
 
 
 // --------------------------------------------------------------------
-
-
-
-//$(window).on('scroll', function() {
-//    window.requestAnimationFrame(scrollHandler);
-//});
 
 
 $(document).ready(function() {
@@ -48,9 +122,6 @@ $(document).ready(function() {
     isTablet =  window.matchMedia(media_query_tablet).matches;
     set_variables();
 
-function callback_function (){
-    alert('fgfghfghfghfgh');
-}
 
 
 
@@ -108,231 +179,91 @@ function callback_function (){
 
 
 
-
-
-
-
-    var tempo_cap=99000;
-
-
-
     // ----- to go to slide 1 -------------------------------------------------------------------------------------------------------------------------------
 
     $("#sec01").on("click",function(e) {
         e.preventDefault();
-        currentslide = 1;
-
-        console.log("slide" + currentslide + " ->" + playedSlides[currentslide - 1]);
-
-        if (playedSlides[0] === 0) {
-            playedSlides[0] = 1;
-            // nothing happen...
-        } else {
-
-
-            var tl000 = new TimelineMax();
-
-
-            tl000.to('#background', 3,        {top: '0',  ease: Sine. easeIn} , '-=3')
-
-        }
-
-
+        finalSlide = 1;
+        //
+        //console.log("slide" + finalSlide + " ->" + playedSlides[finalSlide - 1]);
+        //
+        //if (playedSlides[0] === 0) {
+        //    playedSlides[0] = 1;
+        //    // nothing happen...
+        //} else {
+        //
+        //
+        //    var tl000 = new TimelineMax();
+        //
+        //
+        //    tl000.to('#background', 3,        {top: '0',  ease: Sine. easeIn} , '-=3')
+        //
+        //}
 
 
+        tl.play();
 
     });
-
-
 
     // ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
 
-
     $("#sec02").on("click",function(e) {
         e.preventDefault();
-        currentslide=2;
+        finalSlide=2;
 
-        console.log ("slide" + currentslide + " ->" + playedSlides[currentslide-1]);
+        console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
         if (playedSlides[1]===0) {
             playedSlides[1]=1;
-
-        var tl000 = new TimelineMax();
-
-
-
-        tl000
-            .to('#header', 1,    {marginTop: '-29px',  ease: Sine. easeIn} , '+=0')
-
-            .to('#slide1-textbox', 3,    {top: '-900px',  ease: Sine. easeIn} , '-=1')
-            .to('#slide01', 3,           {top: '-900px',  ease: Sine. easeIn} , '-=3')
-            .to('#background', 3,        {top: '-10.7em',  ease: Sine. easeIn} , '-=3')
-            .fromTo($('#herolink'), 3,   {top: '0px'}, {top: '-900px'} , '-=3')
-            .to('#slide02', 4,           {marginTop: '-15em',  ease: Sine. easeInOut} , '-=6')
-
-            .to($('#bottle'), 6,           {marginTop: '16.2em',scale: '2.5',left: '28.1%',ease: Power1.easeOut } , '-=6')
-            .to($('#cap'), 6,               {marginTop: '14.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Power1.easeOut} , '-=6')
-
-            .to($('#cap'), 0.7,                  {marginTop: '7.5em', ease: Power1.easeOut} , '+=0')
-            .to($('#cap'), 1,                  {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-            .to($('#no-scent'), 0.8,             {height: '8em'} , '+=0')
-            .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
-
-
-        ;
-
-
+            tl.play();
         }
 
     });
-
-    //
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide1-textbox'), 0.5, {top: pixel01 },        {top:'-900px'}),     30000);
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide01'), 0.5, {top: pixel01 },        {top:'-900px'}),     30000);
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#herolink'), 0.5, {top:'0px'},        {top:'-900px'}),     30000);
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#slide02'), 0.5, {marginTop:'0em'},    {marginTop:'-15em'}),     30000);
-    //
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#bottle'), 0.5, {marginTop: pixel02 , scale:'1', left:'72%'  },   {marginTop:'17em', scale:'2.5', left:'28.1%' , ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#cap'), 0.5, {marginTop:'-0.2em', scale:'1', left:'74.6%', height: '3em'  },   {marginTop:'14.4em', scale:'2.5', left:'30.5%' , height: '4em', ease:  Power1.easeOut}  ),     35000, 5000);  //bottle movement
-    //
-    //
-    //controller.addTween('#marker-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'7.5em' , ease:  Power1.easeOut}  ),     35000, 45000); // opening cap...
-    //controller.addTween('#marker-tr', TweenMax.to( $('#cap'), 0.5,   {marginTop:'16.7em', left:'92%' , rotation: 35, ease:Cubic.easeInOut }  ),     35000, 65000);
-    //
-    //controller.addTween('#marker-tr', TweenMax.to( $('#background'),  0.5, {top:'-10.7em'}),     20000, 110000);
-    //controller.addTween('#marker-tr', TweenMax.to( $('#no-scent'),  0.5, {height:'8em'}),     35000, 80000);
-    //controller.addTween('#marker-tr', TweenMax.fromTo( $('#nasacort-compare'), 0.5, {right:'-35%' },   {right:'20.4%' , ease:  Power1.easeOut}  ),     35000, 120000);
-    //
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
 
     $("#sec03").on("click",function(e) {
         e.preventDefault();
-        currentslide=3;
+        finalSlide=3;
 
-        console.log ("slide" + currentslide + " ->" +  playedSlides[currentslide-1]);
+        console.log ("slide" + finalSlide + " ->" +  playedSlides[finalSlide-1]);
 
         if (playedSlides[2]===0) {
             playedSlides[2] = 1;
-
-            var tl000 = new TimelineMax();
-
-            tl000
-                .to('#background', 3, {top: '-33em', ease: Power2.easeOut}, '+=0')
-                .to('#slide02', 3, {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
-                .to('#slide03', 3, {top: '1.6em'}, '-=3')
-                .to('#compare-copy', 1, {left: '23%'}, '+=0')
-                .to('#compare-bg', 1, {top: '1.4em'}, '+=0')
-                .to('#stats', 1, {height: '30.5%'}, '+=0')
-                .eventCallback("onComplete", callback_function)
-            ;
-
-
+            tl.play();
         }
 
-
-
-
     });
-
 
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
-
     $("#sec04").on("click",function(e) {
         e.preventDefault();
-        currentslide = 4;
+        finalSlide = 4;
 
-        console.log ("slide" + currentslide + " ->" + playedSlides[currentslide-1]);
+        console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
         if (playedSlides[3]===0) {
             playedSlides[3]=1;
-
-        var tl000 = new TimelineMax();
-
-        tl000
-            .to('#background', 4, {top: '-53em', ease: Expo.easeOut}, '+=0')
-            .to('#slide03', 2, {top: '-16em', ease: Power1.easeOut}, '-=4')
-            .to('#slide04', 2, {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
-            .to('#patient-box', 3, {left: '0px', ease: Power0.easeIn}, '-=2')
-        ;
-
-    }
+            tl.play();
+        }
 
     });
-
-
-
-
 
     // ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
 
-
     $("#sec05").on("click",function(e) {
         e.preventDefault();
-        currentslide=5;
+        finalSlide=5;
 
-        console.log ("slide" + currentslide + " ->" + playedSlides[currentslide-1]);
+        console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
         if (playedSlides[4]===0) {
             playedSlides[4] = 1;
-
-
-            var tl000 = new TimelineMax();
-
-            tl000
-                .to('#background', 3, {top: '-70.5em', ease: Power1.easeOut}, '+=0')
-                .to('#slide04', 3, {top: '-16em', ease: Power1.easeOut}, '-=3')
-                .to('#slide05', 3, {top: '-13em', ease: Power1.easeOut}, '-=3')
-                .to('#yellow-spike', 3, {top: '-2em', ease: Power1.easeOut}, '-=3')
-                .to('#understand-box', 2, {left: '30%', ease: Power1.easeOut}, '+=0')
-            ;
-
+            tl.play();
         }
 
-
-        //
-        //controller.addTween('#marker10', TweenMax.to( $('#background'),              1,   {top:'-70.5em'}),   35000);
-        //controller.addTween('#marker10', TweenMax.fromTo( $('#slide04'),                 1, {top:'0em'},         {top:'-16em'}),     25000);
-        //controller.addTween('#marker10', TweenMax.fromTo( $('#slide05'),                 1, {marginTop:'15em'},  {marginTop:'0em'}), 30000);
-        //controller.addTween('#marker10', TweenMax.fromTo( $('#understand-box'),          1, {left:'-140%'},      {left:'0%'}),       50000, 20000);
-        //controller.addTween('#marker10', TweenMax.to( $('#yellow-spike'),            1,   {top:'-2em'}),     35000);
-
-
-
     });
-
-
-
-    
-    
-    
-    // -----------------------------------------------------------------------------------------------------------------------------------------------
-
-    controller.addTween('#marker11', TweenMax.to( $('#background'),              1,   {top:'-78.6em'}),   70);
-    controller.addTween('#marker11', TweenMax.to( $('#slide05'),                 1, {top:'-350px'}), 70);
-    controller.addTween('#marker11', TweenMax.to( $('#dots-container'),                 1, {height:'2000px'}), 70);
-
-
 
 
 });
@@ -342,11 +273,6 @@ $(window).bind("resize", function(){
     set_dotbox();
     set_footer_width();
     set_variables();
-
-
-    controller.triggerCheckAnim(false);
-
-
 });
 
 
@@ -354,11 +280,8 @@ $(window).bind("resize", function(){
 
 function set_variables(){
 
-
-    console.log ("  isTablet es " + media_query_tablet + " ---> "  + isTablet);
-
     if ( isTablet) {
-        console.log ("  isTablet  !!! ");
+       // console.log ("  isTablet  !!! ");
         pixel01= "139px";
         pixel02='2.8em';
 
@@ -377,16 +300,8 @@ function set_variables(){
 
 
 function set_footer_width(){
-
-
     $('#background .footer').css("width",$(window).width());
-
-    console.log( $(window).width());
-    console.log( $('#background').innerWidth());
-
-
     $('#background .footer').css("left", -(($(window).width() - $('#background').innerWidth())/2) + "px");
-
 }
 
 
@@ -419,13 +334,6 @@ $(window).scroll(function() {
 
     if($(window).scrollTop() + $(window).height() == $(document).height()) {
         console.log("bottom!");
-
-
-        // $("body").css("padding-bottom","1000px");
-
-        //  $("#background").css("top","-100px");
-
-
     }
 
 
@@ -438,19 +346,6 @@ $("#dots-container .dotbox .dot").on("click",function(e){
     e.preventDefault();
     $("#dots-container .dotbox .dot").removeClass("dot-on");
     $(this).addClass("dot-on");
-
-
-//    var lugar =  "#" + $(this).data("section");
-//    var time = $(this).data("time") || 5000;
-
-    //  alert (time);
-
-    //$('html, body').animate({
-    //    scrollTop: $(lugar).offset().top
-    //}, time);
-    //
-
-
 });
 
 // ---------------------------------------------------------------------------------------
