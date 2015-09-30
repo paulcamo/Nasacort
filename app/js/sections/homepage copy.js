@@ -213,10 +213,32 @@ $(document).ready(function() {
 
     // ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
 
-    controller.addTween('#marker9-tr', TweenMax.to( $('#background'),            1,   {top:'-53em'}),     30000);
-    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#slide03'),               1, {top:'1.5em'},       {top:'-16em'}),     30000);
-    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#slide04'),               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
-    controller.addTween('#marker9-tr', TweenMax.fromTo( $('#patient-box'),           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
+
+    $("#sec03").on("click",function(e) {
+        e.preventDefault();
+
+        var tl000 = new TimelineMax();
+
+        tl000
+
+   .to('#background',   1,  {top:'-53em'})
+   .to('#slide03',      1,  {top:'-16em'})
+   .to('#slide04',      1,  {marginTop:'0em'})
+   .to('#patient-box',  3,  {right:'0%'})
+   ;
+
+
+    });
+
+
+    //
+    //.to('#slide03',               1, {top:'1.5em'},       {top:'-16em'}),     30000);
+    //.to('#slide04',               1, {marginTop:'17em'},  {marginTop:'0em'}), 25000);
+    //.to('#patient-box',           1, {right:'-180%'},     {right:'0%'}),      30000, 25000);
+    //
+    //
+
+
 
     // ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
 
