@@ -179,27 +179,28 @@ function setInterstitialPopup() {
 
 function setSuperscripts()
 {
+    var vtop = 0;
+    if(isMobile)
+    {
+        vtop = 400;
+    }else
+    {
+        vtop = 300;
+    }
     $("sup").each(function(){
         if(parseInt($(this).text()) >= 0)
         {
             $(this).css("cursor","pointer");
             $(this).on("click",function(){
-                $(this).closest(".footnote").hide();
-                console.log($(this).closest(".footnote"));
+                $('html, body').animate({
+                    scrollTop: $(this).closest(".content").find(".footnote").offset().top - vtop
+                  }, 1000);
+                  $(this).closest(".content").find(".footnote").click();
             });
         }
     });
 }
 
-//$("sup").on("click",function(){
- /* $('html, body').animate({
-    scrollTop: $("#references").offset().top
-  }, 1000);*/
- //$(this).closest("div").find(".footnote").hide();
- //$('html, body').animate({
-  //scrollTop: sup.closest(".footnote").offset().top
-  //}, 1000);
-//});
 
 // --------------------------------------------------------------------------------------------------------------
 
