@@ -36,7 +36,7 @@
       padding-right: 20px;
       font-size: 10px;
       line-height: 15px;
-      margin-top: 18px;
+      margin-top: 7px;
     }// End General class
     .inner-ctas{
       width: 70%;
@@ -110,14 +110,7 @@
         margin: auto;
         padding-top: 15px;
         max-width: 252px;
-      }
-      #carousel-mobile-1{
-        h1{
-          color:$color-white;
-          @media screen and(min-width:400px) and (max-width: 768px) {
-            color:$color-dark-blue;
-          }
-        }
+        font-family: $font-proxima-nova-regular;
       }
       img.product{
         position: absolute;
@@ -225,7 +218,7 @@
         background: url("../img/mobile/homepage/family-review.png") no-repeat right 33px;
         padding-left:20px;
         padding-right:20px;
-        padding-top:34px;
+        padding-top:40px;
         background-size:177px auto;
         display: block;
         height: 260px;
@@ -251,8 +244,8 @@
       margin-bottom:10px;
       .inner-discover{
         padding-top: 17px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
         .head-inner{
           width: 80%;
           margin: auto;
