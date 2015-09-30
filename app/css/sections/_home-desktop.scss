@@ -615,7 +615,7 @@
 
   #slide03 {
     position: fixed;
-    top: 20em; //81px
+    top: 81px;
     height: 15.7em;
     z-index: 112;
     margin: auto;
@@ -913,8 +913,9 @@
     height: 9em;
     top: 5.6em;
     position: absolute;
-    left: 0;
-    right: -180%;
+    right: 0;
+    left: 101%;
+    @include ha;
   }
 
 
@@ -1030,7 +1031,7 @@
 
   #slide05 {
     position: fixed;
-    top: 81px;
+    top: 15em;
     height: 91%;
     z-index: 100;
     max-width: #{homepage-max-width()};
@@ -1055,10 +1056,10 @@
      top: 0.1em;
      width: 40%;
      text-align: left;
-     left: 0;
+     left: -35%;
      right: 0;
-     margin: auto;
-
+     //margin: auto;
+    @include ha;
 
 
      h2 {
