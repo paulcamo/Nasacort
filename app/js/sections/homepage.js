@@ -18,7 +18,8 @@ document.body.appendChild(css);
 var finalSlide=1;
 var currentSlide=0;
 var playedSlides = [1,0,0,0,0];
-
+var lastScrollTop=0;
+var scrollflag=0;
 
 var pixel01=0;
 
@@ -123,7 +124,7 @@ $(document).ready(function() {
     set_variables();
 
 
-
+    scrollflag=0;
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
@@ -440,4 +441,69 @@ function desktopStickyHeader(y){
     }
 
 }
+
+//
+//
+//
+//$(window).scroll(function(event){
+//    var st = $(this).scrollTop();
+//    if (st > lastScrollTop){
+//        // downscroll code
+//        console.log ("arriba");
+//
+//
+//        alfa();
+//
+//    } else {
+//        // upscroll code
+//        console.log ("abajo");
+//
+//        alfa();
+//
+//    }
+//    lastScrollTop = st;
+//
+//    $( this ).off( event );
+//
+//
+//
+//});
+
+
+var fired=0;
+
+$(window).bind("scroll", function(){
+    if(fired == 0){
+        var self = this, $this = $(self);
+        if ($this.data('scrollTimeout')) {
+            clearTimeout($this.data('scrollTimeout'));
+        }
+        $this.data('scrollTimeout', setTimeout(alfa,500,self));
+        fired = 1;
+    }
+});
+
+
+
+
+
+function alfa() {
+
+
+
+    tl.play();
+
+
+
+    console.log ("dfgdfgdg" + scrollflag);
+
+if (scrollflag===0) {
+    scrollflag=1;
+    tl.play();
+}
+
+
+}
+
+
 
