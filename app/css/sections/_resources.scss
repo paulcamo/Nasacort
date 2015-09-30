@@ -31,7 +31,7 @@
         padding-right:#{fluid-percentage($site-max-width, 220)};
         h2{
             margin-bottom:29px;
-            margin-top:47px;
+            margin-top:9px;
             .icon{
                 background:url("../img/desktop/resources/icon-videos.png") no-repeat;
                 width:53px;
@@ -159,11 +159,15 @@
                     color:#5a5e5f;
                     line-height:22px;
                     margin-bottom:11px;
+                    width:99%;
                 }
             }
             &.last{
                 margin-right:0;
                 padding-right:0.5%;
+                p{
+                    width:100%;
+                }
             }
             &.highlighted{
                 //outline: 10px solid #eb5d2b;
@@ -231,7 +235,7 @@
                     font-family:Arial, Helvetica, sans-serif;  
                     font-size:22px;
                     color:$color-blue;
-                    width:auto;
+                    width:92%;
                     margin-top:0;
                     margin-bottom:4px;
                     font-weight:bold;
