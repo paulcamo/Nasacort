@@ -29,6 +29,7 @@ $(document).ready(function() {
     
     addFancyVideo();
 
+    setSuperscripts();
 
 
    // ojo: los botones del slider reaccioan a esto.....
@@ -176,11 +177,29 @@ function setInterstitialPopup() {
 
 // --------------------------------------------------------------------------------------------------------------
 
-$("sup").on("click",function(){
-  $('html, body').animate({
+function setSuperscripts()
+{
+    $("sup").each(function(){
+        if(parseInt($(this).text()) >= 0)
+        {
+            $(this).css("cursor","pointer");
+            $(this).on("click",function(){
+                $(this).closest(".footnote").hide();
+                console.log($(this).closest(".footnote"));
+            });
+        }
+    });
+}
+
+//$("sup").on("click",function(){
+ /* $('html, body').animate({
     scrollTop: $("#references").offset().top
-  }, 1000);
-});
+  }, 1000);*/
+ //$(this).closest("div").find(".footnote").hide();
+ //$('html, body').animate({
+  //scrollTop: sup.closest(".footnote").offset().top
+  //}, 1000);
+//});
 
 // --------------------------------------------------------------------------------------------------------------
 
