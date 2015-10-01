@@ -20,6 +20,8 @@ var currentSlide=0;
 var playedSlides = [1,0,0,0,0];
 var lastScrollTop=0;
 var scrollflag=0;
+var timer = null;
+var scrollSlideClick=1;
 
 var pixel01=0;
 
@@ -43,6 +45,8 @@ function callback_function (){
     if (finalSlide==currentSlide) {
         tl.pause();
         $(".dotcover").hide();
+        scrollflag=0;
+        scrollSlideClick=finalSlide;
     }else {
         console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
         $("#dots-container .dotbox .dot").removeClass("dot-on");
@@ -111,9 +115,9 @@ tl  // -------------------------------------------------------------------------
 
     // --- footer ---------------------------------------------------------------
 
-    .to('#background', 1,       {top:'-78.6em'})
-    .to('#slide05', 1,          {top:'-350px'})
-    .to('#dots-container', 1,   {height:'2000px'})
+    .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
+    .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
+    .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
 
 ;  // --- end ---------------------------------------------------------------
 
@@ -549,3 +553,55 @@ function desktopStickyHeader(y){
 //
 //
 
+var xx=0;
+
+$(document).mousewheel(function(evt){
+
+//console.log(evt.deltaY); // print the distance you scrolled
+
+if (scrollflag===0) {
+    scrollflag=1;
+    setTimeout(alfa(evt.deltaY) ,500);
+}
+
+
+
+});
+
+
+
+function alfa(v) {
+
+
+    var valor=0;
+
+
+    if (v>=0) {
+        console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
+
+        //
+        //if (currentSlide===0) valor=1;
+        //if (currentSlide===2) valor=3;
+
+    //    if (scrollSlideClick<5) scrollSlideClick++;
+
+
+
+if (scrollSlideClick<5) {
+    $("#dots-container .dotbox .dot").eq(scrollSlideClick).click();
+
+} else {
+// lets move the footer
+
+    tl.play();
+
+}
+
+
+
+
+
+    } else {
+        console.log("sube -> " + v + " currsldie" + currentSlide);
+    }
+}
