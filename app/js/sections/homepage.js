@@ -22,6 +22,8 @@ var lastScrollTop=0;
 var scrollflag=0;
 var timer = null;
 var scrollSlideClick=1;
+var cajita=0;
+
 
 var pixel01=0;
 
@@ -37,10 +39,10 @@ function callback_function (){
     playedSlides[currentSlide-1]=1;
 
 
-    console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
-    console.log ( playedSlides);
+   // console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
+   // console.log ( playedSlides);
 
-
+    $("#numero").text(currentSlide);
 
     if (finalSlide==currentSlide) {
         tl.pause();
@@ -48,7 +50,7 @@ function callback_function (){
         scrollflag=0;
         scrollSlideClick=finalSlide;
     }else {
-        console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
+      //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
         $("#dots-container .dotbox .dot").removeClass("dot-on");
         $("#dots-container .dotbox .dot").eq(currentSlide).addClass("dot-on");
     }
@@ -148,6 +150,10 @@ $(document).ready(function() {
 
     scrollflag=0;
 
+$("#numero").text(currentSlide);
+
+
+
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
 
     var tl1 = new TimelineMax({repeat:-1});
@@ -207,6 +213,7 @@ $(document).ready(function() {
     $("#sec01").on("click",function(e) {
         e.preventDefault();
         finalSlide = 1;
+        $("#numero").text(currentSlide);
         //
         //console.log("slide" + finalSlide + " ->" + playedSlides[finalSlide - 1]);
         //
@@ -237,13 +244,13 @@ $(document).ready(function() {
     $("#sec02").on("click",function(e) {
         e.preventDefault();
         finalSlide=2;
+        $("#numero").text(currentSlide);
 
         console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
         if (playedSlides[1]===0) {
             playedSlides[1]=1;
             $(".dotcover").show();
-          //  tl.seek('cta1');
             tl.play();
         } else {
             tl.pause();
@@ -257,8 +264,9 @@ $(document).ready(function() {
     $("#sec03").on("click",function(e) {
         e.preventDefault();
         finalSlide=3;
+        $("#numero").text(currentSlide);
 
-        console.log ("slide" + finalSlide + " ->" +  playedSlides[finalSlide-1]);
+       // console.log ("slide" + finalSlide + " ->" +  playedSlides[finalSlide-1]);
 
         if (playedSlides[2]===0) {
             playedSlides[2] = 1;
@@ -277,6 +285,7 @@ $(document).ready(function() {
     $("#sec04").on("click",function(e) {
         e.preventDefault();
         finalSlide = 4;
+        $("#numero").text(currentSlide);
 
         console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
@@ -297,8 +306,9 @@ $(document).ready(function() {
     $("#sec05").on("click",function(e) {
         e.preventDefault();
         finalSlide=5;
+        $("#numero").text(currentSlide);
 
-        console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
+        //console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
 
         if (playedSlides[4]===0) {
             playedSlides[4] = 1;
@@ -361,10 +371,15 @@ function set_dotbox(){
         x="0px";
     }
 
-    y = $(window).height() - $("#header").innerHeight();
 
-    $("#dots-container .dotbox").css("right", x);
-    $("#dots-container").css("height", y);
+   // console.log("es en  " + scrollSlideClick) ;
+
+    if (scrollSlideClick!=5) {  // if we are not in the footer...
+        y = $(window).height() - $("#header").innerHeight();
+
+        $("#dots-container .dotbox").css("right", x);
+        $("#dots-container").css("height", y);
+    }
 
 }
 
@@ -379,9 +394,9 @@ $(window).scroll(function() {
     //});
 
 
-    if($(window).scrollTop() + $(window).height() == $(document).height()) {
-        console.log("bottom!");
-    }
+    //if($(window).scrollTop() + $(window).height() == $(document).height()) {
+    //    console.log("bottom!");
+    //}
 
 
 
@@ -488,96 +503,109 @@ function desktopStickyHeader(y){
 
 }
 
-//
-//
-//
-//$(window).scroll(function(event){
-//    var st = $(this).scrollTop();
-//    if (st > lastScrollTop){
-//        // downscroll code
-//        console.log ("arriba");
-//
-//
-//        alfa();
-//
-//    } else {
-//        // upscroll code
-//        console.log ("abajo");
-//
-//        alfa();
-//
-//    }
-//    lastScrollTop = st;
-//
-//    $( this ).off( event );
-//
-//
-//
-//});
-
-
-//var fired=0;
-//
-//$(window).bind("scroll", function(){
-//    if(fired === 0){
-//        var self = this, $this = $(self);
-//        if ($this.data('scrollTimeout')) {
-//            clearTimeout($this.data('scrollTimeout'));
-//        }
-//        $this.data('scrollTimeout', setTimeout(alfa,500,self));
-//        fired = 1;
-//    }
-//});
-
-
-
-
-//
-//function alfa() {
-//
-//
-//
-//    tl.play();
-//
-//
-//
-//    console.log ("entro a alfa -> " + scrollflag);
-//
-//if (scrollflag===0) {
-//    scrollflag=1;
-//    tl.play();
-//}
-//
-//
-//}
-//
-//
-
-var xx=0;
 
 $(document).mousewheel(function(evt){
-
-//console.log(evt.deltaY); // print the distance you scrolled
-
-if (scrollflag===0) {
-    scrollflag=1;
-    setTimeout(alfa(evt.deltaY) ,500);
-}
-
-
-
+    if (scrollflag===0) {
+        scrollflag=1;
+        setTimeout(alfa(evt.deltaY) ,500);
+    }
 });
+
 
 
 
 function alfa(v) {
 
+    $("#numero").text(cajita);
+
+    console.log(" entra con  " + currentSlide);
 
     var valor=0;
 
 
     if (v>=0) {
-        console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
+
+
+
+        if(cajita<=5) {
+            cajita++;
+          //  $("#dots-container .dotbox .dot").eq(cajita).click();
+        }
+
+
+
+
+
+    } else {
+
+
+
+
+        if(cajita>0) {
+            cajita--;
+            $("#dots-container .dotbox .dot").eq(cajita).click();
+        }
+
+        $.doTimeout( 'scroll', 700, function(){
+            // do something computationally expensive
+            console.log("el falg a cero");
+            scrollflag=0;
+        });
+
+
+
+        //
+        //var y=finalSlide-=2;
+        //// currentSlide-=2;
+        //console.log("hago click en  -> " + (y));
+        //$("#dots-container .dotbox .dot").eq(y).click();
+        //
+        //$.doTimeout( 'scroll', 700, function(){
+        //    // do something computationally expensive
+        //    console.log("el falg a cero");
+        //    scrollflag=0;
+        //});
+
+
+
+
+
+
+
+
+
+    }
+
+
+    console.log(" afuera " + currentSlide);
+
+
+}
+
+
+
+
+function alfaaaa(v) {
+
+    $("#numero").text(currentSlide);
+    var valor=1;
+
+
+    if (v>=0) {
+ //       console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
+
+
+ if (currentSlide==0) {
+     valor=1;
+ } else {
+     valor=currentSlide;
+ }
+
+if(currentSlide<=5) {
+    $("#dots-container .dotbox .dot").eq(valor).click();
+}
+
+
 
         //
         //if (currentSlide===0) valor=1;
@@ -587,21 +615,45 @@ function alfa(v) {
 
 
 
-if (scrollSlideClick<5) {
-    $("#dots-container .dotbox .dot").eq(scrollSlideClick).click();
-
-} else {
-// lets move the footer
-
-    tl.play();
-
-}
+//if (scrollSlideClick<5) {
+//    $("#dots-container .dotbox .dot").eq(scrollSlideClick).click();
+//
+//} else {
+//// lets move the footer
+//
+//    //tl.play();
+//
+//
+//
+//
+//}
 
 
 
 
 
     } else {
-        console.log("sube -> " + v + " currsldie" + currentSlide);
+
+
+
+        console.log("el current slide es  -> " + currentSlide);
+
+
+
+
+var y=finalSlide-=2;
+       // currentSlide-=2;
+        console.log("hago click en  -> " + (y));
+        $("#dots-container .dotbox .dot").eq(y).click();
+
+        $.doTimeout( 'scroll', 700, function(){
+            // do something computationally expensive
+            console.log("el falg a cero");
+            scrollflag=0;
+        });
+
+
+
+
     }
 }

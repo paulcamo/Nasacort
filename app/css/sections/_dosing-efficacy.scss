@@ -14,8 +14,26 @@ $space-mobile-copy: 4.6875%;
       padding-left: $space;
       padding-right: $space;
   }
-  padding-left: #{fluid-percentage($site-max-width, 213)};
-  padding-right: #{fluid-percentage($site-max-width, 213)};
+ .inner-dosing{
+  padding-left:211px;
+  padding-right:200px;
+  @include breakpoint('desktop'){
+    max-width: 920px!important;
+    padding-left:0;
+    padding-right:0;
+  }
+  @include breakpoint('tablet'){
+    max-width: 769px!important;
+    padding-left:40px;
+    padding-right:40px;
+  }
+  @include breakpoint('mobile'){
+    max-width: 100% !important;
+    min-height: 27px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+ }
   
   .use-directed{
     margin-bottom: 5px;
@@ -24,6 +42,15 @@ $space-mobile-copy: 4.6875%;
     position:relative;
     right:-#{fluid-percentage($site-max-width, 235)};
     font-size:15px;
+    @include breakpoint('desktop'){
+      right: 0;
+    }
+    @include breakpoint('tablet'){
+      right: 0;
+    }
+    @include breakpoint('mobile'){
+      right: 0;
+    }
   }
   a{
     color:$color-cyan-text;
