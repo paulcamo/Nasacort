@@ -312,6 +312,22 @@ $space-mobile-copy: 4.6875%;
                 width:93.75%;
             }
         }
+        .superscript-2{
+            .button{
+                width:10px;
+                left:19.74%;
+                @include breakpoint('mobile') {
+                    left:32.77%;
+                }
+            }
+             .button-2{
+                width:10px;
+                left:52.3%;
+                @include breakpoint('mobile') {
+                    left:82%;
+                }
+            }
+        }
         img{
             margin-bottom:30px;
         }

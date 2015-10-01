@@ -79,4 +79,13 @@ function moveSuperScriptGraphic()
         graphicHeight = ($("#chart-1 img").outerHeight() * 54.59 / 100) + 9;
     }
     $("#chart-1 .graphic-superscript").css("top", graphicHeight + "px");
+    
+    if(isMobile)
+    {
+        graphicHeight = ($("#chart-1 img").outerHeight() * 39.5 / 100) + 9;
+        $("#chart-1 .superscript-2").css("top", graphicHeight + "px");
+    }else
+    {
+        $("#chart-1 .superscript-2").css("top", "18px");
+    }
 }
