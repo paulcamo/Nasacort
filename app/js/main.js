@@ -185,7 +185,7 @@ function setSuperscripts()
         vtop = 400;
     }else
     {
-        vtop = 300;
+        vtop = 500;
     }
     $("sup").each(function(){
         if(parseInt($(this).text()) >= 0)

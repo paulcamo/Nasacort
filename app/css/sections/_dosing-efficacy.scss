@@ -295,6 +295,23 @@ $space-mobile-copy: 4.6875%;
         .footnote{
             margin-top:-69px;
         }
+        .graphic-superscript{
+            max-width: 1003px;
+            margin-left:36px;
+            width:100%;
+            .button{
+                width:20px;
+                left:92.92%;
+                @include breakpoint('mobile') {
+                    left:73.57%;
+                }
+            }
+             @include breakpoint('mobile') {
+                margin-left:9px;
+                max-width: 601px;
+                width:93.75%;
+            }
+        }
         img{
             margin-bottom:30px;
         }
@@ -323,7 +340,7 @@ $space-mobile-copy: 4.6875%;
             margin-bottom:28px;
         }
         .footnote{
-            margin-top:-85px;
+            margin-top:285px;
         }
         img{
             margin-left:152px;

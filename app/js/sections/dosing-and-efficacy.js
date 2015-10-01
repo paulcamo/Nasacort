@@ -68,4 +68,15 @@ function moveSuperScriptGraphic()
         graphicHeight = ($(".img-chart").outerHeight() * 39.62 / 100) + 7;
     }
     $(".img-chart .graphic-superscript").css("top", graphicHeight + "px");
+    
+    //Second
+    
+    if(isMobile)
+    {
+        graphicHeight = ($("#chart-1 img").outerHeight() * 20.97 / 100) + 10;
+    }else
+    {
+        graphicHeight = ($("#chart-1 img").outerHeight() * 54.59 / 100) + 9;
+    }
+    $("#chart-1 .graphic-superscript").css("top", graphicHeight + "px");
 }
