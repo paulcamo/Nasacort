@@ -31,21 +31,35 @@ function callback_function (){
 
     currentSlide++;
 
+
+    playedSlides[currentSlide-1]=1;
+
+
+    console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
+    console.log ( playedSlides);
+
+
+
     if (finalSlide==currentSlide) {
         tl.pause();
+        $(".dotcover").hide();
     }else {
-        //console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
+        console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
         $("#dots-container .dotbox .dot").removeClass("dot-on");
         $("#dots-container .dotbox .dot").eq(currentSlide).addClass("dot-on");
     }
-    
+
+
+
+
+
 }
 
 
 
 tl  // ----------------------------------------------------------------------------
 
-
+    .addLabel('cta1')
     .add(callback_function)
 
     // --- slide 02 ---------------------------------------------------------------
@@ -62,6 +76,7 @@ tl  // -------------------------------------------------------------------------
     .to($('#cap'), 1,                    {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
     .to($('#no-scent'), 0.8,             {height: '8em'} , '+=0')
     .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
+    .addLabel('cta2')
     .add(callback_function)
 
     // --- slide 03 ---------------------------------------------------------------
@@ -72,6 +87,7 @@ tl  // -------------------------------------------------------------------------
     .to('#compare-copy', 1,  {left: '23%'}, '+=0')
     .to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
     .to('#stats', 1,         {height: '30.5%'}, '+=0')
+    .addLabel('cta3')
     .add(callback_function)
 
     // --- slide 04 ---------------------------------------------------------------
@@ -80,6 +96,7 @@ tl  // -------------------------------------------------------------------------
     .to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
     .to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
     .to('#patient-box', 3,   {left: '0px', ease: Power0.easeIn}, '-=1')
+    .addLabel('cta4')
     .add(callback_function)
 
     // --- slide 05 ---------------------------------------------------------------
@@ -89,6 +106,7 @@ tl  // -------------------------------------------------------------------------
     .to('#slide05', 3,           {top: '-13em', ease: Power1.easeOut}, '-=3')
     .to('#yellow-spike', 3,      {top: '-2em', ease: Power1.easeOut}, '-=3')
     .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
+    .addLabel('cta5')
     .add(callback_function)
 
     // --- footer ---------------------------------------------------------------
@@ -202,7 +220,11 @@ $(document).ready(function() {
         //}
 
 
-        tl.play();
+        tl.pause();
+        tl.seek('cta1');
+
+
+
 
     });
 
@@ -216,7 +238,12 @@ $(document).ready(function() {
 
         if (playedSlides[1]===0) {
             playedSlides[1]=1;
+            $(".dotcover").show();
+          //  tl.seek('cta1');
             tl.play();
+        } else {
+            tl.pause();
+            tl.seek('cta2');
         }
 
     });
@@ -231,7 +258,12 @@ $(document).ready(function() {
 
         if (playedSlides[2]===0) {
             playedSlides[2] = 1;
+            $(".dotcover").show();
+           // tl.seek('cta2');
             tl.play();
+        } else {
+            tl.pause();
+            tl.seek('cta3');
         }
 
     });
@@ -246,7 +278,12 @@ $(document).ready(function() {
 
         if (playedSlides[3]===0) {
             playedSlides[3]=1;
+            $(".dotcover").show();
+           // tl.seek('cta3');
             tl.play();
+        }else {
+            tl.pause();
+            tl.seek('cta4');
         }
 
     });
@@ -261,7 +298,12 @@ $(document).ready(function() {
 
         if (playedSlides[4]===0) {
             playedSlides[4] = 1;
+            $(".dotcover").show();
+           // tl.seek('cta4');
             tl.play();
+        } else {
+            tl.pause();
+            tl.seek('cta5');
         }
 
     });
@@ -470,40 +512,40 @@ function desktopStickyHeader(y){
 //});
 
 
-var fired=0;
-
-$(window).bind("scroll", function(){
-    if(fired == 0){
-        var self = this, $this = $(self);
-        if ($this.data('scrollTimeout')) {
-            clearTimeout($this.data('scrollTimeout'));
-        }
-        $this.data('scrollTimeout', setTimeout(alfa,500,self));
-        fired = 1;
-    }
-});
-
-
+//var fired=0;
+//
+//$(window).bind("scroll", function(){
+//    if(fired === 0){
+//        var self = this, $this = $(self);
+//        if ($this.data('scrollTimeout')) {
+//            clearTimeout($this.data('scrollTimeout'));
+//        }
+//        $this.data('scrollTimeout', setTimeout(alfa,500,self));
+//        fired = 1;
+//    }
+//});
 
 
 
-function alfa() {
 
-
-
-    tl.play();
-
-
-
-    console.log ("dfgdfgdg" + scrollflag);
-
-if (scrollflag===0) {
-    scrollflag=1;
-    tl.play();
-}
-
-
-}
-
-
+//
+//function alfa() {
+//
+//
+//
+//    tl.play();
+//
+//
+//
+//    console.log ("entro a alfa -> " + scrollflag);
+//
+//if (scrollflag===0) {
+//    scrollflag=1;
+//    tl.play();
+//}
+//
+//
+//}
+//
+//
 

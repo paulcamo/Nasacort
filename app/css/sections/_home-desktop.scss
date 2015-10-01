@@ -218,7 +218,7 @@
 
 
 
-    .dotbox {
+    .dotbox, .dotcover {
       background-color: #fff;
       border-radius: 8px 0 0 8px;
       display: block;
@@ -240,12 +240,24 @@
         display: block;
         margin: 6px auto;
         cursor: pointer;
+
+         &:hover {
+           background: #fff url(../img/desktop/homepage/bullet-hover.jpg) no-repeat;
+         }
+
       }
 
       .dot-on {
         background: #fff url(../img/desktop/homepage/bullet-on.jpg) no-repeat;
       }
 
+    }
+
+    .dotcover {
+      background: none;
+      z-index: 10;
+      right: 33px;
+      display: none;
     }
 
   }
@@ -617,7 +629,7 @@
     position: fixed;
     top: 81px;
     height: 15.7em;
-    z-index: 112;
+    z-index: 121;
     margin: auto;
     left: 0;
     right: 0;
