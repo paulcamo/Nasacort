@@ -4,11 +4,13 @@ var mobileBreakPoint = 768;
 
 $(document).ready(function(){
     changeImageSrc();
+    moveSuperScriptGraphic();
 });
 
 $(window).bind("resize", function(){
     //Adjusts image when browser resized
     changeImageSrc();
+    moveSuperScriptGraphic();
 });
 
 function changeImageSrc()
@@ -53,4 +55,17 @@ function changeImageSrc()
          //newPath = $(".img-womn").attr("src").replace("mobile", "desktop");
          //$(".img-womn").attr("src", newPath);
      }
+}
+
+function moveSuperScriptGraphic()
+{
+    var graphicHeight = 0;
+    if(isMobile)
+    {
+        graphicHeight = ($(".img-chart").outerHeight() * 37.22 / 100) + 7;
+    }else
+    {
+        graphicHeight = ($(".img-chart").outerHeight() * 39.62 / 100) + 7;
+    }
+    $(".img-chart .graphic-superscript").css("top", graphicHeight + "px");
 }

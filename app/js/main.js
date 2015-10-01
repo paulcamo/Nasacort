@@ -191,13 +191,32 @@ function setSuperscripts()
         if(parseInt($(this).text()) >= 0)
         {
             $(this).css("cursor","pointer");
+            var footnote = $(this).closest(".content").find(".footnote");
+            if(!footnote.length)
+            {
+               footnote = $(this).closest(".ncontainer").find(".footnote"); 
+            }
             $(this).on("click",function(){
                 $('html, body').animate({
-                    scrollTop: $(this).closest(".content").find(".footnote").offset().top - vtop
+                    scrollTop: footnote.offset().top - vtop
                   }, 1000);
-                  $(this).closest(".content").find(".footnote").click();
+                  footnote.click();
             });
         }
+    });
+    
+    $(".graphic-superscript .button").each(function(){
+            var footnote = $(this).closest(".content").find(".footnote");
+            if(!footnote.length)
+            {
+               footnote = $(this).closest(".ncontainer").find(".footnote"); 
+            }
+            $(this).on("click",function(){
+                $('html, body').animate({
+                    scrollTop: footnote.offset().top - vtop
+                  }, 1000);
+                  footnote.click();
+            });
     });
 }
 
