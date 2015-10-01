@@ -1,7 +1,13 @@
 .resources-section {
-
+    .color-bann{
+      background-color:$color-light-blue;  
+    }
+    .inner-content{
+        width:100%;
+        padding-left:#{fluid-percentage($site-max-width, 220)};
+        padding-right:#{fluid-percentage($site-max-width, 220)}; 
+    }
     .banner{
-        background-color:$color-light-blue;
         min-height:170px;
         width:100%;
         padding-left:#{fluid-percentage($site-max-width, 220)};
