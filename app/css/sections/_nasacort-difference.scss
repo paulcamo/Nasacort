@@ -134,7 +134,10 @@
   
   .treatments{
       .footnote{
-          margin-top:-90px;
+          margin-top:207px;
+          @include breakpoint('mobile'){
+          margin-top: 0;
+        }
       }
   }
 
@@ -164,7 +167,10 @@
       }
     }
     .footnote{
-        margin-top:-167px;
+        margin-top:-128px;
+          @include breakpoint('mobile'){
+          margin-top: 0;
+        }
     }
   }
 
