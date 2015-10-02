@@ -595,7 +595,7 @@ function alfaaaa(v) {
  //       console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
 
 
- if (currentSlide==0) {
+ if (currentSlide===0) {
      valor=1;
  } else {
      valor=currentSlide;
