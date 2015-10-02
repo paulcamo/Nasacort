@@ -22,7 +22,7 @@ var lastScrollTop=0;
 var scrollflag=0;
 var timer = null;
 var scrollSlideClick=1;
-var cajita=1;
+var actualSlide=1;
 
 
 var pixel01=0;
@@ -257,7 +257,7 @@ $(document).ready(function() {
     //        tl.seek('cta2');
     //    }
     //
-    //    cajita=2;
+    //    actualSlide=2;
     //
     //});
     //
@@ -532,20 +532,20 @@ $(document).mousewheel(function(evt){
 
 function alfa(v) {
 
-   //$("#numero").text(cajita + " - " + finalSlide);
+   //$("#numero").text(actualSlide + " - " + finalSlide);
 
 
     var valor=0;
 
 
     if (v>=0) {
-        if(cajita<6) {
-            finalSlide= cajita+=1;
+        if(actualSlide<6) {
+            finalSlide= actualSlide+=1;
 
-            $("#dots-container .dotbox .dot").eq(cajita-1).click();
+            $("#dots-container .dotbox .dot").eq(actualSlide-1).click();
 
 
-            if(cajita==6) {
+            if(actualSlide==6) {
 
                  tl.seek('cta5');
                 timer=  window.setTimeout( zeroflag ,1000);
@@ -555,7 +555,7 @@ function alfa(v) {
 
         }
 
-        if(cajita==6) {
+        if(actualSlide==6) {
             timer=  window.setTimeout( zeroflag ,1000);
         }
 
@@ -563,20 +563,20 @@ function alfa(v) {
     } else {
 
 
-        if(cajita>=6) {
+        if(actualSlide>=6) {
             tl.reverse();
-            cajita=5;
+            actualSlide=5;
             finalSlide=5;
 
         } else {
 
 
-            if (cajita > 1) {
-                finalSlide = cajita -= 1;
-                $("#dots-container .dotbox .dot").eq(cajita-=1).click();
+            if (actualSlide > 1) {
+                finalSlide = actualSlide -= 1;
+                $("#dots-container .dotbox .dot").eq(actualSlide-=1).click();
             }
 
-            if(cajita==1) {
+            if(actualSlide==1) {
                 timer=  window.setTimeout( zeroflag ,1000);
             }
 
@@ -706,27 +706,27 @@ function callback_function (){
 
 
     //console.log ("haciendo callback");
-    //console.log ("el final es " + finalSlide + "  voy ->" + cajita);
+    //console.log ("el final es " + finalSlide + "  voy ->" + actualSlide);
     // console.log ( playedSlides);
 
-   // $("#numero").text(cajita + " - " + finalSlide);
+   // $("#numero").text(actualSlide + " - " + finalSlide);
 
-    if (finalSlide==cajita) {
+    if (finalSlide==actualSlide) {
         tl.pause();
         $(".dotcover").hide();
-        playedSlides[cajita]=1;
+        playedSlides[actualSlide]=1;
         scrollflag=0;
       //  scrollSlideClick=finalSlide;
     }else {
         //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
 
-        if (finalSlide>cajita) cajita++;
-        playedSlides[cajita]=1;
-        // console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+        if (finalSlide>actualSlide) actualSlide++;
+        playedSlides[actualSlide]=1;
+        // console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + actualSlide);
 
 
         $("#dots-container .dotbox .dot").removeClass("dot-on");
-        $("#dots-container .dotbox .dot").eq(cajita-1).addClass("dot-on");
+        $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
     }
 
 
@@ -746,23 +746,23 @@ function animar(n) {
 
     finalSlide=n;
 
-   //  console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+   //  console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + actualSlide);
 
 
-   // $("#numero").text(cajita + " - " + finalSlide);
+   // $("#numero").text(actualSlide + " - " + finalSlide);
 
 
 
-    if (finalSlide>cajita) cajita++;
+    if (finalSlide>actualSlide) actualSlide++;
 
    // console.log ( playedSlides);
 
 
-    if (playedSlides[cajita]===0) {
-        playedSlides[cajita]=1;
+    if (playedSlides[actualSlide]===0) {
+        playedSlides[actualSlide]=1;
         $(".dotcover").show();
         $("#dots-container .dotbox .dot").removeClass("dot-on");
-        $("#dots-container .dotbox .dot").eq(cajita-1).addClass("dot-on");
+        $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
         tl.play();
     } else {
         tl.pause();
@@ -771,8 +771,8 @@ function animar(n) {
         if (n==3) tl.seek('cta3');
         if (n==4) tl.seek('cta4');
         if (n==5) tl.seek('cta5');
-        cajita=finalSlide;
-      //  $("#numero").text(cajita + " - " + finalSlide);
+        actualSlide=finalSlide;
+      //  $("#numero").text(actualSlide + " - " + finalSlide);
 
 
         window.clearTimeout(timer);
