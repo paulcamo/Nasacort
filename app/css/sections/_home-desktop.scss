@@ -445,7 +445,7 @@
   #background {
     position: fixed;
     top: 0;
-    background: url("../img/desktop/homepage/bg-02.png") no-repeat center top;
+    background: url("../img/desktop/homepage/background.jpg") no-repeat center top;
     z-index: 98;
     max-width: #{homepage-max-width()};
     background-size: contain;
@@ -640,12 +640,9 @@
     width: 100%;
     overflow: hidden;
 
-
-
-    @include breakpoint("desktop") {
+    @include breakpoint("tablet-n-desktop") {
       top: 139px;
     }
-
 
 
 
@@ -856,6 +853,14 @@
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
     margin-top: 17em;
+
+    @include breakpoint("tablet-n-desktop") {
+      margin-top: 35em;
+      top: 139px;
+    }
+
+
+
     overflow: hidden;
 
     .use-only {
@@ -1133,7 +1138,7 @@
     overflow: hidden;
 
     
-    @include breakpoint("desktop") {
+    @include breakpoint("tablet-n-desktop") {
       top: 139px;
     }
     
@@ -1275,6 +1280,12 @@
     right: 0px;
     height: 34em;
     overflow: hidden;
+
+
+    @include breakpoint("tablet-n-desktop") {
+      top: 139px;
+    }
+
 
 
     #herolink {
