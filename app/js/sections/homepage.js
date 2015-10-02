@@ -539,15 +539,38 @@ function alfa(v) {
 
 
     if (v>=0) {
-        if(cajita<=5) {
+        if(cajita<=6) {
             finalSlide= cajita+=1;
 
             $("#dots-container .dotbox .dot").eq(cajita-1).click();
+
+
+            if(cajita==6) {
+
+                 tl.seek('cta5');
+                timer=  window.setTimeout( zeroflag ,1000);
+                tl.play();
+            }
+
+
         }
     } else {
-        if(cajita>0) {
-            finalSlide= cajita-=1;
-            $("#dots-container .dotbox .dot").eq(cajita).click();
+
+
+        if(cajita==6) {
+            tl.reverse();
+            cajita=5;
+            finalSlide=5;
+
+        } else {
+
+
+            if (cajita > 0) {
+                finalSlide = cajita -= 1;
+                $("#dots-container .dotbox .dot").eq(cajita-=1).click();
+            }
+
+
         }
 
         //$.doTimeout( 'scroll', 700, function(){
