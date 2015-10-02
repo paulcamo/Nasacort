@@ -539,7 +539,7 @@ function alfa(v) {
 
 
     if (v>=0) {
-        if(cajita<=6) {
+        if(cajita<6) {
             finalSlide= cajita+=1;
 
             $("#dots-container .dotbox .dot").eq(cajita-1).click();
@@ -554,10 +554,16 @@ function alfa(v) {
 
 
         }
+
+        if(cajita==6) {
+            timer=  window.setTimeout( zeroflag ,1000);
+        }
+
+
     } else {
 
 
-        if(cajita==6) {
+        if(cajita>=6) {
             tl.reverse();
             cajita=5;
             finalSlide=5;
@@ -565,7 +571,7 @@ function alfa(v) {
         } else {
 
 
-            if (cajita > 0) {
+            if (cajita > 1) {
                 finalSlide = cajita -= 1;
                 $("#dots-container .dotbox .dot").eq(cajita-=1).click();
             }
@@ -767,7 +773,7 @@ function animar(n) {
 
 
         window.clearTimeout(timer);
-        timer=  window.setTimeout( zeroflag ,1000);
+        timer=  window.setTimeout( zeroflag ,500);
 
 
 
