@@ -150,7 +150,7 @@ $(document).ready(function() {
 
     scrollflag=0;
 
-$("#numero").text(currentSlide);
+// $("#numero").text(currentSlide);
 
 
 
@@ -532,7 +532,7 @@ $(document).mousewheel(function(evt){
 
 function alfa(v) {
 
-   $("#numero").text(cajita + " - " + finalSlide);
+   //$("#numero").text(cajita + " - " + finalSlide);
 
 
     var valor=0;
@@ -700,13 +700,12 @@ function callback_function (){
 
 
 
-  //  playedSlides[cajita]=1;
 
-    console.log ("haciendo callback");
-    console.log ("el final es " + finalSlide + "  voy ->" + cajita);
-     console.log ( playedSlides);
+    //console.log ("haciendo callback");
+    //console.log ("el final es " + finalSlide + "  voy ->" + cajita);
+    // console.log ( playedSlides);
 
-    $("#numero").text(cajita + " - " + finalSlide);
+   // $("#numero").text(cajita + " - " + finalSlide);
 
     if (finalSlide==cajita) {
         tl.pause();
@@ -719,7 +718,7 @@ function callback_function (){
 
         if (finalSlide>cajita) cajita++;
         playedSlides[cajita]=1;
-        console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+        // console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
 
 
         $("#dots-container .dotbox .dot").removeClass("dot-on");
@@ -743,16 +742,16 @@ function animar(n) {
 
     finalSlide=n;
 
-    console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+   //  console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
 
 
-    $("#numero").text(cajita + " - " + finalSlide);
+   // $("#numero").text(cajita + " - " + finalSlide);
 
 
 
     if (finalSlide>cajita) cajita++;
 
-    console.log ( playedSlides);
+   // console.log ( playedSlides);
 
 
     if (playedSlides[cajita]===0) {
@@ -769,7 +768,7 @@ function animar(n) {
         if (n==4) tl.seek('cta4');
         if (n==5) tl.seek('cta5');
         cajita=finalSlide;
-        $("#numero").text(cajita + " - " + finalSlide);
+      //  $("#numero").text(cajita + " - " + finalSlide);
 
 
         window.clearTimeout(timer);
