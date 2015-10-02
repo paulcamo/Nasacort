@@ -120,7 +120,7 @@ tl  // -------------------------------------------------------------------------
     .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
     .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
     .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
-
+    .to('#cyan-box', 0.3,   {height:'200px', ease: Power0.easeIn}, '-=1')
 ;  // --- end ---------------------------------------------------------------
 
 

@@ -37,7 +37,7 @@
     margin-top: -4px;
 
     @include breakpoint("tablet") {
-      margin-top: -3px;
+      margin-top: -5px;
     }
 
 
@@ -1413,6 +1413,12 @@
       font-weight: 100;
       letter-spacing: 0.05em;
 
+
+      @include breakpoint("tablet") {
+        letter-spacing: 0.05em;
+      }
+
+
       sup {
         position: relative;
         top: -0.4em;
@@ -1432,6 +1438,13 @@
       width: 92%;
       padding: 1.2em 0px 0px 1em;
       font-weight: 100;
+    }
+
+    .span1 {
+      @include breakpoint("tablet-n-desktop") {
+        padding: 0.7em 0px 0px 1em !important;
+        width: 75% !important;
+      }
     }
 
     .span2 {
@@ -1493,5 +1506,12 @@ display: none;
 
 }
 
-
+#cyan-box {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: $color-footer-background;
+  z-index: 1;
+  height: 0px;
+}
 
