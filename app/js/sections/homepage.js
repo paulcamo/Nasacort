@@ -576,6 +576,10 @@ function alfa(v) {
                 $("#dots-container .dotbox .dot").eq(cajita-=1).click();
             }
 
+            if(cajita==1) {
+                timer=  window.setTimeout( zeroflag ,1000);
+            }
+
 
         }
 
