@@ -21,7 +21,6 @@ var playedSlides = [9,1,0,0,0,0];
 var lastScrollTop=0;
 var scrollflag=0;
 var timer = null;
-var scrollSlideClick=1;
 var actualSlide=1;
 
 
@@ -30,43 +29,10 @@ var pixel01=0;
 var tl = new TimelineMax({paused:true});
 
 
-function callback_function2 (){
-
-   //
-   // currentSlide++;
-   //
-   //
-   // playedSlides[currentSlide-1]=1;
-   //
-   //
-   //// console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
-   //// console.log ( playedSlides);
-   //
-   // $("#numero").text(currentSlide);
-   //
-   // if (finalSlide==currentSlide) {
-   //     tl.pause();
-   //     $(".dotcover").hide();
-   //     scrollflag=0;
-   //     scrollSlideClick=finalSlide;
-   // }else {
-   //   //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
-   //     $("#dots-container .dotbox .dot").removeClass("dot-on");
-   //     $("#dots-container .dotbox .dot").eq(currentSlide).addClass("dot-on");
-   // }
-   //
-
-
-
-
-}
-
-
 
 tl  // ----------------------------------------------------------------------------
 
     .addLabel('cta1')
-    //.add(callback_function)
 
     // --- slide 02 ---------------------------------------------------------------
 
@@ -146,11 +112,7 @@ $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
     set_variables();
-
-
     scrollflag=0;
-
-// $("#numero").text(currentSlide);
 
 
 
@@ -196,136 +158,9 @@ $(document).ready(function() {
 
 
 
-    $(".patient").on("mouseenter",function() {
+    $(".patient").on("mouseenter",function() { $(this).find(".textbox").addClass("textboxhover");   });
 
-        $(this).find(".textbox").addClass("textboxhover");
-    });
-
-    $(".patient").on("mouseleave",function() {
-
-        $(this).find(".textbox").removeClass("textboxhover");
-    });
-
-
-
-    //// ----- to go to slide 1 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec01").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide = 1;
-    //    $("#numero").text(currentSlide);
-    //    //
-    //    //console.log("slide" + finalSlide + " ->" + playedSlides[finalSlide - 1]);
-    //    //
-    //    //if (playedSlides[0] === 0) {
-    //    //    playedSlides[0] = 1;
-    //    //    // nothing happen...
-    //    //} else {
-    //    //
-    //    //
-    //    //    var tl000 = new TimelineMax();
-    //    //
-    //    //
-    //    //    tl000.to('#background', 3,        {top: '0',  ease: Sine. easeIn} , '-=3')
-    //    //
-    //    //}
-    //
-    //
-    //    tl.pause();
-    //    tl.seek('cta1');
-    //
-    //
-    //
-    //
-    //});
-    //
-    //// ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec02").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=2;
-    //    $("#numero").text(currentSlide);
-    //
-    //  //  console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[1]===0) {
-    //        playedSlides[1]=1;
-    //        $(".dotcover").show();
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta2');
-    //    }
-    //
-    //    actualSlide=2;
-    //
-    //});
-    //
-    //// ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec03").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=3;
-    //    $("#numero").text(currentSlide);
-    //
-    //   // console.log ("slide" + finalSlide + " ->" +  playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[2]===0) {
-    //        playedSlides[2] = 1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta2');
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta3');
-    //    }
-    //
-    //});
-    //
-    //// ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec04").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide = 4;
-    //    $("#numero").text(currentSlide);
-    //
-    //    console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[3]===0) {
-    //        playedSlides[3]=1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta3');
-    //        tl.play();
-    //    }else {
-    //        tl.pause();
-    //        tl.seek('cta4');
-    //    }
-    //
-    //});
-    //
-    //// ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec05").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=5;
-    //    $("#numero").text(currentSlide);
-    //
-    //    //console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[4]===0) {
-    //        playedSlides[4] = 1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta4');
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta5');
-    //    }
-    //
-    //});
-
-
-
+    $(".patient").on("mouseleave",function() { $(this).find(".textbox").removeClass("textboxhover");  });
 
     $("#sec01").on("click",function(e) {e.preventDefault(); animar(1); });
     $("#sec02").on("click",function(e) {e.preventDefault(); animar(2); });
@@ -388,12 +223,11 @@ function set_dotbox(){
     }
 
 
-   // console.log("es en  " + scrollSlideClick) ;
+    $("#dots-container .dotbox").css("right", x);
 
-    if (scrollSlideClick!=5) {  // if we are not in the footer...
+
+    if (actualSlide!=6) {  // if we are not in the footer...
         y = $(window).height() - $("#header").innerHeight();
-
-        $("#dots-container .dotbox").css("right", x);
         $("#dots-container").css("height", y);
     }
 
@@ -427,9 +261,6 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 });
 
 // ---------------------------------------------------------------------------------------
-
-
-
 
 $('.footnote').on('click', function(e) {
     if($(this).attr("state") != "open"){
@@ -477,15 +308,7 @@ $('.footnote .close-btn').on('click', function(e) {
     e.preventDefault();
 });
 
-
-
-
-
-
-
-
 // ---------------------------------------------------------------------------------------
-
 
 function desktopStickyHeader(y){
 
@@ -519,6 +342,8 @@ function desktopStickyHeader(y){
 
 }
 
+// ---------------------------------------------------------------------------------------
+
 
 $(document).mousewheel(function(evt){
     if (scrollflag===0) {
@@ -527,6 +352,7 @@ $(document).mousewheel(function(evt){
     }
 });
 
+// ---------------------------------------------------------------------------------------
 
 
 
@@ -621,85 +447,6 @@ function alfa(v) {
 
 
 
-//
-//function alfaaaa(v) {
-//
-//    $("#numero").text(currentSlide);
-//    var valor=1;
-//
-//
-//    if (v>=0) {
-// //       console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
-//
-//
-// if (currentSlide===0) {
-//     valor=1;
-// } else {
-//     valor=currentSlide;
-// }
-//
-//if(currentSlide<=5) {
-//    $("#dots-container .dotbox .dot").eq(valor).click();
-//}
-//
-//
-//
-//        //
-//        //if (currentSlide===0) valor=1;
-//        //if (currentSlide===2) valor=3;
-//
-//    //    if (scrollSlideClick<5) scrollSlideClick++;
-//
-//
-//
-////if (scrollSlideClick<5) {
-////    $("#dots-container .dotbox .dot").eq(scrollSlideClick).click();
-////
-////} else {
-////// lets move the footer
-////
-////    //tl.play();
-////
-////
-////
-////
-////}
-//
-//
-//
-//
-//
-//    } else {
-//
-//
-//
-//        console.log("el current slide es  -> " + currentSlide);
-//
-//
-//
-//
-//var y=finalSlide-=2;
-//       // currentSlide-=2;
-//        console.log("hago click en  -> " + (y));
-//        $("#dots-container .dotbox .dot").eq(y).click();
-//
-//        $.doTimeout( 'scroll', 700, function(){
-//            // do something computationally expensive
-//            console.log("el falg a cero");
-//            scrollflag=0;
-//        });
-//
-//
-//
-//
-//    }
-//}
-//
-//
-
-
-
-
 function callback_function (){
 
 
@@ -741,22 +488,9 @@ function callback_function (){
 
 
 function animar(n) {
-
-
-
     finalSlide=n;
 
-   //  console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + actualSlide);
-
-
-   // $("#numero").text(actualSlide + " - " + finalSlide);
-
-
-
     if (finalSlide>actualSlide) actualSlide++;
-
-   // console.log ( playedSlides);
-
 
     if (playedSlides[actualSlide]===0) {
         playedSlides[actualSlide]=1;
@@ -772,19 +506,9 @@ function animar(n) {
         if (n==4) tl.seek('cta4');
         if (n==5) tl.seek('cta5');
         actualSlide=finalSlide;
-      //  $("#numero").text(actualSlide + " - " + finalSlide);
-
-
         window.clearTimeout(timer);
         timer=  window.setTimeout( zeroflag ,500);
-
-
-
     }
-
-
-
-
 
 }
 
