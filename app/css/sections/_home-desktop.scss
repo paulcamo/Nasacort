@@ -264,86 +264,6 @@
 
   /* ---------------------------------------------------------------------------------------------------------------------   */
 
-
-  .separador-5000 {
-    display: block;
-    width: 100%;
-    height: 50em;
-  }
-
-  .separador-50000 {
-    display: block;
-    width: 100%;
-    height: 500em;
-  }
-
-  .separador-1000 {
-    display: block;
-    width: 100%;
-    height: 10em;
-  }
-
-  .separador-400 {
-    display: block;
-    width: 100%;
-    height: 4em;
-    //border-bottom: 1px solid #ffffff;
-  }
-
-  .separador-200 {
-    display: block;
-    width: 100%;
-    height: 2em;
-  }
-
-  .separador-100 {
-    display: block;
-    width: 100%;
-    height: 1em;
-  }
-
-
-  .separador-01, .separador-02, .separador-03, .separador-04, .separador-05  {
-    display: block;
-    width: 100%;
-    height: 12em;
-   // border-bottom: 1px solid #ffffff;
-  }
-
-
-  .separador-02 {
-    height: 3500em;
-   // background-color: #EA5825;
-  }
-
-
-  .separador-03 {
-    height: 2300em;
-  //  background-color: #8d8b8b;
-  }
-
-  .separador-04 {
-    height: 2250em;
-  //  background-color: #8d8b8b;
-  }
-
-
-  .separador-04 {
-    height: 1600em;
-  //  background-color: green;
-  }
-
-
-
-  .separador-05 {
-    height: 1350em;
-   // background-color: yellow;
-  }
-
-
-
-
-
   #marker-tr, #marker2-tr, #marker3-tr, #marker4-tr, #marker5-tr
   , #marker6-tr, #marker7-tr, #marker8-tr, #marker9-tr {
    // background-color: #808080;
@@ -370,22 +290,6 @@
     z-index: 9999;
     font-size: 0;
   }
-
-  //.header #marker {
-  //  height: 0px;
-  //  width: 100%;
-  // // background: #fff url(../img/desktop/homepage/sanofi.png) no-repeat top center;
-  //  background-color: red;
-  //}
-  //
-  //.header #marker  a {
-  //  height: 30px;
-  //  color: #f00;
-  //  padding: 20px;
-  //  font-size: 20px;
-  //}
-
-
 
   #footer {
     background-color: rgba(0,0,0,0.5);
@@ -476,7 +380,7 @@
     height: 6em;
     left: 0;
     z-index: 10001;
-    top: 40em; //21em
+    top: 42em; //21em
     @include breakpoint("tablet-n-desktop") {
       z-index: 100;
     }
@@ -496,23 +400,15 @@
 
   }
 
-  .last-bloque {
-  //  border: 1px solid white;
-  }
-
   #product-features-text {
     width: 100%;
     height: 2.8em;
     position: relative;
     bottom: -3.6em;
-    //background-color: rgba(0, 255, 0, 0.5);
-
 
     @include breakpoint("limit") {
       bottom: -3.75em;
     }
-
-
 
   }
 
