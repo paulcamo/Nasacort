@@ -576,6 +576,12 @@
       border-bottom: none;
       border-top: none;
       font-size:11px;
+      br{
+          display:none;
+          @include breakpoint('mobile'){
+            display:block;
+        }
+      }
       @include breakpoint('mobile'){
           height:37px;
       }
