@@ -8,9 +8,18 @@
       }
     }
   }
-
+.first-container{
+   @include breakpoint('mobile'){
+       padding-top: 128px !important;
+   }
+}
   .hero-banner {
     background:url(../img/desktop/nasacort-difference/hero-difference.png) no-repeat top center;
+    @media screen and (max-width: 640px) {
+        background:url(../img/mobile/nasacort-difference/hero-difference.png) no-repeat top center;
+        background-position: 50% 100% !important;
+        background-size: cover !important;
+    }
     .underlined{
       background-color:#7394BF;
     }
@@ -60,6 +69,10 @@
   h2{
     margin-top:47px;
     margin-bottom: 22px; 
+    @include breakpoint('mobile'){
+        width:80%;
+        margin-top:18px;
+    }
   }
 
   h3 {
@@ -124,7 +137,8 @@
     }
     @include breakpoint('mobile'){
       width: 200px;
-      right: 0;
+      left:56%;
+      right: auto;
       top: -240px;
     }
     img{
@@ -188,16 +202,37 @@
   }
 
   .options{
+      .footnote{
+        z-index:2;
+         @include breakpoint('mobile'){
+             margin-left:0 !important;
+         }
+    }
     h2{
       @include breakpoint('mobile'){
         margin-top: 19px; 
+        margin-bottom:0;
       }
     }
     p{
       margin-bottom:25px; 
+      width:90%;
     }
     p.use-only{
       margin-bottom: 9px;
+      @include breakpoint('mobile'){
+            padding-left:0;
+        }
+    }
+    h3{
+        @include breakpoint('mobile'){
+            width:68%;
+        }
+        .grey{
+              @include breakpoint('mobile'){
+                color:#6e6e6e;
+            }
+        }
     }
   }
 
@@ -541,6 +576,9 @@
       border-bottom: none;
       border-top: none;
       font-size:11px;
+      @include breakpoint('mobile'){
+          height:37px;
+      }
     }
 
     tr:nth-child(even) {
@@ -606,6 +644,14 @@
     .greybar {
       background-color: #f2f0ee !important;
       height: 40px;
+      @include breakpoint('mobile'){
+          height:20px;
+      }
+      td{
+              @include breakpoint('mobile'){
+              height:20px;
+          }
+      }
     }
 
   }
@@ -624,7 +670,7 @@
       padding-left: 20px;
       padding-right: 20px;
     }
-
+    
     .vrs {
       position: absolute;
       //right: 17.4%;
@@ -689,7 +735,11 @@
   }
 
   //  FAQ Banner -------------------------------------------------------------------------------------
-
+    .cta-center{
+        @include breakpoint('mobile'){
+            float:left;
+        }
+    }
   .download-cta-button{
     margin-bottom:0px;
     margin-top: 3px; 

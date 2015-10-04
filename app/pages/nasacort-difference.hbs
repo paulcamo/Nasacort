@@ -7,7 +7,8 @@ button-details: {"text":"Download the Full Comparison Chart", "main-link":"#aa",
 layout: layout.hbs
 
 footnote1: {"section":"references-the-nasacort-difference-1", "parent":"#comparing-treatments"}
-footnote2: {"section":"references-the-nasacort-difference-2", "parent":"#comparing-opts"}
+footnote2: {"section":"references-the-nasacort-difference-2", "parent":"#comparing-ins"}
+footnote3: {"section":"references-the-nasacort-difference-3", "parent":"#comparing-opts"}
 ---
 
 {{>header}}
@@ -61,14 +62,14 @@ footnote2: {"section":"references-the-nasacort-difference-2", "parent":"#compari
 
         <h2>Comparing OTC Options</h2>
         <h3>Nasacort<sup>&reg;</sup> Allergy 24HR <span class="grey">vs</span> other nasal allergy medications</h3>
-        <p>See how Nasacort<sup>&reg;</sup> compares to other common nasal allergy medications by selecting a brand.1-6 Click or tap on the chart to choose a different brand. To compare all, download the PDF below. </p>
+        <p>See how Nasacort<sup>&reg;</sup> compares to other common nasal allergy medications by selecting a brand.<sup>1-6</sup> Click or tap on the chart to choose a different brand. To compare all, download the PDF below. </p>
 
     </div>
 
 <!-- --- comparison table --------------------------------------------------------  -->
 
     <div class="chart-table-container ncontainer">
-        <div class="content">
+        <div class="content" id="table-container">
             <div class="vrs"><img src="../img/desktop/nasacort-difference/charts-vs.png" alt=""/></div>
             <div class="arrow"></div>
 
@@ -189,10 +190,11 @@ footnote2: {"section":"references-the-nasacort-difference-2", "parent":"#compari
 Flonase, Afrin, Sudafed, Benadryl, Claritin, and Zyrtec are registered trademarks of their respective owners. See individual product packaging for information about use.</p>
                 <p>Includes Sudafed Congestion, Sudafed 12 HOUR, and Sudafed 24 HOUR.</p>
             </div>
-            <div class="cta-center">
-                {{> cta-download button-details}}
-            </div>
         </div>
+    </div>
+    {{>footnote footnote3}}
+    <div class="cta-center">
+        {{> cta-download button-details}}
     </div>
     <p class="use-only">Use only as directed.</p>
 </div>    
