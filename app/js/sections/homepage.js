@@ -40,13 +40,13 @@ tl  // -------------------------------------------------------------------------
     .to('#slide1-textbox', 3,            {top: '-900px',  ease: Sine. easeIn} , '-=1')
     .to('#slide01', 3,                   {top: '-900px',  ease: Sine. easeIn} , '-=3')
     .to('#background', 3,                {top: '-10.7em',  ease: Sine. easeIn} , '-=3')
-    .fromTo($('#herolink'), 3,           {top: '0px'}, {top: '-900px'} , '-=3')
+    .fromTo('#herolink', 3,           {top: '0px'}, {top: '-900px'} , '-=3')
     .to('#slide02', 4,                   {marginTop: '-15em',  ease: Sine. easeInOut} , '-=6')
-    .to($('#bottle'), 6,                 {marginTop: '16.2em',scale: '2.5',left: '28.1%',ease: Power1.easeOut } , '-=6')
-    .to($('#cap'), 6,                    {marginTop: '14.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Power1.easeOut} , '-=6')
-    .to($('#cap'), 0.7,                  {marginTop: '7.5em', ease: Power1.easeOut} , '+=0')
-    .to($('#cap'), 1,                    {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-    .to($('#no-scent'), 0.8,             {height: '8em'} , '+=0')
+    .to('#bottle', 6,                 {marginTop: '16.2em',scale: '2.5',left: '28.1%',ease: Power1.easeOut } , '-=6')
+    .to('#cap', 6,                    {marginTop: '14.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Power1.easeOut} , '-=6')
+    .to('#cap', 0.7,                  {marginTop: '7.5em', ease: Power1.easeOut} , '+=0')
+    .to('#cap', 1,                    {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
+    .to('#no-scent', 0.8,             {height: '8em'} , '+=0')
     .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
     .addLabel('cta2')
     .add(callback_function)
@@ -162,11 +162,11 @@ $(document).ready(function() {
 
     $(".patient").on("mouseleave",function() { $(this).find(".textbox").removeClass("textboxhover");  });
 
-    $("#sec01").on("click",function(e) {e.preventDefault(); animar(1); });
-    $("#sec02").on("click",function(e) {e.preventDefault(); animar(2); });
-    $("#sec03").on("click",function(e) {e.preventDefault(); animar(3); });
-    $("#sec04").on("click",function(e) {e.preventDefault(); animar(4); });
-    $("#sec05").on("click",function(e) {e.preventDefault(); animar(5); });
+    $("#sec01").on("click",function(e) {e.preventDefault(); animate(1); });
+    $("#sec02").on("click",function(e) {e.preventDefault(); animate(2); });
+    $("#sec03").on("click",function(e) {e.preventDefault(); animate(3); });
+    $("#sec04").on("click",function(e) {e.preventDefault(); animate(4); });
+    $("#sec05").on("click",function(e) {e.preventDefault(); animate(5); });
 
 
 });
@@ -348,7 +348,7 @@ function desktopStickyHeader(y){
 $(document).mousewheel(function(evt){
     if (scrollflag===0) {
         scrollflag=1;
-        setTimeout(alfa(evt.deltaY) ,800);
+        setTimeout(select_a_slide(evt.deltaY) ,800);
     }
 });
 
@@ -356,9 +356,8 @@ $(document).mousewheel(function(evt){
 
 
 
-function alfa(v) {
+function select_a_slide(v) {
 
-   //$("#numero").text(actualSlide + " - " + finalSlide);
 
 
     var valor=0;
@@ -487,7 +486,7 @@ function callback_function (){
 
 
 
-function animar(n) {
+function animate(n) {
     finalSlide=n;
 
     if (finalSlide>actualSlide) actualSlide++;
