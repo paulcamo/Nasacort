@@ -1024,11 +1024,18 @@ $space-mobile-copy: 4.6875%;
         width:886px;
         height:356px;
         margin-bottom:16px;
+        @include breakpoint('tablet') {
+            width: 100%;
+            background-position:left top;
+         }
         .graphics{
             position:relative;
             top:354px;
             margin-left:92px;
             margin-bottom:18px;
+            @include breakpoint('tablet') {
+                margin-left:11%;
+            }
             #bar-1{
                 width:44px;
                 float:left;
@@ -1037,6 +1044,9 @@ $space-mobile-copy: 4.6875%;
                 position:relative;
                 height:0px;
                 top:0px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-2{
                 width:44px;
@@ -1047,6 +1057,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-3{
                 width:44px;
@@ -1057,6 +1070,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-4{
                 width:44px;
@@ -1067,6 +1083,10 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:64px;
+                 @include breakpoint('tablet') {
+                    margin-left:3%;
+                    width:36px;
+                }
             }
             #bar-5{
                 width:44px;
@@ -1077,6 +1097,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-6{
                 width:44px;
@@ -1087,6 +1110,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-7{
                 width:44px;
@@ -1097,6 +1123,10 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:64px;
+                @include breakpoint('tablet') {
+                    margin-left:3%;
+                    width:36px;
+                }
             }
             #bar-8{
                 width:44px;
@@ -1107,6 +1137,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-9{
                 width:44px;
@@ -1117,6 +1150,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-10{
                 width:44px;
@@ -1127,6 +1163,10 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:64px;
+                @include breakpoint('tablet') {
+                    margin-left:3%;
+                    width:36px;
+                }
             }
             #bar-11{
                 width:44px;
@@ -1137,6 +1177,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             #bar-12{
                 width:44px;
@@ -1147,6 +1190,9 @@ $space-mobile-copy: 4.6875%;
                 height:0px;
                 top:0px;
                 margin-left:8px;
+                @include breakpoint('tablet') {
+                    width:36px;
+                }
             }
             .indicator{
                 font-family:$font-proxima-nova-semibold;
@@ -1210,17 +1256,30 @@ $space-mobile-copy: 4.6875%;
         font-size:16px;
         margin-left:134px;
         margin-bottom:37px;
+        @include breakpoint('tablet') {
+            margin-left:15%;
+            width:105%;
+        }
         .base-1{
             
         }
         .base-2{
             margin-left:102px;
+            @include breakpoint('tablet') {
+                margin-left:5%;
+            }
         }
         .base-3{
             margin-left:90px;
+            @include breakpoint('tablet') {
+                margin-left:3%;
+            }
         }
         .base-4{
             margin-left:114px;
+            @include breakpoint('tablet') {
+                margin-left:7%;
+            }
         }
     }
     .legend-graph{
@@ -1231,6 +1290,9 @@ $space-mobile-copy: 4.6875%;
         margin-left: 675px;
         margin-top: -396px;
         opacity:0;
+        @include breakpoint('tablet') {
+            margin-left:50%;
+        }
     }
 }
 
