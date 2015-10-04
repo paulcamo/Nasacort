@@ -490,6 +490,19 @@
     width: 3em;
     height: 4.4em;
     transform: scale(1, 1);
+
+
+    @include breakpoint("tablet") {
+      top: 8.2em;
+    }
+
+    @include breakpoint("desktop") {
+      top: 8.3em;
+    }
+
+
+
+
   }
 
   #cap {
@@ -504,6 +517,20 @@
     position: absolute;
     top: 9em;
     left: 74.6%;
+
+
+
+    @include breakpoint("tablet") {
+      top: 8.4em;
+    }
+
+    @include breakpoint("desktop") {
+      top: 8.5em;
+    }
+
+
+
+
   }
 
 
@@ -512,12 +539,28 @@
 
   #no-scent {
     background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
+    background-size: cover;
     width: 10em;
     height: 0em;
     bottom: 12.12em;
     z-index: 98;
     position: absolute;
     left: 18.1%;
+
+
+
+
+
+    @include breakpoint("tablet") {
+      bottom: 12.8em;
+    }
+
+    @include breakpoint("desktop") {
+      bottom: 12.8em;
+    }
+
+
+
   }
 
 
