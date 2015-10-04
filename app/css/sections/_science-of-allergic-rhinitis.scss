@@ -40,6 +40,9 @@
     padding-left: 216px;
     padding-right:213px;
     overflow: hidden;
+    .footnote{
+        margin-top:-111px !important;
+    }
     @include breakpoint('desktop'){
       max-width: 920px!important;
       padding-left:0;
@@ -405,7 +408,7 @@
     height:auto;
     position:relative;
     overflow:hidden;
-    padding: 0 40px 48px 40px;
+    padding-bottom:48px;
 
 
     @include breakpoint('mobile'){
@@ -417,7 +420,7 @@
     .container-carousel{
         margin-bottom:17px;
         width:100%;
-        padding-left:206px;
+        padding-left:213px;
         @include breakpoint('desktop'){
           max-width: 920px!important;
           padding-left:0;
@@ -425,8 +428,8 @@
         }
         @include breakpoint('tablet'){
           max-width: 769px!important;
-          padding-left:0;
-          padding-right:0;
+          padding-left:40px;
+          padding-right:40px;
         }
         @include breakpoint('mobile'){
           padding-left: 0;
@@ -690,6 +693,7 @@
       padding-left:213px;
       overflow: hidden;
       padding-top: 47px;
+      margin-bottom: -24px;
       @include breakpoint('desktop'){
         max-width: 920px!important;
         padding-left:0;
@@ -707,10 +711,17 @@
         padding-top: 22px;
       }
     }
+    .right-align{
+      margin-bottom:0;
+      min-height:20px;
+    }
     .copy{
       width: 591px;
       float: left;
       margin-right: 31px;
+      .footnote{
+          margin-top:-80px;
+      }
       @include breakpoint('desktop'){
         width: 45%;
         padding-left:0;
