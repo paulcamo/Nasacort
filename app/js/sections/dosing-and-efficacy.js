@@ -9,9 +9,11 @@ $(document).ready(function(){
     changeImageSrc();
     moveSuperScriptGraphic();
     resetFirstGraphic();
+    resetSecondGraphic();
     if(isMobile)
     {
         setFirstGraphicAsMobile();
+        setSecondGraphicAsMobile();
     }else
     {
         initWayPoint();
@@ -27,9 +29,11 @@ $(window).bind("resize", function(){
     if(isMobile)
     {
         setFirstGraphicAsMobile();
+        setSecondGraphicAsMobile();
     }else
     {
         setFirstGraphicAsDesktop();
+        setSecondGraphicAsDesktop();
         initWayPoint();
     } 
 });
@@ -43,17 +47,8 @@ function changeImageSrc()
             $(this).attr("src", newPath);
          });
          
-         //newPath = $(".chart-1 img").attr("src").replace("desktop", "mobile");
-         //$(".chart-1 img").attr("src", newPath);
-         
          newPath = $(".chart-2 img").attr("src").replace("desktop", "mobile");
          $(".chart-2 img").attr("src", newPath);
-         
-         newPath = $(".chart-3 img").attr("src").replace("desktop", "mobile");
-         $(".chart-3 img").attr("src", newPath);
-         
-         //newPath = $(".img-womn").attr("src").replace("desktop", "mobile");
-         //$(".img-womn").attr("src", newPath);
          
      }else
      {
@@ -61,18 +56,10 @@ function changeImageSrc()
              var newPath = $(this).attr("src").replace("mobile", "desktop");
              $(this).attr("src", newPath);
         });  
-         
-         //newPath = $(".chart-1 img").attr("src").replace("mobile", "desktop");
-         //$(".chart-1 img").attr("src", newPath);
-         
+        
          newPath = $(".chart-2 img").attr("src").replace("mobile", "desktop");
          $(".chart-2 img").attr("src", newPath);
          
-         newPath = $(".chart-3 img").attr("src").replace("mobile", "desktop");
-         $(".chart-3 img").attr("src", newPath);
-         
-         //newPath = $(".img-womn").attr("src").replace("mobile", "desktop");
-         //$(".img-womn").attr("src", newPath);
      }
 }
 
@@ -88,25 +75,6 @@ function moveSuperScriptGraphic()
     }
     $(".img-chart .graphic-superscript").css("top", graphicHeight + "px");
     
-    //Second
-    
-    /*if(isMobile)
-    {
-        graphicHeight = ($("#chart-1 img").outerHeight() * 20.97 / 100) + 10;
-    }else
-    {
-        graphicHeight = ($("#chart-1 img").outerHeight() * 54.59 / 100) + 9;
-    }
-    $("#chart-1 .graphic-superscript").css("top", graphicHeight + "px");
-    
-    if(isMobile)
-    {
-        graphicHeight = ($("#chart-1 img").outerHeight() * 39.5 / 100) + 9;
-        $("#chart-1 .superscript-2").css("top", graphicHeight + "px");
-    }else
-    {
-        $("#chart-1 .superscript-2").css("top", "18px");
-    }*/
 }
 
 function initWayPoint()
@@ -119,6 +87,12 @@ function initWayPoint()
            animateFirstGraphic();
            isInview = false;
        },{offset:'25%',}); 
+       
+        $('#chart-3').waypoint(function(){
+           resetSecondGraphic();
+           animateSecondGraphic();
+           isInview = false;
+       },{offset:'25%',}); 
     }else
     {
         setTimeout(function(){
@@ -126,6 +100,8 @@ function initWayPoint()
         },1000);
     }
 }
+
+/*********************************************** First Chart Animation ***********************************************/
 
 function resetFirstGraphic()
 {
@@ -148,6 +124,8 @@ function resetFirstGraphic()
     if(contentwidth > tabletBreakPoint)
     {
         $(".quote").css("opacity", "0");
+    }else{
+        $(".quote").css("opacity", "1");  
     }
 }
 
@@ -180,4 +158,81 @@ function setFirstGraphicAsMobile()
 function setFirstGraphicAsDesktop()
 {
     $(".animation-1").children().show(); 
+}
+
+/*********************************************** Second Chart Animation ***********************************************/
+
+function resetSecondGraphic()
+{
+    TweenLite.killTweensOf("#bar-1");
+    TweenLite.killTweensOf("#bar-2");
+    TweenLite.killTweensOf("#bar-3");
+    TweenLite.killTweensOf("#bar-4");
+    TweenLite.killTweensOf("#bar-5");
+    TweenLite.killTweensOf("#bar-6");
+    TweenLite.killTweensOf("#bar-7");
+    TweenLite.killTweensOf("#bar-8");
+    TweenLite.killTweensOf("#bar-9");
+    TweenLite.killTweensOf("#bar-10");
+    TweenLite.killTweensOf("#bar-11");
+    TweenLite.killTweensOf("#bar-12");
+    
+    $("#bar-1").css("height","0px");
+    $("#bar-1").css("top","0px");
+    $("#bar-2").css("height","0px");
+    $("#bar-2").css("top","0px");
+    $("#bar-3").css("height","0px");
+    $("#bar-3").css("top","0px");
+    $("#bar-4").css("height","0px");
+    $("#bar-4").css("top","0px");
+    $("#bar-5").css("height","0px");
+    $("#bar-5").css("top","0px");
+    $("#bar-6").css("height","0px");
+    $("#bar-6").css("top","0px");
+    $("#bar-7").css("height","0px");
+    $("#bar-7").css("top","0px");
+    $("#bar-8").css("height","0px");
+    $("#bar-8").css("top","0px");
+    $("#bar-9").css("height","0px");
+    $("#bar-9").css("top","0px");
+    $("#bar-10").css("height","0px");
+    $("#bar-10").css("top","0px");
+    $("#bar-11").css("height","0px");
+    $("#bar-11").css("top","0px");
+    $("#bar-12").css("height","0px");
+    $("#bar-12").css("top","0px");
+    
+   
+    $(".legend-graph").css("opacity", "0");
+}
+
+function animateSecondGraphic()
+{
+    TweenLite.to($("#bar-1"), 1.5, { css: { height: '296px', top: '-296px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-2"), 1.5, { css: { height: '276px', top: '-276px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-3"), 1.5, { css: { height: '192px', top: '-192px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-4"), 1.5, { css: { height: '96px', top: '-96px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-5"), 1.5, { css: { height: '85px', top: '-85px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-6"), 1.5, { css: { height: '65px', top: '-65px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-7"), 1.5, { css: { height: '104px', top: '-104px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-8"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-9"), 1.5, { css: { height: '67px', top: '-67px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-10"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
+    TweenLite.to($("#bar-11"), 1.5, { css: { height: '88px', top: '-88px' },ease:Power1.easeOut } );    
+    TweenLite.to($("#bar-12"), 1.5, { css: { height: '58px', top: '-58px' },ease:Power1.easeOut, onComplete:showLegend } );
+}
+
+function showLegend()
+{
+    TweenLite.to($(".legend-graph"), 0.2, { css: { opacity: 1} } );
+}
+
+function setSecondGraphicAsMobile()
+{
+    $(".animation-2").children().hide(); 
+}
+
+function setSecondGraphicAsDesktop()
+{
+    $(".animation-2").children().show(); 
 }
