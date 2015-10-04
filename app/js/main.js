@@ -188,7 +188,7 @@ function setSuperscripts()
         vtop = 500;
     }
     $("sup").each(function(){
-        if(parseInt($(this).text()) >= 0)
+        if(parseInt($(this).text()) >= 0 || $(this).text().match(/[a-z]/i)) //if is numeric or alphabetical character
         {
             $(this).css("cursor","pointer");
             var footnote = $(this).closest(".content").find(".footnote");
