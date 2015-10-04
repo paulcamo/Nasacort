@@ -37,7 +37,7 @@
     margin-top: -4px;
 
     @include breakpoint("tablet") {
-      margin-top: -3px;
+      margin-top: -5px;
     }
 
 
@@ -264,86 +264,6 @@
 
   /* ---------------------------------------------------------------------------------------------------------------------   */
 
-
-  .separador-5000 {
-    display: block;
-    width: 100%;
-    height: 50em;
-  }
-
-  .separador-50000 {
-    display: block;
-    width: 100%;
-    height: 500em;
-  }
-
-  .separador-1000 {
-    display: block;
-    width: 100%;
-    height: 10em;
-  }
-
-  .separador-400 {
-    display: block;
-    width: 100%;
-    height: 4em;
-    //border-bottom: 1px solid #ffffff;
-  }
-
-  .separador-200 {
-    display: block;
-    width: 100%;
-    height: 2em;
-  }
-
-  .separador-100 {
-    display: block;
-    width: 100%;
-    height: 1em;
-  }
-
-
-  .separador-01, .separador-02, .separador-03, .separador-04, .separador-05  {
-    display: block;
-    width: 100%;
-    height: 12em;
-   // border-bottom: 1px solid #ffffff;
-  }
-
-
-  .separador-02 {
-    height: 3500em;
-   // background-color: #EA5825;
-  }
-
-
-  .separador-03 {
-    height: 2300em;
-  //  background-color: #8d8b8b;
-  }
-
-  .separador-04 {
-    height: 2250em;
-  //  background-color: #8d8b8b;
-  }
-
-
-  .separador-04 {
-    height: 1600em;
-  //  background-color: green;
-  }
-
-
-
-  .separador-05 {
-    height: 1350em;
-   // background-color: yellow;
-  }
-
-
-
-
-
   #marker-tr, #marker2-tr, #marker3-tr, #marker4-tr, #marker5-tr
   , #marker6-tr, #marker7-tr, #marker8-tr, #marker9-tr {
    // background-color: #808080;
@@ -370,22 +290,6 @@
     z-index: 9999;
     font-size: 0;
   }
-
-  //.header #marker {
-  //  height: 0px;
-  //  width: 100%;
-  // // background: #fff url(../img/desktop/homepage/sanofi.png) no-repeat top center;
-  //  background-color: red;
-  //}
-  //
-  //.header #marker  a {
-  //  height: 30px;
-  //  color: #f00;
-  //  padding: 20px;
-  //  font-size: 20px;
-  //}
-
-
 
   #footer {
     background-color: rgba(0,0,0,0.5);
@@ -445,7 +349,7 @@
   #background {
     position: fixed;
     top: 0;
-    background: url("../img/desktop/homepage/bg-02.png") no-repeat center top;
+    background: url("../img/desktop/homepage/background.jpg") no-repeat center top;
     z-index: 98;
     max-width: #{homepage-max-width()};
     background-size: contain;
@@ -476,7 +380,7 @@
     height: 6em;
     left: 0;
     z-index: 10001;
-    top: 40em; //21em
+    top: 42em; //21em
     @include breakpoint("tablet-n-desktop") {
       z-index: 100;
     }
@@ -496,23 +400,15 @@
 
   }
 
-  .last-bloque {
-  //  border: 1px solid white;
-  }
-
   #product-features-text {
     width: 100%;
     height: 2.8em;
     position: relative;
     bottom: -3.6em;
-    //background-color: rgba(0, 255, 0, 0.5);
-
 
     @include breakpoint("limit") {
       bottom: -3.75em;
     }
-
-
 
   }
 
@@ -640,12 +536,9 @@
     width: 100%;
     overflow: hidden;
 
-
-
-    @include breakpoint("desktop") {
+    @include breakpoint("tablet-n-desktop") {
       top: 139px;
     }
-
 
 
 
@@ -856,6 +749,14 @@
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
     margin-top: 17em;
+
+    @include breakpoint("tablet-n-desktop") {
+      margin-top: 35em;
+      top: 139px;
+    }
+
+
+
     overflow: hidden;
 
     .use-only {
@@ -1066,7 +967,7 @@
      top: 0.1em;
      width: 40%;
      text-align: left;
-     left: -35%;
+     left: -40%;
      right: 0;
      //margin: auto;
     @include ha;
@@ -1133,7 +1034,7 @@
     overflow: hidden;
 
     
-    @include breakpoint("desktop") {
+    @include breakpoint("tablet-n-desktop") {
       top: 139px;
     }
     
@@ -1277,6 +1178,12 @@
     overflow: hidden;
 
 
+    @include breakpoint("tablet-n-desktop") {
+      top: 139px;
+    }
+
+
+
     #herolink {
       width: 100%;
       height: 14em;
@@ -1402,6 +1309,12 @@
       font-weight: 100;
       letter-spacing: 0.05em;
 
+
+      @include breakpoint("tablet") {
+        letter-spacing: 0.05em;
+      }
+
+
       sup {
         position: relative;
         top: -0.4em;
@@ -1421,6 +1334,13 @@
       width: 92%;
       padding: 1.2em 0px 0px 1em;
       font-weight: 100;
+    }
+
+    .span1 {
+      @include breakpoint("tablet-n-desktop") {
+        padding: 0.7em 0px 0px 1em !important;
+        width: 75% !important;
+      }
     }
 
     .span2 {
@@ -1482,5 +1402,12 @@ display: none;
 
 }
 
-
+#cyan-box {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: $color-footer-background;
+  z-index: 1;
+  height: 0px;
+}
 

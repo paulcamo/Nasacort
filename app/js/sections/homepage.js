@@ -21,8 +21,7 @@ var playedSlides = [9,1,0,0,0,0];
 var lastScrollTop=0;
 var scrollflag=0;
 var timer = null;
-var scrollSlideClick=1;
-var cajita=1;
+var actualSlide=1;
 
 
 var pixel01=0;
@@ -30,43 +29,10 @@ var pixel01=0;
 var tl = new TimelineMax({paused:true});
 
 
-function callback_function2 (){
-
-   //
-   // currentSlide++;
-   //
-   //
-   // playedSlides[currentSlide-1]=1;
-   //
-   //
-   //// console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
-   //// console.log ( playedSlides);
-   //
-   // $("#numero").text(currentSlide);
-   //
-   // if (finalSlide==currentSlide) {
-   //     tl.pause();
-   //     $(".dotcover").hide();
-   //     scrollflag=0;
-   //     scrollSlideClick=finalSlide;
-   // }else {
-   //   //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
-   //     $("#dots-container .dotbox .dot").removeClass("dot-on");
-   //     $("#dots-container .dotbox .dot").eq(currentSlide).addClass("dot-on");
-   // }
-   //
-
-
-
-
-}
-
-
 
 tl  // ----------------------------------------------------------------------------
 
     .addLabel('cta1')
-    //.add(callback_function)
 
     // --- slide 02 ---------------------------------------------------------------
 
@@ -89,7 +55,7 @@ tl  // -------------------------------------------------------------------------
 
     .to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
     .to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
-    .to('#slide03', 3,       {top: '1.6em'}, '-=3')
+    .to('#slide03', 3,       {top: '139px'}, '-=3')
     .to('#compare-copy', 1,  {left: '23%'}, '+=0')
     .to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
     .to('#stats', 1,         {height: '30.5%'}, '+=0')
@@ -120,7 +86,7 @@ tl  // -------------------------------------------------------------------------
     .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
     .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
     .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
-
+    .to('#cyan-box', 0.3,   {height:'200px', ease: Power0.easeIn}, '-=1')
 ;  // --- end ---------------------------------------------------------------
 
 
@@ -146,11 +112,7 @@ $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
     set_variables();
-
-
     scrollflag=0;
-
-// $("#numero").text(currentSlide);
 
 
 
@@ -196,136 +158,9 @@ $(document).ready(function() {
 
 
 
-    $(".patient").on("mouseenter",function() {
+    $(".patient").on("mouseenter",function() { $(this).find(".textbox").addClass("textboxhover");   });
 
-        $(this).find(".textbox").addClass("textboxhover");
-    });
-
-    $(".patient").on("mouseleave",function() {
-
-        $(this).find(".textbox").removeClass("textboxhover");
-    });
-
-
-
-    //// ----- to go to slide 1 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec01").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide = 1;
-    //    $("#numero").text(currentSlide);
-    //    //
-    //    //console.log("slide" + finalSlide + " ->" + playedSlides[finalSlide - 1]);
-    //    //
-    //    //if (playedSlides[0] === 0) {
-    //    //    playedSlides[0] = 1;
-    //    //    // nothing happen...
-    //    //} else {
-    //    //
-    //    //
-    //    //    var tl000 = new TimelineMax();
-    //    //
-    //    //
-    //    //    tl000.to('#background', 3,        {top: '0',  ease: Sine. easeIn} , '-=3')
-    //    //
-    //    //}
-    //
-    //
-    //    tl.pause();
-    //    tl.seek('cta1');
-    //
-    //
-    //
-    //
-    //});
-    //
-    //// ----- to go to slide 2 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec02").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=2;
-    //    $("#numero").text(currentSlide);
-    //
-    //  //  console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[1]===0) {
-    //        playedSlides[1]=1;
-    //        $(".dotcover").show();
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta2');
-    //    }
-    //
-    //    cajita=2;
-    //
-    //});
-    //
-    //// ----- to go to slide 3 -------------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec03").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=3;
-    //    $("#numero").text(currentSlide);
-    //
-    //   // console.log ("slide" + finalSlide + " ->" +  playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[2]===0) {
-    //        playedSlides[2] = 1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta2');
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta3');
-    //    }
-    //
-    //});
-    //
-    //// ------ to go to slide 4 ------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec04").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide = 4;
-    //    $("#numero").text(currentSlide);
-    //
-    //    console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[3]===0) {
-    //        playedSlides[3]=1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta3');
-    //        tl.play();
-    //    }else {
-    //        tl.pause();
-    //        tl.seek('cta4');
-    //    }
-    //
-    //});
-    //
-    //// ------ to go to slide 5 ------------------------------------------------------------------------------------------------------------------------
-    //
-    //$("#sec05").on("click",function(e) {
-    //    e.preventDefault();
-    //    finalSlide=5;
-    //    $("#numero").text(currentSlide);
-    //
-    //    //console.log ("slide" + finalSlide + " ->" + playedSlides[finalSlide-1]);
-    //
-    //    if (playedSlides[4]===0) {
-    //        playedSlides[4] = 1;
-    //        $(".dotcover").show();
-    //       // tl.seek('cta4');
-    //        tl.play();
-    //    } else {
-    //        tl.pause();
-    //        tl.seek('cta5');
-    //    }
-    //
-    //});
-
-
-
+    $(".patient").on("mouseleave",function() { $(this).find(".textbox").removeClass("textboxhover");  });
 
     $("#sec01").on("click",function(e) {e.preventDefault(); animar(1); });
     $("#sec02").on("click",function(e) {e.preventDefault(); animar(2); });
@@ -388,12 +223,11 @@ function set_dotbox(){
     }
 
 
-   // console.log("es en  " + scrollSlideClick) ;
+    $("#dots-container .dotbox").css("right", x);
 
-    if (scrollSlideClick!=5) {  // if we are not in the footer...
+
+    if (actualSlide!=6) {  // if we are not in the footer...
         y = $(window).height() - $("#header").innerHeight();
-
-        $("#dots-container .dotbox").css("right", x);
         $("#dots-container").css("height", y);
     }
 
@@ -427,9 +261,6 @@ $("#dots-container .dotbox .dot").on("click",function(e){
 });
 
 // ---------------------------------------------------------------------------------------
-
-
-
 
 $('.footnote').on('click', function(e) {
     if($(this).attr("state") != "open"){
@@ -477,15 +308,7 @@ $('.footnote .close-btn').on('click', function(e) {
     e.preventDefault();
 });
 
-
-
-
-
-
-
-
 // ---------------------------------------------------------------------------------------
-
 
 function desktopStickyHeader(y){
 
@@ -519,6 +342,8 @@ function desktopStickyHeader(y){
 
 }
 
+// ---------------------------------------------------------------------------------------
+
 
 $(document).mousewheel(function(evt){
     if (scrollflag===0) {
@@ -527,25 +352,26 @@ $(document).mousewheel(function(evt){
     }
 });
 
+// ---------------------------------------------------------------------------------------
 
 
 
 function alfa(v) {
 
-   //$("#numero").text(cajita + " - " + finalSlide);
+   //$("#numero").text(actualSlide + " - " + finalSlide);
 
 
     var valor=0;
 
 
     if (v>=0) {
-        if(cajita<6) {
-            finalSlide= cajita+=1;
+        if(actualSlide<6) {
+            finalSlide= actualSlide+=1;
 
-            $("#dots-container .dotbox .dot").eq(cajita-1).click();
+            $("#dots-container .dotbox .dot").eq(actualSlide-1).click();
 
 
-            if(cajita==6) {
+            if(actualSlide==6) {
 
                  tl.seek('cta5');
                 timer=  window.setTimeout( zeroflag ,1000);
@@ -555,7 +381,7 @@ function alfa(v) {
 
         }
 
-        if(cajita==6) {
+        if(actualSlide==6) {
             timer=  window.setTimeout( zeroflag ,1000);
         }
 
@@ -563,17 +389,21 @@ function alfa(v) {
     } else {
 
 
-        if(cajita>=6) {
+        if(actualSlide>=6) {
             tl.reverse();
-            cajita=5;
+            actualSlide=5;
             finalSlide=5;
 
         } else {
 
 
-            if (cajita > 1) {
-                finalSlide = cajita -= 1;
-                $("#dots-container .dotbox .dot").eq(cajita-=1).click();
+            if (actualSlide > 1) {
+                finalSlide = actualSlide -= 1;
+                $("#dots-container .dotbox .dot").eq(actualSlide-=1).click();
+            }
+
+            if(actualSlide==1) {
+                timer=  window.setTimeout( zeroflag ,1000);
             }
 
 
@@ -617,112 +447,33 @@ function alfa(v) {
 
 
 
-//
-//function alfaaaa(v) {
-//
-//    $("#numero").text(currentSlide);
-//    var valor=1;
-//
-//
-//    if (v>=0) {
-// //       console.log("baja -> " + v + " currentslide " + currentSlide + " scrollslideClick " + scrollSlideClick);
-//
-//
-// if (currentSlide===0) {
-//     valor=1;
-// } else {
-//     valor=currentSlide;
-// }
-//
-//if(currentSlide<=5) {
-//    $("#dots-container .dotbox .dot").eq(valor).click();
-//}
-//
-//
-//
-//        //
-//        //if (currentSlide===0) valor=1;
-//        //if (currentSlide===2) valor=3;
-//
-//    //    if (scrollSlideClick<5) scrollSlideClick++;
-//
-//
-//
-////if (scrollSlideClick<5) {
-////    $("#dots-container .dotbox .dot").eq(scrollSlideClick).click();
-////
-////} else {
-////// lets move the footer
-////
-////    //tl.play();
-////
-////
-////
-////
-////}
-//
-//
-//
-//
-//
-//    } else {
-//
-//
-//
-//        console.log("el current slide es  -> " + currentSlide);
-//
-//
-//
-//
-//var y=finalSlide-=2;
-//       // currentSlide-=2;
-//        console.log("hago click en  -> " + (y));
-//        $("#dots-container .dotbox .dot").eq(y).click();
-//
-//        $.doTimeout( 'scroll', 700, function(){
-//            // do something computationally expensive
-//            console.log("el falg a cero");
-//            scrollflag=0;
-//        });
-//
-//
-//
-//
-//    }
-//}
-//
-//
-
-
-
-
 function callback_function (){
 
 
 
 
     //console.log ("haciendo callback");
-    //console.log ("el final es " + finalSlide + "  voy ->" + cajita);
+    //console.log ("el final es " + finalSlide + "  voy ->" + actualSlide);
     // console.log ( playedSlides);
 
-   // $("#numero").text(cajita + " - " + finalSlide);
+   // $("#numero").text(actualSlide + " - " + finalSlide);
 
-    if (finalSlide==cajita) {
+    if (finalSlide==actualSlide) {
         tl.pause();
         $(".dotcover").hide();
-        playedSlides[cajita]=1;
+        playedSlides[actualSlide]=1;
         scrollflag=0;
       //  scrollSlideClick=finalSlide;
     }else {
         //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
 
-        if (finalSlide>cajita) cajita++;
-        playedSlides[cajita]=1;
-        // console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+        if (finalSlide>actualSlide) actualSlide++;
+        playedSlides[actualSlide]=1;
+        // console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + actualSlide);
 
 
         $("#dots-container .dotbox .dot").removeClass("dot-on");
-        $("#dots-container .dotbox .dot").eq(cajita-1).addClass("dot-on");
+        $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
     }
 
 
@@ -737,28 +488,15 @@ function callback_function (){
 
 
 function animar(n) {
-
-
-
     finalSlide=n;
 
-   //  console.log("voy a animar hasta el slide " + finalSlide + " estoy en " + cajita);
+    if (finalSlide>actualSlide) actualSlide++;
 
-
-   // $("#numero").text(cajita + " - " + finalSlide);
-
-
-
-    if (finalSlide>cajita) cajita++;
-
-   // console.log ( playedSlides);
-
-
-    if (playedSlides[cajita]===0) {
-        playedSlides[cajita]=1;
+    if (playedSlides[actualSlide]===0) {
+        playedSlides[actualSlide]=1;
         $(".dotcover").show();
         $("#dots-container .dotbox .dot").removeClass("dot-on");
-        $("#dots-container .dotbox .dot").eq(cajita-1).addClass("dot-on");
+        $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
         tl.play();
     } else {
         tl.pause();
@@ -767,20 +505,10 @@ function animar(n) {
         if (n==3) tl.seek('cta3');
         if (n==4) tl.seek('cta4');
         if (n==5) tl.seek('cta5');
-        cajita=finalSlide;
-      //  $("#numero").text(cajita + " - " + finalSlide);
-
-
+        actualSlide=finalSlide;
         window.clearTimeout(timer);
         timer=  window.setTimeout( zeroflag ,500);
-
-
-
     }
-
-
-
-
 
 }
 

@@ -772,7 +772,7 @@ $grey-button:#f8f8f8;
     p{
         margin-bottom: 18px;
         line-height: 24px;
-        letter-spacing: 0px;
+        letter-spacing: -0.1px;
         font-size: 16px;
         color:$black-letter;
         @include breakpoint('mobile'){
@@ -1004,6 +1004,10 @@ $grey-button:#f8f8f8;
         min-width: 300px;
         float: left;
         padding-left: 20px;
+        a{
+            text-decoration: none;
+            color:$color-bright-blue;
+        }
         @include breakpoint('desktop'){
             max-width: 50%;
         }
