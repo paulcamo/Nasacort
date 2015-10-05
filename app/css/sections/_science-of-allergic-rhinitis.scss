@@ -62,6 +62,7 @@
       margin-bottom: 22px;
       @include breakpoint('mobile'){
         margin-bottom: 10px;
+        margin-top:22px;
       }
     }
     p.first {
