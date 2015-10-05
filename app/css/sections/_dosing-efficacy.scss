@@ -61,7 +61,7 @@ $space-mobile-copy: 4.6875%;
   }
   .last-p{
       margin-top:26px;
-      margin-bottom: 0;
+      margin-bottom: 15px;
   }
   h2{
       margin-top: 42px;
@@ -279,7 +279,7 @@ $space-mobile-copy: 4.6875%;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:89% !important;
+        width:92% !important;
         padding-right:0 !important;
     }
   }
@@ -599,13 +599,16 @@ $space-mobile-copy: 4.6875%;
             padding-left:$space-mobile-copy;
             padding-right:$space-mobile-copy;
             margin-left:9px;
+             @include breakpoint('mobile') {
+                 
+             }
         }
         .chart-text-inner{
             padding-left:$space-mobile-copy;
             padding-right:$space-mobile-copy;
             margin-top:12px;
             margin-bottom: 9px;
-            width:90%;
+            width:96%;
         }
         .chart-1{
             background-color:$color-white;
@@ -695,8 +698,8 @@ $space-mobile-copy: 4.6875%;
                 line-height: 22px;
                 margin-bottom: 10px;
                 height:46px;
-                width: 81% !important;
-                padding-right: 9% !important;
+                width: 67% !important;
+                padding-right: 24% !important;
             }
             img{
                 width:93.75%;
@@ -787,7 +790,7 @@ $space-mobile-copy: 4.6875%;
          background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
          height: auto;
          //max-width: 601px;
-         padding-bottom: 96%;
+         padding-bottom: 100%;
          width: 100%;
          background-size:contain;
          margin-bottom:16px;
