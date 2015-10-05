@@ -65,7 +65,7 @@
     h2.first-title {
       margin-bottom: 22px;
       @include breakpoint('mobile'){
-        margin-bottom: 4px;
+        margin-bottom: 8px;
         margin-top:22px;
         max-width: 280px;
       }
@@ -361,8 +361,8 @@
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
-      padding-left:26px;
-      padding-right:25px;
+      padding-left: 12px;
+      padding-right: 11px;
       padding-top: 25px;
     }
     h2{
@@ -370,6 +370,8 @@
       margin-top: 0;
       @include breakpoint('mobile'){
         margin-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
       }
     }
     div{
@@ -397,6 +399,8 @@
         margin-bottom: 8px;
         @include breakpoint('mobile'){
           margin-bottom: 23px;
+          padding-left: 10px;
+          padding-right: 10px;
         }
       }
     }
@@ -821,7 +825,7 @@
         margin-bottom: 29px;
         @include breakpoint('mobile'){
           margin-bottom: 6px;
-          margin-top: 19px;
+          margin-top: 23px;
         }
       }
       p{
@@ -848,7 +852,7 @@
       .download-cta-button{
         margin-bottom: 13px;
         @include breakpoint('mobile'){
-          margin-bottom: 13px;
+              margin-bottom: 6px;
           margin-top: 24px;
         }
         .down-txt{
@@ -889,6 +893,7 @@
         text-align: left;
         padding-top:5px;
         margin-bottom: 4px;
+        padding-left: 26px;
     }
   }
 }
