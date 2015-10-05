@@ -569,7 +569,7 @@
 
   #slide03 {
     position: fixed;
-    top: 81px;
+    top: 25px;
     height: 15.7em;
     z-index: 117;
     margin: auto;
@@ -579,9 +579,23 @@
     width: 100%;
     overflow: hidden;
 
-    @include breakpoint("tablet-n-desktop") {
+    @include breakpoint("tablet") {
       top: 139px;
     }
+
+
+    @include breakpoint("desktop") {
+      top: 139px;
+    }
+
+    @include breakpoint("pp-desktop") {
+      top: 97px;
+    }
+
+
+
+
+
 
 
 

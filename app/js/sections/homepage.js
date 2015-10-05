@@ -57,7 +57,7 @@ tl  // -------------------------------------------------------------------------
 
     .to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
     .to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
-    .to('#slide03', 3,       {top: '139px'}, '-=3')
+    //.to('#slide03', 3,       {top: '139px'}, '-=3')
     .to('#compare-copy', 1,  {left: '23%'}, '+=0')
     .to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
     .to('#stats', 1,         {height: '30.5%'}, '+=0')
