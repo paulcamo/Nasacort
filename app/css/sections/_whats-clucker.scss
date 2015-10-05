@@ -60,7 +60,8 @@ $grey-button:#f8f8f8;
 .download{
     h2.sub-down{
         @include breakpoint('mobile'){
-            margin-bottom: 5px;
+            width: 300px;
+            margin: 12px auto 0;
         }
     }
 }
@@ -798,6 +799,7 @@ $grey-button:#f8f8f8;
             line-height: 17px;
             font-size: 12px;
             margin-bottom: 15px;
+            padding-right: 3px;
         }
     }
     .unselected{
@@ -814,6 +816,7 @@ $grey-button:#f8f8f8;
     }
     .selected{
         color:$light-blue;
+        font-weight: bold; 
         &:before{
             content: " ";
             background: url('../img/desktop/clucker/checked-list.png') no-repeat;
@@ -832,6 +835,9 @@ $grey-button:#f8f8f8;
         padding-left: 0;
         display: block;
         overflow: hidden;
+        @include breakpoint('mobile'){
+            padding:0 10px;
+        }
     }
 
     .wac-boxmobile{
@@ -936,6 +942,7 @@ $grey-button:#f8f8f8;
                     margin-left: 20px;
                     @include breakpoint('mobile'){
                        margin-top: 26px; 
+                       margin-left: 0;
                     }
                 }
                 &.mark{
