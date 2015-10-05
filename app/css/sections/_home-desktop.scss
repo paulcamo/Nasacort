@@ -1175,7 +1175,7 @@
 
   #slide1-textbox {
     position: absolute;
-    top: 1.55em;
+    top: 3.9em;
     left: 140.5%;
     font-family: $font-proxima-nova-semibold;
     font-weight: 100;
@@ -1186,6 +1186,12 @@
     letter-spacing: 0.04em;
     width: 39%;
     line-height: 1.2em;
+
+    @include breakpoint("tablet-n-desktop") {
+      top: 1.7em;
+    }
+
+
 
     h2 {
       font-family: $font-proxima-nova-semibold;
