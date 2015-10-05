@@ -70,7 +70,7 @@
     margin-top:47px;
     margin-bottom: 22px; 
     @include breakpoint('mobile'){
-        width:80%;
+        width:70%;
         margin-top:18px;
     }
   }
@@ -137,8 +137,7 @@
     }
     @include breakpoint('mobile'){
       width: 200px;
-      left:56%;
-      right: auto;
+      right: 1px;
       top: -240px;
     }
     img{
