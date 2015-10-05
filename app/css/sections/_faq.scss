@@ -15,7 +15,7 @@ $text-faq-paragraph:#535353;
 
     @include breakpoint("mobile") {
       text-align: left;
-      padding-left: 15px;
+      padding-left: 20px;
     }
 
   }
@@ -379,9 +379,7 @@ p{
             //margin-top:0;
         }
         @media screen and (max-width: 1210px) {
-            //position: relative;
-            //margin-top:0;
-            //width:161px;
+            margin-top:10px;
         }
     }
 }
@@ -402,9 +400,8 @@ p{
             //margin-top:0;
         }
         @media screen and (max-width: 1210px) {
-           // position: relative;
-           // margin-top:0;
-            //width:161px;
+           margin-top:-10px;
+            
         }
     }
 }
