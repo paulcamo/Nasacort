@@ -30,8 +30,8 @@ $space-mobile-copy: 4.6875%;
   @include breakpoint('mobile'){
     max-width: 100% !important;
     min-height: 27px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
  }
   
@@ -529,6 +529,7 @@ $space-mobile-copy: 4.6875%;
           p{
             margin-top:2px; 
             margin-left:$space-mobile-copy;
+            margin-right: $space-mobile-copy;
             margin-bottom:20px;
             &.last-p{
                 margin-top:6px;
