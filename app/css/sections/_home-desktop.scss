@@ -14,7 +14,28 @@
 .home-section {
 
 
-    .home-mobile {
+// to be used for scrollbar on homepage
+//  #header {
+//    background: url("../img/desktop/homepage/bg-top.png") repeat-x;
+//
+//    .header-top {
+//      margin-right: 15px;
+//    }
+//
+//  }
+
+//
+//  .header .header-top ul.main-nav {
+//    @include breakpoint("desktop-n-up") {
+//      margin-top: 28px;
+//    }
+// }
+
+
+
+
+
+  .home-mobile {
       @include breakpoint("tablet-n-up") {
       display: none;
     }
@@ -34,7 +55,7 @@
   .header .header-top ul.utility-nav {
   //  position: fixed;
     right: 0;
-    margin-top: -4px;
+    margin-top: -3px;
 
     @include breakpoint("tablet") {
       margin-top: -5px;
@@ -286,6 +307,9 @@
 
 
   /* ---------------------------------------------------------------------------------------------------------------------   */
+
+
+
 
 
   .header {
