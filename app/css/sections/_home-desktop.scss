@@ -57,6 +57,39 @@
   }
 
 
+  #background .alternative-content ul {
+    font-size: 52px;
+  }
+
+  #background .bottom-content ul {
+    font-size: 50px;
+  }
+
+
+  #background .footer .footer-content .alternative-content ul li .pipe {
+
+
+
+    @include breakpoint("pp-desktop") {
+      margin-top: 0.55em;
+    }
+
+    @include breakpoint("tablet") {
+      line-height: 25px;
+    }
+
+    @include breakpoint("desktop") {
+      line-height: 20px;
+    }
+
+
+
+
+
+
+  }
+
+
 
 
   .footer .footer-content .lists .footer-col {
@@ -99,11 +132,6 @@
   // ---------------------------------------------------------
 
 
-
-
-  #bg-container {
-        /*background: url("../img/bg.png") no-repeat top center;*/
-    }
 
     .content {
         @include clearfix;
@@ -162,26 +190,6 @@
 
 
 }
-
-@media (max-width: 1199px) {
-
-.home-section {
-    #bg-container {
-      //  background: url("../img/bg2.png") no-repeat left top;
-    }
-}
-
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -349,7 +357,7 @@
   #background {
     position: fixed;
     top: 0;
-    background: url("../img/desktop/homepage/background.jpg") no-repeat center top;
+    background: #0C3E78 url("../img/desktop/homepage/background.jpg") no-repeat center top;
     z-index: 98;
     max-width: #{homepage-max-width()};
     background-size: contain;
@@ -363,8 +371,49 @@
 
     .footer {
       position: absolute;
-      bottom: -0.5em;
+     top: 87em;
       display: block;
+
+
+//
+//      @media  screen and (min-width : 769px) and (max-width : 840px)  {
+//        bottom: -10.5em;
+//      }
+//
+//
+//      @media  screen and (min-width : 841px) and (max-width : 880px)  {
+//        bottom: -10.5em;
+//      }
+//
+//      @media  screen and (min-width : 881px) and (max-width : 980px)  {
+//        bottom: -8.5em;
+//      }
+//
+//
+//      @media  screen and (min-width : 980px) and (max-width : 1024px)  {
+//        bottom: -8.5em;
+//      }
+//
+//
+//      @media  screen and (min-width : 1025px) and (max-width : 1100px)  {
+//        bottom: -6.5em;
+//      }
+//
+//
+//      @media  screen and (min-width : 1101px) and (max-width : 1300px)  {
+//        bottom: -4.5em;
+//      }
+//
+//
+//      @media  screen and (min-width : 1301px) and (max-width : 1500px)  {
+//        bottom: -2.5em;
+//      }
+//
+//      @media  screen and (min-width : 1501px)  {
+//        bottom: -0.5em;
+//      }
+
+
     }
 
 
@@ -381,7 +430,7 @@
     left: 0;
     z-index: 10001;
     top: 42em; //21em
-    @include breakpoint("tablet-n-desktop") {
+    @media  screen and (min-width : 769px) and (max-width : 1700px) {
       z-index: 100;
     }
   }
@@ -1465,6 +1514,6 @@ display: none;
   width: 100%;
   background-color: $color-footer-background;
   z-index: 1;
-  height: 0px;
+  height: 100px;
 }
 
