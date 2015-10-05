@@ -373,7 +373,6 @@ p{
 
 #parent-footnote1{
    @include breakpoint('mobile'){
-        float:left;
         width:100%;
     }
     .footnote{
@@ -393,7 +392,6 @@ p{
 
 #parent-footnote2{
     @include breakpoint('mobile'){
-        float:left;
         width:100%;
     }
     .footnote{
