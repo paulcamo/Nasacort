@@ -14,7 +14,8 @@ css.type = "text/css";
 css.innerHTML = "body { font-size: " + xx + "px }";
 document.body.appendChild(css);
 
-
+var sepuede=false;
+var slide3buttonpad=0;
 var finalSlide=1;
 var currentSlide=0;
 var playedSlides = [9,1,0,0,0,0];
@@ -61,9 +62,14 @@ $(document).ready(function() {
 
     var tl1 = new TimelineMax({repeat:-1});
     var tl2 = new TimelineLite();
-
+    var tl3 = new TimelineMax({paused:true});
 
     var tl_mobile = new TimelineMax({repeat:-1});
+
+
+
+    tl3.to('#slide03', 1, {top: slide3buttonpad, ease: Power1.easeOut}, '+=0');
+
 
 
     tl1
@@ -158,7 +164,7 @@ $(document).ready(function() {
         .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
         .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
        // .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
-        .to('#cyan-box', 0.3,   {height:'300px', ease: Power0.easeIn}, '-=1')
+        .to('#cyan-box', 1,   {height:'300px', ease: Power0.easeIn}, '-=1')
     ;  // --- end ---------------------------------------------------------------
 
 
@@ -208,7 +214,6 @@ $(document).ready(function() {
         .to('#background', 4,    {top: '-48.5em', ease: Expo.easeOut}, '+=0')
         .to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
         .to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
-       // .to('#patient-box', 3,   {left: '0px', ease: Power0.easeIn}, '-=1')
         .addLabel('cta4')
         .add(callback_function)
 
@@ -255,7 +260,23 @@ $(document).ready(function() {
     $("#sec01").on("click",function(e) {e.preventDefault(); animate(1); });
     $("#sec02").on("click",function(e) {e.preventDefault(); animate(2); });
     $("#sec03").on("click",function(e) {e.preventDefault(); animate(3); });
-    $("#sec04").on("click",function(e) {e.preventDefault(); animate(4); });
+
+    $("#sec04").on("click",function(e) {
+        e.preventDefault();
+
+
+if (sepuede) {
+    console.log("lo animo");
+    tl3.play();
+} else {
+    animate(4);
+}
+
+
+
+    });
+
+
     $("#sec05").on("click",function(e) {e.preventDefault(); animate(5); });
 
 
@@ -279,7 +300,7 @@ $(window).bind("resize", function(){
 function set_variables(){
 
     if ( isTablet) {
-        console.log ("  isTablet  !!! ");
+       // console.log ("  isTablet  !!! ");
 
         slide5bg= '-68em';
         slide5tab= '-12.85em';
@@ -292,6 +313,17 @@ function set_variables(){
 
 
     }
+
+
+
+
+    console.log ($(window).height());
+    slide3buttonpad = 81 + 5 -   ($("#slide03").height() - ($(window).height()-81));
+    console.log ("padd " + slide3buttonpad);
+
+
+
+
 
 
 }
