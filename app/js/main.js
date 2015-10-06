@@ -577,6 +577,9 @@ if (md.os()=='AndroidOS') {
 }
 
 // --------------------------------------------------------------------------------
+
+var currentVideoTracked = "";
+
 function addFancyVideo()
 {
     $('.fancybox').fancybox();
@@ -599,6 +602,12 @@ function addFancyVideo()
             afterLoad: function() {
                 initVimeoAPI();
             },
+            beforeLoad:function() {
+                ga('send', 'event', 'video', 'click_start', currentVideoTracked);
+            },
+            afterClose:function() {
+                //removeVimeoAPI();
+            },
 
             arrows : false,
             helpers : {
@@ -618,6 +627,12 @@ function addFancyVideo()
             afterLoad: function() {
                 initVimeoAPI();
             },
+            beforeLoad:function() {
+                ga('send', 'event', 'video', 'click_start', currentVideoTracked);
+            },
+            afterClose:function() {
+                //removeVimeoAPI();
+            },
             
             arrows : false,
             helpers : {
@@ -628,7 +643,8 @@ function addFancyVideo()
     }
     
     $('.fancybox').on("click",function(){
-       console.log($(this).attr('data-tracking'));
+       //console.log($(this).attr('data-tracking'));
+       currentVideoTracked = $(this).attr('data-tracking');
     });
 }
 
@@ -641,33 +657,60 @@ function initVimeoAPI()
     var script = "js/vendor/vimeo/jquery.vimeo.api.js";
     $("head").append('<script type="text/javascript" src="' + script + '"></script>');
     
-    try{
+    var playBackPorcentage = 0;
+    var percent_0_Tracked = false;
+    var percent_25_Tracked = false;
+    var percent_50_Tracked = false;
+    var percent_75_Tracked = false;
+    var percent_100_Tracked = false;
+    
     $(".fancybox-overlay iframe").on("playProgress", function(event, data){
-      console.log(this);//return the DOM object of the video that called this event
+      //console.log(this);//return the DOM object of the video that called this event
       //console.log("Seconds Progress", data.seconds);
-      console.log("Percent Progress", data.percent);
+      //console.log("Percent Progress", data.percent);
       //console.log("Duration Progress", data.duration);
-      //var playBackPorcentage = Math.floor(data.percent * 100);
-      /*if(playBackPorcentage === 0)
+      playBackPorcentage = Math.floor(data.percent * 100);
+      
+      if(playBackPorcentage === 0)
       {
-          
+          if(!percent_0_Tracked)
+          {
+              ga('send', 'event', 'video', 'play_0%', currentVideoTracked);
+              percent_0_Tracked = true;
+          }
       }
       if(playBackPorcentage >= 25)
       {
-          
+          if(!percent_25_Tracked)
+          {
+            ga('send', 'event', 'video', 'play_25%', currentVideoTracked);  
+            percent_25_Tracked =  true;
+          }
       }
       if(playBackPorcentage >= 50)
       {
-          
+          if(!percent_50_Tracked)
+          {
+              ga('send', 'event', 'video', 'play_50%', currentVideoTracked);
+              percent_50_Tracked = true;
+          }
       }
       if(playBackPorcentage >= 75)
       {
-          
+          if(!percent_75_Tracked)
+          {
+              ga('send', 'event', 'video', 'play_75%', currentVideoTracked);
+              percent_75_Tracked = true;
+          }
       }
       if(playBackPorcentage >= 100)
       {
-          
-      }*/
+          if(!percent_100_Tracked)
+          {
+              ga('send', 'event', 'video', 'play_100%', currentVideoTracked);
+              percent_100_Tracked = true;
+          }
+      }
     })
     .vimeo("getVolume", function(d){
         //console.log("Voume set to:", d);
@@ -678,5 +721,9 @@ function initVimeoAPI()
     .on('pause',function () {
         //console.log('paused');
     }); 
-    }catch(e){}
+}
+
+function removeVimeoAPI()
+{
+    
 }
