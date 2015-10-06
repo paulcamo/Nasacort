@@ -27,7 +27,7 @@ var actualSlide=1;
 var slide4bg, slide5bg, slide5tab, footerbg;
 
 var tl = new TimelineMax({paused:true});
-
+var tlr = new TimelineMax({paused:true});
 
 
 
@@ -160,6 +160,87 @@ $(document).ready(function() {
        // .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
         .to('#cyan-box', 0.3,   {height:'300px', ease: Power0.easeIn}, '-=1')
     ;  // --- end ---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+    tlr  // ----------------------------------------------------------------------------
+
+        .addLabel('cta1')
+
+        // --- slide 02 ---------------------------------------------------------------
+
+        .to('#header', 1,                    {marginTop: '-29px',  ease: Sine. easeIn} , '+=0')
+       // .to('#slide1-textbox', 3,            {top: '-900px',  ease: Sine. easeIn} , '-=1')
+        .to('#slide01', 3,                   {top: '-900px',  ease: Sine. easeIn} , '-=3')
+        .to('#background', 3,                {top: '-10.7em',  ease: Sine. easeIn} , '-=3')
+       // .fromTo('#herolink', 3,           {top: '0px'}, {top: '-900px'} , '-=3')
+        .fromTo('.footnote[data-section="home-1"]', 3,      {opacity: 1}, {opacity: 0} , '-=3')
+        .fromTo('.footnote[data-section="home-2"]', 3,      {opacity: 0}, {opacity: 1} , '-=3')
+        .fromTo('#slide2useonly', 3,      {opacity: 0}, {opacity: 1} , '-=3')
+        .to('#slide02', 2.8,                   {marginTop: '-15em',  ease: Sine.easeIn} , '-=3')
+       // .to('#bottle', 1.5,                 {marginTop: '16.2em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=1.5')
+       // .to('#cap', 1.5,                    {marginTop: '14.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=1.5')
+       // .to('#cap', 0.7,                  {marginTop: '7.5em', ease: Power1.easeOut} , '+=0')
+       // .to('#cap', 1,                    {marginTop: '16.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
+       // .to('#no-scent', 0.8,             {height: '8em'} , '+=0')
+      //  .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
+        .addLabel('cta2')
+        .add(callback_function)
+
+        // --- slide 03 ---------------------------------------------------------------
+
+        .to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
+        .to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
+        //.to('#compare-copy', 1,  {left: '23%'}, '+=0')
+        //.to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
+        //.to('#stats', 1,         {height: '30.5%'}, '+=0')
+        .addLabel('cta3')
+        .add(callback_function)
+
+        // --- slide 04 ---------------------------------------------------------------
+
+        .to('#background', 4,    {top: '-48.5em', ease: Expo.easeOut}, '+=0')
+        .to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
+        .to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
+       // .to('#patient-box', 3,   {left: '0px', ease: Power0.easeIn}, '-=1')
+        .addLabel('cta4')
+        .add(callback_function)
+
+        // --- slide 05 ---------------------------------------------------------------
+
+        .to('#background', 3,        {top: slide5bg, ease: Power1.easeOut}, '+=0')
+        .to('#slide04', 3,           {top: '-16em', ease: Power1.easeOut}, '-=3')
+        .to('#slide05', 3,           {top: slide5tab, ease: Power1.easeOut}, '-=3')
+        .to('#yellow-spike', 3,      {top: '-2em', ease: Power1.easeOut}, '-=3')
+        .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
+        .addLabel('cta5')
+        .add(callback_function)
+
+        // --- footer ---------------------------------------------------------------
+
+        .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
+        .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
+        // .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
+        .to('#cyan-box', 0.3,   {height:'300px', ease: Power0.easeIn}, '-=1')
+    ;  // --- end ---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -470,7 +551,9 @@ function callback_function (){
    // $("#numero").text(actualSlide + " - " + finalSlide);
 
     if (finalSlide==actualSlide) {
-        tl.pause();
+         tl.pause();
+         tlr.pause();
+
         $(".dotcover").hide();
         playedSlides[actualSlide]=1;
         scrollflag=0;
