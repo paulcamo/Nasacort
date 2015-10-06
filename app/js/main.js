@@ -596,7 +596,7 @@ function addFancyVideo()
             maxHeight: 360,
             minHeight:180,
             afterLoad: function() {
-                //initVimeoAPI();
+                initVimeoAPI();
             },
 
             arrows : false,
@@ -615,7 +615,7 @@ function addFancyVideo()
             prevEffect : 'none',
             nextEffect : 'none',
             afterLoad: function() {
-                //initVimeoAPI();
+                initVimeoAPI();
             },
             
             arrows : false,
@@ -625,40 +625,57 @@ function addFancyVideo()
             }
         });
     }
+    
+    $('.fancybox').on("click",function(){
+       console.log($(this).attr('data-tracking'));
+    });
 }
 
-/*Video JavaScript API*/
+/******************** Video JavaScript API *******************/
+/**
+ *https://github.com/jrue/Vimeo-jQuery-API*/
 
 function initVimeoAPI()
 {
     var script = "js/vendor/vimeo/jquery.vimeo.api.js";
     $("head").append('<script type="text/javascript" src="' + script + '"></script>');
     
-    console.log("------------------------ ");
+    try{
     $(".fancybox-overlay iframe").on("playProgress", function(event, data){
-      
       console.log(this);//return the DOM object of the video that called this event
-
-      console.log("Seconds Progress", data.seconds);
+      //console.log("Seconds Progress", data.seconds);
       console.log("Percent Progress", data.percent);
-      console.log("Duration Progress", data.duration);
-
+      //console.log("Duration Progress", data.duration);
+      //var playBackPorcentage = Math.floor(data.percent * 100);
+      /*if(playBackPorcentage === 0)
+      {
+          
+      }
+      if(playBackPorcentage >= 25)
+      {
+          
+      }
+      if(playBackPorcentage >= 50)
+      {
+          
+      }
+      if(playBackPorcentage >= 75)
+      {
+          
+      }
+      if(playBackPorcentage >= 100)
+      {
+          
+      }*/
     })
     .vimeo("getVolume", function(d){
-
-      console.log("Voume set to:", d);
-
+        //console.log("Voume set to:", d);
     })
-    .vimeo("seekTo", 180)
     .vimeo("getVolume", function(d){
-
-      console.log("New Volume:", d);
-    
+        //console.log("New Volume:", d);
     })
     .on('pause',function () {
-    
-      console.log('paused');
-    
-    });
-    
+        //console.log('paused');
+    }); 
+    }catch(e){;}
 }

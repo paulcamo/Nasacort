@@ -740,6 +740,19 @@
         margin-bottom: 0;
       }
     }
+    .footnote{
+        margin-top:515px;
+        
+        @include breakpoint('desktop'){
+            margin-top:680px;
+        }
+        @include breakpoint('tablet'){
+            margin-top:-420px;
+        }
+        @include breakpoint('mobile'){
+            margin-top:0;
+        }
+    }
     .right-align{
       margin-bottom:0;
       min-height:20px;
@@ -791,6 +804,7 @@
     }
     .right-align{
       margin-bottom: 11px;
+      padding-bottom:0;
       @include breakpoint('mobile'){
         text-align: left;
         padding-top:5px;
