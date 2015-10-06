@@ -235,17 +235,6 @@ $(".js-reference").on("click",function(e){
 
 // --------------------------------------------------------------------------------------------------------------
 
-$(".head-faq").click(function(){
-
-    //console.log ( $(this).data("myitem"));
-    $(this).toggleClass("collp-icon expanded-icon").next("div.text-faq").slideToggle(300, function(){
-        $(this).parent().toggleClass("border-sect-faq");
-
-    });
-});
-
-// --------------------------------------------------------------------------------------------------------------
-
 $('.footnote').on('click', function(e) {
     if($(this).attr("state") != "open"){
         var parentHeight = $(this).data("parent");
