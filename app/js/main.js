@@ -236,9 +236,10 @@ $(".js-reference").on("click",function(e){
 // --------------------------------------------------------------------------------------------------------------
 
 $(".head-faq").click(function(){
-    $(this).toggleClass("collp-icon expanded-icon").next("div.text-faq").slideToggle(300, function(){
 
-$(this).parent().toggleClass("border-sect-faq");
+    //console.log ( $(this).data("myitem"));
+    $(this).toggleClass("collp-icon expanded-icon").next("div.text-faq").slideToggle(300, function(){
+        $(this).parent().toggleClass("border-sect-faq");
 
     });
 });
@@ -677,5 +678,5 @@ function initVimeoAPI()
     .on('pause',function () {
         //console.log('paused');
     }); 
-    }catch(e){;}
+    }catch(e){}
 }
