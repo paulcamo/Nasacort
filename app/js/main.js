@@ -260,7 +260,7 @@ $('.footnote').on('click', function(e) {
        
         e.preventDefault();
     }
-    
+    trackFootnoteOpen($('.footnote').index($(this)), $("body").attr("class"));
 });
 
 $('.footnote .close-btn').on('click', function(e) {
@@ -279,6 +279,7 @@ $('.footnote .close-btn').on('click', function(e) {
        $(this).parent().parent().css("width","width: 11.5%"); 
     }
     e.preventDefault(); 
+    trackFootnoteClose($('.footnote .close-btn').index($(this)), $("body").attr("class"));
 });
 
 function validateFootnote()
