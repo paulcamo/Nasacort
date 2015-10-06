@@ -1540,10 +1540,17 @@ display: none;
 
 #cyan-box {
   position: fixed;
-  bottom: 0%;
+  bottom: 0;
   width: 100%;
   background-color: $color-footer-background;
   z-index: 1;
   height: 100px;
+
+  @include breakpoint("limit") {
+    display: none;
+
+  }
+
+
 }
 
