@@ -5,7 +5,7 @@ $(document).ready(function() {
     setGlassHeadsPopup();
     addAudioPlayer();
     toggleTooltip();
-    clickGoSection()
+    clickGoSection();
 
     var contentwidth = $(window).width();
     if ((contentwidth) >= mobileBreakPoint){
@@ -456,7 +456,7 @@ function clickGoSection(){
         $('.click_state').find('.arrow-upMenu').removeClass('hover');
         $('.click_state').removeClass('click_state');
 
-    })
+    });
 }
 
 
