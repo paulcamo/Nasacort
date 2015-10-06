@@ -595,6 +595,9 @@ function addFancyVideo()
             maxWidth:640,
             maxHeight: 360,
             minHeight:180,
+            afterLoad: function() {
+                //initVimeoAPI();
+            },
 
             arrows : false,
             helpers : {
@@ -611,7 +614,10 @@ function addFancyVideo()
             closeEffect : 'none',
             prevEffect : 'none',
             nextEffect : 'none',
-
+            afterLoad: function() {
+                //initVimeoAPI();
+            },
+            
             arrows : false,
             helpers : {
                 media : {},
@@ -621,5 +627,38 @@ function addFancyVideo()
     }
 }
 
+/*Video JavaScript API*/
 
+function initVimeoAPI()
+{
+    var script = "js/vendor/vimeo/jquery.vimeo.api.js";
+    $("head").append('<script type="text/javascript" src="' + script + '"></script>');
+    
+    console.log("------------------------ ");
+    $(".fancybox-overlay iframe").on("playProgress", function(event, data){
+      
+      console.log(this);//return the DOM object of the video that called this event
 
+      console.log("Seconds Progress", data.seconds);
+      console.log("Percent Progress", data.percent);
+      console.log("Duration Progress", data.duration);
+
+    })
+    .vimeo("getVolume", function(d){
+
+      console.log("Voume set to:", d);
+
+    })
+    .vimeo("seekTo", 180)
+    .vimeo("getVolume", function(d){
+
+      console.log("New Volume:", d);
+    
+    })
+    .on('pause',function () {
+    
+      console.log('paused');
+    
+    });
+    
+}
