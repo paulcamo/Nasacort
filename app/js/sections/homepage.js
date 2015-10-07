@@ -475,10 +475,13 @@ function select_a_slide(v) {
 
             if (sepuede && actualSlide==3) {
                 console.log("lo animo");
+                scrollflag=1;
                 tl3.play();
                 sepuede=false;
-                timer=  window.setTimeout( zeroflag ,1000);
+                timer=  window.setTimeout( zerotl3 ,1500);
             } else {
+
+                if (actualSlide==3) { check_sepuede();}
 
                 finalSlide = actualSlide += 1;
                 $("#dots-container .dotbox .dot").eq(actualSlide - 1).click();
@@ -526,6 +529,7 @@ function select_a_slide(v) {
 
 
         }
+
 
         //$.doTimeout( 'scroll', 700, function(){
         //    // do something computationally expensive
@@ -634,3 +638,25 @@ function animate(n) {
 
 
 function zeroflag() {  scrollflag=0;  }
+
+function zerotl3() {  scrollflag=0; tl3.pause();  }
+
+
+function ver() {
+    console.log(playedSlides);
+    console.log(sepuede);
+    console.log(actualSlide);
+
+}
+
+
+function check_sepuede() {
+
+    if ($(window).height() <=750) {
+        sepuede=true;
+        console.log('si se pudo');
+        tl3.time(0);
+    }
+
+
+}
