@@ -410,7 +410,105 @@ function trackGlassHeadClose(character)
     ga('send', 'event', 'interactive', 'click_interactive', symptom + ' interactive: exit');   
 }
 
+/************** Interactive Form Compare - Nasacort Difference - S&A **************/
+
 function trackInteractiveForm(brand)
 {
-    console.log(brand);
+    ga('send', 'event', 'interactive', 'click_interactive', 'section 3: compare ' + brand + ' select'); 
+}
+
+function trackCloseInteractiveForm(brand)
+{
+    ga('send', 'event', 'interactive', 'click_interactive', 'section 3: compare ' + brand + ' exit');   
+}
+
+/************** Carousel - Science of Allerghic Rhinitis - S&A **************/
+
+function trackCurrentSlide(id)
+{
+    var slideTag = "";
+    
+    switch(id)
+    {
+        case "slide-1":
+            slideTag = "exposure";
+        break;
+        case "slide-2":
+            slideTag = "early phase";
+        break;
+        case "slide-3":
+            slideTag = "inflammation";
+        break;
+        case "slide-4":
+            slideTag = "late phase";
+        break;
+        case "slide-5":
+            slideTag = "escalation";
+        break;
+    }
+    ga('send', 'event', 'interactive', 'load_slide', 'slideshow: ' + slideTag + ' slide');  
+}
+
+function trackForwardSlide(id)
+{
+    var slideTag = "";
+    var prev = "";
+    
+    switch(id)
+    {
+        case "slide-1":
+            slideTag = "exposure";
+        break;
+        case "slide-2":
+            prev = "exposure";
+            slideTag = "early phase response";
+        break;
+        case "slide-3":
+            prev = "early phase response";
+            slideTag = "inflammation";
+        break;
+        case "slide-4":
+            prev = "inflammation";
+            slideTag = "late phase response";
+        break;
+        case "slide-5":
+            prev = "late phase response";
+            slideTag = "escalation";
+        break;
+    }
+    
+    ga('send', 'event', 'interactive', 'click_interactive', 'slideshow: '+ prev + ' forward button');  
+    ga('send', 'event', 'interactive', 'load_slide', 'slideshow: ' + slideTag + ' slide');      
+}
+
+function trackBackSlide(id)
+{
+    var slideTag = "";
+    var next = "";
+    
+    switch(id)
+    {
+        case "slide-1":
+            next = "early phase response"; 
+            slideTag = "exposure";
+        break;
+        case "slide-2":
+            next = "inflammation"; 
+            slideTag = "early phase response";
+        break;
+        case "slide-3":
+            next = "late phase response"; 
+            slideTag = "inflammation";
+        break;
+        case "slide-4":
+            next = "escalation"; 
+            slideTag = "late phase response";
+        break;
+        case "slide-5":
+            slideTag = "escalation";
+        break;
+    }
+    
+    ga('send', 'event', 'interactive', 'click_interactive', 'slideshow: ' + next + ' back button'); 
+    ga('send', 'event', 'interactive', 'load_slide', 'slideshow: ' + slideTag + ' slide');
 }

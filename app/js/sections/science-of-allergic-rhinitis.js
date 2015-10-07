@@ -8,6 +8,7 @@ $(document).ready(function(){
     $( '.cycle-slideshow' ).on( 'cycle-initialized', function( event, opts ) {
         validateCarouselNumberOfLines();
         validateCarouselArrows();
+        cycle2Events();
     });
     animateGraph();
 });
@@ -77,20 +78,10 @@ function changeImageSrc()
      
      if ((contentwidth) < mobileBreakPoint)
      {
-         // $(".graph img").each(function(){
-         //     var newPath = $(this).attr("src").replace("desktop", "mobile");
-         //     $(this).attr("src", newPath);
-         // });
-         
          newPath = $(".graphic-container .graphic").attr("src").replace("desktop", "mobile");
          $(".graphic-container .graphic").attr("src", newPath);
      }else
      {
-        // $(".graph img").each(function(){
-        //      var newPath = $(this).attr("src").replace("mobile", "desktop");
-        //      $(this).attr("src", newPath);
-        //  });  
-         
          newPath = $(".graphic-container .graphic").attr("src").replace("mobile", "desktop");
          $(".graphic-container .graphic").attr("src", newPath);
      }
@@ -148,4 +139,30 @@ function validateCarouselNumberOfLines()
         $(this).css("height", null);
         $(this).css("height", biggestLine);
      });
+}
+
+function cycle2Events()
+{
+    var currentSlide = $(".cycle-slide-active").attr("id");
+    
+    trackCurrentSlide(currentSlide);   
+   
+   $(".cycle-slideshow").on("cycle-next", function( event, opts ) {
+        currentSlide = $(".cycle-slide-active").attr("id");
+        trackForwardSlide(currentSlide);
+    });
+     
+   $(".cycle-slideshow").on("cycle-prev", function( event, opts ) {
+        currentSlide = $(".cycle-slide-active").attr("id");
+        trackBackSlide(currentSlide)
+    });
+    
+    /*$(".cycle-slideshow").on("cycle-before", function( event, opts ) {
+        currentSlide = $(".cycle-slide-active").attr("id");
+        //console.log("< " + currentSlide);
+    });
+    $(".cycle-slideshow").on("cycle-after", function( event, opts ) {
+        currentSlide = $(".cycle-slide-active").attr("id");
+        //console.log("> " + currentSlide);
+    });*/
 }

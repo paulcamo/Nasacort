@@ -9,15 +9,14 @@ var brand_checks_flonase =  [0,0,1,1,1,1,1,1,1,1,1,1,1,1];
 var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,0];
 var brand_checks_zyrtec =   [1,1,1,1,1,0,0,1,0,1,0,1,1,1];
 
+var currentBrand = "";
+
 var mobileBreakPoint = 768;
 
 
 function set_checks(nn){
 
     remove_brand_bg(nn);
-
-
-
 
     $(".brand-check").attr("src","../img/desktop/nasacort-difference/charts-check-" + nn + ".png");
     for (n=0;n<=brand_checks.length; n++) {
@@ -27,6 +26,8 @@ function set_checks(nn){
             $(".brand-check:eq("+ n + ")").addClass("invisible");
         }
     }
+    
+    currentBrand = nn;
 }
 
 
@@ -63,7 +64,8 @@ $(document).ready(function(){
 
         $("#brand-compare .inner-logos").show();
         $("#brand-compare .instruccion").show();
-
+        
+        trackCloseInteractiveForm(currentBrand);
     });
 
     $(".brand").on("click", function(e){
