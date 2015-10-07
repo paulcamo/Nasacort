@@ -342,6 +342,11 @@ function addDownloadCTATracking()
         
         var sectionName = $("body").attr("class");
         
+        if($(this).parent().parent().attr("data-tracking"))// should be resources
+        {
+           resource = $(this).parent().parent().attr("data-tracking"); 
+        }
+        
         switch(sectionName)
         {
             case "home-section":
@@ -359,10 +364,21 @@ function addDownloadCTATracking()
                 ga('send', 'event', 'download', 'click_content', 'section 4: download chart button'); 
             break;
             case "resources-section":
-                ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
+                 if(resource === "nasacort difference")
+                 {
+                     ga('send', 'event', 'download', 'click_content', 'how nasacort is different: download');   
+                 }
+                 if(resource === "ar symptom q")
+                 {
+                     ga('send', 'event', 'download', 'click_content', 'ar symptom questionnaire: download');    
+                 }
+                 if(resource != "nasacort difference" && resource != "ar symptom q")
+                 {
+                     ga('send', 'event', 'download', 'click_content', resource + ': download'); 
+                 }
             break;
             case "faq-section":
-                ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
+                //Not Applies
             break;
             case "drug-fact-label-section":
                 ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
