@@ -29,7 +29,7 @@ var slide4bg, slide5bg, slide5tab, footerbg;
 
 var tl = new TimelineMax({paused:true});
 var tlr = new TimelineMax({paused:true});
-
+var tl3 = new TimelineMax({paused:true});
 
 
 
@@ -62,13 +62,13 @@ $(document).ready(function() {
 
     var tl1 = new TimelineMax({repeat:-1});
     var tl2 = new TimelineLite();
-    var tl3 = new TimelineMax({paused:true});
+
 
     var tl_mobile = new TimelineMax({repeat:-1});
 
 
 
-    tl3.to('#slide03', 1, {top: slide3buttonpad, ease: Power1.easeOut}, '+=0');
+    tl3.fromTo('#slide03', 1, {top: '25px'},  {top: slide3buttonpad, ease: Power1.easeOut}, '+=0');
 
 
 
@@ -260,31 +260,11 @@ $(document).ready(function() {
     $("#sec01").on("click",function(e) {e.preventDefault(); animate(1); });
     $("#sec02").on("click",function(e) {e.preventDefault(); animate(2); });
     $("#sec03").on("click",function(e) {e.preventDefault(); animate(3); });
-
-    $("#sec04").on("click",function(e) {
-        e.preventDefault();
-
-
-if (sepuede) {
-    console.log("lo animo");
-    tl3.play();
-} else {
-    animate(4);
-}
-
-
-
-    });
-
-
+    $("#sec04").on("click",function(e) {e.preventDefault(); animate(4); });
     $("#sec05").on("click",function(e) {e.preventDefault(); animate(5); });
 
 
 });
-
-
-
-
 
 
 
@@ -490,20 +470,34 @@ function select_a_slide(v) {
 
     if (v>=0) {
         if(actualSlide<6) {
-            finalSlide= actualSlide+=1;
-
-            $("#dots-container .dotbox .dot").eq(actualSlide-1).click();
 
 
-            if(actualSlide==6) {
 
-                 tl.seek('cta5');
+            if (sepuede && actualSlide==3) {
+                console.log("lo animo");
+                tl3.play();
+                sepuede=false;
                 timer=  window.setTimeout( zeroflag ,1000);
-                tl.play();
+            } else {
+
+                finalSlide = actualSlide += 1;
+                $("#dots-container .dotbox .dot").eq(actualSlide - 1).click();
+
+
+                if (actualSlide == 6) {
+
+                    tl.seek('cta5');
+                    timer = window.setTimeout(zeroflag, 1000);
+                    tl.play();
+                }
             }
 
-
         }
+
+
+
+
+
 
         if(actualSlide==6) {
             timer=  window.setTimeout( zeroflag ,1000);
