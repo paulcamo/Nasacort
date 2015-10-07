@@ -352,7 +352,7 @@ function addDownloadCTATracking()
             case "home-section":
             break;
             case "nasacort-difference-section":
-                ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
+                ga('send', 'event', 'download', 'click_content', 'section 3: download comparision chart button');    
             break;
             case "dosing-and-efficacy-section":
                 ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
@@ -408,4 +408,9 @@ function trackGlassHeadClose(character)
     }
     
     ga('send', 'event', 'interactive', 'click_interactive', symptom + ' interactive: exit');   
+}
+
+function trackInteractiveForm(brand)
+{
+    console.log(brand);
 }
