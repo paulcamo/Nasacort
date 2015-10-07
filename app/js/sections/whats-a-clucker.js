@@ -76,7 +76,7 @@ function setGlassHeadsPopup()
         }
         if(currentGlassHead === "" && !isMobile)
         { 
-            if(currentCharacter.length > 0)
+            if(currentCharacter != "")
             {
                 $("#glass-head #" + currentCharacter + " .default").show(); 
             }  
@@ -89,8 +89,13 @@ function setGlassHeadsPopup()
         
     });
     
+    /*$('#glass-head').on('shown.bs.modal', function (event) {
+        console.log(event.relatedTarget);
+    });*/
+    
     $("#glass-head #close").on("click",function(){
         $('#glass-head').modal('hide');
+        trackGlassHeadClose(currentCharacter);
         currentCharacter = "";
         currentGlassHead = "";
         if(!isMobile)

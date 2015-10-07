@@ -75,6 +75,7 @@ var wasRecipientName;
 var wasRecipientEmail;
 
 var independentDataTracking;
+var resource;
 
 function trackShare(bodyClass, target)
 {
@@ -84,11 +85,18 @@ function trackShare(bodyClass, target)
     wasYourEmail = false;
     wasRecipientName = false;
     wasRecipientEmail = false;
+    independentDataTracking = "";
+    resource = "";
     
-    if($(target).attr("data-tracking"))
+    if($(target).attr("data-tracking"))//it's maybe on what's clucker page
     {
         independentDataTracking = $(target).attr("data-tracking");
     }
+    if($(target).parent().parent().attr("data-tracking"))// should be resources
+    {
+       resource = $(target).parent().parent().attr("data-tracking"); 
+    }
+    
     
     switch(sectionName)
     {
@@ -101,16 +109,34 @@ function trackShare(bodyClass, target)
             ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
         break;
         case "whats-a-clucker-section":
-            ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
+            if(independentDataTracking != "")
+            {
+                ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
+            }else
+            {
+                ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
+            }
         break;
         case "science-of-allergic-rhinitis-section":
             ga('send', 'event', 'share', 'click_content', 'section 4: share button');   
         break;
         case "resources-section":
-            //ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
+             if(resource === "nasacort difference")
+             {
+                 ga('send', 'event', 'share', 'click_content', 'how nasacort is different: share'); 
+             }
+             if(resource === "ar symptom q")
+             {
+                 ga('send', 'event', 'share', 'click_content', 'ar symptom questionnaire: share'); 
+             }
+             if(resource != "nasacort difference" && resource != "ar symptom q")
+             {
+                 ga('send', 'event', 'share', 'click_content', resource + ': share'); 
+             }
+
         break;
         case "faq-section":
-            //ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
+             //Not Applies
         break;
         case "drug-fact-label-section":
             ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
@@ -162,16 +188,22 @@ function trackEnterText(sectionName, field)
             if(independentDataTracking != "")
             {
                 ga('send', 'event', 'registration', 'enter_text_content', independentDataTracking + ' share: ' + field);   
+            }else
+            {
+                ga('send', 'event', 'registration', 'enter_text_content', 'drug facts share: ' + field);
             }
         break;
         case "science-of-allergic-rhinitis-section":
             ga('send', 'event', 'registration', 'enter_text_content', 'science of ar share: ' + field);    
         break;
         case "resources-section":
-            //ga('send', 'event', 'registration', 'enter_text_content', 'drug facts share: ' + field);  
+             if(resource != "")
+             {
+                ga('send', 'event', 'registration', 'enter_text_content', resource + ' pdf share: ' + field);  
+             }
         break;
         case "faq-section":
-            //ga('send', 'event', 'registration', 'enter_text_content', 'drug facts share: ' + field);  
+             //Not Applies
         break;
         case "drug-fact-label-section":
             ga('send', 'event', 'registration', 'enter_text_content', 'drug facts share: ' + field);  
@@ -197,16 +229,22 @@ function trackCloseShare(bodyClass)
             if(independentDataTracking != "")
             {
                 ga('send', 'event', 'popover/modal', 'click_content', independentDataTracking + ' share: exit');   
-            } 
+            } else
+            {
+                ga('send', 'event', 'popover/modal', 'click_content', 'drug facts share: exit');  
+            }
         break;
         case "science-of-allergic-rhinitis-section":
             ga('send', 'event', 'popover/modal', 'click_content', 'science of ar share: exit'); 
         break;
         case "resources-section":
-            //ga('send', 'event', 'popover/modal', 'click_content', 'drug facts share: exit');    
+             if(resource != "")
+             {
+                ga('send', 'event', 'popover/modal', 'click_content', resource + ' pdf share: exit');   
+             }
         break;
         case "faq-section":
-            //ga('send', 'event', 'popover/modal', 'click_content', 'drug facts share: exit');    
+             //Not Applies
         break;
         case "drug-fact-label-section":
             ga('send', 'event', 'popover/modal', 'click_content', 'drug facts share: exit');    
@@ -232,16 +270,22 @@ function trackSubmitShare(bodyClass)
             if(independentDataTracking != "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ' share: submit');   
-            }  
+            }else
+            {
+                 ga('send', 'event', 'button link', 'click_content', 'drug facts share: submit');   
+            }
         break;
         case "science-of-allergic-rhinitis-section":
             ga('send', 'event', 'button link', 'click_content', 'science of ar share: submit');   
         break;
         case "resources-section":
-            //ga('send', 'event', 'button link', 'click_content', 'drug facts share: submit');    
+             if(resource != "")
+             {
+                ga('send', 'event', 'button link', 'click_content', resource + ' pdf share: submit');  
+             }  
         break;
         case "faq-section":
-            //ga('send', 'event', 'button link', 'click_content', 'drug facts share: submit');    
+             //Not Applies  
         break;
         case "drug-fact-label-section":
             ga('send', 'event', 'button link', 'click_content', 'drug facts share: submit');    
@@ -267,16 +311,22 @@ function trackCancelShare(bodyClass)
             if(independentDataTracking != "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ' share: cancel');   
-            }   
+            }else
+            {
+                ga('send', 'event', 'button link', 'click_content', 'drug facts share: cancel');    
+            }  
         break;
         case "science-of-allergic-rhinitis-section":
             ga('send', 'event', 'button link', 'click_content', 'science of ar share: cancel');  
         break;
         case "resources-section":
-            //ga('send', 'event', 'button link', 'click_content', 'drug facts share: cancel');    
+            if(resource != "")
+             {
+                ga('send', 'event', 'button link', 'click_content', resource + ' pdf share: cancel');   
+             }   
         break;
         case "faq-section":
-            //ga('send', 'event', 'button link', 'click_content', 'drug facts share: cancel');    
+             //Not Applies
         break;
         case "drug-fact-label-section":
             ga('send', 'event', 'button link', 'click_content', 'drug facts share: cancel');    
@@ -303,7 +353,7 @@ function addDownloadCTATracking()
                 ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
             break;
             case "whats-a-clucker-section":
-                ga('send', 'event', 'download', 'click_footer', 'drug facts label download button');    
+                ga('send', 'event', 'download', 'click_content', 'download symptom questionnaire button');   
             break;
             case "science-of-allergic-rhinitis-section":
                 ga('send', 'event', 'download', 'click_content', 'section 4: download chart button'); 
@@ -319,4 +369,27 @@ function addDownloadCTATracking()
             break;
         }
     });
+}
+
+function trackGlassHeadClose(character)
+{
+    var symptom = "";
+    
+    switch(character)
+    {
+        case "maria":
+            symptom = "clucker";
+        break;
+        case "mark":
+            symptom = "dripper";
+        break;
+        case "kara":
+            symptom = "mouthbreather";
+        break;
+        case "liam":
+            symptom = "sniffler";
+        break;
+    }
+    
+    ga('send', 'event', 'interactive', 'click_interactive', symptom + ' interactive: exit');   
 }
