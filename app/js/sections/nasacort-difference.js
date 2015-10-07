@@ -106,8 +106,9 @@ $(document).ready(function(){
                 brand_checks = brand_checks_default;
                 set_checks();
                 break;
-
         }
+        
+        trackInteractiveForm($(this).data("brand"));
     });
 
 });
