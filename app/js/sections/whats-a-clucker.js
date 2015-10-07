@@ -76,7 +76,10 @@ function setGlassHeadsPopup()
         }
         if(currentGlassHead === "" && !isMobile)
         { 
-             $("#glass-head #" + currentCharacter + " .default").show();   
+            if(currentCharacter.length > 0)
+            {
+                $("#glass-head #" + currentCharacter + " .default").show(); 
+            }  
         }
         if(currentGlassHead === "" && isMobile)
         { 

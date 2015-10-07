@@ -365,9 +365,11 @@ function setSharePopup() {
     $("#share #close").on("click",function(){
         resetForm();
         $('#share').modal('hide');
+        trackCloseShare($("body").attr("class"));
     });
     $("input[type='reset']").on("click", function(e) {
         $('#share').modal('hide');
+        trackCancelShare($("body").attr("class"));
     });
     
     $("#share .error-globe").on("click",function(){
@@ -379,6 +381,9 @@ function setSharePopup() {
     $("#share").on('hidden.bs.modal', function (e) {
       //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
       resetForm();
+    });
+    $('#share').on('shown.bs.modal', function (event) {
+        trackShare($("body").attr("class"), event.relatedTarget);
     });
     
     addSubmitHandler();
@@ -456,6 +461,7 @@ function addSubmitHandler()
     $("#share").submit(function( event ) {
         // Stop form from submitting normally
         event.preventDefault();
+        trackSubmitShare($("body").attr("class"));
         // Get some values from elements on the page:
         var $form = $(this);
         var yourName = $form.find("input[name='yourName']").val();
