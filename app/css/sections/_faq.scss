@@ -24,6 +24,12 @@ $text-faq-paragraph:#535353;
 
   .use-last {
     padding-bottom: 30px;
+    @include breakpoint("mobile") {
+        margin-bottom: 9px;
+        margin-top: 36px;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
   }
 
   .use-second {
@@ -230,6 +236,10 @@ p{
 
    .last-faq {
     border: none;
+        @include  breakpoint("mobile") {
+            margin-bottom: 0px; 
+            padding-botom:0;
+        }
     }
 
     .question-faq{
