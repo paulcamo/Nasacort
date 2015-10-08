@@ -271,6 +271,14 @@ $subtitle-color:#0d5ea4;
         }
         @include breakpoint('mobile'){
             margin-bottom: 17px;
+            float:left;
+            width:100%;
+        }
+        li{
+            @include breakpoint('mobile'){
+                float:left;
+                width:100%;
+            }
         }
     }
 
