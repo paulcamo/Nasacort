@@ -82,7 +82,7 @@
                         }
                         input[type='text']{
                             font-family:Arial, Helvetica, sans-serif;
-                            color:#989c9f;
+                            color: #989c9f;
                             font-size:16px;
                             @include border-radius(5px);
                             outline: 0;
@@ -305,6 +305,9 @@ $color-red:#fe0000;
                             height:33px;
                             padding-left:13px;
                             max-width:100%;
+                            &.email{
+                                color:#afb2b4;
+                            }
                         }
                         .triangle{
                             width:16px;
