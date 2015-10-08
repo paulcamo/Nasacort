@@ -5,6 +5,11 @@
     @include breakpoint('mobile') {
         background:url("../img/mobile/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
     }
+    h1{
+         @include breakpoint('mobile'){
+             width:100%;
+         }
+    }
   }
   .right-align{
     text-align: right;
