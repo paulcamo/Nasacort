@@ -432,12 +432,14 @@ function addTextFieldEvents()
             if(currentValue === yourDefaultEmail)
             {
                  $(this).val("");
+                 $(this).css("color","#363737");
             }
         }else
         {
             if(currentValue == recipientDefaultEmail)
             {
                  $(this).val("");
+                 $(this).css("color","#363737");
             }
         }
     });
@@ -448,9 +450,11 @@ function addTextFieldEvents()
             if($(this).attr("name") == "yourEmail")
             {
                  $(this).val(yourDefaultEmail);
+                 $(this).css("color","#afb2b4");
             }else
             {
                  $(this).val(recipientDefaultEmail);
+                 $(this).css("color","#afb2b4");
             }
         }
     });
