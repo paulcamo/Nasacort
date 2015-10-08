@@ -154,7 +154,7 @@ function cycle2Events()
      
    $(".cycle-slideshow").on("cycle-prev", function( event, opts ) {
         currentSlide = $(".cycle-slide-active").attr("id");
-        trackBackSlide(currentSlide)
+        trackBackSlide(currentSlide);
     });
     
     /*$(".cycle-slideshow").on("cycle-before", function( event, opts ) {

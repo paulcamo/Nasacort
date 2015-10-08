@@ -76,7 +76,7 @@ function setGlassHeadsPopup()
         }
         if(currentGlassHead === "" && !isMobile)
         { 
-            if(currentCharacter != "")
+            if(currentCharacter !== "")
             {
                 $("#glass-head #" + currentCharacter + " .default").show(); 
             }  

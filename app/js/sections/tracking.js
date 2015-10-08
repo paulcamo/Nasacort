@@ -109,7 +109,7 @@ function trackShare(bodyClass, target)
             ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
         break;
         case "whats-a-clucker-section":
-            if(independentDataTracking != "")
+            if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
             }else
@@ -129,7 +129,7 @@ function trackShare(bodyClass, target)
              {
                  ga('send', 'event', 'share', 'click_content', 'ar symptom questionnaire: share'); 
              }
-             if(resource != "nasacort difference" && resource != "ar symptom q")
+             if(resource !== "nasacort difference" && resource !== "ar symptom q")
              {
                  ga('send', 'event', 'share', 'click_content', resource + ': share'); 
              }
@@ -185,7 +185,7 @@ function trackEnterText(sectionName, field)
             ga('send', 'event', 'registration', 'enter_text_content', 'drug facts share: ' + field);  
         break;
         case "whats-a-clucker-section":
-            if(independentDataTracking != "")
+            if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'registration', 'enter_text_content', independentDataTracking + ' share: ' + field);   
             }else
@@ -197,7 +197,7 @@ function trackEnterText(sectionName, field)
             ga('send', 'event', 'registration', 'enter_text_content', 'science of ar share: ' + field);    
         break;
         case "resources-section":
-             if(resource != "")
+             if(resource !== "")
              {
                 ga('send', 'event', 'registration', 'enter_text_content', resource + ' pdf share: ' + field);  
              }
@@ -226,7 +226,7 @@ function trackCloseShare(bodyClass)
             ga('send', 'event', 'popover/modal', 'click_content', 'drug facts share: exit');    
         break;
         case "whats-a-clucker-section":
-            if(independentDataTracking != "")
+            if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'popover/modal', 'click_content', independentDataTracking + ' share: exit');   
             } else
@@ -238,7 +238,7 @@ function trackCloseShare(bodyClass)
             ga('send', 'event', 'popover/modal', 'click_content', 'science of ar share: exit'); 
         break;
         case "resources-section":
-             if(resource != "")
+             if(resource !== "")
              {
                 ga('send', 'event', 'popover/modal', 'click_content', resource + ' pdf share: exit');   
              }
@@ -267,7 +267,7 @@ function trackSubmitShare(bodyClass)
             ga('send', 'event', 'button link', 'click_content', 'drug facts share: submit');    
         break;
         case "whats-a-clucker-section":
-            if(independentDataTracking != "")
+            if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ' share: submit');   
             }else
@@ -279,7 +279,7 @@ function trackSubmitShare(bodyClass)
             ga('send', 'event', 'button link', 'click_content', 'science of ar share: submit');   
         break;
         case "resources-section":
-             if(resource != "")
+             if(resource !== "")
              {
                 ga('send', 'event', 'button link', 'click_content', resource + ' pdf share: submit');  
              }  
@@ -308,7 +308,7 @@ function trackCancelShare(bodyClass)
             ga('send', 'event', 'button link', 'click_content', 'drug facts share: cancel');    
         break;
         case "whats-a-clucker-section":
-            if(independentDataTracking != "")
+            if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ' share: cancel');   
             }else
@@ -320,7 +320,7 @@ function trackCancelShare(bodyClass)
             ga('send', 'event', 'button link', 'click_content', 'science of ar share: cancel');  
         break;
         case "resources-section":
-            if(resource != "")
+            if(resource !== "")
              {
                 ga('send', 'event', 'button link', 'click_content', resource + ' pdf share: cancel');   
              }   
@@ -372,7 +372,7 @@ function addDownloadCTATracking()
                  {
                      ga('send', 'event', 'download', 'click_content', 'ar symptom questionnaire: download');    
                  }
-                 if(resource != "nasacort difference" && resource != "ar symptom q")
+                 if(resource != "nasacort difference" && resource !== "ar symptom q")
                  {
                      ga('send', 'event', 'download', 'click_content', resource + ': download'); 
                  }
