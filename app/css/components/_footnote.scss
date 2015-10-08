@@ -31,6 +31,10 @@
   .close-btn {
     cursor:pointer;
     float:right;
+    right: 2%;
+    padding: 10px;
+    top: 5%;
+    position:absolute;
     .x-btn {
       background: url("../img/desktop/ctas/switch-close.png") no-repeat;
       width: 11px;
@@ -76,6 +80,7 @@
     background-color: $color-white;
     z-index: 100;
     left:0 !important;
+    position:relative;
 
   @include breakpoint("mobile") {
       padding: 10px 10px 10px 17px;
