@@ -1,7 +1,9 @@
 //JavaScript Document
 var mobileBreakPoint = 768;
+var isMobile;
 
 $(document).ready(function() {   
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     setGlassHeadsPopup();
     addAudioPlayer();
     toggleTooltip();
@@ -15,6 +17,7 @@ $(document).ready(function() {
 });
 
 $(window).bind("resize", function(){
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     var contentwidth = $(window).width();
     if (contentwidth < mobileBreakPoint){
         hoverInNav();
