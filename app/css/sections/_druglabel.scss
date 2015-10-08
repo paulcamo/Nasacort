@@ -271,6 +271,14 @@ $subtitle-color:#0d5ea4;
         }
         @include breakpoint('mobile'){
             margin-bottom: 17px;
+            float:left;
+            width:100%;
+        }
+        li{
+            @include breakpoint('mobile'){
+                float:left;
+                width:100%;
+            }
         }
     }
 
@@ -282,5 +290,12 @@ $subtitle-color:#0d5ea4;
     padding: 15px 15px 15px 17px;
     margin-bottom: 15px;
     margin-top: 15px;
+}
+
+.drug-fact-label-section{
+    .download-cta-button{
+        margin-bottom: 18px !important;
+        margin-top: 19px;
+    }
 }
 
