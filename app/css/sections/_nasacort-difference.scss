@@ -754,6 +754,9 @@
     background-color: $color-blue-light-container;
     height: 241px;
     position:relative;
+    @include breakpoint('mobile'){
+        height: 204px;
+    }
     .content{
       overflow: hidden;
       @include breakpoint('desktop'){
@@ -798,6 +801,8 @@
       @include breakpoint('mobile'){
         max-width: 290px !important;
         background:none;
+        height: 150px;
+        margin-top: 25px;
       }
       &:hover{
         background:url("../img/desktop/nasacort-difference/cta-faqbanner-hover.png") no-repeat 100% 135px;
@@ -811,6 +816,9 @@
       margin-top: 35px;
       @include breakpoint('tablet'){
         width: 75%;
+      }
+      @include breakpoint('mobile'){
+        margin-top:12px;
       }
       img{
         float: left;
