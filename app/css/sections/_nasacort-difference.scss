@@ -206,6 +206,7 @@
         z-index:2;
          @include breakpoint('mobile'){
              margin-left:0 !important;
+             margin-bottom:15px;
          }
     }
     h2{
