@@ -10,8 +10,1207 @@
 //-----------------------------------------------------------------------------------------------------------------
 
 
+body {
+  overflow-x: hidden;
+}
 
 .home-section {
+
+  .home-mobile {
+    @include breakpoint("tablet-n-up") {
+      display: none;
+    }
+  }
+
+
+  #slide01, #slide02-03, #slide04-05 {
+    width: 100%;
+    max-width: #{homepage-max-width()};
+    margin: auto;
+    position: relative;
+  }
+
+
+  #slide01 {
+    margin-top: 111px;
+    @include breakpoint("tablet") {
+      margin-top: 139px;
+    }
+  }
+
+
+
+  #tope2 {
+    position: absolute;
+    bottom: 0;
+    height: 20em;
+    width: 100px;
+  }
+
+  #tope3 {
+    position: absolute;
+    bottom: 0;
+    height: 16.6em;
+    width: 100px;
+    background-color: red;
+  }
+
+
+  #slide02 {
+    height: 32em;
+    z-index: 1000;
+    overflow-y: hidden;
+  }
+
+  #slide02-03 {
+  //  height: 48.2em;
+    background: url(../img/desktop/homepage/background-23.jpg) no-repeat top center;
+    background-size: cover;
+  }
+
+  #slide04-05 {
+    height: 38.2em;
+    background: url(../img/desktop/homepage/background-45.jpg) no-repeat top center;
+    background-size: cover;
+  }
+
+
+
+  .header {
+      margin-top: 0;
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      text-align: center;
+      background-color: #243d84;
+      z-index: 9999;
+      font-size: 0;
+
+
+
+   &.header-top ul.utility-nav {
+    //  position: fixed;
+    right: 0;
+    margin-top: -3px;
+
+    @include breakpoint("tablet") {
+      margin-top: -5px;
+    }
+
+
+    li {
+      line-height: 11px;
+
+      @include breakpoint("desktop") {
+        line-height: 20px;
+      }
+
+      @include breakpoint("tablet") {
+        line-height: 25px;
+      }
+
+    }
+
+  }
+
+
+  }
+
+
+
+  #slide01 {
+    background-color: rgba(0, 255, 0, 0.2);
+    margin-top: 111px;
+    height: 14.3em;
+    z-index: 112;
+    margin: 111px auto 0;
+    left: 0;
+    right: 0;
+    max-width: #{homepage-max-width()};
+    width: 100%;
+    background-size: contain !important;
+    overflow: hidden;
+
+    @include breakpoint("tablet") {
+      margin-top: 139px;
+    }
+
+
+
+
+    & .lady01, & .lady02, & .lady03 {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background-size: contain !important;
+      width: 100%;
+      height: 12.3em;
+    }
+
+
+
+    & .lady01 {
+      background: url(../img/desktop/homepage/lady01.png) no-repeat top center;
+      z-index: 122;
+    }
+
+
+    & .lady02 {
+      background: url(../img/desktop/homepage/lady02.png) no-repeat top center;
+      z-index: 118;
+      opacity: 0;
+
+    }
+
+    & .lady03 {
+      background: url(../img/desktop/homepage/lady03.png) no-repeat top center;
+      z-index: 120;
+      opacity: 0;
+    }
+
+
+
+
+  }
+
+    #slide1-textbox {
+      position: absolute;
+      top: 0.9em;
+      left: 140.5%;
+      font-family: $font-proxima-nova-semibold;
+      font-weight: 100;
+      color: #1B468E;
+      font-size: 0.8em;
+      z-index: 135;
+      text-align: left;
+      letter-spacing: 0.04em;
+      width: 39%;
+      line-height: 1.2em;
+
+      @include breakpoint("tablet-n-desktop") {
+        top: 1.7em;
+      }
+
+
+
+      h2 {
+        font-family: $font-proxima-nova-semibold;
+        color: #2974AB;
+        font-size: 1em;
+        margin-top: 0.51em;
+        margin-bottom: 25px;
+        font-weight: 100;
+        letter-spacing: 0.0434em;
+      }
+
+      .features {
+        color: $color-cyan-text;
+        text-transform: uppercase;
+        text-decoration: underline;
+      }
+
+      p {
+        font-family: $font-proxima-nova-semibold;
+        font-size: 0.5em;
+        padding-top: 0.1em;
+        letter-spacing: 0.004em;
+        line-height: 1.54em;
+        width: 82%;
+
+      }
+
+      sup {
+        position: relative;
+        top: -0.65em;
+        font-size: 0.5em;
+      }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  #carousel1, #carousel2, #carousel3 {
+    height: 13.7em;
+    position: absolute;
+    width: 104%;
+    top: 0px;
+    background-size: contain !important;
+    overflow: hidden;
+  }
+
+
+  #carousel1, #slide01 {
+    background: url(../img/desktop/homepage/carousel-01.png) no-repeat top center;
+  }
+
+  #carousel1 {
+    z-index: 115;
+    opacity: 1;
+  }
+
+  #carousel2 {
+    background: url(../img/desktop/homepage/carousel-02.png) no-repeat top center;
+    z-index: 117;
+    opacity: 0;
+  }
+
+  #carousel3 {
+    background: url(../img/desktop/homepage/carousel-03.png) no-repeat top center;
+    z-index: 119;
+    opacity: 0;
+  }
+
+
+
+
+
+
+
+
+  //  ------------------------------------------------------------------------------------------------
+
+  #dots-container {
+    height: 100%;
+    margin: auto;
+    max-width: #{homepage-max-width()};
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    z-index: 1005;
+    right: 0;
+    width: 69px;
+
+
+
+    .dotbox, .dotcover {
+      background-color: #fff;
+      border-radius: 8px 0 0 8px;
+      display: block;
+      height: 197px;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 40px;
+      padding-top: 7px;
+
+
+      .dot {
+        background: #fff url(../img/desktop/homepage/bullet-off.jpg) no-repeat;
+        width: 29px;
+        height: 29px;
+        display: block;
+        margin: 6px auto;
+        cursor: pointer;
+
+        &:hover {
+          background: #fff url(../img/desktop/homepage/bullet-hover.jpg) no-repeat;
+        }
+
+      }
+
+      .dot-on {
+        background: #fff url(../img/desktop/homepage/bullet-on.jpg) no-repeat;
+      }
+
+    }
+
+    .dotcover {
+      background: none;
+      z-index: 10;
+      right: 33px;
+      display: none;
+    }
+
+  }
+
+  //  ------------------------------------------------------------------------------------------------
+
+  #compare-copy {
+    width: 40%;
+    height: 7em;
+    position: absolute;
+    top: 0.6em;
+    left: -42%;
+    color: $color-white;
+    font-family: $font-proxima-nova-bold;
+    text-align: left;
+    z-index: 105;
+
+
+
+    h2 {
+      font-family: $font-proxima-nova-semibold;
+      font-size: 0.7em;
+      padding: 0;
+      margin: 0.3em 0 0 0.60em;
+      letter-spacing: 0.03em;
+      width: 95%;
+      line-height: 1.4em;
+      color: $color-white;
+
+      sup {
+        position: relative;
+        top: -0.5em;
+        font-size: 0.65em;
+        font-weight: 100;
+      }
+
+    }
+
+    sup {
+      position: relative;
+      top: -1.5em;
+      font-size: 0.4em;
+      font-weight: 100;
+    }
+
+
+
+
+    p {
+      margin: 2.7em 0 0 1em;
+      width: 72%;
+      font-size: 0.37em;
+      font-weight: 100;
+      line-height: 1.6em;
+      color: #e9eaea;
+    }
+
+
+    .compare-link {
+      display: block;
+      background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+      height: 3.6em;
+      border-radius: 9px;
+      width: 59%;
+      margin: 1.2em 0px 0px 0.7em;
+      font-size: 0.45em;
+      text-decoration: none;
+      line-height: 1.3em;
+      color: #2e2662;
+      background-size: contain;
+      font-weight: 100;
+      letter-spacing: 0.05em;
+    }
+
+    .compare-link:hover {
+      color: $color-orange;
+      background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+    }
+
+
+
+
+    .compare-link span {
+      display: block;
+      width: 79%;
+      padding: 0.6em 0px 0px 1em;
+      font-weight: 100;
+    }
+
+    .compare-link strong {
+      font-weight: 700;
+    }
+
+
+  }
+
+  //  ------------------------------------------------------------------------------------------------
+
+
+  #product-features-text {
+    width: 100%;
+    height: 2.8em;
+    position: relative;
+    bottom: -3.6em;
+
+    @include breakpoint("limit") {
+      bottom: -3.75em;
+    }
+
+  }
+
+  //  ------------------------------------------------------------------------------------------------
+
+
+  #product-features-bg {
+    background: url("../img/desktop/homepage/productbox.png") no-repeat top center;
+    width: 100%;
+    height: 13.2em;
+    position: absolute;
+    //top: 1.60em;
+    top: 8em;
+    z-index: 130;
+    background-size: contain;
+    max-width: #{homepage-max-width()};
+
+
+
+
+
+
+    .product-title {
+      position: absolute;
+      top: 0.9em;
+      left: 37.5%;
+      font-size: 0.46em;
+      letter-spacing: 0.02em;
+      color: #2e2662;
+      font-weight: 700;
+
+      sup {
+        position: relative;
+        top: -0.765em;
+        font-size: 0.5em;
+      }
+
+
+    }
+
+
+
+
+    .clinical-study {
+      position: absolute;
+      top: 4.1em;
+      left: 12%;
+      font-size: 0.30em;
+      line-height: 1.3em;
+    }
+
+    .dataonfile {
+      display: block;
+      margin-left: 1%;
+    }
+
+
+    .use-only {
+      position: absolute;
+      top: 4.1em;
+      left: 79.4%;
+      font-size: 0.29em;
+
+    }
+
+
+
+
+
+  }
+
+
+
+  .nopadding {
+    padding: 0 !important;
+  }
+
+
+  #nasacort-compare {
+    width: 12em;
+    height: 10.5em;
+    bottom: 8.8em;
+    position: absolute;
+    right: 20.4%;
+    z-index: 101;
+    font-family: $font-proxima-nova-bold;
+    color: red;
+    top: 15.6em;
+    text-align: left;
+
+
+
+
+
+    h2 {
+      font-size: 0.7em;
+      padding: 0;
+      margin: 0.403em 0 0 4%;
+      letter-spacing: 0.03em;
+      width: 95%;
+      line-height: 1.4em;
+      color: #133C7C;
+    }
+
+    sup {
+      position: relative;
+      top: -1.1em;
+      font-size: 0.4em;
+      font-weight: 100;
+    }
+
+    p {
+      margin-top: 3.65em;
+      width: 93%;
+      font-size: 0.3em;
+      font-weight: 100;
+      line-height: 1.55em;
+      margin-left: 4%;
+      letter-spacing: 0.04em;
+      color: #4d4b4b;
+      margin-bottom: 2.7em;
+
+      strong {
+        font-weight: 700;
+      }
+
+
+      sup {
+        position: relative;
+        top: -0.5em;
+        font-size: 0.6em;
+        font-weight: 100;
+      }
+
+
+    }
+
+    .superscript {
+      top: -0.54em;
+      font-size: 0.7em;
+    }
+
+    .compare-link {
+      display: block;
+      background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+      height: 3.7em;
+      border-radius: 9px;
+      width: 92%;
+      margin: 0.9em 0px 0px 0.7em;
+      font-size: 0.45em;
+      text-decoration: none;
+      line-height: 1.2em;
+      color: #2E2662;
+      font-weight: 100;
+      letter-spacing: 0.05em;
+
+
+      @include breakpoint("tablet") {
+        letter-spacing: 0.05em;
+      }
+
+
+      sup {
+        position: relative;
+        top: -0.4em;
+        font-size: 0.7em;
+        font-weight: 100;
+      }
+
+    }
+
+    .compare-link:hover {
+      color: $color-orange;
+      background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
+    }
+
+    .compare-link span {
+      display: block;
+      width: 92%;
+      padding: 1.2em 0px 0px 1em;
+      font-weight: 100;
+    }
+
+    .span1 {
+      @include breakpoint("tablet-n-desktop") {
+        padding: 0.7em 0px 0px 1em !important;
+        width: 75% !important;
+      }
+    }
+
+    .span2 {
+      padding: 0.7em 0px 0px 1em !important;
+      width: 75% !important;
+    }
+
+    .compare-link strong {
+      font-weight: 700;
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+  #slide04 {
+    //position: fixed;
+    //top: 81px;
+    //background-color: forestgreen;
+    height: 17em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    max-width: #{homepage-max-width()};
+    width: 100%;
+    font-family: $font-proxima-nova-semibold;
+    font-weight: 100;
+//    margin-top: 17em;
+
+    //@include breakpoint("tablet-n-desktop") {
+    //  margin-top: 35em;
+    //  top: 139px;
+    //}
+
+
+
+    overflow: hidden;
+
+    .use-only {
+      position: absolute;
+      top: 56.1em;
+      left: 79.4%;
+      font-size: 0.29em;
+
+    }
+
+
+
+  }
+
+
+
+  #slide04 .title {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    color: #133C7C;
+    top: 1.35em;
+    font-size: 0.8em;
+    width: 40%;
+    letter-spacing: 0.01em;
+    line-height: 1.17em;
+    text-align: center;
+  }
+
+  #slide04 .title sup {
+    position: relative;
+    top: -10px;
+    font-size: 0.7em;
+  }
+
+
+  .orange-color {
+    color: #EA5825;
+  }
+
+
+
+
+  #slide04 .dashbox {
+    display: block;
+    background-color: #b1c9e0;
+    position: absolute;
+    top: 3.6em;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 2.8%;
+    height: 0.1em;
+
+
+  }
+
+
+
+
+  #patient-box {
+    width: 70%;
+    margin: auto;
+    height: 9em;
+    top: 3.9em;
+    position: absolute;
+    right: 0;
+    left: 101%;
+    @include ha;
+  }
+
+
+
+
+
+  .patient {
+
+    display: inline-block;
+    width: 24%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+
+
+
+
+    .namebox {
+      border-bottom: 1px solid #aaa;
+      width: 95%;
+      height: 1.64em;
+      overflow: hidden;
+      margin: auto;
+
+
+      .name {
+        font-family: $font-proxima-nova-semibold;
+        font-size: 0.51em;
+        display: block;
+        padding-top: 0.5em;
+        color: #133c7c;
+      }
+
+      .subname {
+        font-family: $font-proxima-nova-extrabold;
+        font-size: 0.51em;
+        display: block;
+        padding-top: 0.1em;
+        color: #ea5825;
+        letter-spacing: 0.06em;
+      }
+
+
+    }
+
+
+    .textbox {
+      position: absolute;
+      bottom: 0;
+      font-size: 0.3em;
+      height: 4.23em;
+      width: 100%;
+      background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
+      color: #133c7c;
+      font-family: $font-proxima-nova-semibold;
+      text-align: left;
+      background-size: contain;
+
+
+      p {
+        padding: 0.8em 0px 0px 6.5%;
+        width: 86%;
+        line-height: 1.2em;
+        color: #133c7c;
+        font-size: 1em;
+
+      }
+
+    }
+
+    .textboxhover{
+      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+      color: $color-orange;
+    }
+
+
+
+  }
+
+
+
+
+  .patient-maria img {
+    margin-top: -0.32em;
+    background-size: contain;
+    width: 107%;
+  }
+
+
+
+  .patient-mark img {
+    margin: -0.54em 0px 0px -8%;
+    background-size: contain;
+    width: 113%;
+  }
+
+  .patient-kara img {
+    margin: -0.2em 0px 0px -2%;
+    background-size: contain;
+    width: 110%;
+  }
+
+  .patient-liam img {
+    margin: 1em 0 0 0;
+    background-size: contain;
+    width: 100%;
+  }
+
+
+  #slide05 {
+  //  position: fixed;
+    //background-color: rgba(255,255,255,0.4);
+    height: 21.2em;
+    z-index: 100;
+    max-width: #{homepage-max-width()};
+    width: 100%;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    //margin-top: 15em;
+
+
+    .use-only {
+      position: absolute;
+      top: 44em;
+      left: 79.4%;
+      font-size: 0.29em;
+      color: $color-white;
+
+    }
+
+    #understand-box {
+      position: absolute;
+      top: 6.77em;
+      width: 40%;
+      text-align: left;
+      left: -40%;
+      right: 0;
+      //margin: auto;
+      @include ha;
+
+
+      h2 {
+        color: #FFF;
+        font-family: $font-proxima-nova-semibold;
+        font-size: 0.8em;
+        padding-bottom: 0;
+        font-weight: 100;
+        line-height: 1.18em;
+        letter-spacing: 0.03em;
+      }
+
+    }
+
+    .understand-link {
+      display: block;
+      background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
+      background-size: contain;
+      border-radius: 9px;
+      width: 79%;
+      height: 3.8em;
+      margin: 0px 0px 0.9em 0em;
+      font-size: 0.45em;
+      text-decoration: none;
+      line-height: 3.8em;
+      color: $color-blue-titles;
+      font-family: $font-proxima-nova-semibold;
+      letter-spacing: 0.08em;
+      padding-left: 4%;
+
+
+    }
+
+
+    .understand-link:hover {
+      color: $color-orange;
+      background: #fff url(../img/desktop/homepage/understand-arrow-hover.png) no-repeat right center;
+      background-size: contain;
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+  #bottle {
+    background: url("../img/desktop/homepage/bottle-nocap.png") no-repeat center center;
+    background-size: contain;
+    z-index: 101;
+    position: absolute;
+    top: -6em;
+    left: 72%;
+    margin: 0.3em auto auto 0%;
+    width: 3em;
+    height: 4.4em;
+    transform: scale(1, 1);
+
+    //@include breakpoint("tablet") {
+    //  top: 8.2em;
+    //}
+    //
+    //@include breakpoint("desktop") {
+    //  top: 8.3em;
+    //}
+
+
+  }
+
+  #cap {
+    -webkit-transform: translate3d(0, 0, 0);
+    /* enable hw acceleration */
+    background: url("../img/desktop/homepage/cap.png") no-repeat center center;
+    background-size: contain;
+    bottom: 0px;
+    width: 1.2em;
+    height: 3em;
+    z-index: 101;
+    position: absolute;
+    top: -5.75em;
+    left: 74.6%;
+
+    //@include breakpoint("tablet") {
+    //  top: 8.4em;
+    //}
+    //
+    //@include breakpoint("desktop") {
+    //  top: 8.5em;
+    //}
+
+
+
+
+  }
+
+
+
+
+
+  #no-scent {
+    background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
+    background-size: cover;
+    width: 11em;
+    height: 0em;
+    bottom: 11.5em;
+    z-index: 98;
+    position: absolute;
+    left: 16.8%;
+
+
+
+    //@include breakpoint("tablet") {
+    //  bottom: 12.8em;
+    //}
+    //
+    //@include breakpoint("desktop") {
+    //  bottom: 12.8em;
+    //}
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+  #slide03 {
+    height: 14.23em;
+    margin: auto;
+    left: 0;
+    right: 0;
+    max-width: #{homepage-max-width()};
+    width: 100%;
+    overflow: hidden;
+
+    //@include breakpoint("tablet") {
+    //  top: 139px;
+    //}
+    //
+    //
+    //@include breakpoint("desktop") {
+    //  top: 139px;
+    //}
+    //
+    //@include breakpoint("pp-desktop") {
+    //  top: 97px;
+    //}
+
+
+
+
+
+
+
+
+    .dashbox {
+      display: block;
+      background-color: #c0cdd2;
+      position: absolute;
+      top: 2.55em;
+      left: 3%;
+      width: 7%;
+      height: 0.1em;
+    }
+
+
+
+
+    .use-only {
+      position: absolute;
+      bottom: 3.6em;
+      left: 79.4%;
+      font-size: 0.29em;
+
+    }
+
+
+
+
+    #compare-bg {
+      background: transparent url("../img/desktop/homepage/mom-child.png") no-repeat center top;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      overflow: hidden;
+      background-size: contain;
+      bottom: -15em;
+      z-index: 100;
+    }
+
+
+    #compare-bg .btn1 {
+      color: #00008B;
+      font-size: 0.51em;
+      margin: 0.3em 3em;
+
+      width: 400px;
+      min-height: 50px;
+      font-family: $font-proxima-nova-semibold;
+      text-align: left;
+    }
+
+
+
+
+    .compare-link-bottom {
+      display: block;
+      background: url(../img/desktop/homepage/compare-arrow.png) no-repeat right center;
+      background-size: contain;
+      width: 30%;
+      position: absolute;
+      left: 23%;
+      bottom: 9.14em;
+      font-size: 0.46em;
+      padding: 0.8em 0px 0.8em 4.4%;
+      line-height: 1.3em;
+      color: $color-dark-blue;
+      font-weight: 700;
+
+
+      &:hover {
+        color: $color-orange;
+        background: url(../img/desktop/homepage/compare-arrow-hover.png) no-repeat right center;
+        background-size: contain;
+      }
+
+    }
+
+
+    .compare-link-bottom + .btn01 {
+      bottom: 9.14em;
+    }
+
+    .compare-link-bottom + .btn02 {
+      bottom: 5em;
+      line-height: 1.4em;
+    }
+
+    .compare-link-bottom + .btn03 {
+      bottom: 0.6em;
+    }
+
+
+
+    #stats {
+      background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
+      height: 0;
+      z-index: 99;
+      background-size: cover;
+      position: absolute;
+      bottom: 8em;
+      width: 26%;
+      left: 58%;
+    }
+
+
+
+  }
+
+
+
+
+
+
+
+
+
+
+}       //  ------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+//  ---------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.home-section00 {
 
 
 // to be used for scrollbar on homepage
@@ -41,41 +1240,41 @@
     }
   }
 
-  .header {
-  //  position: fixed;
-  //  width: 100%;
-    margin-top: 0;
-  }
+  //.header {
+  ////  position: fixed;
+  ////  width: 100%;
+  //  margin-top: 0;
+  //}
 
-  .nopadding {
-    padding: 0 !important;
-  }
+  //.nopadding {
+  //  padding: 0 !important;
+  //}
 
-
-  .header .header-top ul.utility-nav {
-  //  position: fixed;
-    right: 0;
-    margin-top: -3px;
-
-    @include breakpoint("tablet") {
-      margin-top: -5px;
-    }
-
-
-    li {
-      line-height: 11px;
-
-      @include breakpoint("desktop") {
-        line-height: 20px;
-      }
-
-      @include breakpoint("tablet") {
-        line-height: 25px;
-      }
-
-    }
-
-  }
+  //
+  //.header .header-top ul.utility-nav {
+  ////  position: fixed;
+  //  right: 0;
+  //  margin-top: -3px;
+  //
+  //  @include breakpoint("tablet") {
+  //    margin-top: -5px;
+  //  }
+  //
+  //
+  //  li {
+  //    line-height: 11px;
+  //
+  //    @include breakpoint("desktop") {
+  //      line-height: 20px;
+  //    }
+  //
+  //    @include breakpoint("tablet") {
+  //      line-height: 25px;
+  //    }
+  //
+  //  }
+  //
+  //}
 
 
   #background .alternative-content ul {
@@ -233,63 +1432,63 @@
   }
 
 
-
-  #dots-container {
-    height: 100%;
-    margin: auto;
-    max-width: #{homepage-max-width()};
-    position: fixed;
-    text-align: center;
-    bottom: 0;
-    z-index: 990;
-    right: 0;
-    width: 69px;
-
-
-
-    .dotbox, .dotcover {
-      background-color: #fff;
-      border-radius: 8px 0 0 8px;
-      display: block;
-      height: 197px;
-      position: absolute;
-      right: 0;
-      text-align: center;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      width: 40px;
-      padding-top: 7px;
-
-
-       .dot {
-        background: #fff url(../img/desktop/homepage/bullet-off.jpg) no-repeat;
-        width: 29px;
-        height: 29px;
-        display: block;
-        margin: 6px auto;
-        cursor: pointer;
-
-         &:hover {
-           background: #fff url(../img/desktop/homepage/bullet-hover.jpg) no-repeat;
-         }
-
-      }
-
-      .dot-on {
-        background: #fff url(../img/desktop/homepage/bullet-on.jpg) no-repeat;
-      }
-
-    }
-
-    .dotcover {
-      background: none;
-      z-index: 10;
-      right: 33px;
-      display: none;
-    }
-
-  }
+  //
+  //#dots-container {
+  //  height: 100%;
+  //  margin: auto;
+  //  max-width: #{homepage-max-width()};
+  //  position: fixed;
+  //  text-align: center;
+  //  bottom: 0;
+  //  z-index: 990;
+  //  right: 0;
+  //  width: 69px;
+  //
+  //
+  //
+  //  .dotbox, .dotcover {
+  //    background-color: #fff;
+  //    border-radius: 8px 0 0 8px;
+  //    display: block;
+  //    height: 197px;
+  //    position: absolute;
+  //    right: 0;
+  //    text-align: center;
+  //    top: 0;
+  //    bottom: 0;
+  //    margin: auto;
+  //    width: 40px;
+  //    padding-top: 7px;
+  //
+  //
+  //     .dot {
+  //      background: #fff url(../img/desktop/homepage/bullet-off.jpg) no-repeat;
+  //      width: 29px;
+  //      height: 29px;
+  //      display: block;
+  //      margin: 6px auto;
+  //      cursor: pointer;
+  //
+  //       &:hover {
+  //         background: #fff url(../img/desktop/homepage/bullet-hover.jpg) no-repeat;
+  //       }
+  //
+  //    }
+  //
+  //    .dot-on {
+  //      background: #fff url(../img/desktop/homepage/bullet-on.jpg) no-repeat;
+  //    }
+  //
+  //  }
+  //
+  //  .dotcover {
+  //    background: none;
+  //    z-index: 10;
+  //    right: 33px;
+  //    display: none;
+  //  }
+  //
+  //}
 
   /* ---------------------------------------------------------------------------------------------------------------------   */
 
@@ -473,828 +1672,887 @@
 
   }
 
-  #product-features-text {
-    width: 100%;
-    height: 2.8em;
-    position: relative;
-    bottom: -3.6em;
-
-    @include breakpoint("limit") {
-      bottom: -3.75em;
-    }
-
-  }
-
-
-
-  #product-features-bg {
-    background: url("../img/desktop/homepage/productbox.png") no-repeat top center;
-    width: 100%;
-    height: 13.2em;
-    position: absolute;
-    //top: 1.60em;
-    top: 8em;
-    z-index: 130;
-    background-size: contain;
-    max-width: #{homepage-max-width()};
-
-
-
-
-
-
-    .product-title {
-      position: absolute;
-      top: 0.9em;
-      left: 37.5%;
-      font-size: 0.46em;
-      letter-spacing: 0.02em;
-      color: #2e2662;
-      font-weight: 700;
-
-      sup {
-        position: relative;
-        top: -0.765em;
-        font-size: 0.5em;
-      }
-
-
-    }
-
-
-
-
-.clinical-study {
-  position: absolute;
-  top: 4.1em;
-  left: 12%;
-  font-size: 0.30em;
-  line-height: 1.3em;
-}
-
-.dataonfile {
-  display: block;
-  margin-left: 1%;
-}    
-    
-
-.use-only {
-  position: absolute;
-  top: 4.1em;
-  left: 79.4%;
-  font-size: 0.29em;
-
-}
-
-
-
-
-
-  }
-
-  #bottle {
-    background: url("../img/desktop/homepage/bottle-nocap.png") no-repeat center center;
-    background-size: contain;
-    z-index: 101;
-    position: absolute;
-    top: 8.8em;
-    left: 72%;
-    margin: 0.3em auto auto 0%;
-    width: 3em;
-    height: 4.4em;
-    transform: scale(1, 1);
-
-
-    @include breakpoint("tablet") {
-      top: 8.2em;
-    }
-
-    @include breakpoint("desktop") {
-      top: 8.3em;
-    }
-
-
-
-
-  }
-
-  #cap {
-    -webkit-transform: translate3d(0, 0, 0);
-    /* enable hw acceleration */
-    background: url("../img/desktop/homepage/cap.png") no-repeat center center;
-    background-size: contain;
-    bottom: 0px;
-    width: 1.2em;
-    height: 3em;
-    z-index: 101;
-    position: absolute;
-    top: 9em;
-    left: 74.6%;
-
-
-
-    @include breakpoint("tablet") {
-      top: 8.4em;
-    }
-
-    @include breakpoint("desktop") {
-      top: 8.5em;
-    }
-
-
-
-
-  }
-
-
-
-
-
-  #no-scent {
-    background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
-    background-size: cover;
-    width: 10em;
-    height: 0em;
-    bottom: 12.12em;
-    z-index: 98;
-    position: absolute;
-    left: 18.1%;
-
-
-
-
-
-    @include breakpoint("tablet") {
-      bottom: 12.8em;
-    }
-
-    @include breakpoint("desktop") {
-      bottom: 12.8em;
-    }
-
-
-
-  }
-
-
-
-
-
-  #slide03 {
-    position: fixed;
-    top: 25px;
-    height: 15.7em;
-    z-index: 117;
-    margin: auto;
-    left: 0;
-    right: 0;
-    max-width: #{homepage-max-width()};
-    width: 100%;
-    overflow: hidden;
-
-    @include breakpoint("tablet") {
-      top: 139px;
-    }
-
-
-    @include breakpoint("desktop") {
-      top: 139px;
-    }
-
-    @include breakpoint("pp-desktop") {
-      top: 97px;
-    }
-
-
-
-
-
-
-
-
-    .dashbox {
-      display: block;
-      background-color: #c0cdd2;
-      position: absolute;
-      top: 2.55em;
-      left: 3%;
-      width: 7%;
-      height: 0.1em;
-    }
-
-
-
-
-    .use-only {
-      position: absolute;
-      bottom: 3.6em;
-      left: 79.4%;
-      font-size: 0.29em;
-
-    }
-
-
-  }
-
-  #compare-bg {
-    background: transparent url("../img/desktop/homepage/mom-child.png") no-repeat center top;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    overflow: hidden;
-    background-size: contain;
-    top: 17em;
-    z-index: 100;
-  }
-
-
-  #compare-bg .btn1 {
-    color: #00008B;
-    font-size: 0.51em;
-    margin: 0.3em 3em;
-
-    width: 400px;
-    min-height: 50px;
-    font-family: $font-proxima-nova-semibold;
-    text-align: left;
-  }
-
-
-
-
-  #compare-copy {
-    width: 40%;
-    height: 7em;
-    position: absolute;
-    top: 1.45em;
-    left: -42%;
-    color: $color-white;
-    font-family: $font-proxima-nova-semibold;
-    text-align: left;
-    z-index: 105;
-
-
-
-   h2 {
-     font-family: $font-proxima-nova-semibold;
-    font-size: 0.7em;
-    padding: 0;
-    margin: 0.3em 0 0 0.60em;
-    letter-spacing: 0.03em;
-    width: 95%;
-    line-height: 1.4em;
-    color: $color-white;
-
-     sup {
-       position: relative;
-       top: -0.5em;
-       font-size: 0.65em;
-       font-weight: 100;
-     }
-
-  }
-
-  sup {
-    position: relative;
-    top: -1.5em;
-    font-size: 0.4em;
-    font-weight: 100;
-  }
-
-
-
-
-   p {
-    margin: 2.7em 0 0 1em;
-    width: 72%;
-    font-size: 0.37em;
-    font-weight: 100;
-    line-height: 1.6em;
-    color: #e9eaea;
-  }
-
-
-   .compare-link {
-    display: block;
-    background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
-    height: 3.6em;
-    border-radius: 9px;
-    width: 59%;
-    margin: 1.2em 0px 0px 0.7em;
-    font-size: 0.45em;
-    text-decoration: none;
-    line-height: 1.3em;
-    color: #2e2662;
-    background-size: contain;
-    font-weight: 100;
-    letter-spacing: 0.05em;
-  }
-
-   .compare-link:hover {
-    color: $color-orange;
-     background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
-     background-size: contain;
-  }
-
-
-
-
-   .compare-link span {
-    display: block;
-    width: 79%;
-    padding: 0.6em 0px 0px 1em;
-    font-weight: 100;
-  }
-
-   .compare-link strong {
-    font-weight: 700;
-  }
-
-
-  }
-
-
-
-  .compare-link-bottom {
-    display: block;
-    background: url(../img/desktop/homepage/compare-arrow.png) no-repeat right center;
-    background-size: contain;
-    width: 30%;
-    position: absolute;
-    left: 23%;
-    bottom: 12.4em;
-    font-size: 0.46em;
-    padding: 0.8em 0px 0.8em 4.4%;
-    line-height: 1.3em;
-    color: $color-dark-blue;
-      font-weight: 700;
-
-
-   &:hover {
-      color: $color-orange;
-     background: url(../img/desktop/homepage/compare-arrow-hover.png) no-repeat right center;
-     background-size: contain;
-   }
-
-  }
-
-
-  .compare-link-bottom + .btn01 {
-    bottom: 12.4em;
-  }
-
-  .compare-link-bottom + .btn02 {
-    bottom: 8.1em;
-    line-height: 1.4em;
-  }
-
-  .compare-link-bottom + .btn03 {
-    bottom: 3.9em;
-  }
-
-
-
-  #stats {
-    background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
-    height: 0;
-    z-index: 99;
-    background-size: cover;
-    position: absolute;
-    bottom: 8em;
-    width: 26%;
-    left: 58%;
-  }
-
-
-  #slide04 {
-    position: fixed;
-    top: 81px;
-    height: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    z-index: 100;
-    max-width: #{homepage-max-width()};
-    width: 100%;
-    font-family: $font-proxima-nova-semibold;
-    font-weight: 100;
-    margin-top: 17em;
-
-    @include breakpoint("tablet-n-desktop") {
-      margin-top: 35em;
-      top: 139px;
-    }
-
-
-
-    overflow: hidden;
-
-    .use-only {
-      position: absolute;
-      top: 56.1em;
-      left: 79.4%;
-      font-size: 0.29em;
-
-    }
-
-
-
-  }
-
-
-
-  #slide04 .title {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    color: #133C7C;
-    top: 3.45em;
-    font-size: 0.8em;
-    width: 40%;
-    letter-spacing: 0.01em;
-    line-height: 1.17em;
-    text-align: center;
-  }
-
-  #slide04 .title sup {
-    position: relative;
-    top: -10px;
-    font-size: 0.7em;
-  }
-
-
-  .orange-color {
-    color: #EA5825;
-  }
-
-
-
-
-  #slide04 .dashbox {
-    display: block;
-    background-color: #b1c9e0;
-    position: absolute;
-    top: 5.12em;
-    left: 0px;
-    right: 0px;
-    margin: auto;
-    width: 2.8%;
-    height: 0.1em;
-
-
-  }
-
-
-
-
-  #patient-box {
-    width: 70%;
-    margin: auto;
-    height: 9em;
-    top: 5.6em;
-    position: absolute;
-    right: 0;
-    left: 101%;
-    @include ha;
-  }
-
-
-
-
-
-  .patient {
-
-    display: inline-block;
-    width: 24%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-
-
-
-
-
-  .namebox {
-    border-bottom: 1px solid #aaa;
-    width: 95%;
-    height: 1.64em;
-    overflow: hidden;
-    margin: auto;
-
-
-    .name {
-      font-family: $font-proxima-nova-semibold;
-      font-size: 0.51em;
-      display: block;
-      padding-top: 0.5em;
-      color: #133c7c;
-    }
-
-    .subname {
-      font-family: $font-proxima-nova-extrabold;
-      font-size: 0.51em;
-      display: block;
-      padding-top: 0.1em;
-      color: #ea5825;
-      letter-spacing: 0.06em;
-    }
-
-
-  }
-
-
-  .textbox {
-    position: absolute;
-    bottom: 0;
-    font-size: 0.3em;
-    height: 4.23em;
-    width: 100%;
-    background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
-    color: #133c7c;
-    font-family: $font-proxima-nova-semibold;
-    text-align: left;
-    background-size: contain;
-
-
-    p {
-      padding: 0.8em 0px 0px 6.5%;
-      width: 86%;
-      line-height: 1.2em;
-      color: #133c7c;
-      font-size: 1em;
-
-    }
-
-  }
-
-    .textboxhover{
-      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
-      background-size: contain;
-      color: $color-orange;
-    }
-
-
-
-  }
-
-
-
-
-  .patient-maria img {
-    margin-top: -0.32em;
-    background-size: contain;
-    width: 107%;
-  }
-
-
-
-  .patient-mark img {
-    margin: -0.54em 0px 0px -8%;
-    background-size: contain;
-    width: 113%;
-  }
-
-  .patient-kara img {
-    margin: -0.2em 0px 0px -2%;
-    background-size: contain;
-    width: 110%;
-  }
-
-  .patient-liam img {
-    margin: 1em 0 0 0;
-    background-size: contain;
-    width: 100%;
-  }
-
-
-  #slide05 {
-    position: fixed;
-    top: 15em;
-    height: 91%;
-    z-index: 100;
-    max-width: #{homepage-max-width()};
-    width: 100%;
-    margin: auto;
-    left: 0px;
-    right: 0px;
-    margin-top: 15em;
-
-
-    .use-only {
-      position: absolute;
-      top: 44em;
-      left: 79.4%;
-      font-size: 0.29em;
-      color: $color-white;
-
-    }
-
-   #understand-box {
-     position: absolute;
-     top: 0.1em;
-     width: 40%;
-     text-align: left;
-     left: -40%;
-     right: 0;
-     //margin: auto;
-    @include ha;
-
-
-     h2 {
-       color: #FFF;
-       font-family: $font-proxima-nova-semibold;
-       font-size: 0.8em;
-       padding-bottom: 0;
-       font-weight: 100;
-       line-height: 1.18em;
-       letter-spacing: 0.03em;
-     }
-
-   }
-
-   .understand-link {
-    display: block;
-    background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
-    background-size: contain;
-    border-radius: 9px;
-    width: 79%;
-    height: 3.8em;
-    margin: 0px 0px 0.9em 0em;
-    font-size: 0.45em;
-    text-decoration: none;
-    line-height: 3.8em;
-    color: $color-blue-titles;
-    font-family: $font-proxima-nova-semibold;
-    letter-spacing: 0.08em;
-     padding-left: 4%;
-
-
-   }
-
-
-    .understand-link:hover {
-      color: $color-orange;
-      background: #fff url(../img/desktop/homepage/understand-arrow-hover.png) no-repeat right center;
-      background-size: contain;
-
-    }
-
-}
-
-
-
-
-
-
-  #slide01 {
-    background-color: rgba(0,255,0,0.2);
-    position: fixed;
-    top: 111px;
-    height: 14.7em;
-    z-index: 112;
-    margin: auto;
-    left: 0;
-    right: 0;
-    max-width: #{homepage-max-width()};
-    width: 100%;
-    background-size: contain !important;
-    overflow: hidden;
-
-    
-    @include breakpoint("tablet-n-desktop") {
-      top: 139px;
-    }
-    
-    
-  }
-
-
-
-  #slide1-textbox {
-    position: absolute;
-    top: 3.9em;
-    left: 140.5%;
-    font-family: $font-proxima-nova-semibold;
-    font-weight: 100;
-    color: #1B468E;
-    font-size: 0.8em;
-    z-index: 135;
-    text-align: left;
-    letter-spacing: 0.04em;
-    width: 39%;
-    line-height: 1.2em;
-
-    @include breakpoint("tablet-n-desktop") {
-      top: 1.7em;
-    }
-
-
-
-    h2 {
-      font-family: $font-proxima-nova-semibold;
-      color: #2974AB;
-      font-size: 1em;
-      margin-top: 0.51em;
-      margin-bottom: 25px;
-      font-weight: 100;
-      letter-spacing: 0.0434em;
-    }
-
-    .features {
-      color: $color-cyan-text;
-      text-transform: uppercase;
-      text-decoration: underline;
-    }
-
-    p {
-      font-family: $font-proxima-nova-semibold;
-      font-size: 0.5em;
-      padding-top: 0.1em;
-      letter-spacing: 0.004em;
-      line-height: 1.54em;
-      width: 82%;
-
-    }
-
-    sup {
-      position: relative;
-      top: -0.65em;
-      font-size: 0.5em;
-    }
-
-  }
-
-  #slide01 .lady01,
-  #slide01 .lady02,
-  #slide01 .lady03 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    background-size: contain !important;
-    width: 100%;
-    height: 12.3em;
-  }
-
-
-
-
-
-
-  #slide01 .lady01 {
-    background: url(../img/desktop/homepage/lady01.png) no-repeat top center;
-    z-index: 122;
-  }
-
-
-  #slide01 .lady02 {
-    background: url(../img/desktop/homepage/lady02.png) no-repeat top center;
-    z-index: 118;
-    opacity: 0;
-
-  }
-
-  #slide01 .lady03 {
-    background: url(../img/desktop/homepage/lady03.png) no-repeat top center;
-    z-index: 120;
-    opacity: 0;
-  }
-
-
-
-  #carousel1, #carousel2, #carousel3 {
-    height: 13.7em;
-    position: absolute;
-    width: 104%;
-    top: 0px;
-    background-size: contain !important;
-    overflow: hidden;
-  }
-
-
-  #carousel1, #slide01 {
-    background: url(../img/desktop/homepage/carousel-01.png) no-repeat top center;
-  }
-
-  #carousel1 {
-    z-index: 115;
-    opacity: 1;
-  }
-
-  #carousel2 {
-    background: url(../img/desktop/homepage/carousel-02.png) no-repeat top center;
-    z-index: 117;
-    opacity: 0;
-  }
-
-  #carousel3 {
-    background: url(../img/desktop/homepage/carousel-03.png) no-repeat top center;
-    z-index: 119;
-    opacity: 0;
-  }
-
+//  #product-features-text {
+//    width: 100%;
+//    height: 2.8em;
+//    position: relative;
+//    bottom: -3.6em;
+//
+//    @include breakpoint("limit") {
+//      bottom: -3.75em;
+//    }
+//
+//  }
+//
+//
+//
+//  #product-features-bg {
+//    background: url("../img/desktop/homepage/productbox.png") no-repeat top center;
+//    width: 100%;
+//    height: 13.2em;
+//    position: absolute;
+//    //top: 1.60em;
+//    top: 8em;
+//    z-index: 130;
+//    background-size: contain;
+//    max-width: #{homepage-max-width()};
+//
+//
+//
+//
+//
+//
+//    .product-title {
+//      position: absolute;
+//      top: 0.9em;
+//      left: 37.5%;
+//      font-size: 0.46em;
+//      letter-spacing: 0.02em;
+//      color: #2e2662;
+//      font-weight: 700;
+//
+//      sup {
+//        position: relative;
+//        top: -0.765em;
+//        font-size: 0.5em;
+//      }
+//
+//
+//    }
+//
+//
+//
+//
+//.clinical-study {
+//  position: absolute;
+//  top: 4.1em;
+//  left: 12%;
+//  font-size: 0.30em;
+//  line-height: 1.3em;
+//}
+//
+//.dataonfile {
+//  display: block;
+//  margin-left: 1%;
+//}
+//
+//
+//.use-only {
+//  position: absolute;
+//  top: 4.1em;
+//  left: 79.4%;
+//  font-size: 0.29em;
+//
+//}
+//
+//
+//
+//
+//
+//  }
+
+  //#bottle {
+  //  background: url("../img/desktop/homepage/bottle-nocap.png") no-repeat center center;
+  //  background-size: contain;
+  //  z-index: 101;
+  //  position: absolute;
+  //  top: 8.8em;
+  //  left: 72%;
+  //  margin: 0.3em auto auto 0%;
+  //  width: 3em;
+  //  height: 4.4em;
+  //  transform: scale(1, 1);
+  //
+  //
+  //  @include breakpoint("tablet") {
+  //    top: 8.2em;
+  //  }
+  //
+  //  @include breakpoint("desktop") {
+  //    top: 8.3em;
+  //  }
+  //
+  //
+  //
+  //
+  //}
+  //
+  //#cap {
+  //  -webkit-transform: translate3d(0, 0, 0);
+  //  /* enable hw acceleration */
+  //  background: url("../img/desktop/homepage/cap.png") no-repeat center center;
+  //  background-size: contain;
+  //  bottom: 0px;
+  //  width: 1.2em;
+  //  height: 3em;
+  //  z-index: 101;
+  //  position: absolute;
+  //  top: 9em;
+  //  left: 74.6%;
+  //
+  //
+  //
+  //  @include breakpoint("tablet") {
+  //    top: 8.4em;
+  //  }
+  //
+  //  @include breakpoint("desktop") {
+  //    top: 8.5em;
+  //  }
+  //
+  //
+  //
+  //
+  //}
+  //
+  //
+  //
+  //
+  //
+  //#no-scent {
+  //  background: url("../img/desktop/homepage/no-scent.png") no-repeat center bottom;
+  //  background-size: cover;
+  //  width: 10em;
+  //  height: 0em;
+  //  bottom: 12.12em;
+  //  z-index: 98;
+  //  position: absolute;
+  //  left: 18.1%;
+  //
+  //
+  //
+  //
+  //
+  //  @include breakpoint("tablet") {
+  //    bottom: 12.8em;
+  //  }
+  //
+  //  @include breakpoint("desktop") {
+  //    bottom: 12.8em;
+  //  }
+  //
+  //
+  //
+  //}
+  //
+  //
+
+  //
+  //
+  //#slide03 {
+  //  position: fixed;
+  //  top: 25px;
+  //  height: 15.7em;
+  //  z-index: 117;
+  //  margin: auto;
+  //  left: 0;
+  //  right: 0;
+  //  max-width: #{homepage-max-width()};
+  //  width: 100%;
+  //  overflow: hidden;
+  //
+  //  @include breakpoint("tablet") {
+  //    top: 139px;
+  //  }
+  //
+  //
+  //  @include breakpoint("desktop") {
+  //    top: 139px;
+  //  }
+  //
+  //  @include breakpoint("pp-desktop") {
+  //    top: 97px;
+  //  }
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //  .dashbox {
+  //    display: block;
+  //    background-color: #c0cdd2;
+  //    position: absolute;
+  //    top: 2.55em;
+  //    left: 3%;
+  //    width: 7%;
+  //    height: 0.1em;
+  //  }
+  //
+  //
+  //
+  //
+  //  .use-only {
+  //    position: absolute;
+  //    bottom: 3.6em;
+  //    left: 79.4%;
+  //    font-size: 0.29em;
+  //
+  //  }
+  //
+  //
+  //
+  //
+  //#compare-bg {
+  //  background: transparent url("../img/desktop/homepage/mom-child.png") no-repeat center top;
+  //  width: 100%;
+  //  height: 100%;
+  //  position: absolute;
+  //  overflow: hidden;
+  //  background-size: contain;
+  //  top: 17em;
+  //  z-index: 100;
+  //}
+  //
+  //
+  //#compare-bg .btn1 {
+  //  color: #00008B;
+  //  font-size: 0.51em;
+  //  margin: 0.3em 3em;
+  //
+  //  width: 400px;
+  //  min-height: 50px;
+  //  font-family: $font-proxima-nova-semibold;
+  //  text-align: left;
+  //}
+  //
+  //
+  //
+  //
+  //  .compare-link-bottom {
+  //    display: block;
+  //    background: url(../img/desktop/homepage/compare-arrow.png) no-repeat right center;
+  //    background-size: contain;
+  //    width: 30%;
+  //    position: absolute;
+  //    left: 23%;
+  //    bottom: 12.4em;
+  //    font-size: 0.46em;
+  //    padding: 0.8em 0px 0.8em 4.4%;
+  //    line-height: 1.3em;
+  //    color: $color-dark-blue;
+  //    font-weight: 700;
+  //
+  //
+  //    &:hover {
+  //      color: $color-orange;
+  //      background: url(../img/desktop/homepage/compare-arrow-hover.png) no-repeat right center;
+  //      background-size: contain;
+  //    }
+  //
+  //  }
+  //
+  //
+  //  .compare-link-bottom + .btn01 {
+  //    bottom: 12.4em;
+  //  }
+  //
+  //  .compare-link-bottom + .btn02 {
+  //    bottom: 8.1em;
+  //    line-height: 1.4em;
+  //  }
+  //
+  //  .compare-link-bottom + .btn03 {
+  //    bottom: 3.9em;
+  //  }
+  //
+  //
+  //
+  //  #stats {
+  //    background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
+  //    height: 0;
+  //    z-index: 99;
+  //    background-size: cover;
+  //    position: absolute;
+  //    bottom: 8em;
+  //    width: 26%;
+  //    left: 58%;
+  //  }
+  //
+  //
+  //
+  //  }
+  //
+  //
+  //
+
+  //
+  //
+  //#compare-copy {
+  //  width: 40%;
+  //  height: 7em;
+  //  position: absolute;
+  //  top: 1.45em;
+  //  left: -42%;
+  //  color: $color-white;
+  //  font-family: $font-proxima-nova-semibold;
+  //  text-align: left;
+  //  z-index: 105;
+  //
+  //
+  //
+  // h2 {
+  //   font-family: $font-proxima-nova-semibold;
+  //  font-size: 0.7em;
+  //  padding: 0;
+  //  margin: 0.3em 0 0 0.60em;
+  //  letter-spacing: 0.03em;
+  //  width: 95%;
+  //  line-height: 1.4em;
+  //  color: $color-white;
+  //
+  //   sup {
+  //     position: relative;
+  //     top: -0.5em;
+  //     font-size: 0.65em;
+  //     font-weight: 100;
+  //   }
+  //
+  //}
+  //
+  //sup {
+  //  position: relative;
+  //  top: -1.5em;
+  //  font-size: 0.4em;
+  //  font-weight: 100;
+  //}
+  //
+  //
+  //
+  //
+  // p {
+  //  margin: 2.7em 0 0 1em;
+  //  width: 72%;
+  //  font-size: 0.37em;
+  //  font-weight: 100;
+  //  line-height: 1.6em;
+  //  color: #e9eaea;
+  //}
+  //
+  //
+  // .compare-link {
+  //  display: block;
+  //  background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+  //  height: 3.6em;
+  //  border-radius: 9px;
+  //  width: 59%;
+  //  margin: 1.2em 0px 0px 0.7em;
+  //  font-size: 0.45em;
+  //  text-decoration: none;
+  //  line-height: 1.3em;
+  //  color: #2e2662;
+  //  background-size: contain;
+  //  font-weight: 100;
+  //  letter-spacing: 0.05em;
+  //}
+  //
+  // .compare-link:hover {
+  //  color: $color-orange;
+  //   background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
+  //   background-size: contain;
+  //}
+  //
+  //
+  //
+  //
+  // .compare-link span {
+  //  display: block;
+  //  width: 79%;
+  //  padding: 0.6em 0px 0px 1em;
+  //  font-weight: 100;
+  //}
+  //
+  // .compare-link strong {
+  //  font-weight: 700;
+  //}
+  //
+  //
+  //}
+  //
+
+
+  //.compare-link-bottom {
+  //  display: block;
+  //  background: url(../img/desktop/homepage/compare-arrow.png) no-repeat right center;
+  //  background-size: contain;
+  //  width: 30%;
+  //  position: absolute;
+  //  left: 23%;
+  //  bottom: 12.4em;
+  //  font-size: 0.46em;
+  //  padding: 0.8em 0px 0.8em 4.4%;
+  //  line-height: 1.3em;
+  //  color: $color-dark-blue;
+  //    font-weight: 700;
+  //
+  //
+  // &:hover {
+  //    color: $color-orange;
+  //   background: url(../img/desktop/homepage/compare-arrow-hover.png) no-repeat right center;
+  //   background-size: contain;
+  // }
+  //
+  //}
+  //
+  //
+  //.compare-link-bottom + .btn01 {
+  //  bottom: 12.4em;
+  //}
+  //
+  //.compare-link-bottom + .btn02 {
+  //  bottom: 8.1em;
+  //  line-height: 1.4em;
+  //}
+  //
+  //.compare-link-bottom + .btn03 {
+  //  bottom: 3.9em;
+  //}
+  //
+  //
+  //
+  //#stats {
+  //  background: transparent url("../img/desktop/homepage/mom-child-stats.png") no-repeat center bottom;
+  //  height: 0;
+  //  z-index: 99;
+  //  background-size: cover;
+  //  position: absolute;
+  //  bottom: 8em;
+  //  width: 26%;
+  //  left: 58%;
+  //}
+
+
+//  #slide04 {
+//    position: fixed;
+//    top: 81px;
+//    height: 100%;
+//    left: 0;
+//    right: 0;
+//    margin: auto;
+//    z-index: 100;
+//    max-width: #{homepage-max-width()};
+//    width: 100%;
+//    font-family: $font-proxima-nova-semibold;
+//    font-weight: 100;
+//    margin-top: 17em;
+//
+//    @include breakpoint("tablet-n-desktop") {
+//      margin-top: 35em;
+//      top: 139px;
+//    }
+//
+//
+//
+//    overflow: hidden;
+//
+//    .use-only {
+//      position: absolute;
+//      top: 56.1em;
+//      left: 79.4%;
+//      font-size: 0.29em;
+//
+//    }
+//
+//
+//
+//  }
+//
+//
+//
+//  #slide04 .title {
+//    position: absolute;
+//    left: 0px;
+//    right: 0px;
+//    margin: auto;
+//    color: #133C7C;
+//    top: 3.45em;
+//    font-size: 0.8em;
+//    width: 40%;
+//    letter-spacing: 0.01em;
+//    line-height: 1.17em;
+//    text-align: center;
+//  }
+//
+//  #slide04 .title sup {
+//    position: relative;
+//    top: -10px;
+//    font-size: 0.7em;
+//  }
+//
+//
+//  .orange-color {
+//    color: #EA5825;
+//  }
+//
+//
+//
+//
+//  #slide04 .dashbox {
+//    display: block;
+//    background-color: #b1c9e0;
+//    position: absolute;
+//    top: 5.12em;
+//    left: 0px;
+//    right: 0px;
+//    margin: auto;
+//    width: 2.8%;
+//    height: 0.1em;
+//
+//
+//  }
+//
+//
+//
+//
+//  #patient-box {
+//    width: 70%;
+//    margin: auto;
+//    height: 9em;
+//    top: 5.6em;
+//    position: absolute;
+//    right: 0;
+//    left: 101%;
+//    @include ha;
+//  }
+//
+//
+//
+//
+//
+//  .patient {
+//
+//    display: inline-block;
+//    width: 24%;
+//    height: 100%;
+//    text-align: center;
+//    overflow: hidden;
+//    position: relative;
+//    cursor: pointer;
+//
+//
+//
+//
+//
+//  .namebox {
+//    border-bottom: 1px solid #aaa;
+//    width: 95%;
+//    height: 1.64em;
+//    overflow: hidden;
+//    margin: auto;
+//
+//
+//    .name {
+//      font-family: $font-proxima-nova-semibold;
+//      font-size: 0.51em;
+//      display: block;
+//      padding-top: 0.5em;
+//      color: #133c7c;
+//    }
+//
+//    .subname {
+//      font-family: $font-proxima-nova-extrabold;
+//      font-size: 0.51em;
+//      display: block;
+//      padding-top: 0.1em;
+//      color: #ea5825;
+//      letter-spacing: 0.06em;
+//    }
+//
+//
+//  }
+//
+//
+//  .textbox {
+//    position: absolute;
+//    bottom: 0;
+//    font-size: 0.3em;
+//    height: 4.23em;
+//    width: 100%;
+//    background: #fff url(../img/desktop/homepage/patient-arrow.png) no-repeat right center;
+//    color: #133c7c;
+//    font-family: $font-proxima-nova-semibold;
+//    text-align: left;
+//    background-size: contain;
+//
+//
+//    p {
+//      padding: 0.8em 0px 0px 6.5%;
+//      width: 86%;
+//      line-height: 1.2em;
+//      color: #133c7c;
+//      font-size: 1em;
+//
+//    }
+//
+//  }
+//
+//    .textboxhover{
+//      background: #fff url(../img/desktop/homepage/patient-arrow-hover.png) no-repeat right center;
+//      background-size: contain;
+//      color: $color-orange;
+//    }
+//
+//
+//
+//  }
+//
+//
+//
+//
+//  .patient-maria img {
+//    margin-top: -0.32em;
+//    background-size: contain;
+//    width: 107%;
+//  }
+//
+//
+//
+//  .patient-mark img {
+//    margin: -0.54em 0px 0px -8%;
+//    background-size: contain;
+//    width: 113%;
+//  }
+//
+//  .patient-kara img {
+//    margin: -0.2em 0px 0px -2%;
+//    background-size: contain;
+//    width: 110%;
+//  }
+//
+//  .patient-liam img {
+//    margin: 1em 0 0 0;
+//    background-size: contain;
+//    width: 100%;
+//  }
+//
+//
+//  #slide05 {
+//    position: fixed;
+//    top: 15em;
+//    height: 91%;
+//    z-index: 100;
+//    max-width: #{homepage-max-width()};
+//    width: 100%;
+//    margin: auto;
+//    left: 0px;
+//    right: 0px;
+//    margin-top: 15em;
+//
+//
+//    .use-only {
+//      position: absolute;
+//      top: 44em;
+//      left: 79.4%;
+//      font-size: 0.29em;
+//      color: $color-white;
+//
+//    }
+//
+//   #understand-box {
+//     position: absolute;
+//     top: 0.1em;
+//     width: 40%;
+//     text-align: left;
+//     left: -40%;
+//     right: 0;
+//     //margin: auto;
+//    @include ha;
+//
+//
+//     h2 {
+//       color: #FFF;
+//       font-family: $font-proxima-nova-semibold;
+//       font-size: 0.8em;
+//       padding-bottom: 0;
+//       font-weight: 100;
+//       line-height: 1.18em;
+//       letter-spacing: 0.03em;
+//     }
+//
+//   }
+//
+//   .understand-link {
+//    display: block;
+//    background: #fff url(../img/desktop/homepage/understand-arrow.png) no-repeat right center;
+//    background-size: contain;
+//    border-radius: 9px;
+//    width: 79%;
+//    height: 3.8em;
+//    margin: 0px 0px 0.9em 0em;
+//    font-size: 0.45em;
+//    text-decoration: none;
+//    line-height: 3.8em;
+//    color: $color-blue-titles;
+//    font-family: $font-proxima-nova-semibold;
+//    letter-spacing: 0.08em;
+//     padding-left: 4%;
+//
+//
+//   }
+//
+//
+//    .understand-link:hover {
+//      color: $color-orange;
+//      background: #fff url(../img/desktop/homepage/understand-arrow-hover.png) no-repeat right center;
+//      background-size: contain;
+//
+//    }
+//
+//}
+//
+
+
+
+
+
+  //#slide01 {
+  //  background-color: rgba(0,255,0,0.2);
+  //  position: fixed;
+  //  top: 111px;
+  //  height: 14.7em;
+  //  z-index: 112;
+  //  margin: auto;
+  //  left: 0;
+  //  right: 0;
+  //  max-width: #{homepage-max-width()};
+  //  width: 100%;
+  //  background-size: contain !important;
+  //  overflow: hidden;
+  //
+  //
+  //  @include breakpoint("tablet-n-desktop") {
+  //    top: 139px;
+  //  }
+  //
+  //
+  //}
+
+
+  //
+  //#slide1-textbox {
+  //  position: absolute;
+  //  top: 3.9em;
+  //  left: 140.5%;
+  //  font-family: $font-proxima-nova-semibold;
+  //  font-weight: 100;
+  //  color: #1B468E;
+  //  font-size: 0.8em;
+  //  z-index: 135;
+  //  text-align: left;
+  //  letter-spacing: 0.04em;
+  //  width: 39%;
+  //  line-height: 1.2em;
+  //
+  //  @include breakpoint("tablet-n-desktop") {
+  //    top: 1.7em;
+  //  }
+  //
+  //
+  //
+  //  h2 {
+  //    font-family: $font-proxima-nova-semibold;
+  //    color: #2974AB;
+  //    font-size: 1em;
+  //    margin-top: 0.51em;
+  //    margin-bottom: 25px;
+  //    font-weight: 100;
+  //    letter-spacing: 0.0434em;
+  //  }
+  //
+  //  .features {
+  //    color: $color-cyan-text;
+  //    text-transform: uppercase;
+  //    text-decoration: underline;
+  //  }
+  //
+  //  p {
+  //    font-family: $font-proxima-nova-semibold;
+  //    font-size: 0.5em;
+  //    padding-top: 0.1em;
+  //    letter-spacing: 0.004em;
+  //    line-height: 1.54em;
+  //    width: 82%;
+  //
+  //  }
+  //
+  //  sup {
+  //    position: relative;
+  //    top: -0.65em;
+  //    font-size: 0.5em;
+  //  }
+  //
+  //}
+
+  //#slide01 .lady01,
+  //#slide01 .lady02,
+  //#slide01 .lady03 {
+  //  position: absolute;
+  //  left: 0;
+  //  right: 0;
+  //  background-size: contain !important;
+  //  width: 100%;
+  //  height: 12.3em;
+  //}
+  //
+  //
+  //
+  //
+  //
+  //
+  //#slide01 .lady01 {
+  //  background: url(../img/desktop/homepage/lady01.png) no-repeat top center;
+  //  z-index: 122;
+  //}
+  //
+  //
+  //#slide01 .lady02 {
+  //  background: url(../img/desktop/homepage/lady02.png) no-repeat top center;
+  //  z-index: 118;
+  //  opacity: 0;
+  //
+  //}
+  //
+  //#slide01 .lady03 {
+  //  background: url(../img/desktop/homepage/lady03.png) no-repeat top center;
+  //  z-index: 120;
+  //  opacity: 0;
+  //}
+  //
+  //
+  //
+  //#carousel1, #carousel2, #carousel3 {
+  //  height: 13.7em;
+  //  position: absolute;
+  //  width: 104%;
+  //  top: 0px;
+  //  background-size: contain !important;
+  //  overflow: hidden;
+  //}
+  //
+  //
+  //#carousel1, #slide01 {
+  //  background: url(../img/desktop/homepage/carousel-01.png) no-repeat top center;
+  //}
+  //
+  //#carousel1 {
+  //  z-index: 115;
+  //  opacity: 1;
+  //}
+  //
+  //#carousel2 {
+  //  background: url(../img/desktop/homepage/carousel-02.png) no-repeat top center;
+  //  z-index: 117;
+  //  opacity: 0;
+  //}
+  //
+  //#carousel3 {
+  //  background: url(../img/desktop/homepage/carousel-03.png) no-repeat top center;
+  //  z-index: 119;
+  //  opacity: 0;
+  //}
+  //
 
 
 
@@ -1370,126 +2628,126 @@
 
 
 
-
-
-  #nasacort-compare {
-    width: 12em;
-    height: 10.5em;
-    bottom: 8.8em;
-    position: absolute;
-    right: 20.4%;
-    z-index: 101;
-    font-family: $font-proxima-nova-semibold;
-    top: 16.3em;
-    text-align: left;
-
-    h2 {
-      font-size: 0.7em;
-      padding: 0;
-      margin: 0.403em 0 0 4%;
-      letter-spacing: 0.03em;
-      width: 95%;
-      line-height: 1.4em;
-      color: #133C7C;
-    }
-
-    sup {
-      position: relative;
-      top: -1.1em;
-      font-size: 0.4em;
-      font-weight: 100;
-    }
-
-    p {
-      margin-top: 3.65em;
-      width: 93%;
-      font-size: 0.3em;
-      font-weight: 100;
-      line-height: 1.55em;
-      margin-left: 4%;
-      letter-spacing: 0.04em;
-      color: #4d4b4b;
-      margin-bottom: 2.7em;
-
-      strong {
-        font-weight: 700;
-      }
-
-
-      sup {
-        position: relative;
-        top: -0.5em;
-        font-size: 0.6em;
-        font-weight: 100;
-      }
-
-
-    }
-
-    .superscript {
-      top: -0.54em;
-      font-size: 0.7em;
-    }
-
-    .compare-link {
-      display: block;
-      background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
-      height: 3.7em;
-      border-radius: 9px;
-      width: 92%;
-      margin: 0.9em 0px 0px 0.7em;
-      font-size: 0.45em;
-      text-decoration: none;
-      line-height: 1.2em;
-      color: #2E2662;
-      font-weight: 100;
-      letter-spacing: 0.05em;
-
-
-      @include breakpoint("tablet") {
-        letter-spacing: 0.05em;
-      }
-
-
-      sup {
-        position: relative;
-        top: -0.4em;
-        font-size: 0.7em;
-        font-weight: 100;
-      }
-
-    }
-
-    .compare-link:hover {
-      color: $color-orange;
-      background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
-    }
-
-    .compare-link span {
-      display: block;
-      width: 92%;
-      padding: 1.2em 0px 0px 1em;
-      font-weight: 100;
-    }
-
-    .span1 {
-      @include breakpoint("tablet-n-desktop") {
-        padding: 0.7em 0px 0px 1em !important;
-        width: 75% !important;
-      }
-    }
-
-    .span2 {
-      padding: 0.7em 0px 0px 1em !important;
-      width: 75% !important;
-    }
-
-    .compare-link strong {
-      font-weight: 700;
-    }
-
-  }
-
+  //
+  //
+  //#nasacort-compare {
+  //  width: 12em;
+  //  height: 10.5em;
+  //  bottom: 8.8em;
+  //  position: absolute;
+  //  right: 20.4%;
+  //  z-index: 101;
+  //  font-family: $font-proxima-nova-semibold;
+  //  top: 16.3em;
+  //  text-align: left;
+  //
+  //  h2 {
+  //    font-size: 0.7em;
+  //    padding: 0;
+  //    margin: 0.403em 0 0 4%;
+  //    letter-spacing: 0.03em;
+  //    width: 95%;
+  //    line-height: 1.4em;
+  //    color: #133C7C;
+  //  }
+  //
+  //  sup {
+  //    position: relative;
+  //    top: -1.1em;
+  //    font-size: 0.4em;
+  //    font-weight: 100;
+  //  }
+  //
+  //  p {
+  //    margin-top: 3.65em;
+  //    width: 93%;
+  //    font-size: 0.3em;
+  //    font-weight: 100;
+  //    line-height: 1.55em;
+  //    margin-left: 4%;
+  //    letter-spacing: 0.04em;
+  //    color: #4d4b4b;
+  //    margin-bottom: 2.7em;
+  //
+  //    strong {
+  //      font-weight: 700;
+  //    }
+  //
+  //
+  //    sup {
+  //      position: relative;
+  //      top: -0.5em;
+  //      font-size: 0.6em;
+  //      font-weight: 100;
+  //    }
+  //
+  //
+  //  }
+  //
+  //  .superscript {
+  //    top: -0.54em;
+  //    font-size: 0.7em;
+  //  }
+  //
+  //  .compare-link {
+  //    display: block;
+  //    background: #fff url(../img/desktop/homepage/mom-child-arrow.png) no-repeat right center;
+  //    height: 3.7em;
+  //    border-radius: 9px;
+  //    width: 92%;
+  //    margin: 0.9em 0px 0px 0.7em;
+  //    font-size: 0.45em;
+  //    text-decoration: none;
+  //    line-height: 1.2em;
+  //    color: #2E2662;
+  //    font-weight: 100;
+  //    letter-spacing: 0.05em;
+  //
+  //
+  //    @include breakpoint("tablet") {
+  //      letter-spacing: 0.05em;
+  //    }
+  //
+  //
+  //    sup {
+  //      position: relative;
+  //      top: -0.4em;
+  //      font-size: 0.7em;
+  //      font-weight: 100;
+  //    }
+  //
+  //  }
+  //
+  //  .compare-link:hover {
+  //    color: $color-orange;
+  //    background: #fff url(../img/desktop/homepage/mom-child-arrow-hover.png) no-repeat right center;
+  //  }
+  //
+  //  .compare-link span {
+  //    display: block;
+  //    width: 92%;
+  //    padding: 1.2em 0px 0px 1em;
+  //    font-weight: 100;
+  //  }
+  //
+  //  .span1 {
+  //    @include breakpoint("tablet-n-desktop") {
+  //      padding: 0.7em 0px 0px 1em !important;
+  //      width: 75% !important;
+  //    }
+  //  }
+  //
+  //  .span2 {
+  //    padding: 0.7em 0px 0px 1em !important;
+  //    width: 75% !important;
+  //  }
+  //
+  //  .compare-link strong {
+  //    font-weight: 700;
+  //  }
+  //
+  //}
+  //
 
 
 
@@ -1534,7 +2792,7 @@
 
 .footer-for-homepage {
 
-display: none;
+//display: none;
 
 }
 

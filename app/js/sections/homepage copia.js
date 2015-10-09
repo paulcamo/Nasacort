@@ -112,7 +112,7 @@ $(document).ready(function() {
         // --- slide 02 ---------------------------------------------------------------
 
         .to('#header', 1,                    {marginTop: '-29px',  ease: Sine. easeIn} , '+=0')
-        .to(window, 8, {scrollTo:{y:   $('#tope2').offset().top, x:0}, ease:Sine.easeInOut}, '-=1')
+        .to(window, 8, {scrollTo:{y:   $('#tope1').offset().top, x:0}, ease:Sine.easeInOut}, '-=1')
 
 
 
@@ -128,27 +128,23 @@ $(document).ready(function() {
 
 
 
-        .to('#bottle', 5,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=5')
-        .to('#cap', 5,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=5')
-        .to('#cap', 0.7,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
-        .to('#cap', 1,                    {marginTop: '29.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-        .to('#no-scent', 0.8,             {height: '9.2em'} , '+=0')
+        .to('#bottle', 5,                 {marginTop: '28.2em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=5')
+        .to('#cap', 5,                    {marginTop: '26.4em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=5')
+        .to('#cap', 0.7,                  {marginTop: '21.5em', ease: Power1.easeOut} , '+=0')
+
+        .to('#cap', 1,                    {marginTop: '28.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
+        .to('#no-scent', 0.8,             {height: '8em'} , '+=0')
         .fromTo($('#nasacort-compare'), 1.5, {right: '-35%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0')
         .addLabel('cta2')
         .add(callback_function)
 
         // --- slide 03 ---------------------------------------------------------------
 
-        //.to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
-        //.to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
+        .to('#background', 3,    {top: '-33em', ease: Power2.easeOut}, '+=0')
+        .to('#slide02', 3,       {marginTop: '-34em', ease: Power1.easeOut}, '-=3')
         //.to('#slide03', 3,       {top: '139px'}, '-=3')
-
-
-        .to(window, 8, {scrollTo:{y:   $('#tope3').offset().top, x:0}, ease:Sine.easeInOut}, '-=1')
-
-
         .to('#compare-copy', 1,  {left: '23%'}, '+=0')
-        .to('#compare-bg', 1,    {bottom: '0'}, '+=0')
+        .to('#compare-bg', 1,    {top: '1.4em'}, '+=0')
         .to('#stats', 1,         {height: '30.5%'}, '+=0')
         .addLabel('cta3')
         .add(callback_function)
@@ -176,7 +172,7 @@ $(document).ready(function() {
 
         .to('#background', 1,       {top:'-78.6em', ease: Power0.easeIn}, '+=0')
         .to('#slide05', 1,          {top:'-22em', ease: Power0.easeIn}, '-=1')
-        // .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
+       // .to('#dots-container', 1,   {height:'1230px', ease: Power0.easeIn}, '-=1')
         .to('#cyan-box', 1,   {height:'300px', ease: Power0.easeIn}, '-=1')
     ;  // --- end ---------------------------------------------------------------
 
@@ -195,10 +191,10 @@ $(document).ready(function() {
         // --- slide 02 ---------------------------------------------------------------
 
         .to('#header', 1,                    {marginTop: '-29px',  ease: Sine. easeIn} , '+=0')
-        // .to('#slide1-textbox', 3,            {top: '-900px',  ease: Sine. easeIn} , '-=1')
+       // .to('#slide1-textbox', 3,            {top: '-900px',  ease: Sine. easeIn} , '-=1')
         .to('#slide01', 3,                   {top: '-900px',  ease: Sine. easeIn} , '-=3')
         .to('#background', 3,                {top: '-10.7em',  ease: Sine. easeIn} , '-=3')
-        // .fromTo('#herolink', 3,           {top: '0px'}, {top: '-900px'} , '-=3')
+       // .fromTo('#herolink', 3,           {top: '0px'}, {top: '-900px'} , '-=3')
         .fromTo('.footnote[data-section="home-1"]', 3,      {opacity: 1}, {opacity: 0} , '-=3')
         .fromTo('.footnote[data-section="home-2"]', 3,      {opacity: 0}, {opacity: 1} , '-=3')
         .fromTo('#slide2useonly', 3,      {opacity: 0}, {opacity: 1} , '-=3')
@@ -293,7 +289,7 @@ $(window).bind("resize", function(){
 function set_variables(){
 
     if ( isTablet) {
-        // console.log ("  isTablet  !!! ");
+       // console.log ("  isTablet  !!! ");
 
         slide5bg= '-68em';
         slide5tab= '-12.85em';
@@ -405,7 +401,7 @@ $('.footnote').on('click', function(e) {
 
         e.preventDefault();
     }
-    trackFootnoteOpen($('.footnote').index($(this)), $("body").attr("class"));
+
 });
 
 $('.footnote .close-btn').on('click', function(e) {
@@ -424,7 +420,6 @@ $('.footnote .close-btn').on('click', function(e) {
         $(this).parent().parent().css("width","width: 11.5%");
     }
     e.preventDefault();
-    trackFootnoteClose($('.footnote .close-btn').index($(this)), $("body").attr("class"));
 });
 
 // ---------------------------------------------------------------------------------------
@@ -576,7 +571,7 @@ function select_a_slide(v) {
     }
 
 
-    // console.log(" afuera " + currentSlide);
+   // console.log(" afuera " + currentSlide);
 
 
 }
@@ -592,16 +587,16 @@ function callback_function (){
     //console.log ("el final es " + finalSlide + "  voy ->" + actualSlide);
     // console.log ( playedSlides);
 
-    // $("#numero").text(actualSlide + " - " + finalSlide);
+   // $("#numero").text(actualSlide + " - " + finalSlide);
 
     if (finalSlide==actualSlide) {
-        tl.pause();
-        tlr.pause();
+         tl.pause();
+         tlr.pause();
 
         $(".dotcover").hide();
         playedSlides[actualSlide]=1;
         scrollflag=0;
-        //  scrollSlideClick=finalSlide;
+      //  scrollSlideClick=finalSlide;
     }else {
         //  console.log ("el final es " + finalSlide + "  voy ->" + currentSlide);
 
