@@ -1,4 +1,10 @@
 .nasacort-difference-section {
+    .container{
+        @include breakpoint('mobile') {   
+            overflow:hidden;
+        }
+    }
+    
 
   @include breakpoint('mobile') {   
     .footnote{
@@ -7,6 +13,7 @@
           padding: 10px 10px 10px 20px;
       }
     }
+    
   }
 .first-container{
    @include breakpoint('mobile'){
@@ -140,6 +147,11 @@
       right: 1px;
       top: -240px;
     }
+    
+     @media screen and (max-width: 375px) {
+         right: -48px;
+     }
+    
     img{
       width: 100%;
     }

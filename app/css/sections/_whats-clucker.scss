@@ -156,6 +156,9 @@ $grey-button:#f8f8f8;
         @media screen and (max-width: 1210px) {
             bottom:-30px;
         }
+        @media screen and (max-width: 768px){
+            width: 100%;
+        }
         @include breakpoint('tablet'){
             bottom: -66px;
         }
@@ -168,6 +171,19 @@ $grey-button:#f8f8f8;
             position:relative;
             display: table;
             margin: 0 auto;
+            @media screen and (max-width: 768px){
+                width: 100%;
+            }
+            ul{
+                @media screen and (max-width: 768px){
+                    width: 90%;
+                    margin-left:9%;
+                }
+                @media screen and (max-width: 350px){
+                    margin-left:0;
+                    width:auto;
+                }
+            }
             ul > li {
                 display: inline-block;
                 position: relative;
@@ -177,8 +193,15 @@ $grey-button:#f8f8f8;
                 }
                 @media screen and (max-width: 1025px) {
                     width: 180px;
+                } 
+                /*@include breakpoint('mobile'){
+                    width: 75px;
+                }*/
+                
+                @media screen and (max-width: 768px){
+                    width: 25%;
                 }
-                @include breakpoint('mobile'){
+                @media screen and (max-width: 350px){
                     width: 75px;
                 }
                 bottom: 0;
