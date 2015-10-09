@@ -343,10 +343,11 @@
 .download-cta-button{
     margin: 0;
     width:280px;
-    margin-left: 4.3%;
+    margin-left: 3%;
     .sympt{
         height:50px;
         width:180px;
+        min-width: 0;
         img{
             margin-top: 4px;
         }

@@ -177,6 +177,9 @@ h4{
         float: left;
         position:relative;
         z-index: 1;
+        // width: 100%;
+        // max-width: 450px;
+        min-width: 450px;
         @include breakpoint('mobile'){
             height: 50px;
         }

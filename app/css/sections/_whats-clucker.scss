@@ -406,7 +406,9 @@ $grey-button:#f8f8f8;
                         display: inline-block;
                         height: 30px;
                         background-position: 20px;
-                        &:hover{
+                    }
+                    &:hover{
+                        .arrow{
                             background: url('../img/desktop/clucker/arrow_box_hover.png') no-repeat;
                             background-position: 20px;
                         }
