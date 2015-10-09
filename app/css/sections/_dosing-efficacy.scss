@@ -530,6 +530,12 @@ $space-mobile-copy: 4.6875%;
             &.last-h2{
                 margin-top:0px;
                 width:70%;
+                br{
+                    display:none;
+                        @include breakpoint('mobile') {
+                            display:block;
+                     }
+                }
             }
           }
           p{
