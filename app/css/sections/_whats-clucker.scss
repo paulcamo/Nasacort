@@ -287,6 +287,9 @@ $grey-button:#f8f8f8;
                     background: url('../img/desktop/clucker/close_box.png') no-repeat;
                     margin-right: 14px;
                     margin-top: 14px;
+                    &:hover{
+                        background: url('../img/desktop/clucker/close_box_hover.png') no-repeat;
+                    }
                 }
                 .content{
                     position: relative;
@@ -376,6 +379,14 @@ $grey-button:#f8f8f8;
                         margin-top: 5px;
                         margin-right: 26px;
                         width: 40px;
+                        background: url('../img/desktop/clucker/arrow_box.png') no-repeat;
+                        display: inline-block;
+                        height: 30px;
+                        background-position: 20px;
+                        &:hover{
+                            background: url('../img/desktop/clucker/arrow_box_hover.png') no-repeat;
+                            background-position: 20px;
+                        }
                     }
                 }
             }
