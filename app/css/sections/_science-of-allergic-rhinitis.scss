@@ -709,6 +709,7 @@
     }
     .right-align{
       min-height: 36px;
+      margin-top: 16px;
       @include breakpoint('mobile'){
         width: 100%;
         padding-right:20px;
