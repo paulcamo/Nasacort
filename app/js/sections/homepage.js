@@ -130,6 +130,11 @@ $(document).ready(function() {
 
         .to('#bottle', 5,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=5')
         .to('#cap', 5,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=5')
+
+        .to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
+
+
+
         .to('#cap', 0.7,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
         .to('#cap', 1,                    {marginTop: '29.7em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
         .to('#no-scent', 0.8,             {height: '9.2em'} , '+=0')
@@ -144,20 +149,20 @@ $(document).ready(function() {
         //.to('#slide03', 3,       {top: '139px'}, '-=3')
 
 
-        .to(window, 8, {scrollTo:{y:   $('#tope3').offset().top, x:0}, ease:Sine.easeInOut}, '-=1')
-
-
+        .to(window, 5, {scrollTo:{y:   $('#tope3').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#compare-copy', 1,  {left: '23%'}, '+=0')
-        .to('#compare-bg', 1,    {bottom: '0'}, '+=0')
+        .to('#compare-bg', 1,    {bottom: '-0.60em'}, '+=0')
         .to('#stats', 1,         {height: '30.5%'}, '+=0')
         .addLabel('cta3')
         .add(callback_function)
 
         // --- slide 04 ---------------------------------------------------------------
 
-        .to('#background', 4,    {top: '-48.5em', ease: Expo.easeOut}, '+=0')
-        .to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
-        .to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
+        //.to('#background', 4,    {top: '-48.5em', ease: Expo.easeOut}, '+=0')
+        //.to('#slide03', 2,       {top: '-16em', ease: Power1.easeOut}, '-=4')
+        //.to('#slide04', 2,       {marginTop: '-2em', ease: Power1.easeOut}, '-=4')
+
+        .to(window, 5, {scrollTo:{y:   $('#tope4').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#patient-box', 3,   {left: '0px', ease: Power0.easeIn}, '-=1')
         .addLabel('cta4')
         .add(callback_function)

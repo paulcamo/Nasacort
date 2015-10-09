@@ -50,16 +50,27 @@ body {
   #tope3 {
     position: absolute;
     bottom: 0;
-    height: 16.6em;
+    height: 17.2em;
+    width: 100px;
+  }
+
+
+  #tope4 {
+    position: absolute;
+    bottom: 0;
+    height: 18.2em;
     width: 100px;
     background-color: red;
   }
 
 
+
+
+
   #slide02 {
     height: 32em;
     z-index: 1000;
-    overflow-y: hidden;
+   // overflow-y: hidden;
   }
 
   #slide02-03 {
@@ -505,7 +516,7 @@ body {
     .use-only {
       position: absolute;
       top: 4.1em;
-      left: 79.4%;
+      right: 17px;
       font-size: 0.29em;
 
     }
@@ -1028,7 +1039,7 @@ body {
 
 
   #slide03 {
-    height: 14.23em;
+    height: 14.73em;
     margin: auto;
     left: 0;
     right: 0;
@@ -1071,8 +1082,8 @@ body {
 
     .use-only {
       position: absolute;
-      bottom: 3.6em;
-      left: 79.4%;
+      bottom: 1em;
+      right: 17px;
       font-size: 0.29em;
 
     }
@@ -1113,7 +1124,7 @@ body {
       width: 30%;
       position: absolute;
       left: 23%;
-      bottom: 9.14em;
+      bottom: 10.2em;
       font-size: 0.46em;
       padding: 0.8em 0px 0.8em 4.4%;
       line-height: 1.3em;
@@ -1131,16 +1142,16 @@ body {
 
 
     .compare-link-bottom + .btn01 {
-      bottom: 9.14em;
+      bottom: 10.2em;
     }
 
     .compare-link-bottom + .btn02 {
-      bottom: 5em;
+      bottom: 6em;
       line-height: 1.4em;
     }
 
     .compare-link-bottom + .btn03 {
-      bottom: 0.6em;
+      bottom: 1.7em;
     }
 
 
