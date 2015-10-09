@@ -757,6 +757,12 @@
              @include breakpoint('mobile'){
                 max-width: 180px;
             }
+            br{
+                display:none;
+                @include breakpoint('mobile'){
+                    display:block;
+                }
+            }
         }
     }
   }
