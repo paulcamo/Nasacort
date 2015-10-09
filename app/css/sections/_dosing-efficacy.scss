@@ -796,12 +796,14 @@ $space-mobile-copy: 4.6875%;
      @include breakpoint('mobile') {
          background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
          height: auto;
-         //max-width: 601px;
+         max-width: 601px;
+         min-width:300px;
          padding-bottom: 100%;
-         width: 100%;
+         width: 94%;
          background-size:contain;
          margin-bottom:16px;
-         margin-left:9px;
+         margin-left:3%;
+         margin-right:3%;
      }
     .graph-header{
         float:left;
