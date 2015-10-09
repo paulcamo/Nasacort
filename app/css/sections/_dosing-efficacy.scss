@@ -84,8 +84,12 @@ $space-mobile-copy: 4.6875%;
                  height:233px;
                  padding-bottom: 0 !important;
                  max-height: 233px;
-                 background-position: 70% -14px !important;
+                 background-position: 77% -14px !important;
              }
+              @media screen and (max-width: 640px) {
+                  //background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy-640.jpg") no-repeat top center;
+                  //background-position: 0 0 !important;
+              }
              .content{
                  h1{
                       @include breakpoint('mobile') {
