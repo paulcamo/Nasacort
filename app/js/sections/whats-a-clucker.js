@@ -418,7 +418,7 @@ function clickInNav() {
                 $('.img-container>ul>li .hover_img').hide();
                 container.hide('fast');
                 $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
-                $('.img-container>ul>li.li_maria').css({'z-index':'1'});
+                $('.img-container>ul>li.li_maria').css({'z-index':'0'});
                 $('.click_state').removeClass('hover');
                 $('.click_state').find('.arrow-upMenu').removeClass('hover');
                 $('.click_state').removeClass('click_state');
@@ -431,7 +431,7 @@ function clickInNav() {
             $('.img-container>ul>li .hover_img').hide();
             container.hide('fast');
             $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
-            $('.img-container>ul>li.li_maria').css({'z-index':'1'});
+            $('.img-container>ul>li.li_maria').css({'z-index':'0'});
             $('.click_state').removeClass('hover');
             $('.click_state').find('.arrow-upMenu').removeClass('hover');
             $('.click_state').removeClass('click_state');
