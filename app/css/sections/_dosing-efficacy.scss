@@ -405,6 +405,12 @@ $space-mobile-copy: 4.6875%;
     .chart-3{
         h3{
             margin-bottom: 23px;
+            br{
+                display:none;
+                @include breakpoint('mobile') {
+                    display:block;
+                }
+            }
         }
         .second-content-dosing{
             margin-bottom: 24px;
