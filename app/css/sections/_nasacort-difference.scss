@@ -96,7 +96,6 @@
     font-size: 15px;
     clear: both;
     margin: 0 auto 12px;
-    width: 90%;
     @include breakpoint('desktop'){
       max-width: 920px!important;
       padding-left:0;
