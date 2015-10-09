@@ -436,10 +436,12 @@
       }
       @include breakpoint('mobile'){
         background-position: center;
-        background-size: 110% auto;
+        background-size: 100% auto;
         overflow: hidden;
-        width: 80%;
-        margin-left:10%;
+        width: 55%;
+        margin-left:0%;
+        float:right;
+        margin-right:2px;
       }
     }
 
@@ -450,11 +452,13 @@
           background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-position: center;
+          background-position: 5px center;
             background-size: 100% auto;
             overflow: hidden;
-            width: 80%;
-            margin-left:10%;
+            width: 55%;
+            margin-left:0%;
+            float:right;
+            margin-right:2px;
       }
     }
 
@@ -465,11 +469,13 @@
           background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-position: center;
-            background-size: 80% auto;
+          background-position: 8px center;
+            background-size: 100% auto;
             overflow: hidden;
-            width: 80%;
-            margin-left:10%;
+            width: 55%;
+            margin-left:0%;
+            float:right;
+            margin-right:2px;
       }
     }
 
@@ -480,11 +486,13 @@
           background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-position: center;
+          background-position: 5px center;
             background-size: 100% auto;
             overflow: hidden;
-            width: 80%;
-            margin-left:10%;
+            width: 55%;
+            margin-left:0%;
+            float:right;
+            margin-right:2px;
       }
     }
 
@@ -495,11 +503,13 @@
           background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-position: center;
-            background-size: 85% auto;
+          background-position: 5px center;
+            background-size: 100% auto;
             overflow: hidden;
-            width: 80%;
-            margin-left:10%;
+            width: 55%;
+            margin-left:0%;
+            float:right;
+            margin-right:2px;
       }
     }
 
@@ -510,11 +520,13 @@
           background-size: contain;
       }
       @include breakpoint('mobile'){
-          background-position: center;
+          background-position: 5px center;
             background-size: 100% auto;
             overflow: hidden;
-            width: 80%;
-            margin-left:10%;
+            width: 55%;
+            margin-left:0%;
+            float:right;
+            margin-right:2px;
       }
     }
 
