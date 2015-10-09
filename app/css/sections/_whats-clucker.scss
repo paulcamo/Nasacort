@@ -393,6 +393,10 @@ $grey-button:#f8f8f8;
             #box_maria{
                 left: 20%;
                 top: 8%;
+                @media screen and (max-width: 1399px) {
+                    left: 25%;
+                    top: -10%;
+                }
                 @media screen and (max-width: 1210px) {
                     left: 15%;
                     top: -7%;
@@ -407,6 +411,9 @@ $grey-button:#f8f8f8;
                 height:240px;
                 left: 41%;
                 top: 9%;
+                @media screen and (max-width: 1399px) {
+                    top: -2%;
+                }
                 @media screen and (max-width: 1210px) {
                     left: 35%;
                     top: -7%;
@@ -422,6 +429,9 @@ $grey-button:#f8f8f8;
                 height: 265px;
                 left: 23%;
                 top: 5%;
+                @media screen and (max-width: 1399px) {
+                    top: -15%;
+                }
                 @media screen and (max-width: 1210px) {
                     left: 19%;
                     top: -7%;
@@ -449,6 +459,10 @@ $grey-button:#f8f8f8;
                 height: 265px;
                 left: 46%;
                 top: 8%;
+                @media screen and (max-width: 1399px) {
+                    left: 45%;
+                    top: -10%;
+                }
                 @media screen and (max-width: 1210px) {
                     left: 44%;
                     top: -7%;
