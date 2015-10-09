@@ -222,6 +222,8 @@
       margin-bottom: 9px;
       @include breakpoint('mobile'){
             padding-left:0;
+            width:100%;
+            margin-left:24px;
         }
     }
     h3{
@@ -750,12 +752,13 @@
     margin-bottom:0px;
     margin-top: 3px; 
     @include breakpoint('mobile'){
-        margin-left: 3px;
+        margin-left: 5px;
      }
     .sympt{
         .down-txt{
              @include breakpoint('mobile'){
-                max-width: 180px;
+                max-width: 184px;
+                padding:7px 32px 0 20px;
             }
             br{
                 display:none;
