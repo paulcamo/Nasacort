@@ -552,10 +552,14 @@
                 height:29px;
                 border-bottom: 1px solid #6495c7;
                 width:100%;
+                text-align: center;
                 
                 li{
                     margin-left:4.84%;
                     margin-top:8px;
+                    float: none;
+                    display: inline-block;
+
                     a{
                         font-size:10px;
                         &.active-item{

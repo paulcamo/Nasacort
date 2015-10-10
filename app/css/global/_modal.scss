@@ -119,6 +119,12 @@ $modal-link-color:#0099cc;
   top: 20px;
   width: 29px;
   cursor: pointer;
+
+  &:hover {
+    background: url("../img/desktop/ctas/close-icon-hover.png") no-repeat;
+  }
+
+
   @include breakpoint('mobile'){
     background-size:100%;
     height: 16px;
