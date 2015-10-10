@@ -619,7 +619,9 @@ $grey-button:#f8f8f8;
                     height: 25px;
                     display: inline-block;
                     top: -25px;
-                    right: 38%;
+                    right: 0;
+                    left: 0;
+                    margin: auto;
             }
             .arrow-upMenu.active{
                     background: url('../img/desktop/clucker/arrowUp-firstmenu.png') no-repeat;
