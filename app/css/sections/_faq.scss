@@ -115,7 +115,6 @@ p{
         line-height: 38px;
         margin-bottom: 20px;
         margin-top: 63px;
-        padding-left: 14px;
         color:$blue-color-headline;
         @include breakpoint('tablet'){
             line-height: 17px;
@@ -150,7 +149,6 @@ p{
         font-size: 16px;
         margin-top:36px; 
         color:$text-faq-color;
-        padding-left: 16px;
         @include breakpoint('tablet'){
             margin-bottom: 20px;
             line-height: 15px;
