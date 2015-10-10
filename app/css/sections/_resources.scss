@@ -190,6 +190,9 @@
             border: 1px solid #c5c7c9;
             float:left;
             position:relative;
+            &:hover{
+                border: 5px solid orange;
+            }
             .preview{
                 width:26.38%;
                 height:auto;
@@ -268,7 +271,7 @@
         h2{
             margin-bottom:26px;
             .icon{
-                background:url("../img/desktop/resources/icon-for-your-patients.png") no-repeat;
+                background:url("../img/desktop/resources/icon-for-your-practice.png") no-repeat;
                 width:47px;
                 height:47px;
                 top:12px;
