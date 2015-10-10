@@ -261,7 +261,6 @@
         background-color:$color-white;
         float:left;
         padding-top:26px;
-        padding-bottom:214px;
         @include breakpoint('tablet'){
             padding-bottom:0;
         }
