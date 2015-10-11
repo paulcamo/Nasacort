@@ -182,6 +182,7 @@ h4{
         min-width: 450px;
         @include breakpoint('mobile'){
             height: 50px;
+            min-width: auto;
         }
         img{
             position: relative;

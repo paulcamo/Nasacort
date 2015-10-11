@@ -46,10 +46,16 @@
     padding-right:213px;
     overflow: hidden;
     .footnote{
-        margin-top:-111px !important;
+        margin-top:-88px !important;
         @include breakpoint('mobile'){
           margin-bottom: 0!important;
           margin-top: 0!important;
+        }
+        @include breakpoint('desktop'){
+             margin-top:-80px !important;
+        }
+        @media screen and (max-width: 1210px) {
+             margin-top:10px !important;
         }
     }
     @include breakpoint('desktop'){
@@ -363,6 +369,7 @@
       max-width: 769px!important;
       padding-left:40px;
       padding-right:40px;
+      margin-bottom:20px;
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
@@ -752,8 +759,11 @@
         @include breakpoint('desktop'){
             margin-top:680px;
         }
+        @media screen and (max-width: 1210px) {
+            margin-top:750px;
+        }
         @include breakpoint('tablet'){
-            margin-top:-420px;
+            margin-top:-350px;
         }
         @include breakpoint('mobile'){
             margin-top:0;
@@ -812,6 +822,9 @@
     .right-align{
       margin-bottom: 11px;
       padding-bottom:0;
+      @media screen and (max-width: 1210px) {
+          padding-top: 90px;
+      }
       @include breakpoint('mobile'){
         text-align: left;
         padding-top:5px;
@@ -873,18 +886,23 @@
       .download-cta-button{
         margin-bottom: 13px;
         @include breakpoint('mobile'){
-              margin-bottom: 6px;
-          margin-top: 24px;
+            margin-bottom: 6px;
+            margin-top: 24px;
         }
-        .down-txt{
-          padding: 28px 22px!important;
-            @include breakpoint('tablet'){
-              line-height: 38px !important;
-              padding-top: 18px !important;
-            }
+        .sympt{
             @include breakpoint('mobile'){
-              line-height: 38px!important;
-              padding: 5px 22px!important;
+               min-width:auto;  
+             }
+            .down-txt{
+              padding: 28px 22px!important;
+                @include breakpoint('tablet'){
+                  line-height: 38px !important;
+                  padding-top: 18px !important;
+                }
+                @include breakpoint('mobile'){
+                  line-height: 38px!important;
+                  padding: 5px 22px!important;
+                }
             }
         }
       }
@@ -910,11 +928,15 @@
   }
   
   .inn-left{
+      @media screen and (max-width: 1210px) {
+         margin-top:50px;
+    }
     @include breakpoint('mobile'){
         text-align: left;
         padding-top:5px;
         margin-bottom: 4px;
         padding-left: 26px;
+        margin-top:10px;
     }
   }
 }

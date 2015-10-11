@@ -23,13 +23,17 @@ $text-faq-paragraph:#535353;
   }
 
   .use-last {
-    padding-bottom: 30px;
+    padding-bottom: 0px;
+    margin-bottom:13px;
     @include breakpoint("mobile") {
         margin-bottom: 9px;
         margin-top: 36px;
         padding-bottom: 0;
         padding-top: 0;
     }
+     @media screen and (max-width: 1210px) {
+         margin-top:70px;
+     }
   }
 
   .use-second {
@@ -403,7 +407,7 @@ p{
         width:100%;
     }
     .footnote{
-        margin-top:-71px;
+        margin-top:-90px;
         @include breakpoint('mobile'){
             margin-top:0;
             float:left;
@@ -413,7 +417,7 @@ p{
             //margin-top:0;
         }
         @media screen and (max-width: 1210px) {
-           margin-top:-10px;
+           margin-top:10px;
             
         }
     }

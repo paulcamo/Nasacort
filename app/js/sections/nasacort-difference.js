@@ -10,6 +10,7 @@ var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,0];
 var brand_checks_zyrtec =   [1,1,1,1,1,0,0,1,0,1,0,1,1,1];
 
 var currentBrand = "";
+var isSomeBrandSelected = false;
 
 var mobileBreakPoint = 768;
 
@@ -58,26 +59,27 @@ $(document).ready(function(){
 
     $(".open").on("click", function(e){
         e.preventDefault();
-        $('.arrow').show();
-        $("#brand-compare").addClass("brand-compare-open");
-        $(".chart-table-container .arrow").css("display","none");
-
-        $("#brand-compare .inner-logos").show();
-        $("#brand-compare .instruccion").show();
-        
-        trackCloseInteractiveForm(currentBrand);
+        if(isSomeBrandSelected)
+        {
+            $('.arrow').show();
+            $("#brand-compare").addClass("brand-compare-open");
+            $(".chart-table-container .arrow").css("display","none");
+    
+            $("#brand-compare .inner-logos").show();
+            $("#brand-compare .instruccion").show();
+            
+            isSomeBrandSelected = false;
+            
+            trackCloseInteractiveForm(currentBrand);
+        }else{
+            collapseForm();
+        }
     });
 
     $(".brand").on("click", function(e){
         e.preventDefault();
-        $("#brand-compare .open").removeClass("start");
-        $("#brand-compare").removeClass("brand-compare-open");
-        $(".chart-table-container .arrow").css("display","initial");
-
-        $("#brand-compare .inner-logos").hide();
-        $("#brand-compare .instruccion").hide();
-
-
+        collapseForm();
+        
         switch($(this).data("brand")) {
 
             case "afrin":
@@ -112,8 +114,19 @@ $(document).ready(function(){
         
         trackInteractiveForm($(this).data("brand"));
     });
-
 });
+
+function collapseForm()
+{
+    $("#brand-compare .open").removeClass("start");
+    $("#brand-compare").removeClass("brand-compare-open");
+    $(".chart-table-container .arrow").css("display","initial");
+
+    $("#brand-compare .inner-logos").hide();
+    $("#brand-compare .instruccion").hide();
+
+    isSomeBrandSelected = true;
+}
 
 function resetInteractiveForm()
 {
@@ -124,7 +137,6 @@ function resetInteractiveForm()
     $("#brand-compare .inner-logos").show();
     $("#brand-compare .instruccion").show();
     set_checks("clear");
-
 }
 
 $(window).bind("resize", function(){
