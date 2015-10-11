@@ -4,12 +4,25 @@ var mobileBreakPoint = 768;
 var tabletBreakPoint = 1024;
 var contentwidth = 0;
 
+var wasFirstAnimationShowed = false;
+var wasSecondAnimationShowed = false;
+
+document.body.scrollTop = document.documentElement.scrollTop = 0;
+
 $(document).ready(function(){
     contentwidth = $(window).width();
     changeImageSrc();
     moveSuperScriptGraphic();
-    resetFirstGraphic();
-    resetSecondGraphic();
+    
+    if(!wasFirstAnimationShowed)
+    {
+        resetFirstGraphic();
+    }
+    if(!wasSecondAnimationShowed)
+    {
+        resetSecondGraphic();
+    }
+    
     if(isMobile)
     {
         setFirstGraphicAsMobile();
@@ -81,18 +94,24 @@ function initWayPoint()
 {
     var isInview = true;
     if (isInview) 
-    {
+    { 
        $('#chart-1').waypoint(function(){
-           resetFirstGraphic();
-           animateFirstGraphic();
-           isInview = false;
-       },{offset:'25%',}); 
+           if(!wasFirstAnimationShowed)
+           {
+               resetFirstGraphic();
+               animateFirstGraphic();
+               isInview = false;
+           }
+       },{offset:'40%',}); 
        
-        $('#chart-3').waypoint(function(){
-           resetSecondGraphic();
-           animateSecondGraphic();
-           isInview = false;
-       },{offset:'25%',}); 
+       $('#chart-3').waypoint(function(){
+           if(!wasSecondAnimationShowed)
+           {
+               resetSecondGraphic();
+               animateSecondGraphic();
+               isInview = false;
+           }
+       },{offset:'40%',}); 
     }else
     {
         setTimeout(function(){
@@ -131,18 +150,22 @@ function resetFirstGraphic()
 
 function animateFirstGraphic()
 {
-    TweenLite.to($(".indicator-1"), 0.2, { css: { opacity: 1}, delay:0.2 } );
-    TweenLite.to($(".indicator-2"), 0.2, { css: { opacity: 1}, delay:0.2 } );
-    
-    TweenLite.to($("#chart-animation-1"), 1.5, { css: { height: '108px', top: '-108px' },ease:Power1.easeOut } );
-    TweenLite.to($("#chart-animation-2"), 1.5, { css: { height: '43px', top: '-43px' },ease:Power1.easeOut } );
-    TweenLite.to($("#chart-animation-3"), 1.5, { css: { height: '226px', top: '-226px' },ease:Power1.easeOut } );
-    TweenLite.to($("#chart-animation-4"), 1.5, { css: { height: '126px', top: '-126px' },ease:Power1.easeOut, onComplete:showLevelAndQuote } );
+    if(!wasFirstAnimationShowed)
+    {
+        wasFirstAnimationShowed = true;
+        
+        TweenLite.to($("#chart-animation-1"), 1.5, { css: { height: '108px', top: '-108px' },ease:Power1.easeOut } );
+        TweenLite.to($("#chart-animation-2"), 1.5, { css: { height: '43px', top: '-43px' },ease:Power1.easeOut } );
+        TweenLite.to($("#chart-animation-3"), 1.5, { css: { height: '226px', top: '-226px' },ease:Power1.easeOut } );
+        TweenLite.to($("#chart-animation-4"), 1.5, { css: { height: '126px', top: '-126px' },ease:Power1.easeOut, onComplete:showLevelQuoteAndNumbers } );
+    }
 }
 
-function showLevelAndQuote()
+function showLevelQuoteAndNumbers()
 {
     TweenLite.to($(".level-graph"), 0.2, { css: { opacity: 1} } );
+    TweenLite.to($(".indicator-1"), 0.2, { css: { opacity: 1}, delay:0.2 } );
+    TweenLite.to($(".indicator-2"), 0.2, { css: { opacity: 1}, delay:0.2 } );
     
     if(contentwidth > tabletBreakPoint)
     {
@@ -204,27 +227,33 @@ function resetSecondGraphic()
     
    
     $(".legend-graph").css("opacity", "0");
+    $(".indicator").css("opacity", "0");
 }
 
 function animateSecondGraphic()
 {
-    TweenLite.to($("#bar-1"), 1.5, { css: { height: '296px', top: '-296px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-2"), 1.5, { css: { height: '276px', top: '-276px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-3"), 1.5, { css: { height: '192px', top: '-192px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-4"), 1.5, { css: { height: '96px', top: '-96px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-5"), 1.5, { css: { height: '85px', top: '-85px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-6"), 1.5, { css: { height: '65px', top: '-65px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-7"), 1.5, { css: { height: '104px', top: '-104px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-8"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-9"), 1.5, { css: { height: '67px', top: '-67px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-10"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
-    TweenLite.to($("#bar-11"), 1.5, { css: { height: '88px', top: '-88px' },ease:Power1.easeOut } );    
-    TweenLite.to($("#bar-12"), 1.5, { css: { height: '58px', top: '-58px' },ease:Power1.easeOut, onComplete:showLegend } );
+    if(!wasSecondAnimationShowed)
+    {
+        wasSecondAnimationShowed = true;
+        TweenLite.to($("#bar-1"), 1.5, { css: { height: '296px', top: '-296px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-2"), 1.5, { css: { height: '276px', top: '-276px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-3"), 1.5, { css: { height: '192px', top: '-192px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-4"), 1.5, { css: { height: '96px', top: '-96px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-5"), 1.5, { css: { height: '85px', top: '-85px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-6"), 1.5, { css: { height: '65px', top: '-65px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-7"), 1.5, { css: { height: '104px', top: '-104px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-8"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-9"), 1.5, { css: { height: '67px', top: '-67px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-10"), 1.5, { css: { height: '95px', top: '-95px' },ease:Power1.easeOut } );
+        TweenLite.to($("#bar-11"), 1.5, { css: { height: '88px', top: '-88px' },ease:Power1.easeOut } );    
+        TweenLite.to($("#bar-12"), 1.5, { css: { height: '58px', top: '-58px' },ease:Power1.easeOut, onComplete:showLegendAndNumbers } );
+    }
 }
 
-function showLegend()
+function showLegendAndNumbers()
 {
     TweenLite.to($(".legend-graph"), 0.2, { css: { opacity: 1} } );
+    TweenLite.to($(".indicator"), 0.2, { css: { opacity: 1}, delay:0.2 } );
 }
 
 function setSecondGraphicAsMobile()

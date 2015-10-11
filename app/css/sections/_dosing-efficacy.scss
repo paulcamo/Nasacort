@@ -177,7 +177,7 @@ $space-mobile-copy: 4.6875%;
     }
   }
   .footnote{
-      margin-top: -126px;
+      margin-top: -92px;
   }
 }
 
@@ -1229,6 +1229,7 @@ $space-mobile-copy: 4.6875%;
                 bottom:8px;
                 text-align: center;
                 width: 100%;
+                opacity:0;
                 sup{
                     vertical-align:super;
                     top:0;
