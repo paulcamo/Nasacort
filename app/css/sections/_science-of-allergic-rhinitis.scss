@@ -901,7 +901,7 @@
                 }
                 @include breakpoint('mobile'){
                   line-height: 38px!important;
-                  padding: 5px 22px!important;
+                  padding: 5px 22px 5px 26px !important;
                 }
             }
         }
