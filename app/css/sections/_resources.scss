@@ -190,9 +190,7 @@
             border: 1px solid #c5c7c9;
             float:left;
             position:relative;
-            &:hover{
-                border: 5px solid orange;
-            }
+            
             .preview{
                 width:26.38%;
                 height:auto;
@@ -335,6 +333,10 @@
                 .content{
                     margin-bottom: 110px;
                 }
+            }
+            &.highlighted{
+                box-shadow:0px 0px 0px 12px #eb5d2b;
+                @include border-radius(12px);
             }
         }
     }    

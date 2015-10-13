@@ -5,6 +5,7 @@ var minTabletScreen = 1024;
 
 $(document).ready(function(){   
     keepAllContainersSameHeight();
+    addRollOverEffect();
 });
 
 $(window).bind("resize", function(){
@@ -73,6 +74,18 @@ function keepAllContainersSameHeight()
     });
     $(".for-your-practice .resource-container").each(function(index){
         $(this).css("min-height", biggerHeightPractice);
+    });
+}
+
+function addRollOverEffect()
+{
+    $(".resource-container").each(function(index){
+        $(this).mouseover(function() {
+            $(this).addClass("highlighted");
+        });
+        $(this).mouseout(function() {
+            $(this).removeClass("highlighted");
+        });
     });
 }
 
