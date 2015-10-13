@@ -20,12 +20,12 @@
     padding-right:50px;
     min-height: 35px;
     @include breakpoint('desktop'){
-        max-width: 920px!important;
+       // max-width: 920px!important;
         padding-left:0;
         padding-right:0;
       }
       @include breakpoint('tablet'){
-        max-width: 769px!important;
+       // max-width: 769px!important;
         padding-left:40px;
         padding-right:40px;
       }
@@ -336,12 +336,12 @@
     .right-align{
       min-height: 36px;
       @include breakpoint('desktop'){
-        max-width: 920px!important;
+        //max-width: 920px!important;
         padding-left:0;
         padding-right:0;
       }
       @include breakpoint('tablet'){
-        max-width: 769px!important;
+        //max-width: 769px!important;
         padding-left:0;
         padding-right:0;
       }
@@ -945,3 +945,18 @@
 
 
 
+.use-only-placement,
+.science-of-allergic-rhinitis-section .aditional-information .right-align,
+.science-of-allergic-rhinitis-section .graphic-container .right-align,
+.science-of-allergic-rhinitis-section .video-callout-container .right-align {
+
+
+  @include breakpoint("tablet-n-up") {
+    width: 100%;
+    margin-left: 0px;
+    max-width: 3000px !important;
+    padding-right: 20px !important;
+  }
+
+
+}
