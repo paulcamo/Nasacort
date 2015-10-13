@@ -308,7 +308,7 @@
     @include breakpoint('mobile'){
       overflow:visible;
       //max-width:209px;
-      min-width:auto;
+      min-width:200px;
       height:53px;
       right:19px !important;
     }

@@ -173,6 +173,7 @@ function keepTDsameWidthArrow()
     {
         $(".nasacort-difference-section .chart-table-container .arrow").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 1);
         $("#brand-compare").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 3);
+        $("#brand-compare").css("min-width","96px");
     }else
     {
         $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 3);
