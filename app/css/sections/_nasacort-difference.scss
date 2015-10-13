@@ -818,7 +818,7 @@
         .down-txt{
              @include breakpoint('mobile'){
                 max-width: 184px;
-                padding:7px 32px 0 20px;
+                padding: 7px 13px 0 20px;
             }
             br{
                 display:none;
