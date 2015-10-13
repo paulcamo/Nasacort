@@ -392,3 +392,8 @@ h4{
 }
 
 
+/*Modal Bootstrap fix*/
+@include breakpoint('mobile'){
+    body.modal-open { position: fixed; }
+}
+
