@@ -183,6 +183,11 @@ $grey-button:#f8f8f8;
                     margin-left:0;
                     width:auto;
                 }
+
+                @media screen and (width: 320px){
+                    margin-left: 5px;
+                }
+                
             }
             ul > li {
                 display: inline-block;
