@@ -58,7 +58,7 @@ body {
   #tope4 {
     position: absolute;
     bottom: 0;
-    height: 18.2em;
+    height: 18.15em;
     width: 100px;
     background-color: red;
   }
@@ -70,7 +70,18 @@ body {
   #slide02 {
     height: 32em;
     z-index: 1000;
-   // overflow-y: hidden;
+
+    .use-only {
+      position: absolute;
+      top: 101.9em;
+      right: 14px;
+      font-size: 0.29em;
+      color: $color-white;
+      z-index: 999;
+    }
+
+
+
   }
 
   #slide02-03 {
@@ -150,6 +161,15 @@ body {
 
 
 
+    #herolink {
+      width: 100%;
+      height: 14em;
+      display: block;
+      position: absolute;
+      z-index: 129;
+    }
+
+
     & .lady01, & .lady02, & .lady03 {
       position: absolute;
       left: 0;
@@ -187,7 +207,7 @@ body {
 
     #slide1-textbox {
       position: absolute;
-      top: 0.9em;
+      top: 0.7em;
       left: 140.5%;
       font-family: $font-proxima-nova-semibold;
       font-weight: 100;
@@ -515,7 +535,7 @@ body {
 
     .use-only {
       position: absolute;
-      top: 4.1em;
+      top: 4.45em;
       right: 17px;
       font-size: 0.29em;
 
@@ -692,10 +712,9 @@ body {
 
     .use-only {
       position: absolute;
-      top: 56.1em;
-      left: 79.4%;
+      right: 17px;
+      bottom: 7em;
       font-size: 0.29em;
-
     }
 
 
@@ -710,7 +729,7 @@ body {
     right: 0px;
     margin: auto;
     color: #133C7C;
-    top: 1.35em;
+    top: 1.8em;
     font-size: 0.8em;
     width: 40%;
     letter-spacing: 0.01em;
@@ -736,7 +755,7 @@ body {
     display: block;
     background-color: #b1c9e0;
     position: absolute;
-    top: 3.6em;
+    top: 3.76em;
     left: 0px;
     right: 0px;
     margin: auto;
@@ -753,7 +772,7 @@ body {
     width: 70%;
     margin: auto;
     height: 9em;
-    top: 3.9em;
+    top: 4.25em;
     position: absolute;
     right: 0;
     left: 101%;
@@ -853,9 +872,9 @@ body {
 
 
   .patient-mark img {
-    margin: -0.54em 0px 0px -8%;
+    margin: -0.54em 0px 0px -1%;
     background-size: contain;
-    width: 113%;
+    width: 98%;
   }
 
   .patient-kara img {
@@ -886,8 +905,8 @@ body {
 
     .use-only {
       position: absolute;
-      top: 44em;
-      left: 79.4%;
+      bottom: 0;
+      right: 17px;
       font-size: 0.29em;
       color: $color-white;
 
@@ -2585,15 +2604,6 @@ body {
 
     @include breakpoint("tablet-n-desktop") {
       top: 139px;
-    }
-
-
-
-    #herolink {
-      width: 100%;
-      height: 14em;
-      display: block;
-      position: absolute;
     }
 
 
