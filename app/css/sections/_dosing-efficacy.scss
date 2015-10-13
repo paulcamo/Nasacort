@@ -720,6 +720,15 @@ $space-mobile-copy: 4.6875%;
                 height:46px;
                 width: 67% !important;
                 padding-right: 24% !important;
+                @include breakpoint('mobile') {
+                    width:92% !important;
+                    line-height: 30px;
+                    font-size: 17px;
+                    padding-left: 4.6875%;
+                    padding-right: 0 !important;
+                    margin-left: 9px;
+                    height:30px;
+                }
             }
             img{
                 width:93.75%;
