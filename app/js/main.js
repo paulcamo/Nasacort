@@ -174,6 +174,16 @@ function setInterstitialPopup() {
 	$("#interstitial #go").on("click",function(){
 		$('#interstitial').modal('hide');
 	});
+	
+	//$("#interstitial").on('hidden.bs.modal', function (e) {
+      //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
+      //$("#interstitial .modal-dialog").scrollTop( 0 );
+      //$("#interstitial .modal-dialog").scrollTop( 0 );
+    //});
+    $("#interstitial").on("shown.bs.modal", function () {
+        $("#interstitial .modal-content .modal-dialog").scrollTop(0);
+    });
+	
 }
 
 
