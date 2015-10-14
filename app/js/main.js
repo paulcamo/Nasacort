@@ -1,6 +1,5 @@
 var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
-var hashCalled ="";
 var headerCollapsed=0;
 var currentPage = "";
 var breakpoint_mobile = '320px';
@@ -90,26 +89,47 @@ function desktopStickyHeader(y){
 
         if (y > sticky_height) {
             $('#header').animate({top: height2hide }, 300);
-            $('.first-container').animate({paddingTop: "0"}, 300);
+            //$('.first-container').animate({paddingTop: "0"}, 300);
             $('.clucker-container').animate({marginTop: "0"}, 300);
             headerCollapsed = 1;
         } else {
             $('#header').animate({top: "-9px"}, 300);
-            $('.first-container').animate({paddingTop: vtop}, 300);
+            //$('.first-container').animate({paddingTop: vtop}, 300);
             $('.clucker-container').animate({marginTop: vtop}, 300);
         }
 
 }
 
 
-function hashCalling(){
-    hashCalled = window.location.hash.substring(1) || "";
+function hashCalling(newPath){
+    // if newPath exists will use that as the new target if don't will use the hash from path 
+    var hashCalled = newPath || (window.location.hash.substring(1) || "");
 
-    if (hashCalled !=="") {
+    // if hash exists will scroll to new target
+    if (hashCalled) {
         console.log("hashCalled ---->" + hashCalled);
-        $(window).scrollTop( $("div[id='" + hashCalled + "']").offset().top  - 80 );
+
+        var spot = $('#' + hashCalled).offset().top - 90;
+
+        $('html, body').stop(true, true).delay(100).animate({
+            scrollTop: spot
+        }, 100);
     }
+
+    // adding new event to all a to get hast anchors if any
+    $('a').on('click tap', function(){
+        // indicates the new target in the current page
+        var path = $(this).attr('href').split('#')[1] || null;
+
+        if (path){
+            // scrolls to the new position 
+            hashCalling(path);
+        }
+        
+    });
 }
+
+
 
 function resetHeaderPadding() {
 
