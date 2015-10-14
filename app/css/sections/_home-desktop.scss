@@ -567,9 +567,19 @@ body {
     .clinical-study {
       position: absolute;
       top: 4.1em;
-      left: 12%;
+      left: 1.2%;
       font-size: 0.30em;
       line-height: 1.3em;
+
+
+
+      @include breakpoint("limit") {
+        left: 17px;
+      }
+
+
+
+
     }
 
     .dataonfile {
@@ -1247,6 +1257,11 @@ body {
 
 .footer .footer-content .bottom-content ul li {
   line-height: 1px;
+
+  @include breakpoint("mobile") {
+    line-height: 21px;
+  }
+
 }
 
 .footer .footer-content .bottom-content ul li .pipe {
@@ -1259,11 +1274,25 @@ body {
 
 .footer .footer-content .alternative-content ul {
   margin-top: -18px;
+
+  @include breakpoint("mobile") {
+    margin-top: -6px;
+  }
+
 }
 
 
+  .footer .footer-content .alternative-content ul li  {
+    @include breakpoint("mobile") {
+      margin-top: 22px;
+    }
+  }
+
 .footer .footer-content .alternative-content ul li .pipe {
   margin-top: 32px;
+  @include breakpoint("mobile") {
+    margin-top: 3px;
+  }
 }
 
 
