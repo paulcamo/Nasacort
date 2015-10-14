@@ -39,9 +39,9 @@
       margin-top: 7px;
     }// End General class
     .inner-ctas{
-      width: 70%;
+      width: 80%;
       .cta-restr{
-        max-width: 203px;
+        max-width: 214px;
         float: left;
         clear: both;
       }
@@ -361,29 +361,46 @@
     }// end of class Slider
 
     #carousel-mobile-1 {
-      background: url("../img/mobile/homepage/bg-slide001.jpg") no-repeat center 0;
       z-index: 8;
       opacity: 1;
       @media screen and(min-width:400px) and (max-width: 768px) {
         background: url("../img/mobile/homepage/bg-slide001-sml.jpg") no-repeat center 0;
       }
+      @media screen and(min-width:400px) and (max-width: 570px) {
+        background-position: -95px 0px;
+      }
+      @media screen and(min-width:320px) and (max-width: 400px){
+        background: url("../img/mobile/homepage/bg-slide001.jpg") no-repeat center 0;
+      }
     }// end of class Slider
 
     #carousel-mobile-2 {
-      background: url("../img/mobile/homepage/bg-slide002.jpg") no-repeat center 0;
+      
       z-index: 9;
       opacity: 0;
       @media screen and(min-width:400px) and (max-width: 768px) {
         background: url("../img/mobile/homepage/bg-slide002-sml.jpg") no-repeat center 0;
       }
+      @media screen and(min-width:400px) and (max-width: 570px) {
+        background-position: -95px 0px;
+      }
+      @media screen and(min-width:320px) and (max-width: 400px){
+        background: url("../img/mobile/homepage/bg-slide002.jpg") no-repeat center 0;
+      }
     }// end of class Slider
 
     #carousel-mobile-3 {
-      background: url("../img/mobile/homepage/bg-slide003.jpg") no-repeat center 0;
+      
       z-index: 10;
       opacity: 0;
       @media screen and(min-width:400px) and (max-width: 768px) {
         background: url("../img/mobile/homepage/bg-slide003-sml.jpg") no-repeat center 0;
+      }
+      @media screen and(min-width:400px) and (max-width: 570px) {
+        background-position: -95px 0px;
+      }
+      @media screen and(min-width:320px) and (max-width: 400px){
+        background: url("../img/mobile/homepage/bg-slide003.jpg") no-repeat center 0;
       }
     }// end of class Slider
 

@@ -183,6 +183,11 @@ $grey-button:#f8f8f8;
                     margin-left:5%;
                     width:90%;
                 }
+
+                @media screen and (width: 320px){
+                    margin-left: 5px;
+                }
+                
             }
             ul > li {
                 display: inline-block;
@@ -1350,7 +1355,7 @@ $grey-button:#f8f8f8;
                 }
                  #liam{
                     .default{
-                         background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
+                         background:url("../img/desktop/clucker/glass-heads/liam-default.jpg") no-repeat;
                          background-size:cover;
                          display:block;
                     }
