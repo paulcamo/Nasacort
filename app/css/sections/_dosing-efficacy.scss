@@ -79,15 +79,15 @@ $space-mobile-copy: 4.6875%;
                  height:auto;
                  padding-bottom: 33.3333% !important;
              }
-             @include breakpoint('mobile') {
+             @media screen and (max-width: 768px){
                   background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
                  height:233px;
                  padding-bottom: 0 !important;
                  max-height: 233px;
                  background-position: 77% -14px !important;
              }
-             @media screen and (max-width: 375px) {
-                background-position: 86% -14px !important;
+             @media screen and (max-width: 400px) {
+                background-position: 70% -14px !important;
              }
              @media screen and (max-width: 320px) {
                 background-position: 73% -14px !important;

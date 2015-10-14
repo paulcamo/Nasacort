@@ -1,45 +1,63 @@
 <div class="parallax">
-    <div id="cyan-box"></div>
-    <div id="yellow-spike"></div><div id="background">{{>footer}}</div>
-    <div id="dots-container">
-        <div class="dotbox">
-            <div id="sec01" data-section="mainContainer" class="dot"></div>
-            <div id="sec02" data-section="section2" class="dot"></div>
-            <div id="sec03"  data-section="section3" class="dot"></div>
-            <div id="sec04"  data-section="section4" class="dot"></div>
-            <div id="sec05"  data-section="section5" class="dot"></div>
+
+<div id="dots-container">
+    <div class="dotbox">
+        <div id="sec01" data-section="mainContainer" class="dot"></div>
+        <div id="sec02" data-section="section2" class="dot"></div>
+        <div id="sec03"  data-section="section3" class="dot"></div>
+        <div id="sec04"  data-section="section4" class="dot"></div>
+        <div id="sec05"  data-section="section5" class="dot"></div>
+    </div>
+    <div class="dotcover"></div>
+</div>
+
+<!--  -----------------------------------------------------------------------------------------------------    -->
+
+
+
+
+
+<div id="slide01">
+    {{>footnote footnote1}}
+    <a onclick="ga('send', 'event', 'text link', 'click_content', 'section 1: patients prefer text link');" href="nasacort-difference.html" id="herolink"></a>
+
+    <div class="js-box js-zoom"  id="carousel1"></div>
+    <div class="js-box"  id="carousel2"></div>
+    <div class="js-box"  id="carousel3" ></div>
+    <div id="lady01" class="lady01 js-lady"></div>
+    <div id="lady02" class="lady02 js-lady"></div>
+    <div id="lady03" class="lady03 js-lady"></div>
+    <div id="product-features-bg">
+        <div id="product-features-text">
+            <p class="product-title">{{{product-title}}}</p>
+            <p class="clinical-study">*In a clinical study, based on sensory attributes, patients preferred Nasacort over Flonase<sup>&reg;</sup>.<span class="dataonfile">Data on file.</span></p>
+            <p class="use-only">Use only as directed.</p>
         </div>
-        <div class="dotcover"></div>
     </div>
 
-    <!--  -----------------------------------------------------------------------------------------------------    -->
-
-    <div id="slide01">
-        <div class="js-box js-zoom"  id="carousel1"></div>
-        <div class="js-box"  id="carousel2"></div>
-        <div class="js-box"  id="carousel3" ></div>
-        <div id="lady01" class="lady01 js-lady"></div>
-        <div id="lady02" class="lady02 js-lady"></div>
-        <div id="lady03" class="lady03 js-lady"></div>
-        <div id="product-features-bg">
-            <div id="product-features-text">
-                <p class="product-title">{{{product-title}}}</p>
-                <p class="clinical-study">*In a clinical study, based on sensory attributes, patients preferred Nasacort over Flonase<sup>&reg;</sup>.<span class="dataonfile">Data on file.</span></p>
-                <p class="use-only">Use only as directed.</p>
-            </div>
-        </div>
+    <div id="slide1-textbox">
+        <h2>Calm the inflammatory response without irritating the senses</h2>
+        <p>{{{patients-prefer}}} </p>
     </div>
 
-    <!--  -----------------------------------------------------------------------------------------------------    -->
+
+    <div class="slide01-tag"></div>
+</div>
+
+
+
+
+
+<div id="slide02-03">
 
     <div id="slide02">
-        {{>footnote footnote1}}
+        <div class="slide02-tag"></div>
+
         {{>footnote footnote2}}
-        <a onclick="ga('send', 'event', 'text link', 'click_content', 'section 1: patients prefer text link');" href="nasacort-difference.html" id="herolink"></a>
         <div id="bottle" ></div>
-        <div id="cap"></div>
-        <p id="slide2useonly" class="use-only">Use only as directed.</p>
-        <div id="no-scent"></div>
+    <div id="cap"></div>
+    <p id="slide2useonly" class="use-only">Use only as directed.</p>
+    <div id="no-scent"></div>
         <div id="nasacort-compare">
 
             <h2><span  class="orange-color">Compare</span> Nasacort<sup>&reg</sup> to other nasal allergy <span  class="orange-color">options</span></h2>
@@ -47,28 +65,30 @@
             <p>Nasacort<sup>&reg</sup> Allergy 24HR is an intranasal steroid (INS)&ndash;the most effective class of nasal allergy medication, according to the latest medical guidelines.<sup class="superscript">1</sup><br>
                 <strong> Nasacort<sup>&reg</sup> is the only over-the-counter INS that is scent-free, alcohol-free.</strong>
             </p>
-
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 2: nasacort v flonase button');    " href="nasacort-difference.html#comparing-otc-ins" class="compare-link"><span class="span1">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  vs <strong>Flonase<sup>&reg</sup></strong></span></a>
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 2: nasacort v other allergy meds button'); " href="nasacort-difference.html#comparing-otc-options" class="compare-link"><span class="span2">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  <span class='nobr nopadding'>vs <strong>Other Nasal Allergy Medications</strong></span></span></a>
+            <div class="slide02-tag"></div>
+            <a href="nasacort-difference.html#comparing-otc-ins" class="compare-link"><span class="span1">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  vs <strong>Flonase<sup>&reg</sup></strong></span></a>
+            <a href="nasacort-difference.html#comparing-otc-options" class="compare-link"><span class="span2">See <strong>Nasacort<sup>&reg</sup> Allergy 24HR</strong>  <span class='nobr nopadding'>vs <strong>Other Nasal Allergy Medications</strong></span></span></a>
         </div>
-    </div>
+        <div id="tope2"></div>
+     </div>
+
+
+
 
     <!--  -----------------------------------------------------------------------------------------------------    -->
 
-    <div id="slide03">
+    <div id="slide03"><div class="slide03-tag"></div>
 
         <div id="slide1-textbox">
             <h2>Calm the inflammatory response without irritating the senses</h2>
             <p>{{{patients-prefer}}} </p>
         </div>
 
-
-
         <div id="compare-copy">
             <div class="dashbox"></div>
             <h2>Review Nasacort<sup>&reg</sup> dosing and efficacy facts for adults and children</h2>
             <p>Nasacort<sup>&reg</sup> is indicated to treat allergic rhinitis in adults and children 2 years of age and older.</p>
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 3: dosing info button');   " href="dosing-efficacy.html#dosing-information" class="compare-link"><span>See <strong>Dosing Information&mdash;</strong> <strong>Adults</strong> and <strong>Children</strong></span></a>
+            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 3: dosing info button');  href="dosing-efficacy.html#dosing-information" class="compare-link"><span>See <strong>Dosing Information&mdash;</strong> <strong>Adults</strong> and <strong>Children</strong></span></a>
         </div>
         <div id="compare-bg">
             <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 3: proven efficacy button');" href="dosing-efficacy.html#proven-efficacy-at-dose-1" class="compare-link-bottom btn01">Proven Efficacy at Dose 1</a>
@@ -77,17 +97,30 @@
             <p class="use-only">Use only as directed.</p>
         </div>
         <div id="stats"></div>
-
+        <div id="tope3"></div>
+        <div class="slide03-tag"></div>
     </div>
 
-    <!--  -----------------------------------------------------------------------------------------------------    -->
+
+
+
+
+</div>
+
+<div id="slide04-05">
+
+
+
+
+
 
     <div id="slide04">
         <p class="use-only">Use only as directed.</p>
         <div class="title">Discover <span class="orange-color">how Nasacort<sup>&reg;</sup> can help</span><br> your different nasal allergy patients</div>
         <div class="dashbox"></div>
+        <div class="slide04-tag"></div>
         <div id="patient-box">
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 4: the clucker button');   " href="whats-a-clucker.html#meet_maria" class="patient  patient-maria">
+            <a href="whats-a-clucker.html#meet_maria" class="patient  patient-maria">
                 <div class="namebox">
                     <span class="name">Maria</span>
                     <span class="subname">The Clucker</span>
@@ -98,7 +131,7 @@
                 </div>
             </a>
 
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 4: the dripper button');   " href="whats-a-clucker.html#meet_mark" class="patient patient-mark">
+            <a href="whats-a-clucker.html#meet_mark" class="patient patient-mark">
                 <div class="namebox">
                     <span class="name">Mark</span>
                     <span class="subname">The Dripper</span>
@@ -109,7 +142,7 @@
                 </div>
             </a>
 
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 4: the mouthbreather button'); " href="whats-a-clucker.html#meet_kara" class="patient patient-kara">
+            <a href="whats-a-clucker.html#meet_kara" class="patient patient-kara">
                 <div class="namebox">
                     <span class="name">Kara</span>
                     <span class="subname">The Mouthbreather</span>
@@ -120,7 +153,7 @@
                 </div>
             </a>
 
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 4: the sniffler button');  " href="whats-a-clucker.html#meet_liam" class="patient patient-liam">
+            <a href="whats-a-clucker.html#meet_liam" class="patient patient-liam">
                 <div class="namebox">
                     <span class="name">Liam</span>
                     <span class="subname">The Sniffler</span>
@@ -131,25 +164,28 @@
                 </div>
             </a>
         </div>
-
+        <div id="tope4"></div>
     </div>
 
     <!--  -----------------------------------------------------------------------------------------------------    -->
 
-    <div id="slide05">
+    <div id="slide05"><div class="slide05-tag"></div>
         <div id="understand-box">
             <h2>Help your patients better understand allergic rhinitis</h2>
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 5: how allergies develop button'); " href="nasacort-difference.html#comparing-otc-ins" class="understand-link">How a Nasal Allergy Can Develop</a>
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 5: ins or ah? button');    " href="nasacort-difference.html#comparing-otc-ins" class="understand-link">Intranasal Steroids or Antihistamines?</a>
-            <a onclick="ga('send', 'event', 'button link', 'click_content', 'section 5: allergies or cold/flu? button');    " href="nasacort-difference.html#comparing-otc-ins" class="understand-link">Allergies, Cold, or Flu?</a>
+            <a href="nasacort-difference.html#comparing-ins" class="understand-link">How a Nasal Allergy Can Develop</a>
+            <a href="nasacort-difference.html#comparing-ins" class="understand-link">Intranasal Steroids or Antihistamines?</a>
+            <a href="nasacort-difference.html#comparing-ins" class="understand-link">Allergies, Cold, or Flu?</a>
         </div>
         <p class="use-only">Use only as directed.</p>
+        <div id="tope5"></div>
     </div>
+
+
+    <div id="yellow-spike"></div>
+</div>
 
 
 
 
 
 </div>
-
-
