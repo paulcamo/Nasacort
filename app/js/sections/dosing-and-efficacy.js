@@ -253,7 +253,7 @@ function animateSecondGraphic()
 function showLegendAndNumbers()
 {
     TweenLite.to($(".legend-graph"), 0.2, { css: { opacity: 1} } );
-    TweenLite.to($(".indicator"), 0.2, { css: { opacity: 1}, delay:0.2 } );
+    TweenLite.to($(".indicator"), 0.2, { css: { opacity: 1}, } );
 }
 
 function setSecondGraphicAsMobile()
