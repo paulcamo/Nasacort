@@ -203,20 +203,9 @@ function setInterstitialPopup() {
 	
 	$("#interstitial #go").on("click",function(){
 		$("#interstitial .modal-content .modal-dialog").scrollTop(0);
-		$('#interstitial').modal('hide');
+		$('#interstitial').modal('hide').("#interstitial .modal-content .modal-dialog").scrollTop(0);
 	});
-	
-	$("#interstitial").on('hide.bs.modal', function (e) {
-		//setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0)}, 5000);
-		//setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0); }, 3000);
-		$("#interstitial .modal-content .modal-dialog").scrollTop(0);
-		//if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
-    });
-    
-   // $("#interstitial").on("shown.bs.modal", function () {
-        //$("#interstitial .modal-content .modal-dialog").scrollTop(0);
-   // });
-	
+
 }
 
 
