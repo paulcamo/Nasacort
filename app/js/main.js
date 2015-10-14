@@ -103,32 +103,42 @@ function desktopStickyHeader(y){
 
 function hashCalling(newPath){
     // if newPath exists will use that as the new target if don't will use the hash from path 
-    var hashCalled = newPath || (window.location.hash.substring(1) || "");
+    var hashCalled = newPath || (window.location.hash.substring(1) || ""),
+        overflow = getOverflowPerPage(newPath);
 
     // if hash exists will scroll to new target
     if (hashCalled) {
         console.log("hashCalled ---->" + hashCalled);
 
-        var spot = $('#' + hashCalled).offset().top - 90;
+        var spot = $('#' + hashCalled).offset().top - (overflow || 90);
 
         $('html, body').stop(true, true).delay(100).animate({
             scrollTop: spot
         }, 100);
     }
-
-    // adding new event to all a to get hast anchors if any
-    $('a').on('click tap', function(){
-        // indicates the new target in the current page
-        var path = $(this).attr('href').split('#')[1] || null;
-
-        if (path){
-            // scrolls to the new position 
-            hashCalling(path);
-        }
-        
-    });
 }
 
+// adding new event to all a to get hast anchors if any
+$('a').on('click tap', function(){
+    // indicates the new target in the current page
+    var path = $(this).attr('href').split('#')[1] || null;
+
+    if (path){
+        // scrolls to the new position 
+        hashCalling(path);
+    }
+    
+});
+
+function getOverflowPerPage(current){
+    if(window.location.pathname.search('dosing-efficacy') >= 0){
+        return 120;
+    } else if (current && current === 'comparing-opts'){
+        return 140;
+    } else if (!current && window.location.href.search('comparing-opts') >= 0){
+        return 140;
+    }
+}
 
 
 function resetHeaderPadding() {
