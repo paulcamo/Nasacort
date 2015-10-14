@@ -1,5 +1,13 @@
 .resources-section {
     .right-aligned{
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 15px;
+        position: relative;
+        float: left;
+        width: 100%;
+        right: 0;
+    padding-right: 20px;
         @include breakpoint('desktop'){
             right: 0!important;
         }

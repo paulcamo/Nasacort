@@ -40,7 +40,10 @@ $space-mobile-copy: 4.6875%;
     margin-top: 5px;
     text-align: right;
     position:relative;
-    right:-#{fluid-percentage($site-max-width, 235)};
+    max-width:100%;
+    width:100%;
+    padding-right:20px;
+    // right:-#{fluid-percentage($site-max-width, 235)};
     font-size:15px;
     @include breakpoint('desktop'){
       right: 0;
@@ -744,6 +747,9 @@ $space-mobile-copy: 4.6875%;
             .second-content-dosing{
                 margin-bottom: 14px;
                 padding-left:7%;
+                @include breakpoint('mobile') {
+                  padding-right:7%;
+                }
                 h4{
                     font-size: 14px;
                     line-height: 19px;
@@ -778,6 +784,9 @@ $space-mobile-copy: 4.6875%;
                 margin-left: 0;
                 padding-left: 8%;
                 line-height: 15px;
+                @include breakpoint('mobile') {
+                    padding-right:8%;
+                }
             }
             .footnote{
                 margin-top:6px;
@@ -1047,7 +1056,7 @@ $space-mobile-copy: 4.6875%;
          background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
          height: auto;
          //max-width: 618px;
-         padding-bottom: 146%;
+         padding-bottom: 118%;
          width: 94%;
          background-size:contain;
          margin-bottom:18px;

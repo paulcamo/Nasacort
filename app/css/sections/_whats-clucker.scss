@@ -482,7 +482,16 @@ $grey-button:#f8f8f8;
                 .white_content{
                     cursor: pointer;
                     .arrow{
-                        margin-right: 45px
+                        //margin-right: 45px;
+                        margin-left:28px; 
+                        border-left:none;
+                        border-right:solid 1px gray;
+                        padding-right:40px;
+                        float:left;
+                    }
+                    div{
+                        float:left;
+                        text-align:left;
                     }
                 }
             }
@@ -512,7 +521,16 @@ $grey-button:#f8f8f8;
                 }
                 .white_content{
                     .arrow{
-                        margin-right: 55px
+                        //margin-right: 55px;
+                        margin-left:28px; 
+                        border-left:none;
+                        border-right:solid 1px gray;
+                        padding-right:40px;
+                        float:left;
+                    }
+                    div{
+                        float:left;
+                        text-align:left;
                     }
                 }
             }
@@ -1144,11 +1162,17 @@ $grey-button:#f8f8f8;
     .wac-indication{
         text-align: right;
         display: block;
-        margin-top: 20px;
         color:$grey-innerTxt;
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        margin-top: 0;
+        padding-bottom: 15px;
+        padding-right: 20px;
         @include breakpoint('mobile'){
             text-align: left;
             margin-top: 10px;
+            padding-left:20px;
         }
     }
     .wac-question{
