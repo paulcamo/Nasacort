@@ -110,7 +110,7 @@ function hashCalling(newPath){
     if (hashCalled) {
         console.log("hashCalled ---->" + hashCalled);
 
-        var spot = $('#' + hashCalled).offset().top - (overflow || 90);
+        var spot = $('#' + hashCalled).offset().top - (overflow || 60);
 
         $('html, body').stop(true, true).delay(100).animate({
             scrollTop: spot
