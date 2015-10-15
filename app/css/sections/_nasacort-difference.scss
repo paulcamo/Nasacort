@@ -807,6 +807,8 @@
     .cta-center{
         @include breakpoint('mobile'){
             float:left;
+            padding-left: 3.125%;
+            padding-right: 3.125%;
         }
     }
   .download-cta-button{
