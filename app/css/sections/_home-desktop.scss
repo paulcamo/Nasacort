@@ -1255,43 +1255,93 @@ body {
 }
 
 
+.footer .footer-content .bottom-content{
+  padding-top: 13px;
+  @include breakpoint("mobile") {
+    padding-top: 10px;
+  }
+}
+
+
+.footer .footer-content .bottom-content ul{
+  @include breakpoint("mobile") {
+    width: 254px;
+    margin-bottom: 29px
+  }
+}
+
+
 .footer .footer-content .bottom-content ul li {
-  line-height: 1px;
+  position: relative;
+  line-height: 12px;
+  padding: 0 13px;
 
   @include breakpoint("mobile") {
-    line-height: 21px;
+    line-height: 24px;
   }
 
+}
+
+.footer .footer-content .bottom-content ul li:nth-child(1) {
+  padding-left: 0;
+}
+
+.footer .footer-content .bottom-content ul li:last-child {
+  padding-right: 0;
 }
 
 .footer .footer-content .bottom-content ul li .pipe {
-  margin-top: 9px;
-}
-
-.footer .footer-content .bottom-content {
-  padding-top: 13px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin: -6px 0 0 0;
 }
 
 .footer .footer-content .alternative-content ul {
-  margin-top: -18px;
+  margin-top: 0px;
 
   @include breakpoint("mobile") {
-    margin-top: -6px;
+    margin-top: 0px;
   }
 
 }
 
 
+
+
+
   .footer .footer-content .alternative-content ul li  {
+    position: relative;
+    padding: 0 15px;
     @include breakpoint("mobile") {
-      margin-top: 22px;
+      margin-top: 0;
+      padding: 0 13px;
     }
   }
 
+.footer .footer-content .alternative-content ul li:nth-child(1){
+  padding-left: 0;
+}
+.footer .footer-content .alternative-content ul li:last-child{
+  padding-right: 0;
+}
+
 .footer .footer-content .alternative-content ul li .pipe {
-  margin-top: 32px;
+  display: block;
+  position: absolute;
+  top:50%;
+  right: 0;
+  margin: -6px 0 0 0;
   @include breakpoint("mobile") {
-    margin-top: 3px;
+    margin-top: -6px;
+  }
+}
+
+.footer .footer-content .alternative-content ul li a{
+  display: block;
+  line-height: 45px;
+  @include breakpoint("mobile") {
+    margin-top: 0;
   }
 }
 
@@ -1304,6 +1354,16 @@ body {
 }
 
 
+.footer .footer-content .bottom-content .logo-footer{
+  margin-top: 9px;
+}
+
+.footer .footer-content .bottom-content .right-side p{
+  margin-top: 60px;
+  @include breakpoint("mobile") {
+    margin-top: 62px;
+  }
+}
 
 
 }
