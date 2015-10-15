@@ -183,6 +183,9 @@ function setInterstitialPopup() {
 	$("body a").on("click",function(e) {
 
        // e.preventDefault();
+       $('.modal-dialog').stop(true, true).delay(100).animate({
+            scrollTop: 0
+        }, 100);
 
 		if($(this).attr("data-target") === "#interstitial")
 		{
@@ -198,26 +201,7 @@ function setInterstitialPopup() {
                 $(".js-terms").hide();
                 $(".js-policy").show();
     		}
-
 	});
-	
-	$("#interstitial #go").on("click",function(){
-		$("#interstitial .modal-content .modal-dialog").scrollTop(0);
-		$('#interstitial').modal('hide');
-
-	});
-
-
-
-    $("#interstitial").on('hide.bs.modal', function (e) {
-        //setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0)}, 5000);
-        //setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0); }, 3000);
-        $("#interstitial .modal-content .modal-dialog").scrollTop(0);
-        //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
-    });
-
-
-
 }
 
 
