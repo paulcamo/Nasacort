@@ -1169,10 +1169,12 @@ $grey-button:#f8f8f8;
         margin-top: 0;
         padding-bottom: 15px;
         padding-right: 20px;
+        font-size: 15px;
         @include breakpoint('mobile'){
             text-align: left;
             margin-top: 10px;
             padding-left:20px;
+          font-size: 13px;
         }
     }
     .wac-question{
