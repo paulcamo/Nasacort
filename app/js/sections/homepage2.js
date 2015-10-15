@@ -28,7 +28,7 @@ var actualDot=1;
 var slide4bg, slide5bg, slide5tab, footerbg;
 
 var tl = new TimelineMax({paused:true});
-//var tl3 = new TimelineMax({paused:true});
+var tlpollen = new TimelineMax({paused:true});
 
 
 
@@ -54,6 +54,15 @@ $(document).ready(function() {
     set_variables();
     scrollflag=0;
 
+
+
+// ---loop animation for pollen ------------------------------------------------------------------------------------------------------
+
+
+
+    tlpollen.to(".pollen-small", 5,    {scale:1.10, ease: Power0.easeNone} , '+=0');
+
+    // tlpollen.play();
 
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
