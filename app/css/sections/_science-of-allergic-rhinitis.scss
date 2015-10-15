@@ -888,6 +888,7 @@
         @include breakpoint('mobile'){
             margin-bottom: 6px;
             margin-top: 24px;
+            margin-left:5px;
         }
         .sympt{
             @include breakpoint('mobile'){
@@ -901,7 +902,8 @@
                 }
                 @include breakpoint('mobile'){
                   line-height: 38px!important;
-                  padding: 5px 22px 5px 26px !important;
+                  padding: 5px 29px 5px 29px !important;
+                  max-width:180px;
                 }
             }
         }

@@ -81,7 +81,7 @@
         margin-top:18px;
     }
   }
-
+.down-txt
   h3 {
     font-family: $font-proxima-nova-bold;
     color: #022E80;
@@ -819,7 +819,7 @@
         .down-txt{
              @include breakpoint('mobile'){
                 max-width: 184px;
-                padding: 7px 13px 0 20px;
+                //padding: 7px 13px 0 20px;
             }
             br{
                 display:none;
