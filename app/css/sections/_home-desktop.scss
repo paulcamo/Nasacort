@@ -62,42 +62,54 @@ body {
 
 
 
-  #tope2 {
+  #divhelper2 {
     position: absolute;
     bottom: 0;
     height: 20em;
 
     @include breakpoint("tablet-n-desktop") {
       height: 24em;
-      background-color: yellow;
-
     }
 
     }
 
-  #tope3 {
+  #divhelper3 {
     position: absolute;
     bottom: 0;
     height: 17.2em;
     width: 100px;
+
+    @include breakpoint("tablet-n-desktop") {
+      height: 18em;
+    }
+
+
   }
 
 
-  #tope4 {
+  #divhelper4 {
     position: absolute;
     bottom: 0;
     height: 18.15em;
     width: 100px;
 
+    @include breakpoint("tablet-n-desktop") {
+      height: 20em;
+    }
+
   }
 
 
-  #tope5 {
+  #divhelper5 {
     position: absolute;
     bottom: 0;
     height: 19.8em;
     width: 100px;
-   // background-color: red;
+
+    @include breakpoint("tablet-n-desktop") {
+      height: 22em;
+    }
+
   }
 
 

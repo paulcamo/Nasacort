@@ -126,7 +126,7 @@ $(document).ready(function() {
 
         // --- slide 02 ---------------------------------------------------------------
 
-        .to(window, 8, {scrollTo:{y:   $('#tope2').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 8, {scrollTo:{y:   $('#divhelper2').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#bottle', 5,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=5')
         .to('#cap', 5,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=5')
         .to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
         // --- slide 03 ---------------------------------------------------------------
 
-        .to(window, 3.5, {scrollTo:{y:   $('#tope3').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 3.5, {scrollTo:{y:   $('#divhelper3').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#compare-copy', 1,  {left: '23%'}, '+=0')
         .to('#compare-bg', 1,    {bottom: '-0.52em'}, '+=0')
         .to('#stats', 1,         {height: '30.5%'}, '+=0')
@@ -148,14 +148,14 @@ $(document).ready(function() {
 
         // --- slide 04 ---------------------------------------------------------------
 
-        .to(window, 3.5, {scrollTo:{y:   $('#tope4').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 3.5, {scrollTo:{y:   $('#divhelper4').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#patient-box', 2.5,   {left: '0px', ease: Power0.easeIn}, '+=0.5')
         .addLabel('cta4')
         .add(callback_function)
 
         // --- slide 05 ---------------------------------------------------------------
 
-        .to(window, 4, {scrollTo:{y:   $('#tope5').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 4, {scrollTo:{y:   $('#divhelper5').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#yellow-spike', 3,      {bottom: '16em', ease: Power1.easeOut}, '-=3')
         .add(call_pollen)
         .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
