@@ -203,8 +203,19 @@ function setInterstitialPopup() {
 	
 	$("#interstitial #go").on("click",function(){
 		$("#interstitial .modal-content .modal-dialog").scrollTop(0);
-		$('#interstitial').modal('hide').("#interstitial .modal-content .modal-dialog").scrollTop(0);
+		$('#interstitial').modal('hide');
+
 	});
+
+
+
+    $("#interstitial").on('hidden.bs.modal', function () {
+     //   alert("aaaaa");
+        $("#interstitial .modal-content .modal-dialog").data("Scroll", 0);
+    });
+
+
+
 
 }
 
