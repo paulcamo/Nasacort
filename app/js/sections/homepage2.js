@@ -57,12 +57,28 @@ $(document).ready(function() {
 
 
 // ---loop animation for pollen ------------------------------------------------------------------------------------------------------
+    //import com.greensock.easing.CustomEase;
 
+    //CustomEase.create("particles", [{s:0,cp:0.306,e:0.4},{s:0.4,cp:0.494,e:0.376},{s:0.376,cp:0.258,e:0.48},{s:0.48,cp:0.702,e:1}]);
 
+    tlpollen
+    .fromTo("#pollen-1", 8, {scale:1.2, left:'45.5%', bottom:'8.5%'}, {scale:1, left:'64.5%', bottom:'12.5%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-2", 6, {scale:1.2, left:'56%', bottom:'20%'}, {scale:1, left:'76%', bottom:'31%', ease: Back.easeInOut.config(1.7)}, 2)
+    .fromTo("#pollen-3", 8, {scale:1.2, left:'47.5%', bottom:'18.5%'}, {scale:1, left:'67.5%', bottom:'27.5%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-4", 5, {scale:1.2, left:'42%', bottom:'14.8%'}, {scale:1, left:'62%', bottom:'22.8%', ease: Back.easeInOut.config(1.7)}, 3)
+    .fromTo("#pollen-5", 8, {scale:1.2, left:'25.5%', bottom:'16.5%'}, {scale:1, left:'45.5%', bottom:'19.5%', ease: Back.easeInOut.config(1.7)}, 1)
+    .fromTo("#pollen-6", 8, {scale:1.2, left:'29.5%', bottom:'2.7%'}, {scale:1, left:'49.5%', bottom:'5.7%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-7", 7, {scale:1.2, left:'-2%', bottom:'33%'}, {scale:1, left:'5%', bottom:'28%', ease: Back.easeInOut.config(1.7)}, 2)
+    .fromTo("#pollen-8", 8, {scale:1.2, left:'-7%', bottom:'3%'}, {scale:1, left:'13%', bottom:'9%', ease: Back.easeInOut.config(1.7)}, 1)
+    .fromTo("#pollen-9", 6.5, {scale:1.2, left:'72.5%', bottom:'32.5%'}, {scale:1, left:'93.5%', bottom:'36.5%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-10", 6.5, {scale:1.2, left:'72%', bottom:'30.5%'}, {scale:1, left:'88%', bottom:'36.5%', ease: Back.easeIn.config(1.7)}, 1)
+    .fromTo("#pollen-11", 6.5, {scale:1.2, left:'69.5%', bottom:'25.7%'}, {scale:1, left:'80.5%', bottom:'38.7%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-12", 6.5, {scale:1.2, left:'67.2%', bottom:'22.6%'}, {scale:1, left:'87.2%', bottom:'41.6%', ease: Back.easeIn.config(1.7)}, 1)
+    .fromTo("#pollen-13", 6.5, {scale:1.2, left:'69.2%', bottom:'24.9%'}, {scale:1, left:'89.2%', bottom:'44.9%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-14", 6.5, {scale:0.5, left:'64%', bottom:'22.3%'}, {scale:1, left:'92%', bottom:'42.3%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-15", 6.5, {scale:0.5, left:'-5%', bottom:'-10%'}, {scale:1, left:'0%', bottom:'-7%', ease: Back.easeInOut.config(1.7)}, 2);
 
-    tlpollen.to(".pollen-small", 5,    {scale:1.10, ease: Power0.easeNone} , '+=0');
-
-    // tlpollen.play();
+    //tlpollen.play();
 
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
@@ -110,7 +126,7 @@ $(document).ready(function() {
 
         // --- slide 02 ---------------------------------------------------------------
 
-        .to(window, 8, {scrollTo:{y:   $('#tope2').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 8, {scrollTo:{y:   $('#divhelper2').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#bottle', 5,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%',ease: Sine.easeOut } , '-=5')
         .to('#cap', 5,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=5')
         .to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
@@ -123,7 +139,7 @@ $(document).ready(function() {
 
         // --- slide 03 ---------------------------------------------------------------
 
-        .to(window, 3.5, {scrollTo:{y:   $('#tope3').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 3.5, {scrollTo:{y:   $('#divhelper3').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#compare-copy', 1,  {left: '23%'}, '+=0')
         .to('#compare-bg', 1,    {bottom: '-0.52em'}, '+=0')
         .to('#stats', 1,         {height: '30.5%'}, '+=0')
@@ -132,20 +148,22 @@ $(document).ready(function() {
 
         // --- slide 04 ---------------------------------------------------------------
 
-        .to(window, 3.5, {scrollTo:{y:   $('#tope4').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 3.5, {scrollTo:{y:   $('#divhelper4').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#patient-box', 2.5,   {left: '0px', ease: Power0.easeIn}, '+=0.5')
         .addLabel('cta4')
         .add(callback_function)
 
         // --- slide 05 ---------------------------------------------------------------
 
-        .to(window, 4, {scrollTo:{y:   $('#tope5').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
+        .to(window, 4, {scrollTo:{y:   $('#divhelper5').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#yellow-spike', 3,      {bottom: '16em', ease: Power1.easeOut}, '-=3')
+        .add(call_pollen)
         .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
         .addLabel('cta5')
         .add(callback_function)
 
     ;  // --- end ---------------------------------------------------------------
+
 
 
 
@@ -523,6 +541,10 @@ function select_a_slide2(v) {
 
 }
 
+
+function call_pollen(){
+    tlpollen.play();
+}
 
 
 function callback_function (){

@@ -48,7 +48,13 @@ body {
 
     .footnote[data-section="home-1"]  {
       z-index: 999;
-      top: 11em;
+      top: 10em;
+
+      @include breakpoint("limit") {
+        top: 11em;
+
+      }
+
     }
 
 
@@ -56,36 +62,54 @@ body {
 
 
 
-  #tope2 {
+  #divhelper2 {
     position: absolute;
     bottom: 0;
     height: 20em;
-    width: 100px;
-  }
 
-  #tope3 {
+    @include breakpoint("tablet-n-desktop") {
+      height: 24em;
+    }
+
+    }
+
+  #divhelper3 {
     position: absolute;
     bottom: 0;
     height: 17.2em;
     width: 100px;
+
+    @include breakpoint("tablet-n-desktop") {
+      height: 18em;
+    }
+
+
   }
 
 
-  #tope4 {
+  #divhelper4 {
     position: absolute;
     bottom: 0;
     height: 18.15em;
     width: 100px;
 
+    @include breakpoint("tablet-n-desktop") {
+      height: 20em;
+    }
+
   }
 
 
-  #tope5 {
+  #divhelper5 {
     position: absolute;
     bottom: 0;
     height: 19.8em;
     width: 100px;
-   // background-color: red;
+
+    @include breakpoint("tablet-n-desktop") {
+      height: 22em;
+    }
+
   }
 
 
@@ -342,20 +366,137 @@ body {
   //  ------------------------------------------------------------------------------------------------
 
 
-  #yellow-spike {
+  .particle {
     background: url(../img/desktop/homepage/yellow-spike.png) no-repeat right center;
     background-size: contain;
     position: absolute;
-    width: 19.3%;
-    height: 6em;
+    width: 20%;
+    height: 20%;
     left: 0;
-    z-index: 10001;
-    bottom: -3em; //21em
+    bottom: 0; //21em
+    z-index: 2;
     @media  screen and (min-width : 769px) and (max-width : 1700px) {
       z-index: 100;
     }
   }
 
+  .green{
+    background-image: url(../img/desktop/homepage/green-spike.png);
+  }
+
+  .pink{
+    background-image: url(../img/desktop/homepage/pink-snot.png);
+  }
+
+  .dark{
+    background-image: url(../img/desktop/homepage/dark-snot.png);
+  }
+
+  #pollen-1{
+    width: 7.5%;
+    height: 7.5%;
+    left:64.5%;
+    bottom:12.5%;
+  }
+
+  #pollen-2{
+    width: 2%;
+    height: 2%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-3{
+    width: 3.5%;
+    height: 3.5%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-4{
+    width: 4%;
+    height: 4%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-5{
+    width: 7.5%;
+    height: 7.5%;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  #pollen-6{
+    width: 11%;
+    height: 11%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-7{
+    width: 11%;
+    height: 11%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-8{
+    width: 11%;
+    height: 11%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-9{
+    width: 1.5%;
+    height: 1.5%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-10{
+    width: 2.3%;
+    height: 2.3%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  #pollen-11{
+    width: 2.7%;
+    height: 2.7%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-12{
+    width: 2%;
+    height: 2%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-13{
+    width: 1.3%;
+    height: 1.3%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-14{
+    width: 6%;
+    height: 6%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-15{
+    width: 17%;
+    height: 17%;
+    bottom: 0;
+    left: 0;
+  }
 
   //  ------------------------------------------------------------------------------------------------
 
@@ -952,6 +1093,7 @@ body {
     //background-color: rgba(255,255,255,0.4);
     height: 21.2em;
     z-index: 100;
+    position: absolute;
     max-width: #{homepage-max-width()};
     width: 100%;
     margin: auto;
