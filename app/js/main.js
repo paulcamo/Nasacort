@@ -209,11 +209,12 @@ function setInterstitialPopup() {
 
 
 
-    $("#interstitial").on('hidden.bs.modal', function () {
-     //   alert("aaaaa");
-        $("#interstitial .modal-content .modal-dialog").data("Scroll", 0);
+    $("#interstitial").on('hide.bs.modal', function (e) {
+        //setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0)}, 5000);
+        //setTimeout(function(){ $("#interstitial .modal-content .modal-dialog").scrollTop(0); }, 3000);
+        $("#interstitial .modal-content .modal-dialog").scrollTop(0);
+        //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
     });
-
 
 
 
