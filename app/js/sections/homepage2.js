@@ -57,12 +57,28 @@ $(document).ready(function() {
 
 
 // ---loop animation for pollen ------------------------------------------------------------------------------------------------------
+    //import com.greensock.easing.CustomEase;
 
+    //CustomEase.create("particles", [{s:0,cp:0.306,e:0.4},{s:0.4,cp:0.494,e:0.376},{s:0.376,cp:0.258,e:0.48},{s:0.48,cp:0.702,e:1}]);
 
+    tlpollen
+    .fromTo("#pollen-1", 8, {scale:1.2, left:'45.5%', bottom:'8.5%'}, {scale:1, left:'64.5%', bottom:'12.5%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-2", 6, {scale:1.2, left:'56%', bottom:'20%'}, {scale:1, left:'76%', bottom:'31%', ease: Back.easeInOut.config(1.7)}, 2)
+    .fromTo("#pollen-3", 8, {scale:1.2, left:'47.5%', bottom:'18.5%'}, {scale:1, left:'67.5%', bottom:'27.5%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-4", 5, {scale:1.2, left:'42%', bottom:'14.8%'}, {scale:1, left:'62%', bottom:'22.8%', ease: Back.easeInOut.config(1.7)}, 3)
+    .fromTo("#pollen-5", 8, {scale:1.2, left:'25.5%', bottom:'16.5%'}, {scale:1, left:'45.5%', bottom:'19.5%', ease: Back.easeInOut.config(1.7)}, 1)
+    .fromTo("#pollen-6", 8, {scale:1.2, left:'29.5%', bottom:'2.7%'}, {scale:1, left:'49.5%', bottom:'5.7%', ease: Back.easeInOut.config(1.7)}, 0)
+    .fromTo("#pollen-7", 7, {scale:1.2, left:'-2%', bottom:'33%'}, {scale:1, left:'5%', bottom:'28%', ease: Back.easeInOut.config(1.7)}, 2)
+    .fromTo("#pollen-8", 8, {scale:1.2, left:'-7%', bottom:'3%'}, {scale:1, left:'13%', bottom:'9%', ease: Back.easeInOut.config(1.7)}, 1)
 
-    tlpollen.to(".pollen-small", 5,    {scale:1.10, ease: Power0.easeNone} , '+=0');
+    .fromTo("#pollen-9", 6.5, {scale:1.2, left:'72.5%', bottom:'32.5%'}, {scale:1, left:'93.5%', bottom:'36.5%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-10", 6.5, {scale:1.2, left:'72%', bottom:'30.5%'}, {scale:1, left:'88%', bottom:'36.5%', ease: Back.easeIn.config(1.7)}, 1)
+    .fromTo("#pollen-11", 6.5, {scale:1.2, left:'69.5%', bottom:'25.7%'}, {scale:1, left:'80.5%', bottom:'38.7%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-12", 6.5, {scale:1.2, left:'67.2%', bottom:'22.6%'}, {scale:1, left:'87.2%', bottom:'41.6%', ease: Back.easeIn.config(1.7)}, 1)
+    .fromTo("#pollen-13", 6.5, {scale:1.2, left:'69.2%', bottom:'24.9%'}, {scale:1, left:'89.2%', bottom:'44.9%', ease: Back.easeIn.config(1.7)}, 2)
+    .fromTo("#pollen-14", 6.5, {scale:0.5, left:'64%', bottom:'22.3%'}, {scale:1, left:'92%', bottom:'42.3%', ease: Back.easeIn.config(1.7)}, 2);
 
-    // tlpollen.play();
+    //tlpollen.play();
 
 
 // ---loop animation for carousel------------------------------------------------------------------------------------------------------
