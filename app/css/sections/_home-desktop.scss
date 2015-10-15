@@ -362,7 +362,7 @@ body {
     height: 20%;
     left: 0;
     bottom: 0; //21em
-    z-index: 10001;
+    z-index: 2;
     @media  screen and (min-width : 769px) and (max-width : 1700px) {
       z-index: 100;
     }
@@ -475,6 +475,13 @@ body {
   #pollen-14{
     width: 6%;
     height: 6%;
+    bottom: 0;
+    left: 0;
+  }
+
+  #pollen-15{
+    width: 17%;
+    height: 17%;
     bottom: 0;
     left: 0;
   }
@@ -1074,6 +1081,7 @@ body {
     //background-color: rgba(255,255,255,0.4);
     height: 21.2em;
     z-index: 100;
+    position: absolute;
     max-width: #{homepage-max-width()};
     width: 100%;
     margin: auto;
