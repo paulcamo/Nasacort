@@ -122,6 +122,10 @@ h4{
     }
     @include breakpoint('mobile'){
         margin: 9px 0;
+        width:100%;
+        margin-left: 0;
+    padding-left: 5.15%;
+    padding-right: 5.15%;
     }
 
 
@@ -144,9 +148,14 @@ h4{
         padding-top: 28px;
         @include breakpoint('mobile'){
             background:url('../img/global/mobile/share-btn-small.png')no-repeat;
-            width: 55px;
+            width: 20%;
             font-size: 14px;
             height: 51px;
+            background-size:100% 50px;
+            right:0;
+        }
+        @media screen and (max-width: 335px) { 
+          width:20%;
         }
         .shareSympt-icon{
             background:url('../img/global/desktop/shareSympt-icon.png')no-repeat;
@@ -157,7 +166,10 @@ h4{
             top: 3px;
             @include breakpoint('mobile'){
                 background-size:100%;
-                top: -34px;
+                top: -35px;
+                display:block;
+                margin-left:auto;
+                margin-right:auto;
             }
         }
         &:hover{
@@ -171,7 +183,9 @@ h4{
         background-color:$download-cta-color-orange;
         height: 75px;
         display: inline-block;
-        border-radius: 6px 6px;
+        //border-radius: 6px 6px;
+        @include border-corner-radius(top, left, 6px);
+        @include border-corner-radius(bottom, left, 6px);
         text-decoration: none;
         border:1px solid $download-cta-color-orange;
         float: left;
@@ -179,10 +193,15 @@ h4{
         z-index: 1;
         // width: 100%;
         // max-width: 450px;
-        min-width: 450px;
+        //min-width: 450px;
         @include breakpoint('mobile'){
             height: 50px;
-            min-width: 184px;
+            //min-width: 184px;
+            width:80%;
+        }
+        @media screen and (max-width: 335px) {
+          min-width: 184px;     
+          width:80%;
         }
         img{
             position: relative;
@@ -201,14 +220,23 @@ h4{
             float: left;
             display: inline-block;
             position:relative;
+            
             @include breakpoint('mobile'){
                 font-size: 12px;
                 line-height: 18px;
                 //padding: 7px 4px 0 20px;
-                padding: 7px 22px 0 20px;
                 text-align: left;
-                max-width: 162px;
+                max-width: 73%;
+                padding-left:10%;
+                padding-top:3%;
+                padding-right:0;
+                padding-bottom:0;
             }
+            
+            @media screen and (min-width: 500px) {
+              line-height: 34px;
+          }
+            
             &:before{
                 content:" ";
                 background:url('../img/global/desktop/downl-cta-line.png')no-repeat;
@@ -220,6 +248,7 @@ h4{
                 top: 4px;
                 @include breakpoint('mobile'){
                     height: 39px;
+                    left:5px;
                 }
             }
         }

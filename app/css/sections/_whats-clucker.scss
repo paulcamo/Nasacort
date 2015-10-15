@@ -52,13 +52,17 @@ $grey-button:#f8f8f8;
         margin-bottom: 68px;
         @include breakpoint('mobile'){
             margin-bottom: 28px;
-            margin-left: 3px;
+            //margin-left: 3px;
         }
         .sympt{
           .down-txt{
             @include breakpoint('mobile'){
-              max-width: 171px;
-              padding-right:12px;
+              //max-width: 100%;
+              //padding-right:12px;
+            }
+            @media screen and (max-width: 335px) {
+              //padding-right:5px;
+              //max-width: 166px;
             }
           }
         }
