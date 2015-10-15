@@ -302,16 +302,17 @@ function desktopStickyHeader(y){
         }else {
             vtop="148px";
         }
-
+        height2hide = "-29px";
 
 
     } else {
         sticky_height =10;
         vtop="127px";
+        height2hide = "-20px";
     }
 
     if (y > sticky_height) {
-        $('#header').animate({top: "-29px"}, 300);
+        $('#header').animate({top: height2hide}, 300);
         $('.first-container').animate({paddingTop: "0"}, 300);
         $('.clucker-container').animate({marginTop: "0"}, 300);
         headerCollapsed = 1;
