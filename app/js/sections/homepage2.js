@@ -196,9 +196,9 @@ function set_variables(){
 
 
 
-    console.log ($(window).height());
+   // console.log ($(window).height());
     slide3buttonpad = 81 + 5 -   ($("#slide03").height() - ($(window).height()-81));
-    console.log ("padd " + slide3buttonpad);
+   // console.log ("padd " + slide3buttonpad);
 
 
 
@@ -347,7 +347,32 @@ $(document).mousewheel(function(evt){
 
 
 
+        if (scrollflag===0) {
+            scrollflag=1;
+            setTimeout(select_a_slide(evt.deltaY) ,800);
+        }
+
+
+
 });
+
+
+$('body').on({
+    'mousewheel': function(e) {
+        if (scrollflag===0) return;
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
+
+
+$(document).bind("touchmove",function(event){
+
+    if (scrollflag===1) event.preventDefault();
+});
+
+
+
 
 // ---------------------------------------------------------------------------------------
 
@@ -358,7 +383,41 @@ function boton(lugar) {
 
 }
 
+
+
+
+
+
 function select_a_slide(v) {
+
+
+
+
+
+    if (v>=0) {
+
+
+        finalSlide = actualSlide += 1;
+        $("#dots-container .dotbox .dot").eq(actualSlide - 1).click();
+
+    } else {
+
+        if (actualSlide > 1) {
+            finalSlide = actualSlide -= 1;
+            $("#dots-container .dotbox .dot").eq(actualSlide-=1).click();
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+function select_a_slide2(v) {
 
 
 
