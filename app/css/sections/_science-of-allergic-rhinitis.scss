@@ -888,20 +888,23 @@
         @include breakpoint('mobile'){
             margin-bottom: 6px;
             margin-top: 24px;
+            margin-left:5px;
         }
         .sympt{
             @include breakpoint('mobile'){
-               min-width:auto;  
+               //min-width:auto;  
              }
             .down-txt{
-              padding: 28px 22px!important;
+              //padding: 28px 22px!important;
                 @include breakpoint('tablet'){
-                  line-height: 38px !important;
-                  padding-top: 18px !important;
+                 // line-height: 38px !important;
+                  //padding-top: 18px !important;
                 }
                 @include breakpoint('mobile'){
-                  line-height: 38px!important;
-                  padding: 5px 22px 5px 26px !important;
+                  line-height: 50px !important;
+                  padding-top:0;
+                  //padding: 5px 29px 5px 29px !important;
+                  //max-width:180px;
                 }
             }
         }

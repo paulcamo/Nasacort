@@ -81,7 +81,7 @@
         margin-top:18px;
     }
   }
-
+.down-txt
   h3 {
     font-family: $font-proxima-nova-bold;
     color: #022E80;
@@ -813,18 +813,18 @@
     margin-bottom:0px;
     margin-top: 3px; 
     @include breakpoint('mobile'){
-        margin-left: 5px;
+        //margin-left: 5px;
      }
     .sympt{
         .down-txt{
              @include breakpoint('mobile'){
-                max-width: 184px;
-                padding: 7px 13px 0 20px;
+                //max-width: 184px;
+                //padding: 7px 13px 0 20px;
             }
             br{
                 display:none;
                 @include breakpoint('mobile'){
-                    display:block;
+                    //display:block;
                 }
             }
         }

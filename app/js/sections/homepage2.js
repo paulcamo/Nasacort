@@ -212,9 +212,9 @@ function set_variables(){
 
 
 
-    console.log ($(window).height());
+   // console.log ($(window).height());
     slide3buttonpad = 81 + 5 -   ($("#slide03").height() - ($(window).height()-81));
-    console.log ("padd " + slide3buttonpad);
+   // console.log ("padd " + slide3buttonpad);
 
 
 
@@ -363,7 +363,32 @@ $(document).mousewheel(function(evt){
 
 
 
+        if (scrollflag===0) {
+            scrollflag=1;
+            setTimeout(select_a_slide(evt.deltaY) ,800);
+        }
+
+
+
 });
+
+
+$('body').on({
+    'mousewheel': function(e) {
+        if (scrollflag===0) return;
+        e.preventDefault();
+        e.stopPropagation();
+    }
+});
+
+
+$(document).bind("touchmove",function(event){
+
+    if (scrollflag===1) event.preventDefault();
+});
+
+
+
 
 // ---------------------------------------------------------------------------------------
 
@@ -374,7 +399,41 @@ function boton(lugar) {
 
 }
 
+
+
+
+
+
 function select_a_slide(v) {
+
+
+
+
+
+    if (v>=0) {
+
+
+        finalSlide = actualSlide += 1;
+        $("#dots-container .dotbox .dot").eq(actualSlide - 1).click();
+
+    } else {
+
+        if (actualSlide > 1) {
+            finalSlide = actualSlide -= 1;
+            $("#dots-container .dotbox .dot").eq(actualSlide-=1).click();
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+function select_a_slide2(v) {
 
 
 
@@ -535,17 +594,19 @@ function animate(n) {
         $("#dots-container .dotbox .dot").removeClass("dot-on");
         $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
         tl.play();
-    } else {
-        tl.pause();
-        if (n==1) tl.seek('cta1');
-        if (n==2) tl.seek('cta2');
-        if (n==3) tl.seek('cta3');
-        if (n==4) tl.seek('cta4');
-        if (n==5) tl.seek('cta5');
-        actualSlide=finalSlide;
-        window.clearTimeout(timer);
-        timer=  window.setTimeout( zeroflag ,500);
     }
+
+    //else {
+    //    tl.pause();
+    //    if (n==1) tl.seek('cta1');
+    //    if (n==2) tl.seek('cta2');
+    //    if (n==3) tl.seek('cta3');
+    //    if (n==4) tl.seek('cta4');
+    //    if (n==5) tl.seek('cta5');
+    //    actualSlide=finalSlide;
+    //    window.clearTimeout(timer);
+    //    timer=  window.setTimeout( zeroflag ,500);
+    //}
 
 }
 
