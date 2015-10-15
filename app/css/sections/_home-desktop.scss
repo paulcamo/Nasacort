@@ -1275,13 +1275,18 @@ body {
 
 .footer .footer-content .bottom-content ul li {
   position: relative;
-  line-height: 12px;
+  line-height: 9px;
   padding: 0 13px;
-
+  height: 23px;
   @include breakpoint("mobile") {
     line-height: 24px;
   }
 
+}
+
+.footer .footer-content .bottom-content ul li a{
+  display: block;
+  line-height: 23px;
 }
 
 .footer .footer-content .bottom-content ul li:nth-child(1) {
@@ -1296,7 +1301,7 @@ body {
   position: absolute;
   top: 50%;
   right: 0;
-  margin: -3px 0 0 0;
+  margin: -6px 0 0 0;
   @include breakpoint("mobile") {
     margin-top: -6px;
   }
