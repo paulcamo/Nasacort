@@ -578,17 +578,19 @@ function animate(n) {
         $("#dots-container .dotbox .dot").removeClass("dot-on");
         $("#dots-container .dotbox .dot").eq(actualSlide-1).addClass("dot-on");
         tl.play();
-    } else {
-        tl.pause();
-        if (n==1) tl.seek('cta1');
-        if (n==2) tl.seek('cta2');
-        if (n==3) tl.seek('cta3');
-        if (n==4) tl.seek('cta4');
-        if (n==5) tl.seek('cta5');
-        actualSlide=finalSlide;
-        window.clearTimeout(timer);
-        timer=  window.setTimeout( zeroflag ,500);
     }
+
+    //else {
+    //    tl.pause();
+    //    if (n==1) tl.seek('cta1');
+    //    if (n==2) tl.seek('cta2');
+    //    if (n==3) tl.seek('cta3');
+    //    if (n==4) tl.seek('cta4');
+    //    if (n==5) tl.seek('cta5');
+    //    actualSlide=finalSlide;
+    //    window.clearTimeout(timer);
+    //    timer=  window.setTimeout( zeroflag ,500);
+    //}
 
 }
 
