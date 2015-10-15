@@ -48,7 +48,13 @@ body {
 
     .footnote[data-section="home-1"]  {
       z-index: 999;
-      top: 11em;
+      top: 10em;
+
+      @include breakpoint("limit") {
+        top: 11em;
+
+      }
+
     }
 
 
@@ -60,8 +66,14 @@ body {
     position: absolute;
     bottom: 0;
     height: 20em;
-    width: 100px;
-  }
+
+    @include breakpoint("tablet-n-desktop") {
+      height: 24em;
+      background-color: yellow;
+
+    }
+
+    }
 
   #tope3 {
     position: absolute;
@@ -401,6 +413,7 @@ body {
     height: 7.5%;
     bottom: 0;
     left: 0;
+    z-index: 0;
   }
 
   #pollen-6{

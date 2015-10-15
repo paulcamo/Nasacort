@@ -157,11 +157,13 @@ $(document).ready(function() {
 
         .to(window, 4, {scrollTo:{y:   $('#tope5').offset().top, x:0}, ease:Sine.easeInOut}, '+=0')
         .to('#yellow-spike', 3,      {bottom: '16em', ease: Power1.easeOut}, '-=3')
+        .add(call_pollen)
         .to('#understand-box', 2,    {left: '30%', ease: Power1.easeOut}, '+=0')
         .addLabel('cta5')
         .add(callback_function)
 
     ;  // --- end ---------------------------------------------------------------
+
 
 
 
@@ -539,6 +541,10 @@ function select_a_slide2(v) {
 
 }
 
+
+function call_pollen(){
+    tlpollen.play();
+}
 
 
 function callback_function (){
