@@ -202,6 +202,11 @@ function setInterstitialPopup() {
                 $(".js-policy").show();
     		}
 	});
+
+        $("#interstitial #go").on("click",function(){
+            $('#interstitial').modal('hide');
+        });
+
 }
 
 

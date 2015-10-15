@@ -1203,6 +1203,23 @@ $grey-button:#f8f8f8;
     }
 }
 
+.wac-indication{
+    text-align: right;
+    display: block;
+    color:$grey-innerTxt;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 0;
+    padding-bottom: 15px;
+    padding-right: 20px;
+    @include breakpoint('mobile'){
+        text-align: left;
+        margin-top: 10px;
+        padding-left:20px;
+    }
+}
+
 /*------------------- Popup Glass Heads -------------------*/
 
 #glass-head{
