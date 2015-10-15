@@ -224,11 +224,21 @@
         height: 260px;
         .head-inner{
           width: 70%;
+          margin-bottom: 26px;
+          position: relative;
+          &:after{
+              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
+              content: "";
+              width: 26px;
+              height: 3px;
+              display: inline-block;
+              position: absolute;
+              bottom: -8px;
+              left: 44%;
+            } 
           p{
             color:$color-white;
-            &:after{
-              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
-            } 
+            margin-bottom:0;
           }
         }
         .inner-ctas{
@@ -254,9 +264,6 @@
           p{
             color: $color-dark-blue;
             margin-bottom: 10px;
-            &:after{
-              background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
-            } 
           }
         }
         .inner-ctas{
