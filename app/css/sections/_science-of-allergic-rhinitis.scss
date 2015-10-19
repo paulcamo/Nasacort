@@ -99,7 +99,7 @@
       display:block;
       @include breakpoint('mobile'){
         font-size: 12px;
-        margin-bottom: 39px;
+        margin-bottom: 21px;
       }
     }
     .graph{
@@ -269,7 +269,7 @@
         @include breakpoint('mobile'){
           border-top: 1px solid #dadada;
           margin-top: 10px!important;
-          padding-top: 36px;
+          padding-top: 21px;
           margin:0;
         }
         
@@ -281,7 +281,7 @@
         @include breakpoint('mobile'){
           border-top: 1px solid #dadada;
           margin: 8px 0 0;
-          padding-top: 36px;
+          padding-top: 19px;
         }
         .line{
           height: 45px;
