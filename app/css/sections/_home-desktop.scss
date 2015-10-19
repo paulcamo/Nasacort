@@ -117,7 +117,7 @@ body {
     height: 32em;
     z-index: 1000;
     overflow-x: hidden;
-    
+
     .use-only {
       position: absolute;
       top: 101.9em;
@@ -624,8 +624,8 @@ body {
       line-height: 1.3em;
       color: #2e2662;
       background-size: contain;
-      font-family: $font-proxima-nova-bold;
-      font-weight: 700;
+      font-family: $font-proxima-nova-regular;
+      font-weight: normal;
       letter-spacing: 0.05em;
     }
 
@@ -646,6 +646,7 @@ body {
     }
 
     .compare-link strong {
+      font-family: $font-proxima-nova-bold;
       font-weight: 700;
     }
 
@@ -827,8 +828,8 @@ body {
       text-decoration: none;
       line-height: 1.2em;
       color: #2E2662;
-      font-family: $font-proxima-nova-bold;
-      font-weight: 700;
+      font-family: $font-proxima-nova-regular;
+      font-weight: normal;
       letter-spacing: 0.05em;
 
 
@@ -871,6 +872,7 @@ body {
     }
 
     .compare-link strong {
+    font-family: $font-proxima-nova-bold;
       font-weight: 700;
     }
 
