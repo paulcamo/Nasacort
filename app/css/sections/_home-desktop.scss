@@ -116,7 +116,8 @@ body {
   #slide02 {
     height: 32em;
     z-index: 1000;
-
+    overflow-x: hidden;
+    
     .use-only {
       position: absolute;
       top: 101.9em;
