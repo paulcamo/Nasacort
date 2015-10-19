@@ -190,11 +190,11 @@ $(function(){
     // ANIMATES THE CURRENT ANIMATION INTO VIEW
     playAnim();
      
-    if (!is_touch_device()) {
+    /*if (!is_touch_device()) {
         console.log('this is NOT a touch device DUDE');
     } else {
         console.log('this is a touch device');
-    }
+    }*/
 
     $(window).scroll(function(event){
 
@@ -355,9 +355,7 @@ function set_dotbox(){
 
 
 function is_touch_device() {
- return (('ontouchstart' in window)
-      || (navigator.MaxTouchPoints > 0)
-      || (navigator.msMaxTouchPoints > 0));
+ return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
 }
 
 
