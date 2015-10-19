@@ -121,7 +121,7 @@ function hashCalling(newPath){
 // adding new event to all a to get hast anchors if any
 $('a').on('click tap', function(){
     // indicates the new target in the current page
-    var path = $(this).attr('href').split('#')[1] || null;
+    var path = $(this).attr('href').hash || null;
 
     if (path){
         // scrolls to the new position 
