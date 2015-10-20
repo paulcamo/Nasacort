@@ -251,7 +251,7 @@ function addAudioPlayer()
     $('#glass-head .listen').click(function() {
         
         var audioPath = $(this).attr("path");
-        console.log("Audio Playing: " + audioPath + " is playing : " + $('#glass-head #media-container').attr("playing"));
+        //console.log("Audio Playing: " + audioPath + " is playing : " + $('#glass-head #media-container').attr("playing"));
         
         $(this).addClass("active");
         
@@ -265,16 +265,16 @@ function addAudioPlayer()
                     jQuery(this).jPlayer("setMedia", {
                         mp3: audioPath
                     }).jPlayer("play");
-                    console.log("audio ready");
+                    //console.log("audio ready");
                 },
                 ended:function() {
-                    console.log("audio ended");
+                    //console.log("audio ended");
                     $('#glass-head .listen').removeClass("active");
                     $('#glass-head #media-container').attr("playing", "false");
                 },
                 play:function() {
                     $('#glass-head #media-container').attr("playing", "true");
-                    console.log("audio playing");
+                    //console.log("audio playing");
                 }
             });
         }else
@@ -283,7 +283,7 @@ function addAudioPlayer()
             $('#glass-head .listen').removeClass("active");
             isPlaying = false;
             $('#glass-head #media-container').attr("playing", "false");
-            console.log("audio stopped");
+            //console.log("audio stopped");
         }
     });
 }

@@ -297,9 +297,9 @@ function set_variables(){
 
 
 
-    console.log ($(window).height());
+    //console.log ($(window).height());
     slide3buttonpad = 81 + 5 -   ($("#slide03").height() - ($(window).height()-81));
-    console.log ("padd " + slide3buttonpad);
+    //console.log ("padd " + slide3buttonpad);
 
 
 
@@ -474,7 +474,7 @@ function select_a_slide(v) {
 
 
             if (sepuede && actualSlide==3) {
-                console.log("lo animo");
+                //console.log("lo animo");
                 scrollflag=1;
                 tl3.play();
                 sepuede=false;
@@ -642,19 +642,10 @@ function zeroflag() {  scrollflag=0;  }
 function zerotl3() {  scrollflag=0; tl3.pause();  }
 
 
-function ver() {
-    console.log(playedSlides);
-    console.log(sepuede);
-    console.log(actualSlide);
-
-}
-
-
 function check_sepuede() {
 
     if ($(window).height() <=750) {
         sepuede=true;
-        console.log('si se pudo');
         tl3.time(0);
     }
 

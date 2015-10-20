@@ -94,7 +94,7 @@ function hashCalling(newPath){
 
     // if hash exists will scroll to new target
     if (hashCalled) {
-        console.log("hashCalled ---->" + hashCalled);
+        //console.log("hashCalled ---->" + hashCalled);
 
         var spot = $('#' + hashCalled).offset().top - (overflow || 60);
 
@@ -322,7 +322,7 @@ function validateFootnote()
                negativeMargin = $(this).offset().left; 
             }
             
-            console.log("Footnote " + index + " position " + negativeMargin);
+            //console.log("Footnote " + index + " position " + negativeMargin);
             $(this).css("margin-left", "-" + negativeMargin + "px");
         });
     }else{

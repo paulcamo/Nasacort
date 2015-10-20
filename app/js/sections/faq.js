@@ -7,13 +7,13 @@ $(".head-faq").click(function(){
 
     if (state=="close") {
         $(this).data("state", "open");
-        console.log (item + " is open!!!");
+        //console.log (item + " is open!!!");
         click_expand(item);
 
 
     } else {
         $(this).data("state", "close");
-        console.log (item  + " is close");
+        //console.log (item  + " is close");
         click_close(item);
     }
 
@@ -21,7 +21,7 @@ $(".head-faq").click(function(){
     // --------------------------------------------
 function click_expand(item) {
 
-    console.log (item + " expand fired");
+    //console.log (item + " expand fired");
 
     switch(item) {
 
@@ -106,7 +106,7 @@ function click_expand(item) {
 
     function click_close(item) {
 
-        console.log (item + " close fired");
+        //console.log (item + " close fired");
 
 
         switch(item) {

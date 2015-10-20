@@ -103,7 +103,7 @@ function hashCalling(){
     hashCalled = window.location.hash.substring(1) || "";
 
     if (hashCalled !=="") {
-        console.log("hashCalled ---->" + hashCalled);
+        //console.log("hashCalled ---->" + hashCalled);
         $(window).scrollTop( $("div[id='" + hashCalled + "']").offset().top  - 80 );
     }
 }
@@ -225,7 +225,7 @@ $('.footnote').on('click', function(e) {
             $(this).attr("currentMarginTop", currentMarginTop);
         }
         animation.show();
-        console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
         expandTop = animation.outerHeight() - buttonHeight;
         animation.css("margin-top", -expandTop); 
        
@@ -271,7 +271,7 @@ function validateFootnote()
                negativeMargin = $(this).offset().left; 
             }
             
-            console.log("Footnote " + index + " position " + negativeMargin);
+            //console.log("Footnote " + index + " position " + negativeMargin);
             $(this).css("margin-left", "-" + negativeMargin + "px");
         });
     }else{
