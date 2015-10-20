@@ -314,7 +314,7 @@ function freeScroll(){
     setTimeout(function(){
         page.bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(e){
             if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel" || e.type === "scroll"){
-                console.log('stop this madness');
+                //console.log('stop this madness');
                 page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
                 page.stop().unbind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove'); // This identifies the scroll as a user action, stops the animation, then unbinds the event straight after (optional)
             }
