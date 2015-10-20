@@ -197,6 +197,8 @@ $(function(){
         console.log('this is a touch device');
     }*/
 
+    setInterstitialPopup();
+
     $(window).scroll(function(event){
 
         var st = $(this).scrollTop();
@@ -357,6 +359,34 @@ function set_dotbox(){
 
 function is_touch_device() {
  return (('ontouchstart' in window) || (navigator.MaxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+}
+
+function setInterstitialPopup() {
+    $("body a").on("click",function(e) {
+
+       // e.preventDefault();
+       $('.modal-dialog').stop(true, true).delay(100).animate({
+            scrollTop: 0
+        }, 100);
+
+        if($(this).attr("data-target") === "#interstitial"){
+            $("#interstitial").find("#go").attr("href", $(this).attr("href"));
+        }   
+
+        if($(this).attr("data-type") === "terms-use"){
+                $(".js-terms").show();
+                $(".js-policy").hide();
+
+            } else {
+                $(".js-terms").hide();
+                $(".js-policy").show();
+            }
+    });
+
+    $("#interstitial #go").on("click",function(){
+        $('#interstitial').modal('hide');
+    });
+
 }
 
 

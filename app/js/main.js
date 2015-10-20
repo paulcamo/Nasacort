@@ -171,13 +171,11 @@ function setInterstitialPopup() {
             scrollTop: 0
         }, 100);
 
-		if($(this).attr("data-target") === "#interstitial")
-		{
+		if($(this).attr("data-target") === "#interstitial"){
 			$("#interstitial").find("#go").attr("href", $(this).attr("href"));
 		}	
 
-		if($(this).attr("data-type") === "terms-use")
-            {
+		if($(this).attr("data-type") === "terms-use"){
                 $(".js-terms").show();
                 $(".js-policy").hide();
 
@@ -187,9 +185,10 @@ function setInterstitialPopup() {
     		}
 	});
 
-        $("#interstitial #go").on("click",function(){
-            $('#interstitial').modal('hide');
-        });
+    $("#interstitial #go").on("click",function(){
+        console.log('CLICK ON COLOSE');
+        $('#interstitial').modal('hide');
+    });
 
 }
 
