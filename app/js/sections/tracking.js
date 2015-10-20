@@ -167,7 +167,7 @@ function trackShare(bodyClass, target)
         if(!wasRecipientEmail)
         {
             trackEnterText(sectionName, "recipient's email address");
-            wasRecipientName = true;
+            wasRecipientEmail = true;
         }
     });
 }
