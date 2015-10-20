@@ -94,7 +94,7 @@ function hashCalling(newPath){
 
     // if hash exists will scroll to new target
     if (hashCalled) {
-        //console.log("hashCalled ---->" + hashCalled);
+        console.log("hashCalled ---->" + hashCalled);
 
         var spot = $('#' + hashCalled).offset().top - (overflow || 60);
 
@@ -107,11 +107,11 @@ function hashCalling(newPath){
 // adding new event to all a to get hast anchors if any
 $('a').on('click tap', function(){
     // indicates the new target in the current page
-    var path = $(this).attr('href').hash || null;
-
-    if (path){
+    var linkPath = $(this).attr('href').split('#')[1] || null;
+    console.log('link goes to ' + linkPath);
+    if (linkPath){
         // scrolls to the new position 
-        hashCalling(path);
+        hashCalling(linkPath);
     }
     
 });
