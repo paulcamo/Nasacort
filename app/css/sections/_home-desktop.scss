@@ -114,9 +114,9 @@ body {
 
 
   #slide02 {
+    position: relative;
     height: 32em;
     z-index: 1000;
-    overflow-x: hidden;
 
     .use-only {
       position: absolute;
@@ -125,6 +125,10 @@ body {
       font-size: 0.29em;
       color: $color-white;
       z-index: 999;
+    }
+
+    .section__holder{
+      overflow: hidden;
     }
 
 

@@ -76,7 +76,8 @@ var firstSlide = $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7;
     tlSlide1
     .to('#bottle', 2,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%', ease: Sine.easeOut} , '-=2')
     .to('#cap', 2,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=2')
-    .to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
+    //.to('#slide02', 0,           {overflow: 'visible'}, '+=0')
+    //.to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
     .to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
     .to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
     .to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
@@ -132,9 +133,9 @@ var animations = {
     pos : {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 2, 'half' : $('#slide01').outerHeight() / 2},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2},
-        slide2 : { 'in' : $('#slide03').offset().top - $('#slide03').outerHeight() / 2, 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 2, 'half' : $('#slide03').outerHeight() / 2},
-        slide3 : { 'in' : $('#slide04').offset().top - $('#slide04').outerHeight() / 2, 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2},
-        slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2, 'half' : $('#slide05').outerHeight() / 2}
+        slide2 : { 'in' : $('#slide03').offset().top - $('#slide03').outerHeight() / 2.5, 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
+        slide3 : { 'in' : $('#slide04').offset().top - $('#slide04').outerHeight() / 2.5, 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
+        slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2.5, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 3, 'half' : $('#slide05').outerHeight() / 2}
     },
     button : {
         slide0 : $('#sec01'),
