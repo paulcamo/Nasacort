@@ -76,12 +76,12 @@ function desktopStickyHeader(y){
         if (y > sticky_height) {
             $('#header').animate({top: height2hide }, 300);
             //$('.first-container').animate({paddingTop: "0"}, 300);
-            $('.clucker-container').animate({marginTop: "0"}, 300);
+            //$('.clucker-container').animate({marginTop: "0"}, 300);
             headerCollapsed = 1;
         } else {
             $('#header').animate({top: "-9px"}, 300);
             //$('.first-container').animate({paddingTop: vtop}, 300);
-            $('.clucker-container').animate({marginTop: vtop}, 300);
+            //$('.clucker-container').animate({marginTop: vtop}, 300);
         }
 
 }
