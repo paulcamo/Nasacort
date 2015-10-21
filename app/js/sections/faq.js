@@ -190,10 +190,10 @@ function click_expand(item) {
             case "faq024":
                 ga('send', 'event', 'minimize', 'click_minimize', 'when to use ins min');
                 break;
-            case "faq024":
+            case "faq025":
                 ga('send', 'event', 'minimize', 'click_minimize', 'how to use oahs min');
             break;
-            case "faq024":
+            case "faq026":
                 ga('send', 'event', 'minimize', 'click_minimize', 'nasal decongest min');
             break;
 
