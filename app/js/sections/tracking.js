@@ -112,9 +112,10 @@ function trackShare(bodyClass, target)
             if(independentDataTracking !== "")
             {
                 ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
+                //ga('send', 'event', 'share', 'click_content', 'clucker: share profile button');
             }else
             {
-                ga('send', 'event', 'share', 'click_content', 'drug facts label share button'); 
+                ga('send', 'event', 'share', 'click_content', 'what\'s a clucker share button');
             }
         break;
         case "science-of-allergic-rhinitis-section":
@@ -408,6 +409,65 @@ function trackGlassHeadClose(character)
     }
     
     ga('send', 'event', 'interactive', 'click_interactive', symptom + ' interactive: exit');   
+}
+
+function trackGlassHeadHotSpot(character, hotSpot)
+{
+    switch(character)
+    {
+        case "maria":
+            if(hotSpot === "itchy")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'clucker interactive: itchy nose select');
+            }
+            if(hotSpot === "nasal")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'clucker interactive: inflammation select');
+            }
+            if(hotSpot === "congestion")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'clucker interactive: congestion select');
+            }
+        break;
+        
+        case "mark":
+         if(hotSpot === "nasal")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'dripper interactive: rhinorrhea');
+            }
+            if(hotSpot === "histamine")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'dripper interactive: histamine reaction');
+            }
+        break;
+        
+        case "kara":
+            if(hotSpot === "congestion")
+            {
+               ga('send', 'event', 'interactive', 'click_interactive', 'mouthbreather interactive: congestion select');
+            }
+            if(hotSpot === "inflamation")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'mouthbreather interactive: inflammation select');
+            }
+        break;
+        
+        case "liam":
+            if(hotSpot === "itchy")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'sniffler interactive: itchy nose select');
+            }
+            if(hotSpot === "nasal")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'sniffler interactive: inflammation select');
+            }
+            if(hotSpot === "congestion")
+            {
+                ga('send', 'event', 'interactive', 'click_interactive', 'sniffler interactive: congestion select');
+            }
+        break;
+
+    }
 }
 
 /************** Interactive Form Compare - Nasacort Difference - S&A **************/

@@ -75,27 +75,33 @@ function click_expand(item) {
             ga('send', 'event', 'expand', 'click_expand', 'pediatric dosing exp');
             break;
         case "faq017":
-            ga('send', 'event', 'expand', 'click_expand', 'blood pressure meds exp');
+            ga('send', 'event', 'expand', 'click_expand', 'children use exp');
             break;
         case "faq018":
-            ga('send', 'event', 'expand', 'click_expand', 'every day use exp');
+            ga('send', 'event', 'expand', 'click_expand', 'pediatric dosing exp');
             break;
         case "faq019":
-            ga('send', 'event', 'expand', 'click_expand', 'with other allergy meds exp');
+            ga('send', 'event', 'expand', 'click_expand', 'blood pressure meds exp');
             break;
         case "faq020":
-            ga('send', 'event', 'expand', 'click_expand', 'when to stop using exp');
+            ga('send', 'event', 'expand', 'click_expand', 'every day use exp');
             break;
         case "faq021":
-            ga('send', 'event', 'expand', 'click_expand', 'does patient have ar exp');
+            ga('send', 'event', 'expand', 'click_expand', 'with other allergy meds exp');
             break;
         case "faq022":
-            ga('send', 'event', 'expand', 'click_expand', 'when to use ins exp');
+           ga('send', 'event', 'expand', 'click_expand', 'when to stop using exp');
             break;
         case "faq023":
-            ga('send', 'event', 'expand', 'click_expand', 'how to use oahs exp');
+            ga('send', 'event', 'expand', 'click_expand', 'does patient have ar exp');
             break;
         case "faq024":
+            ga('send', 'event', 'expand', 'click_expand', 'when to use ins exp');
+            break;
+        case "faq025":
+            ga('send', 'event', 'expand', 'click_expand', 'how to use oahs exp');
+            break;
+        case "faq026":
             ga('send', 'event', 'expand', 'click_expand', 'nasal decongestants exp');
             break;
 
@@ -161,29 +167,35 @@ function click_expand(item) {
                 ga('send', 'event', 'minimize', 'click_minimize', 'pediatric dosing min');
                 break;
             case "faq017":
-                ga('send', 'event', 'minimized', 'click_minimize', 'blood pressure meds min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'children use min');
                 break;
             case "faq018":
-                ga('send', 'event', 'minimize', 'click_minimize', 'every day use min');
+                ga('send', 'event', 'expand', 'click_minimize', 'pediatric dosing min');
                 break;
             case "faq019":
-                ga('send', 'event', 'minimize', 'click_minimize', 'with other allergy meds min');
+                ga('send', 'event', 'minimized', 'click_minimize', 'blood pressure meds min');
                 break;
             case "faq020":
-                ga('send', 'event', 'minimize', 'click_minimize', 'when to stop using min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'every day use min');
                 break;
             case "faq021":
-                ga('send', 'event', 'minimize', 'click_minimize', 'does patient have ar min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'with other allergy meds min');
                 break;
             case "faq022":
-                ga('send', 'event', 'minimize', 'click_minimize', 'when to use ins min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'when to stop using min');
                 break;
             case "faq023":
-                ga('send', 'event', 'minimize', 'click_minimize', 'how to use oahs min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'does patient have ar min');
                 break;
             case "faq024":
-                ga('send', 'event', 'minimize', 'click_minimize', 'nasal decongest min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'when to use ins min');
                 break;
+            case "faq024":
+                ga('send', 'event', 'minimize', 'click_minimize', 'how to use oahs min');
+            break;
+            case "faq024":
+                ga('send', 'event', 'minimize', 'click_minimize', 'nasal decongest min');
+            break;
 
 
 

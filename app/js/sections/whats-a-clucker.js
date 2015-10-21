@@ -39,7 +39,7 @@ $(window).bind("resize", function(){
     }
 });
 
-var mariasHotSpots = [{x:"17.1%",y:"36.30%",id:"itchy"},{x:"40.78%",y:"10.98%",id:"nasal"},{x:"37.74%",y:"32.84%",id:"congestion"}];
+var mariasHotSpots = [{x:"17.1%",y:"36.30%",id:"itchy",dataTracking:""},{x:"40.78%",y:"10.98%",id:"nasal"},{x:"37.74%",y:"32.84%",id:"congestion"}];
 var marksHotSpots = [{x:"37.64%",y:"29.84%",id:"nasal"},{x:"25.49%",y:"47.30%",id:"histamine"}];
 var karasHotSpots = [{x:"27.94%",y:"28.30%",id:"congestion"},{x:"40.19%",y:"20%",id:"inflamation"}];
 var liamsHotSpots = [{x:"17.1%",y:"28.30%",id:"itchy"},{x:"40.78%",y:"10.98%",id:"nasal"},{x:"37.74%",y:"32.84%",id:"congestion"}];
@@ -135,6 +135,7 @@ function addHotSpots(character, positions)
             var id = $(this).attr("id");
             currentGlassHead = id;
             $("#glass-head #" + character).find("." + id).show();
+            trackGlassHeadHotSpot(character, id);
         });
     });
 }
