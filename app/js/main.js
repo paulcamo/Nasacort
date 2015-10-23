@@ -93,7 +93,7 @@ function hashCalling(newPath){
         overflow = getOverflowPerPage(newPath);
 
     // if hash exists will scroll to new target
-    if (hashCalled) {
+    if ($('#' + hashCalled).length > 0) {
 
         var spot = $('#' + hashCalled).offset().top - (overflow || 60);
 

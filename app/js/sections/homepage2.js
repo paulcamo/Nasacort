@@ -30,7 +30,6 @@ var lastScrollTop = 0;
 var currentAnimation = 'slide0';
 var prevAnimation = '';
 var page = $("html, body");
-var firstSlide = $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7;
 
 
 /* ANIMATIONS STARTS HERE */
@@ -133,8 +132,8 @@ var animations = {
     pos : {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 2, 'half' : $('#slide01').outerHeight() / 2},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2},
-        slide2 : { 'in' : $('#slide03').offset().top - $('#slide03').outerHeight() / 2.5, 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
-        slide3 : { 'in' : $('#slide04').offset().top - $('#slide04').outerHeight() / 2.5, 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 2 + $('#slide03').outerHeight() / 15), 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 2.5 + $('#slide04').outerHeight() / 15), 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
         slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2.5, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 3, 'half' : $('#slide05').outerHeight() / 2}
     },
     button : {
@@ -181,6 +180,7 @@ $(function(){
     $(window).bind("resize", function(){
         set_dotbox();
         set_variables();
+        updateAnimPos();
     });
 
     // PLAYS FIRST ANIMATION
@@ -218,6 +218,18 @@ $(function(){
     });
 
 });
+
+function updateAnimPos(){
+    animations = {
+        pos : {
+            slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 2, 'half' : $('#slide01').outerHeight() / 2},
+            slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2},
+            slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 2 + $('#slide03').outerHeight() / 15), 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
+            slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 2.5 + $('#slide04').outerHeight() / 15), 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
+            slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2.5, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 3, 'half' : $('#slide05').outerHeight() / 2}
+        }
+    };
+}
 
 //$( "div.demo" ).scrollTop( 300 );
 function playAnim(){
@@ -258,7 +270,7 @@ function playAnim(){
 }
 
 function revAnim(){
-    if($(this).scrollTop() < animations.pos.slide1.out && $(this).scrollTop() > animations.pos.slide0.in){
+    if($(this).scrollTop() < animations.pos.slide1.out && $(this).scrollTop() >= (animations.pos.slide0.in || 0)){
         animations.reverse('slide1');
         animations.getDot('slide0');
     }
@@ -317,7 +329,6 @@ function freeScroll(){
     setTimeout(function(){
         page.bind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(e){
             if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel" || e.type === "scroll"){
-                //console.log('stop this madness');
                 page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
                 page.stop().unbind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove'); // This identifies the scroll as a user action, stops the animation, then unbinds the event straight after (optional)
             }
@@ -329,7 +340,6 @@ function freeScroll(){
 function set_variables(){
 
     if ( isTablet) {
-        // console.log ("  isTablet  !!! ");
         slide5bg= '-68em';
         slide5tab= '-12.85em';
     } else {
@@ -337,9 +347,7 @@ function set_variables(){
         slide5tab= '-12.4em';
     }
 
-   // console.log ($(window).height());
     slide3buttonpad = 81 + 5 - ($("#slide03").height() - ($(window).height()-81));
-   // console.log ("padd " + slide3buttonpad);
 
 }
 
