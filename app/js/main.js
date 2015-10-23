@@ -91,16 +91,30 @@ function hashCalling(newPath){
     // if newPath exists will use that as the new target if don't will use the hash from path 
     var hashCalled = newPath || (window.location.hash.substring(1) || ""),
         overflow = getOverflowPerPage(newPath);
+    var spot;
 
-    // if hash exists will scroll to new target
-    if ($('#' + hashCalled).length > 0) {
+    if(newPath){
+        if ($('#' + hashCalled).length > 0) {
+            spot = $('#' + hashCalled).offset().top - (overflow || 60);
+            getPlace(spot);
+        }
+    } else {
+        $(window).load(function() {
+            if ($('#' + hashCalled).length > 0) {
+                spot = $('#' + hashCalled).offset().top - (overflow || 60);
+                getPlace(spot);
+            }
+        });
+    }
+    
+}
 
-        var spot = $('#' + hashCalled).offset().top - (overflow || 60);
-
+function getPlace(spot){
+    $(function(){
         $('html, body').stop(true, true).delay(100).animate({
             scrollTop: spot
         }, 100);
-    }
+    });
 }
 
 // adding new event to all a to get hast anchors if any
@@ -121,6 +135,8 @@ function getOverflowPerPage(current){
         return 140;
     } else if (!current && window.location.href.search('comparing-opts') >= 0){
         return 140;
+    } else {
+        return false;
     }
 }
 
