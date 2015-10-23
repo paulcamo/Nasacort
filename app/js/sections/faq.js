@@ -170,7 +170,7 @@ function click_expand(item) {
                 ga('send', 'event', 'minimize', 'click_minimize', 'children use min');
                 break;
             case "faq018":
-                ga('send', 'event', 'expand', 'click_minimize', 'pediatric dosing min');
+                ga('send', 'event', 'minimize', 'click_minimize', 'pediatric dosing min');
                 break;
             case "faq019":
                 ga('send', 'event', 'minimized', 'click_minimize', 'blood pressure meds min');

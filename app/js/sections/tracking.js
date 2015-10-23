@@ -111,8 +111,14 @@ function trackShare(bodyClass, target)
         case "whats-a-clucker-section":
             if(independentDataTracking !== "")
             {
-                ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
-                //ga('send', 'event', 'share', 'click_content', 'clucker: share profile button');
+                if(independentDataTracking === "clucker" || independentDataTracking === "dripper")
+                {
+                    ga('send', 'event', 'share', 'click_content', independentDataTracking + ': share profile button'); 
+                }else
+                {
+                    ga('send', 'event', 'button link', 'click_content', independentDataTracking + ': share profile button'); 
+                  //ga('send', 'event', 'share', 'click_content', 'clucker: share profile button');
+                }
             }else
             {
                 ga('send', 'event', 'share', 'click_content', 'what\'s a clucker share button');
@@ -494,7 +500,7 @@ function trackCurrentSlide(id)
             slideTag = "exposure";
         break;
         case "slide-2":
-            slideTag = "early phase";
+            slideTag = "early phase response";
         break;
         case "slide-3":
             slideTag = "inflammation";
@@ -521,7 +527,7 @@ function trackForwardSlide(id)
         break;
         case "slide-2":
             prev = "exposure";
-            slideTag = "early phase response";
+            slideTag = "early phase";
         break;
         case "slide-3":
             prev = "early phase response";
@@ -554,7 +560,7 @@ function trackBackSlide(id)
         break;
         case "slide-2":
             next = "inflammation"; 
-            slideTag = "early phase response";
+            slideTag = "early phase";
         break;
         case "slide-3":
             next = "late phase response"; 
