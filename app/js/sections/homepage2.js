@@ -47,7 +47,7 @@ var page = $("html, body");
     var tlPollen = new TimelineMax({paused:true});
 
     tlSlider
-    .to("#carousel1", 8,    {scale:1.10, ease: Power0.easeNone} , '+=1')
+    .to("#carousel1", 8,    {scale:1, ease: Power0.easeNone} , '+=1')
     .to("#carousel2", 1.5,  {opacity:1, ease: Power2.easeOut}   , '-=2')
     .to("#lady01", 1.5,     {opacity:0, ease: Power2.easeOut}   , '-=2')
     .to("#lady02", 1.5,     {opacity:1, ease: Power4.easeOut}   , '-=2')
