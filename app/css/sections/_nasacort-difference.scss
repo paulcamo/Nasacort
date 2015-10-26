@@ -465,6 +465,7 @@
         &.head{
           font-size: 22px;
           margin-bottom: 0;
+          font-weight:bold;
           @include breakpoint('mobile'){
             font-size: 14px;
           }
