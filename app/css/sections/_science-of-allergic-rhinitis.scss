@@ -391,7 +391,7 @@
       float: left;
       margin-right: 42px; 
       @include breakpoint('desktop'){
-        width: 46%;
+        width: 47%;
         float: left;
         margin-right: 0;
         padding-right: 23px;
@@ -973,4 +973,17 @@
 
 .ie9 .science-of-allergic-rhinitis-section .aditional-information .copy{
     width:46%;
+}
+
+/*IE10 and IE11*/
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */  
+   .science-of-allergic-rhinitis-section .aditional-information .copy{
+        width:47%;
+    }
+    
+    .science-of-allergic-rhinitis-section .aditional-information .footnote{
+        margin-top:662px;
+    }
 }
