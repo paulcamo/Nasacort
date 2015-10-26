@@ -106,13 +106,15 @@ $grey-button:#f8f8f8;
     position: relative;
     top: -10px;
     background-size:100% 100%;
+    margin-top:110px ;
     @include breakpoint('desktop'){
-        margin-top: -50px;
+        // margin-top: -50px;
     }
     @include breakpoint('tablet'){
-        margin-top: -50px;
+        // margin-top: -50px;
     }
     @include breakpoint('mobile'){
+        margin-top: 150px ;
         top: 0;
         min-height: 233px;
     }
