@@ -180,7 +180,7 @@ $space-mobile-copy: 4.6875%;
     }
   }
   .footnote{
-      margin-top: -92px;
+      margin-top: -94px;
   }
 }
 
@@ -330,7 +330,7 @@ $space-mobile-copy: 4.6875%;
   .chart-1{
         padding-bottom:34px;
         .footnote{
-            margin-top:-75px;
+            margin-top:-76px;
         }
         .graphic-superscript{
             max-width: 1003px;
@@ -429,7 +429,7 @@ $space-mobile-copy: 4.6875%;
             }
         }
         .footnote{
-             margin-top: -72px;
+             margin-top: -76px;
         }
         /*.animation{
             margin-top:-154px;
@@ -1342,7 +1342,7 @@ $space-mobile-copy: 4.6875%;
     }
 }
 
-
-
-
+.ie9 .charts-dosingInner .chart-2 .footnote{
+    margin-top:300px;
+}
 
