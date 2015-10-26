@@ -785,11 +785,13 @@
       .footnote{
           margin-top:-80px;
       }
+
       @include breakpoint('desktop'){
         width: 45%;
         padding-left:0;
         padding-right:0;
       }
+      
       @include breakpoint('tablet'){
         width: 100%;
         margin-right:0;
@@ -967,4 +969,8 @@
   }
 
 
+}
+
+.ie9 .science-of-allergic-rhinitis-section .aditional-information .copy{
+    width:46%;
 }
