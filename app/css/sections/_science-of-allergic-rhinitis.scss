@@ -46,7 +46,7 @@
     padding-right:213px;
     overflow: hidden;
     .footnote{
-        margin-top:-88px !important;
+        margin-top:-85px !important;
         @include breakpoint('mobile'){
           margin-bottom: 0!important;
           margin-top: 0!important;
@@ -754,13 +754,16 @@
       }
     }
     .footnote{
-        margin-top:515px;
+         margin-top: 531px;
         
-        @include breakpoint('desktop'){
-            margin-top:680px;
+        /*@include breakpoint('desktop'){
+            margin-top: 531px;
+        }*/
+       @media screen and (max-width: 1399px) {
+            margin-top: 656px;
         }
         @media screen and (max-width: 1210px) {
-            margin-top:750px;
+            margin-top: 662px;
         }
         @include breakpoint('tablet'){
             margin-top:-350px;
