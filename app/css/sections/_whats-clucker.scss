@@ -1167,8 +1167,8 @@ $grey-button:#f8f8f8;
         height: 40px;
         display: inline-block;
         position:absolute;
-        top: 114px;
-        right: 17px;
+        bottom: 7px;
+        right: 7px;
         cursor: pointer;
         @include breakpoint('mobile'){
             top: 57px;
@@ -1621,7 +1621,6 @@ $grey-button:#f8f8f8;
     
     .kara-graph{
         background-image:url("../img/desktop/clucker/kara-graph.png");
-        width:400px;
         height:160px;
         display:block;
         
