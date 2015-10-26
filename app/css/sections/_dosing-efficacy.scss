@@ -1345,4 +1345,9 @@ $space-mobile-copy: 4.6875%;
 .ie9 .charts-dosingInner .chart-2 .footnote{
     margin-top:300px;
 }
-
+/*IE10 and IE11*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+  .charts-dosingInner .chart-2 .footnote{
+    margin-top:300px;
+  }
+}
