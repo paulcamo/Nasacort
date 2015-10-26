@@ -317,7 +317,7 @@
   #brand-compare {
     height: 66px;
     width: 36.7%;
-    right: -98px;
+    right: 0; //-98px;
     position: absolute;
     top: 1px;
     padding: 0px;
@@ -638,6 +638,7 @@
           position:relative;
           height:auto;
           max-height:44px;
+          max-width: 120px;
         }
       }
       @include breakpoint('mobile'){
@@ -748,7 +749,7 @@
 
   .chart-table-container {
     position: relative;
-    width: 690px;
+    width: 786px; // 690px;
     margin: auto;
     @include breakpoint('tablet'){
       width: 100%;
@@ -788,7 +789,7 @@
     .arrow {
       display: none;
       position: absolute;
-      right: -95px;
+      right: 0; //-95px;
       border: medium none;
       z-index: 11;
       top: 68px;
