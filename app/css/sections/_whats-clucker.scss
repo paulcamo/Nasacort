@@ -734,8 +734,11 @@ $grey-button:#f8f8f8;
         background: none;
         background-color: #ffffff;
         z-index: 100;
-        top: -75%;
+        top: -94%;
         left: 26%;
+        @include breakpoint('tablet'){
+            top: -65%;
+        }
         li{
             font-size: 14px;
             color:$color-dark-grey;
@@ -1002,7 +1005,6 @@ $grey-button:#f8f8f8;
         display: block;
         height: auto;
         padding-bottom:11px;
-        overflow: hidden;
         @include breakpoint('mobile'){
            padding-bottom:8px; 
         }
