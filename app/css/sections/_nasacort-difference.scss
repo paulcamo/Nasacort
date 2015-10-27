@@ -236,9 +236,10 @@
     background: url("../img/desktop/nasacort-difference/compare-otc.png") no-repeat top center;
     background-size: contain;
     margin: auto;
-    width: 786px; //100%;
+    width: 100%;
+    max-width: 786px;
     padding-bottom:27%;
-    margin-bottom:12px; 
+    margin-bottom:12px;
     @include breakpoint('mobile'){
       min-height: 75px;
       height: auto;
@@ -761,13 +762,14 @@
       width: 100%;
       padding-left: 40px;
       padding-right: 40px;
+      max-width: 769px;
     }
     @include breakpoint('mobile'){
       width: 100%;
       padding-left: 20px;
       padding-right: 20px;
     }
-    
+
     .vrs {
       position: absolute;
       //right: 17.4%;
