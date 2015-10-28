@@ -177,8 +177,6 @@ $(function(){
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
 
-    console.log($(window).innerWidth());
-
     $(window).bind("resize", function(){
         set_dotbox();
         set_variables();
