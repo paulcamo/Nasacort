@@ -198,6 +198,8 @@ h4{
             height: 50px;
             //min-width: 184px;
             width:80%;
+            @include border-corner-radius(top, left, 3px);
+            @include border-corner-radius(bottom, left, 3px);
         }
         @media screen and (max-width: 335px) {
           min-width: 184px;     
