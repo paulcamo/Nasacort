@@ -73,7 +73,7 @@ var page = $("html, body");
 /* SLIDE 1 */
 
     tlSlide1
-    .to('#bottle', 2,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%', ease: Sine.easeOut} , '-=2')
+    .to('#bottle', 2,                 {marginTop: '26.4em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut, force3d:true } , '-=2')
     .to('#cap', 2,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=2')
     //.to('#slide02', 0,           {overflow: 'visible'}, '+=0')
     //.to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
