@@ -73,7 +73,7 @@ var page = $("html, body");
 /* SLIDE 1 */
 
     tlSlide1
-    .to('#bottle', 2,                 {marginTop: '26.6em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut, force3d:true } , '-=2')
+    .to('#bottle', 2,                 {marginTop: '29.7em',scale: '2.5',left: '28.1%', ease: Sine.easeOut} , '-=2')
     .to('#cap', 2,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=2')
     //.to('#slide02', 0,           {overflow: 'visible'}, '+=0')
     //.to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
@@ -130,11 +130,11 @@ var animations = {
         slide4 : tlSlide4
     },
     pos : {
-        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 2, 'half' : $('#slide01').outerHeight() / 2},
-        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2},
-        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 2 + $('#slide03').outerHeight() / 15), 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
-        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 2.5 + $('#slide04').outerHeight() / 15), 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
-        slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2.5, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 3, 'half' : $('#slide05').outerHeight() / 2}
+        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
+        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
+        slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5, 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 2, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 3)},
+        slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 5, 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 3)},
+        slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6, 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 2, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / 4}
     },
     button : {
         slide0 : $('#sec01'),
@@ -222,18 +222,18 @@ $(function(){
 function updateAnimPos(){
     animations = {
         pos : {
-            slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 2, 'half' : $('#slide01').outerHeight() / 2},
-            slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2.7, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2},
-            slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 2 + $('#slide03').outerHeight() / 15), 'out' : $('#slide03').offset().top - $('#slide03').outerHeight() / 3, 'half' : $('#slide03').outerHeight() / 2},
-            slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 2.5 + $('#slide04').outerHeight() / 15), 'out' : $('#slide04').offset().top - $('#slide04').outerHeight() / 3, 'half' : $('#slide04').outerHeight() / 2},
-            slide4 : { 'in' : $('#slide05').offset().top - $('#slide05').outerHeight() / 2.5, 'out' : $('#slide05').offset().top - $('#slide05').outerHeight() / 3, 'half' : $('#slide05').outerHeight() / 2}
+            slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
+            slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8 , 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
+            slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5, 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 2, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / 3)},
+            slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 5, 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / 3)},
+            slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6, 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 2, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / 4}
         }
     };
 }
 
 //$( "div.demo" ).scrollTop( 300 );
 function playAnim(){
-    if($(this).scrollTop() >= animations.pos.slide0.in && $(this).scrollTop() < animations.pos.slide0.out){
+    if($(this).scrollTop() >= 0 && $(this).scrollTop() < animations.pos.slide0.out){
         animations.getDot('slide0');
         animations.getDot('slide0');
     }
@@ -243,11 +243,11 @@ function playAnim(){
         animations.play('slide1');
         animations.getDot('slide1');
 
-        if ($(this).scrollTop() >= animations.pos.slide1.in && $(this).scrollTop() < animations.pos.slide1.in + 30){
+        /*if ($(this).scrollTop() >= animations.pos.slide1.in && $(this).scrollTop() < animations.pos.slide1.in + 30){
             currentAnimation = 'slide1';
             
             scrollToSlide();
-        }
+        }*/
     }
 
     if($(this).scrollTop() >= animations.pos.slide2.in){
@@ -270,7 +270,7 @@ function playAnim(){
 }
 
 function revAnim(){
-    if($(this).scrollTop() < animations.pos.slide1.out && $(this).scrollTop() >= (animations.pos.slide0.in || 0)){
+    if($(this).scrollTop() >= 0 && $(this).scrollTop() < animations.pos.slide0.out){
         animations.reverse('slide1');
         animations.getDot('slide0');
     }
@@ -302,19 +302,9 @@ function scrollToSlide(){
 function getAnimationPlace(slide){
     currentAnimation = slide;
 
-    if(slide === 'slide1'){ 
-        page.stop(true, true).animate({
-            scrollTop: animations.pos[slide].in + (animations.pos[slide].half + animations.pos[slide].half / 3)
-        }, 500);
-    } else if(slide === 'slide0') {
-        page.stop(true, true).animate({
-            scrollTop: 0
-        }, 500);
-    } else {
-        page.stop(true, true).animate({
-            scrollTop: animations.pos[slide].in + (animations.pos[slide].half - animations.pos[slide].half / 3)
-        }, 500);
-    }
+    page.stop(true, true).animate({
+        scrollTop: animations.pos[slide].spot
+    }, 500);
     animations.play(slide);
 }
 
