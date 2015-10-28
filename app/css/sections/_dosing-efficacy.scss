@@ -65,6 +65,9 @@ $space-mobile-copy: 4.6875%;
   .last-p{
       margin-top:26px;
       margin-bottom: 15px;
+      @media screen and (max-width: 1210px) {
+          margin-bottom:110px;
+      }
   }
   h2{
       margin-top: 42px;
@@ -329,8 +332,14 @@ $space-mobile-copy: 4.6875%;
   
   .chart-1{
         padding-bottom:34px;
+        @media screen and (max-width: 1210px) {
+          padding-bottom:66px;
+        }
         .footnote{
             margin-top:-76px;
+            @media screen and (max-width: 1210px) {
+                margin-top:15px;
+            }
         }
         .graphic-superscript{
             max-width: 1003px;
@@ -394,6 +403,9 @@ $space-mobile-copy: 4.6875%;
         }
         .footnote{
             margin-top:-88px;
+             @media screen and (max-width: 1210px) {
+                margin-top:0;
+            }
         }
         img{
             margin-left:152px;
@@ -413,6 +425,7 @@ $space-mobile-copy: 4.6875%;
         }
     }
     .chart-3{
+        
         h3{
             margin-bottom: 23px;
             br{
@@ -422,6 +435,16 @@ $space-mobile-copy: 4.6875%;
                 }
             }
         }
+        
+        .notes{
+            @media screen and (max-width: 1210px) {
+                  margin-bottom:60px !important;
+              }
+              @include breakpoint('mobile') {
+                    margin-bottom:4px !important;
+                }
+        }
+        
         .second-content-dosing{
             margin-bottom: 24px;
             p{
@@ -430,6 +453,9 @@ $space-mobile-copy: 4.6875%;
         }
         .footnote{
              margin-top: -76px;
+              @media screen and (max-width: 1210px) {
+                  margin-top: -48px;
+              }
         }
         /*.animation{
             margin-top:-154px;
@@ -829,7 +855,7 @@ $space-mobile-copy: 4.6875%;
          height: auto;
          max-width: 601px;
          min-width:300px;
-         padding-bottom: 100%;
+         padding-bottom: 81%;
          width: 94%;
          background-size:contain;
          margin-bottom:16px;
