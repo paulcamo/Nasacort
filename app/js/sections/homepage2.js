@@ -101,7 +101,6 @@ var page = $("html, body");
     .to('#no-scent', 0.8,             {height: '8.8em'} , '+=0');
     
     tlSlide1
-    
     .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '0');
 
 
