@@ -1,4 +1,4 @@
-var desktop_mininum_width = 769;
+var desktop_mininum_width = 768;
 var desktop_maximum_width = 1400;
 var headerCollapsed=0;
 var currentPage = "";
