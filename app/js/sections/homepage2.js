@@ -40,11 +40,13 @@ var page = $("html, body");
     var tl_mobile = new TimelineMax({repeat:-1});
 
     var tlSlide1 = new TimelineMax({paused:true});
+    var tlSlide1b = new TimelineMax({paused:true});
     var tlSlide2 = new TimelineMax({paused:true});
     var tlSlide3 = new TimelineMax({paused:true});
     var tlSlide4 = new TimelineMax({paused:true});
 
     var tlPollen = new TimelineMax({paused:true});
+    var controller = new ScrollMagic.Controller();
 
     tlSlider
     .to("#carousel1", 8,    {scale:1, ease: Power0.easeNone} , '+=1')
@@ -71,16 +73,36 @@ var page = $("html, body");
 
 /* SLIDES STARTS */
 /* SLIDE 1 */
+    // build tween
+    //var tween = TweenMax.staggerFromTo("#bottle", 2, {left: 700}, {left: 0, ease: Back.easeOut}, 0.15);
+    var tween1 = TweenMax.to('#bottle', 1, {marginTop: '26.4em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut});
+    var tween2 = TweenMax.to('#cap', 1, {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut});
+                //.to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
+                //.to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
+                //.to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
+                //.fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
+    // build scene
+    var scene = new ScrollMagic.Scene({triggerElement: "footer", duration: 1000, offset:80})
+                    .setTween([tween1, tween2])
+                    //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
+                    .addTo(controller);
 
-    tlSlide1
-    .to('#bottle', 2,                 {marginTop: '26.4em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut, force3d:true } , '-=2')
-    .to('#cap', 2,                    {marginTop: '27.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut} , '-=2')
-    //.to('#slide02', 0,           {overflow: 'visible'}, '+=0')
-    //.to('#slide02', 0,           {overflow: 'hidden'}, '+=0')
-    .to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
+    scene.on("end", function (event) {
+        tlSlide1b.timeScale(1).play();
+    });
+
+    scene.on("progress", function (event) {
+        tlSlide1b.timeScale(3).reverse();
+    });
+
+    tlSlide1b
+    .to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut}, '0')
     .to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-    .to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
-    .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
+    .to('#no-scent', 0.8,             {height: '8.8em'} , '+=0');
+    
+    tlSlide1
+    
+    .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '0');
 
 
 /* SLIDE 2 */
