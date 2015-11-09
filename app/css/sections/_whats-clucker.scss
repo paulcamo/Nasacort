@@ -29,7 +29,11 @@ $grey-button:#f8f8f8;
     }
 }
 
-
+#whats-a-clucker-section{
+    .wac{
+        margin-top: 112px;
+    }
+}
 
 .content-whats-a-clucker{
     max-width: 1000px;
@@ -95,29 +99,28 @@ $grey-button:#f8f8f8;
 .hero-whats-a-clucker{
     overflow: hidden;
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
-    min-height: 555px;
+    height: 674px;
+    @include breakpoint('desktop'){
+        padding-top: 138px;
+        height: 700px;
+    }
     @media screen and (max-width: 1210px) {
-        min-height: 527px;
+        height: 671px;
     }
     @media screen and (max-width: 1025px) {
-        min-height: 490px;
-    }
-    width: 100%;
-    position: relative;
-    top: -10px;
-    background-size:100% 100%;
-    margin-top:110px ;
-    @include breakpoint('desktop'){
-        // margin-top: -50px;
-    }
-    @include breakpoint('tablet'){
-        // margin-top: -50px;
+        height: 605px;
     }
     @include breakpoint('mobile'){
         margin-top: 150px ;
         top: 0;
         min-height: 233px;
+        height: 233px;
     }
+    width: 100%;
+    position: relative;
+    padding-top: 112px;
+    background-size:100% 100%;
+//    margin-top:110px ;
 
     .clear{
         clear: both;
@@ -128,7 +131,7 @@ $grey-button:#f8f8f8;
         padding-left: 213px;
         @include breakpoint('desktop'){
             max-width: 920px!important;
-            padding-left:0;
+            padding-left:56px;
             padding-right:0;
         }
         @include breakpoint('tablet'){
@@ -140,9 +143,11 @@ $grey-button:#f8f8f8;
             margin-left: 7%;
             max-width: 100%!important;
             padding-left:0;
+            position: absolute;
+            top: 0;
         }
         h1{
-            padding-top: 60px;
+            padding-top: 66px;
             @include breakpoint('mobile'){
                 font-size: 19px;
                 padding-top: 62px;
