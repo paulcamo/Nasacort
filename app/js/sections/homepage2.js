@@ -96,9 +96,9 @@ var page = $("html, body");
     });
 
     tlSlide1b
-    .to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut}, '0')
-    .to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-    .to('#no-scent', 0.8,             {height: '8.8em'} , '+=0');
+    //.to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut}, '0')
+    .to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '0')
+    .to('#no-scent', 0.8,             {height: '8.8em'} , '0');
     
     tlSlide1
     .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '0');
