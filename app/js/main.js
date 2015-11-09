@@ -339,7 +339,7 @@ function validateFootnote()
             $(this).css("margin-left", "-" + negativeMargin + "px");
             
             if(isMobile){
-                //MNWR-113 See issue this ffotnotes hardcoded
+                //MNWR-113 See issue these footnotes hardcoded
                 //$('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
                 $('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
                 $('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
