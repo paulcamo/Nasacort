@@ -285,7 +285,7 @@
     }
     h3{
         @include breakpoint('mobile'){
-            width:90%;
+            width:100%;
         }
         .grey{
               @include breakpoint('mobile'){
