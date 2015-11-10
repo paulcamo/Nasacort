@@ -433,3 +433,7 @@ h4{
     body.modal-open { position: fixed; }
 }
 
+body.modal-open { overflow:inherit; padding-right:inherit !important; }
+
+
+
