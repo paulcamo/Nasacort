@@ -128,16 +128,16 @@ $grey-button:#f8f8f8;
     div.tittle{ 
         max-width: 1400px;
         margin: 0 auto;
-        padding-left: 213px;
+        //padding-left: 213px;
         @include breakpoint('desktop'){
-            max-width: 920px!important;
-            padding-left:56px;
-            padding-right:0;
+            //max-width: 954px!important;
+            //padding-left:0;
+            //padding-right:0;
         }
         @include breakpoint('tablet'){
-            max-width: 769px!important;
-            padding-left:40px;
-            padding-right:40px;
+            //max-width: 810px!important;
+            //padding-left:40px;
+            //padding-right:40px;
         }
         @include breakpoint('mobile'){
             margin-left: 7%;
@@ -148,14 +148,31 @@ $grey-button:#f8f8f8;
         }
         h1{
             padding-top: 66px;
+            margin-left: #{fluid-percentage($site-max-width, 213)};
+            @include breakpoint('tablet'){
+                margin-left: 80px;
+            }
+            @media screen and (max-width: 1063px){
+                margin-left: 80px;
+                width: 70%;
+            }
             @include breakpoint('mobile'){
-                font-size: 19px;
+                font-size: 17px;
                 padding-top: 62px;
+                /* padding-top: 21px; */
+                margin-left: 25px;
             }
         }
         .underlined {
             background-color: #a4b5cb;
             margin-top: 18px;
+            margin-left: #{fluid-percentage($site-max-width, 213)};
+            @include breakpoint('tablet'){
+                margin-left: 80px;
+            }
+            @media screen and (max-width: 1063px){
+                margin-left: 80px;
+            }
             @include breakpoint('mobile'){
                 display: none
             }
