@@ -1,7 +1,7 @@
 .science-of-allergic-rhinitis-section{
   //Banner Section
   .hero-banner {
-    background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.png") no-repeat top center;
+    background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
     @include breakpoint('mobile') {
         background:url("../img/mobile/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
     }

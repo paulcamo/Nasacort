@@ -165,7 +165,7 @@
          height: 82px;
          margin-top: -14px;
          @include breakpoint("mobile") {
-          background: $color-header-background url("../img/mobile/header/header-shine-small.png") no-repeat top center;
+          background: $color-header-background url("../img/mobile/header/header-shine-small.jpg") no-repeat top center;
          }
       }
       
@@ -420,7 +420,7 @@
       }
       .shine{
           height:111px;
-          background:url("../img/mobile/header/header-shine.png") no-repeat;
+          background:url("../img/mobile/header/header-shine.jpg") no-repeat;
           background-size:100%;
       }
   } 
@@ -518,12 +518,12 @@
           .shine{
               height:61px;
               width:100%;
-              background:url("../img/mobile/header/header-shine.png") no-repeat;
+              background:url("../img/mobile/header/header-shine.jpg") no-repeat;
               background-position:100%;
               background-size:100% contain; 
               margin-top:28px;
               @media screen and (max-width: 640px) {
-                background:url("../img/mobile/header/header-shine-small.png") no-repeat;
+                background:url("../img/mobile/header/header-shine-small.jpg") no-repeat;
                 background-size:cover;
             }
           }
