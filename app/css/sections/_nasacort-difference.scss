@@ -206,6 +206,11 @@
       }
     }
     .comparin-inner{
+        .grey{
+              @include breakpoint('mobile'){
+                color:#6e6e6e;
+            }
+        }    
       p{
         margin-bottom:26px; 
         @include breakpoint('mobile'){
