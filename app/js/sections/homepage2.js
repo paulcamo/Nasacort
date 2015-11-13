@@ -201,6 +201,13 @@ $(function(){
         set_dotbox();
         set_variables();
         updateAnimPos();
+        
+        clearTimeout($.data(this, 'resizeTimer'));
+        $.data(this, 'resizeTimer', setTimeout(function() {
+            //do something
+            //alert("Haven't resized in 200ms!");
+            validateFootnote();
+        }, 500));
     });
 
     // PLAYS FIRST ANIMATION
@@ -410,4 +417,84 @@ function setInterstitialPopup() {
         $('#interstitial').modal('hide');
     });
 
+}
+
+/******************* Footnote and References Settings and Events *******************/
+
+$('.footnote').on('click', function(e) {
+    if($(this).attr("state") != "open"){
+        var parentHeight = $(this).data("parent");
+        var hh = $(parentHeight).outerHeight();
+        var buttonHeight = $(this).height();
+        var currentMarginTop = $(this).css("margin-top");
+        $(this).attr("state", "open");
+        var animation = $(this).find(".animation");
+        if(isMobile)
+        {
+            $(parentHeight).css("height",hh);
+            $(this).css("width","100%");
+            animation.css("width","100%");
+        }else
+        {
+            animation.css("width","492px");
+            $(this).attr("currentMarginTop", currentMarginTop);
+        }
+        animation.show();
+        //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        expandTop = animation.outerHeight() - buttonHeight;
+        animation.css("margin-top", -expandTop);
+
+        e.preventDefault();
+    }
+    trackFootnoteOpen($('.footnote').index($(this)), $("body").attr("class"));
+});
+
+$('.footnote .close-btn').on('click', function(e) {
+    e.stopPropagation();
+    var parentHeight = $(this).parent().parent().data("parent");
+    $(this).parent().hide();
+    $(this).parent().parent().attr("state", "closed");
+    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop"));
+    if(isMobile)
+    {
+        $(this).parent().parent().css("width","13.75%");
+        $(parentHeight).css("height","auto");
+        $(this).parent().parent().css("margin-top", "");
+    }else
+    {
+        $(this).parent().parent().css("width","width: 11.5%");
+    }
+    e.preventDefault();
+    trackFootnoteClose($('.footnote .close-btn').index($(this)), $("body").attr("class"));
+});
+
+function validateFootnote()
+{
+    $(".animation").hide();
+    $('.footnote').attr("state", "closed");
+    var parentHeight = $('.footnote').data("parent");
+    $(parentHeight).css("height","auto");
+    $('.footnote').css("margin-top", $('.footnote').attr("currentMarginTop"));
+    if(isMobile)
+    {
+        $('.footnote').css("margin-top", "");
+        $(".footnote").each(function(index){
+            var parentHeight = $(this).data("parent");
+            var negativeMargin = $("" + parentHeight).offset().left;
+            $(this).css("margin-left", "-" + negativeMargin + "px");
+            if(parseInt(negativeMargin) === 0)
+            {
+               negativeMargin = $(this).offset().left; 
+            }
+            
+            //console.log("Footnote " + index + " position " + negativeMargin);
+            $(this).css("margin-left", "-" + negativeMargin + "px");
+        });
+    }else{
+        $(".animation").css("position", "relative");
+        $(".footnote").each(function(index){
+            $(this).css("margin-left", "0");
+        });
+    }
+    
 }

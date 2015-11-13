@@ -9,10 +9,15 @@ $(document).ready(function() {
 
 function trackFootnoteOpen(index, bodyClass)
 {
-    //console.log("Opens " + index + " Page " + bodyClass);
+    console.log("Opens " + index + " Page " + bodyClass);
     var sectionName = "section ";
     
     if(index === 1 && bodyClass === "science-of-allergic-rhinitis-section")
+    {
+        index ++;
+    }
+    
+    if(index >= 1 && bodyClass === "dosing-and-efficacy-section")
     {
         index ++;
     }
@@ -43,6 +48,11 @@ function trackFootnoteClose(index, bodyClass)
     var sectionName = "section ";
     
     if(index === 1 && bodyClass === "science-of-allergic-rhinitis-section")
+    {
+        index ++;
+    }
+    
+    if(index >= 1 && bodyClass === "dosing-and-efficacy-section")
     {
         index ++;
     }
