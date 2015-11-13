@@ -153,9 +153,9 @@ var animations = {
     pos : {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-        slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5, 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5.5, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top },
-        slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 5, 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 5.5, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top },
-        slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6, 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6.5, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / ($(window).innerWidth() > 1350 ? 4.5 : 11)}
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     },
     button : {
         slide0 : $('#sec01'),
@@ -263,9 +263,9 @@ function updateAnimPos(){
     animations.pos = {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.4), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
-        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.4), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
-        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.4), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     };
 }
 
