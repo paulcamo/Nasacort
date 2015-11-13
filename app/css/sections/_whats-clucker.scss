@@ -887,7 +887,6 @@ $grey-button:#f8f8f8;
     }
     strong{
         font-weight: bold;
-        font-family: $font-proxima-nova-bold;
     }
     p{
         margin-bottom: 18px;
@@ -1215,7 +1214,7 @@ $grey-button:#f8f8f8;
             text-align: left;
             margin-top: 10px;
             padding-left:20px;
-          font-size: 13px;
+          font-size: 10px;
         }
     }
     .wac-question{
@@ -1258,7 +1257,7 @@ $grey-button:#f8f8f8;
     padding-right: 20px;
    font-size: 15px;
     @include breakpoint('mobile'){
-      font-size: 13px;
+      font-size: 10px;
         text-align: left;
         margin-top: 10px;
         padding-left:20px;
