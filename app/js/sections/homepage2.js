@@ -82,7 +82,7 @@ var page = $("html, body");
                 //.to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
                 //.fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
     // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "footer", duration: 1000, offset:80})
+    var scene = new ScrollMagic.Scene({triggerElement: "footer", duration: 800, offset:150})
                     .setTween([tween1, tween2])
                     //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
                     .addTo(controller);
@@ -153,9 +153,9 @@ var animations = {
     pos : {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-        slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + ($('#slide03').outerHeight() / 5), 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5.5, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 4))},
-        slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + ($('#slide04').outerHeight() / 4), 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 6.2))},
-        slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + ($('#slide05').outerHeight() / 6), 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6.5, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / ($(window).innerWidth() >= 1410 ? 4.5 : 11)}
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     },
     button : {
         slide0 : $('#sec01'),
@@ -192,10 +192,13 @@ var animations = {
 
 // INIT THE NEEDED FUNCTIONS
 $(function(){
+
     $('body').flowtype( { minimum : 500,  maximum : 1800  });
     set_dotbox();
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
+
+    updateAnimPos();
 
     $(window).bind("resize", function(){
         set_dotbox();
@@ -246,15 +249,29 @@ $(function(){
 
 });
 
+function getSize(){
+    if ($(window).innerWidth() <= 1024 && $(window).innerWidth() > 900){
+        return 0.15;
+    } 
+
+    if ($(window).innerWidth() <= 900){
+        return 0.2;
+    } 
+
+    if ($(window).innerWidth() >= 1400){
+        return 0.0;
+    } else {
+        return 0.1;
+    }
+}
+
 function updateAnimPos(){
-    animations = {
-        pos : {
-            slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
-            slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-            slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + ($('#slide03').outerHeight() / 5), 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5.5, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 4))},
-            slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + ($('#slide04').outerHeight() / 4), 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 6.2))},
-            slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + ($('#slide05').outerHeight() / 6), 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6.5, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / ($(window).innerWidth() >= 1410 ? 4.5 : 11)}
-        }
+    animations.pos = {
+        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
+        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     };
 }
 
