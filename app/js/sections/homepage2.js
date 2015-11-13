@@ -82,7 +82,7 @@ var page = $("html, body");
                 //.to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
                 //.fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
     // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "footer", duration: 1000, offset:80})
+    var scene = new ScrollMagic.Scene({triggerElement: "footer", duration: 800, offset:150})
                     .setTween([tween1, tween2])
                     //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
                     .addTo(controller);
@@ -153,9 +153,9 @@ var animations = {
     pos : {
         slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
         slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-        slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + ($('#slide03').outerHeight() / 5), 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5.5, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 4))},
-        slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + ($('#slide04').outerHeight() / 4), 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 6.2))},
-        slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + ($('#slide05').outerHeight() / 6), 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6.5, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / ($(window).innerWidth() >= 1410 ? 4.5 : 11)}
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     },
     button : {
         slide0 : $('#sec01'),
@@ -192,15 +192,25 @@ var animations = {
 
 // INIT THE NEEDED FUNCTIONS
 $(function(){
+
     $('body').flowtype( { minimum : 500,  maximum : 1800  });
     set_dotbox();
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
 
+    updateAnimPos();
+
     $(window).bind("resize", function(){
         set_dotbox();
         set_variables();
         updateAnimPos();
+        
+        clearTimeout($.data(this, 'resizeTimer'));
+        $.data(this, 'resizeTimer', setTimeout(function() {
+            //do something
+            //alert("Haven't resized in 200ms!");
+            validateFootnote();
+        }, 500));
     });
 
     // PLAYS FIRST ANIMATION
@@ -239,15 +249,29 @@ $(function(){
 
 });
 
+function getSize(){
+    if ($(window).innerWidth() <= 1024 && $(window).innerWidth() > 900){
+        return 0.15;
+    } 
+
+    if ($(window).innerWidth() <= 900){
+        return 0.2;
+    } 
+
+    if ($(window).innerWidth() >= 1400){
+        return 0.0;
+    } else {
+        return 0.1;
+    }
+}
+
 function updateAnimPos(){
-    animations = {
-        pos : {
-            slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
-            slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
-            slide2 : { 'in' : $('#slide03').offset().top - $(window).innerHeight() + ($('#slide03').outerHeight() / 5), 'out' : $('#slide03').offset().top - $(window).innerHeight() + $('#slide03').outerHeight() / 5.5, 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 4))},
-            slide3 : { 'in' : $('#slide04').offset().top - $(window).innerHeight() + ($('#slide04').outerHeight() / 4), 'out' : $('#slide04').offset().top - $(window).innerHeight() + $('#slide04').outerHeight() / 2, 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() / ($(window).innerWidth() >= 1410 ? 3 : 6.2))},
-            slide4 : { 'in' : $('#slide05').offset().top - $(window).innerHeight() + ($('#slide05').outerHeight() / 6), 'out' : $('#slide05').offset().top - $(window).innerHeight() + $('#slide05').outerHeight() / 6.5, 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - $('#slide05').outerHeight() / ($(window).innerWidth() >= 1410 ? 4.5 : 11)}
-        }
+    animations.pos = {
+        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
+        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top + $('#slide02').outerHeight() / 8, 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
+        slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.6), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() * 0.5), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
+        slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
+        slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
     };
 }
 
@@ -410,4 +434,84 @@ function setInterstitialPopup() {
         $('#interstitial').modal('hide');
     });
 
+}
+
+/******************* Footnote and References Settings and Events *******************/
+
+$('.footnote').on('click', function(e) {
+    if($(this).attr("state") != "open"){
+        var parentHeight = $(this).data("parent");
+        var hh = $(parentHeight).outerHeight();
+        var buttonHeight = $(this).height();
+        var currentMarginTop = $(this).css("margin-top");
+        $(this).attr("state", "open");
+        var animation = $(this).find(".animation");
+        if(isMobile)
+        {
+            $(parentHeight).css("height",hh);
+            $(this).css("width","100%");
+            animation.css("width","100%");
+        }else
+        {
+            animation.css("width","492px");
+            $(this).attr("currentMarginTop", currentMarginTop);
+        }
+        animation.show();
+        //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
+        expandTop = animation.outerHeight() - buttonHeight;
+        animation.css("margin-top", -expandTop);
+
+        e.preventDefault();
+    }
+    trackFootnoteOpen($('.footnote').index($(this)), $("body").attr("class"));
+});
+
+$('.footnote .close-btn').on('click', function(e) {
+    e.stopPropagation();
+    var parentHeight = $(this).parent().parent().data("parent");
+    $(this).parent().hide();
+    $(this).parent().parent().attr("state", "closed");
+    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop"));
+    if(isMobile)
+    {
+        $(this).parent().parent().css("width","13.75%");
+        $(parentHeight).css("height","auto");
+        $(this).parent().parent().css("margin-top", "");
+    }else
+    {
+        $(this).parent().parent().css("width","width: 11.5%");
+    }
+    e.preventDefault();
+    trackFootnoteClose($('.footnote .close-btn').index($(this)), $("body").attr("class"));
+});
+
+function validateFootnote()
+{
+    $(".animation").hide();
+    $('.footnote').attr("state", "closed");
+    var parentHeight = $('.footnote').data("parent");
+    $(parentHeight).css("height","auto");
+    $('.footnote').css("margin-top", $('.footnote').attr("currentMarginTop"));
+    if(isMobile)
+    {
+        $('.footnote').css("margin-top", "");
+        $(".footnote").each(function(index){
+            var parentHeight = $(this).data("parent");
+            var negativeMargin = $("" + parentHeight).offset().left;
+            $(this).css("margin-left", "-" + negativeMargin + "px");
+            if(parseInt(negativeMargin) === 0)
+            {
+               negativeMargin = $(this).offset().left; 
+            }
+            
+            //console.log("Footnote " + index + " position " + negativeMargin);
+            $(this).css("margin-left", "-" + negativeMargin + "px");
+        });
+    }else{
+        $(".animation").css("position", "relative");
+        $(".footnote").each(function(index){
+            $(this).css("margin-left", "0");
+        });
+    }
+    
 }
