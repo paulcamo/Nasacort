@@ -41,8 +41,8 @@ $grey-button:#f8f8f8;
         max-width: 100%;
     }
     @include breakpoint('mobile'){
-        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
+        padding-left: #{fluid-percentage($site-max-width-mobile, 30)};
+        padding-right: #{fluid-percentage($site-max-width-mobile, 30)};
         max-width: 100%;
     }
     // .first-container {
@@ -146,6 +146,7 @@ $grey-button:#f8f8f8;
             @include breakpoint('mobile'){
                 font-size: 19px;
                 padding-top: 62px;
+                margin-left: 26px;
             }
         }
         .underlined {
@@ -865,7 +866,6 @@ $grey-button:#f8f8f8;
     }
     strong{
         font-weight: bold;
-        font-family: $font-proxima-nova-bold;
     }
     p{
         margin-bottom: 18px;
@@ -1192,7 +1192,7 @@ $grey-button:#f8f8f8;
         @include breakpoint('mobile'){
             text-align: left;
             margin-top: 10px;
-            padding-left:20px;
+            padding-left:25px;
           font-size: 13px;
         }
     }
@@ -1239,7 +1239,7 @@ $grey-button:#f8f8f8;
       font-size: 13px;
         text-align: left;
         margin-top: 10px;
-        padding-left:20px;
+        padding-left:25px;
     }
 }
 

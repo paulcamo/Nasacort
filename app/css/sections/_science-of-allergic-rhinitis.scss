@@ -385,8 +385,8 @@
       margin-top: 0;
       @include breakpoint('mobile'){
         margin-bottom: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 13px;
+        padding-right: 13px;
       }
     }
     div{
@@ -414,8 +414,8 @@
         margin-bottom: 8px;
         @include breakpoint('mobile'){
           margin-bottom: 23px;
-          padding-left: 10px;
-          padding-right: 10px;
+          padding-left: 13px;
+          padding-right: 13px;
         }
       }
     }
@@ -477,7 +477,7 @@
           @include breakpoint('mobile'){
             margin-bottom: 22px;
             margin-top: 20px;
-            padding-left: 22px;
+            padding-left: 25px;
           }
         }
     }
@@ -877,10 +877,14 @@
         @include breakpoint('mobile'){
           margin-bottom: 6px;
           margin-top: 23px;
+            padding-left: 5px;
+            padding-right: 5px;
         }
       }
       p{
         margin-bottom: 24px;
+          padding-left: 5px;
+          padding-right: 5px;
       }
       .graphic{
           width:100%;
