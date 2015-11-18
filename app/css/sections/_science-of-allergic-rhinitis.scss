@@ -879,14 +879,14 @@
           margin-top: 23px;
           padding-left: 5px;
           padding-right: 5px;    
+
         }
       }
       p{
         margin-bottom: 24px;
-          @include breakpoint('mobile'){
-              padding-left: 5px;
-              padding-right: 5px; 
-          }
+          padding-left: 5px;
+          padding-right: 5px;
+
       }
       .graphic{
           width:100%;
