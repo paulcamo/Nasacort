@@ -212,7 +212,7 @@ module.exports = function(grunt) {
 
 
         uglify: {
-            mainjs: {
+           /* mainjs: {
                 src: 'build/js/main.js',
                 dest: 'build/js/main.min.js'
 
@@ -221,10 +221,37 @@ module.exports = function(grunt) {
                 src: 'build/js/sections.js',
                 dest: 'build/js/sections.min.js'
 
+            },*/
+            
+            homepagescripts: {
+                src: [ 'build/js/sections/homepage2.js',
+                        'build/js/sections/tracking.js'
+                    ],
+                dest: 'build/js/homepage-scripts.min.js'
+            },
+            internalpagescripts: {
+                src: [
+                        'build/js/main.js',
+                        'build/js/sections/tracking.js'
+                    ],
+                dest: 'build/js/internalpage-scripts.min.js'
             }
-
-
         },
+        
+         minifyHtml: {
+            options: {
+                cdata: true
+            },
+            all: {
+                expand: true,
+                cwd: 'build/',
+                ext: '.html',
+                src: ['*.html'],
+                dest: 'build/'
+            }
+           
+        },
+
 
         open : {
             dev : {
@@ -306,7 +333,7 @@ module.exports = function(grunt) {
         'copy',
         'uglify',
         'cssmin',
-        
+        'minifyHtml'
     ]);
 
 
