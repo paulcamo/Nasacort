@@ -212,7 +212,7 @@ module.exports = function(grunt) {
 
 
         uglify: {
-           /* mainjs: {
+            /*mainjs: {
                 src: 'build/js/main.js',
                 dest: 'build/js/main.min.js'
 
@@ -222,7 +222,6 @@ module.exports = function(grunt) {
                 dest: 'build/js/sections.min.js'
 
             },*/
-            
             homepagescripts: {
                 src: [ 'build/js/sections/homepage2.js',
                         'build/js/sections/tracking.js'
@@ -238,7 +237,7 @@ module.exports = function(grunt) {
             }
         },
         
-         minifyHtml: {
+        minifyHtml: {
             options: {
                 cdata: true
             },
@@ -251,7 +250,6 @@ module.exports = function(grunt) {
             }
            
         },
-
 
         open : {
             dev : {
@@ -312,6 +310,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('assemble'); // Special case
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    
     grunt.loadNpmTasks('grunt-html-validation');
 
     // Default task(s).
@@ -335,8 +334,7 @@ module.exports = function(grunt) {
         'cssmin',
         'minifyHtml'
     ]);
-
-
+    
     grunt.registerTask('validate', [
         'jshint',
         'assemble',
