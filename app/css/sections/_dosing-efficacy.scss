@@ -2,8 +2,8 @@ $grey-background: #f4f4f4;
 $light-blue: #dcecf5;
 $middle-blue: #0d4a84;
 
-$space: 4.6%;
-$space-mobile-copy: 4.6875%;
+$space: 25px;
+$space-mobile-copy: 25px;
 
 
 .content-dosing-and-efficacy{
@@ -176,7 +176,7 @@ $space-mobile-copy: 4.6875%;
         @include breakpoint('mobile') {
             
             max-width: 604px;
-            min-width: 292px;
+            min-width: 100%;
             margin-left:0;
             margin-right:0;
         }
@@ -774,8 +774,8 @@ $space-mobile-copy: 4.6875%;
                 margin-bottom: 14px;
                 padding-left:7%;
                 @include breakpoint('mobile') {
-                  padding-right:4.3%;
-                    padding-left: 4.3%;
+                  padding-right:25px;
+                    padding-left:25px;
                 }
                 h4{
                     font-size: 14px;
