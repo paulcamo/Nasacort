@@ -45,8 +45,8 @@ $grey-button:#f8f8f8;
         max-width: 100%;
     }
     @include breakpoint('mobile'){
-        padding-left: #{fluid-percentage($site-max-width-mobile, 30)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 30)};
+        padding-left: 21px;
+        padding-right: 21px;
         max-width: 100%;
     }
     // .first-container {
@@ -77,7 +77,7 @@ $grey-button:#f8f8f8;
 .download{
     h2.sub-down{
         @include breakpoint('mobile'){
-            width: 300px;
+            width: 85%;
             margin: 12px auto 0;
         }
     }
@@ -1014,8 +1014,8 @@ $grey-button:#f8f8f8;
             max-width: 400px;
         } 
         @include breakpoint('mobile'){
-            padding-left: 5.15%;
-            padding-right: 5.15%;
+            padding-left: 0;
+            padding-right: 0;
             width: 100%;
         }
     }
@@ -1124,7 +1124,7 @@ $grey-button:#f8f8f8;
     }
     .wacSeak{
         max-width: 50%;
-        min-width: 300px;
+        min-width: 100%;
         float: left;
         padding-left: 20px;
         a{
