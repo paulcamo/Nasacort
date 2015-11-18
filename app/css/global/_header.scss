@@ -254,6 +254,7 @@
         .item1 {
           @include breakpoint("desktop-n-up") {
             width: 196px;
+            overflow: hidden;
           }
           //@include breakpoint("tablet") {
           //  width: 151px;
@@ -617,6 +618,7 @@
                       color:$color-dark-blue !important;
                       @include breakpoint("mobile") {
                         box-shadow: inset -2px 7px 5px -5px rgba(0,0,0,0.75);
+                        width: 101%;
                       }
 
                       @include breakpoint("tablet-n-up") {
