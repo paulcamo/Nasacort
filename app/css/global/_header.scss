@@ -113,7 +113,7 @@
 
     .menu-helper {
       @media screen and (max-width: 1399px) and (min-width: 1024px) {
-      width: 76%;
+      width: 77%;
       display: inline-block;
       text-align: center;
       position: relative;
@@ -232,9 +232,9 @@
           //float: left;
           //margin-left: 10px;
 
-          float: none;
+          float: right;
           display: table;
-          margin: auto;
+          margin: 0;
             padding-top: 28px;
 
 
@@ -299,9 +299,12 @@
 
         .item4 {
           @include breakpoint("desktop-n-up") {
-            width: 244px;
+            width: 235px;
             margin-left: 3px;
           }
+            @media screen and (max-width: 1399px) and (min-width: 1025px){
+               width: 236px; 
+            }
 
          }
 
