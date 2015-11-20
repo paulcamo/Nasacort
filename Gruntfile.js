@@ -234,6 +234,17 @@ module.exports = function(grunt) {
                         'build/js/sections/tracking.js'
                     ],
                 dest: 'build/js/internalpage-scripts.min.js'
+            },
+            all: {
+                files : {
+                  'build/js/sections/nasacort-difference.js' : 'app/js/sections/nasacort-difference.js',
+                  'build/js/sections/dosing-and-efficacy.js' : 'app/js/sections/dosing-and-efficacy.js',
+                  'build/js/sections/drug-fact-label.js' : 'app/js/sections/drug-fact-label.js',
+                  'build/js/sections/faq.js' : 'app/js/sections/faq.js',
+                  'build/js/sections/resources.js' : 'app/js/sections/resources.js',
+                  'build/js/sections/science-of-allergic-rhinitis.js' : 'app/js/sections/science-of-allergic-rhinitis.js',
+                  'build/js/sections/whats-a-clucker.js' : 'app/js/sections/whats-a-clucker.js'
+                }
             }
         },
         
