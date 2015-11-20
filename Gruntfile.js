@@ -223,15 +223,15 @@ module.exports = function(grunt) {
 
             },*/
             homepagescripts: {
-                src: [ 'build/js/sections/homepage2.js',
-                        'build/js/sections/tracking.js'
+                src: [ 'app/js/sections/homepage2.js',
+                        'app/js/sections/tracking.js'
                     ],
                 dest: 'build/js/homepage-scripts.min.js'
             },
             internalpagescripts: {
                 src: [
-                        'build/js/main.js',
-                        'build/js/sections/tracking.js'
+                        'app/js/main.js',
+                        'app/js/sections/tracking.js'
                     ],
                 dest: 'build/js/internalpage-scripts.min.js'
             },
