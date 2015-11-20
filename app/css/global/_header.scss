@@ -112,12 +112,19 @@
 
 
     .menu-helper {
-      @include breakpoint("tablet-n-desktop") {
-      width: 100%;
+      @media screen and (max-width: 1399px) and (min-width: 1024px) {
+      width: 76%;
       display: inline-block;
       text-align: center;
       position: relative;
       }
+        @media screen and (max-width: 1024px) and (min-width: 768px) {
+            width: 100%;
+            display: inline-block;
+      text-align: center;
+      position: relative;
+            
+        }
     }
 
 
@@ -217,6 +224,7 @@
         position: relative;
         z-index: 1;
         float: right;
+          
 
         @include breakpoint("desktop") {
           //margin-top: 0;
@@ -227,6 +235,7 @@
           float: none;
           display: table;
           margin: auto;
+            padding-top: 28px;
 
 
 
@@ -253,7 +262,7 @@
 
         .item1 {
           @include breakpoint("desktop-n-up") {
-            width: 196px;
+            width: 190px;
             overflow: hidden;
           }
           //@include breakpoint("tablet") {
@@ -267,8 +276,8 @@
 
         .item2 {
           @include breakpoint("desktop-n-up") {
-            width: 171px;
-            margin-left: 10px;
+            width: 163px;
+            margin-left: 0px;
           }
 
           //@include breakpoint("tablet") {
@@ -281,8 +290,8 @@
 
         .item3 {
           @include breakpoint("desktop-n-up") {
-            width: 176px;
-            margin-left: 9px;
+            width: 168px;
+            margin-left: 1px;
           }
 
 
@@ -290,8 +299,8 @@
 
         .item4 {
           @include breakpoint("desktop-n-up") {
-            width: 233px;
-            margin-left: 10px;
+            width: 229px;
+            margin-left: 3px;
           }
 
          }
