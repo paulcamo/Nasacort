@@ -45,8 +45,8 @@ $grey-button:#f8f8f8;
         max-width: 100%;
     }
     @include breakpoint('mobile'){
-        padding-left: #{fluid-percentage($site-max-width-mobile, 20)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 20)};
+        padding-left: 27px;
+        padding-right: 25px;
         max-width: 100%;
     }
     // .first-container {
@@ -77,7 +77,7 @@ $grey-button:#f8f8f8;
 .download{
     h2.sub-down{
         @include breakpoint('mobile'){
-            width: 300px;
+            width: 85%;
             margin: 12px auto 0;
         }
     }
@@ -140,7 +140,7 @@ $grey-button:#f8f8f8;
             //padding-right:40px;
         }
         @include breakpoint('mobile'){
-            margin-left: 7%;
+            margin-left: 0;
             max-width: 100%!important;
             padding-left:0;
             position: absolute;
@@ -159,8 +159,7 @@ $grey-button:#f8f8f8;
             @include breakpoint('mobile'){
                 font-size: 17px;
                 padding-top: 62px;
-                /* padding-top: 21px; */
-                margin-left: 25px;
+                margin-left: 20px;
             }
         }
         .underlined {
@@ -887,7 +886,6 @@ $grey-button:#f8f8f8;
     }
     strong{
         font-weight: bold;
-        font-family: $font-proxima-nova-bold;
     }
     p{
         margin-bottom: 18px;
@@ -1016,8 +1014,8 @@ $grey-button:#f8f8f8;
             max-width: 400px;
         } 
         @include breakpoint('mobile'){
-            padding-left: 5.15%;
-            padding-right: 5.15%;
+            padding-left: 0;
+            padding-right: 0;
             width: 100%;
         }
     }
@@ -1126,7 +1124,7 @@ $grey-button:#f8f8f8;
     }
     .wacSeak{
         max-width: 50%;
-        min-width: 300px;
+        min-width: 100%;
         float: left;
         padding-left: 20px;
         a{
@@ -1214,7 +1212,7 @@ $grey-button:#f8f8f8;
         @include breakpoint('mobile'){
             text-align: left;
             margin-top: 10px;
-            padding-left:20px;
+            padding-left:25px;
           font-size: 13px;
         }
     }
@@ -1258,10 +1256,10 @@ $grey-button:#f8f8f8;
     padding-right: 20px;
    font-size: 15px;
     @include breakpoint('mobile'){
-      font-size: 13px;
+      font-size: 10px;
         text-align: left;
         margin-top: 10px;
-        padding-left:20px;
+        padding-left:25px;
     }
 }
 
