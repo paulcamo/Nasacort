@@ -122,10 +122,8 @@ h4{
     }
     @include breakpoint('mobile'){
         margin: 9px 0;
-        width:100%;
+        width:359px;
         margin-left: 0;
-    padding-left: 5.15%;
-    padding-right: 5.15%;
     }
 
 
@@ -203,7 +201,7 @@ h4{
         }
         @media screen and (max-width: 335px) {
           min-width: 184px;     
-          width:80%;
+          width:79%;
         }
         img{
             position: relative;
@@ -224,7 +222,7 @@ h4{
             position:relative;
             
             @include breakpoint('mobile'){
-                font-size: 12px;
+                font-size: 11px;
                 line-height: 18px;
                 //padding: 7px 4px 0 20px;
                 text-align: left;
@@ -396,11 +394,11 @@ h4{
   padding-top: 120px;
 
   @include breakpoint('desktop') {
-    padding-top: 148px;
+    padding-top: 122px;
   }
-  @media screen and (max-width: 1063px) {
-    padding-top: 148px;
-  }
+//  @media screen and (max-width: 1063px) {
+//    padding-top: 148px;
+//  }
   @include breakpoint('mobile'){
     padding-top: 128px !important;
   }

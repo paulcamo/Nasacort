@@ -112,12 +112,19 @@
 
 
     .menu-helper {
-      @include breakpoint("tablet-n-desktop") {
-      width: 100%;
+      @media screen and (max-width: 1399px) and (min-width: 1024px) {
+      width: 77%;
       display: inline-block;
       text-align: center;
       position: relative;
       }
+        @media screen and (max-width: 1024px) and (min-width: 768px) {
+            width: 100%;
+            display: inline-block;
+      text-align: center;
+      position: relative;
+            
+        }
     }
 
 
@@ -217,6 +224,7 @@
         position: relative;
         z-index: 1;
         float: right;
+          
 
         @include breakpoint("desktop") {
           //margin-top: 0;
@@ -224,9 +232,10 @@
           //float: left;
           //margin-left: 10px;
 
-          float: none;
+          float: right;
           display: table;
-          margin: auto;
+          margin: 0;
+            padding-top: 28px;
 
 
 
@@ -253,7 +262,8 @@
 
         .item1 {
           @include breakpoint("desktop-n-up") {
-            width: 196px;
+            width: 190px;
+            overflow: hidden;
           }
           //@include breakpoint("tablet") {
           //  width: 151px;
@@ -266,8 +276,8 @@
 
         .item2 {
           @include breakpoint("desktop-n-up") {
-            width: 171px;
-            margin-left: 10px;
+            width: 164px;
+            margin-left: 0px;
           }
 
           //@include breakpoint("tablet") {
@@ -280,8 +290,8 @@
 
         .item3 {
           @include breakpoint("desktop-n-up") {
-            width: 176px;
-            margin-left: 9px;
+            width: 168px;
+            margin-left: 1px;
           }
 
 
@@ -289,9 +299,12 @@
 
         .item4 {
           @include breakpoint("desktop-n-up") {
-            width: 233px;
-            margin-left: 10px;
+            width: 235px;
+            margin-left: 3px;
           }
+            @media screen and (max-width: 1399px) and (min-width: 1025px){
+               width: 236px; 
+            }
 
          }
 
@@ -415,7 +428,7 @@
     .header-top{ 
       .blue-bar{          
           //background:url("../img/desktop/header/nav-bg-shadow-big.png") repeat-x;
-          height: 110px;
+          height: 85px;
         }      
       }
       .shine{
@@ -617,6 +630,7 @@
                       color:$color-dark-blue !important;
                       @include breakpoint("mobile") {
                         box-shadow: inset -2px 7px 5px -5px rgba(0,0,0,0.75);
+                        width: 101%;
                       }
 
                       @include breakpoint("tablet-n-up") {
