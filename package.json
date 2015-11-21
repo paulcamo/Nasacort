@@ -17,6 +17,7 @@
     "grunt-html-validation": "^0.1.18",
     "grunt-open": "^0.2.3",
     "grunt-prettify": "^0.4.0",
-    "load-grunt-tasks": "^0.6.0"
+    "load-grunt-tasks": "^0.6.0",
+    "grunt-minify-html": "^2.0.0"
   }
 }

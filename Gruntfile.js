@@ -212,7 +212,7 @@ module.exports = function(grunt) {
 
 
         uglify: {
-            mainjs: {
+            /*mainjs: {
                 src: 'build/js/main.js',
                 dest: 'build/js/main.min.js'
 
@@ -221,9 +221,45 @@ module.exports = function(grunt) {
                 src: 'build/js/sections.js',
                 dest: 'build/js/sections.min.js'
 
+            },*/
+            homepagescripts: {
+                src: [ 'app/js/sections/homepage2.js',
+                        'app/js/sections/tracking.js'
+                    ],
+                dest: 'build/js/homepage-scripts.min.js'
+            },
+            internalpagescripts: {
+                src: [
+                        'app/js/main.js',
+                        'app/js/sections/tracking.js'
+                    ],
+                dest: 'build/js/internalpage-scripts.min.js'
+            },
+            all: {
+                files : {
+                  'build/js/sections/nasacort-difference.js' : 'app/js/sections/nasacort-difference.js',
+                  'build/js/sections/dosing-and-efficacy.js' : 'app/js/sections/dosing-and-efficacy.js',
+                  'build/js/sections/drug-fact-label.js' : 'app/js/sections/drug-fact-label.js',
+                  'build/js/sections/faq.js' : 'app/js/sections/faq.js',
+                  'build/js/sections/resources.js' : 'app/js/sections/resources.js',
+                  'build/js/sections/science-of-allergic-rhinitis.js' : 'app/js/sections/science-of-allergic-rhinitis.js',
+                  'build/js/sections/whats-a-clucker.js' : 'app/js/sections/whats-a-clucker.js'
+                }
             }
-
-
+        },
+        
+        minifyHtml: {
+            options: {
+                cdata: true
+            },
+            all: {
+                expand: true,
+                cwd: 'build/',
+                ext: '.html',
+                src: ['*.html'],
+                dest: 'build/'
+            }
+           
         },
 
         open : {
@@ -285,6 +321,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('assemble'); // Special case
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    
     grunt.loadNpmTasks('grunt-html-validation');
 
     // Default task(s).
@@ -306,10 +343,9 @@ module.exports = function(grunt) {
         'copy',
         'uglify',
         'cssmin',
-        
+        'minifyHtml'
     ]);
-
-
+    
     grunt.registerTask('validate', [
         'jshint',
         'assemble',
