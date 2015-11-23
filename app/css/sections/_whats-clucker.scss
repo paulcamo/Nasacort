@@ -115,7 +115,6 @@ $grey-button:#f8f8f8;
         top: 0;
         min-height: 233px;
         height: 233px;
-        width:100%;
     }
     width: 100%;
     position: relative;
@@ -161,6 +160,7 @@ $grey-button:#f8f8f8;
                 font-size: 17px;
                 padding-top: 62px;
                 margin-left: 20px;
+                width:100%;
             }
         }
         .underlined {
