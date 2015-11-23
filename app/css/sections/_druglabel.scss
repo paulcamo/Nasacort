@@ -16,6 +16,7 @@ $subtitle-color:#0d5ea4;
             max-width: 769px!important;
             padding-left:40px;
             padding-right:40px;
+            min-height: 170px;
         }
         @include breakpoint('mobile'){
             max-width: 100%!important;
@@ -33,8 +34,8 @@ $subtitle-color:#0d5ea4;
             padding-right:0;
         }
         @include breakpoint('tablet'){
-            font-size: 17px;
-            padding:20px 0;
+            font-size: 50px;
+            padding:63px 0 0 0;
         }
         @include breakpoint('mobile'){
             font-size: 17px;

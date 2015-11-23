@@ -72,6 +72,9 @@
       max-width: 100%;
     }
   }
+    h3{
+        text-transform: none;
+    }
 
   h2{
     margin-top:47px;
@@ -161,7 +164,7 @@
   
   .treatments{
       .footnote{
-          margin-top:170px;
+          margin-top:223px;
           @include breakpoint('mobile'){
             margin-top: 0;
         }
@@ -208,8 +211,9 @@
     }
     .comparin-inner{
         .grey{
+            color:#565654;
               @include breakpoint('mobile'){
-                color:#6e6e6e;
+                color:#565654;
             }
         }    
       p{
@@ -300,8 +304,9 @@
             width:100%;
         }
         .grey{
+            color:#565654;
               @include breakpoint('mobile'){
-                color:#6e6e6e;
+                color:#565654;
             }
         }
     }
