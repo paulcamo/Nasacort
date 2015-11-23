@@ -911,11 +911,12 @@
         @include breakpoint('mobile'){
             margin-bottom: 6px;
             margin-top: 24px;
-            margin-left:5px;
+            margin-left:0;
         }
         .sympt{
             @include breakpoint('mobile'){
                //min-width:auto;  
+               width:80%;
              }
             .down-txt{
               //padding: 28px 22px!important;
