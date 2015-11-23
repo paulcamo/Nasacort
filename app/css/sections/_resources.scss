@@ -769,4 +769,42 @@
     }
 }
 }
+@include breakpoint("tablet-n-up"){
+    .resources-section{
+
+        .wac-indication{
+            padding-top: 2px;
+            margin-bottom: 0;
+            padding-bottom: 13px;
+        }
+
+    }
+}
+
+
+@include breakpoint("mobile"){
+    .resources-section{
+        .for-your-practice{
+            padding-bottom: 5px;
+        }
+
+        .wac-indication{
+            font-size: 10px;
+            margin-bottom: 0;
+            padding-bottom: 4px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
                 
