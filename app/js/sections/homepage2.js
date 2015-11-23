@@ -205,12 +205,12 @@ $(function(){
         set_variables();
         updateAnimPos();
         
-        clearTimeout($.data(this, 'resizeTimer'));
+        /*clearTimeout($.data(this, 'resizeTimer'));
         $.data(this, 'resizeTimer', setTimeout(function() {
             //do something
             //alert("Haven't resized in 200ms!");
             validateFootnote();
-        }, 500));
+        }, 500));*/
     });
 
     // PLAYS FIRST ANIMATION

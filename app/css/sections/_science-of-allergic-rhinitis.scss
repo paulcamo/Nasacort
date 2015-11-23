@@ -969,7 +969,18 @@
 
 
 
+@include breakpoint('mobile'){
+  .science-of-allergic-rhinitis-section{
+    .wac-indication{
+      margin-top: 9px;
+    }
 
+    .wac-indication.wac-indication-last{
+      margin-top: 0;
+      padding-bottom: 14px;
+    }
+  }
+}
 
 .use-only-placement,
 .science-of-allergic-rhinitis-section .aditional-information .right-align,
