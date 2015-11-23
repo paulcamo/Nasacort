@@ -101,7 +101,7 @@ $grey-button:#f8f8f8;
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
     height: 674px;
     @include breakpoint('desktop'){
-        padding-top: 138px;
+        padding-top: 114px;
         height: 700px;
     }
     @media screen and (max-width: 1210px) {
@@ -157,13 +157,6 @@ $grey-button:#f8f8f8;
                 margin-left: 0;
             }
             @media screen and (max-width: 1063px){
-                margin-left: 0;
-
-            }
-            @include breakpoint('mobile'){
-                font-size: 17px;
-                padding-top: 62px;
-                margin-left: 26px;
             }
         }
         .underlined {
@@ -180,7 +173,11 @@ $grey-button:#f8f8f8;
                 margin-left: 0;
             }
             @include breakpoint('mobile'){
-                display: none
+                width: 25px;
+                height: 3px;
+                margin-top: 19px;
+                margin-left: 25px;
+
             }
         }
     }
@@ -842,7 +839,7 @@ $grey-button:#f8f8f8;
     }
     .wac-boxes{
         @include breakpoint('tablet'){
-            padding: 28px 0;
+            padding: 28px 0 13px;
         } 
         @include breakpoint('mobile'){
             padding: 2px 0;
@@ -1212,15 +1209,16 @@ $grey-button:#f8f8f8;
         width: 100%;
         max-width: 100%;
         overflow: hidden;
-        margin-top: 0;
+        margin-top: 7px;
         padding-bottom: 15px;
         padding-right: 20px;
         font-size: 15px;
         @include breakpoint('mobile'){
             text-align: left;
-            margin-top: 10px;
+            margin-top: 9px;
             padding-left:25px;
-          font-size: 13px;
+            padding-bottom: 6px;
+          font-size: 10px;
         }
     }
     .wac-question{
@@ -1263,12 +1261,15 @@ $grey-button:#f8f8f8;
     padding-right: 20px;
    font-size: 15px;
     @include breakpoint('mobile'){
-      font-size: 10px;
+        font-size: 10px;
         text-align: left;
-        margin-top: 10px;
+        margin-top: 8px;
         padding-left:25px;
+        padding-bottom: 8px;
     }
 }
+
+
 
 /*------------------- Popup Glass Heads -------------------*/
 

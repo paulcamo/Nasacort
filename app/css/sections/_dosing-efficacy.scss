@@ -9,11 +9,23 @@ $space-mobile-copy: 25px;
 .content-dosing-and-efficacy{
   position: relative;
   overflow: hidden;
+    @include breakpoint('desktop'){
+
+      .push-content{
+        margin-top: 40px;
+      }
+
+      .use-directed.use-directed-last{
+        margin-bottom: 8px;
+      }
+
+    }  
   @include breakpoint('mobile') {
       
       padding-left: $space;
       padding-right: $space;
   }
+
  .inner-dosing{
   padding-left:211px;
   padding-right:200px;
@@ -52,7 +64,10 @@ $space-mobile-copy: 25px;
       right: 0;
     }
     @include breakpoint('mobile'){
+      line-height: 15px;
       right: 0;
+      margin-bottom: 6px;
+      margin-top: 6px;
     }
   }
   a{
@@ -147,6 +162,7 @@ $space-mobile-copy: 25px;
   }
   .use-directed{
       margin-top: -9px;
+      margin-bottom: 8px;
   }
   
   .img-chart{
@@ -393,6 +409,7 @@ $space-mobile-copy: 25px;
             padding-top: 5px;
             @include breakpoint('desktop') {
                 line-height:36px;
+                padding-top:10px;
             }
             @include breakpoint('tablet') {
                 line-height:36px;
@@ -504,6 +521,10 @@ $space-mobile-copy: 25px;
 
 @include breakpoint('mobile') {
 .dosing-and-efficacy-section{
+
+  p.use-directed.use-directed-dose-1{
+    margin-top: 1px;
+  }
     
     .content-dosing-and-efficacy{
         .use-directed{
@@ -589,6 +610,7 @@ $space-mobile-copy: 25px;
           }
           .use-directed{
               margin-bottom:0;
+              margin-top: 6px;
           }
     }
     
@@ -734,8 +756,12 @@ $space-mobile-copy: 25px;
                 margin-top:7px;
             }
             .use-directed{
-                margin-top:2px;
+                margin-top: 2px;
                 margin-left: 7%;
+
+                &.use-directed-dose-1{
+                  background: green;
+                }
             }
         }
          .chart-3{
