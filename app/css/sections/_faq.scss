@@ -65,8 +65,8 @@ p{
         }
         @include breakpoint('tablet'){
             padding-left:0;
-            font-size: 19px;
-            padding-top:20px;
+            font-size: 50px;
+            padding-top:63px;
             padding-bottom:20px;
         }
         @include breakpoint('mobile'){
@@ -86,6 +86,7 @@ p{
             max-width: 769px!important;
             padding-left:40px;
             padding-right:40px;
+            min-height: 170px;
         }
         @include breakpoint('mobile'){
             max-width: 100%!important;
