@@ -393,6 +393,7 @@ $space-mobile-copy: 25px;
             padding-top: 5px;
             @include breakpoint('desktop') {
                 line-height:36px;
+                padding-top:10px;
             }
             @include breakpoint('tablet') {
                 line-height:36px;
