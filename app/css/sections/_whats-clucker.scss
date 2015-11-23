@@ -129,15 +129,16 @@ $grey-button:#f8f8f8;
         max-width: 1400px;
         margin: 0 auto;
         //padding-left: 213px;
-        @include breakpoint('desktop'){
-            //max-width: 954px!important;
-            //padding-left:0;
-            //padding-right:0;
+         @include breakpoint('desktop'){
+            max-width: 980px!important;
+            padding-left:0;
+            padding-right:0;
         }
         @include breakpoint('tablet'){
-            //max-width: 810px!important;
-            //padding-left:40px;
-            //padding-right:40px;
+            max-width: 980px!important;
+            padding-left:20px;
+            padding-right:20px;
+            min-height: 170px;
         }
         @include breakpoint('mobile'){
             margin-left: 0;
@@ -149,28 +150,34 @@ $grey-button:#f8f8f8;
         h1{
             padding-top: 66px;
             margin-left: #{fluid-percentage($site-max-width, 213)};
+            @include breakpoint('desktop'){
+                margin-left: 0;
+            }
             @include breakpoint('tablet'){
-                margin-left: 80px;
+                margin-left: 0;
             }
             @media screen and (max-width: 1063px){
-                margin-left: 80px;
-                width: 70%;
+                margin-left: 0;
+
             }
             @include breakpoint('mobile'){
                 font-size: 17px;
                 padding-top: 62px;
-                margin-left: 20px;
+                margin-left: 26px;
             }
         }
         .underlined {
             background-color: #a4b5cb;
             margin-top: 18px;
             margin-left: #{fluid-percentage($site-max-width, 213)};
+            @include breakpoint('desktop'){
+                margin-left: 0;
+            }
             @include breakpoint('tablet'){
-                margin-left: 80px;
+                margin-left: 0;
             }
             @media screen and (max-width: 1063px){
-                margin-left: 80px;
+                margin-left: 0;
             }
             @include breakpoint('mobile'){
                 display: none

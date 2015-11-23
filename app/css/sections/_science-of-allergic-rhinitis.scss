@@ -2,6 +2,12 @@
   //Banner Section
   .hero-banner {
     background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.png") no-repeat top center;
+      @include breakpoint('desktop'){
+
+        }
+        @include breakpoint('tablet'){
+                padding-bottom: 8%;
+        }
     @include breakpoint('mobile') {
         background:url("../img/mobile/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
     }
