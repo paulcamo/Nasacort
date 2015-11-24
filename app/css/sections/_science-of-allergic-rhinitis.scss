@@ -405,6 +405,12 @@
         margin-right: 0;
         padding-right: 23px;
       }
+       @media screen and (max-width: 1063px) {
+           width: 100%;
+           float: none;
+           margin-right: 0;
+           margin-bottom: 25px;
+       }
       @include breakpoint('tablet'){
         width: 100%;
         float: none;
@@ -437,6 +443,10 @@
       @media screen and (max-width: 1210px) {
              width:52%;
          }
+        @media screen and (max-width: 1063px) {
+            margin: 0 auto;
+            display:block;
+        }
       @include breakpoint('mobile'){
         max-width: 100%!important;
         padding-left:0;
@@ -807,6 +817,12 @@
         padding-right:0;
       }
       
+      @media screen and (max-width: 1063px) {
+        width: 100%;
+        margin-right:0;
+        max-width:100%;
+      }
+      
       @include breakpoint('tablet'){
         width: 100%;
         margin-right:0;
@@ -837,6 +853,10 @@
       }
     }
     img{
+        @media screen and (max-width: 1063px) {
+            display:block;
+            margin: 0 auto;
+        }
       @include breakpoint('tablet'){
           display: block;
           margin: 0 auto;
