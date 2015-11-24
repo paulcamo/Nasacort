@@ -305,6 +305,24 @@ h4{
     max-width: 1400px;
     margin: auto;
     min-height: 50px;  //borrar
+      @include breakpoint('desktop'){
+        max-width: 920px!important;
+        padding-left:0;
+        padding-right:0;
+          float: none!important;
+      }
+      @include breakpoint('tablet'){
+        max-width: 769px!important;
+        padding-left:40px;
+        padding-right:40px;
+          float: none!important;
+      }
+      @include breakpoint('mobile'){
+        max-width: 100% !important;
+        min-height: 27px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
 
   }
   
@@ -319,24 +337,31 @@ h4{
   .hero-banner {
     height: 329px;
     margin: auto;
+      background-size:1400px;
+          @include breakpoint('desktop'){
+            padding-bottom: 7.5%;
+          }
+          @include breakpoint('tablet'){
+            padding-bottom: 7.5%;
+          }
     
-   @media screen and (max-width: 1063px) {
-       background-size:contain !important;
-       height:auto;
-       padding-bottom: 23.5%;
-   }
-   
-    @include breakpoint('mobile'){
-       height:auto;
-       padding-bottom: 23.5%;
-       background-size:cover !important;
-       height: 172px;
-       max-height: 344px;
-       min-height: 172px;
-       min-width: 320px;
-       padding-bottom: 0;
-       background-position: 80% 0 !important;
-    }
+           @media screen and (max-width: 1063px) {
+               background-size:contain!important;
+               height:auto;
+               padding-bottom: 13%;
+           }
+
+            @include breakpoint('mobile'){
+               height:auto;
+               padding-bottom: 7.5%;
+               background-size:cover !important;
+               height: 172px;
+               max-height: 344px;
+               min-height: 172px;
+               min-width: 320px;
+               padding-bottom: 0;
+               background-position: 80% 0 !important;
+            }
 
     h1  {
       margin-left: #{fluid-percentage($site-max-width, 213)};
@@ -344,29 +369,43 @@ h4{
       color: $color-dark-blue;
       font-size: 50px;
       padding-top: 65px;
-      @media screen and (max-width: 1063px) {
-        padding-top: 35px;
-        margin-left: 80px;
-        width:70%;
-      }
-      @include breakpoint('mobile'){
-          font-size:17px;
-          padding-top: 21px;
-          margin-left:25px;
-      }
+        @include breakpoint('desktop'){
+            margin-left: 0;
+          }
+          @include breakpoint('tablet'){
+            margin-left: 0;
+          }
+          @media screen and (max-width: 1063px) {
+            padding-top: 35px;
+            margin-left: 80px;
+            width:70%;
+              margin-left: 0;
+          }
+          @include breakpoint('mobile'){
+              font-size:17px;
+              padding-top: 21px;
+              margin-left:25px;
+              margin-left: 0;
+          }
     }
 
     .underlined {
       margin-left: #{fluid-percentage($site-max-width, 213)};
       margin-top: 19px;
-      @media screen and (max-width: 1063px) {
-        margin-left: 80px;
-      }
+        @include breakpoint('desktop'){
+            margin-left: 0;
+          }
+          @include breakpoint('tablet'){
+            margin-left: 0;
+          }
+          @media screen and (max-width: 1063px) {
+            margin-left: 0;
+          }
       @include breakpoint('mobile'){
             width:25px;
             height:3px;
             margin-top:19px;
-            margin-left: 25px;
+            margin-left: 0;
         }
     }
 
