@@ -156,7 +156,11 @@ $grey-button:#f8f8f8;
             @include breakpoint('tablet'){
                 margin-left: 0;
             }
-            @media screen and (max-width: 1063px){
+            @include  breakpoint('mobile'){
+                font-size: 17px;
+                padding-top: 41px;
+                margin-left: 25px;
+                width: 100%;
             }
         }
         .underlined {
