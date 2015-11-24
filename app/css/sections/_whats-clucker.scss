@@ -101,20 +101,22 @@ $grey-button:#f8f8f8;
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
     height: 674px;
     @include breakpoint('desktop'){
-        padding-top: 114px;
+        padding-top: 142px;
         height: 700px;
     }
-    @media screen and (max-width: 1210px) {
+    @media (min-width: 1026px) and (max-width: 1210px) {
+        padding-top: 142px;
         height: 671px;
     }
     @media screen and (max-width: 1025px) {
+        padding-top: 88px;
         height: 605px;
     }
     @include breakpoint('mobile'){
         margin-top: 150px ;
         top: 0;
-        min-height: 233px;
-        height: 233px;
+        min-height: 192px;
+        height: 192px;
     }
     width: 100%;
     position: relative;
