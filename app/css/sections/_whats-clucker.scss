@@ -101,13 +101,15 @@ $grey-button:#f8f8f8;
     background: url('../img/desktop/clucker/bg-hero.jpg') no-repeat;
     height: 674px;
     @include breakpoint('desktop'){
-        padding-top: 114px;
+        padding-top: 142px;
         height: 700px;
     }
-    @media screen and (max-width: 1210px) {
+    @media (min-width: 1026px) and (max-width: 1210px) {
+        padding-top: 142px;
         height: 671px;
     }
     @media screen and (max-width: 1025px) {
+        padding-top: 88px;
         height: 605px;
     }
     @include breakpoint('mobile'){
@@ -156,7 +158,12 @@ $grey-button:#f8f8f8;
             @include breakpoint('tablet'){
                 margin-left: 0;
             }
-            @media screen and (max-width: 1063px){
+            @include breakpoint('mobile'){
+                padding-top: 66px;
+                margin-left: 0;
+                width: 100%;
+                padding-left: 25px;
+                font-size: 17px;
             }
         }
         .underlined {
