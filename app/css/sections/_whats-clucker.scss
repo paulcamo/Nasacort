@@ -164,6 +164,7 @@ $grey-button:#f8f8f8;
                 margin-left: 26px;
                 width: 100%;
             }
+
         }
         .underlined {
             background-color: #a4b5cb;
@@ -873,6 +874,9 @@ $grey-button:#f8f8f8;
             color:$subheader-text;
             font-size: 34px; 
             margin-bottom:52px; 
+             @media screen and (max-width: 1063px) { 
+                display:none;    
+             }
             @include breakpoint('tablet'){
                 display: none;
             } 
@@ -985,6 +989,10 @@ $grey-button:#f8f8f8;
         @include breakpoint('mobile'){
             margin-bottom: 0;
         }
+        @media screen and (max-width: 1063px) {
+            max-width: 400px;
+            margin: 0 auto;
+        }
         h3{
             margin-bottom: 20px;
             @include breakpoint('mobile'){
@@ -1018,7 +1026,12 @@ $grey-button:#f8f8f8;
         }
     }
 
-    .align-cta{
+    .align-cta
+    {
+        @media screen and (max-width: 1063px) {
+            margin: 0 auto;
+            max-width: 400px;
+        }
        @include breakpoint('tablet'){
             margin: 0 auto;
             max-width: 400px;
@@ -1047,6 +1060,13 @@ $grey-button:#f8f8f8;
             width: 59%;
             float: left;
             position:relative;
+            @media screen and (max-width: 1063px) { 
+                display: block;
+                float: none;
+                overflow: hidden;
+                width: 80%;
+                margin: 0 auto;
+            }
             @include breakpoint('tablet'){
                 display: block;
                 float: none;
@@ -1103,6 +1123,18 @@ $grey-button:#f8f8f8;
                         font-size: 42px;
                     } 
                 }
+                @media screen and (max-width: 1063px) {
+                    color:$subheader-text;
+                    display: inline;
+                    font-size: 32px;
+                    left: 14px;
+                    line-height: 37px;
+                    position: relative;
+                    top: 39px;
+                    strong{
+                        font-size: 42px;
+                    } 
+                }
                 @include breakpoint('mobile'){
                     color:$subheader-text;
                     display: inline;
@@ -1130,10 +1162,17 @@ $grey-button:#f8f8f8;
             @include breakpoint('mobile'){
                 width: 100%;
             }
+            @media screen and (max-width: 1063px) {
+                display: block;
+                float: none;
+                overflow: hidden;
+                width: 100%;
+            }
         }
     }
     .wacSeak{
         max-width: 50%;
+        min-width: 100%;
         float: left;
         padding-left: 20px;
         a{
@@ -1153,6 +1192,10 @@ $grey-button:#f8f8f8;
             padding-left: 0;
             clear: both;
         }
+        @media screen and (max-width: 1063px) {
+            max-width: 100%;
+            clear: both;
+     }
     }
     .wac-cta{
         max-width: 100%;
