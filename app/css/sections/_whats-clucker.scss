@@ -115,8 +115,8 @@ $grey-button:#f8f8f8;
     @include breakpoint('mobile'){
         margin-top: 150px ;
         top: 0;
-        min-height: 233px;
-        height: 233px;
+        min-height: 192px;
+        height: 192px;
     }
     width: 100%;
     position: relative;
@@ -158,12 +158,11 @@ $grey-button:#f8f8f8;
             @include breakpoint('tablet'){
                 margin-left: 0;
             }
-            @include breakpoint('mobile'){
-                padding-top: 66px;
-                margin-left: 0;
-                width: 100%;
-                padding-left: 25px;
+            @include  breakpoint('mobile'){
                 font-size: 17px;
+                padding-top: 41px;
+                margin-left: 25px;
+                width: 100%;
             }
         }
         .underlined {
