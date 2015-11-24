@@ -250,19 +250,30 @@ $(function(){
 });
 
 function getSize(){
-    if ($(window).innerWidth() <= 1024 && $(window).innerWidth() > 900){
-        return 0.15;
-    } 
 
     if ($(window).innerWidth() <= 900){
         return 0.2;
     } 
 
-    if ($(window).innerWidth() >= 1400){
+    if ($(window).innerWidth() > 900 && $(window).innerWidth() <= 1024){
+        return 0.15;
+    } 
+
+    if ($(window).innerWidth() > 1024 && $(window).innerWidth() <= 1280){
+        return 0.05;
+    } 
+
+    if ($(window).innerWidth() > 1280 && $(window).innerWidth() <= 1400){
+        return 0;
+    }
+
+    if ($(window).innerWidth() > 1400){
         return 0.0;
     } else {
         return 0.1;
     }
+
+
 }
 
 function updateAnimPos(){
