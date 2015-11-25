@@ -308,7 +308,7 @@ $space-mobile-copy: 25px;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:92% !important;
+        width:90% !important;
         padding-right:0 !important;
     }
   }
@@ -671,7 +671,7 @@ $space-mobile-copy: 25px;
             padding-right:$space-mobile-copy;
             margin-left:9px;
              @include breakpoint('mobile') {
-                 
+                 margin-left:0;
              }
         }
         .chart-text-inner{
@@ -777,12 +777,12 @@ $space-mobile-copy: 25px;
                 padding-right: 24% !important;
                 @include breakpoint('mobile') {
                     width:92% !important;
-                    line-height: 30px;
+                    line-height: 20px;
                     font-size: 17px;
                     padding-left: 4.6875%;
                     padding-right: 0 !important;
                     margin-left: 9px;
-                    height:30px;
+                    height:auto;
                 }
             }
             img{

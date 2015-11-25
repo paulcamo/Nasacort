@@ -36,22 +36,26 @@ $grey-button:#f8f8f8;
 }
 
 .content-whats-a-clucker{
-    max-width: 1000px;
+    max-width: 1400px;
     overflow: hidden;
     margin: 0 auto;
+    padding-left: 216px;
+    padding-right: 213px;
+    @include breakpoint('desktop'){
+      max-width: 920px;
+      padding-left:0;
+      padding-right:0;
+    }
     @include breakpoint('tablet'){
-        padding-left: #{fluid-percentage($site-max-width-mobile, 10)};
-        padding-right: #{fluid-percentage($site-max-width-mobile, 10)};
-        max-width: 100%;
+      max-width: 769px;
+      padding-left:40px;
+      padding-right:40px;
     }
     @include breakpoint('mobile'){
-        padding-left: 27px;
-        padding-right: 25px;
-        max-width: 100%;
+      max-width: 100%!important;
+      padding-left:25px;
+      padding-right:25px;
     }
-    // .first-container {
-    //     margin-top: 120px;
-    // }
     .download-cta-button{
         margin-bottom: 68px;
         @include breakpoint('mobile'){
@@ -130,15 +134,17 @@ $grey-button:#f8f8f8;
     div.tittle{ 
         max-width: 1400px;
         margin: 0 auto;
+        padding-left: 216px;
+        padding-right: 213px;
         //padding-left: 213px;
          @include breakpoint('desktop'){
-            max-width: 980px!important;
+            max-width: 920px!important;
             padding-left:0;
             padding-right:0;
         }
         @include breakpoint('tablet'){
-            max-width: 980px!important;
-            padding-left:16px;
+            max-width: 769px!important;
+            padding-left:40px;
             padding-right:20px;
             min-height: 170px;
         }
@@ -151,7 +157,7 @@ $grey-button:#f8f8f8;
         }
         h1{
             padding-top: 66px;
-            margin-left: #{fluid-percentage($site-max-width, 209)};
+            margin-left: 0;
             @include breakpoint('desktop'){
                 margin-left: 0;
             }
@@ -169,7 +175,7 @@ $grey-button:#f8f8f8;
         .underlined {
             background-color: #a4b5cb;
             margin-top: 18px;
-            margin-left: #{fluid-percentage($site-max-width, 209)};
+            margin-left: 0;
             @include breakpoint('desktop'){
                 margin-left: 0;
             }
@@ -605,6 +611,11 @@ $grey-button:#f8f8f8;
         display: table;
         margin: 0 auto;
         overflow: auto;
+        padding-left: 0;
+        padding-right: 0;
+        @include breakpoint('desktop'){
+            max-width: 1046px;
+        }
         ul > li{
             &:nth-child(1){
                 width: 265px;
@@ -729,7 +740,6 @@ $grey-button:#f8f8f8;
 }
 
 .wac-topHead{
-    max-width: 980px;
     h2{
       @include breakpoint('mobile'){
             margin-top: 33px;
@@ -868,12 +878,11 @@ $grey-button:#f8f8f8;
             }
         }
         h2{
-            margin-left: 10px;
             margin-top: 55px; 
-            font-family:$font-proxima-nova-regular;
             color:$subheader-text;
             font-size: 34px; 
             margin-bottom:52px; 
+            font-weight: normal;
              @media screen and (max-width: 1063px) { 
                 display:none;    
              }
@@ -1172,7 +1181,6 @@ $grey-button:#f8f8f8;
     }
     .wacSeak{
         max-width: 50%;
-        min-width: 100%;
         float: left;
         padding-left: 20px;
         a{

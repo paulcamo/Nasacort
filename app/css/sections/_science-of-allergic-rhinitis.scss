@@ -382,8 +382,8 @@
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
-      padding-left: 12px;
-      padding-right: 11px;
+      padding-left: 25px;
+      padding-right: 25px;
       padding-top: 25px;
     }
     h2{
@@ -426,8 +426,8 @@
         margin-bottom: 8px;
         @include breakpoint('mobile'){
           margin-bottom: 23px;
-          padding-left: 13px;
-          padding-right: 13px;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }
@@ -486,7 +486,7 @@
           padding-right:40px;
         }
         @include breakpoint('mobile'){
-          padding-left: 0;
+          padding-left: 25px;
         }
         h2{
           margin-bottom: 30px;
@@ -504,7 +504,7 @@
         //background-color: yellowgreen;
         overflow: hidden;
         @include breakpoint('mobile'){
-          min-width:300px;
+          min-width:260px;
           max-width: 100%;
           margin-left:auto;
           margin-right:auto;
