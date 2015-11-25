@@ -343,13 +343,12 @@ function validateFootnote()
                 $('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
                 //$('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
                 //$('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
-                //$('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");
-                if (window.innerWidth==768) {
-                    $('.science-of-allergic-rhinitis-section .aditional-information .footnote').css("margin-left", "0px");
-                }
-               
+                //$('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");  
             }else{
                 $('.dosing-and-efficacy-section .footnote').css("margin-left", "0px");
+                 if (window.innerWidth==768) {
+                    $('.science-of-allergic-rhinitis-section .aditional-information .footnote').css("margin-left", "0px");
+                }
             }
         });
     }else{
