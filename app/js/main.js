@@ -277,7 +277,7 @@ $('.footnote').on('click', function(e) {
         var currentMarginTop = $(this).css("margin-top");
         $(this).attr("state", "open");
         var animation = $(this).find(".animation");
-        if(isMobile)
+        if(window.innerWidth < 768)
         {
             $(parentHeight).css("height",hh);
             $(this).css("width","100%");
