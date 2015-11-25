@@ -341,9 +341,9 @@ function validateFootnote()
             if(isMobile){
                 //MNWR-113 See issue these footnotes hardcoded
                 //$('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
-                $('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
+                /*$('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
                 $('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
-                $('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");
+                $('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");*/
                 if (window.innerWidth==768) {
                     $('.science-of-allergic-rhinitis-section .aditional-information .footnote').css("margin-left", "0px");
                 }
