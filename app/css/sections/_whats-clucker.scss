@@ -138,7 +138,7 @@ $grey-button:#f8f8f8;
         }
         @include breakpoint('tablet'){
             max-width: 980px!important;
-            padding-left:20px;
+            padding-left:16px;
             padding-right:20px;
             min-height: 170px;
         }
@@ -151,7 +151,7 @@ $grey-button:#f8f8f8;
         }
         h1{
             padding-top: 66px;
-            margin-left: #{fluid-percentage($site-max-width, 213)};
+            margin-left: #{fluid-percentage($site-max-width, 209)};
             @include breakpoint('desktop'){
                 margin-left: 0;
             }
@@ -169,7 +169,7 @@ $grey-button:#f8f8f8;
         .underlined {
             background-color: #a4b5cb;
             margin-top: 18px;
-            margin-left: #{fluid-percentage($site-max-width, 213)};
+            margin-left: #{fluid-percentage($site-max-width, 209)};
             @include breakpoint('desktop'){
                 margin-left: 0;
             }

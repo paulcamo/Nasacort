@@ -784,8 +784,8 @@
     }
     @include breakpoint('mobile'){
       width: 100%;
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     .vrs {
@@ -917,8 +917,8 @@
         display: block;
         max-width: 100% !important;
         min-height: 27px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
       }
     }
     .inner-faq-banner{
@@ -942,7 +942,7 @@
         padding-right:0;
       }
       @include breakpoint('mobile'){
-        max-width: 290px !important;
+        max-width: 267px !important;
         background:none;
         height: 150px;
         margin-top: 25px;
@@ -979,7 +979,7 @@
           width: 58%;
         }
         @include breakpoint('mobile'){
-          width: 160px;
+          width: 134px;
         }
         p{
           color:$color-dark-blue;
@@ -991,7 +991,7 @@
             line-height: 18px;
           }
           @include breakpoint('mobile'){
-            font-size: 18px;
+            font-size: 16px;
             line-height: 21px;
           }
           &:first-of-type{
