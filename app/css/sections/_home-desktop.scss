@@ -120,9 +120,11 @@ body {
 
     .use-only {
       position: absolute;
-      top: 101.9em;
-      right: 20px;
-      font-size: 0.29em;
+      bottom: 2em;
+      right: 17px;
+      font-size: 15px;
+      line-height: 0.29em;
+      height: 0.29em;
       color: $color-white;
       z-index: 999;
     }
@@ -738,10 +740,12 @@ body {
 
     .use-only {
       position: absolute;
-      top: 4.45em;
+      top: 50%;
       right: 17px;
-      font-size: 0.29em;
-
+      font-size: 15px;
+      line-height: 0.29em;
+      height: 0.29em;
+      margin-top: 0.8em;
     }
 
 
@@ -919,7 +923,9 @@ body {
       position: absolute;
       right: 17px;
       bottom: 7em;
-      font-size: 0.29em;
+      font-size: 15px;
+      line-height: 0.29em;
+      height: 0.29em;
     }
 
 
@@ -1113,7 +1119,9 @@ body {
       position: absolute;
       bottom: 0;
       right: 17px;
-      font-size: 0.29em;
+      font-size: 15px;
+      line-height: 0.29em;
+      height: 0.29em;
       color: $color-white;
 
     }
@@ -1313,8 +1321,9 @@ body {
       position: absolute;
       bottom: 1em;
       right: 17px;
-      font-size: 0.29em;
-
+      font-size: 15px;
+      line-height: 0.29em;
+      height: 0.29em;
     }
 
 
