@@ -788,8 +788,11 @@
         @media screen and (max-width: 1210px) {
             margin-top: 734px;
         }
+        @media screen and (max-width: 1063px) {
+            margin-top:812px;
+        }
         @include breakpoint('tablet'){
-             margin-top: -410px;
+             margin-top: 921px;
         }
         @include breakpoint('mobile'){
             margin-top:0;
@@ -808,7 +811,7 @@
           margin-top:-80px;
       }
         @media screen and (max-width: 1210px) {
-             margin-bottom:60px;
+             margin-bottom:76px;
         }
         
       @include breakpoint('desktop'){
