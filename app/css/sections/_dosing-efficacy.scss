@@ -725,10 +725,10 @@ $space-mobile-copy: 25px;
                 margin-left: 9px;
                 margin-bottom: 10px;
                 @include breakpoint('mobile') {
-                    min-width:236px;
+                    min-width:100%;
                     max-height:333px;
-                    margin-left:13.125%;
-                    margin-right:13.125%;
+                    margin-left:0;
+                    margin-right:0;
                     max-width: 73.75%;
                 }
             }
