@@ -106,11 +106,11 @@ $grey-button:#f8f8f8;
     height: 674px;
     @include breakpoint('desktop'){
         padding-top: 142px;
-        height: 700px;
+        height: 670px;
     }
     @media (min-width: 1026px) and (max-width: 1210px) {
         padding-top: 142px;
-        height: 671px;
+        height: 635px;
     }
     @media screen and (max-width: 1025px) {
         padding-top: 88px;
@@ -156,10 +156,11 @@ $grey-button:#f8f8f8;
             top: 0;
         }
         h1{
-            padding-top: 66px;
+            padding-top: 65px;
             margin-left: 0;
             @include breakpoint('desktop'){
                 margin-left: 0;
+                padding-top: 35px;
             }
             @include breakpoint('tablet'){
                 margin-left: 0;
