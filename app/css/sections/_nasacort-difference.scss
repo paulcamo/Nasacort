@@ -211,9 +211,9 @@
     }
     .comparin-inner{
         .grey{
-            color:#565654;
+            color:#555;
               @include breakpoint('mobile'){
-                color:#565654;
+                color:#555;
             }
         }    
       p{
