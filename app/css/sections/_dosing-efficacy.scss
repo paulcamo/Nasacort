@@ -9,11 +9,23 @@ $space-mobile-copy: 25px;
 .content-dosing-and-efficacy{
   position: relative;
   overflow: hidden;
+    @include breakpoint('desktop'){
+
+      .push-content{
+        margin-top: 40px;
+      }
+
+      .use-directed.use-directed-last{
+        margin-bottom: 8px;
+      }
+
+    }  
   @include breakpoint('mobile') {
       
       padding-left: $space;
       padding-right: $space;
   }
+
  .inner-dosing{
   padding-left:211px;
   padding-right:200px;
@@ -52,7 +64,10 @@ $space-mobile-copy: 25px;
       right: 0;
     }
     @include breakpoint('mobile'){
+      line-height: 15px;
       right: 0;
+      margin-bottom: 6px;
+      margin-top: 6px;
     }
   }
   a{
@@ -83,11 +98,11 @@ $space-mobile-copy: 25px;
             background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
              @media screen and (max-width: 1063px) {
                  height:auto;
-                 padding-bottom: 33.3333% !important;
+                 padding-bottom: 22.3333% !important;
              }
              @media screen and (max-width: 768px){
                   background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
-                 height:233px;
+                 height:223px;
                  padding-bottom: 0 !important;
                  max-height: 233px;
                  background-position: 77% -14px !important;
@@ -147,6 +162,7 @@ $space-mobile-copy: 25px;
   }
   .use-directed{
       margin-top: -9px;
+      margin-bottom: 8px;
   }
   
   .img-chart{
@@ -292,7 +308,7 @@ $space-mobile-copy: 25px;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:92% !important;
+        width:90% !important;
         padding-right:0 !important;
     }
   }
@@ -393,6 +409,7 @@ $space-mobile-copy: 25px;
             padding-top: 5px;
             @include breakpoint('desktop') {
                 line-height:36px;
+                padding-top:10px;
             }
             @include breakpoint('tablet') {
                 line-height:36px;
@@ -504,6 +521,10 @@ $space-mobile-copy: 25px;
 
 @include breakpoint('mobile') {
 .dosing-and-efficacy-section{
+
+  p.use-directed.use-directed-dose-1{
+    margin-top: 1px;
+  }
     
     .content-dosing-and-efficacy{
         .use-directed{
@@ -589,6 +610,7 @@ $space-mobile-copy: 25px;
           }
           .use-directed{
               margin-bottom:0;
+              margin-top: 6px;
           }
     }
     
@@ -649,7 +671,7 @@ $space-mobile-copy: 25px;
             padding-right:$space-mobile-copy;
             margin-left:9px;
              @include breakpoint('mobile') {
-                 
+                 margin-left:0;
              }
         }
         .chart-text-inner{
@@ -703,10 +725,10 @@ $space-mobile-copy: 25px;
                 margin-left: 9px;
                 margin-bottom: 10px;
                 @include breakpoint('mobile') {
-                    min-width:236px;
+                    min-width:100%;
                     max-height:333px;
-                    margin-left:13.125%;
-                    margin-right:13.125%;
+                    margin-left:0;
+                    margin-right:0;
                     max-width: 73.75%;
                 }
             }
@@ -734,8 +756,12 @@ $space-mobile-copy: 25px;
                 margin-top:7px;
             }
             .use-directed{
-                margin-top:2px;
+                margin-top: 2px;
                 margin-left: 7%;
+
+                &.use-directed-dose-1{
+                  background: green;
+                }
             }
         }
          .chart-3{
@@ -751,12 +777,12 @@ $space-mobile-copy: 25px;
                 padding-right: 24% !important;
                 @include breakpoint('mobile') {
                     width:92% !important;
-                    line-height: 30px;
+                    line-height: 20px;
                     font-size: 17px;
                     padding-left: 4.6875%;
                     padding-right: 0 !important;
                     margin-left: 9px;
-                    height:30px;
+                    height:auto;
                 }
             }
             img{
@@ -1097,7 +1123,7 @@ $space-mobile-copy: 25px;
         height:356px;
         margin-bottom:16px;
         @include breakpoint('tablet') {
-            width: 100%;
+            width: 108%;
             background-position:left top;
          }
         .graphics{

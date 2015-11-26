@@ -125,6 +125,9 @@
       position: relative;
             
         }
+        @media screen and (min-width: 1025px) and (max-width: 1027px) {
+        width: 76%;
+      }
     }
 
 
@@ -246,9 +249,9 @@
           //float: left;
           //margin-left: 10px;
 
-          float: none;
+          float: left;
           display: table;
-          margin: auto;
+          margin: auto 0 auto 9%;
 
 
 

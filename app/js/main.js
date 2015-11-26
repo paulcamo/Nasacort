@@ -277,7 +277,7 @@ $('.footnote').on('click', function(e) {
         var currentMarginTop = $(this).css("margin-top");
         $(this).attr("state", "open");
         var animation = $(this).find(".animation");
-        if(isMobile)
+        if(window.innerWidth < 768)
         {
             $(parentHeight).css("height",hh);
             $(this).css("width","100%");
@@ -338,16 +338,17 @@ function validateFootnote()
             //console.log("Footnote " + index + " position " + negativeMargin);
             $(this).css("margin-left", "-" + negativeMargin + "px");
             
-            if(isMobile){
+            if(window.innerWidth < 768){
                 //MNWR-113 See issue these footnotes hardcoded
-                //$('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
-                $('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
-                $('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
-                $('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");
-                if (window.innerWidth==768) {
+                $('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
+                //$('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
+                //$('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
+                //$('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");  
+            }else{
+                $('.dosing-and-efficacy-section .footnote').css("margin-left", "0px");
+                 if (window.innerWidth==768) {
                     $('.science-of-allergic-rhinitis-section .aditional-information .footnote').css("margin-left", "0px");
                 }
-               
             }
         });
     }else{

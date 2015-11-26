@@ -1,7 +1,17 @@
 .science-of-allergic-rhinitis-section{
   //Banner Section
   .hero-banner {
+<<<<<<< HEAD
     background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
+=======
+    background:url("../img/desktop/science-of-allergic-rhinitis/hero-rhinitis.png") no-repeat top center;
+      @include breakpoint('desktop'){
+
+        }
+        @include breakpoint('tablet'){
+                padding-bottom: 8%;
+        }
+>>>>>>> f3cd1f986cd8f66771553fa68e739273a9428a57
     @include breakpoint('mobile') {
         background:url("../img/mobile/science-of-allergic-rhinitis/hero-rhinitis.jpg") no-repeat top center;
     }
@@ -376,8 +386,8 @@
     }
     @include breakpoint('mobile'){
       max-width: 100%!important;
-      padding-left: 12px;
-      padding-right: 11px;
+      padding-left: 25px;
+      padding-right: 25px;
       padding-top: 25px;
     }
     h2{
@@ -399,6 +409,12 @@
         margin-right: 0;
         padding-right: 23px;
       }
+       @media screen and (max-width: 1063px) {
+           width: 100%;
+           float: none;
+           margin-right: 0;
+           margin-bottom: 25px;
+       }
       @include breakpoint('tablet'){
         width: 100%;
         float: none;
@@ -414,8 +430,8 @@
         margin-bottom: 8px;
         @include breakpoint('mobile'){
           margin-bottom: 23px;
-          padding-left: 13px;
-          padding-right: 13px;
+          padding-left: 0;
+          padding-right: 0;
         }
       }
     }
@@ -431,6 +447,10 @@
       @media screen and (max-width: 1210px) {
              width:52%;
          }
+        @media screen and (max-width: 1063px) {
+            margin: 0 auto;
+            display:block;
+        }
       @include breakpoint('mobile'){
         max-width: 100%!important;
         padding-left:0;
@@ -470,7 +490,7 @@
           padding-right:40px;
         }
         @include breakpoint('mobile'){
-          padding-left: 0;
+          padding-left: 25px;
         }
         h2{
           margin-bottom: 30px;
@@ -488,7 +508,7 @@
         //background-color: yellowgreen;
         overflow: hidden;
         @include breakpoint('mobile'){
-          min-width:300px;
+          min-width:260px;
           max-width: 100%;
           margin-left:auto;
           margin-right:auto;
@@ -801,6 +821,12 @@
         padding-right:0;
       }
       
+      @media screen and (max-width: 1063px) {
+        width: 100%;
+        margin-right:0;
+        max-width:100%;
+      }
+      
       @include breakpoint('tablet'){
         width: 100%;
         margin-right:0;
@@ -831,6 +857,10 @@
       }
     }
     img{
+        @media screen and (max-width: 1063px) {
+            display:block;
+            margin: 0 auto;
+        }
       @include breakpoint('tablet'){
           display: block;
           margin: 0 auto;
@@ -911,11 +941,12 @@
         @include breakpoint('mobile'){
             margin-bottom: 6px;
             margin-top: 24px;
-            margin-left:5px;
+            margin-left:0;
         }
         .sympt{
             @include breakpoint('mobile'){
                //min-width:auto;  
+               width:80%;
              }
             .down-txt{
               //padding: 28px 22px!important;
@@ -969,7 +1000,18 @@
 
 
 
+@include breakpoint('mobile'){
+  .science-of-allergic-rhinitis-section{
+    .wac-indication{
+      margin-top: 9px;
+    }
 
+    .wac-indication.wac-indication-last{
+      margin-top: 0;
+      padding-bottom: 14px;
+    }
+  }
+}
 
 .use-only-placement,
 .science-of-allergic-rhinitis-section .aditional-information .right-align,
