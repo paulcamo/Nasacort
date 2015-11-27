@@ -432,7 +432,14 @@ $space-mobile-copy: 25px;
             margin-top:-88px;
              @media screen and (max-width: 1210px) {
                 margin-top:0;
-            }
+
+               @media screen and (width: 768px) {
+                 margin-top: 420px;
+               }
+
+
+
+             }
         }
         img{
             margin-left:152px;
