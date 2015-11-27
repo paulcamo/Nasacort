@@ -91,7 +91,7 @@ function changeDivsOrder()
 {
     var contentwidth = $(window).width();
     
-    if ((contentwidth) < mobileBreakPoint)
+    if ((contentwidth) <= 1063)
     {
         $('.aditional-information img').insertAfter('.aditional-information .copy h2'); 
      }else

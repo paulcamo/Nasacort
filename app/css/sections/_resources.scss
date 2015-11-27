@@ -513,8 +513,8 @@
 @include breakpoint('mobile') {
 .resources-section {
     .banner{
-        padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
-        padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
+        padding-left:0;
+        padding-right:0;
         height:66px;
         min-height:56px;
         h1{
@@ -523,8 +523,6 @@
         }
     }
     .videos{
-        padding-left:25px;
-        padding-right:25px;
         padding-top: 14px;
         float:left;
         h2{
@@ -572,8 +570,6 @@
     
     .for-your-patients{
         padding-top:19px;
-        padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
-        padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
         h2{
             font-size:17px;
             margin-bottom:12px;
@@ -637,8 +633,6 @@
     
     .for-your-practice{
         padding-top:19px;
-        padding-left:#{fluid-percentage($site-max-width-mobile, 50)};
-        padding-right:#{fluid-percentage($site-max-width-mobile, 50)};
         padding-bottom:52px;
         h2{
             font-size:17px;
@@ -769,4 +763,42 @@
     }
 }
 }
+@include breakpoint("tablet-n-up"){
+    .resources-section{
+
+        .wac-indication{
+            padding-top: 2px;
+            margin-bottom: 0;
+            padding-bottom: 13px;
+        }
+
+    }
+}
+
+
+@include breakpoint("mobile"){
+    .resources-section{
+        .for-your-practice{
+            padding-bottom: 5px;
+        }
+
+        .wac-indication{
+            font-size: 10px;
+            margin-bottom: 0;
+            padding-bottom: 4px;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
                 

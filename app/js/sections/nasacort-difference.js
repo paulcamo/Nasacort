@@ -181,7 +181,14 @@ function keepTDsameWidthArrow()
     }
     var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
     var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
-     $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
+
+    var vrsPosition_mobile = $("#brand-compare").width() +  parseInt($(".chart-table-container .vrs").width() * 0.15) ;
+
+    if ($(window).width()<1028) {
+        vrsPosition = vrsPosition_mobile;
+    }
+
+    $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
     
 }
 
