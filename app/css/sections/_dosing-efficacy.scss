@@ -122,7 +122,6 @@ $space-mobile-copy: 25px;
             max-height: 350px;
           }
 
-
           .content{
                  h1{
                       @include breakpoint('mobile') {
