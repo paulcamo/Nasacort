@@ -161,7 +161,7 @@ $grey-button:#f8f8f8;
             margin-left: 0;
             @include breakpoint('desktop'){
                 margin-left: 0;
-                padding-top: 35px;
+                padding-top: 36px;
             }
             @include breakpoint('tablet'){
                 margin-left: 0;
@@ -176,8 +176,8 @@ $grey-button:#f8f8f8;
         }
         .underlined {
             background-color: #a4b5cb;
-            margin-top: 18px;
-            margin-left: 0;
+            margin-top: 19px;
+            margin-left: -3px;
             @include breakpoint('desktop'){
                 margin-left: 0;
             }
