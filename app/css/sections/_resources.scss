@@ -162,7 +162,7 @@
                     color:#5a5e5f;
                     width:100%;
                     line-height:22px;
-                    margin-bottom:24px;
+                    margin-bottom:65px;
                 }
             }
         }
@@ -186,18 +186,21 @@
         .resource-container{
             background-color:$color-white;
             width:49%;
-            max-width:472px;
-            padding-left:1.5%;
-            padding-right:1%;
+            max-width:470px;
+            padding: 20px 18px 20px;
             margin-right:#{fluid-percentage($site-max-width, 28)};
             margin-bottom:#{fluid-percentage($site-max-width, 33)};
-            padding-top:20px;
-            padding-bottom:20px;
-            max-height:200px;
+            min-height: 246px;
+            max-height:300px;
             @include border-radius(5px);
             border: 1px solid #c5c7c9;
             float:left;
             position:relative;
+
+            @media screen and (max-width: 1399px) and (min-width: 1025px){
+                height: 246px;
+                max-height: 270px;
+            }
             
             .preview{
                 width:26.38%;
@@ -232,8 +235,8 @@
             }
             .content{
                 width: 70%;
-                margin-left: 3%;
-                width: 95%;
+                //margin-left: 3%;
+                width: 100%;
 
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
@@ -256,7 +259,7 @@
             }
             &.last{
                 margin-right:0;
-                padding-right:0.5%;
+                //padding-right:0.5%;
                 p{
                     width:100%;
                 }
@@ -295,12 +298,9 @@
             width:49%;
             max-width:472px;
             min-height:294px;
-            padding-left:1.5%;
-            padding-right:1%;
+            padding: 20px 19px 17px;
             margin-right:#{fluid-percentage($site-max-width, 28)};
             margin-bottom:#{fluid-percentage($site-max-width, 33)};
-            padding-top:20px;
-            padding-bottom:20px;
             @include border-radius(5px);
             border: 1px solid #c5c7c9;
             float:left;
@@ -325,8 +325,8 @@
 
             }
             .content{
-                width: 95%;
-                margin-left: 3.2%;
+                width: 100%;
+                margin-left: 0;
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
                     font-size:22px;
@@ -409,7 +409,7 @@
 
 .resources-section {
     .preview{
-        margin-bottom: 15%;
+        //margin-bottom: 15%;
     }
     .content{
         /*margin-bottom: 22%;*/
@@ -443,6 +443,8 @@
     .for-your-patients{
         .resource-container{
             min-width:300px;
+            min-height: 200px;
+            height: 202px;
             max-width:100%;
             width:100%;
             max-height:100%;
@@ -576,18 +578,19 @@
             width:100%;
             max-width:100%;
             min-width:100%;
-            padding-left: 3.93%;
-            padding-right: 3.93%;
-            padding-top: 12px;
-            padding-bottom:9px;
-            margin-bottom:21px;
-            margin-right:0;
+            min-height: 100px;
+            height: auto;
+            padding: 10px;
+            padding-left: 92px;
+
             .preview{
-                //padding-bottom: 39%;
-                min-width:68px;
-                min-height: 95px;
-                max-height: 120px;
-                margin-bottom: 0;
+                width:68px;
+                height: 93px;
+                margin: 0;
+                min-height: 93px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
                 &.preview-1{
                     background:url("../img/mobile/resources/resource-thumb-1.png") no-repeat;
                     background-size:contain;
@@ -606,8 +609,11 @@
                 }
             }
             .content{
-                margin-left: 5.11%;
+                margin-left: 0;
                 width: 95%;
+                box-sizing: border-box;
+                padding: 0;
+                
                 h3{
                     font-size:13px;
                 }
@@ -640,12 +646,11 @@
         .resource-container{
             width:100%;
             max-width:100%;
-            padding-left: 3.93%;
-            padding-right: 3.93%;
-            padding-top: 12px;
-            padding-bottom:9px;
-            margin-bottom:21px;
-            min-height:100%;
+            min-width:100%;
+            min-height: 100px;
+            height: auto;
+            padding: 10px;
+            padding-left: 92px;
             &.last{
                 .content{
                     margin-bottom: 0;
@@ -653,14 +658,19 @@
             }
             &.huge{
                  .preview{
-                    min-height: 130px;
-                    margin-bottom: 18%;
+                    //min-height: 130px;
+                    //margin-bottom: 18%;
                 }
             }
             .preview{
                 //padding-bottom: 39%;
-                min-width:68px;
-                min-height: 95px;
+                width:68px;
+                height: 93px;
+                margin: 0;
+                min-height: 93px;
+                position: absolute;
+                top: 10px;
+                left: 10px;
                 &.preview-1{
                     background:url("../img/mobile/resources/resource-thumb-5.png") no-repeat;
                     background-size:contain;
@@ -671,7 +681,8 @@
                 }
             }
             .content{
-                margin-left: 5.11%;
+                margin:0;
+                padding: 0;
                 h3{
                     font-size:13px;
                 }
@@ -778,16 +789,21 @@
     }
 }
 
-@media screen and (max-width: 344px){
-    .download-cta-button{
-        width:160px;
-        float: right;
-    }
+@media screen and (max-width: 330px){
+    .resources-section{
+        .for-your-patients .resource-container{
+            padding-bottom: 49px;
+        }
 
-    .resources-section .for-your-patients .resource-container.last{
-        padding-right: 3.93%;
+        .for-your-practice .resource-container{
+            padding-bottom: 44px;
+        }
+        .download-cta-button{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
     }
-    
 }
 
 

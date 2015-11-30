@@ -24,10 +24,10 @@ function keepAllContainersSameHeight()
     var contentwidth = $(window).width();
     
     $(".for-your-patients .resource-container").each(function(index){
-        $(this).css("height", "auto");
+        //$(this).css("height", "auto");
     });
     $(".for-your-practice .resource-container").each(function(index){
-        $(this).css("height", "auto");
+        //$(this).css("height", "auto");
     });
 
     if(isMobile)
