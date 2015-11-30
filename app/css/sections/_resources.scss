@@ -87,11 +87,11 @@
           margin: auto;
         }
         @include breakpoint('tablet'){
-          max-width: 769px!important;
-          width: 100%;
-          padding-left:40px;
-          padding-right:40px;
-          margin: auto;
+            max-width: 769px!important;
+            width: 100%;
+            padding-left:40px;
+            padding-right:40px;
+            margin: auto;
         }
         h1{
             padding-top:63px;
@@ -201,11 +201,13 @@
             
             .preview{
                 width:26.38%;
-                height:auto;
-                padding-bottom:39.35%;
+                height:160px;
+                //padding-bottom:39.35%;
                 max-height:160px;
                 float:left;
                 max-width:114px;
+                margin-right: 18px;
+
                 &.preview-1{
                     background:url("../img/desktop/resources/resource-thumb-1.png") no-repeat;
                     background-size:contain;
@@ -222,11 +224,17 @@
                     background:url("../img/desktop/resources/resource-thumb-4.png") no-repeat;
                     background-size:contain;
                 }
+
+
+                
+
+
             }
             .content{
                 width: 70%;
                 margin-left: 3%;
-                float:left;
+                width: 95%;
+
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
                     font-size:22px;
@@ -300,11 +308,12 @@
             .preview{
                 width:26.38%;
                 height:auto;
-                padding-bottom:37.25%;
+                //padding-bottom:37.25%;
                 max-height:160px;
                 float:left;
                 max-width:114px;
                 min-height:220px;
+                margin-right: 18px;
                 &.preview-1{
                     background:url("../img/desktop/resources/resource-thumb-5.png") no-repeat;
                     background-size:contain;
@@ -314,19 +323,10 @@
                     background-size:contain;
                 }
 
-
-                // caleb
-                @media screen and (min-width: 1025px) and (max-width: 1399px) {
-                    padding-bottom:70%;
-                }
-
-
-
             }
             .content{
-                width: 70.4%;
+                width: 95%;
                 margin-left: 3.2%;
-                float:left;
                 h3{
                     font-family:Arial, Helvetica, sans-serif;  
                     font-size:22px;
@@ -364,7 +364,6 @@
 .download-cta-button{
     margin: 0;
     width:280px;
-    margin-left: 3%;
     .sympt{
         height:50px;
         width:180px;
@@ -407,7 +406,7 @@
 
 /******************************************************** Media Qeueries **********************************************************/
 
-@include breakpoint('desktop') {
+
 .resources-section {
     .preview{
         margin-bottom: 15%;
@@ -420,28 +419,16 @@
         .resource-container{   
             max-height:100%;  
         }
-    } 
-    .for-your-practice{
-        .resource-container{   
-            @media screen and (max-width: 1110px) {
-                .preview{
-                    margin-bottom: 18%;
-                }
-            }
-        }
     }
     
     .download-cta-button{
          margin-bottom:20px;
-         margin-left: auto;
-         margin-right: auto;
          position:absolute;
          bottom:0;
-         left:0;
-         right:0;
+         
     }
 } 
-}
+
 
 @include breakpoint('tablet') {
 .resources-section {
@@ -460,7 +447,7 @@
             width:100%;
             max-height:100%;
             .preview{
-                padding-bottom:29.35%;
+                //padding-bottom:29.35%;
             }
             .content{
                 margin-bottom:0;
@@ -479,8 +466,7 @@
             max-width:100%;
             width:100%;
             .preview{
-                
-                padding-bottom:29.35%;
+                //padding-bottom:29.35%;
             }
             .content{
                 margin-bottom:0;
@@ -508,12 +494,6 @@
     }
     .download-cta-button{
          margin-bottom:20px;
-         margin-left: auto;
-         margin-right: auto;
-         position:absolute;
-         bottom:0;
-         left:3.2%;
-         right:0;
          min-width:280px;
     }
 } 
@@ -603,9 +583,11 @@
             margin-bottom:21px;
             margin-right:0;
             .preview{
-                padding-bottom: 39%;
+                //padding-bottom: 39%;
                 min-width:68px;
                 min-height: 95px;
+                max-height: 120px;
+                margin-bottom: 0;
                 &.preview-1{
                     background:url("../img/mobile/resources/resource-thumb-1.png") no-repeat;
                     background-size:contain;
@@ -625,7 +607,7 @@
             }
             .content{
                 margin-left: 5.11%;
-                width: 67%;
+                width: 95%;
                 h3{
                     font-size:13px;
                 }
@@ -674,14 +656,9 @@
                     min-height: 130px;
                     margin-bottom: 18%;
                 }
-                .download-cta-button{
-                    @include breakpoint('mobile') {
-                        //margin-left:31.49%;
-                    }
-                }
             }
             .preview{
-                padding-bottom: 39%;
+                //padding-bottom: 39%;
                 min-width:68px;
                 min-height: 95px;
                 &.preview-1{
@@ -695,7 +672,6 @@
             }
             .content{
                 margin-left: 5.11%;
-                width: 67%;
                 h3{
                     font-size:13px;
                 }
@@ -713,10 +689,8 @@
     .download-cta-button{
         margin: 0;
         width:177px;
-        margin-left: 5.11%;
-         @media screen and (max-width: 320px) {
-            margin-left: 31.49%;
-         }
+        position: static;
+
         .sympt{
             height:35px;
             width:100px;
@@ -798,6 +772,22 @@
         }
 
     }
+
+    .download-cta-button{
+        position: static;
+    }
+}
+
+@media screen and (max-width: 344px){
+    .download-cta-button{
+        width:160px;
+        float: right;
+    }
+
+    .resources-section .for-your-patients .resource-container.last{
+        padding-right: 3.93%;
+    }
+    
 }
 
 
