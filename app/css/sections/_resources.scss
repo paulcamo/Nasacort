@@ -313,6 +313,15 @@
                     background:url("../img/desktop/resources/resource-thumb-6.png") no-repeat;
                     background-size:contain;
                 }
+
+
+                // caleb
+                @media screen and (min-width: 1025px) and (max-width: 1399px) {
+                    padding-bottom:70%;
+                }
+
+
+
             }
             .content{
                 width: 70.4%;
