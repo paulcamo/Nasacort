@@ -582,6 +582,7 @@
             height: auto;
             padding: 10px;
             padding-left: 92px;
+            margin-bottom: 20px;
 
             .preview{
                 width:68px;
@@ -647,10 +648,11 @@
             width:100%;
             max-width:100%;
             min-width:100%;
-            min-height: 100px;
+            min-height: 115px;
             height: auto;
             padding: 10px;
             padding-left: 92px;
+            margin-bottom: 20px;
             &.last{
                 .content{
                     margin-bottom: 0;
@@ -796,7 +798,7 @@
         }
 
         .for-your-practice .resource-container{
-            padding-bottom: 44px;
+            padding-bottom: 64px;
         }
         .download-cta-button{
             position: absolute;
