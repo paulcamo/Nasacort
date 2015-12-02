@@ -80,10 +80,14 @@ function changeImageSrc()
      {
          newPath = $(".graphic-container .graphic").attr("src").replace("desktop", "mobile");
          $(".graphic-container .graphic").attr("src", newPath);
+         newPath = $(".graph #panel_1 .chart img").attr("src").replace("desktop", "mobile");
+         $(".graph #panel_1 .chart img").attr("src", newPath);
      }else
      {
          newPath = $(".graphic-container .graphic").attr("src").replace("mobile", "desktop");
          $(".graphic-container .graphic").attr("src", newPath);
+         newPath = $(".graph #panel_1 .chart img").attr("src").replace("mobile", "desktop");
+         $(".graph #panel_1 .chart img").attr("src", newPath);
      }
 }
 

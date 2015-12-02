@@ -262,9 +262,29 @@
       #panel_1 {
         .line1{
           left: 0%;
+          @include breakpoint('mobile'){
+              background-color:transparent;
+          }
         }
         .line2{
           left: -65%;
+           @include breakpoint('mobile'){
+              background-color:transparent;
+          }
+        }
+        .chart{
+            @include breakpoint('mobile'){
+                background-color:transparent;
+                width:245px;
+                height:110px;
+                margin-top:15px;
+            }
+            img{
+                @include breakpoint('mobile'){
+                    height:94px;
+                    width:245px;
+                }
+            }
         }
       }
       #panel_2{
