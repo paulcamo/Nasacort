@@ -6,10 +6,15 @@ var contentwidth = 0;
 
 var wasFirstAnimationShowed = false;
 var wasSecondAnimationShowed = false;
+var isMobile;
+var breakpoint_mobile = '320px';
+var breakpoint_mobile_max = '768px';
+var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
 
 document.body.scrollTop = document.documentElement.scrollTop = 0;
 
 $(document).ready(function(){
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     contentwidth = $(window).width();
     changeImageSrc();
     moveSuperScriptGraphic();

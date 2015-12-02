@@ -391,7 +391,7 @@
       margin-top: 0;
       @include breakpoint('mobile'){
         margin-bottom: 10px;
-        padding-left: 13px;
+        padding-left: 0px;
         padding-right: 13px;
       }
     }
@@ -911,7 +911,7 @@
         @include breakpoint('mobile'){
           margin-bottom: 6px;
           margin-top: 23px;
-          padding-left: 5px;
+          padding-left: 0px;
           padding-right: 5px;    
 
         }
@@ -920,7 +920,9 @@
         margin-bottom: 24px;
           padding-left: 5px;
           padding-right: 5px;
-
+        @include breakpoint('mobile'){
+            padding-left:0;
+        }
       }
       .graphic{
           width:100%;

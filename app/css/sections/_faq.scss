@@ -74,7 +74,7 @@ p{
         }
         @include breakpoint('mobile'){
             max-width: 100%!important;
-            padding-left:32px;
+            padding-left:25px;
             padding-right:20px;
         }
     }
@@ -342,7 +342,7 @@ p{
     border: 0;
     @include breakpoint('mobile'){
         border: none;
-        padding: 9px 19px 0 30px;
+        padding: 9px 19px 0 17px;
     }
 }
 
