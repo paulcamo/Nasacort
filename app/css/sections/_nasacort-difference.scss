@@ -365,7 +365,7 @@
       //max-width:209px;
       min-width:200px;
       height:53px;
-      right:48px !important;
+      right:24px !important;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -837,7 +837,7 @@
         width: 29.5%;
       }
       @include breakpoint('mobile'){
-        right: 50px;
+        right: 24px;
         top: 43px;
         width: 27.7%;
       }

@@ -48,7 +48,7 @@ function remove_brand_bg(nn) {
 $(document).ready(function(){
 
     set_checks("clear");
-    
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     changeImageSrc();
     keepTDsameWidthArrow();
     addMouseOverStates();
