@@ -7,7 +7,7 @@ var contentwidth = 0;
 var wasFirstAnimationShowed = false;
 var wasSecondAnimationShowed = false;
 var isMobile;
-var breakpoint_mobile = '320px';
+var breakpoint_mobile = '300px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
 
@@ -27,15 +27,19 @@ $(document).ready(function(){
     {
         resetSecondGraphic();
     }
-    
+
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
+
     if(isMobile)
     {
         setFirstGraphicAsMobile();
         setSecondGraphicAsMobile();
     }else
     {
+        setFirstGraphicAsDesktop();
+        setSecondGraphicAsDesktop();
         initWayPoint();
-    } 
+    }
 });
 
 $(window).bind("resize", function(){
@@ -43,6 +47,8 @@ $(window).bind("resize", function(){
     contentwidth = $(window).width();
     changeImageSrc();
     moveSuperScriptGraphic();
+
+    isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     
     if(isMobile)
     {
