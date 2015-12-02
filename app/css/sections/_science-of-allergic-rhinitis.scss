@@ -486,7 +486,8 @@
           padding-right:40px;
         }
         @include breakpoint('mobile'){
-          padding-left: 25px;
+          padding-left: 0;
+            padding-right: 0;
         }
         h2{
           margin-bottom: 30px;
@@ -846,7 +847,7 @@
         @include breakpoint('mobile'){
           display: block;
           margin: 0 auto 9px;
-          width: 100%;
+          width: 80%;
         }
       }
       h2{
