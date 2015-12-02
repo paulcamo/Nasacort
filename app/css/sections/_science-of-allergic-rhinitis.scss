@@ -321,9 +321,25 @@
             height: 45px;
           }
         }
+        
+        .chart{
+            @include breakpoint('mobile'){
+                background-color:transparent;
+            }
+            img{
+                @include breakpoint('mobile'){
+                    margin-top:15px;
+                    width:244px;
+                    height:97px;
+                }
+            }
+        }
 
         .line1{
-          left:0%
+          left:0%;
+          @include breakpoint('mobile'){
+              background-color:transparent;
+          }
         }
         .line2{
           height: 30px;
