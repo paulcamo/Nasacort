@@ -263,8 +263,15 @@ $space-mobile-copy: 25px;
       width: 31.44%;
       max-height: 219px;
       max-width: 316px;
-      padding-bottom:22%;;
+      padding-bottom:22%;
       background-size: 100%;
+
+      @include breakpoint("mobile") {
+        max-width: 100%;
+
+      }
+
+
       &:hover{
           background:url("../img/desktop/dosingEfficacy/label-btn-hover.png")no-repeat top center;
           background-size: contain;
@@ -316,8 +323,10 @@ $space-mobile-copy: 25px;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:90% !important;
-        padding-right:0 !important;
+        width:100% !important;
+        margin-left: -15px !important;
+        padding-left: 15px !important;
+        padding-right:15px !important;
     }
   }
   .second-Title-dosing{
@@ -640,6 +649,15 @@ $space-mobile-copy: 25px;
             margin-right:0;
             padding-left:8%;
             padding-right:8%;
+
+          @media screen and (min-width: 1px) and (max-width: 768px) {
+            padding-left:0;
+            padding-right:0;
+          }
+
+
+
+
             h2{
                 margin-top: 18px;
                 margin-bottom: 2px;
@@ -657,15 +675,26 @@ $space-mobile-copy: 25px;
                     width: 100%;
                     display:block;
                     margin-bottom:16px;
+
+                  @include breakpoint("mobile") {
+                    max-width: 100%;
+
+                  }
+
+
                 }
                 .label-information{
                     background:url("../img/mobile/dosingEfficacy/label-btn.png") no-repeat;
                     background-size:100%;
                     max-height: 296px;
-                    max-width: 547px;
                     padding-bottom: 54.1133%;
                     width: 100%;
                     display:block;
+
+                  @include breakpoint("desktop") {
+                    max-width: 547px;
+                  }
+
                 }
             }
         }
@@ -697,6 +726,13 @@ $space-mobile-copy: 25px;
             margin-top:12px;
             margin-bottom: 9px;
             width:96%;
+
+          @include breakpoint("mobile") {
+            padding: 0;
+          }
+
+
+
         }
         .chart-1{
             background-color:$color-white;
@@ -717,9 +753,9 @@ $space-mobile-copy: 25px;
                 margin-bottom: 2px;
             }
             .notes{
-                 margin-left:8% !important;
+                 margin-left: 0% !important;
                  line-height: 12px;
-                 width: 85%;
+                 width: 100%;
                  font-size: 10px;
                  float:left;
             }
@@ -897,13 +933,13 @@ $space-mobile-copy: 25px;
      @include breakpoint('mobile') {
          background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
          height: auto;
-         max-width: 601px;
+         max-width: 700px;
          min-width:300px;
-         padding-bottom: 81%;
-         width: 94%;
+         padding-bottom: 109%;
+         width: 112%;
          background-size:contain;
          margin-bottom:16px;
-         margin-left:4.2%;
+         margin-left: -12px;
          margin-right:4.2%;
      }
     .graph-header{
