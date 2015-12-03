@@ -797,7 +797,7 @@ $space-mobile-copy: 25px;
           margin-bottom: 10px;
           @include breakpoint('mobile') {
             min-width:100%;
-            max-height:333px;
+            max-height: 100%;
             margin-left:0;
             margin-right:0;
             max-width: 73.75%;
@@ -962,7 +962,7 @@ $space-mobile-copy: 25px;
     max-width: 700px;
     min-width:300px;
     padding-bottom: 109%;
-    width: 112%;
+    width: 103%;
     background-size:contain;
     margin-bottom:16px;
     margin-left: -12px;
