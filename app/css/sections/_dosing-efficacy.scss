@@ -323,8 +323,10 @@ $space-mobile-copy: 25px;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:90% !important;
-        padding-right:0 !important;
+        width:100% !important;
+        margin-left: -15px !important;
+        padding-left: 15px !important;
+        padding-right:15px !important;
     }
   }
   .second-Title-dosing{
