@@ -728,6 +728,9 @@
          margin-left: 7.8125%;
         margin-right: 7.8125%;
       }   
+       @media screen and (max-width: 768px) {
+          background-size:contain;
+       }
       &:hover{
         background:url("../img/desktop/science-of-allergic-rhinitis/callout-bg-hover.png") no-repeat;
         @include breakpoint('desktop'){
@@ -742,10 +745,18 @@
         }
         @include breakpoint('mobile'){
           background:url("../img/mobile/science-of-allergic-rhinitis/callout-bg.png") no-repeat;
-          background-size:contain;
-          width:100%;
-          background-position: center;
+          background-size:100%;
+         width:84.37%;
+         min-height: 155px;
+         padding-bottom:0;
+         background-position: center;
+         margin-top: 23px;
+         margin-left: 7.8125%;
+        margin-right: 7.8125%;
         }
+        @media screen and (max-width: 768px) {
+          background-size:contain;
+       }
       }
     }
     .right-align{
