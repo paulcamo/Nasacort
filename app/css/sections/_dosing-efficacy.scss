@@ -9,44 +9,44 @@ $space-mobile-copy: 25px;
 .content-dosing-and-efficacy{
   position: relative;
   overflow: hidden;
-    @include breakpoint('desktop'){
-
-      .push-content{
-        margin-top: 40px;
-      }
-
-      .use-directed.use-directed-last{
-        margin-bottom: 8px;
-      }
-
-    }  
-  @include breakpoint('mobile') {
-      
-      padding-left: $space;
-      padding-right: $space;
-  }
-
- .inner-dosing{
-  padding-left:211px;
-  padding-right:200px;
   @include breakpoint('desktop'){
-    max-width: 920px!important;
-    padding-left:0;
-    padding-right:0;
+
+    .push-content{
+      margin-top: 40px;
+    }
+
+    .use-directed.use-directed-last{
+      margin-bottom: 8px;
+    }
+
   }
-  @include breakpoint('tablet'){
-    max-width: 769px!important;
-    padding-left:40px;
-    padding-right:40px;
+  @include breakpoint('mobile') {
+
+    padding-left: $space;
+    padding-right: $space;
   }
-  @include breakpoint('mobile'){
-    max-width: 100% !important;
-    min-height: 27px;
-    padding-left: 0px;
-    padding-right: 0px;
+
+  .inner-dosing{
+    padding-left:211px;
+    padding-right:200px;
+    @include breakpoint('desktop'){
+      max-width: 920px!important;
+      padding-left:0;
+      padding-right:0;
+    }
+    @include breakpoint('tablet'){
+      max-width: 769px!important;
+      padding-left:40px;
+      padding-right:40px;
+    }
+    @include breakpoint('mobile'){
+      max-width: 100% !important;
+      min-height: 27px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
   }
- }
-  
+
   .use-directed{
     margin-bottom: 5px;
     margin-top: 5px;
@@ -74,75 +74,75 @@ $space-mobile-copy: 25px;
     color:$color-cyan-text;
   }
   h1{
-      width:55%;
-      padding-top:65px;
+    width:55%;
+    padding-top:65px;
   }
   .last-p{
-      margin-top:26px;
-      margin-bottom: 15px;
-      @media screen and (max-width: 1210px) {
-          margin-bottom:110px;
-      }
+    margin-top:26px;
+    margin-bottom: 15px;
+    @media screen and (max-width: 1210px) {
+      margin-bottom:110px;
+    }
   }
   h2{
-      margin-top: 42px;
-      margin-bottom:0;
+    margin-top: 42px;
+    margin-bottom:0;
   }
-  
+
 }
 
 .dosing-and-efficacy-section{
-    .ncontainer{
-        .hero-banner{
-            height:443px;
-            background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
-             @media screen and (max-width: 1063px) {
-                 height:auto;
-                 padding-bottom: 22.3333% !important;
-             }
-             @media screen and (max-width: 768px){
-                  background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
-                 height:223px;
-                 padding-bottom: 0 !important;
-                 max-height: 233px;
-                 background-position: 77% -14px !important;
-             }
-             @media screen and (max-width: 400px) {
-                background-position: 70% -14px !important;
-             }
-             @media screen and (max-width: 320px) {
-                background-position: 73% -14px !important;
-             }
-
-
-          @media screen and (min-width: 768px) and (max-width: 1023px) {
-            margin-top: 30px;
-            height: auto;
-            min-height: 250px;
-            max-height: 350px;
-          }
-
-          .content{
-                 h1{
-                      @include breakpoint('mobile') {
-                         width:100%;
-                     }
-                 }
-             }
-        }
-    }
-    .first-container{
-          margin-bottom: -56px;
-          @media screen and (max-width: 1063px) {
-              margin-bottom: 0;
-          }
-          @include breakpoint('mobile') {
-            margin-bottom: -62px;
-          }
+  .ncontainer{
+    .hero-banner{
+      height:443px;
+      background:url("../img/desktop/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+      @media screen and (max-width: 1063px) {
+        height:auto;
+        padding-bottom: 22.3333% !important;
       }
+      @media screen and (max-width: 768px){
+        background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
+        height:223px;
+        padding-bottom: 0 !important;
+        max-height: 233px;
+        background-position: 77% -14px !important;
+      }
+      @media screen and (max-width: 400px) {
+        background-position: 70% -14px !important;
+      }
+      @media screen and (max-width: 320px) {
+        background-position: 73% -14px !important;
+      }
+
+
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        margin-top: 30px;
+        height: auto;
+        min-height: 250px;
+        max-height: 350px;
+      }
+
+      .content{
+        h1{
+          @include breakpoint('mobile') {
+            width:100%;
+          }
+        }
+      }
+    }
+  }
+  .first-container{
+    margin-bottom: -56px;
+    @media screen and (max-width: 1063px) {
+      margin-bottom: 0;
+    }
+    @include breakpoint('mobile') {
+      margin-bottom: -62px;
+    }
+  }
 }
 
-    
+
 
 
 .hero-dosing-and-efficacy{
@@ -159,55 +159,55 @@ $space-mobile-copy: 25px;
 }
 
 .dosing-information{
-    
+
   h2{
     font-size: 34px;
     line-height: 39px;
     margin: 0;
   }
   p{
-    margin-top:23px; 
+    margin-top:23px;
   }
   .use-directed{
-      margin-top: -9px;
-      margin-bottom: 8px;
+    margin-top: -9px;
+    margin-bottom: 8px;
   }
-  
+
   .img-chart{
     display: block;
     width: 100%;
-    text-align: center; 
+    text-align: center;
     .graphic-superscript{
-        .button{
-            left:73.21%;
-            @include breakpoint('mobile'){
-                 left:87.74%;
-            }
+      .button{
+        left:73.21%;
+        @include breakpoint('mobile'){
+          left:87.74%;
         }
+      }
     }
     img{
-        //margin-left: 7px;
-        max-width: 814px;
-        width: 100%;
-        @include breakpoint('desktop') {
-            width:100%;
-            max-width:814px;
-        }
-        @include breakpoint('tablet') {
-            width:100%;
-            max-width:814px;
-        }
-        @include breakpoint('mobile') {
-            
-            max-width: 604px;
-            min-width: 100%;
-            margin-left:0;
-            margin-right:0;
-        }
+      //margin-left: 7px;
+      max-width: 814px;
+      width: 100%;
+      @include breakpoint('desktop') {
+        width:100%;
+        max-width:814px;
+      }
+      @include breakpoint('tablet') {
+        width:100%;
+        max-width:814px;
+      }
+      @include breakpoint('mobile') {
+
+        max-width: 604px;
+        min-width: 100%;
+        margin-left:0;
+        margin-right:0;
+      }
     }
   }
   .footnote{
-      margin-top: -94px;
+    margin-top: -94px;
   }
 }
 
@@ -218,17 +218,17 @@ $space-mobile-copy: 25px;
   overflow:hidden;
   position: relative;
   padding-bottom:44px;
-  
+
   h2{
-      margin-bottom:14px;
+    margin-bottom:14px;
   }
-  
+
   .content-dosing-and-efficacy{
-      padding-left: #{fluid-percentage($site-max-width, 210)};
-      padding-right: #{fluid-percentage($site-max-width, 186)};
+    padding-left: #{fluid-percentage($site-max-width, 210)};
+    padding-right: #{fluid-percentage($site-max-width, 186)};
   }
   p{
-      margin-bottom:14px;
+    margin-bottom:14px;
   }
   @include breakpoint('desktop') {
     height:auto;
@@ -241,8 +241,8 @@ $space-mobile-copy: 25px;
   @include breakpoint('mobile') {
     padding-bottom:27px;
   }
-  
-  
+
+
   .video-control{
     .video-intial{
       background:url("../img/desktop/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat top center;
@@ -253,7 +253,7 @@ $space-mobile-copy: 25px;
       display:inline-block;
       float:left;
       max-height: 218px;
-      background-size: 100%;    
+      background-size: 100%;
     }
     .label-information{
       background:url("../img/desktop/dosingEfficacy/label-btn.png")no-repeat top center;
@@ -273,41 +273,41 @@ $space-mobile-copy: 25px;
 
 
       &:hover{
-          background:url("../img/desktop/dosingEfficacy/label-btn-hover.png")no-repeat top center;
-          background-size: contain;
-          width: 31.4427%;
-          height: auto;
+        background:url("../img/desktop/dosingEfficacy/label-btn-hover.png")no-repeat top center;
+        background-size: contain;
+        width: 31.4427%;
+        height: auto;
       }
     }
   }
 }
 
 .charts-dosingInner{
-    padding-top:43px;
-    @include breakpoint('mobile') {
-        margin-left:0 !important;
-        margin-right:0 !important;
-    }
+  padding-top:43px;
+  @include breakpoint('mobile') {
+    margin-left:0 !important;
+    margin-right:0 !important;
+  }
   h3{
     line-height: 61px;
     padding-left: 33px;
     border-radius: 3px;
     font-size: 34px;
     text-transform: none;
-     @include breakpoint('desktop') {
-        line-height: 32px;
-        padding-bottom: 10px;
-        padding-top: 10px;
+    @include breakpoint('desktop') {
+      line-height: 32px;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
     @include breakpoint('tablet') {
-        line-height: 32px;
-        padding-bottom: 10px;
-        padding-top: 10px;
+      line-height: 32px;
+      padding-bottom: 10px;
+      padding-top: 10px;
     }
     @include breakpoint('mobile') {
-        width:89% !important;
-        padding-right:0 !important;
-        margin-left:7px;
+      width:89% !important;
+      padding-right:0 !important;
+      margin-left:7px;
     }
   }
   .parr-inner-dosing{
@@ -323,10 +323,10 @@ $space-mobile-copy: 25px;
     color:$color-white;
     width:99%;
     @include breakpoint('mobile') {
-        width:100% !important;
-        margin-left: -15px !important;
-        padding-left: 15px !important;
-        padding-right:15px !important;
+      width:100% !important;
+      margin-left: -15px !important;
+      padding-left: 15px !important;
+      padding-right:15px !important;
     }
   }
   .second-Title-dosing{
@@ -350,167 +350,168 @@ $space-mobile-copy: 25px;
   img{
     margin-bottom: 37px;
     margin-left:36px;
-     @include breakpoint('desktop') {
-         width:100%;
-     }
-     @include breakpoint('tablet') {
-         width:100%;
-     }
+    @include breakpoint('desktop') {
+
+      width:100%;
+    }
+    @include breakpoint('tablet') {
+      width:100%;
+    }
   }
   .chart-text-inner{
     padding: 0 33px;
     margin-top:25px;
     margin-bottom: 54px;
   }
-  
+
   .chart-1{
-        padding-bottom:34px;
-        @media screen and (max-width: 1210px) {
-          padding-bottom:66px;
-        }
-        .footnote{
-            margin-top:-76px;
-            @media screen and (max-width: 1210px) {
-                margin-top:15px;
-            }
-        }
-        .graphic-superscript{
-            max-width: 1003px;
-            margin-left:36px;
-            width:100%;
-            .button{
-                width:20px;
-                left:92.92%;
-                @include breakpoint('mobile') {
-                    left:73.57%;
-                }
-            }
-             @include breakpoint('mobile') {
-                margin-left:9px;
-                max-width: 601px;
-                width:93.75%;
-            }
-        }
-        .superscript-2{
-            .button{
-                width:10px;
-                left:19.74%;
-                @include breakpoint('mobile') {
-                    left:32.77%;
-                }
-            }
-             .button-2{
-                width:10px;
-                left:52.3%;
-                @include breakpoint('mobile') {
-                    left:82%;
-                }
-            }
-        }
-        img{
-            margin-bottom:30px;
-        }
-        .notes{
-            margin-left: 37px !important;
-              
-        }
-        .use-directed{
-            margin-top:0;
-        }
+    padding-bottom:34px;
+    @media screen and (max-width: 1210px) {
+      padding-bottom:66px;
     }
-    .chart-2{
-        padding-bottom:37px;
-        h3{
-            margin-bottom:0;
-            line-height: 58px;
-            padding-top: 0px;
-            @include breakpoint('desktop') {
-                line-height:32px;
-                padding-top:10px;
-            }
-            @include breakpoint('tablet') {
-                line-height:32px;
-                padding-bottom:10px;
-                padding-top:10px;
-            }
-        }
-        .chart-text-inner{
-            margin-bottom:28px;
-        }
-        .footnote{
-            margin-top:-88px;
-             @media screen and (max-width: 1210px) {
-                margin-top:0;
-
-               @media screen and (width: 768px) {
-                 margin-top: 420px;
-               }
-
-
-
-             }
-        }
-        img{
-            margin-left:152px;
-            margin-right:116px;
-            margin-bottom:0;
-            max-width: 736px;
-            @include breakpoint('desktop') {
-                margin-left:80px;
-            }
-            @include breakpoint('tablet') {
-                margin-left:0;
-            }
-            
-        }
-        .notes{
-            margin-left:36px !important;
-        }
+    .footnote{
+      margin-top:-76px;
+      @media screen and (max-width: 1210px) {
+        margin-top:15px;
+      }
     }
-    .chart-3{
-        
-        h3{
-            margin-bottom: 23px;
-            br{
-                display:none;
-                @include breakpoint('mobile') {
-                    display:block;
-                }
-            }
+    .graphic-superscript{
+      max-width: 1003px;
+      margin-left:36px;
+      width:100%;
+      .button{
+        width:20px;
+        left:92.92%;
+        @include breakpoint('mobile') {
+          left:73.57%;
         }
-        
-        .notes{
-            @media screen and (max-width: 1210px) {
-                  margin-bottom:60px !important;
-              }
-              @include breakpoint('mobile') {
-                    margin-bottom:4px !important;
-                }
-        }
-        
-        .second-content-dosing{
-            margin-bottom: 24px;
-            p{
-                margin-bottom:20px;
-            }
-        }
-        .footnote{
-             margin-top: -76px;
-              @media screen and (max-width: 1210px) {
-                  margin-top: -48px;
-              }
-        }
-        /*.animation{
-            margin-top:-154px;
-        }*/
-        .use-directed{
-            margin-top:13px;
-            margin-bottom:8px;
-        }
-        img{
-            margin-left: 33px;
-        }
+      }
+      @include breakpoint('mobile') {
+        margin-left:9px;
+        max-width: 601px;
+        width:93.75%;
+      }
     }
+    .superscript-2{
+      .button{
+        width:10px;
+        left:19.74%;
+        @include breakpoint('mobile') {
+          left:32.77%;
+        }
+      }
+      .button-2{
+        width:10px;
+        left:52.3%;
+        @include breakpoint('mobile') {
+          left:82%;
+        }
+      }
+    }
+    img{
+      margin-bottom:30px;
+    }
+    .notes{
+      margin-left: 37px !important;
+
+    }
+    .use-directed{
+      margin-top:0;
+    }
+  }
+  .chart-2{
+    padding-bottom:37px;
+    h3{
+      margin-bottom:0;
+      line-height: 58px;
+      padding-top: 0px;
+      @include breakpoint('desktop') {
+        line-height:32px;
+        padding-top:10px;
+      }
+      @include breakpoint('tablet') {
+        line-height:32px;
+        padding-bottom:10px;
+        padding-top:10px;
+      }
+    }
+    .chart-text-inner{
+      margin-bottom:28px;
+    }
+    .footnote{
+      margin-top:-88px;
+      @media screen and (max-width: 1210px) {
+        margin-top:0;
+
+        @media screen and (width: 768px) {
+          margin-top: 420px;
+        }
+
+
+
+      }
+    }
+    img{
+      margin-left:152px;
+      margin-right:116px;
+      margin-bottom:0;
+      max-width: 736px;
+      @include breakpoint('desktop') {
+        margin-left:80px;
+      }
+      @include breakpoint('tablet') {
+        margin-left:0;
+      }
+
+    }
+    .notes{
+      margin-left:36px !important;
+    }
+  }
+  .chart-3{
+
+    h3{
+      margin-bottom: 23px;
+      br{
+        display:none;
+        @include breakpoint('mobile') {
+          display:block;
+        }
+      }
+    }
+
+    .notes{
+      @media screen and (max-width: 1210px) {
+        margin-bottom:60px !important;
+      }
+      @include breakpoint('mobile') {
+        margin-bottom:4px !important;
+      }
+    }
+
+    .second-content-dosing{
+      margin-bottom: 24px;
+      p{
+        margin-bottom:20px;
+      }
+    }
+    .footnote{
+      margin-top: -76px;
+      @media screen and (max-width: 1210px) {
+        margin-top: -48px;
+      }
+    }
+    /*.animation{
+        margin-top:-154px;
+    }*/
+    .use-directed{
+      margin-top:13px;
+      margin-bottom:8px;
+    }
+    img{
+      margin-left: 33px;
+    }
+  }
   .inner-charts{
     .notes{
       font-size: 12px;
@@ -537,922 +538,973 @@ $space-mobile-copy: 25px;
 }
 
 @include breakpoint('tablet') {
-    .dosing-and-efficacy-section{
-        .dosing-information{
-            top:0;
-        }
+  .dosing-and-efficacy-section{
+    .dosing-information{
+      top:0;
     }
+  }
 }
 
 
 @include breakpoint('mobile') {
-.dosing-and-efficacy-section{
+  .dosing-and-efficacy-section{
 
-  p.use-directed.use-directed-dose-1{
-    margin-top: 1px;
-  }
-    
+    p.use-directed.use-directed-dose-1{
+      margin-top: 1px;
+    }
+
     .content-dosing-and-efficacy{
-        .use-directed{
-            right:0;
-            text-align:left;
-            width:100%;
-            float:left;
-            font-size:10px;
-        }
-    }
-    
-    
-    .hero-dosing-and-efficacy{
-        background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat;
+      .use-directed{
+        right:0;
+        text-align:left;
         width:100%;
-        background-size:100%;
-        height: auto;
-        max-height: 350px;
-        min-height: 175px;
-        min-width: 320px;
-        padding-bottom: 54.531%;
-        .img-womn{
-            min-width:155px;
-            min-height:185px;
-            max-width:311px;
-            right: 2.5%;
-            top: 7.59%;
-            width:48.5937%;
-        }
+        float:left;
+        font-size:10px;
+      }
     }
-    
+
+
+    .hero-dosing-and-efficacy{
+      background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat;
+      width:100%;
+      background-size:100%;
+      height: auto;
+      max-height: 350px;
+      min-height: 175px;
+      min-width: 320px;
+      padding-bottom: 54.531%;
+      .img-womn{
+        min-width:155px;
+        min-height:185px;
+        max-width:311px;
+        right: 2.5%;
+        top: 7.59%;
+        width:48.5937%;
+      }
+    }
+
     .dosing-information{
-         padding-top: 26px;
-         overflow:visible;
-         float:left;
-         height:auto;
-         padding-bottom:6px;
-         
-        .img-chart{
-            img{
-                width:100%;
-                margin-bottom:-3px;
-            }
-            @include breakpoint('tablet') {
-                img{
-                    width:100%;
-                }
-            }
-            @include breakpoint('desktop') {
-                img{
-                    max-width: 814px;
-                }
-            }
+      padding-top: 26px;
+      overflow:visible;
+      float:left;
+      height:auto;
+      padding-bottom:6px;
+
+      .img-chart{
+        img{
+          width:100%;
+          margin-bottom:-3px;
         }
-         h2{
-            font-size: 17px;
-            line-height: 24px;
-            margin: 0;
+        @include breakpoint('tablet') {
+          img{
+            width:100%;
+          }
+        }
+        @include breakpoint('desktop') {
+          img{
+            max-width: 814px;
+          }
+        }
+      }
+      h2{
+        font-size: 17px;
+        line-height: 24px;
+        margin: 0;
+        margin-left:0;
+        &.last-h2{
+          margin-top:0px;
+          width:70%;
+          br{
+            display:none;
+            @include breakpoint('mobile') {
+              display:block;
+            }
+          }
+        }
+      }
+      p{
+        margin-top:2px;
+        margin-left:0;
+        margin-right: 0;
+        margin-bottom:20px;
+        &.last-p{
+          margin-top:6px;
+          margin-bottom:3px;
+        }
+      }
+      .footnote {
+        margin-top: 0;
+      }
+      .use-directed{
+        margin-bottom:0;
+        margin-top: 6px;
+      }
+    }
+
+    .video-sect-dosing{
+      height: auto;
+      padding-bottom:0;
+      .content-dosing-and-efficacy{
+        padding-bottom:30px;
+        margin-left:0;
+        margin-right:0;
+        padding-left:8%;
+        padding-right:8%;
+
+        @media screen and (min-width: 1px) and (max-width: 768px) {
+          padding-left:0;
+          padding-right:0;
+        }
+
+
+
+
+        h2{
+          margin-top: 18px;
+          margin-bottom: 2px;
+        }
+        p{
+          margin-bottom:9px;
+        }
+        .video-control{
+          .video-intial{
+            background:url("../img/mobile/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat;
+            background-size:100%;
+            max-height: 296px;
+            max-width: 543px;
+            padding-bottom: 54.5119%;
+            width: 100%;
+            display:block;
+            margin-bottom:16px;
+
+            @include breakpoint("mobile") {
+              max-width: 100%;
+
+            }
+
+
+          }
+          .label-information{
+            background:url("../img/mobile/dosingEfficacy/label-btn.png") no-repeat;
+            background-size:100%;
+            max-height: 296px;
+            padding-bottom: 54.1133%;
+            width: 100%;
+            display:block;
+
+            @include breakpoint("desktop") {
+              max-width: 547px;
+            }
+
+          }
+        }
+      }
+    }
+
+    .charts-dosingInner{
+      margin-left: $space;
+      margin-right: $space;
+      padding-left:0;
+      padding-right:0;
+      padding-top: 26px;
+      float:left;
+      .use-directed{
+        margin-left:$space-mobile-copy;
+      }
+      h3{
+        line-height:30px;
+        font-size:17px;
+        padding-left:$space-mobile-copy;
+        padding-right:$space-mobile-copy;
+        margin-left:9px;
+
+        @include breakpoint('pp-mobile') {
+          width: 105% !important;
+
+        }
+
+        @include breakpoint('mobile') {
+          //margin-left:0;
+
+
+          padding-left: 12px;
+          margin-left: -12px;
+          width: 100% !important;
+
+
+        }
+
+
+
+
+      }
+      .chart-text-inner{
+        padding-left:$space-mobile-copy;
+        padding-right:$space-mobile-copy;
+        margin-top:12px;
+        margin-bottom: 9px;
+        width:96%;
+
+        @include breakpoint("mobile") {
+          padding: 0;
+        }
+
+
+
+      }
+      .chart-1{
+        background-color:$color-white;
+        float:left;
+        height:auto;
+        padding-bottom: 3px;
+        img{
+          width:93.75%;
+          max-width:601px;
+          max-height:615px;
+          min-width:300px;
+          margin-left: 9px;
+          margin-bottom: 11px;
+
+        }
+        .footnote{
+          margin-top:7px;
+          margin-bottom: 2px;
+        }
+        .notes{
+          margin-left: 0% !important;
+          line-height: 12px;
+          width: 100%;
+          font-size: 10px;
+          float:left;
+        }
+      }
+      .chart-2{
+        float:left;
+        height:auto;
+        padding-bottom: 0px;
+        h3{
+          padding-bottom: 6px;
+          padding-top: 6px;
+          line-height: 22px;
+          margin-bottom: 15px;
+        }
+        img{
+          width:93.75%;
+          max-width:594px;
+          max-height:420px;
+          min-width:297px;
+          margin-left: 9px;
+          margin-bottom: 10px;
+          @include breakpoint('mobile') {
+            min-width:100%;
+            max-height:333px;
             margin-left:0;
-            &.last-h2{
-                margin-top:0px;
-                width:70%;
-                br{
-                    display:none;
-                        @include breakpoint('mobile') {
-                            display:block;
-                     }
-                }
+            margin-right:0;
+            max-width: 73.75%;
+          }
+        }
+        .parr-inner-dosing{
+          margin-bottom: 12px;
+          padding-left:0;
+          margin-left:7%;
+          font-size:10px;
+          line-height: 13px;
+        }
+        .parrMarg-inner-dosing{
+          margin-bottom: 12px;
+          padding-left:0;
+          margin-left:7%;
+          font-size:10px;
+          line-height: 14px;
+          width:80%;
+        }
+        .notes{
+          line-height: 12px;
+          margin-left: 7% !important;
+          width: 92%;
+        }
+        .footnote{
+          margin-top:7px;
+        }
+        .use-directed{
+          margin-top: 2px;
+          margin-left: 7%;
+
+          &.use-directed-dose-1{
+            background: green;
+          }
+        }
+      }
+      .chart-3{
+        float:left;
+        height:auto;
+        h3{
+          padding-bottom: 6px;
+          padding-top: 6px;
+          line-height: 22px;
+          margin-bottom: 10px;
+          height:46px;
+          width: 67% !important;
+          padding-right: 24% !important;
+          @include breakpoint('mobile') {
+            width:100% !important;
+            line-height: 20px;
+            font-size: 17px;
+            padding-left: 15px;
+            padding-right: 15px !important;
+            margin-left: -15px;
+            height:auto;
+          }
+        }
+        img{
+          width:93.75%;
+          max-width:618px;
+          max-height:900px;
+          min-width:309px;
+          margin-left: 3%;
+          margin-bottom:18px;
+        }
+        .footnote{
+          margin-top:12px;
+        }
+        .second-content-dosing{
+          margin-bottom: 14px;
+          padding-left:7%;
+          @include breakpoint('mobile') {
+            padding-right: 0px; //25px
+            padding-left: 0px; //25px
+          }
+          h4{
+            font-size: 14px;
+            line-height: 19px;
+            margin-bottom: 5px;
+            width:67%;
+            &.last-h4{
+              width:90%;
+              margin-bottom:0;
             }
           }
           p{
-            margin-top:2px; 
-            margin-left:0;
-            margin-right: 0;
-            margin-bottom:20px;
-            &.last-p{
-                margin-top:6px;
-                margin-bottom:3px;
-            }
+            margin-bottom: 15px;
+            line-height:17px;
           }
-          .footnote {
-            margin-top: 0;
+          img{
+            margin-bottom: 21px;
           }
-          .use-directed{
-              margin-bottom:0;
-              margin-top: 6px;
-          }
-    }
-    
-    .video-sect-dosing{
-        height: auto; 
-        padding-bottom:0;
-        .content-dosing-and-efficacy{
-            padding-bottom:30px;
-            margin-left:0;
-            margin-right:0;
-            padding-left:8%;
-            padding-right:8%;
-
-          @media screen and (min-width: 1px) and (max-width: 768px) {
-            padding-left:0;
-            padding-right:0;
-          }
-
-
-
-
-            h2{
-                margin-top: 18px;
-                margin-bottom: 2px;
-            }
-            p{
-                margin-bottom:9px;
-            }
-            .video-control{
-                .video-intial{
-                    background:url("../img/mobile/dosingEfficacy/video-preview-dosingEfficacy.png") no-repeat;
-                    background-size:100%;
-                    max-height: 296px;
-                    max-width: 543px;
-                    padding-bottom: 54.5119%;
-                    width: 100%;
-                    display:block;
-                    margin-bottom:16px;
-
-                  @include breakpoint("mobile") {
-                    max-width: 100%;
-
-                  }
-
-
-                }
-                .label-information{
-                    background:url("../img/mobile/dosingEfficacy/label-btn.png") no-repeat;
-                    background-size:100%;
-                    max-height: 296px;
-                    padding-bottom: 54.1133%;
-                    width: 100%;
-                    display:block;
-
-                  @include breakpoint("desktop") {
-                    max-width: 547px;
-                  }
-
-                }
-            }
         }
-    }
-    
-    .charts-dosingInner{
-        margin-left: $space;
-        margin-right: $space;
-        padding-left:0;
-        padding-right:0;
-        padding-top: 26px;
-        float:left;
-        .use-directed{
-            margin-left:$space-mobile-copy;
-        }
-        h3{
-            line-height:30px;
-            font-size:17px;
-            padding-left:$space-mobile-copy;
-            padding-right:$space-mobile-copy;
-            margin-left:9px;
-             @include breakpoint('mobile') {
-                 margin-left:0;
-             }
-        }
-        .chart-text-inner{
-            padding-left:$space-mobile-copy;
-            padding-right:$space-mobile-copy;
-            margin-top:12px;
-            margin-bottom: 9px;
-            width:96%;
+        .chart-text{
+          margin-bottom: 6px;
+          padding-left:8%;
 
           @include breakpoint("mobile") {
-            padding: 0;
+            padding-left: 0;
           }
 
 
+          p{
+            line-height: 16px;
+            margin-bottom: 0;
+            width:100%;
+            font-size:10px;
+          }
+        }
+        .notes{
+          margin-left:0;
+          font-size:10px;
+          margin-left: 0;
+          padding-left: 8%;
+          line-height: 15px;
+          @include breakpoint('mobile') {
+            padding-right: 0;
+            padding-left: 0;
 
+          }
         }
-        .chart-1{
-            background-color:$color-white;
-            float:left;
-            height:auto;
-            padding-bottom: 3px;
-            img{
-                width:93.75%;
-                max-width:601px;
-                max-height:615px;
-                min-width:300px;
-                margin-left: 9px;
-                margin-bottom: 11px;
-                
-            }
-            .footnote{
-                margin-top:7px;
-                margin-bottom: 2px;
-            }
-            .notes{
-                 margin-left: 0% !important;
-                 line-height: 12px;
-                 width: 100%;
-                 font-size: 10px;
-                 float:left;
-            }
+        .footnote{
+          margin-top:6px;
         }
-        .chart-2{
-            float:left;
-            height:auto;
-            padding-bottom: 0px;
-            h3{
-                padding-bottom: 6px;
-                padding-top: 6px;
-                line-height: 22px;
-                margin-bottom: 15px;
-            }
-            img{
-                width:93.75%;
-                max-width:594px;
-                max-height:420px;
-                min-width:297px;
-                margin-left: 9px;
-                margin-bottom: 10px;
-                @include breakpoint('mobile') {
-                    min-width:100%;
-                    max-height:333px;
-                    margin-left:0;
-                    margin-right:0;
-                    max-width: 73.75%;
-                }
-            }
-            .parr-inner-dosing{
-                margin-bottom: 12px;
-                padding-left:0;
-                margin-left:7%;
-                font-size:10px;
-                line-height: 13px;
-             }
-             .parrMarg-inner-dosing{
-                 margin-bottom: 12px;
-                 padding-left:0;
-                 margin-left:7%;
-                 font-size:10px;
-                 line-height: 14px;
-                 width:80%;
-             }
-             .notes{
-                 line-height: 12px;
-                margin-left: 7% !important;
-                width: 92%;
-             }
-             .footnote{
-                margin-top:7px;
-            }
-            .use-directed{
-                margin-top: 2px;
-                margin-left: 7%;
-
-                &.use-directed-dose-1{
-                  background: green;
-                }
-            }
+        .use-directed{
+          margin-top: 2px;
+          margin-left:8%;
+          margin-bottom:6px;
         }
-         .chart-3{
-            float:left;
-            height:auto;
-            h3{
-                padding-bottom: 6px;
-                padding-top: 6px;
-                line-height: 22px;
-                margin-bottom: 10px;
-                height:46px;
-                width: 67% !important;
-                padding-right: 24% !important;
-                @include breakpoint('mobile') {
-                    width:92% !important;
-                    line-height: 20px;
-                    font-size: 17px;
-                    padding-left: 4.6875%;
-                    padding-right: 0 !important;
-                    margin-left: 9px;
-                    height:auto;
-                }
-            }
-            img{
-                width:93.75%;
-                max-width:618px;
-                max-height:900px;
-                min-width:309px;
-                margin-left: 3%;
-                margin-bottom:18px;
-            }
-            .footnote{
-                margin-top:12px;
-            }
-            .second-content-dosing{
-                margin-bottom: 14px;
-                padding-left:7%;
-                @include breakpoint('mobile') {
-                  padding-right:25px;
-                    padding-left:25px;
-                }
-                h4{
-                    font-size: 14px;
-                    line-height: 19px;
-                    margin-bottom: 5px;
-                    width:67%;
-                    &.last-h4{
-                        width:90%;
-                        margin-bottom:0;
-                    }
-                }
-                p{
-                    margin-bottom: 15px;
-                    line-height:17px;
-                }
-                img{
-                    margin-bottom: 21px;
-                }               
-            }
-            .chart-text{
-                  margin-bottom: 6px;
-                  padding-left:8%;
-                p{
-                   line-height: 16px;
-                    margin-bottom: 0;
-                   width:100%;
-                   font-size:10px;
-                }
-            }
-            .notes{
-                margin-left:0;
-                font-size:10px;
-                margin-left: 0;
-                padding-left: 8%;
-                line-height: 15px;
-                @include breakpoint('mobile') {
-                    padding-right:8%;
-                }
-            }
-            .footnote{
-                margin-top:6px;
-            }
-            .use-directed{
-                margin-top: 2px;
-                margin-left:8%;
-                margin-bottom:6px;
-            }
-        }
+      }
     }
-    
-}
+
+  }
 }
 
 
 .dosing-and-efficacy-section{
-    .animation{
-        @include breakpoint('mobile') {
-            margin-left:-10px !important;
-        }
+  .animation{
+    @include breakpoint('mobile') {
+      margin-left:-10px !important;
     }
+  }
 }
 
 
 /********************* Chart 1 Animation *********************/
 
 .animation-1{
-    position:relative;
+  position:relative;
+  float:left;
+  margin-bottom: 50px;
+  margin-left:33px;
+  width:109%;
+  @include breakpoint('tablet') {
+    width:90%;
+    margin-right:10%;
+  }
+  @include breakpoint('mobile') {
+    background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
+    height: auto;
+    max-width: 700px;
+    min-width:300px;
+    padding-bottom: 109%;
+    width: 112%;
+    background-size:contain;
+    margin-bottom:16px;
+    margin-left: -12px;
+    margin-right:4.2%;
+  }
+
+
+  @include breakpoint('pp-mobile') {
+    padding-bottom: 111%;
+    width: 113%;
+  }
+
+
+  .graph-header{
     float:left;
-    margin-bottom: 50px;
-    margin-left:33px;
-    width:109%;
-     @include breakpoint('tablet') {
-         width:90%;
-         margin-right:10%;
-     }
-     @include breakpoint('mobile') {
-         background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
-         height: auto;
-         max-width: 700px;
-         min-width:300px;
-         padding-bottom: 109%;
-         width: 112%;
-         background-size:contain;
-         margin-bottom:16px;
-         margin-left: -12px;
-         margin-right:4.2%;
-     }
-    .graph-header{
-        float:left;
-        width:100%;
-        margin-bottom:3px;
-        .chart-1-name{
-            font-family:$font-proxima-nova-semibold;
-            color:#808080;
-            font-size:22px;
-            float:left;
-            margin-left: 144px;
-        }
-        .chart-2-name{
-            font-family:$font-proxima-nova-semibold;
-            color:#808080;
-            font-size:22px;
-            text-align: center;
-            float:left;
-            margin-left: 240px;
-            .chart-2-subtitle{
-                font-family:$font-proxima-nova-regular;
-                color:#5a5e5f;
-                font-size:9px;
-                display:block;
-                margin-top:9px;
-            }
-        }
-    }    
-    .graph-bg{
-        background:url("../img/desktop/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat top center;
-        width:617px;
-        height:328px;
-        float:left;
-        .graphics{
-            position:relative;
-            margin-left:135px;
-            top: 324px;
-            #chart-animation-1{
-                width:64px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-            }
-            
-            #chart-animation-2{
-                width:64px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                margin-left: 35px;
-                position:relative;
-                height:0px;
-                top:0px;
-               
-               .indicator-2{
-                   margin-left:10px;
-               }
-            }
-            
-            #chart-animation-3{
-                width:64px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                margin-left: 115px;
-                position:relative;
-                height:0px;
-                top:0px;
-               
-               .indicator-1{
-                   top:-66px;
-               }
-            }
-            
-            #chart-animation-4{
-                width:64px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                margin-left: 35px;
-                position:relative;
-                height:0px;
-                top:0px;
-            }
-            
-            .indicator-1{
-               font-family:Arial, Helvetica, sans-serif;
-               font-weight:bold;
-               font-size:39px;
-               color:#f39d28;
-               position:relative;
-               top:-70px;
-               line-height:28px;
-               margin-left: 4px;
-               text-align:center;
-               opacity:0;
-               display:block;
-               .porcentage{
-                   font-size:19px;
-                   vertical-align: super;
-               }
-               .description{
-                   font-size:23px;
-                   display:block;
-               }
-           }
-           
-           .indicator-2{
-               font-family:Arial, Helvetica, sans-serif;
-               color:#808080;
-               font-weight:bold;
-               font-size:36px;
-               position:relative;
-               top:-40px;
-               text-align:center;
-               opacity:0;
-               display:block;
-               .porcentage{
-                   font-size:19px;
-                   vertical-align: super;
-               }
-           }
-           .orange-chart{
-               /*Gradient CSS3*/
-               /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f39d28+0,f39d28+52,eb5d2b+100 */
-                background: #f39d28; /* Old browsers */
-                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViNWQyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-                background: -moz-linear-gradient(-45deg,  #f39d28 0%, #f39d28 52%, #eb5d2b 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f39d28), color-stop(52%,#f39d28), color-stop(100%,#eb5d2b)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* IE10+ */
-                background: linear-gradient(135deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39d28', endColorstr='#eb5d2b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-           }
-           .grey-chart{
-                /*Gradient CSS3*/
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c3c3+40,7a7a91+100 */
-                background: #c9c3c3; /* Old browsers */
-                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2M5YzNjMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3YTdhOTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-                background: -moz-linear-gradient(-45deg,  #c9c3c3 40%, #7a7a91 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, right bottom, color-stop(40%,#c9c3c3), color-stop(100%,#7a7a91)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* IE10+ */
-                background: linear-gradient(135deg,  #c9c3c3 40%,#7a7a91 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c3c3', endColorstr='#7a7a91',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-           }
- 
-        }
+    width:100%;
+    margin-bottom:3px;
+    .chart-1-name{
+      font-family:$font-proxima-nova-semibold;
+      color:#808080;
+      font-size:22px;
+      float:left;
+      margin-left: 144px;
     }
-    .level-graph{
-        background:url("../img/desktop/dosingEfficacy/level-chart.png") no-repeat top center;
-        width:146px;
-        height:43px;
-        margin-left: 70px;
-        margin-top: 60px;
+    .chart-2-name{
+      font-family:$font-proxima-nova-semibold;
+      color:#808080;
+      font-size:22px;
+      text-align: center;
+      float:left;
+      margin-left: 240px;
+      .chart-2-subtitle{
+        font-family:$font-proxima-nova-regular;
+        color:#5a5e5f;
+        font-size:9px;
+        display:block;
+        margin-top:9px;
+      }
+    }
+  }
+  .graph-bg{
+    background:url("../img/desktop/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat top center;
+    width:617px;
+    height:328px;
+    float:left;
+    .graphics{
+      position:relative;
+      margin-left:135px;
+      top: 324px;
+      #chart-animation-1{
+        width:64px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+      }
+
+      #chart-animation-2{
+        width:64px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        margin-left: 35px;
+        position:relative;
+        height:0px;
+        top:0px;
+
+        .indicator-2{
+          margin-left:10px;
+        }
+      }
+
+      #chart-animation-3{
+        width:64px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        margin-left: 115px;
+        position:relative;
+        height:0px;
+        top:0px;
+
+        .indicator-1{
+          top:-66px;
+        }
+      }
+
+      #chart-animation-4{
+        width:64px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        margin-left: 35px;
+        position:relative;
+        height:0px;
+        top:0px;
+      }
+
+      .indicator-1{
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:bold;
+        font-size:39px;
+        color:#f39d28;
+        position:relative;
+        top:-70px;
+        line-height:28px;
+        margin-left: 4px;
+        text-align:center;
         opacity:0;
-    }
-    .quote{
-       width:360px;
-       float:left;
-       margin-left:2.36%;
-       margin-top: 10px;
-       opacity:0;
-        @include breakpoint('tablet') {
-            margin-top: 30px;
-            margin-left: 25%;
-            margin-right: 25%;
-            width: 50%;
-            min-width: 360px;
-            opacity:1;
+        display:block;
+        .porcentage{
+          font-size:19px;
+          vertical-align: super;
         }
-       .quote-left{
-           background:url("../img/desktop/dosingEfficacy/left-quotes.png") no-repeat top center;
-           width:38px;
-           height:115px;
-           display:inline-block;
-           float:left;
-       }
-       .quote-right{
-           background:url("../img/desktop/dosingEfficacy/right-quotes.png") no-repeat top center;
-           width:38px;
-           height:31px;
-           display:inline-block;
-           margin-top: 104px;
-       }
-       .text{
-           font-family:$font-proxima-nova-semibold;
-           font-size:31px;
-           color:#817e7b;
-           float:left;
-           width:75%;
-           margin-left:10px;
-           margin-top:7px;
-           line-height: 42px;
-           .orange{
-               font-size:40px;
-               color:#ed6b3d;
-               line-height: 36px;
-           }
-           .bigger{
-               font-size:34px;
-           }
-       }
-   }
+        .description{
+          font-size:23px;
+          display:block;
+        }
+      }
+
+      .indicator-2{
+        font-family:Arial, Helvetica, sans-serif;
+        color:#808080;
+        font-weight:bold;
+        font-size:36px;
+        position:relative;
+        top:-40px;
+        text-align:center;
+        opacity:0;
+        display:block;
+        .porcentage{
+          font-size:19px;
+          vertical-align: super;
+        }
+      }
+      .orange-chart{
+        /*Gradient CSS3*/
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f39d28+0,f39d28+52,eb5d2b+100 */
+        background: #f39d28; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViNWQyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background: -moz-linear-gradient(-45deg,  #f39d28 0%, #f39d28 52%, #eb5d2b 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f39d28), color-stop(52%,#f39d28), color-stop(100%,#eb5d2b)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #f39d28 0%,#f39d28 52%,#eb5d2b 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f39d28', endColorstr='#eb5d2b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+      }
+      .grey-chart{
+        /*Gradient CSS3*/
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c3c3+40,7a7a91+100 */
+        background: #c9c3c3; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iI2M5YzNjMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM3YTdhOTEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+        background: -moz-linear-gradient(-45deg,  #c9c3c3 40%, #7a7a91 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(40%,#c9c3c3), color-stop(100%,#7a7a91)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #c9c3c3 40%,#7a7a91 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #c9c3c3 40%,#7a7a91 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c3c3', endColorstr='#7a7a91',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+      }
+
+    }
+  }
+  .level-graph{
+    background:url("../img/desktop/dosingEfficacy/level-chart.png") no-repeat top center;
+    width:146px;
+    height:43px;
+    margin-left: 70px;
+    margin-top: 60px;
+    opacity:0;
+  }
+  .quote{
+    width:360px;
+    float:left;
+    margin-left:2.36%;
+    margin-top: 10px;
+    opacity:0;
+    @include breakpoint('tablet') {
+      margin-top: 30px;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+      min-width: 360px;
+      opacity:1;
+    }
+    .quote-left{
+      background:url("../img/desktop/dosingEfficacy/left-quotes.png") no-repeat top center;
+      width:38px;
+      height:115px;
+      display:inline-block;
+      float:left;
+    }
+    .quote-right{
+      background:url("../img/desktop/dosingEfficacy/right-quotes.png") no-repeat top center;
+      width:38px;
+      height:31px;
+      display:inline-block;
+      margin-top: 104px;
+    }
+    .text{
+      font-family:$font-proxima-nova-semibold;
+      font-size:31px;
+      color:#817e7b;
+      float:left;
+      width:75%;
+      margin-left:10px;
+      margin-top:7px;
+      line-height: 42px;
+      .orange{
+        font-size:40px;
+        color:#ed6b3d;
+        line-height: 36px;
+      }
+      .bigger{
+        font-size:34px;
+      }
+    }
+  }
 }
 
 /********************* Chart 2 Animation *********************/
 
+
+//@media screen and (max-width: 320px) and (min-width: 1px) {
+//  .anim2fix {
+//    padding-bottom: 163% !important;
+//  }
+//}
+
 .animation-2{
-    margin-left:33px;
-    @include breakpoint('mobile') {
-         background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
-         height: auto;
-         //max-width: 618px;
-         padding-bottom: 118%;
-         width: 94%;
-         background-size:contain;
-         margin-bottom:18px;
-         margin-left:5%;
-         max-width: 618px;
-         min-width: 309px;
-     }
-    .graph-bg{
-        background:url("../img/desktop/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat top center;
-        width:886px;
-        height:356px;
-        margin-bottom:16px;
-        @include breakpoint('tablet') {
-            width: 108%;
-            background-position:left top;
-         }
-        .graphics{
-            position:relative;
-            top:354px;
-            margin-left:92px;
-            margin-bottom:18px;
-            @include breakpoint('tablet') {
-                margin-left:11%;
-            }
-            #bar-1{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-2{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-3{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-4{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:64px;
-                 @include breakpoint('tablet') {
-                    margin-left:3%;
-                    width:36px;
-                }
-            }
-            #bar-5{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-6{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-7{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:64px;
-                @include breakpoint('tablet') {
-                    margin-left:3%;
-                    width:36px;
-                }
-            }
-            #bar-8{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-9{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-10{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:64px;
-                @include breakpoint('tablet') {
-                    margin-left:3%;
-                    width:36px;
-                }
-            }
-            #bar-11{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            #bar-12{
-                width:44px;
-                float:left;
-                @include border-corner-radius(top, left, 10px);
-                @include border-corner-radius(top, right, 10px);
-                position:relative;
-                height:0px;
-                top:0px;
-                margin-left:8px;
-                @include breakpoint('tablet') {
-                    width:36px;
-                }
-            }
-            .indicator{
-                font-family:$font-proxima-nova-semibold;
-                font-size:14px;
-                color:#FFFFFF;
-                position:absolute;
-                bottom:8px;
-                text-align: center;
-                width: 100%;
-                opacity:0;
-                sup{
-                    vertical-align:super;
-                    top:0;
-                }
-            }
-            .orange-bar{
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb5d2b+0,f39d28+52,eb5d2b+100 */
-                background: #eb5d2b; /* Old browsers */
-                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWI1ZDJiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViNWQyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-                background: -moz-linear-gradient(-45deg,  #eb5d2b 0%, #f39d28 52%, #eb5d2b 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#eb5d2b), color-stop(52%,#f39d28), color-stop(100%,#eb5d2b)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* IE10+ */
-                background: linear-gradient(135deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb5d2b', endColorstr='#eb5d2b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
-            }
-            .blue-bar{
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2974ab+0,2974ab+52,2974ab+100 */
-                background: #2974ab; /* Old browsers */
-                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjk3NGFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjMjk3NGFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NzRhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-                background: -moz-linear-gradient(-45deg,  #2974ab 0%, #2974ab 52%, #2974ab 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#2974ab), color-stop(52%,#2974ab), color-stop(100%,#2974ab)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* IE10+ */
-                background: linear-gradient(135deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2974ab', endColorstr='#2974ab',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+  margin-left:33px;
+  @include breakpoint('mobile') {
+    background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
+    height: auto;
+    //max-width: 618px;
 
-            }
-            .grey-bar{
-                /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c3c3+1,c6c0c1+46,7a7a91+100 */
-                background: #c9c3c3; /* Old browsers */
-                /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-                background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjYzljM2MzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDYlIiBzdG9wLWNvbG9yPSIjYzZjMGMxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdhN2E5MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-                background: -moz-linear-gradient(-45deg,  #c9c3c3 1%, #c6c0c1 46%, #7a7a91 100%); /* FF3.6+ */
-                background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,#c9c3c3), color-stop(46%,#c6c0c1), color-stop(100%,#7a7a91)); /* Chrome,Safari4+ */
-                background: -webkit-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* Chrome10+,Safari5.1+ */
-                background: -o-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* Opera 11.10+ */
-                background: -ms-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* IE10+ */
-                background: linear-gradient(135deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* W3C */
-                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c3c3', endColorstr='#7a7a91',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+    width: 110%;
+    background-size:contain;
+    margin-bottom:18px;
+    margin-left:-10px;
+    max-width: 900px;
+    min-width: 309px;
+  }
 
-            }
-        }
+
+  @include breakpoint('pp-mobile') {
+    padding-bottom: 163% !important;
+  }
+
+  @include breakpoint('mobile') {
+    padding-bottom: 153%;
+  }
+
+
+  .graph-bg{
+    background:url("../img/desktop/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat top center;
+    width:886px;
+    height:356px;
+    margin-bottom:16px;
+    @include breakpoint('tablet') {
+      width: 108%;
+      background-position:left top;
     }
-    .baseline{
+    .graphics{
+      position:relative;
+      top:354px;
+      margin-left:92px;
+      margin-bottom:18px;
+      @include breakpoint('tablet') {
+        margin-left:11%;
+      }
+      #bar-1{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-2{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-3{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-4{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:64px;
+        @include breakpoint('tablet') {
+          margin-left:3%;
+          width:36px;
+        }
+      }
+      #bar-5{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-6{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-7{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:64px;
+        @include breakpoint('tablet') {
+          margin-left:3%;
+          width:36px;
+        }
+      }
+      #bar-8{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-9{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-10{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:64px;
+        @include breakpoint('tablet') {
+          margin-left:3%;
+          width:36px;
+        }
+      }
+      #bar-11{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      #bar-12{
+        width:44px;
+        float:left;
+        @include border-corner-radius(top, left, 10px);
+        @include border-corner-radius(top, right, 10px);
+        position:relative;
+        height:0px;
+        top:0px;
+        margin-left:8px;
+        @include breakpoint('tablet') {
+          width:36px;
+        }
+      }
+      .indicator{
         font-family:$font-proxima-nova-semibold;
-        color:#555555;
-        font-size:16px;
-        margin-left:134px;
-        margin-bottom:37px;
-        @include breakpoint('tablet') {
-            margin-left:15%;
-            width:105%;
-        }
-        .base-1{
-            
-        }
-        .base-2{
-            margin-left:102px;
-            @include breakpoint('tablet') {
-                margin-left:5%;
-            }
-        }
-        .base-3{
-            margin-left:90px;
-            @include breakpoint('tablet') {
-                margin-left:3%;
-            }
-        }
-        .base-4{
-            margin-left:114px;
-            @include breakpoint('tablet') {
-                margin-left:7%;
-            }
-        }
-    }
-    .legend-graph{
-        background:url("../img/desktop/dosingEfficacy/legend-chart.jpg") no-repeat top center;
-        width:219px;
-        height:95px;
+        font-size:14px;
+        color:#FFFFFF;
         position:absolute;
-        margin-left: 675px;
-        margin-top: -396px;
+        bottom:8px;
+        text-align: center;
+        width: 100%;
         opacity:0;
-        @include breakpoint('tablet') {
-            margin-left:50%;
+        sup{
+          vertical-align:super;
+          top:0;
         }
+      }
+      .orange-bar{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eb5d2b+0,f39d28+52,eb5d2b+100 */
+        background: #eb5d2b; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjZWI1ZDJiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjZjM5ZDI4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ViNWQyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background: -moz-linear-gradient(-45deg,  #eb5d2b 0%, #f39d28 52%, #eb5d2b 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#eb5d2b), color-stop(52%,#f39d28), color-stop(100%,#eb5d2b)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #eb5d2b 0%,#f39d28 52%,#eb5d2b 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb5d2b', endColorstr='#eb5d2b',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+      }
+      .blue-bar{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2974ab+0,2974ab+52,2974ab+100 */
+        background: #2974ab; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMjk3NGFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNTIlIiBzdG9wLWNvbG9yPSIjMjk3NGFiIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzI5NzRhYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background: -moz-linear-gradient(-45deg,  #2974ab 0%, #2974ab 52%, #2974ab 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#2974ab), color-stop(52%,#2974ab), color-stop(100%,#2974ab)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #2974ab 0%,#2974ab 52%,#2974ab 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2974ab', endColorstr='#2974ab',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+      }
+      .grey-bar{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#c9c3c3+1,c6c0c1+46,7a7a91+100 */
+        background: #c9c3c3; /* Old browsers */
+        /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+        background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+CiAgICA8c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjYzljM2MzIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iNDYlIiBzdG9wLWNvbG9yPSIjYzZjMGMxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzdhN2E5MSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+        background: -moz-linear-gradient(-45deg,  #c9c3c3 1%, #c6c0c1 46%, #7a7a91 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,#c9c3c3), color-stop(46%,#c6c0c1), color-stop(100%,#7a7a91)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #c9c3c3 1%,#c6c0c1 46%,#7a7a91 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c9c3c3', endColorstr='#7a7a91',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+
+      }
     }
+  }
+  .baseline{
+    font-family:$font-proxima-nova-semibold;
+    color:#555555;
+    font-size:16px;
+    margin-left:134px;
+    margin-bottom:37px;
+    @include breakpoint('tablet') {
+      margin-left:15%;
+      width:105%;
+    }
+    .base-1{
+
+    }
+    .base-2{
+      margin-left:102px;
+      @include breakpoint('tablet') {
+        margin-left:5%;
+      }
+    }
+    .base-3{
+      margin-left:90px;
+      @include breakpoint('tablet') {
+        margin-left:3%;
+      }
+    }
+    .base-4{
+      margin-left:114px;
+      @include breakpoint('tablet') {
+        margin-left:7%;
+      }
+    }
+  }
+  .legend-graph{
+    background:url("../img/desktop/dosingEfficacy/legend-chart.jpg") no-repeat top center;
+    width:219px;
+    height:95px;
+    position:absolute;
+    margin-left: 675px;
+    margin-top: -396px;
+    opacity:0;
+    @include breakpoint('tablet') {
+      margin-left:50%;
+    }
+  }
 }
 
 .ie9 .charts-dosingInner .chart-2 .footnote{
-    margin-top:300px;
+  margin-top:300px;
 }
 /*IE10 and IE11*/
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .charts-dosingInner .chart-2 .footnote{
     margin-top:300px;
   }

@@ -37,7 +37,7 @@
       @media  screen and (min-width : 768px)  { @content; }
     }
     @else if $point == pp-mobile {
-        @media  screen and (width : 320px) { @content; }
+        @media  screen and (min-width : 200px) and (max-width : 320px)  { @content; }
     }
     @else if $point == pp-desktop {
         @media  screen and (width : 1400px) { @content; }
