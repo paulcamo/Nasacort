@@ -107,7 +107,16 @@ h4{
     }
 }
 
+.main-notes,
+.wac .main-notes{
+    font-size: 12px;
+    line-height: 18px;
 
+    @include breakpoint('mobile') {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}
 
 // -----------------------------------------------------------
 

@@ -498,6 +498,7 @@ $grey-button:#f8f8f8;
                 height:240px;
                 left: 41%;
                 top: 9%;
+                
                 @media screen and (max-width: 1399px) {
                     top: -2%;
                 }
@@ -509,6 +510,15 @@ $grey-button:#f8f8f8;
                     left: 40%;
                     top: -30%;
                     width: 400px;
+                }
+                @media screen and (min-width: 1026px) {
+                    height:267px;
+                    top: -5%;
+                    left: 42%;
+                }
+                @media screen and (min-width: 1025px) and (max-width: 1210px) {
+                    left: 40%;
+                    top: -6%;
                 }
             }
             #box_kara{
@@ -528,6 +538,7 @@ $grey-button:#f8f8f8;
                     left: 13%;
                     top: -35%;
                 }
+
                 .content{
                     div{
                         margin-left: 25px;
