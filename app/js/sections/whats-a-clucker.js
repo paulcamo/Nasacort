@@ -309,14 +309,14 @@ function hoverInNav(){
                     $('#patient_title').text ("What’s a Clucker?");
                     break;
                 case ".li_mark":
-                    $('#patient_title').text ("What’s a Dripper");
+                    $('#patient_title').text ("What’s a Dripper?");
                     break;
 
                 case ".li_kara":
-                    $('#patient_title').text ("What’s Mouthbreather");
+                    $('#patient_title').text ("What’s Mouthbreather?");
                     break;
                 case ".li_liam":
-                    $('#patient_title').text ("What’s Sniffler");
+                    $('#patient_title').text ("What’s Sniffler?");
                     break;
             }
 
@@ -347,14 +347,14 @@ function hoverInNav(){
                     $('#patient_title').text ("What’s a Clucker?");
                     break;
                 case ".li_mark":
-                    $('#patient_title').text ("What’s a Dripper");
+                    $('#patient_title').text ("What’s a Dripper?");
                     break;
 
                 case ".li_kara":
-                    $('#patient_title').text ("What’s Mouthbreather");
+                    $('#patient_title').text ("What’s Mouthbreather?");
                     break;
                 case ".li_liam":
-                    $('#patient_title').text ("What’s Sniffler");
+                    $('#patient_title').text ("What’s Sniffler?");
                     break;
             }
 
