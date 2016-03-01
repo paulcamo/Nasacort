@@ -63,6 +63,12 @@
           display: block;
           max-width:192px;
         }
+        span.light{
+          font-family: $font-proxima-nova-regular;
+        }
+        strong{
+          font-family: $font-proxima-nova-bold;
+        }
         &:after{
           content:"";
           background: url("../img/mobile/homepage/arrow-cta.png") no-repeat 50%;

@@ -205,16 +205,23 @@
 
 
 @include breakpoint('desktop') {
-    
 }
 
 @include breakpoint('tablet') {
-    
 }
 
 $color-red:#fe0000;
 
+.animation .rfrs p.visibleMobile,
+.visibleMobile{
+    display: none;
+}
+
 @include breakpoint('mobile') {
+    .animation .rfrs p.visibleMobile,
+    .visibleMobile{
+        display: block;
+    }
 
 .modal-open .modal {
     padding-left: 15px;
