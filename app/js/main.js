@@ -120,7 +120,11 @@ function getPlace(spot){
 // adding new event to all a to get hast anchors if any
 $('a').on('click tap', function(){
     // indicates the new target in the current page
-    var linkPath = $(this).attr('href').split('#')[1] || null;
+    var linkPath = '';
+
+    if($(this).attr('href')){
+        linkPath = $(this).attr('href').split('#')[1] || null;
+    }
     if (linkPath){
         // scrolls to the new position 
         hashCalling(linkPath);
