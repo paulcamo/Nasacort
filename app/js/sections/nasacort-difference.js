@@ -2,11 +2,11 @@
 
 var brand_checks =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_default =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-var brand_checks_afrin =    [1,0,0,0,0,1,1,0,0,0,1,0,0,0];
+var brand_checks_afrin =    [1,1,0,0,0,1,1,0,0,0,1,0,0,0];
 var brand_checks_benadryl = [1,1,1,1,1,0,0,1,0,1,0,0,1,1];
 var brand_checks_claritin = [1,1,1,1,1,0,0,1,0,1,1,1,1,1];
 var brand_checks_flonase =  [0,0,1,1,1,1,1,1,1,1,1,1,1,1];
-var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,0];
+var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,1];
 var brand_checks_zyrtec =   [1,1,1,1,1,0,0,1,0,1,0,1,1,1];
 
 var currentBrand = "";
