@@ -90,7 +90,7 @@ function changeImageSrc()
          $(".graphic-container .graphic").attr("src", newPath);
          newPath = $(".graph #panel_1 .chart img").attr("src").replace("mobile", "desktop");
          $(".graph #panel_1 .chart img").attr("src", newPath);
-         ewPath = $(".graph #panel_3 .chart img").attr("src").replace("mobile", "desktop");
+         newPath = $(".graph #panel_3 .chart img").attr("src").replace("mobile", "desktop");
          $(".graph #panel_3 .chart img").attr("src", newPath);
      }
 }
