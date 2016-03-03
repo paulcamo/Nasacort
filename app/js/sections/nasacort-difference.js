@@ -2,11 +2,11 @@
 
 var brand_checks =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_default =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-var brand_checks_afrin =    [1,0,0,0,0,1,1,0,0,0,1,0,0,0];
+var brand_checks_afrin =    [1,1,0,0,0,1,1,0,0,0,1,0,0,0];
 var brand_checks_benadryl = [1,1,1,1,1,0,0,1,0,1,0,0,1,1];
 var brand_checks_claritin = [1,1,1,1,1,0,0,1,0,1,1,1,1,1];
 var brand_checks_flonase =  [0,0,1,1,1,1,1,1,1,1,1,1,1,1];
-var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,0];
+var brand_checks_sudafed =  [1,1,0,0,0,1,1,0,0,1,1,1,1,1];
 var brand_checks_zyrtec =   [1,1,1,1,1,0,0,1,0,1,0,1,1,1];
 
 var currentBrand = "";
@@ -179,17 +179,27 @@ function keepTDsameWidthArrow()
         $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 3);
         $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
     }
-    var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
+    //var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
+
+    var rightArrow = $("#brand-compare").width();
     var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
 
-    var vrsPosition_mobile = $("#brand-compare").width() +  parseInt($(".chart-table-container .vrs").width() * 0.15) ;
 
-    if ($(window).width()<1028) {
-        vrsPosition = vrsPosition_mobile;
+    if ($(window).width()>=768 && $(window).width()<1024) {
+        vrsPosition = vrsPosition +75;
     }
 
+    if ($(window).width()<768) {
+        vrsPosition = rightArrow + 8 ;
+    }
+
+    //if ($(window).width()>=753 && $(window).width()<768) {
+    //    vrsPosition = vrsPosition + 40;
+    //}
+
+
     $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
-    
+
 }
 
 function addMouseOverStates()
