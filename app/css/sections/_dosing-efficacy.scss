@@ -1159,20 +1159,21 @@ $space-mobile-copy: 25px;
       height:115px;
       display:inline-block;
       float:left;
+      margin-top: 10px;
     }
     .quote-right{
       background:url("../img/desktop/dosingEfficacy/right-quotes.png") no-repeat top center;
       width:38px;
       height:31px;
       display:inline-block;
-      margin-top: 104px;
+      margin-top: 63px;
     }
     .text{
       font-family:$font-proxima-nova-semibold;
       font-size:31px;
       color:#817e7b;
       float:left;
-      width:75%;
+      width:55%;
       margin-left:10px;
       margin-top:7px;
       line-height: 42px;
