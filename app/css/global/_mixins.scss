@@ -2,15 +2,16 @@
 
 //breakpoins for Nasacort HCP
 //
-//   1          320                     1400                ?  
-//   |-----------|------------------------|-----------------|
-//       mobile  |          desktop       |   big-screen       
-//               |                        |                    
-//               |                        |
-//           pp-mobile                pp-desktop    
-// 
+//   1          320            768    1024        1400                ?
+//   |-----------|--------------|------|------------|-----------------|
+//       mobile  |                                  |   big-screen
+//               |                                  |
+//               |          tablet n desktop        |
+//           pp-mobile                        pp-desktop
 //
-//    Note: pixelperfect should be only on breakpoints
+//
+//    Note: pixelperfect should be only on  pp-breakpoints
+
 
 
 @mixin breakpoint($point) {

@@ -289,7 +289,7 @@ p{
             background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
         }
         @include breakpoint('mobile'){
-            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 216px top;
+            background: url("../img/desktop/collapse/expand-icon-min.png") no-repeat 98% center;
         }
 
     }
@@ -354,7 +354,7 @@ p{
         margin-bottom: 13px;
         padding: 8px 19px 13px 21px;
         margin-left:-5px;
-        width:104%;
+        //width:104%;
     }
 }
 
