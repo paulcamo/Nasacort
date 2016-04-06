@@ -696,7 +696,7 @@ body {
     .product-title {
       position: absolute;
       top: 0.9em;
-      left: 37.5%;
+      left: 31%;
       font-size: 0.46em;
       letter-spacing: 0.02em;
       color: #2e2662;
@@ -715,6 +715,7 @@ body {
 
 
     .clinical-study {
+      min-width: 220px;
       position: absolute;
       top: 4.1em;
       left: 1.2%;
