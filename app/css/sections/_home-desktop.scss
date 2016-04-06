@@ -1352,6 +1352,10 @@ body {
       max-width: 300px;
       text-align: right;
       bottom: 2.2em;
+
+      @include breakpoint("desktop-n-up") {
+        bottom: 3.4em;
+      }
     }
 
 
