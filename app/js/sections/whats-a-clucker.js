@@ -313,7 +313,7 @@ function hoverInNav(){
                     break;
 
                 case ".li_kara":
-                    $('#patient_title').text ("What’s Mouthbreather?");
+                    $('#patient_title').text ("What’s a Mouthbreather?");
                     break;
                 case ".li_liam":
                     $('#patient_title').text ("What’s Sniffler?");
