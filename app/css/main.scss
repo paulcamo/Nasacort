@@ -10,8 +10,6 @@
 @import "compass/support";
 @import "compass/css3";
 @import "compass/utilities/sprites";
-@import "../img/sprite/*.png";//this creates a sprite with the images in the folder img/sprite/*.png
-@include all-sprite-sprites;
 
 //global imports
 @import "global/variables";
