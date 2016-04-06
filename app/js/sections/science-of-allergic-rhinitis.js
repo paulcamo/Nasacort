@@ -17,21 +17,28 @@ function animateGraph(){
     var contentwidth = $(window).width();
     var isInview = true;
     if ((contentwidth) > mobileBreakPoint){
-        $('#affects-patients-quality-of-life').waypoint(function(){
-            if (isInview) {
-                $('#panel_1 .num').animateNumber({ number: 66 }, 1500);
-                $('#panel_3 .num').animateNumber({ number: 35 }, 1500);
-                resetPanelchart();
-                animetePanelOne();
-                animetePanelTwo();
-                animetePanelTree();
-                isInview = false;
-            }else{
-                setTimeout(function(){
-                    isInview = true;
-                },1000);
-            }
-        });
+        $('#panel_1 .num').animateNumber({ number: 66 }, 1500);
+        $('#panel_3 .num').animateNumber({ number: 35 }, 1500);
+        resetPanelchart();
+        animetePanelOne();
+        animetePanelTwo();
+        animetePanelTree();
+                
+        // $('#affects-patients-quality-of-life').waypoint(function(){
+        //     if (isInview) {
+        //         $('#panel_1 .num').animateNumber({ number: 66 }, 1500);
+        //         $('#panel_3 .num').animateNumber({ number: 35 }, 1500);
+        //         resetPanelchart();
+        //         animetePanelOne();
+        //         animetePanelTwo();
+        //         animetePanelTree();
+        //         isInview = false;
+        //     }else{
+        //         setTimeout(function(){
+        //             isInview = true;
+        //         },1000);
+        //     }
+        // });
         
     }
 }
