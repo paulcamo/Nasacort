@@ -115,7 +115,7 @@ body {
 
   #slide02 {
     position: relative;
-    height: 32em;
+    height: 25em;
     z-index: 1000;
 
     .use-only {
@@ -146,7 +146,7 @@ body {
 
   #slide02-03 {
   //  height: 48.2em;
-    background: url(../img/desktop/homepage/background-23.jpg) no-repeat top center;
+    background: url(../img/desktop/homepage/background-23.jpg) no-repeat bottom center;
     background-size: cover;
   }
 
@@ -766,13 +766,12 @@ body {
   #nasacort-compare {
     width: 12em;
     height: 10.5em;
-    bottom: 8.8em;
     position: absolute;
     right: 20.4%;
     z-index: 101;
     font-family: $font-proxima-nova-bold;
     color: red;
-    top: 15.6em;
+    top: 5.5em;
     text-align: left;
 
 
@@ -1268,7 +1267,7 @@ body {
     background-size: cover;
     width: 11em;
     height: 0em;
-    bottom: 11.5em;
+    bottom: 14.5em;
     z-index: 98;
     position: absolute;
     left: 16.8%;

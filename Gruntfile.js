@@ -265,8 +265,8 @@ module.exports = function(grunt) {
         open : {
             dev : {
                 path: 'http://0.0.0.0:9000',
-                //app: 'Google Chrome'
-                app: 'Firefox'
+                app: 'Google Chrome'
+                //app: 'Firefox'
             }
         },
 
