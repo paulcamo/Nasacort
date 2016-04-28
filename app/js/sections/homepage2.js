@@ -261,25 +261,33 @@ $(function(){
 function validateTouchScreens()
 {
   ISTOUCHDEVICE = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
-  console.log("Is Touch Device ? : " + ISTOUCHDEVICE + "\nOS: " + getOS() + "\nDevice: " + getDevice());
+  //console.log("Is Touch Device ? : " + ISTOUCHDEVICE + "\nOS: " + getOS() + "\nDevice: " + getDevice());
   if(ISTOUCHDEVICE)
   {
     if(getOS() === "Mac")
     {
       if(getDevice() === "tablet")
       {
-        console.log("Validation Done");
+        //console.log("Validation Done");
         //isMobile = true;
-        page.addClass("touchscreen");
+        //page.addClass("touchscreen");
         $(".parallax").hide();
         $(".home-section .home-mobile").show();
-        window.resizeTo(700,700);
+        $("#carousel-mobile-1").css("background-image", "url(../img/mobile/homepage/bg-slide001-sml.jpg)");
+        $("#carousel-mobile-1").css("background-size", "cover");
+        $("#carousel-mobile-2").css("background-image", "url(../img/mobile/homepage/bg-slide002-sml.jpg)");
+        $("#carousel-mobile-2").css("background-size", "cover");
+        $("#carousel-mobile-3").css("background-image", "url(../img/mobile/homepage/bg-slide003-sml.jpg)");
+        $("#carousel-mobile-3").css("background-size", "cover");
+
+        $(".home-section .home-mobile").css("padding-top", "139px");
+        //window.resizeTo(700,700);
         //document.querySelector('style').textContent += "@media screen and (min-width:1000px) { body { color: red; }}";
         //$('head').remove("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
         //$('head').append('<meta name="viewport" content="width=700, initial-scale=1"/>');
-        $('meta[name=viewport]').attr('content','width=700, initial-scale=1.0');
-        var cssLink = $("<link rel='stylesheet' type='text/css' href='css/main.css'>");
-        $("head").append(cssLink);
+        //$('meta[name=viewport]').attr('content','width=700, initial-scale=1.0');
+        //var cssLink = $("<link rel='stylesheet' type='text/css' href='css/main.css'>");
+        //$("head").append(cssLink);
       }
     }
   }
