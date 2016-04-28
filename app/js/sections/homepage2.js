@@ -262,6 +262,7 @@ function validateTouchScreens()
 {
   ISTOUCHDEVICE = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
   //alert("Is Touch Device ? : " + ISTOUCHDEVICE + "\nOS: " + getOS() + "\nDevice: " + getDevice());
+  
   if(ISTOUCHDEVICE)
   {
     if(getOS() === "Mac")
