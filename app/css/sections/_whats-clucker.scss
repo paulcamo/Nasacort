@@ -13,6 +13,15 @@ $grey-button:#f8f8f8;
     float: left;
     width: 100%;
 }
+
+.main-notes.clear{
+    clear: both;
+
+    @include breakpoint('tablet'){
+        padding-left: 20px;
+    }
+}
+
 .cta-center{
     display: block;
     width: 100%;
@@ -1093,7 +1102,7 @@ $grey-button:#f8f8f8;
                 display: block;
                 float: none;
                 overflow: hidden;
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
             }
             @include breakpoint('mobile'){

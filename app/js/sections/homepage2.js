@@ -62,7 +62,7 @@ var page = $("html, body");
     .to("#lady01", 1.5,     {opacity:1 , ease: Power2.easeOut}  , '-=1.5')
     .to("#lady03", 1.5,     {opacity:0 , ease: Power0.easeNone} , '-=1.5');
 
-    tl2.to("#slide1-textbox", 5,    {left: "40.6%"} , '+=1.5');
+    tl2.to("#slide1-textbox", 2,    {left: "40.6%"} , '+=1.5');
 
     tl_mobile
     .to("#carousel-mobile-2", 1,    {opacity: 1, ease: Power0.easeNone} , '+=3')
@@ -82,7 +82,7 @@ var page = $("html, body");
                 //.to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
                 //.fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
     // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "#slide02", duration: 300, offset:'-150'})
+    var scene = new ScrollMagic.Scene({triggerElement: "#slide02", duration: 300, offset:'-100'})
                     .setTween([tween1, tween2])
                     //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
                     .addTo(controller);
@@ -109,9 +109,9 @@ var page = $("html, body");
 /* SLIDE 2 */
 
     tlSlide2
-    .to('#compare-copy', 1,  {left: '23%'}, '+=0')
-    .to('#compare-bg', 1,    {bottom: '-0.52em'}, '+=0')
-    .to('#stats', 1,         {height: '30.5%'}, '+=0');
+    .to('#compare-copy', 1,  {left: '23%'}, '0')
+    .to('#compare-bg', 1,    {bottom: '-0.52em'}, '0')
+    .to('#stats', 1,         {height: '30.5%'}, '0');
 
 
 /* SLIDE 3 */
@@ -167,9 +167,9 @@ var animations = {
         sec04 : 'slide3',
         sec05 : 'slide4'
     },
-    play : function(slide){
+    play : function(slide, speed){
         //currentAnimation = slide;
-        this.timeline[slide].timeScale(1);
+        this.timeline[slide].timeScale(speed || 1);
         this.timeline[slide].play();
     },
     reverse : function(slide){
@@ -316,7 +316,7 @@ function playAnim(){
 
     if($(this).scrollTop() >= animations.pos.slide4.in){
         //console.log('slide 4');
-        animations.play('slide4');
+        animations.play('slide4', 2);
         animations.getDot('slide4');
     }
 }
