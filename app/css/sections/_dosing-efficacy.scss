@@ -971,6 +971,19 @@ $space-mobile-copy: 25px;
     margin-right:4.2%;
   }
 
+  @include breakpoint('tablet-n-up') {
+    background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
+    height: auto;
+    max-width: 700px;
+    min-width:300px;
+    padding-bottom: 109%;
+    width: 103%;
+    background-size:contain;
+    margin-bottom:16px;
+    margin-left: -12px;
+    margin-right:4.2%;
+  }
+
 
   @include breakpoint('pp-mobile') {
     padding-bottom: 111%;
@@ -1207,6 +1220,19 @@ $space-mobile-copy: 25px;
     height: auto;
     //max-width: 618px;
 
+    width: 110%;
+    background-size:contain;
+    margin-bottom:18px;
+    margin-left:-10px;
+    max-width: 900px;
+    min-width: 309px;
+  }
+
+  @include breakpoint('tablet-n-up') {
+    background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
+    height: auto;
+    //max-width: 618px;
+    padding-bottom: 109%;
     width: 110%;
     background-size:contain;
     margin-bottom:18px;
