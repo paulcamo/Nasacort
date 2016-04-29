@@ -971,7 +971,7 @@ $space-mobile-copy: 25px;
     margin-right:4.2%;
   }
 
-  @include breakpoint('tablet-n-up') {
+  @media (max-width : 768px)  {
     background:url("../img/mobile/dosingEfficacy/firstDose-dosingEfficacy.png") no-repeat;
     height: auto;
     max-width: 700px;
@@ -1228,7 +1228,7 @@ $space-mobile-copy: 25px;
     min-width: 309px;
   }
 
-  @include breakpoint('tablet-n-up') {
+  @media (max-width : 768px)  { 
     background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
     height: auto;
     //max-width: 618px;
