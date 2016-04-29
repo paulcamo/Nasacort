@@ -2,6 +2,11 @@ var desktop_mininum_width = 769;
 var desktop_maximum_width = 1400;
 var assets_maximum_width = 1800;
 
+var ISTOUCHDEVICE = false;
+var TABLET_MAX_SIZE = 1024;
+var TABLET_MIN_SIZE = 768;
+var MOBILE_MAX_SIZE = 767;
+
 var breakpoint_mobile = '320px';
 var breakpoint_mobile_max = '768px';
 var media_query = "screen and (min-width: " + breakpoint_mobile + ") and (max-width: " + breakpoint_mobile_max + ")";
@@ -101,7 +106,7 @@ var page = $("html, body");
     //.to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut}, '0')
     .to('#cap', 0.5,                    {marginTop: '19em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '0')
     .to('#no-scent', 0.8,             {height: '8.8em'} , '0');
-    
+
     tlSlide1
     .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '0');
 
@@ -203,13 +208,15 @@ $(function(){
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     isTablet =  window.matchMedia(media_query_tablet).matches;
 
+    validateTouchScreens();
+
     updateAnimPos();
 
     $(window).bind("resize", function(){
         set_dotbox();
         set_variables();
         updateAnimPos();
-        
+
         /*clearTimeout($.data(this, 'resizeTimer'));
         $.data(this, 'resizeTimer', setTimeout(function() {
             //do something
@@ -225,7 +232,7 @@ $(function(){
 
     // ANIMATES THE CURRENT ANIMATION INTO VIEW
     playAnim();
-     
+
     /*if (!is_touch_device()) {
         console.log('this is NOT a touch device DUDE');
     } else {
@@ -254,19 +261,85 @@ $(function(){
 
 });
 
+function validateTouchScreens()
+{
+  ISTOUCHDEVICE = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
+  //alert("Is Touch Device ? : " + ISTOUCHDEVICE + "\nOS: " + getOS() + "\nDevice: " + getDevice());
+
+  if(ISTOUCHDEVICE)
+  {
+    if(getOS() === "Mac")
+    {
+      if(getDevice() === "tablet")
+      {
+        //console.log("Validation Done");
+        //isMobile = true;
+        page.addClass("touchscreen");
+        $(".parallax").hide();
+        $(".home-section .home-mobile").show();
+
+        //window.resizeTo(700,700);
+        //document.querySelector('style').textContent += "@media screen and (min-width:1000px) { body { color: red; }}";
+        //$('head').remove("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
+        //$('head').append('<meta name="viewport" content="width=700, initial-scale=1"/>');
+        //$('meta[name=viewport]').attr('content','width=700, initial-scale=1.0');
+        //var cssLink = $("<link rel='stylesheet' type='text/css' href='css/main.css'>");
+        //$("head").append(cssLink);
+      }
+    }
+  }
+}
+
+
+
+
+// ***********************************************************************************************************
+
+
+
+function getDevice()
+{
+  var size = $(window).outerWidth(true);
+
+   // DESKTOP
+   if(size > this.TABLET_MAX_SIZE){
+       return 'desktop';
+   // TABLET
+   } else if(size <= this.TABLET_MAX_SIZE && size > this.MOBILE_MAX_SIZE){
+       return 'tablet';
+   // MOBILE
+   } else if(size <= this.MOBILE_MAX_SIZE){
+       return 'mobile';
+   }
+}
+
+function getOS()
+{
+  var os =  navigator.appVersion;
+
+  if(os.indexOf('Mac') > 0){
+      return 'Mac';
+  } else if(os.indexOf('Win') > 0){
+      return 'Win';
+  } else {
+      return os;
+  }
+}
+// ***********************************************************************************************************
+
 function getSize(){
 
     if ($(window).innerWidth() <= 900){
         return 0.2;
-    } 
+    }
 
     if ($(window).innerWidth() > 900 && $(window).innerWidth() <= 1024){
         return 0.15;
-    } 
+    }
 
     if ($(window).innerWidth() > 1024 && $(window).innerWidth() <= 1280){
         return 0.05;
-    } 
+    }
 
     if ($(window).innerWidth() > 1280 && $(window).innerWidth() <= 1400){
         return 0;
@@ -297,7 +370,7 @@ function playAnim(){
 
         /*if ($(this).scrollTop() >= animations.pos.slide1.in && $(this).scrollTop() < animations.pos.slide1.in + 30){
             currentAnimation = 'slide1';
-            
+
             scrollToSlide();
         }*/
     }
@@ -349,7 +422,7 @@ function revAnim(){
 }
 
 function scrollToSlide(){
-    page.animate({ 
+    page.animate({
         scrollTop: animations.pos.slide1.in + (animations.pos.slide1.half + animations.pos.slide1.half / 3)
         }, 2000);
 
@@ -379,7 +452,7 @@ function freeScroll(){
                 page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
                 page.stop().unbind('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove'); // This identifies the scroll as a user action, stops the animation, then unbinds the event straight after (optional)
             }
-        }); 
+        });
     }, 2000);
 }
 
@@ -426,7 +499,7 @@ function setInterstitialPopup() {
 
         if($(this).attr("data-target") === "#interstitial"){
             $("#interstitial").find("#go").attr("href", $(this).attr("href"));
-        }   
+        }
 
         if($(this).attr("data-type") === "terms-use"){
                 $(".js-terms").show();
@@ -509,9 +582,9 @@ function validateFootnote()
             $(this).css("margin-left", "-" + negativeMargin + "px");
             if(parseInt(negativeMargin) === 0)
             {
-               negativeMargin = $(this).offset().left; 
+               negativeMargin = $(this).offset().left;
             }
-            
+
             //console.log("Footnote " + index + " position " + negativeMargin);
             $(this).css("margin-left", "-" + negativeMargin + "px");
         });
@@ -521,5 +594,5 @@ function validateFootnote()
             $(this).css("margin-left", "0");
         });
     }
-    
+
 }

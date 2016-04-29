@@ -1,7 +1,7 @@
 
 
 .home-section {
-// start of class home-mobile 
+// start of class home-mobile
   .container{
     @include breakpoint('mobile'){
       margin-top: 0;
@@ -15,7 +15,7 @@
       margin-top: 2px!important;
     }
     .spc-marg{
-      margin-bottom:8px; 
+      margin-bottom:8px;
     }
     .spc-pdd{
       padding-top: 5px;
@@ -97,7 +97,7 @@
           bottom: -8px;
           left: 44%;
         }
-      }  
+      }
     }
 
     padding-top: 168px;
@@ -170,7 +170,7 @@
             line-height: 19px;
             color: $color-dark-blue;
             font-family: $font-proxima-nova-semibold;
-            margin-bottom:0; 
+            margin-bottom:0;
           }
         }
         .preference-img{
@@ -192,7 +192,7 @@
       height: 259px;
       background: url("../img/mobile/homepage/bg-comparation.jpg") no-repeat right top;
       background-size: 100% auto;
-      margin-bottom:10px; 
+      margin-bottom:10px;
       .inner-comparation{
         padding-left: 20px;
         padding-right: 20px;
@@ -209,14 +209,14 @@
             margin-bottom: 18px;
             &:after{
               background:url("../img/mobile/homepage/gray-rectangle.jpg") no-repeat;
-            } 
+            }
           }
         }
         .inner-ctas{
           float: right;
         }
       }
-    }// end of class Comparation-Section 
+    }// end of class Comparation-Section
 
     .review-section{
       width: 100%;
@@ -244,7 +244,7 @@
               position: absolute;
               bottom: -8px;
               left: 44%;
-            } 
+            }
           p{
             color:$color-white;
             margin-bottom:0;
@@ -333,14 +333,14 @@
             margin-right: 2%;
           }
         }
-      } 
+      }
     }// end of class Discover-Section
 
     .help-section{
       width: 100%;
       height: 246px;
       background: #4795be url("../img/mobile/homepage/bg-skull-1.png") no-repeat left top;
-      margin-bottom:10px;    
+      margin-bottom:10px;
       .inner-help{
         background: url("../img/mobile/homepage/skull-help.png") no-repeat right top;
         padding-left:20px;
@@ -354,7 +354,7 @@
             content: "";
             background: url("../img/mobile/homepage/arrow-help-section.png") no-repeat;
             display: inline-block;
-            width: 100%;  
+            width: 100%;
             height: 246px;
             position: absolute;
             top:0;
@@ -414,7 +414,7 @@
     }// end of class Slider
 
     #carousel-mobile-2 {
-      
+
       z-index: 9;
       opacity: 0;
       @media screen and(min-width:400px) and (max-width: 768px) {
@@ -429,7 +429,7 @@
     }// end of class Slider
 
     #carousel-mobile-3 {
-      
+
       z-index: 10;
       opacity: 0;
       @media screen and(min-width:400px) and (max-width: 768px) {
@@ -445,4 +445,42 @@
 
 
   }// end of class home-mobile
+}
+
+.touchscreen{
+  #carousel-mobile-1 {
+    background: url("../img/mobile/homepage/bg-slide001-sml.jpg") no-repeat center 0;
+    background-size: cover;
+  }
+  #carousel-mobile-2 {
+    background: url("../img/mobile/homepage/bg-slide002-sml.jpg") no-repeat center 0;
+    background-size: cover;
+  }
+  #carousel-mobile-3 {
+    background: url("../img/mobile/homepage/bg-slide003-sml.jpg") no-repeat center 0;
+    background-size: cover;
+  }
+  .home-section .home-mobile{
+    padding-top: 139px;
+  }
+
+  .home-section .home-mobile .slider{
+    height:446px;
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      height:246px;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+      height:446px;
+    }
+  }
+  .home-section .home-mobile .slider .borderbottom{
+    top:420px;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      top:220px;
+    }
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+      top:420px;
+    }
+  }
 }
