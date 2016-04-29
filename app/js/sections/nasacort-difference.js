@@ -125,7 +125,7 @@ function collapseForm()
     $("#brand-compare .inner-logos").hide();
     $("#brand-compare .instruccion").hide();
 
-    isSomeBrandSelected = true;
+    isSomeBrandSelected = false;
 }
 
 function resetInteractiveForm()
@@ -145,7 +145,11 @@ $(window).bind("resize", function(){
     keepTDsameWidthArrow();
     addMouseOverStates();
     addMouseOverStates();
-    resetInteractiveForm();
+    var isTouchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
+    if(!isTouchDevice)
+    {
+      resetInteractiveForm();
+    }
 });
 
 function changeImageSrc()
