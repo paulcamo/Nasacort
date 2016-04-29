@@ -1,19 +1,19 @@
 .nasacort-difference-section {
     .container{
-        @include breakpoint('mobile') {   
+        @include breakpoint('mobile') {
             overflow:hidden;
         }
     }
-    
 
-  @include breakpoint('mobile') {   
+
+  @include breakpoint('mobile') {
     .footnote{
       .animation {
           width: 90%!important;
           padding: 10px 10px 10px 20px;
       }
     }
-    
+
   }
 .first-container{
    @include breakpoint('mobile'){
@@ -78,7 +78,7 @@
 
   h2{
     margin-top:47px;
-    margin-bottom: 22px; 
+    margin-bottom: 22px;
     @include breakpoint('mobile'){
         width:80%;
         margin-top:18px;
@@ -128,7 +128,7 @@
   }
 
   p.last-text{
-    margin-bottom:6px; 
+    margin-bottom:6px;
   }
 
   .img-spray{
@@ -152,16 +152,16 @@
       right: 1px;
       top: -220px;
     }
-    
+
      @media screen and (max-width: 375px) {
          right: -30px;
      }
-    
+
     img{
       width: 100%;
     }
   }
-  
+
   .treatments{
       .footnote{
           margin-top:168px;
@@ -172,7 +172,7 @@
         @media screen and (min-width: 1211px) and (max-width: 1399px) {
           margin-top:224px;
         }
-        
+
         @media screen and (max-width: 1210px) {
            margin-top:320px;
         }
@@ -186,13 +186,13 @@
       }
       .use-only{
           @media screen and (max-width: 1210px) {
-           margin-top:360px; 
+           margin-top:360px;
         }
         @include breakpoint('tablet'){
-             margin-top:300px; 
+             margin-top:300px;
         }
         @include breakpoint('mobile'){
-             margin-top:0; 
+             margin-top:0;
         }
       }
   }
@@ -220,9 +220,9 @@
               @include breakpoint('mobile'){
                 color:#555;
             }
-        }    
+        }
       p{
-        margin-bottom:26px; 
+        margin-bottom:26px;
         @include breakpoint('mobile'){
           margin-bottom: 11px;
         }
@@ -283,12 +283,12 @@
     }
     h2{
       @include breakpoint('mobile'){
-        margin-top: 19px; 
+        margin-top: 19px;
         margin-bottom:0;
       }
     }
     p{
-      margin-bottom:25px; 
+      margin-bottom:25px;
       width:90%;
     }
     p.use-only{
@@ -350,7 +350,7 @@
 
   #brand-compare {
     height: 66px;
-    width: 36.7%;
+    width: 32%;
     right: 0; //-98px;
     position: absolute;
     top: 1px;
@@ -363,9 +363,10 @@
     @include breakpoint('mobile'){
       overflow:visible;
       //max-width:209px;
-      min-width:200px;
+      min-width:auto;
       height:53px;
       right:24px !important;
+      width:30% !important;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -473,7 +474,7 @@
     }
     .instruccion{
       height: auto;
-      margin-bottom: 1px; 
+      margin-bottom: 1px;
       padding-top: 20px;
       text-align: left;
       @include breakpoint('mobile'){
@@ -514,7 +515,7 @@
           width: 80%;
         }
       }
-      
+
       .shadow-logo{
         -webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         -moz-box-shadow:    0px 5px 4px 0px rgba(50, 50, 50, 0.5);
@@ -641,7 +642,7 @@
   }
 
   .info-small-chart{
-    margin-top:17px; 
+    margin-top:17px;
     p{
       font-size: 13px;
       line-height: 14px;
@@ -663,6 +664,7 @@
     .chart-logo{
         border-right:none;
       img{
+        width: 70%;
         @include breakpoint('tablet'){
           width:40%;
         }
@@ -754,8 +756,8 @@
       vertical-align: middle;
       border-left: none;
     }
-    td:nth-child(4) {
-        
+    td:nth-child(3) {
+
     }
 
     td:nth-child(3){
@@ -799,7 +801,7 @@
 
     .vrs {
       position: absolute;
-      //right: 17.4%;
+      right: 27%;
       top: 13px;
       border: none;
       z-index: 12;
@@ -807,12 +809,13 @@
         //right: 30.3%;
         top: 14px;
         width: 55px;
+        right: 36%;
         img{
           width:55px;
         }
       }
       @include breakpoint('mobile'){
-        //right: 31.3%;
+        right: 32%;
         top: 13px;
         width: 29px;
         img{
@@ -830,16 +833,16 @@
       top: 68px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
-      width: 36.7%;
+      width: 32%;
       @include breakpoint('tablet'){
-        right: 41px;
+        right: 80px;
         top: 68px;
-        width: 29.5%;
+        width:25.5%;
       }
       @include breakpoint('mobile'){
         right: 24px;
         top: 43px;
-        width: 27.7%;
+        width:30%;
       }
 
     }
@@ -867,23 +870,23 @@
             padding-left: 3.125%;
             padding-right: 3.125%;
         }
-        
+
         @media screen and (max-width: 400px) {
             padding-left: 25px;
             padding-right: 25px;
         }
-        
+
         .download-cta-button{
             @media screen and (max-width: 400px) {
                 padding-left: 0;
                 padding-right: 0;
             }
         }
-        
+
     }
   .download-cta-button{
     margin-bottom:0px;
-    margin-top: 3px; 
+    margin-top: 3px;
     @include breakpoint('mobile'){
         //margin-left: 5px;
      }
@@ -1009,7 +1012,7 @@
               margin-top: 13px;
             }
           }
-        } 
+        }
       }
     }
     .btt-faq{
@@ -1028,7 +1031,7 @@
           margin-bottom:0;
           color: $color-blue-titles;
           text-align: left;
-          padding-left: 12px; 
+          padding-left: 12px;
           padding-top: 6px;
         }
       }
@@ -1036,4 +1039,3 @@
   }
 
 }
-
