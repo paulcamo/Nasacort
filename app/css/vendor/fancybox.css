@@ -221,6 +221,8 @@
 	text-align: center;
 }
 
+
+
 .fancybox-title-float-wrap .child {
 	display: inline-block;
 	margin-right: -100%;
@@ -232,9 +234,12 @@
 	        border-radius: 15px;
 	text-shadow: 0 1px 2px #222;
 	color: #FFF;
-	font-weight: bold;
 	line-height: 24px;
 	white-space: nowrap;
+}
+
+span.bold {
+	font-weight: bold;
 }
 
 .fancybox-title-outside-wrap {
