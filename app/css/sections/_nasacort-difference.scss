@@ -573,7 +573,8 @@
 
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
-        margin-right: 8px;
+        margin-right: 16px;
+        margin-top: 8px;
       }
 
     }
@@ -601,7 +602,8 @@
       }
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
-        margin-right: 8px;
+        margin-right: 16px;
+        margin-top: 8px;
       }
     }
 
@@ -628,7 +630,9 @@
       }
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
-        margin-right: 8px;
+        margin-right: 16px;
+        margin-top: 8px;
+        background-position: 12px 4px;
       }
     }
 
@@ -657,6 +661,9 @@
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
         margin-right: 8px;
+        margin-top: 8px;
+        background-position: 12px 4px;
+        background-size: 90px auto;
       }
     }
 
@@ -684,7 +691,10 @@
       }
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
-        margin-right: 8px;
+        margin-right: 16px;
+        margin-top: 8px;
+        background-position: 10px 0px;
+        background-size: 120px auto;
       }
     }
 
@@ -713,6 +723,8 @@
       @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
         //galaxy S4
         margin-right: 8px;
+        margin-top: 8px;
+        background-position: -4px 4px;
       }
     }
 
