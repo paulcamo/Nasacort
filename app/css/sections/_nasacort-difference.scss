@@ -365,8 +365,6 @@
       //max-width:209px;
       min-width:auto;
       height:53px;
-      right:24px !important;
-      width:30% !important;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -465,6 +463,11 @@
         border-left: solid #497ebf 3px;
         border-right: solid #497ebf 3px;
         border-top: solid #497ebf 3px;
+        @include breakpoint('tablet'){
+          position: relative;
+          right: -27px;
+          width: 87%;
+        }
         @include breakpoint('mobile'){
             border-left: solid #497ebf 2px;
             border-right: solid #497ebf 2px;
@@ -800,24 +803,29 @@
     }
 
     .vrs {
-      position: absolute;
-      right: 27%;
+      position: relative;
+      float: right;
+      margin-left: -35px;
+      position: relative;
+      right: -35px;
       top: 13px;
-      border: none;
+      width: 69px;
       z-index: 12;
+      border:none;
       @include breakpoint('tablet'){
-        //right: 30.3%;
-        top: 14px;
-        width: 55px;
-        right: 36%;
+        margin-left: -23px;
+        right: -23px;
+        top: 0;
+        width:auto;
         img{
           width:55px;
         }
       }
       @include breakpoint('mobile'){
-        right: 32%;
-        top: 13px;
-        width: 29px;
+        right: -15px;
+        top: 12%;
+        margin-left:-15px;
+        width:auto;
         img{
           width: 29px;
         }
@@ -826,23 +834,19 @@
 
     .arrow {
       display: none;
-      position: absolute;
+      position: relative;
       right: 0; //-95px;
       border: medium none;
       z-index: 11;
-      top: 68px;
+      top: 40px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
-      width: 32%;
+      width:auto;
       @include breakpoint('tablet'){
-        right: 80px;
-        top: 68px;
-        width:25.5%;
+
       }
       @include breakpoint('mobile'){
-        right: 24px;
-        top: 43px;
-        width:30%;
+        top: 28px;
       }
 
     }

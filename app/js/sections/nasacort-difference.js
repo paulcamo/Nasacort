@@ -120,7 +120,7 @@ function collapseForm()
 {
     $("#brand-compare .open").removeClass("start");
     $("#brand-compare").removeClass("brand-compare-open");
-    $(".chart-table-container .arrow").css("display","initial");
+    $(".chart-table-container .arrow").css("display","block");
 
     $("#brand-compare .inner-logos").hide();
     $("#brand-compare .instruccion").hide();
@@ -173,7 +173,7 @@ function changeImageSrc()
 
 function keepTDsameWidthArrow()
 {
-    
+
 
 }
 
