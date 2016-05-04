@@ -573,7 +573,9 @@
     .sprite-bg-sudafed {
       background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat center;
       background-size: auto 71%;
-      
+      @media screen and (max-width: 400px) {
+        background-size: auto 50%;
+      }
 
     }
 
