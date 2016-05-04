@@ -1,5 +1,5 @@
 
-
+var flagSize;
 var brand_checks =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_default =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_afrin =    [1,1,0,0,0,1,1,0,0,0,1,0,0,0];
@@ -44,8 +44,18 @@ function remove_brand_bg(nn) {
     $("#brand-compare .open").addClass("sprite-bg-" + nn);
 }
 
+$(document).load(function(){
+    resizeScreen();
+});
+
+function resizeScreen(){
+    flagSize = $('.nasacort-difference-section .charts td:nth-child(4)').outerWidth() - 5;
+    $('.screen__sized .screen').width(flagSize);
+}
 
 $(document).ready(function(){
+
+    resizeScreen();
 
     set_checks("clear");
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
@@ -150,6 +160,8 @@ $(window).bind("resize", function(){
     {
       resetInteractiveForm();
     }
+    
+    resizeScreen();
 });
 
 function changeImageSrc()
