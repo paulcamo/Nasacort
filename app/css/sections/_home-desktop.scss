@@ -29,8 +29,11 @@ body {
 
 
 .home-section {
+  visibility: hidden;
 
-
+  &.show{
+    visibility: visible;
+  }
 
   #slide01, #slide02-03, #slide04-05 {
     width: 100%;

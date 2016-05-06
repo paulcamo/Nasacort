@@ -32,19 +32,12 @@ var tlr = new TimelineMax({paused:true});
 var tl3 = new TimelineMax({paused:true});
 
 
-
-
-
-
-
-
-
-
 // --------------------------------------------------------------------
 
 
 $(document).ready(function() {
-
+    alert('load');
+    $('.home-section').addClass('show');
     $( 'html, body' ).scrollTop(0); //reset scroll to top ....
     $('body').flowtype( { minimum : 500,  maximum : 1800  }); // set flowtype ...
     $("#dots-container .dotbox .dot:eq(0)").addClass("dot-on");  // set first dot in blue ....

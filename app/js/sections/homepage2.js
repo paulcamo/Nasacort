@@ -202,7 +202,7 @@ function updateAnimPos(){
 
 // INIT THE NEEDED FUNCTIONS
 $(function(){
-
+    $('.home-section').addClass('show');
     $('body').flowtype( { minimum : 500,  maximum : 1800  });
     set_dotbox();
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
