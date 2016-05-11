@@ -124,6 +124,9 @@
         top: -78px;
         right: 0;
       }
+      p{
+        display:none;
+      }
       .borderbottom{
         background-color: $color-white;
         height: 26px;
@@ -473,14 +476,120 @@
       height:446px;
     }
   }
+  .home-section .home-mobile #carousel-mobile-1, .home-section .home-mobile #carousel-mobile-2, .home-section .home-mobile #carousel-mobile-3{
+    padding-left: 40.6%;
+    padding-top: 1.7em;
+    padding-right:10%;
+  }
+
+  .home-section .home-mobile .slider h1{
+    font-family: $font-proxima-nova-semibold;
+    color: #2974AB;
+    font-size: 1em;
+    margin-top: 0.51em;
+    margin-bottom: 25px;
+    font-weight: 100;
+    letter-spacing: 0.0434em;
+    max-width:100%;
+    width:100%;
+    line-height: 1.2em;
+  }
+
+  .home-section .home-mobile .slider p{
+    display:block;
+    font-family: $font-proxima-nova-semibold;
+    font-size: 0.5em;
+    letter-spacing: 0.004em;
+    line-height: 1.54em;
+    padding-top: 0.1em;
+    width: 82%;
+  }
+
+  .home-section .home-mobile  .features {
+    color: #0099cc;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+  .home-section .home-mobile .preference-section .back-preference .preference-parr{
+    padding-top: 32px;
+  }
+
   .home-section .home-mobile .slider .borderbottom{
     top:420px;
 
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
       top:220px;
+      display:none;
     }
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
       top:420px;
+      display:none;
     }
   }
+
+  .home-section .home-mobile .comparation-section .inner-comparation{
+    background-position: 60px 0px;
+  }
+
+  .home-section .home-mobile .comparation-section .inner-comparation .inner-ctas{
+    float:none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section .home-mobile .inner-ctas{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section .home-mobile .inner-ctas .cta span{
+    max-width: 370px;
+    width: 100%;
+    line-height: 32px;
+  }
+
+  .home-section .home-mobile .review-section .inner-review .head-inner{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section .home-mobile .head-inner p:after{
+    left: 90%;
+  }
+
+  .home-section .home-mobile .review-section .inner-review .inner-ctas{
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section .home-mobile .help-section .inner-help .head-help{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .maria-img{
+    background-position:40px 0px;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .mark-img{
+    background-position:40px 0px;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .kara-img{
+    background-position:40px 0px;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .liam-img{
+    background-position:40px 0px;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .cta .cta-txt{
+    padding-top: 0px;
+  }
+
 }
