@@ -50,6 +50,8 @@ var page = $("html, body");
     var tlSlide3 = new TimelineMax({paused:true});
     var tlSlide4 = new TimelineMax({paused:true});
 
+    var tween2 = new TimelineMax({paused:true});
+
     var tlPollen = new TimelineMax({paused:true});
     var controller = new ScrollMagic.Controller();
 
@@ -80,21 +82,21 @@ var page = $("html, body");
 /* SLIDE 1 */
     // build tween
     //var tween = TweenMax.staggerFromTo("#bottle", 2, {left: 700}, {left: 0, ease: Back.easeOut}, 0.15);
+    var tween2 = new TimelineLite({});
+
     var tween1 = TweenMax.to('#bottle', 1, {marginTop: '16.4em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut});
-    var tween2 = TweenMax.to('#cap', 1, {marginTop: '17.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut});
-                //.to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut} , '+=0')
-                //.to('#cap', 0.5,                    {marginTop: '29em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0')
-                //.to('#no-scent', 0.8,             {height: '8.8em'} , '+=0')
-                //.fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '+=0');
+    tween2.to('#cap', 1, {marginTop: '17.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut})
+    .to('#cap', 0.5, {marginTop: '19em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0');
+    //.to('#no-scent', 0.8, {height: '8.8em'} , '+=0.5');
+
     // build scene
     var scene = new ScrollMagic.Scene({triggerElement: "#slide02", duration: 300, offset:'-100'})
                     .setTween([tween1, tween2])
-                    //.addIndicators({name: "staggering"}) // add indicators (requires plugin)
                     .addTo(controller);
+
 
     scene.on("end", function (event) {
         tlSlide1b.timeScale(1).play();
-        //tlSlide1.timeScale(1).play();
     });
 
     scene.on("progress", function (event) {
@@ -103,9 +105,7 @@ var page = $("html, body");
     });
 
     tlSlide1b
-    //.to('#cap', 0.5,                  {marginTop: '20em', ease: Power1.easeOut}, '0')
-    .to('#cap', 0.5,                    {marginTop: '19em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '0')
-    .to('#no-scent', 0.8,             {height: '8.8em'} , '0');
+    .to('#no-scent', 0.8, {height: '8.8em'} , '0');
 
     tlSlide1
     .fromTo($('#nasacort-compare'), 1.5, {right: '-39%'}, {right: '20.4%', ease: Power1.easeOut} , '0');
@@ -190,8 +190,8 @@ var animations = {
 
 function updateAnimPos(){
     animations.pos = {
-        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 2, 'spot' : 0},
-        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3, 'out' : $('#slide02').offset().top - ($('#slide02').outerHeight() / 6), 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - $('#slide02').outerHeight() / 3 + ($('#slide02').outerHeight() / 2 + ($('#slide02').outerHeight() / 2) / 4)},
+        slide0 : { 'in' : $('#slide01').offset().top, 'out' : $('#slide01').outerHeight() / 7, 'half' : $('#slide01').outerHeight() / 3, 'spot' : 0},
+        slide1 : { 'in' : $('#slide02').offset().top - $('#slide02').outerHeight() / 2, 'out' : $('#slide02').offset().top - ($('#slide02').outerHeight() / 6), 'half' : $('#slide02').outerHeight() / 2, 'spot' : $('#slide02').offset().top - ($('.header-top').outerHeight() - 40)},
         slide2 : { 'in' : $('#slide03').offset().top - ($('#slide03').outerHeight()), 'out' : $('#slide03').offset().top - ($('#slide03').outerHeight() + ($('#slide03').outerHeight() / 5) ), 'half' : $('#slide03').outerHeight() / 2, 'spot' : $('#slide03').offset().top - ($('#slide03').outerHeight() * (0.2 + getSize()))},
         slide3 : { 'in' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.6), 'out' : $('#slide04').offset().top - ($('#slide04').outerHeight() * 0.5), 'half' : $('#slide04').outerHeight() / 2, 'spot' : $('#slide04').offset().top - ($('#slide04').outerHeight() * (0.1 + getSize()))},
         slide4 : { 'in' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.6), 'out' : $('#slide05').offset().top - ($('#slide05').outerHeight() * 0.5), 'half' : $('#slide05').outerHeight() / 2, 'spot' : $('#slide05').offset().top - ($('#slide05').outerHeight() * (0.1 + getSize()))}
@@ -358,6 +358,7 @@ function getSize(){
 
 //$( "div.demo" ).scrollTop( 300 );
 function playAnim(){
+    
     if($(this).scrollTop() >= 0 && $(this).scrollTop() < animations.pos.slide0.out){
         animations.getDot('slide0');
         animations.getDot('slide0');
@@ -367,6 +368,8 @@ function playAnim(){
         //console.log('slide 1');
         animations.play('slide1');
         animations.getDot('slide1');
+
+
 
         /*if ($(this).scrollTop() >= animations.pos.slide1.in && $(this).scrollTop() < animations.pos.slide1.in + 30){
             currentAnimation = 'slide1';
@@ -395,6 +398,7 @@ function playAnim(){
 }
 
 function revAnim(){
+
     if($(this).scrollTop() < animations.pos.slide1.in){
         //animations.reverse('slide1');
         animations.getDot('slide0');
