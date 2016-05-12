@@ -276,6 +276,7 @@ function validateTouchScreens()
         //isMobile = true;
         page.addClass("touchscreen");
         $(".parallax").hide();
+        $(".tablet-block").addClass('block');
         $(".home-section .home-mobile").show();
 
         //window.resizeTo(700,700);

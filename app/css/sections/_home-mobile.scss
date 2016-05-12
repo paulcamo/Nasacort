@@ -1,4 +1,6 @@
-
+.block{
+  display: block;
+}
 
 .home-section {
 // start of class home-mobile
@@ -563,7 +565,8 @@
   .home-section .home-mobile .inner-ctas .cta span{
     max-width: 370px;
     width: 100%;
-    line-height: 32px;
+    line-height: 15px; //32px;
+    padding: 8px 2px 8px 11px;
   }
 
   .home-section .home-mobile .review-section .inner-review .head-inner{
