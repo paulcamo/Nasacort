@@ -103,7 +103,7 @@ $space-mobile-copy: 25px;
       @media screen and (max-width: 768px){
         background:url("../img/mobile/dosingEfficacy/bg-hero-dosingEfficacy.jpg") no-repeat top center;
         height:223px;
-        padding-bottom: 0 !important;
+        /*padding-bottom: 0 !important;*/
         max-height: 233px;
         background-position: 77% -14px !important;
       }
@@ -120,6 +120,9 @@ $space-mobile-copy: 25px;
         height: auto;
         min-height: 250px;
         max-height: 350px;
+      }
+      @include breakpoint('tablet') {
+        margin-top: 5px;
       }
 
       .content{
@@ -334,6 +337,12 @@ $space-mobile-copy: 25px;
     color:$color-blue;
     margin-bottom: 28px;
     width: 99%;
+    sup{
+      @include breakpoint('tablet') {
+        font-size: 50%;
+        top: -0.6em;
+      }
+    }
   }
   .second-content-dosing{
     padding-left:33px;
@@ -1228,7 +1237,7 @@ $space-mobile-copy: 25px;
     min-width: 309px;
   }
 
-  @media (max-width : 768px)  { 
+  @media (max-width : 768px)  {
     background:url("../img/mobile/dosingEfficacy/allergyRelief-dosingEfficacy.png") no-repeat;
     height: auto;
     //max-width: 618px;
