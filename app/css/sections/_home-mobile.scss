@@ -19,6 +19,10 @@
     }
     .spc-pdd{
       padding-top: 5px;
+      display:block;
+    }
+    .dataonfile{
+      display:none !important;
     }
     .clr-org{
       color: $color-orange;
@@ -327,6 +331,10 @@
                 display: inline-block;
                 width: 100%;
               }
+              p.hideintouchscreen{
+                display:inline-block;
+                margin-bottom:0;
+              }
             }
             &:after{
               background-image:none;
@@ -528,6 +536,14 @@
     }
   }
 
+  .home-section .home-mobile .dataonfile{
+    display:block !important;
+  }
+
+  .home-section .home-mobile .spc-pdd{
+    display:none;
+  }
+
   .home-section .home-mobile .comparation-section .inner-comparation{
     background-position: 60px 0px;
   }
@@ -567,7 +583,7 @@
   }
 
   .home-section .home-mobile .help-section .inner-help .head-help{
-    width:50%;
+    width:65%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -590,6 +606,24 @@
 
   .home-section .home-mobile .discover-section .inner-discover .inner-ctas .cta .cta-txt{
     padding-top: 0px;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .cta .cta-txt p.hideintouchscreen{
+    display:none;
+  }
+
+  .home-section .home-mobile .discover-section .inner-discover .inner-ctas .cta .cta-txt .small-txt{
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
+      margin-top:10px;
+    }
+  }
+
+  .footnote{
+    width:100%;
+  }
+
+  .footnote .rfrs .references .hideintouchscreen{
+    display:none;
   }
 
 }
