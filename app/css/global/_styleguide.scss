@@ -92,7 +92,7 @@ h4{
     position:relative;
     margin: 0 auto;
     max-width: 814px;
-    .button{       
+    .button{
         background-color: transparent;
         //background-color: black;
         display: block;
@@ -163,7 +163,7 @@ h4{
             @include border-corner-radius(top, right, 5px);
             @include border-corner-radius(bottom, right, 5px);
         }
-        @media screen and (max-width: 335px) { 
+        @media screen and (max-width: 335px) {
           width:20%;
         }
         .shareSympt-icon{
@@ -211,7 +211,7 @@ h4{
             @include border-corner-radius(bottom, left, 3px);
         }
         @media screen and (max-width: 335px) {
-          min-width: 184px;     
+          min-width: 184px;
           width:79%;
         }
         img{
@@ -231,7 +231,7 @@ h4{
             float: left;
             display: inline-block;
             position:relative;
-            
+
             @include breakpoint('mobile'){
                 font-size: 11px;
                 line-height: 18px;
@@ -243,15 +243,15 @@ h4{
                 padding-right:0;
                 padding-bottom:0;
             }
-            
+
             @media screen and (min-width: 500px) {
               //line-height: 34px;
           }
-          
+
           @media screen and (max-width: 500px) {
               //line-height: 100%;
           }
-            
+
             &:before{
                 content:" ";
                 background:url('../img/global/desktop/downl-cta-line.png')no-repeat;
@@ -334,11 +334,11 @@ h4{
       }
 
   }
-  
+
   .copy{
      @media screen and (max-width: 1063px) {
          float:left;
-     } 
+     }
   }
 
 
@@ -353,7 +353,7 @@ h4{
           @include breakpoint('tablet'){
             padding-bottom: 7.5%;
           }
-    
+
            @media screen and (max-width: 1063px) {
                background-size:contain!important;
                height:auto;
@@ -446,6 +446,10 @@ h4{
   @include breakpoint('desktop') {
     padding-top: 122px;
   }
+
+  @include breakpoint('tablet') {
+    padding-top: 145px;
+  }
 //  @media screen and (max-width: 1063px) {
 //    padding-top: 148px;
 //  }
@@ -482,6 +486,3 @@ h4{
 }
 
 body.modal-open { overflow:inherit; padding-right:inherit !important; }
-
-
-
