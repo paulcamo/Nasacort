@@ -198,6 +198,13 @@ function updateAnimPos(){
     };
 }
 
+function tabletChange(){
+    if(getDevice() === "tablet" && window.outerWidth <= '768'){
+        $(".tablet-block").addClass('block');
+    } else {
+        $(".tablet-block").removeClass('block');
+    }
+}
 
 
 // INIT THE NEEDED FUNCTIONS
@@ -223,7 +230,10 @@ $(function(){
             //alert("Haven't resized in 200ms!");
             validateFootnote();
         }, 500));*/
+        tabletChange();
     });
+
+    tabletChange();
 
     // PLAYS FIRST ANIMATION
     tlSlider.play();
@@ -276,7 +286,7 @@ function validateTouchScreens()
         //isMobile = true;
         page.addClass("touchscreen");
         $(".parallax").hide();
-        $(".tablet-block").addClass('block');
+
         $(".home-section .home-mobile").show();
 
         //window.resizeTo(700,700);
