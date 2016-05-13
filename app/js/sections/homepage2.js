@@ -86,11 +86,11 @@ var page = $("html, body");
 
     var tween1 = TweenMax.to('#bottle', 1, {marginTop: '16.4em',scale: '1',left: '20.9%', width: '8em', height: '11em', ease: Sine.easeOut});
     tween2.to('#cap', 1, {marginTop: '17.9em', scale: '2.5', left: '30.7%', height: '4em', ease: Sine.easeOut})
-    .to('#cap', 0.5, {marginTop: '19em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0');
+    .to('#cap', 1.5, {marginTop: '19em', left: '92%', rotation: 35, ease: Cubic.easeInOut} , '+=0');
     //.to('#no-scent', 0.8, {height: '8.8em'} , '+=0.5');
 
     // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "#slide02", duration: 290, offset:'-100'})
+    var scene = new ScrollMagic.Scene({triggerElement: "#slide02", duration: 350, offset:'-100'})
                     .setTween([tween1, tween2])
                     .addTo(controller);
 
