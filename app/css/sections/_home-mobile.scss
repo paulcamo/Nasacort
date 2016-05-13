@@ -233,13 +233,19 @@
       background: url("../img/mobile/homepage/bg-review.png") repeat-x right top;
       margin-bottom:10px;
       .inner-review{
-        background: url("../img/mobile/homepage/family-review.png") no-repeat right 33px;
+        background-image: url("../img/mobile/homepage/family-review.png");
+        background-repeat: no-repeat;
+        background-position: 120% 39px;
         padding-left:20px;
         padding-right:20px;
         padding-top:40px;
         background-size:177px auto;
         display: block;
         height: 260px;
+
+        @media all and (min-width: 768px) and (max-width: 1024px){
+          background-position: 87% 33px;
+        }
         .head-inner{
           width: 70%;
           margin-bottom: 26px;
@@ -522,7 +528,7 @@
 }
 
   .home-section .home-mobile .preference-section .back-preference .preference-parr{
-    padding-top: 32px;
+    padding-top: 21px;
   }
 
   .home-section .home-mobile .slider .borderbottom{
@@ -569,6 +575,16 @@
     padding: 8px 2px 8px 11px;
   }
 
+  .home-section .home-mobile .inner-ctas.low-links .cta span{
+    padding: 14px 2px 3px 11px;
+  }
+
+  .home-section .home-mobile .inner-ctas.low-links .cta.cta-last span{
+    padding: 3px 2px 3px 11px;
+  }
+
+  
+
   .home-section .home-mobile .review-section .inner-review .head-inner{
     width: 35%;
     margin-left: auto;
@@ -589,6 +605,10 @@
     width:65%;
     margin-left: auto;
     margin-right: auto;
+
+    @media all and (min-width: 768px) and (max-width: 1024px){
+      width:50%;
+    }
   }
 
   .home-section .home-mobile .discover-section .inner-discover .inner-ctas .maria-img{
