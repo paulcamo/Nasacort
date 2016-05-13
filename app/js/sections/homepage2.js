@@ -403,7 +403,7 @@ function playAnim(){
 
     if($(this).scrollTop() >= animations.pos.slide4.in){
         //console.log('slide 4');
-        animations.play('slide4', 2);
+        animations.play('slide4', 2.5);
         animations.getDot('slide4');
     }
 }
