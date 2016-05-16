@@ -288,7 +288,7 @@ function validateTouchScreens()
         $(".parallax").hide();
 
         $(".home-section .home-mobile").show();
-
+        addTapBehavior();
         //window.resizeTo(700,700);
         //document.querySelector('style').textContent += "@media screen and (min-width:1000px) { body { color: red; }}";
         //$('head').remove("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
@@ -336,6 +336,15 @@ function getOS()
       return os;
   }
 }
+
+function addTapBehavior()
+{
+  $('#header a').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+ });
+}
 // ***********************************************************************************************************
 
 function getSize(){
@@ -369,7 +378,7 @@ function getSize(){
 
 //$( "div.demo" ).scrollTop( 300 );
 function playAnim(){
-    
+
     if($(this).scrollTop() >= 0 && $(this).scrollTop() < animations.pos.slide0.out){
         animations.getDot('slide0');
         animations.getDot('slide0');
