@@ -2,7 +2,7 @@
 var mobileBreakPoint = 768;
 var isMobile;
 
-$(document).ready(function() {   
+$(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     setGlassHeadsPopup();
     addAudioPlayer();
@@ -30,7 +30,7 @@ $(window).bind("resize", function(){
         $('.img-container>ul>li .normal_img').show();
         $('.img-container>ul>li').css({'z-index':'0','opacity':'1' });
         $('.img-container>ul>li.li_maria').css({'z-index':'1'});
-        
+
         $('.click_state').removeClass('click_state');
         $(".box").hide();
     }else{
@@ -50,17 +50,17 @@ var currentGlassHead = "";
 function setGlassHeadsPopup()
 {
     hideAllAnatomies();
-    
-    $("body a").not($(".listen")).on("click",function() { 
+
+    $("body a").not($(".listen")).on("click",function() {
         $("#glass-head .modal-header h1").text($(this).attr("title"));
-        
+
         if(!isMobile)
         {
             hideAllAnatomies();
         }
-        
+
         currentCharacter = $(this).attr("data-type");
-        
+
         if($(this).attr("data-type") === "maria")
         {
             $("#glass-head #maria").show();
@@ -78,24 +78,24 @@ function setGlassHeadsPopup()
             $("#glass-head #liam").show();
         }
         if(currentGlassHead === "" && !isMobile)
-        { 
+        {
             if(currentCharacter !== "")
             {
-                $("#glass-head #" + currentCharacter + " .default").show(); 
-            }  
+                $("#glass-head #" + currentCharacter + " .default").show();
+            }
         }
         if(currentGlassHead === "" && isMobile)
-        { 
+        {
              showAllAnatomies();
              $("#glass-head .default").hide();
         }
-        
+
     });
-    
+
     /*$('#glass-head').on('shown.bs.modal', function (event) {
         console.log(event.relatedTarget);
     });*/
-    
+
     $("#glass-head #close").on("click",function(){
         $('#glass-head').modal('hide');
         trackGlassHeadClose(currentCharacter);
@@ -110,7 +110,7 @@ function setGlassHeadsPopup()
             hideAllAnatomies();
         }
     });
-    
+
     if(!isMobile)
     {
         addHotSpots("maria", mariasHotSpots);
@@ -146,7 +146,7 @@ function hideAllAnatomies()
     $("#glass-head #mark").hide();
     $("#glass-head #kara").hide();
     $("#glass-head #liam").hide();
-       
+
 }
 
 function hideAnatomy(id)
@@ -166,7 +166,7 @@ function showCurrentAnatomy()
 {
     if(currentCharacter !==  "")
     {
-        $("#glass-head #" + currentCharacter + " ." + currentGlassHead).show();   
+        $("#glass-head #" + currentCharacter + " ." + currentGlassHead).show();
     }
 }
 
@@ -193,43 +193,43 @@ $(window).bind("resize", function(){
 
     if(!isMobile)
     {
-        if($('#glass-head #maria .hotspots-container').is(':empty')) 
+        if($('#glass-head #maria .hotspots-container').is(':empty'))
         {
             addHotSpots("maria", mariasHotSpots);
             resetAnatomies();
         }
-        
-        if($('#glass-head #mark .hotspots-container').is(':empty')) 
-        {  
+
+        if($('#glass-head #mark .hotspots-container').is(':empty'))
+        {
             addHotSpots("mark", marksHotSpots);
             resetAnatomies();
         }
-        if($('#glass-head #kara .hotspots-container').is(':empty')) 
+        if($('#glass-head #kara .hotspots-container').is(':empty'))
         {
             addHotSpots("kara", karasHotSpots);
             resetAnatomies();
         }
-        if($('#glass-head #liam .hotspots-container').is(':empty')) 
+        if($('#glass-head #liam .hotspots-container').is(':empty'))
         {
             addHotSpots("liam", liamsHotSpots);
             resetAnatomies();
         }
         if(currentGlassHead !== "" && currentCharacter !== "")
-        { 
+        {
             if(currentCharacter !== "")
             {
                 if(currentCharacter !== "")
                 {
-                    $("#glass-head #" + currentCharacter + " .anatomy").hide();  
-                }    
+                    $("#glass-head #" + currentCharacter + " .anatomy").hide();
+                }
             }
-             showCurrentAnatomy();   
+             showCurrentAnatomy();
         }
         if(currentGlassHead === "")
         {
             resetAnatomies();
         }
-        
+
         $("#glass-head .hotspot").show();
         if(currentGlassHead !== "")
         {
@@ -237,27 +237,27 @@ $(window).bind("resize", function(){
         }
 
     }else
-    { 
+    {
         resetHotSpots();
         hideHotSpots();
         showAllAnatomies();
-        $("#glass-head .default").hide();   
+        $("#glass-head .default").hide();
     }
 });
 
 function addAudioPlayer()
-{   
+{
     var isReady = false;
-    
+
     $('#glass-head .listen').click(function() {
-        
+
         var audioPath = $(this).attr("path");
         //console.log("Audio Playing: " + audioPath + " is playing : " + $('#glass-head #media-container').attr("playing"));
-        
+
         $(this).addClass("active");
-        
+
         $("#glass-head #media-container").jPlayer( "destroy" );
-        
+
         if($('#glass-head #media-container').attr("playing") === "false")
         {
             $('#glass-head #media-container').jPlayer({
@@ -368,12 +368,12 @@ function hoverInNav(){
                 $(".info-text>ul>li" + name_nav).removeClass('hover');
                 $(".info-text>ul>li" + name_nav).find('.arrow-upMenu').removeClass('hover');
             }
-        });        
+        });
     } else{
         $(".img-container>ul>li").off();
     }
 
-    
+
 
 }
 
@@ -382,7 +382,8 @@ function clickInNav() {
     var contentwidth = $(window).width();
     if ((contentwidth) >= mobileBreakPoint){
         var currentPerson, name;
-        $('.img-container>ul>li').click(function(e){
+        //$('.img-container>ul>li').click(function(e){  //Double Tapping Bug happening on iPad/Touch Scren events
+        $('.img-container>ul>li').on('click touchend', function(e) {
             e.preventDefault();
 
             $(this).addClass('click_state');
@@ -398,7 +399,8 @@ function clickInNav() {
             $(name).addClass('click_state');
             $(currentPerson).show('fast');
         });
-        $('.info-text>ul>li').click(function(e){
+        //$('.info-text>ul>li').click(function(e){  //Double Tapping Bug happening on iPad/Touch Scren events
+        $('.info-text>ul>li').on('click touchend', function(e) {
             e.preventDefault();
             $(this).addClass('click_state');
             $('.img-container>ul>li').css('opacity','0.2');
@@ -413,7 +415,8 @@ function clickInNav() {
 
         // on click out of modal
         var container = $(".box");
-        $(document).mouseup(function (e){
+        //$(document).mouseup(function (e){ // Double Tapping Bug happening on iPad/Touch Scren events
+        $(document).on('mouseup touchstart', function(e) {
             if (!container.is(e.target)&& container.has(e.target).length === 0){
                 $('.img-container>ul>li .normal_img').show();
                 $('.img-container>ul>li .hover_img').hide();
@@ -470,14 +473,3 @@ function clickGoSection(){
 
     });
 }
-
-
-
-
-
-
-
-
-
-
-
