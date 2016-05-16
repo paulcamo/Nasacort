@@ -536,11 +536,26 @@
 
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
       top:220px;
-      display:none;
     }
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
       top:420px;
-      display:none;
+    }
+
+    p{
+      right:166px;
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        right:117px;
+      }
+    }
+
+  }
+
+  .home-section .home-mobile .slider img.product{
+    width:370px;
+    top:-125px;
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+      width:270px;
+      top:-84px;
     }
   }
 
@@ -583,7 +598,7 @@
     padding: 3px 2px 3px 11px;
   }
 
-  
+
 
   .home-section .home-mobile .review-section .inner-review .head-inner{
     width: 35%;
