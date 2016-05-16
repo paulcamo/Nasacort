@@ -9,36 +9,42 @@ var sticky_height=0;
 var vtop=0;
 var isMobile;
 
+var ISTOUCHDEVICE = false;
+var TABLET_MAX_SIZE = 1024;
+var TABLET_MIN_SIZE = 768;
+var MOBILE_MAX_SIZE = 767;
+
 $(document).ready(function() {
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
 
     desktopStickyHeader($(this).scrollTop());
 
     hashCalling();
-    
+
 	setInterstitialPopup();
-	
+
 	setSharePopup();
-    
+
     currentPage = document.body.className;
-    
+
     activateFooterAndNavBarValidation();
-    
+
     validateFootnote();
-    
+
     addFancyVideo();
 
     setSuperscripts();
 
+    validateTouchScreens();
 
 });
 
 $(window).bind("resize", function(){
-    
+
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
 
     resetHeaderPadding();
-    
+
     clearTimeout($.data(this, 'resizeTimer'));
     $.data(this, 'resizeTimer', setTimeout(function() {
         //do something
@@ -88,7 +94,7 @@ function desktopStickyHeader(y){
 
 
 function hashCalling(newPath){
-    // if newPath exists will use that as the new target if don't will use the hash from path 
+    // if newPath exists will use that as the new target if don't will use the hash from path
     var hashCalled = newPath || (window.location.hash.substring(1) || ""),
         overflow = getOverflowPerPage(newPath);
     var spot;
@@ -106,7 +112,7 @@ function hashCalling(newPath){
             }
         });
     }
-    
+
 }
 
 function getPlace(spot){
@@ -126,10 +132,10 @@ $('a').on('click tap', function(){
         linkPath = $(this).attr('href').split('#')[1] || null;
     }
     if (linkPath){
-        // scrolls to the new position 
+        // scrolls to the new position
         hashCalling(linkPath);
     }
-    
+
 });
 
 function getOverflowPerPage(current){
@@ -193,7 +199,7 @@ function setInterstitialPopup() {
 
 		if($(this).attr("data-target") === "#interstitial"){
 			$("#interstitial").find("#go").attr("href", $(this).attr("href"));
-		}	
+		}
 
 		if($(this).attr("data-type") === "terms-use"){
                 $(".js-terms").show();
@@ -232,7 +238,7 @@ function setSuperscripts()
             var footnote = $(this).closest(".content").find(".footnote");
             if(!footnote.length)
             {
-               footnote = $(this).closest(".ncontainer").find(".footnote"); 
+               footnote = $(this).closest(".ncontainer").find(".footnote");
             }
             $(this).on("click",function(){
                 $('html, body').animate({
@@ -242,12 +248,12 @@ function setSuperscripts()
             });
         }
     });
-    
+
     $(".graphic-superscript .button").each(function(){
             var footnote = $(this).closest(".content").find(".footnote");
             if(!footnote.length)
             {
-               footnote = $(this).closest(".ncontainer").find(".footnote"); 
+               footnote = $(this).closest(".ncontainer").find(".footnote");
             }
             $(this).on("click",function(){
                 $('html, body').animate({
@@ -294,8 +300,8 @@ $('.footnote').on('click', function(e) {
         animation.show();
         //console.log(Math.abs(parseInt(currentMarginTop)) + " >> " + animation.outerHeight() + " >> " + buttonHeight + " >> " +  animation.innerHeight() + " >>> " + animation.height());
         expandTop = animation.outerHeight() - buttonHeight;
-        animation.css("margin-top", -expandTop); 
-       
+        animation.css("margin-top", -expandTop);
+
         e.preventDefault();
     }
     trackFootnoteOpen($('.footnote').index($(this)), $("body").attr("class"));
@@ -304,19 +310,19 @@ $('.footnote').on('click', function(e) {
 $('.footnote .close-btn').on('click', function(e) {
     e.stopPropagation();
     var parentHeight = $(this).parent().parent().data("parent");
-    $(this).parent().hide(); 
+    $(this).parent().hide();
     $(this).parent().parent().attr("state", "closed");
-    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop")); 
+    $(this).parent().parent().css("margin-top", $(this).parent().parent().attr("currentMarginTop"));
     if(isMobile)
     {
         $(this).parent().parent().css("width","13.75%");
         $(parentHeight).css("height","auto");
-        $(this).parent().parent().css("margin-top", ""); 
+        $(this).parent().parent().css("margin-top", "");
     }else
     {
-       $(this).parent().parent().css("width","width: 11.5%"); 
+       $(this).parent().parent().css("width","width: 11.5%");
     }
-    e.preventDefault(); 
+    e.preventDefault();
     trackFootnoteClose($('.footnote .close-btn').index($(this)), $("body").attr("class"));
 });
 
@@ -336,18 +342,18 @@ function validateFootnote()
             $(this).css("margin-left", "-" + negativeMargin + "px");
             if(parseInt(negativeMargin) === 0)
             {
-               negativeMargin = $(this).offset().left; 
+               negativeMargin = $(this).offset().left;
             }
-            
+
             //console.log("Footnote " + index + " position " + negativeMargin);
             $(this).css("margin-left", "-" + negativeMargin + "px");
-            
+
             if(window.innerWidth < 768){
                 //MNWR-113 See issue these footnotes hardcoded
                 $('.dosing-and-efficacy-section .footnote').css("margin-left", "-23px");
                 //$('.dosing-and-efficacy-section .chart-1 .footnote').css("margin-left", "0px");
                 //$('.dosing-and-efficacy-section .chart-2 .footnote').css("margin-left", "0px");
-                //$('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");  
+                //$('.dosing-and-efficacy-section .chart-3 .footnote').css("margin-left", "0px");
             }else{
                 $('.dosing-and-efficacy-section .footnote').css("margin-left", "0px");
                  if (window.innerWidth==768) {
@@ -361,7 +367,7 @@ function validateFootnote()
             $(this).css("margin-left", "0");
         });
     }
-    
+
 }
 
 // --------------------------------------------------------------------------------------------------------------
@@ -373,41 +379,102 @@ function activateFooterAndNavBarValidation()
         case "home-section":
             $(".nassacort-logo .little-house").addClass("active-house");
         break;
-        
+
         case "nasacort-difference-section":
             $("ul.main-nav li").eq(0).find("a.item").addClass("active-item");
         break;
-        
+
         case "dosing-and-efficacy-section":
             $("ul.main-nav li").eq(1).find("a.item").addClass("active-item");
         break;
-        
+
         case "whats-a-clucker-section":
             $("ul.main-nav li").eq(2).find("a.item").addClass("active-item");
         break;
-            
+
         case "science-of-allergic-rhinitis-section":
             $("ul.main-nav li").eq(3).find("a.item").addClass("active-item");
         break;
-        
+
         case "resources-section":
             $("ul.utility-nav li").eq(0).find("a").addClass("active-item");
         break;
-        
+
         case "faq-section":
             $("ul.utility-nav li").eq(1).find("a").addClass("active-item");
         break;
-        
+
         case "drug-fact-label-section":
             $("ul.utility-nav li").eq(2).find("a").addClass("active-item");
         break;
-        
+
         default:
         break;
-        
+
     }
 }
 
+function validateTouchScreens()
+{
+  ISTOUCHDEVICE = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
+  //alert("Is Touch Device ? : " + ISTOUCHDEVICE + "\nOS: " + getOS() + "\nDevice: " + getDevice());
+
+  if(ISTOUCHDEVICE)
+  {
+    if(getOS() === "Mac")
+    {
+      if(getDevice() === "tablet")
+      {
+        $("body").addClass("touchscreen");
+
+        addTapBehavior();
+      }
+    }
+  }
+}
+
+// ***********************************************************************************************************
+
+
+
+function getDevice()
+{
+  var size = $(window).outerWidth(true);
+
+   // DESKTOP
+   if(size > this.TABLET_MAX_SIZE){
+       return 'desktop';
+   // TABLET
+   } else if(size <= this.TABLET_MAX_SIZE && size > this.MOBILE_MAX_SIZE){
+       return 'tablet';
+   // MOBILE
+   } else if(size <= this.MOBILE_MAX_SIZE){
+       return 'mobile';
+   }
+}
+
+function getOS()
+{
+  var os =  navigator.appVersion;
+
+  if(os.indexOf('Mac') > 0){
+      return 'Mac';
+  } else if(os.indexOf('Win') > 0){
+      return 'Win';
+  } else {
+      return os;
+  }
+}
+// ***********************************************************************************************************
+
+function addTapBehavior()
+{
+  $('#header a').on('click touchend', function(e) {
+    var el = $(this);
+    var link = el.attr('href');
+    window.location = link;
+ });
+}
 // --------------------------------------------------------------------------------------------------------------
 /*Share form*/
 
@@ -422,13 +489,13 @@ function setSharePopup() {
         $('#share').modal('hide');
         trackCancelShare($("body").attr("class"));
     });
-    
+
     $("#share .error-globe").on("click",function(){
         $(this).hide();
         $(this).parent().find(".triangle").hide();
         $(this).parent().removeClass("red-highlighted");
     });
-    
+
     $("#share").on('hidden.bs.modal', function (e) {
       //if (!data) return e.preventDefault() // stops modal from being shown other event: show.bs.modal
       resetForm();
@@ -436,7 +503,7 @@ function setSharePopup() {
     $('#share').on('shown.bs.modal', function (event) {
         trackShare($("body").attr("class"), event.relatedTarget);
     });
-    
+
     addSubmitHandler();
     addTextFieldEvents();
 }
@@ -455,14 +522,14 @@ function resetForm()
 
 /* Miscelaneous functions*/
 
-function validateEmail(email) 
+function validateEmail(email)
 {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-  
-  if(regex.test( email) && email != yourDefaultEmail && email != recipientDefaultEmail) 
+
+  if(regex.test( email) && email != yourDefaultEmail && email != recipientDefaultEmail)
   {
     return true;
-  }else 
+  }else
   {
     return false;
   }
@@ -477,7 +544,7 @@ function setFormDefaultValues()
 function addTextFieldEvents()
 {
     $("input.email").focus(function(){
-        var currentValue = $(this).val(); 
+        var currentValue = $(this).val();
         if($(this).attr("name") == "yourEmail")
         {
             if(currentValue === yourDefaultEmail)
@@ -523,7 +590,7 @@ function addSubmitHandler()
         var yourEmail = $form.find("input[name='yourEmail']").val();
         var recipientName = $form.find("input[name='recipientName']").val();
         var recipientEmail = $form.find("input[name='recipientEmail']").val();
-        
+
         if(yourName.length >= 2 && validateEmail(yourEmail) && recipientName.length >= 2 && validateEmail(recipientEmail))
         {
             //Post these
@@ -535,10 +602,10 @@ function addSubmitHandler()
             if(yourName.length < 2)
             {
                $("#share .your-name .triangle, #share .your-name .error-globe").show();
-               $("#share .your-name").addClass("red-highlighted"); 
+               $("#share .your-name").addClass("red-highlighted");
             }else
             {
-                $("#share .your-name .triangle, #share .your-name .error-globe").hide(); 
+                $("#share .your-name .triangle, #share .your-name .error-globe").hide();
                 $("#share .your-name").removeClass("red-highlighted");
             }
             //-------------------------------------------------------------
@@ -564,12 +631,12 @@ function addSubmitHandler()
             //-------------------------------------------------------------
             if(!validateEmail(recipientEmail))
             {
-               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show(); 
+               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").show();
                $("#share .recipient-email").addClass("red-highlighted");
             }else
             {
-               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").hide(); 
-               $("#share .recipient-email").removeClass("red-highlighted"); 
+               $("#share .recipient-email .triangle, #share .recipient-email .error-globe").hide();
+               $("#share .recipient-email").removeClass("red-highlighted");
             }
             //-------------------------------------------------------------
             if(yourName.length < 2 && !validateEmail(yourEmail) && recipientName.length < 2 &&  !validateEmail(recipientEmail))
@@ -582,14 +649,14 @@ function addSubmitHandler()
                 addRedHighlightedClass();
             }
             return;
-        }     
+        }
     });
 }
 
 function showSuccessfulMessage()
 {
     $("#share #share-form .button-send").addClass("check-mark");
-    $("#share :text").prop("disabled", true);   
+    $("#share :text").prop("disabled", true);
     $("#share #share-form .button-send").val("Sent");
 }
 
@@ -634,7 +701,7 @@ var currentVideoTracked = "";
 function addFancyVideo()
 {
     $('.fancybox').fancybox();
-    
+
     if(isMobile)
     {
         $('.fancybox')
@@ -645,7 +712,7 @@ function addFancyVideo()
             prevEffect : 'none',
             nextEffect : 'none',
             autoSize: 'false',
-            
+
             autoHeight : 'true',
             maxWidth:640,
             maxHeight: 360,
@@ -684,7 +751,7 @@ function addFancyVideo()
             afterClose:function() {
                 //removeVimeoAPI();
             },
-            
+
             arrows : false,
             helpers : {
                 media : {},
@@ -692,7 +759,7 @@ function addFancyVideo()
             }
         });
     }
-    
+
     $('.fancybox').on("click",function(){
        //console.log($(this).attr('data-tracking'));
        currentVideoTracked = $(this).attr('data-tracking');
@@ -707,21 +774,21 @@ function initVimeoAPI()
 {
     var script = "js/vendor/vimeo/jquery.vimeo.api.js";
     $("head").append('<script type="text/javascript" src="' + script + '"></script>');
-    
+
     var playBackPorcentage = 0;
     var percent_0_Tracked = false;
     var percent_25_Tracked = false;
     var percent_50_Tracked = false;
     var percent_75_Tracked = false;
     var percent_100_Tracked = false;
-    
+
     $(".fancybox-overlay iframe").on("playProgress", function(event, data){
       //console.log(this);//return the DOM object of the video that called this event
       //console.log("Seconds Progress", data.seconds);
       //console.log("Percent Progress", data.percent);
       //console.log("Duration Progress", data.duration);
       playBackPorcentage = Math.floor(data.percent * 100);
-      
+
       if(playBackPorcentage === 0)
       {
           if(!percent_0_Tracked)
@@ -734,7 +801,7 @@ function initVimeoAPI()
       {
           if(!percent_25_Tracked)
           {
-            ga('send', 'event', 'video', 'play_25%', currentVideoTracked);  
+            ga('send', 'event', 'video', 'play_25%', currentVideoTracked);
             percent_25_Tracked =  true;
           }
       }
@@ -771,10 +838,10 @@ function initVimeoAPI()
     })
     .on('pause',function () {
         //console.log('paused');
-    }); 
+    });
 }
 
 function removeVimeoAPI()
 {
-    
+
 }

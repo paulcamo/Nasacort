@@ -483,6 +483,15 @@
     padding-top: 139px;
   }
 
+  //This will affect heaer navigation, globally
+  /*.header .header-top ul.main-nav li a{
+    font-size:15px;
+  }
+
+  .header .header-top ul.main-nav li a.active-item{
+    font-size:15px;
+  }*/
+
   .home-section .home-mobile .slider{
     height:446px;
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  {
