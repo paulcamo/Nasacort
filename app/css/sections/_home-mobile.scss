@@ -551,20 +551,20 @@
     }
 
     p{
-      right:166px;
+      right:176px;
       @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-        right:117px;
+        right:133px;
       }
     }
 
   }
 
   .home-section .home-mobile .slider img.product{
-    width:370px;
-    top:-125px;
+    width:410px;
+    top:-145px;
     @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-      width:270px;
-      top:-84px;
+      width:310px;
+      top:-104px;
     }
   }
 
