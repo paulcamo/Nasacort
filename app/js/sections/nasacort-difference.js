@@ -1,5 +1,5 @@
 
-
+var flagSize;
 var brand_checks =          [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_default =  [0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var brand_checks_afrin =    [1,1,0,0,0,1,1,0,0,0,1,0,0,0];
@@ -27,7 +27,7 @@ function set_checks(nn){
             $(".brand-check:eq("+ n + ")").addClass("invisible");
         }
     }
-    
+
     currentBrand = nn;
 }
 
@@ -44,15 +44,25 @@ function remove_brand_bg(nn) {
     $("#brand-compare .open").addClass("sprite-bg-" + nn);
 }
 
+$(document).load(function(){
+    resizeScreen();
+});
+
+function resizeScreen(){
+    flagSize = $('.nasacort-difference-section .charts td:nth-child(4)').outerWidth() - 5;
+    $('.screen__sized .screen').width(flagSize);
+}
 
 $(document).ready(function(){
+
+    resizeScreen();
 
     set_checks("clear");
     isMobile = window.matchMedia && window.matchMedia(media_query).matches;
     changeImageSrc();
     keepTDsameWidthArrow();
     addMouseOverStates();
-    
+
     $('.instruccion').click(function(event) {
         event.preventDefault();
     });
@@ -64,12 +74,12 @@ $(document).ready(function(){
             $('.arrow').show();
             $("#brand-compare").addClass("brand-compare-open");
             $(".chart-table-container .arrow").css("display","none");
-    
+
             $("#brand-compare .inner-logos").show();
             $("#brand-compare .instruccion").show();
-            
+
             isSomeBrandSelected = false;
-            
+
             trackCloseInteractiveForm(currentBrand);
         }else{
             collapseForm();
@@ -79,7 +89,7 @@ $(document).ready(function(){
     $(".brand").on("click", function(e){
         e.preventDefault();
         collapseForm();
-        
+
         switch($(this).data("brand")) {
 
             case "afrin":
@@ -111,7 +121,7 @@ $(document).ready(function(){
                 set_checks();
                 break;
         }
-        
+
         trackInteractiveForm($(this).data("brand"));
     });
 });
@@ -120,7 +130,7 @@ function collapseForm()
 {
     $("#brand-compare .open").removeClass("start");
     $("#brand-compare").removeClass("brand-compare-open");
-    $(".chart-table-container .arrow").css("display","initial");
+    $(".chart-table-container .arrow").css("display","block");
 
     $("#brand-compare .inner-logos").hide();
     $("#brand-compare .instruccion").hide();
@@ -145,13 +155,19 @@ $(window).bind("resize", function(){
     keepTDsameWidthArrow();
     addMouseOverStates();
     addMouseOverStates();
-    resetInteractiveForm();
+    var isTouchDevice = "ontouchstart" in window || navigator.msMaxTouchPoints ? true : false;
+    if(!isTouchDevice)
+    {
+      resetInteractiveForm();
+    }
+    
+    resizeScreen();
 });
 
 function changeImageSrc()
 {
      var contentwidth = $(window).width();
-     
+
      if (isMobile)
      {
          $(".inner-logos .brand img").each(function(){
@@ -169,36 +185,7 @@ function changeImageSrc()
 
 function keepTDsameWidthArrow()
 {
-    if(isMobile)
-    {
-        $(".nasacort-difference-section .chart-table-container .arrow").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 1);
-        $("#brand-compare").width($(".nasacort-difference-section .charts td:nth-child(4)").width() + 3);
-        $("#brand-compare").css("min-width","96px");
-    }else
-    {
-        $(".nasacort-difference-section .charts td:nth-child(4)").width($("#brand-compare").width() - 3);
-        $(".nasacort-difference-section .chart-table-container .arrow").width($("#brand-compare").width() - 2);
-    }
-    //var rightArrow = $(".nasacort-difference-section .chart-table-container .arrow").width() + parseInt($(".nasacort-difference-section .chart-table-container .arrow").css("right"));
 
-    var rightArrow = $("#brand-compare").width();
-    var vrsPosition = rightArrow - ($(".nasacort-difference-section .chart-table-container .vrs").width() / 2);
-
-
-    if ($(window).width()>=768 && $(window).width()<1024) {
-        vrsPosition = vrsPosition +75;
-    }
-
-    if ($(window).width()<768) {
-        vrsPosition = rightArrow + 8 ;
-    }
-
-    //if ($(window).width()>=753 && $(window).width()<768) {
-    //    vrsPosition = vrsPosition + 40;
-    //}
-
-
-    $(".nasacort-difference-section .chart-table-container .vrs").css("right",  vrsPosition);
 
 }
 
@@ -212,7 +199,7 @@ function addMouseOverStates()
                 var newPath = $(this).find("img").attr("src").replace(".png", "-hover.png");
                  $(this).attr("hover","true");
                  $(this).find("img").attr("src", newPath);
-                 $(this).find("img").addClass("shadow-logo");      
+                 $(this).find("img").addClass("shadow-logo");
             }
         });
         $(".inner-logos .brand").mouseout(function() {

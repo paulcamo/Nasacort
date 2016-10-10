@@ -123,7 +123,7 @@ $grey-button:#f8f8f8;
     }
     @media screen and (max-width: 1025px) {
         padding-top: 88px;
-        height: 605px;
+        height: 550px;
     }
     @include breakpoint('mobile'){
         margin-top: 150px ;
@@ -140,7 +140,7 @@ $grey-button:#f8f8f8;
     .clear{
         clear: both;
     }
-    div.tittle{ 
+    div.tittle{
         max-width: 1400px;
         margin: 0 auto;
         padding-left: 216px;
@@ -174,6 +174,7 @@ $grey-button:#f8f8f8;
             }
             @include breakpoint('tablet'){
                 margin-left: 0;
+                padding-top: 89px;
             }
             @include  breakpoint('mobile'){
                 font-size: 17px;
@@ -205,7 +206,7 @@ $grey-button:#f8f8f8;
             }
         }
     }
-    
+
     .people{
         max-width: 1400px;
         position: relative;
@@ -224,7 +225,7 @@ $grey-button:#f8f8f8;
             width: 100%;
         }
         @include breakpoint('tablet'){
-            bottom: -66px;
+            bottom: -11px;
         }
         @include breakpoint('mobile'){
             position: absolute;
@@ -252,7 +253,7 @@ $grey-button:#f8f8f8;
                     margin-left: 5px;
                     width:100%;
                 }
-                
+
             }
             ul > li {
                 display: inline-block;
@@ -263,11 +264,11 @@ $grey-button:#f8f8f8;
                 }
                 @media screen and (max-width: 1025px) {
                     width: 180px;
-                } 
+                }
                 /*@include breakpoint('mobile'){
                     width: 75px;
                 }*/
-                
+
                 @media screen and (max-width: 768px){
                     width: 25%;
                 }
@@ -389,7 +390,7 @@ $grey-button:#f8f8f8;
                     position: relative;
                     height: 100%;
                     border-radius: 10px;
-                    background: rgba(20, 81, 134, 0.8);                     
+                    background: rgba(20, 81, 134, 0.8);
                     div{
                         &:nth-child(1){
                             margin-top: 29px;
@@ -428,7 +429,7 @@ $grey-button:#f8f8f8;
                             font-size: 23px;
                             display: inline-block;
                             li{
-                                font-family:$font-proxima-nova-semibold; 
+                                font-family:$font-proxima-nova-semibold;
                             }
                             @media screen and (max-width: 1025px) {
                                 font-size: 18px;
@@ -507,7 +508,7 @@ $grey-button:#f8f8f8;
                 height:240px;
                 left: 41%;
                 top: 9%;
-                
+
                 @media screen and (max-width: 1399px) {
                     top: -2%;
                 }
@@ -558,7 +559,7 @@ $grey-button:#f8f8f8;
                     cursor: pointer;
                     .arrow{
                         //margin-right: 45px;
-                        margin-left:0; 
+                        margin-left:0;
                         border-left:none;
                         border-left:solid 1px gray;
                         padding-right:40px;
@@ -598,7 +599,7 @@ $grey-button:#f8f8f8;
                 .white_content{
                     .arrow{
                         //margin-right: 55px;
-                        margin-left:0; 
+                        margin-left:0;
                         border-left:none;
                         border-left:solid 1px gray;
                         padding-right:40px;
@@ -690,7 +691,7 @@ $grey-button:#f8f8f8;
             // }
 
             a{
-               color:$color-white; 
+               color:$color-white;
                padding: 11px 0;
                display: inline-block;
                @include breakpoint('tablet'){
@@ -765,7 +766,7 @@ $grey-button:#f8f8f8;
     h2{
       @include breakpoint('mobile'){
             margin-top: 33px;
-        }  
+        }
     }
 }
 
@@ -781,7 +782,7 @@ $grey-button:#f8f8f8;
             margin-right:1.7%;
             top:36px;
             padding-top: 20px;
-        } 
+        }
         @include breakpoint('tablet'){
             width: 100%;
         }
@@ -874,12 +875,12 @@ $grey-button:#f8f8f8;
         font-size: 23px;
         color:$light-blue;
         text-transform: none;
-        margin-bottom: 8px;  
+        margin-bottom: 8px;
     }
     .wac-boxes{
         @include breakpoint('tablet'){
             padding: 28px 0 13px;
-        } 
+        }
         @include breakpoint('mobile'){
             padding: 2px 0;
         }
@@ -900,22 +901,22 @@ $grey-button:#f8f8f8;
             }
         }
         h2{
-            margin-top: 55px; 
+            margin-top: 55px;
             color:$subheader-text;
-            font-size: 34px; 
-            margin-bottom:52px; 
+            font-size: 34px;
+            margin-bottom:52px;
             font-weight: normal;
-             @media screen and (max-width: 1063px) { 
-                display:none;    
+             @media screen and (max-width: 1063px) {
+                display:none;
              }
             @include breakpoint('tablet'){
                 display: none;
-            } 
+            }
             @include breakpoint('mobile'){
                 display: none;
-            } 
+            }
         }
-        
+
     }
     .bg-gray{
         background-color: $bg-greyColor;
@@ -947,7 +948,7 @@ $grey-button:#f8f8f8;
         color:$color-dark-grey;
         text-decoration: underline;
     }
-    li{ 
+    li{
         font-size: 16px;
         // letter-spacing: 1.3px;
         line-height: 24px;
@@ -956,7 +957,7 @@ $grey-button:#f8f8f8;
         display: inline-block;
         float: left;
         width: 50%;
-        margin-bottom: 7px; 
+        margin-bottom: 7px;
         @include breakpoint('mobile'){
             line-height: 17px;
             font-size: 12px;
@@ -971,20 +972,20 @@ $grey-button:#f8f8f8;
             background: url('../img/desktop/clucker/unchecked-list.png') no-repeat;
             width: 24px;
             height: 24px;
-            display: inline-block;     
+            display: inline-block;
             position: absolute;
             left: 0px;
         }
     }
     .selected{
         color:$light-blue;
-        font-weight: bold; 
+        font-weight: bold;
         &:before{
             content: " ";
             background: url('../img/desktop/clucker/checked-list.png') no-repeat;
             width: 24px;
             height: 24px;
-            display: inline-block;     
+            display: inline-block;
             position: absolute;
             left: 0px;
         }
@@ -1066,7 +1067,7 @@ $grey-button:#f8f8f8;
        @include breakpoint('tablet'){
             margin: 0 auto;
             max-width: 400px;
-        } 
+        }
         @include breakpoint('mobile'){
             padding-left: 0;
             padding-right: 0;
@@ -1080,7 +1081,7 @@ $grey-button:#f8f8f8;
         height: auto;
         padding-bottom:11px;
         @include breakpoint('mobile'){
-           padding-bottom:8px; 
+           padding-bottom:8px;
         }
         .wac-into-bord{
             @include breakpoint('mobile'){
@@ -1091,7 +1092,7 @@ $grey-button:#f8f8f8;
             width: 59%;
             float: left;
             position:relative;
-            @media screen and (max-width: 1063px) { 
+            @media screen and (max-width: 1063px) {
                 display: block;
                 float: none;
                 overflow: hidden;
@@ -1107,7 +1108,7 @@ $grey-button:#f8f8f8;
             }
             @include breakpoint('mobile'){
                 width: 100%;
-                
+
                 img{
                     max-width: 114px;
                 }
@@ -1118,7 +1119,7 @@ $grey-button:#f8f8f8;
                     margin-top: 35px;
                     margin-left: 20px;
                     @include breakpoint('mobile'){
-                       margin-top: 26px; 
+                       margin-top: 26px;
                        margin-left: 0;
                     }
                 }
@@ -1137,7 +1138,7 @@ $grey-button:#f8f8f8;
                     margin-right:27px;
                   @include breakpoint('mobile'){
                         margin-top: 25px;
-                    } 
+                    }
                 }
             }
             .wac-hiddenTxt{
@@ -1152,7 +1153,7 @@ $grey-button:#f8f8f8;
                     top: 39px;
                     strong{
                         font-size: 42px;
-                    } 
+                    }
                 }
                 @media screen and (max-width: 1063px) {
                     color:$subheader-text;
@@ -1164,7 +1165,7 @@ $grey-button:#f8f8f8;
                     top: 39px;
                     strong{
                         font-size: 42px;
-                    } 
+                    }
                 }
                 @include breakpoint('mobile'){
                     color:$subheader-text;
@@ -1175,7 +1176,7 @@ $grey-button:#f8f8f8;
                     position: relative;
                     top: 70px;
                     strong{
-                        font-size: 22px;
+                        font-size: 20px;
                     }
                 }
 
@@ -1307,9 +1308,9 @@ $grey-button:#f8f8f8;
         h1{
             font-size: 34px;
             @include breakpoint('mobile'){
-                font-size: 17px; 
+                font-size: 17px;
                 padding-top: 31px;
-            } 
+            }
         }
     }
     .text-center{
@@ -1322,7 +1323,7 @@ $grey-button:#f8f8f8;
     margin-bottom: 8px;
     text-align: center;
     @include breakpoint('mobile'){
-        font-size: 17px; 
+        font-size: 17px;
         line-height: 22px;
     }
 }
@@ -1395,7 +1396,7 @@ $grey-button:#f8f8f8;
                    float:left;
                    padding-bottom:35.8%;
                }
-               
+
                .audio-container{
                    float:left;
                    padding-top:22px;
@@ -1404,7 +1405,7 @@ $grey-button:#f8f8f8;
                   p{
                    font-size:22px;
                    margin-bottom:22px;
-                } 
+                }
                 .audio-feature{
                     float: right;
                     margin-bottom: 15px;
@@ -1440,17 +1441,17 @@ $grey-button:#f8f8f8;
                             .volume{
                                 background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
                             }
-                        }    
+                        }
                         &.active{
                             color:#eb5d2b;
                             .volume{
                                 background:url("../img/desktop/clucker/glass-heads/volume-btn-hover.png") no-repeat;
                             }
-                        }    
-                    }  
+                        }
+                    }
                 }
                }
-               
+
                #maria{
                     .default{
                          background:url("../img/desktop/clucker/glass-heads/anatomy-default.jpg") no-repeat;
@@ -1546,7 +1547,7 @@ $grey-button:#f8f8f8;
                          display:none;
                     }
                 }
-                
+
                 .hotspots-container{
                     width:100%;
                     height:auto;
@@ -1561,11 +1562,11 @@ $grey-button:#f8f8f8;
                      padding-bottom:7.25%;
                      position:absolute;
                      &:hover{
-                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat;
                         background-size:contain;
                      }
                      &.active{
-                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat; 
+                        background:url("../img/desktop/clucker/glass-heads/hot-spot-active.png") no-repeat;
                         background-size:contain;
                      }
                 }
@@ -1576,11 +1577,11 @@ $grey-button:#f8f8f8;
 
 /******** Mobile Glass Heads ***********/
 @include breakpoint('mobile') {
-    
+
 #glass-head{
     .modal-content{
-       .modal-dialog{      
-           max-height:none;  
+       .modal-dialog{
+           max-height:none;
            .close-modal{
                 background:url("../img/mobile/clucker/glass-heads/close-btn.png") no-repeat;
                 background-size:contain;
@@ -1628,7 +1629,7 @@ $grey-button:#f8f8f8;
                          display:none;
                     }
                     .itchy{
-                         background:url("../img/mobile/clucker/glass-heads/maria-congestion.jpg") no-repeat;
+                         background:url("../img/mobile/clucker/glass-heads/maria-itchy.jpg") no-repeat;
                          background-size:cover;
                          display:block;
                     }
@@ -1693,7 +1694,7 @@ $grey-button:#f8f8f8;
                          display:block;
                     }
                 }
-                
+
            }
        }
     }
@@ -1707,43 +1708,43 @@ $grey-button:#f8f8f8;
         background-image:url("../img/desktop/clucker/maria-graph.jpg");
         height:160px;
         display:block;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
               }
         }
     }
-    
+
     .mark-graph{
         background-image:url("../img/desktop/clucker/mark-graph.jpg");
         height:160px;
         display:block;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
               }
         }
     }
-    
+
     .kara-graph{
         background-image:url("../img/desktop/clucker/kara-graph.jpg");
         height:160px;
         display:block;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
               }
         }
     }
-    
+
     .liam-graph{
         background-image:url("../img/desktop/clucker/maria-graph.jpg");
         height:160px;
         display:block;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
@@ -1782,7 +1783,7 @@ $grey-button:#f8f8f8;
               }
         }
     }
-    
+
     .mark-graph{
         background-image:url("../img/desktop/clucker/mark-graph.jpg");
         width:100%;
@@ -1790,7 +1791,7 @@ $grey-button:#f8f8f8;
         padding-bottom:40%;
         background-repeat:no-repeat;
         background-size: contain;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
@@ -1798,7 +1799,7 @@ $grey-button:#f8f8f8;
               }
         }
     }
-    
+
     .kara-graph{
         background-image:url("../img/desktop/clucker/kara-graph.jpg");
         width:100%;
@@ -1806,7 +1807,7 @@ $grey-button:#f8f8f8;
         padding-bottom:40%;
         background-repeat:no-repeat;
         background-size: contain;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");
@@ -1814,7 +1815,7 @@ $grey-button:#f8f8f8;
               }
         }
     }
-    
+
     .liam-graph{
         background-image:url("../img/desktop/clucker/maria-graph.jpg");
         width:100%;
@@ -1822,7 +1823,7 @@ $grey-button:#f8f8f8;
         padding-bottom:40%;
         background-repeat:no-repeat;
         background-size: contain;
-        
+
         &:hover{
             .wac-expand{
                 background:url("../img/desktop/clucker/enlarge-icon-hover.png");

@@ -1,19 +1,19 @@
 .nasacort-difference-section {
     .container{
-        @include breakpoint('mobile') {   
+        @include breakpoint('mobile') {
             overflow:hidden;
         }
     }
-    
 
-  @include breakpoint('mobile') {   
+
+  @include breakpoint('mobile') {
     .footnote{
       .animation {
           width: 90%!important;
           padding: 10px 10px 10px 20px;
       }
     }
-    
+
   }
 .first-container{
    @include breakpoint('mobile'){
@@ -78,7 +78,7 @@
 
   h2{
     margin-top:47px;
-    margin-bottom: 22px; 
+    margin-bottom: 22px;
     @include breakpoint('mobile'){
         width:80%;
         margin-top:18px;
@@ -128,7 +128,7 @@
   }
 
   p.last-text{
-    margin-bottom:6px; 
+    margin-bottom:6px;
   }
 
   .img-spray{
@@ -149,19 +149,20 @@
     }
     @include breakpoint('mobile'){
       width: 200px;
-      right: 1px;
+      right: -50px;
       top: -220px;
     }
-    
-     @media screen and (max-width: 375px) {
-         right: -30px;
+
+     @media screen and (-webkit-min-device-pixel-ratio: 3.0) and (max-width: 1080px) {
+       //Samsung S4
+         right: -60px;
      }
-    
+
     img{
       width: 100%;
     }
   }
-  
+
   .treatments{
       .footnote{
           margin-top:168px;
@@ -172,7 +173,7 @@
         @media screen and (min-width: 1211px) and (max-width: 1399px) {
           margin-top:224px;
         }
-        
+
         @media screen and (max-width: 1210px) {
            margin-top:320px;
         }
@@ -186,13 +187,13 @@
       }
       .use-only{
           @media screen and (max-width: 1210px) {
-           margin-top:360px; 
+           margin-top:360px;
         }
         @include breakpoint('tablet'){
-             margin-top:300px; 
+             margin-top:300px;
         }
         @include breakpoint('mobile'){
-             margin-top:0; 
+             margin-top:0;
         }
       }
   }
@@ -220,9 +221,9 @@
               @include breakpoint('mobile'){
                 color:#555;
             }
-        }    
+        }
       p{
-        margin-bottom:26px; 
+        margin-bottom:26px;
         @include breakpoint('mobile'){
           margin-bottom: 11px;
         }
@@ -283,13 +284,13 @@
     }
     h2{
       @include breakpoint('mobile'){
-        margin-top: 19px; 
+        margin-top: 19px;
         margin-bottom:0;
       }
     }
     p{
-      margin-bottom:25px; 
-      width:90%;
+      margin-bottom:25px;
+      //width:90%;
     }
     p.use-only{
       margin-bottom: 11px;
@@ -350,22 +351,20 @@
 
   #brand-compare {
     height: 66px;
-    width: 36.7%;
-    right: 0; //-98px;
+    width: 32%;
+    right: -2px; //-98px;
     position: absolute;
     top: 1px;
     padding: 0px;
     margin: 0px;
     z-index: 10;
     list-style: none;
-    overflow: hidden;
-    min-width:209px;
+    //overflow: hidden;
+    min-width:150px;
     @include breakpoint('mobile'){
-      overflow:visible;
-      //max-width:209px;
-      min-width:200px;
+      //overflow:hidden;
+      min-width:auto;
       height:53px;
-      right:24px !important;
     }
     .inner-logos{
         padding-bottom:14px;
@@ -373,7 +372,7 @@
         -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.6);
         -moz-box-shadow:    0px 5px 5px 0px rgba(50, 50, 50, 0.6);
         box-shadow:         0px 5px 5px 0px rgba(50, 50, 50, 0.6);
-        margin-right:3px;
+        //margin-right:3px;
         margin-bottom:10px;
         padding-top:12px;
       @include breakpoint('mobile'){
@@ -382,29 +381,34 @@
         float:right;
         background-color: #497ebf;
         padding-bottom:1px;
-        padding-left:12px;
-        margin-right:2px;
-        min-width:209px;
+        padding-left:0px;
+        margin-left:0px;
+        margin-right:0;
+        width: 100%;
+        min-width: 175px;
         border-top: 1px solid #94bed3;
       }
       .two-logos{
+        text-align: center;
+        overflow: hidden;
         @include breakpoint('mobile'){
           width:100%;
-          float:right;
+          //float:right;
         }
       }
       a{
         @include breakpoint('mobile'){
           float: left;
           position: relative;
-          width: auto;
-          padding-right:12px;
+          width: 50%;
+          //padding-right:12px;
           margin-top:6px;
+          display:block;
         }
         img{
             @include breakpoint('mobile'){
-                width:86px;
-                max-height:48px;
+                width:90%;
+                height:auto;
             }
         }
       }
@@ -438,14 +442,14 @@
       width: 29.5%;
     }
     @include breakpoint('mobile'){
-      right: 18px;
+      right: 25px;
       top: 1px;
-      width: 30.7%;
+      width: 34.7%;
     }
 
 
     .brand,  .open,.instruccion {
-      width: 99%;
+      width: 100%;
       text-align: center;
       background-color: #497ebf;
       cursor: hand;
@@ -458,34 +462,48 @@
       }
       @include breakpoint('mobile'){
         height: 53px;
+
+        //float:right;
       }
+
       &.start{
         background-color: #d9d9d9;
         border-left: solid #497ebf 3px;
         border-right: solid #497ebf 3px;
         border-top: solid #497ebf 3px;
+        @include breakpoint('tablet'){
+          position: relative;
+          right: 0px;
+          width: 100%;
+        }
         @include breakpoint('mobile'){
             border-left: solid #497ebf 2px;
             border-right: solid #497ebf 2px;
             border-top: solid #497ebf 2px;
+
+        }
+
+        @media screen and (max-width: 375px) {
+            max-width:115px;
         }
       }
     }
     .instruccion{
       height: auto;
-      margin-bottom: 1px; 
+      margin-bottom: 1px;
       padding-top: 20px;
       text-align: left;
       @include breakpoint('mobile'){
         float: right;
         height: auto;
-        padding: 8px 0 1px;
+        padding: 24px 0 1px;
        // width: 237%;
-       // max-width:208px;
-       min-width:209px;
+        width: 100%;
+        min-width: 175px;
         margin-bottom:0;
+        margin-right: 0;
         //border: 1px solid #94bed3;
-        margin-right:2px;
+
       }
       p{
         padding: 0 15px;
@@ -514,7 +532,7 @@
           width: 80%;
         }
       }
-      
+
       .shadow-logo{
         -webkit-box-shadow: 0px 5px 4px 0px rgba(50, 50, 50, 0.5);
         -moz-box-shadow:    0px 5px 4px 0px rgba(50, 50, 50, 0.5);
@@ -533,105 +551,45 @@
     }
 
     .sprite-bg-afrin{
-      background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          //background-size: contain;
-      }
-      @include breakpoint('mobile'){
-        background-position: center;
-        background-size: 100% auto;
-        overflow: hidden;
-        width: 100%;
-        margin-left:0%;
-        float:right;
-        margin-right:2px;
-      }
+      background: url("../img/desktop/nasacort-difference/bg-afrin.png") no-repeat center;
+      background-size: auto 71%;
+      
+
     }
 
     .sprite-bg-benadryl{
-      background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          background-size: contain;
-      }
-      @include breakpoint('mobile'){
-          background-position: 5px center;
-            background-size: 100% auto;
-            overflow: hidden;
-            width: 100%;
-            margin-left:0%;
-            float:right;
-            margin-right:2px;
-      }
+      background: url("../img/desktop/nasacort-difference/bg-benadryl.png") no-repeat center;
+      background-size: auto 71%;
+
     }
 
     .sprite-bg-flonase {
-      background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          background-size: contain;
-      }
-      @include breakpoint('mobile'){
-          background-position: 8px center;
-            background-size: 100% auto;
-            overflow: hidden;
-            width: 100%;
-            margin-left:0%;
-            float:right;
-            margin-right:2px;
-      }
+      background: url("../img/desktop/nasacort-difference/bg-flonase.png") no-repeat center;
+      background-size: auto 71%;
+      
+
     }
 
     .sprite-bg-sudafed {
-      background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          background-size: contain;
+      background: url("../img/desktop/nasacort-difference/bg-sudafed.png") no-repeat center;
+      background-size: auto 71%;
+      @media screen and (max-width: 400px) {
+        background-size: auto 50%;
       }
-      @include breakpoint('mobile'){
-          background-position: 5px center;
-            background-size: 100% auto;
-            overflow: hidden;
-            width: 100%;
-            margin-left:0%;
-            float:right;
-            margin-right:2px;
-      }
+
     }
 
     .sprite-bg-zyrtec {
-      background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          background-size: contain;
-      }
-      @include breakpoint('mobile'){
-          background-position: 5px center;
-            background-size: 100% auto;
-            overflow: hidden;
-            width: 100%;
-            margin-left:0%;
-            float:right;
-            margin-right:2px;
-      }
+      background: url("../img/desktop/nasacort-difference/bg-zyrtec.png") no-repeat center;
+      background-size: auto 71%;
+      
+
     }
 
     .sprite-bg-claritin {
-      background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat top center;
-      background-size: contain;
-      @include breakpoint('tablet'){
-          background-size: contain;
-      }
-      @include breakpoint('mobile'){
-          background-position: 5px center;
-            background-size: 100% auto;
-            overflow: hidden;
-            width: 100%;
-            margin-left:0%;
-            float:right;
-            margin-right:2px;
-      }
+      background: url("../img/desktop/nasacort-difference/bg-claritin.png") no-repeat center;
+      background-size: auto 71%;
+
     }
 
   }
@@ -641,7 +599,7 @@
   }
 
   .info-small-chart{
-    margin-top:17px; 
+    margin-top:17px;
     p{
       font-size: 13px;
       line-height: 14px;
@@ -662,7 +620,9 @@
     position:relative;
     .chart-logo{
         border-right:none;
+        position: relative;
       img{
+        width: 70%;
         @include breakpoint('tablet'){
           width:40%;
         }
@@ -749,13 +709,17 @@
     }
 
     td:nth-child(3), td:nth-child(4) {
-      width: 32%;
       text-align: center;
       vertical-align: middle;
       border-left: none;
+      width: 32%;
     }
+    td:nth-child(3) {
+      //width: 26%
+    }
+
     td:nth-child(4) {
-        
+      //width: 37%
     }
 
     td:nth-child(3){
@@ -780,6 +744,24 @@
     }
 
   }
+  .clear{
+    display: block;
+    clear: both;
+  }
+  .screen__sized{
+    
+    //overflow: hidden;
+
+    .screen{
+      float: right;
+      position: relative;
+    }
+
+    @media screen and (max-width: 445px) {
+        margin-right: 1px;
+      }
+  }
+
 
   .chart-table-container {
     position: relative;
@@ -799,22 +781,36 @@
 
     .vrs {
       position: absolute;
-      //right: 17.4%;
-      top: 13px;
-      border: none;
+      //float: right;
+      //margin-left: -35px;
+      //position: relative;
+      left: -34px;
+      top: 11px;
+      //width: 69px;
       z-index: 12;
+      border:none;
+      //margin: -19px 0 0 0;
+      img{
+        padding: 0;
+        margin: 0;
+        position: static;
+        right: 0;
+      }
       @include breakpoint('tablet'){
-        //right: 30.3%;
-        top: 14px;
-        width: 55px;
+        //margin-left: -23px;
+        left: -27px;
+        top: 17px;
+        width:auto;
         img{
           width:55px;
         }
       }
       @include breakpoint('mobile'){
-        //right: 31.3%;
-        top: 13px;
-        width: 29px;
+        left: -15px;
+        top: 15px;
+        margin: 0;
+        //margin-left:-15px;
+        //width:auto;
         img{
           width: 29px;
         }
@@ -823,23 +819,19 @@
 
     .arrow {
       display: none;
-      position: absolute;
+      position: relative;
       right: 0; //-95px;
       border: medium none;
       z-index: 11;
-      top: 68px;
+      top: 40px;
       background: url("../img/desktop/nasacort-difference/charts-arrow.png") no-repeat center bottom;
       height: 25px;
-      width: 36.7%;
+      width:auto;
       @include breakpoint('tablet'){
-        right: 41px;
-        top: 68px;
-        width: 29.5%;
+
       }
       @include breakpoint('mobile'){
-        right: 24px;
-        top: 43px;
-        width: 27.7%;
+        top: 28px;
       }
 
     }
@@ -867,23 +859,23 @@
             padding-left: 3.125%;
             padding-right: 3.125%;
         }
-        
+
         @media screen and (max-width: 400px) {
             padding-left: 25px;
             padding-right: 25px;
         }
-        
+
         .download-cta-button{
             @media screen and (max-width: 400px) {
                 padding-left: 0;
                 padding-right: 0;
             }
         }
-        
+
     }
   .download-cta-button{
     margin-bottom:0px;
-    margin-top: 3px; 
+    margin-top: 3px;
     @include breakpoint('mobile'){
         //margin-left: 5px;
      }
@@ -1009,7 +1001,7 @@
               margin-top: 13px;
             }
           }
-        } 
+        }
       }
     }
     .btt-faq{
@@ -1028,7 +1020,7 @@
           margin-bottom:0;
           color: $color-blue-titles;
           text-align: left;
-          padding-left: 12px; 
+          padding-left: 12px;
           padding-top: 6px;
         }
       }
@@ -1036,4 +1028,3 @@
   }
 
 }
-
