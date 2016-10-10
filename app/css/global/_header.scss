@@ -302,11 +302,11 @@
 
         .item4 {
           @include breakpoint("desktop-n-up") {
-            width: 235px;
+            width: 250px;
             margin-left: 3px;
           }
             @media screen and (max-width: 1399px) and (min-width: 1025px){
-               width: 236px; 
+               width: 250px; 
             }
 
          }
